@@ -37,7 +37,7 @@ App Center Push enables you to send push notifications to users of your app from
 
 ## Prerequisite - Register your app for Windows Notification Services (WNS)
 
-Before you can send notification using WNS, your app must be registered with the Windows Store. This will provide you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registration, you need to associate your app with the Windows Store in Visual Studio.
+Before you can send notification using WNS, your app must be registered with the Windows Store. This provides you with credentials for your app that App Center will use to authenticate with WNS. These credentials consist of a Package Security Identifier (SID) and an application secret key. To perform this registration, you need to associate your app with the Windows Store in Visual Studio.
 
 [!INCLUDE [windows wns](includes/windows-wns.md)]
 
@@ -104,7 +104,7 @@ You can send optional custom data as part of the push payload. The data will be 
 There are few reserved keywords that can be set via custom data.
 
 ### Reserved keywords in Windows platform
-- **audio**: Add this key when you want the to play a sound. this will modify the audio attribute for toast notifications.
+- **audio**: Add this key when you want the to play a sound. This modifies the audio attribute for toast notifications.
 - **image**: Add this key when you want to modify the image attribute for tile and toast notifications.
 
 ## Enable or disable App Center Push at runtime

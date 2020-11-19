@@ -178,7 +178,7 @@ Then you can use the `checkForUpdate` API which is described in the following se
 Distribute.checkForUpdate()
 ```
 
-This will send a request to App Center and display an update dialog in case there's a new release available.
+This sends a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
 > A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
@@ -373,7 +373,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 The App Center SDK uses swizzling to improve its integration by forwarding itself some of the application delegate's methods calls. Method swizzling is a way to change the implementation of methods at runtime. If for any reason you don't want to use swizzling (e.g. because of a specific policy) then you can disable this forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
-2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Add the `openURL` callback in the project's `AppDelegate` file.
 
 ```objc

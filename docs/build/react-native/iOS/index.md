@@ -63,7 +63,7 @@ Signing apps with [app or watchOS extensions](https://developer.apple.com/librar
 Use the newly produced `.ipa` file to test if your app starts on a real device; the launch test adds about 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.8. CocoaPods
-App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
+App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This ensures that all dependencies are installed.
 
 ### 3.9. Distribute to a distribution group
 Configure each successful build from a branch to be distributed to a previously created distribution group. Add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all users who have access to the app.
@@ -117,7 +117,7 @@ If this app has the crashes SDK included, iOS symbols and source maps will be se
 
 There are several options for running scripts before App Center's default build commands are executed.
 
-- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This will automatically execute after your dependencies are installed.
+- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This automatically executes after your dependencies are installed.
 
   ```javascript
     "scripts": {

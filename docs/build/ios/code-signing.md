@@ -62,7 +62,7 @@ To sign your iOS builds, upload a provisioning profile (.mobileprovision) and yo
    ![Navigate to Certificate page](images/apple-developer-download-certificate.png)
    ![Download Certificate from Apple Developer portal](images/apple-developer-download-certificate-cert-page.png)
 Also, you need the private key for the certificate installed on your Mac - it isn't included if you just download the certificate from the Apple Developer Center, you must open the downloaded certificate.
-3. After you've downloaded the certificate, locate it on your Mac and open it. This will open the "Keychain Access" app.
+3. After you've downloaded the certificate, locate it on your Mac and open it. This opens the "Keychain Access" app.
 4. If the correct certificate isn't selected in "Keychain Access", select "My Certificates" on the left, and locate the certificate you've downloaded.
 5. Expand the certificate to see the corresponding private key.
 6. Select the certificate and private key, then right-click for the context menu on the items and choose "Export 2 items…".

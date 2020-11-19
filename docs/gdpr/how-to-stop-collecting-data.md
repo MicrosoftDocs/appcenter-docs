@@ -23,7 +23,7 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 ```
 
 > [!NOTE]
-> This will stop ingestion of all data coming from the App Center SDK, but won't delete existing data associated with the app.
+> This stops ingestion of all data coming from the App Center SDK, but won't delete existing data associated with the app.
 
 ## Stop collecting all SDK data for a specific device from the server
 

@@ -21,7 +21,7 @@ After getting invited to test an Android Application in App Center you'll receiv
 > Changing security settings put your phone at risk of malicious software. Only install apps from developers you trust. [Read about Google Play Protect which helps you protect your data](https://support.google.com/nexus/answer/2812853?hl=en&ref_topic=3416293).
 
 ### Android 9.x and higher 
-* Grant permission to the app to install unknown apps. This will trigger the installation.
+* Grant permission to the app to install unknown apps. This triggers the installation.
 * Android Oreo removed **allow unknown sources** from settings, for more info see refer to the blog post [Making it safer to get apps on Android O](https://android-developers.googleblog.com/2017/08/making-it-safer-to-get-apps-on-android-o.html)
 
 ### Android 8.x and higher
@@ -66,7 +66,7 @@ To get started using our native app, download it from the [Google Play Store](ht
 
 This app allows you to manage all of your apps and their releases within the app, rather than navigating to our install portal.
 
-After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this will initiate the installation process on your phone.
+After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this initiates the installation process on your phone.
 
 ![App Details View in the  App](images/a-appdetails-app.png)
 

@@ -54,7 +54,7 @@ All test interactions with the mobile application occur through an instance of `
 
 `iOSApp` and `AndroidApp` objects aren't instantiated directly. Instead, they're created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
 
-It's recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
+It's recommended that a new `IApp` instance be used for each test; this prevents the state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
 
 * **In the `SetUp` method** Typically, a test fixture is a logical grouping of related tests, each of them running independent of the other. In this scenario the `IApp` should be initialized in the `SetUp` method, ensuring that a new `IApp` is available for each test.
 * **In the `TestFixtureSetup` method**  In some situations a single test may require its own test fixture. In this case it may make more sense to initialize the `IApp` object once in the `TestFixtureSetup` method.

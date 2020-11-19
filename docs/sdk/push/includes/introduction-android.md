@@ -25,4 +25,4 @@ Only devices with the [Google Play Store](https://play.google.com) application o
 
 1. In the [Firebase Console](https://console.firebase.google.com), go to **Project Settings**. 
 2. Navigate to the **Cloud Messaging** tab. 
-3. Copy the **Server Key**. This will be the Android API Key that you'll need to set in the App Center Push portal.
+3. Copy the **Server Key**. This is the Android API Key that you'll need to set in the App Center Push portal.

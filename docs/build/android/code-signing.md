@@ -42,7 +42,7 @@ You can specify the signing details in the `build.gradle` [(app level)](https://
 You can upload the keystore and configure the signing credentials through App Center. In this case, App Center will first build your Android app and then run a signing step after the successful build.
 
 > [!NOTE]
-> A build can only be signed once. Make sure you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant. If there are signing settings both in App Center and in the Gradle file, the build may end up signed twice and this will lead to conflicts.
+> A build can only be signed once. Make sure you have no conflicts with signing configurations in your Gradle configuration for the chosen build variant. If there are signing settings both in App Center and in the Gradle file, the build may end up signed twice and this leads to conflicts.
 
 Set up your [build configuration](#setting-up-code-signing) in App Center as follows:
 

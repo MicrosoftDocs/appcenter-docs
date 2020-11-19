@@ -62,7 +62,7 @@ Currently, App Center only supports these signing configurations:
 You can read more about code signing in [App Center's macOS code signing guide](~/build/macos/code-signing.md) and in the [official Apple Developer guide](https://developer.apple.com/support/code-signing/).
 
 ### 3.7. CocoaPods
-App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
+App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This ensures that all dependencies are installed.
 
 If the repository already contains a */Pods* folder, App Center assumes you've checked in the pods in your repository and will no longer run `pod install`.
 

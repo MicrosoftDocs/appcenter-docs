@@ -195,7 +195,7 @@ There are few reserved keywords in each platform that can be set via custom data
 - **mutable-content**: Add this key with a value of 1 to enable media attachments. The application needs to support a service extension to download and handle the attachment content. For more information you can refer to [Apple documentations](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/ModifyingNotifications.html).
 
 ### Windows
-- **audio**: Add this key when you want to play a sound. this will modify the audio attribute for toast notifications.
+- **audio**: Add this key when you want to play a sound. This modifies the audio attribute for toast notifications.
 - **image**: Add this key when you want to modify the image attribute for tile and toast notifications.
 
 ## Enable or disable Push at runtime

@@ -54,5 +54,5 @@ If a build is [configured to produce a `mapping.txt` file](https://developer.and
 
 ### Deleting a mapping file
 
-1. Make a `GET` request to the [symbols_list API](https://openapi.appcenter.ms/#/crash/symbols_list). This will retrieve the IDs for the mapping files you uploaded.
-2. Make a `DELETE` request to the [symbols_upload API](https://openapi.appcenter.ms/#/crash/symbolUploads_delete) with the mapping file ID. This will delete the specified mapping file.
+1. Make a `GET` request to the [symbols_list API](https://openapi.appcenter.ms/#/crash/symbols_list). This retrieves the IDs for the mapping files you uploaded.
+2. Make a `DELETE` request to the [symbols_upload API](https://openapi.appcenter.ms/#/crash/symbolUploads_delete) with the mapping file ID. This deletes the specified mapping file.

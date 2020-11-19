@@ -53,7 +53,7 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing in [App Center's Android code signing documentation](~/build/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
 ### 3.6. Launch your successful build on a real device
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
+Use your newly produced APK file to test if your app starts on a real device. This adds approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.7. Configure from the build.gradle [(app level)](https://developer.android.com/studio/build) File
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.

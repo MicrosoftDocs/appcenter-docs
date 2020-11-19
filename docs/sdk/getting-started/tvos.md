@@ -60,7 +60,7 @@ The App Center SDK for tvOS can be integrated into your app via [Cocoapods](http
 
 ### 3.1  Integration via Cocoapods
 
-1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
+1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This pulls in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
 
 	```ruby
 	# Use the following line to use App Center Analytics and Crashes.
@@ -91,7 +91,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
     github "microsoft/appcenter-sdk-apple" ~> X.X.X
     ```
 
-1. Run `carthage update --platform tvOS`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
+1. Run `carthage update --platform tvOS`. This fetches dependencies into a **Carthage/Checkouts** folder, and then builds each framework.
 1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** files from the **Carthage/Build/tvOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it isn't added to the project, the other modules won't work and your app won't compile.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 

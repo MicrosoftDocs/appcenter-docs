@@ -72,7 +72,7 @@ Then you can use the `CheckForUpdate` API which is described in the following se
 Distribute.CheckForUpdate();
 ```
 
-This will send a request to App Center and display an update dialog in case there's a new release available.
+This sends a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
 > A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
@@ -214,7 +214,7 @@ You must upload release builds (that use the Distribute module of the App Center
 
 1. Create your app in the App Center Portal if you haven't already.
 1. Create a new distribution group and give it a name.
-1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this step, one not already used with this app. This will ensure that your experience is close to the experience of your real testers.
+1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this step, one not already used with this app. This ensures that your experience is close to the experience of your real testers.
 1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [`UpdateTrack` property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
 1. Once the upload has finished, click **Next** and select the **Distribution group** that you previously created as the **Destination** of that app distribution.

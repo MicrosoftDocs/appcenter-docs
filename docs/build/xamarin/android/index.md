@@ -82,7 +82,7 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 ### 3.7. Launch your successful build on a real device
 
-Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There's more [specific test integration information](~/build/build-test-integration.md).
+Use your newly produced `.apk` file to test if your app starts on a real device. This adds approximately 10 more minutes to the total build time. There's more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.8. NuGet restore
 

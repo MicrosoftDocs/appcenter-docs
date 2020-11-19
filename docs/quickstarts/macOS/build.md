@@ -36,7 +36,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 2. Click **Configure build**. The Build configuration panel will show up.
 
-3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
+3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This lets you distribute the app later.
 
    ![Signing Builds](images/Signing_builds_macOS.png)  
 

@@ -79,7 +79,7 @@ Create a `Cartfile` file with the following contents:
 github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 ```
 
-Follow the [Carthage Instructions for adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework). This will use the `Cartfile` you created to configure your Xcode project to link with the `AppCenterXUITestExtensions.framework`. For an example, you can review this [example code for setting up App Center XCUITest with Carthage](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido) which includes a sample `Cartfile`.
+Follow the [Carthage Instructions for adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework). This uses the `Cartfile` you created to configure your Xcode project to link with the `AppCenterXUITestExtensions.framework`. For an example, you can review this [example code for setting up App Center XCUITest with Carthage](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido) which includes a sample `Cartfile`.
 
 For more information on using Carthage, see the [Carthage GitHub repository](https://github.com/Carthage/Carthage).
 
@@ -161,7 +161,7 @@ $ xcrun xcodebuild build-for-testing \
   -derivedDataPath DerivedData
 ```
 
-This will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be
+This builds your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be
 located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
 `YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default it's usually the name of your application. To see the list of schemes defined in your Xcode project, run:

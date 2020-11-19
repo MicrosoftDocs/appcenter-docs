@@ -21,8 +21,8 @@ UITest provides a large number of APIs to simulate gestures or physical interact
 * **IApp.PinchToZoomIn** - This method will do a pinch gesture on the matched view to zoom in.
 * **IApp.PinchToZoomOut** - This method will do a pinch gesture on the matched view to zoom out.
 * **IApp.ScrollUp** / **IApp.ScrollDown** - Does a touch gesture that scrolls down or up.
-* **IApp.SwipeLeftToRight** / **IApp.RightToLeft** - This will simulate a left-to-right or a right-to-left gesture swipe.
-* **IApp.Tap** - This will tap the first matched element.
+* **IApp.SwipeLeftToRight** / **IApp.RightToLeft** - This simulates a left-to-right or a right-to-left gesture swipe.
+* **IApp.Tap** - This taps the first matched element.
 * **IApp.TouchAndHold** - This method will continuously touch view.
 
 These APIs all take an [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery) that's used to locate the view in question. If more than one view is located by the query, then the API will act on the first view found. For example, this code snippet will double tap:

@@ -124,7 +124,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     ![Add New Project](images/get-started-xamarin-forms-08-new-uitest-project-vs.png "Add New Project")
 
-    This will add a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
+    This adds a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
 
     ![NuGet Package Manager](images/get-started-xamarin-forms-09-new-uitest-project-xs.png "NuGet Package Manager")
 
@@ -136,7 +136,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     ![Project Reference Manager](images/get-started-xamarin-forms-10-test-apps-vs.png "Project Reference Manager")
 
-    This will allow the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
+    This allows the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -147,7 +147,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     ![Choose a Template](images/get-started-xamarin-forms-02-new-uitest-project-xs.png "Choose a Template")
 
-    This will add a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
+    This adds a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
 
     ![Xamarin UITest NuGet Packages](images/get-started-xamarin-forms-03-new-uitest-project-xs.png "Xamarin UITest NuGet Packages")
 
@@ -161,7 +161,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     ![Test Apps Dialog](images/get-started-xamarin-forms-05-add-test-apps-xs.png "Test Apps Dialog")
 
-    The **Unit Test** pad should now have a reference to the iOS and Android projects. This will allow the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
+    The **Unit Test** pad should now have a reference to the iOS and Android projects. This allows the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
 
 #### Adding UITest to the iOS app
 

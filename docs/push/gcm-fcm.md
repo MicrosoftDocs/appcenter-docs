@@ -33,7 +33,7 @@ Here are some answers to common questions we’ve heard from customers:
 
 **A**: Nothing. We'll maintain compatibility with existing GCM notification schema. Your GCM key will continue to work as normal as will versions of your app that are built with the GCM SDKs and libraries.
 
-If/when you decide to upgrade to the latest App Center SDKs and libraries to take advantage of new features, your GCM key will still work. You may switch to using an FCM key if you wish, but ensure you're adding Firebase to your existing GCM project when creating the new Firebase project. This will guarantee backward compatibility with your customers that are running older versions of the app that still use GCM SDKs and libraries.
+If/when you decide to upgrade to the latest App Center SDKs and libraries to take advantage of new features, your GCM key will still work. You may switch to using an FCM key if you wish, but ensure you're adding Firebase to your existing GCM project when creating the new Firebase project. This guarantees backward compatibility with your customers that are running older versions of the app that still use GCM SDKs and libraries.
 
 If you're creating a new FCM project and not attaching to the existing GCM project, once you update App Center with the new FCM secret you'll lose the ability to push notifications to your existing app installations, since the new FCM key has no link to the old GCM project.
 
@@ -43,4 +43,4 @@ If you're creating a new FCM project and not attaching to the existing GCM proje
 
 **Q**: How can I transition to the new FCM SDKs and libraries without breaking existing users?
 
-**A**: Upgrade at any time. Google hasn't yet announced any deprecation of existing GCM SDKs and libraries. To ensure you don't break push notifications to your existing users, make sure when you create the new Firebase project you're associating with your existing GCM project. This will ensure new Firebase secrets will work for users running the older versions of your app with GCM SDKs and libraries, as well as new users of your app with FCM SDKs and libraries.
+**A**: Upgrade at any time. Google hasn't yet announced any deprecation of existing GCM SDKs and libraries. To ensure you don't break push notifications to your existing users, make sure when you create the new Firebase project you're associating with your existing GCM project. This ensures new Firebase secrets will work for users running the older versions of your app with GCM SDKs and libraries, as well as new users of your app with FCM SDKs and libraries.
