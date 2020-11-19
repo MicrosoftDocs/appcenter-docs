@@ -37,7 +37,7 @@ The maximum number of distinct custom events that we'll track per day is 200. Th
 The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they're automatically rejected.
 
 ## What's the maximum number of property values that I can send per event?
-You'll see the count for the ten property values with highest count.
+You'll see the count for the 10 property values with highest count.
 
 ## Why am I not seeing any data in log flow?
 The log flow page will show you the incoming logs as they come in. In order to start seeing the logs flowing, you'll need to open the log flow page, and then start sending logs from the app.

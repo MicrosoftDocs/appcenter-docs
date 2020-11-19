@@ -20,11 +20,11 @@ Tracking events in your app allows you to answer questions like:
 - What's the most liked content?
 - What type of files do my users send?
 
-To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md) and [Unity](~/sdk/analytics/unity.md).
+To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [Unity](~/sdk/analytics/unity.md).
 
 ## General information
 
-You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. This allows you to drill down into your events data to the selected time period and/or app version.
+You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period and/or app version.
 
 ## Events Page
 
@@ -59,7 +59,7 @@ Property values are optimized for values of type 'String'.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped.
 - The SDK truncates event names to the first 256 characters.
 - The SDK truncates each property key and value to the first 125 characters.
-- The portal will show up the ten property values with highest count.
+- The portal will show up the 10 property values with highest count.
 
 ## Breadcrumbs (Events before a crash)
 
@@ -67,7 +67,7 @@ Events can help you identify the root cause of app crashes. As part of the App C
 
 In order to see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
 
-Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash which is older than 28 days, you won't see the corresponding breadcrumbs.
+Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash, which is older than 28 days, you won't see the corresponding breadcrumbs.
 
 ## Handled Errors
 
