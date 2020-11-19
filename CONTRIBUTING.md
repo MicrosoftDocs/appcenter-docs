@@ -50,7 +50,7 @@ Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide
 
 If your PR is addressing an existing issue, add the `Fixes #Issue_Number` keyword to the commit message or PR description, so the issue can be automatically closed when the PR is merged. For more information, see [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
 
-The App Center team will review your PR and let you know if the change looks good or if there are any other updates/changes necessary in order to approve it.
+The App Center team will review your PR and let you know if the change looks good, or if there's other changes necessary to approve it.
 
 **Step 6:** Make any necessary updates to your branch as discussed with the team.
 
