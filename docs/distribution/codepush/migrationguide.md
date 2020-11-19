@@ -18,7 +18,7 @@ Visual Studio App Center is the new home of CodePush. App Center is a developmen
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
-Regardless, change is hard. This guide was made to make moving from CodePush to App Center a seamless experience. Besides the use of a new CLI, we've tried to limit the changes you must make immediately. You won't have to make any changes in your code until the release of the new SDK next year.
+This guide was made to make moving from CodePush to App Center a seamless experience. Besides the use of a new CLI, we've tried to limit the changes you must make immediately. You won't have to make any changes in your code until the release of the new SDK next year.
 
 If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by [creating an account](https://appcenter.ms).
 

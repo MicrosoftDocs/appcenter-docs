@@ -135,7 +135,7 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
 - **mandatoryInstallMode** *(codePush.InstallMode)* - Specifies when you want to install updates, which are marked as mandatory. Defaults to `codePush.InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 
-- **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates that are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume, or unless the app suspension is long enough to not matter, regardless of how long it's in the background.
+- **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates that are installed using `InstallMode.ON_NEXT_RESUME` or `InstallMode.ON_NEXT_SUSPEND`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume, or unless the app suspension is long enough to not matter, however long it's in the background.
 
 - **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings. Before enabling this option within an App Store-distributed app, see [this note](https://github.com/Microsoft/react-native-code-push#user-content-apple-note).
 
@@ -245,7 +245,7 @@ Temporarily disallows programmatic restarts to occur as a result of either of fo
 3. The `restartApp` method was called
 
    > [!NOTE]
-   > Steps 1 and 2 effectively work by calling `restartApp` for you, so you can think of `disallowRestart` as blocking any call to `restartApp`, regardless if your app calls it directly or indirectly.
+   > Steps 1 and 2 effectively work by calling `restartApp` for you, so you can think of `disallowRestart` as blocking any call to `restartApp`, whether your app calls it directly or indirectly.
 
 After calling this method, any calls to `sync` would still be allowed to check for an update, download it and install it, but an attempt to restart the app would be queued until `allowRestart` is called. This way, the restart request is captured and can be "flushed" whenever you want to allow it to occur.
 
@@ -322,7 +322,7 @@ This method returns a `Promise`, which resolves to one of two possible values:
 
 1. `null` if an update with the specified state doesn't currently exist. This occurs in the following scenarios:
 
-   1. The end user hasn't installed any CodePush updates yet, and that's why no metadata is available for any updates, regardless what you specify as the `updateState` parameter.
+   1. The end user hasn't installed any CodePush updates yet, and that's why no metadata is available for any updates, whatever you specify as the `updateState` parameter.
 
    2. The end user installed an update of the binary (for example from the store), which cleared away the old CodePush updates, and gave precedence back to the JS binary in the binary. Therefore, it would exhibit the same behavior as #1
 

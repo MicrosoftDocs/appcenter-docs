@@ -24,7 +24,7 @@ In App Center Push, your customer's information can be in the following fields:
 
 * Push Notification: message details, or the campaign description
 
-    This data is stored for every Push Notification you make, regardless of whether you're using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
+    This data is stored for every Push Notification you make, whether you're using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
 
 To get a copy of any personal information associated with your end-user for Push, there are three different APIs you must call, each corresponding to one of the categories listed above.
 
@@ -71,7 +71,7 @@ Go through the data retrieved in Step 2, package it, and transmit this data your
 
 To send your push campaign to your users you can use either installation IDs, or an audience for customers you want to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, you must follow these steps to send your customers any personal information residing in the audience name, definition, or description.
 
-Here’s a summary of what you need to do:
+Here’s a summary of what to do:
 
 * Retrieve all Audiences under your App
 * Get the Audience name(s) which have customer information

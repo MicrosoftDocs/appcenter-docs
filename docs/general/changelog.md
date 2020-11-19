@@ -317,7 +317,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
 ### **April 26, 2018**
 
 - **Signing improvements for iOS and macOS builds**:
-  Apps are signed with the provided assets regardless of the project settings.
+  Apps are signed with the provided assets whatever the project settings.
 
 ### **April 25, 2018**
 
