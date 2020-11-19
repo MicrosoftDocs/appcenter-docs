@@ -48,7 +48,7 @@ Once the webview has been isolated, there are two main APIs for interacting with
 * **CSS** &ndash; This API uses CSS selectors to locate DOM elements displayed by the webview.
 * **XPath** &ndash; UITest can use XPath expressions to locate DOM elements in the webview.
 
-The XPath API, which more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
+The XPath API, while more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
 
 ### CSS
 It's possible to match HTML elements using the [AppQuery.Css](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Css#Xamarin_UITest_Queries_AppQuery_Css_System_String_) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.

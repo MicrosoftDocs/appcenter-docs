@@ -68,10 +68,10 @@ Xamarin.Calabash.Start();
 #endif
 ```
 
-The Calabash assembly makes uses of non-public Apple API's which will cause apps to be rejected by the App Store. However, the Xamarin.iOS linker will remove the Calabash assembly from the final IPA if it isn't explicitly referenced from code.
+The Calabash assembly makes uses of non-public Apple APIs, which causes apps to be rejected by the App Store. However, the Xamarin.iOS linker will remove the Calabash assembly from the final IPA if it isn't explicitly referenced from code.
 
 > [!NOTE]
-> Release builds don't have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Calabash assembly to be removed from app bundle. However, debug builds do have the compiler directive defined, preventing the linker from removing the assembly.
+> By default, release builds don't have the `ENABLE_TEST_CLOUD` compiler variable, which causes the Calabash assembly to be removed from app bundle. However, debug builds do have the compiler directive defined by default, preventing the linker from removing the assembly.
 
 The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for Debug builds:
 

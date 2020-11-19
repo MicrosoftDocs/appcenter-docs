@@ -64,7 +64,7 @@ This Calabash iOS code snippet shows how to use these methods:
 device_agent.dismiss_springboard_alerts_manually!
 
 # Do whatever triggers the alert, then wait for the alert
-# which may or may not appear.
+# that may or may not appear.
 begin
   device_agent.wait_for_springboard_alert(10) # timeout is optional
   device_agent.dismiss_springboard_alert("OK")

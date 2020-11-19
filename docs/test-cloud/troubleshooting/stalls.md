@@ -14,7 +14,7 @@ When we display a `Stalled Error`, it means we've detected an error that prevent
 
 When we detect a stalled error, our operations staff will attempt to make corrections and get the stalled run to complete normally. This manual intervention will take some time. As we do this we make long-term corrections to prevent it from occurring again, if possible.
 
-Devices which stall don't count against your available device concurrency or testing time; so they shouldn't impair any other devices or test runs from completing.
+Devices that stall don't count against your available device concurrency or testing time; so they shouldn't impair any other devices or test runs from completing.
 
 ## Getting support when your tests stall
 In the upper right-hand corner of App Center, select: **? > Contact Support**. 
