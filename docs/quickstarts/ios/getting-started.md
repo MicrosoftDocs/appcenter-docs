@@ -43,7 +43,7 @@ In this tutorial, you'll learn how to set up a sample Swift app with App Center 
    pod install
    ```
 
-4. Open the **.xcworkspace** and press **Run**. The app should build without error.
+4. Open the `.xcworkspace` and press **Run**. The app should build without error.
 
 
 ## Sign in to App Center
@@ -70,7 +70,7 @@ In order for the sample app to send information to App Center, the app secret mu
 
 2. Copy the **App Secret** at the top.
 
-3. Open the **.xcworkspace** from the sample app folder.
+3. Open the `.xcworkspace` from the sample app folder.
 
 4. In **AppDelegate.swift**, edit the `didFinishLaunchingWithOptions` delegate method and paste your App Secret at the placeholder.
 
@@ -86,9 +86,9 @@ When creating a new App ID for this sample app, be sure to check the **Push Noti
 
   ![Push App Service](images/AppID_push_ios.png)
 
-1. Open **.xcworkspace** from the sample app's folder.
+1. Open `.xcworkspace` from the sample app's folder.
 
-2. Go to **General** within the **.xcworkspace** file.
+2. Go to **General** within the `.xcworkspace` file.
 
 3. Under **Identity**, edit the **Bundle Identifier** to match the app ID.
 

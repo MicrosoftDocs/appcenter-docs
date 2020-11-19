@@ -26,7 +26,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 
 ## Enable Push notifications in Xcode
-1. Open the **.xcworkspace** from the sample app folder.
+1. Open the `.xcworkspace` from the sample app folder.
 
 2. Under the **Capabilities** tab, turn **Push Notifications** on.  
 

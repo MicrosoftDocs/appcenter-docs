@@ -71,7 +71,7 @@ The App Center SDK for tvOS can be integrated into your app via [Cocoapods](http
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
+2. Run `pod install` to install your newly defined pod and open the project's `.xcworkspace`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 

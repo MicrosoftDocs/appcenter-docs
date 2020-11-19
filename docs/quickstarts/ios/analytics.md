@@ -19,7 +19,7 @@ If you haven't already, first follow the [getting started tutorial](getting-star
 
 ## Open the app and view user Analytics
 To see users, session, and other information on the Overview page:
-1. Run the app using .xcworkspace, or from your device.
+1. Run the app using `.xcworkspace`, or from your device.
 
 2. Interact with the sample app from the simulator or device.
 
