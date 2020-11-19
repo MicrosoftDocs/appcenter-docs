@@ -365,7 +365,7 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it's a minidump file so we can handle it properly.
 
 > [!WARNING]
 > There's a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.

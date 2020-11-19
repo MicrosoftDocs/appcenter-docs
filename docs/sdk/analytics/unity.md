@@ -59,7 +59,7 @@ Analytics.TrackEvent("Video clicked");
 ```
 
 >[!WARNING]
->`Analytics.TrackEvent()` will behave inconsistently across platforms if it is called prior to the `Awake()` method in the script `AppCenterBehavior.cs`. To be safe, you should only rely on events to be sent after the first scene in your application has awakened all of the `MonoBehaviour` scripts. To track an event in conjunction with a `MonoBehavour`'s initialization, consider adding the API to your script's `Start()` method instead of `Awake()`.
+>`Analytics.TrackEvent()` will behave inconsistently across platforms if it's called prior to the `Awake()` method in the script `AppCenterBehavior.cs`. To be safe, you should only rely on events to be sent after the first scene in your application has awakened all of the `MonoBehaviour` scripts. To track an event in conjunction with a `MonoBehavour`'s initialization, consider adding the API to your script's `Start()` method instead of `Awake()`.
 
 ## Enable or disable App Center Analytics at runtime
 

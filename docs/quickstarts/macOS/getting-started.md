@@ -82,7 +82,7 @@ In order for the sample app to send information to App Center, the app secret mu
 
 *Codesigning is optional, but recommended.*
 
-Codesigning assures users that the app is from a trustworthy developer, and hasn't been altered by someone else. In App Center, it is needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
+Codesigning assures users that the app is from a trustworthy developer, and hasn't been altered by someone else. In App Center, it's needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
 When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
 

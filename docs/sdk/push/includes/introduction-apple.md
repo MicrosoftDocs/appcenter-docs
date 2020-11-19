@@ -53,7 +53,7 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 5. Add the SDK framework to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework** and **AppCenterPush.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other module won't work and your project won't compile successfully.
+   * Now drag and drop **AppCenter.framework** and **AppCenterPush.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it's added to your project, otherwise the other module won't work and your project won't compile successfully.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ### 2. Start App Center Push

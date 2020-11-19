@@ -84,7 +84,7 @@ You can find the app name and owner name from an App Center URL, or using the [A
 ### Find owner_name and app_name from an App Center URL
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. Navigate to your app.
-3. When you look at your app's URL, it is in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
+3. When you look at your app's URL, it's in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
 
 Owner can be a user or an organization. For example:
 

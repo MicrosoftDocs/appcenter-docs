@@ -107,7 +107,7 @@ Click the **Stack Trace** tab near the top of the page.
 
 Stack traces are errors captured during the test run. Any stack traces should be examined along with the test logs and device logs for more context to troubleshoot application issues.
 
-On iOS, the stack trace is relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it is relevant.
+On iOS, the stack trace is relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it's relevant.
 
 ### Device log tab
 

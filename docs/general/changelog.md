@@ -472,7 +472,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what's happening before a crash.
 
 - **Annotate your findings to crash groups:**
-  It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.
+  It's now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.
 
 - **Use CodePush in App Center:**
   Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the App Center across multiple deployments. Keep an eye out for more features and improvements here!
