@@ -32,7 +32,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 4. You'll be redirected to Microsoft login page, to provide your initial domain name in Azure Active Directory (AD). It looks like **your-domain.onmicrosoft.com**.
 5. On successful login, you'll be asked to enter a **Store name**.
 6. **Select Category** of the app from the drop-down.
-7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The Intune administrator that connected App Center to the Intune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the autocomplete drop-down.
+7. For **Audience**, provide the Azure AD group (security enabled group) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The Intune administrator that connected App Center to the Intune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the autocomplete drop-down.
 8. Click **Connect**.
 9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. The connection is valid for 90 days for an application in App Center. 
 
