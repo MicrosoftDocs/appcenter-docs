@@ -336,7 +336,7 @@ Crashes.isEnabled()
 
 ## Handled Errors
 
-App Center also allows you to track errors by using handled exceptions. In order to do so, use the `trackError` method:
+App Center also allows you to track errors by using handled exceptions. To do so, use the `trackError` method:
 
 ```java
 try {

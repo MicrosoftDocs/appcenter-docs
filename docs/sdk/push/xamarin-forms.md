@@ -103,7 +103,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 This section applies if you have a [Splash Screen activity](https://docs.microsoft.com/xamarin/android/user-interface/splash-screen) (or a similar concept) that starts the main activity and main activity is the one creating the forms application.
 
-When you click on the push notification if the application isn't launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity in order to process that information.
+When you click on the push notification if the application isn't launched, the push information are intent extras in the launcher activity which is the splash screen. This intent needs to be copied to the main activity if the SDK is initialized in the main activity to process that information.
 
 The simplest way of doing that, is to locate the code where you start your main activity from the launcher activity:
 

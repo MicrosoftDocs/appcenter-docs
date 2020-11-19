@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Exporting Diagnostics Data
 
-This article walks you through how to export data per your user request. In order to export data, you have two options:
+This article walks you through how to export data per your user request. To export data, you have two options:
 
 1. Use Azure Blob Storage
 2. Call our APIs for specific crash/error information
@@ -99,4 +99,4 @@ https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/atta
 
 **Prerequisite:** The following requires that you must have a way to map the App Center install IDs and your users.
 
-In order to provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.
+To provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.

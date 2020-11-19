@@ -19,7 +19,7 @@ A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your code and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they're available. It's a win-win!
 
-In order to ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
+To ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
 
 > [!NOTE] 
 > Any product changes that touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).
@@ -27,7 +27,7 @@ In order to ensure that your end users always have a functioning version of your
 ## Supported Cordova Platforms
 Cordova 5.0.0+ is fully supported, along with the following associated platforms:
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - Including CrossWalk!
-* iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (In order to use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
+* iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (To use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
 
 To check the versions of each Cordova platform you're currently using, you can run the following command and inspect the `Installed platforms` list:
 
@@ -64,7 +64,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
    > [!IMPORTANT]
    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.
 
-    Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). In order to enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
+    Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). To enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 ```xml
     <platform name="android">
         ...
@@ -143,9 +143,9 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android
 > By using the App Center CLI `set-current` function you don't have to use the -a flag to specify the app a command is directed at.
 >
 > [!TIP]
-> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) in order to help identify it within your release history.
+> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) to help identify it within your release history.
 
-The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and therefore, can generate your update and know exactly which files to upload. Additionally, in order to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).
+The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and therefore, can generate your update and know exactly which files to upload. Additionally, to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).
 
 ```shell
 # Release a mandatory update with a changelog
@@ -253,7 +253,7 @@ codePush.getCurrentPackage(function (update) {
 codePush.getPendingPackage(onSuccess, onError?);
 ```
 
-Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you want to determine whether there's a pending update and then prompt the user if they want to restart immediately (via `codePush.restartApplication`) in order to apply it.
+Gets the metadata for the currently pending update (if one exists). An update is considered "pending" if it's been downloaded and installed, but hasn't been applied yet via an app restart. An update could only ever be in this state if   `InstallMode.ON_NEXT_RESTART` or `InstallMode.ON_NEXT_RESUME` were specified upon calling `sync` or `LocalPackage.install`, and the app hasn't yet been restarted or resumed (respectively). This method can be useful if you want to determine whether there's a pending update and then prompt the user if they want to restart immediately (via `codePush.restartApplication`) to apply it.
 
 When the update retrieval completes, it will trigger the `onSuccess` callback with one of two possible values:
 1. `null` if the app doesn't currently have a pending update (e.g. the app is already running the latest available version).
@@ -342,10 +342,10 @@ While the `sync` method tries to make it easy to perform silent and active updat
 The following list represents the available options and their defaults:
 * **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message that's displayed to the end user. Defaults to `false`.
 * **descriptionPrefix** *(String)* - Indicates the string you want to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`.
-* **mandatoryContinueButtonLabel** *(String)*: The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
+* **mandatoryContinueButtonLabel** *(String)*: The text to use for the button the end user must press to install a mandatory update. Defaults to `"Continue"`.
 * **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
-* **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that's available. Defaults to `"Ignore"`.
-* **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press in order to install an optional update. Defaults to `"Install"`.
+* **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press to ignore an optional update that's available. Defaults to `"Ignore"`.
+* **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press to install an optional update. Defaults to `"Install"`.
 * **optionalUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is optional. Defaults to `"An update is available. Would you like to install it?"`.
 *- **updateTitle** *(String)* - The text used as the header of an update notification that's displayed to the end user. Defaults to `"Update available"`.
 

@@ -328,7 +328,7 @@ To set an app user's identity using the App Center SDK, refer to the following a
 > [!NOTE]
 > The user's identity set through the SDK can be whatever the developer wants it to be: the user's name, email address, phone number, or some other unique identifier.
 
-To send a notification to one or more users, the app must set the User ID (as described above) and keep a copy of the identity later in order to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later.
+To send a notification to one or more users, the app must set the User ID (as described above) and keep a copy of the identity later to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later.
 
 In the following example, we'll assume the app uses email addresses to identify users and sends a notification to the following users identities: `["james@somecomany.com", "allison@somecompany.com", "anna@somecompany.com"]`. To send a notification message to the specified users, use the [`push/notifications`](https://openapi.appcenter.ms/#/push/Push_Send) API. Submit an HTTP POST request using the following URL:
 

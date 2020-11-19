@@ -151,7 +151,7 @@ codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, on
 
 Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to leverage the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
-This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
+This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
 
 ### Overview
 
@@ -391,7 +391,7 @@ Create the described release definition by following these steps:
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
    - Use `Staging` as the `Source Deployment`
    - Use `Production` as the `Destination Deployment`
-   - Use `20%` for `Rollout` in order to deploy to only 20% of your production users
+   - Use `20%` for `Rollout` to deploy to only 20% of your production users
 
 6. Save and name the release definition by pressing the Save toolbar button.
 
@@ -406,7 +406,7 @@ Create the described release definition by following these steps:
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
    - Use `Production` as the `Deployment`
    - Use `Latest` as the `Release Label`
-   - Use `100%` for `Rollout` in order to deploy to all remaining production users
+   - Use `100%` for `Rollout` to deploy to all remaining production users
 
 9. Save and name the release definition by pressing the Save toolbar button.
 
@@ -414,7 +414,7 @@ Create the described release definition by following these steps:
 
 If you had both `Staging` and `Production` users, you could test the full release environment as configured. Since that's not the case for this tutorial, you can focus on testing the `Staging` environment.
 
-To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch in order to kick off a build and eventually a release.
+To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch to kick off a build and eventually a release.
 
 You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content).
 

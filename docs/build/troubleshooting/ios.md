@@ -78,7 +78,7 @@ A common reason for tests to fail is where the linker commands hit an error simi
   ❌ clang: error: linker command failed with exit code 1 (use -v to see invocation)  
 ```
 
-The likely cause of this error is the linking type of **Apple Mach-O Linker** isn't set to **static library**. In order to successfully build and test your app,  ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
+The likely cause of this error is the linking type of **Apple Mach-O Linker** isn't set to **static library**. To successfully build and test your app, ensure the linking type of **Apple Mach-O Linker** in your **test target** is set to **static library**.
 
 ![Apple Mach-O Linker](~/build/images/mach-o-apple-linkage.png "Set Apple Mach-O Linker to static library")
 

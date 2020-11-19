@@ -145,13 +145,13 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
   - **descriptionPrefix** *(String)* - Indicates the string you want to prefix the release description with, if any, when displaying the update notification to the end user. Defaults to `" Description: "`
 
-  - **mandatoryContinueButtonLabel** *(String)* - The text to use for the button the end user must press in order to install a mandatory update. Defaults to `"Continue"`.
+  - **mandatoryContinueButtonLabel** *(String)* - The text to use for the button the end user must press to install a mandatory update. Defaults to `"Continue"`.
 
   - **mandatoryUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is specified as mandatory. Defaults to `"An update is available that must be installed."`.
 
-  - **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press in order to ignore an optional update that's available. Defaults to `"Ignore"`.
+  - **optionalIgnoreButtonLabel** *(String)* - The text to use for the button the end user can press to ignore an optional update that's available. Defaults to `"Ignore"`.
 
-  - **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press in order to install an optional update. Defaults to `"Install"`.
+  - **optionalInstallButtonLabel** *(String)* - The text to use for the button the end user can press to install an optional update. Defaults to `"Install"`.
 
   - **optionalUpdateMessage** *(String)* - The text used as the body of an update notification, when the update is optional. Defaults to `"An update is available. Would you like to install it?"`.
 
@@ -205,7 +205,7 @@ Second optional parameter `handleBinaryVersionMismatchCallback` is an optional c
 For example, consider a use-case where currently installed binary version is 1.0.1 with a label (code push label) v1. Later native code was changed in the dev cycle and the binary version was updated to 1.0.2. When a codepush update check is triggered, we ignore updates having binary version mismatch (because the update isn't targeting to the binary version of currently installed app). In this case, installed app (1.0.1) will ignore the update targeting version 1.0.2. You can use `handleBinaryVersionMismatchCallback` to provide a hook to handle such situations.
 
 > [!IMPORTANT]
-> Be cautious to use Alerts within this callback if you're developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions in order to access functionality, content, or use of the app.
+> Be cautious to use Alerts within this callback if you're developing iOS application, due to [App Store](https://developer.apple.com/app-store/review/guidelines/) review process: Apps must not force users to rate the app, review the app, download other apps, or other similar actions to access functionality, content, or use of the app.
 
 This method returns a `Promise`, which resolves to one of two possible values:
 
@@ -326,7 +326,7 @@ This method returns a `Promise`, which resolves to one of two possible values:
 
    2. The end user installed an update of the binary (for example from the store), which cleared away the old CodePush updates, and gave precedence back to the JS binary in the binary. Therefore, it would exhibit the same behavior as #1
 
-   3. The `updateState` parameter is set to `UpdateState.RUNNING`, but the app isn't currently running a CodePush update. There may be a pending update, but the app hasn't been restarted yet in order to make it active.
+   3. The `updateState` parameter is set to `UpdateState.RUNNING`, but the app isn't currently running a CodePush update. There may be a pending update, but the app hasn't been restarted yet to make it active.
 
    4. The `updateState` parameter is set to `UpdateState.PENDING`, but the app doesn't have any currently pending updates.
 
@@ -456,7 +456,7 @@ codePush.sync({
 });
 ```
 
-In addition to the options, the `sync` method also accepts several optional function parameters, which allow you to subscribe to the lifecycle of the `sync` "pipeline" in order to display additional UI as needed (like a "checking for update modal or a download progress modal):
+In addition to the options, the `sync` method also accepts several optional function parameters, which allow you to subscribe to the lifecycle of the `sync` "pipeline" to display additional UI as needed (like a "checking for update modal or a download progress modal):
 
 - **syncStatusChangedCallback** *((syncStatus: Number) => void)* - Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code, which represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
 
@@ -574,7 +574,7 @@ This enum specifies when you want your app to sync with the server for updates, 
 
 #### SyncStatus
 
-This enum is provided to the `syncStatusChangedCallback` function that can be passed to the `sync` method, in order to hook into the overall update process. It includes the following values:
+This enum is provided to the `syncStatusChangedCallback` function that can be passed to the `sync` method, to hook into the overall update process. It includes the following values:
 
 - **codePush.SyncStatus.CHECKING_FOR_UPDATE** *(0)* - The CodePush server is being queried for an update.
 - **codePush.SyncStatus.AWAITING_USER_ACTION** *(1)* - An update is available, and a confirmation dialog was shown to the end user. (This is only applicable when the `updateDialog` is used)
@@ -592,7 +592,7 @@ This enum specifies the state that an update is currently in, and can be specifi
 
 - **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that's currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics and/or crash reporting service.
 
-- **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet in order to apply it. This can be useful for determining whether there's a pending update, which you may want to force a programmatic restart (via `restartApp`) in order to apply.
+- **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet to apply it. This can be useful for determining whether there's a pending update, which you may want to force a programmatic restart (via `restartApp`) to apply.
 
 - **codePush.UpdateState.LATEST** *(2)* - Indicates that an update represents the latest available release, and can be either currently running or pending.
 
@@ -658,7 +658,7 @@ Constructs the CodePush client runtime and represents the `ReactPackage` instanc
 
 - **CodePush(String deploymentKey, Activity mainActivity)** - Creates a new instance of the CodePush runtime, that will be used to query the service for updates via the provided deployment key. The `mainActivity` parameter should always be set to `this` when configuring your React packages list inside the `MainActivity` class. This constructor puts the CodePush runtime into "release mode", so if you want to enable debugging behavior, use the following constructor instead.
 
-- **CodePush(String deploymentKey, Activity mainActivity, bool isDebugMode)** - Equivalent to the previous constructor, but allows you to specify whether you want the CodePush runtime to be in debug mode or not. When using this constructor, the `isDebugMode` parameter should always be set to `BuildConfig.DEBUG` in order to stay synchronized with your build type. When putting CodePush into debug mode, the following behaviors are enabled:
+- **CodePush(String deploymentKey, Activity mainActivity, bool isDebugMode)** - Equivalent to the previous constructor, but allows you to specify whether you want the CodePush runtime to be in debug mode or not. When using this constructor, the `isDebugMode` parameter should always be set to `BuildConfig.DEBUG` to stay synchronized with your build type. When putting CodePush into debug mode, the following behaviors are enabled:
 
   1. Old CodePush updates aren't deleted from storage whenever a new binary is deployed to the emulator/device. This behavior enables you to deploy new binaries, without bumping the version during development, and without continuously getting the same update every time your app calls `sync`.
 

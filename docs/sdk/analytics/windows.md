@@ -80,7 +80,7 @@ private static async Task SetCountryCode()
             countryCode = new GeographicRegion(country).CodeTwoLetter;
             break;
         case GeolocationAccessStatus.Denied:
-            AppCenterLog.Info(LogTag, "Geolocation access denied. In order to set country code in App Center, enable location service in Windows 10.");
+            AppCenterLog.Info(LogTag, "Geolocation access denied. To set country code in App Center, enable location service in Windows 10.");
             break;
         case GeolocationAccessStatus.Unspecified:
             break;

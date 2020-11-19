@@ -107,7 +107,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ## 4. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the using statements
 

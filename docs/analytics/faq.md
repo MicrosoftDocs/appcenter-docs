@@ -40,7 +40,7 @@ The maximum number of event properties is currently set to twenty. If more than 
 You'll see the count for the 10 property values with highest count.
 
 ## Why am I not seeing any data in log flow?
-The log flow page will show you the incoming logs as they come in. In order to start seeing the logs flowing, you'll need to open the log flow page, and then start sending logs from the app.
+The log flow page will show you the incoming logs as they come in. To start seeing the logs flowing, you'll need to open the log flow page, and then start sending logs from the app.
 
 ## Can I export the raw data?
 Yes. Under app settings, you can export all your Analytics raw data into Azure Blob Storage and Application Insights.

@@ -177,7 +177,7 @@ The App Center Crashes SDK uses swizzling to improve its integration by forwardi
 
 2. Open **Info.plist** file and replace the **NSApplication** in the **Principal class** field with your application class name, **ReportExceptionApplication** in this example.
 
-3. In order to disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
+3. To disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 

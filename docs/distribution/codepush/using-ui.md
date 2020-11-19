@@ -101,7 +101,7 @@ If a device is running v1 of the app, and queries the server for an update, the 
 
 If an end user is currently running v2, and they query the server for an update, it will respond with v3, but leave the release as `optional`. Because they already received the mandatory update, there isn't a need to modify the policy of v3. This behavior is why we said that the server "dynamically converts" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It is only changed on-the-fly as necessary when responding to an update check from a device.
 
-If you never release an update marked as `mandatory`, then the described behavior doesn't apply to you, since the server will never change an `optional` release to `mandatory`. If a release is marked as `mandatory`, it'll never be converted to `optional`. The server will only change an `optional` release to `mandatory` in order to respect the semantics described above.
+If you never release an update marked as `mandatory`, then the described behavior doesn't apply to you, since the server will never change an `optional` release to `mandatory`. If a release is marked as `mandatory`, it'll never be converted to `optional`. The server will only change an `optional` release to `mandatory` to respect the semantics described above.
 
 ### Rollout Percentage
 Developers use the [CLI's rollout parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#rollout-parameter) to instruct CodePush to push a particular release to a percentage of the devices running the app. This feature enables developers to test out a release before rolling it out to everyone.

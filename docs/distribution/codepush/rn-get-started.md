@@ -48,7 +48,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
    This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this will correspond to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
    > [!NOTE]
-   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior.
+   > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
 
    Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
@@ -71,13 +71,13 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
 
    ![Deployment key in list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   To effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
    > [!NOTE]
    > If you need to dynamically use a different deployment, you can also override your deployment key in JS code using [Code-Push options](rn-api-ref.md#codepushoptions)*
 
 ### Plugin Installation for React Native lower than 0.60 (iOS)
-In order to accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
+To accommodate as many developer preferences as possible, the CodePush plugin supports iOS installation via three mechanisms:
 1. [RNPM](#plugin-installation-ios---rnpm) - [React Native Package Manager](https://github.com/rnpm/rnpm) (RNPM) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you're already using it, or you want to use it, then we recommend this approach.
 
 2. [**CocoaPods**](#plugin-installation-ios---cocoapods) - If you're building a native iOS app that's embedding React Native into it, or you prefer using [CocoaPods](https://cocoapods.org), then we recommend using the Podspec file that we ship as part of our plugin.
@@ -98,7 +98,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
     ```
 
    > [!NOTE]
-   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ in order to benefit from this one step install.
+   > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ to benefit from this one step install.
 
 2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
@@ -136,7 +136,7 @@ In order to accommodate as many developer preferences as possible, the CodePush 
 2. Run `pod install`
 
 > [!NOTE]
-> The CodePush `.podspec` depends on the `React` pod, and so in order to ensure that it can correctly use the version of React Native that your app is built with, make sure to define the `React` dependency in your app's `Podfile` as explained in the [React Native integration documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
+> The CodePush `.podspec` depends on the `React` pod, and so to ensure that it can correctly use the version of React Native that your app is built with, make sure to define the `React` dependency in your app's `Podfile` as explained in the [React Native integration documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps.html#podfile).
 
 #### Plugin Installation (iOS - Manual)
 1. Open your app's Xcode project
@@ -202,7 +202,7 @@ For React Native 0.58 and below:
 This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this corresponds to the file that was compiled with the app. However, after an update has been pushed via CodePush, this will return the location of the most recently installed update.
 
 > [!NOTE]
-> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, in order to overwrite that default behavior*
+> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior*
 
 Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This will make it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 
@@ -235,7 +235,7 @@ To let the CodePush runtime know which deployment it should query for updates ag
 
 ![Staging Key](./images/rn-key-4.png)
 
-In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+To effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
 ### HTTP exception domains configuration (iOS)
 
@@ -274,7 +274,7 @@ Before doing anything, see the [Apple docs][ats] first.
 
 You can self-sign bundles during release and verify their signatures before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing).
 
-In order to configure a Public Key for bundle verification, you need to add a record in `Info.plist` with the name `CodePushPublicKey` and string value of public key content. Example:
+To configure a Public Key for bundle verification, you need to add a record in `Info.plist` with the name `CodePushPublicKey` and string value of public key content. Example:
 
 ```xml
 <plist version="1.0">
@@ -293,7 +293,7 @@ MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANkWYydPuyOumR/sn2agNBVDnzyRpM16NAUpYPGxNgjSEp0e
 
 ## Android Setup
 
-In order to integrate CodePush into your Android project, perform the following steps:
+To integrate CodePush into your Android project, perform the following steps:
 
 ### Plugin Installation (Android)
 
@@ -323,7 +323,7 @@ In order to integrate CodePush into your Android project, perform the following 
     public class MainApplication extends Application implements ReactApplication {
         private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
             ...
-            // 2. Override the getJSBundleFile method in order to let
+            // 2. Override the getJSBundleFile method to let
             // the CodePush runtime determine where to get the JS
             // bundle location from on each app start
             @Override
@@ -340,7 +340,7 @@ In order to integrate CodePush into your Android project, perform the following 
 
    ![Deployment list](https://cloud.githubusercontent.com/assets/116461/11601733/13011d5e-9a8a-11e5-9ce2-b100498ffb34.png)
 
-   In order to effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+   To effectively make use of the `Staging` and `Production` deployments that were created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
    Your `strings.xml` file should look like this:
 
@@ -356,7 +356,7 @@ In order to integrate CodePush into your Android project, perform the following 
 
 ### Plugin Installation for React Native lower than 0.60 (Android)
 
-In order to accommodate as many developer preferences as possible, the CodePush plugin supports Android installation via two mechanisms:
+To accommodate as many developer preferences as possible, the CodePush plugin supports Android installation via two mechanisms:
 
 1. [**RNPM**](#plugin-installation-android---rnpm) - [React Native Package Manager (RNPM)](https://github.com/rnpm/rnpm) is an awesome tool that provides the simplest installation experience possible for React Native plugins. If you're already using it, or you want to use it, then we recommend this approach.
 
@@ -436,7 +436,7 @@ public class MainApplication extends Application implements ReactApplication {
 
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
         ...
-        // 2. Override the getJSBundleFile method in order to let
+        // 2. Override the getJSBundleFile method to let
         // the CodePush runtime determine where to get the JS
         // bundle location from on each app start
         @Override
@@ -503,7 +503,7 @@ Update the **MainActivity.java** file to use CodePush via the following changes:
 import com.microsoft.codepush.react.CodePush;
 
 public class MainActivity extends ReactActivity {
-    // 2. Override the getJSBundleFile method in order to let
+    // 2. Override the getJSBundleFile method to let
     // the CodePush runtime determine where to get the JS
     // bundle location from on each app start
     @Override
@@ -531,7 +531,7 @@ public class MainActivity extends ReactActivity {
 > [!NOTE]
 > This section is only necessary if you're *explicitly* launching a React Native instance without an `Activity` (for example, from within a native push notification receiver). For these situations, CodePush must be told how to find your React Native instance.
 
-In order to update/restart your React Native instance, CodePush must be configured with a `ReactInstanceHolder` before attempting to restart an instance in the background. This is done in your `Application` implementation.
+To update/restart your React Native instance, CodePush must be configured with a `ReactInstanceHolder` before attempting to restart an instance in the background. This is done in your `Application` implementation.
 
 **For React Native >= v0.29**
 
@@ -578,11 +578,11 @@ public class MainApplication extends Application {
 }
 ```
 
-In order to effectively make use of the `Staging` and `Production` deployments that we recommend you created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
+To effectively make use of the `Staging` and `Production` deployments that we recommend you created along with your CodePush app, refer to the [multi-deployment testing](rn-deployment.md#multi-deployment-testing) docs below before actually moving your app's usage of CodePush into production.
 
 ### Code Signing setup (Android)
 
-Starting with CLI version **2.1.0** you can self-sign bundles during release and verify its signature before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing). In order to use Public Key for Code Signing, you need to do following steps:
+Starting with CLI version **2.1.0** you can self-sign bundles during release and verify its signature before installation of update. For more info about Code Signing, see the [relevant code-push documentation section](cli.md#code-signing). To use Public Key for Code Signing, you need to do following steps:
 
    Add a `CodePushPublicKey` string item to `/path_to_your_app/android/app/src/main/res/values/strings.xml`. It may look like this:
 

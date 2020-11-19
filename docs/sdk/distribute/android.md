@@ -78,7 +78,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
 
 1. Open the project's app level **build.gradle** file (`app/build.gradle`).
 2. Configure build variants by adding product flavors:

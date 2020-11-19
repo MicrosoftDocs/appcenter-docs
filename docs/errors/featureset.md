@@ -18,7 +18,7 @@ In this page, you'll learn about the feature set available for Xamarin errors.
 
 
 ## Error Group Overview
-The Error group overview page provides you with the key metrics about the errors happening in your app. In order to easily manage all your error instances and allow you to get an understanding of what are the most common errors or the ones that affect most users, App Center creates Error Groups based on the similarity of the error instances' stack traces.
+The Error group overview page provides you with the key metrics about the errors happening in your app. To easily manage all your error instances and allow you to get an understanding of what are the most common errors or the ones that affect most users, App Center creates Error Groups based on the similarity of the error instances' stack traces.
 
 ![App Center lists the error groups generated based on your errors instances](~/errors/images/groupsoverview.png)
 

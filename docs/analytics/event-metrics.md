@@ -65,7 +65,7 @@ Property values are optimized for values of type 'String'.
 
 Events can help you identify the root cause of app crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session.
 
-In order to see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
+To see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
 
 Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash that's older than 28 days, you won't see the corresponding breadcrumbs.
 
