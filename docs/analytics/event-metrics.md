@@ -44,7 +44,7 @@ Remove individual events from this page by clicking the settings option on top r
 
 ## Events Properties
 
-Events Properties provide contextual information about the events. They allow to have a deeper understanding about the actions that the users take in your app.
+Events Properties provide contextual information about the events. They allow a deeper understanding about the actions that the users take in your app.
 
 Examples of events and properties are:
 

@@ -129,7 +129,7 @@ Replace the way you *instantiate* your driver, such that lines in the form of:
 
 Using these drivers will still allow you to run your tests locally without additional modifications, but enables you to "label" test steps in your test execution using `driver.label("text")`. The text and a screenshot from the device will be visible in test report in  Test Cloud.
 
-It's recommended to have a call to `driver.label` in the `@After` method, which will take a screenshot of the app final state. An example `@After` method for a test could look like this code:
+It's recommended to call `driver.label` in the `@After` method, which will take a screenshot of the app final state. An example `@After` method for a test could look like this code:
 
 ```java
     @After

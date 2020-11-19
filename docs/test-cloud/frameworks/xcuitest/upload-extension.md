@@ -83,7 +83,7 @@ Follow the [Carthage Instructions for adding frameworks to unit tests or a frame
 
 For more information on using Carthage, see the [Carthage GitHub repository](https://github.com/Carthage/Carthage).
 
-Remember that the `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
+The `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
 
 ### Building from Source
 

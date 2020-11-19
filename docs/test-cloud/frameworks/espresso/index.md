@@ -63,7 +63,7 @@ public ReportHelper reportHelper = Factory.getReportHelper();
 
 Using the helper still allows you to run your tests locally without additional modifications, but enables you to *label* test steps in your test execution using `reportHelper.label("myTestStepLabel")`. The label text is used to navigate the test steps and corresponding screenshots in the test report.
 
-A recommended practice is to have a call to `label` in the `@After` method, this includes a screenshot of the app final state in the test report. The screenshot is taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
+It's recommended to call `label` in the `@After` method, this includes a screenshot of the app final state in the test report. The screenshot is taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
 
 ```java
 @After

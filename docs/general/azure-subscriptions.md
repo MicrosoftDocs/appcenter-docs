@@ -42,7 +42,7 @@ If you don't have an existing Azure subscription, the following steps will guide
 If you already set as an "Owner" of an Azure subscription, you can connect it to your organization/personal account in App Center.
 
 > [!WARNING]
-> Once you add an Azure subscription to an organization, any organization admin can use it to change billing settings within the same org. Organization admins can make these changes to your Azure subscription without having to have an "Owner" role assigned to them.
+> Once you add an Azure subscription to an organization, any organization admin can use it to change billing settings within the same org. Organization admins can make these changes to your Azure subscription without having an "Owner" role assigned to them.
 
 1. First navigate to **Azure** under your organization/personal account settings in App Center and select the **+** to add an Azure subscription.
 2. Enter your email to sign in to Azure. Sign in with a Microsoft account.

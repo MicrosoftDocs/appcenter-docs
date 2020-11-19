@@ -68,7 +68,7 @@ When writing an annotation on the portal or via API, you may have written a user
 If you're using [App Center Errors](~/errors/index.md), error properties are a potential place where you may have added personal information.
 
 #### Error property value
-The most common scenario is to have personal information in the Error Property Value. For example:
+The most common scenario is having personal information in the Error Property Value. For example:
 
 ```csharp
 try 
