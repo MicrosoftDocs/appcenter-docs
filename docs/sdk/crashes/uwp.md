@@ -155,7 +155,7 @@ Crashes.NotifyUserConfirmation(UserConfirmation.AlwaysSend);
 
 ### Get information about the sending status for a crash log
 
-At times, you want to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes provides three different callbacks that you can use in your app to be notified of what's going on:
+At times, you want to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes provides three different callbacks that you can use in your app to be notified of what's going on:
 
 #### The following callback will be invoked before the SDK sends a crash log
 

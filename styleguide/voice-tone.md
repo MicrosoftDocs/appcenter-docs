@@ -14,7 +14,7 @@ You'll see examples of each of these as you read this style guide. We've written
 We want our docs to have a conversational tone. You should feel as though you're having a conversation with the author as you read any of our tutorials or explanations. Your experience as a reader should be informal, conversational, and informative. You should feel as though you're listening to the author explain the concepts to you.
 
 #### Inappropriate Style
-One might see the contrast between a conversational style and the style one finds with more academic treatments of technical topics. Those resources are very useful, but the authors have written those articles in a very different style than our documentation. When one reads an academic journal, one finds a very different tone and a very different style of writing. One feels that they're reading a dry account of a very dry topic.
+One might see the contrast between a conversational style and the style one finds with more academic treatments of technical topics. Those resources are useful, but the authors have written those articles in a different style than our documentation. When one reads an academic journal, one finds a different tone and a different style of writing. One feels that they're reading a dry account of a dry topic.
 
 ##### Comparison
 The first paragraph above follows our recommendation conversational style. The second is a more academic style. You see the difference immediately.

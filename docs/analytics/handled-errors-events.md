@@ -19,11 +19,11 @@ In this section, you'll learn how to use events to get information about your ha
 
 ## Event name
 
-We recommend giving the event a name that provides some contextual information. Handled errors can be very generic, so it’s necessary to provide some extra information that will identify an error in a more distinct way. An example of contextual information is the file/method name where the error is handled.
+We recommend giving the event a name that provides some contextual information. Handled errors can be generic, so it’s necessary to provide some extra information that will identify an error in a more distinct way. An example of contextual information is the file/method name where the error is handled.
 
 **Example**:
 
-Let’s imagine a situation where you want to understand how often your users fail connecting to the WiFi.
+Let’s imagine a situation where you want to understand how often your users fail to connect to the WiFi.
 “UnknownHostException:ConnectWiFi”, where “UnknownHostException” is the generic name of the exception and “ConnectWiFi” is the method name.
 
 ## Event properties
@@ -54,4 +54,4 @@ Property Key: Exception Message
 Property Value: Exception in thread "main" java.lang.RuntimeException
 
 
-Note however, that the number of characters in the property values is limited to 64 characters so you'll most likely need to truncate or filter the string. Finally, you shouldn't include the stack trace as part of the event name or property values for the same reason.
+The number of characters in the property values is limited to 64 characters, so you'll probably need to truncate or filter the string. Finally, you shouldn't include the stack trace as part of the event name or property values for the same reason.

@@ -223,7 +223,7 @@ int sum = i + j;
 
 In other languages, use the comment syntax for that language.
 
-Finally, you can use line numbers: `#L1-L10` would include lines 1 through 10. However, we discourage line numbers because they're very brittle.
+Finally, you can use line numbers: `#L1-L10` would include lines 1 through 10. However, we discourage line numbers because they're brittle.
 
 Including snippets from full programs ensures that all code runs through our Continuous Integration (CI) system. However, if you need to show something that causes compile time or runtime errors, you can use inline code blocks.
 

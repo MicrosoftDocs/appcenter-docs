@@ -80,7 +80,7 @@ The `tree` command will display a hierarchical list of the views that are visibl
 * * *
 ## Discovering Views with IApp.Flash
 
-Many of the Xamarin.UITest API's take an `AppQuery` object to locate views on the screen. The `IApp.Flash()` method can be very helpful in testing these queries in the REPL. `IApp.Flash()` will highlight the results of the query by making them flash, and return some details about the views in the results.
+Many of the Xamarin.UITest API's take an `AppQuery` object to locate views on the screen. The `IApp.Flash()` method can be helpful in testing these queries in the REPL. `IApp.Flash()` will highlight the results of the query by making them flash, and return some details about the views in the results.
 
 As an example, the following snippet shows how we can locate all of the `EditText` views that are visible on an Android activity:
 

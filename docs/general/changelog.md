@@ -110,7 +110,7 @@ Also there's a way to [specify](~/build/react-native/nodejs.md) a custom version
 
 - **Diagnostics to General Availability**:
 
-Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
+Diagnostics is becoming Generally Available soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
 
 - **Diagnostics UI Improvements**:
   - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
