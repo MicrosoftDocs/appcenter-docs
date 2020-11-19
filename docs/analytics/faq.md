@@ -19,7 +19,7 @@ The data is not sampled. Analytics will use all the data that is sent, unless it
 The latency is typically just a few seconds.
 
 ## If the app is offline, does the SDK store the logs and then send them once it is back online?
-Yes. When there is no network connectivity, the SDK saves up to 10 MB (by default) of logs in the local storage. The size limitation is applied only for [Android](~/sdk/other-apis/android.md#storage-size) and [iOS](~/sdk/other-apis/ios.md#storage-size) (Windows SDK doesn't have the limit yet) and can be changed via `setMaxStorageSize` API. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
+Yes. When there is no network connectivity, the SDK saves up to 10 MB (by default) of logs in the local storage. The storage size can be changed via `setMaxStorageSize` API. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
 
 ## Session duration is unknown, why?
 A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session will not be counted.

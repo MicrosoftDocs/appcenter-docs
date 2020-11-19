@@ -160,7 +160,7 @@ bool isEnabled = await Analytics.IsEnabledAsync();
 
 ## Local storage size
 
-By default, the SDK stores up to 10MB of logs in the storage.
+By default, the SDK stores all the event logs up to 10 MB. Developers can use an API to increase the [storage size](../other-apis/wpf-winforms.md#storage-size) and the SDK will keep storing logs until the storage is full.
 
 ## No internet access
 
