@@ -91,7 +91,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-Enable or disable desired services at the runtime with following code:
+Enable or disable the services at the runtime with following code:
 
 ```objc
 [MSACAnalytics setEnabled:NO];

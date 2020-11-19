@@ -320,7 +320,7 @@ codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when desired.
+> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when wanted.
 
 While the sync method tries to make it easy to perform silent and active updates with little configuration, it accepts the following optional parameters that allow you to customize numerous aspects of the default behavior mentioned above:
 * **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.

@@ -408,7 +408,7 @@ codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE 
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when desired.
+> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when wanted.
 
 #### SyncOptions
 
@@ -554,7 +554,7 @@ The CodePush API includes the following enums, which can be used to customize th
 
 This enum specifies when you want an installed update to actually be applied, and can be passed to either the `sync` or `LocalPackage.install` methods. It includes the following values:
 
-- **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially undesired latency between the update installation and the next time the end user restarts or resumes the app.
+- **codePush.InstallMode.IMMEDIATE** *(0)* - Indicates that you want to install the update and restart the app immediately. This value is appropriate for debugging scenarios as well as when displaying an update prompt to the user, since they would expect to see the changes immediately after accepting the installation. Additionally, this mode can be used to enforce mandatory updates, since it removes the potentially unwanted latency between the update installation and the next time the end user restarts or resumes the app.
 
 - **codePush.InstallMode.ON_NEXT_RESTART** *(1)* - Indicates that you want to install the update, but not forcibly restart the app. When the app is "naturally" restarted (because of the OS or end user killing it), the update will be seamlessly picked up. This value is appropriate when doing silent updates, since it's probably disruptive to the end user if the app suddenly restarts out of nowhere. They wouldn't realize an update was even downloaded. This is the default mode used for both the `sync` and `LocalPackage.install` methods.
 

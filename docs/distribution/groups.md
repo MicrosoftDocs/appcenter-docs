@@ -16,7 +16,7 @@ ms.custom: distribute
 Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers, or can represent stages or rings of releases, such as Staging.
 
 ## Creating a Distribution Group
-To create a new Distribution Group, sign in to the App Center portal, select your desired app, click **Distribute** in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
+To create a new Distribution Group, sign in to the App Center portal, select your app, click **Distribute** in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
 
 ## Types of Distribution Groups
 ### Private Distribution Groups
@@ -42,9 +42,9 @@ Unlike app-level distribution groups, shared distribution groups are at the orga
 
 Once you have a distribution group, click the group entry in the table to add testers and apps to the group.
 
-To add testers to your new shared distribution group, select the **Testers** tab and enter the emails of the desired testers.
+To add testers to your new shared distribution group, select the **Testers** tab and enter the emails of the testers.
 
-To add apps to your new shared distribution group, select the **Apps** tab and enter the name of the desired apps that this group should have access to.
+To add apps to your new shared distribution group, select the **Apps** tab and enter the name of the apps that this group should have access to.
 
 ## Managing Users in a Distribution Group
 ### Adding testers

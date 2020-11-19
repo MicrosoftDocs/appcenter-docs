@@ -18,7 +18,7 @@ It isn't possible to run local iOS tests on Windows.
 #### [Visual Studio for Mac](#tab/vsmac/)
 This guide will discuss how to specify an iOS simulator when running tests locally on macOS.
 
-Each iOS simulator that's configured on an Apple device will have a unique *device identifier* assigned to it. UITest will use this device identifier to start the desired iOS simulator.
+Each iOS simulator that's configured on an Apple device will have a unique *device identifier* assigned to it. UITest will use this device identifier to start the intended iOS simulator.
 
 A UITest must use the `IApp.DeviceIdentifier` method to provide the device identifier:
 

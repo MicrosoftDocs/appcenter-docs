@@ -88,7 +88,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-You can enable or disable desired service at the runtime with following code:
+You can enable or disable the service at the runtime with following code:
 
 ```javascript
 await AppCenter.Analytics.setEnabled(false);

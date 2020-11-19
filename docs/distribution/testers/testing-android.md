@@ -71,7 +71,7 @@ After logging in, you'll be presented with list of all the apps you've been invi
 ![App Details View in the  App](images/a-appdetails-app.png)
 
 > [!TIP]
-> Located on the top-right of the screen, you can use the search bar to quickly find your desired app.
+> Located on the top-right of the screen, you can use the search bar to quickly find your app.
 
 ## Troubleshooting
 
