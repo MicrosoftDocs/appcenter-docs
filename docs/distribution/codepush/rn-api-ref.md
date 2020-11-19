@@ -584,7 +584,7 @@ This enum is provided to the `syncStatusChangedCallback` function that can be pa
 - **codePush.SyncStatus.UPDATE_IGNORED** *(5)* - The app has an optional update, which the end user chose to ignore. (This is only applicable when the `updateDialog` is used)
 - **codePush.SyncStatus.UPDATE_INSTALLED** *(6)* - An available update has been installed and will be run either immediately after the `syncStatusChangedCallback` function returns or the next time the app resumes/restarts, depending on the `InstallMode` specified in `SyncOptions`.
 - **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation preventing the current call from being executed.
-- **codePush.SyncStatus.UNKNOWN_ERROR** *(-1)* - The sync operation encountered an unknown error.
+- **codePush.SyncStatus.UNKNOWN_ERROR** *(-1)* - The sync operation found an unknown error.
 
 #### UpdateState
 

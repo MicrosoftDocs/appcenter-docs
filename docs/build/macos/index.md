@@ -77,7 +77,7 @@ After a build is triggered, it can be in the following states:
 - **queued** -  the build is queued, waiting for resources to be free.
 - **building** - the build is running the predefined tasks.
 - **succeeded** - the build completed successfully.
-- **failed** - the build encountered failures that prevented it from completing. You can troubleshoot the build by [downloading and inspecting the build logs](~/build/troubleshooting/build-failed.md#isolating-and-interpreting-error-messages).
+- **failed** - the build found failures that prevented it from completing. You can troubleshoot the build by [downloading and inspecting the build logs](~/build/troubleshooting/build-failed.md#isolating-and-interpreting-error-messages).
 - **canceled** - the build was canceled by a user action or it timed out.
 
 ### 4.1. Build logs

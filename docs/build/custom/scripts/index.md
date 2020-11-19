@@ -14,7 +14,7 @@ ms.reviewer: nirajpur
 
 # Build scripts
 > [!NOTE]
-> Build scripts allow you to customize your builds; but issues you encounter during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
+> Build scripts allow you to customize your builds; but issues you find during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
 
 You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (`.xcodeproj`, `.csproj`, `.sln`, or `package.json`) file or module-level (`build.gradle`) file that you've selected in the build configuration and we'll run them as custom build steps. 
 

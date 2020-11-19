@@ -17,7 +17,7 @@ ms.custom: test
 
 While an iOS application is executing, the operating system may display alerts to the user at various times as the application attempts to activate or access Apple Push Notifications, Location Services, Contacts, the device Microphone or Camera, and so on, to request permission. These popups are sometimes called alerts, System Alerts, System Popups, Springboard Alerts, or Privacy Dialogs. When these requests are accepted, that acceptance state is persisted so the user usually won't see that alert again for that app on the device.
 
-When the app is first installed, these alerts will need to be addressed. Tests running locally may not encounter alerts if the requests have been previously accepted.
+When the app is first installed, these alerts will need to be addressed. Tests running locally may not find alerts if the requests have been previously accepted.
 
 When your tests execute in App Center Test, they're running on pristine devices and alerts are triggered when the application attempts to access protected services or features.
 
@@ -54,7 +54,7 @@ In addition to handling alerts automatically like Xamarin.UITest, Calabash also 
 
 * To check if an alert is showing, and query its attributes, see `/springboard-alert` in [QueryRoutes.m](https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Routes/QueryRoutes.m).
 * To dismiss an alert, by touching the button with a given title, see `/set-dismiss-springboard-alert` in [GestureRoutes.m](https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Routes/GestureRoutes.m).
-* To dismiss known alerts, and to toggle automatic dismissal, see `/dismiss-springboard-alerts` and `/set-dismiss-springboard-alerts-automatically` in [MetaRoutes.m](https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Routes/MetaRoutes.m). An exception is raised if `/dismiss-spring-board-alerts` is called and encounters an unknown alert.
+* To dismiss known alerts, and to toggle automatic dismissal, see `/dismiss-springboard-alerts` and `/set-dismiss-springboard-alerts-automatically` in [MetaRoutes.m](https://github.com/calabash/DeviceAgent.iOS/blob/develop/Server/Routes/MetaRoutes.m). An exception is raised if `/dismiss-spring-board-alerts` is called and comes across an unknown alert.
 
 This Calabash iOS code snippet shows how to use these methods:
 

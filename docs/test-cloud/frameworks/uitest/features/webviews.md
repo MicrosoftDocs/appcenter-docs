@@ -160,7 +160,7 @@ Query for XPath("//h1") gave 1 results.
 ```
 
 ## Invoking JavaScript
-It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are encountered, the execution will halt and an Exception will be thrown.
+It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
 
 ### InvokeJS on Android
 Generally speaking Android requires that the JavaScript `returns` the value; otherwise the query will return `null`:
@@ -192,7 +192,7 @@ Generally speaking, on iOS the `return` isn't used:
 ```
 
 ## Examples
-This section will cover some common use cases that may be encountered when writing Calabash tests involving webviews.
+This section will cover some common use cases that may be found when writing Calabash tests involving webviews.
 
 ### Scrolling
 It's possible to scroll a webview to bring DOM elements onto the screen. This is accomplished using the `IApp.ScrollDownTo` or `IApp.ScrollUpTo` methods. The signature of these methods is similar:

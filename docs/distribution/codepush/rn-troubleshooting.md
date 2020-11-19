@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # React Native Client SDK Debugging and Troubleshooting
 
-The `sync` method includes numerous diagnostic logging out-of-the-box, so if you're encountering an issue when using it, the best thing to try first is examining the output logs of your app. This tells you whether the app is configured correctly (like can the plugin find your deployment key?), if the app can reach the server, if an available update is being discovered, if the update is being successfully downloaded/installed, etc. We want to continue improving the logging to be as intuitive/comprehensive as possible, so let us know if you find it to be confusing or missing anything.
+The `sync` method includes numerous diagnostic logging out-of-the-box, so if you're finding an issue when using it, the best thing to try first is examining the output logs of your app. This tells you whether the app is configured correctly (like can the plugin find your deployment key?), if the app can reach the server, if an available update is being discovered, if the update is being successfully downloaded/installed, etc. We want to continue improving the logging to be as intuitive/comprehensive as possible, so let us know if you find it to be confusing or missing anything.
 
 Additionally, you can also use any of the platform-specific tools to view the CodePush logs. Start up your developer console and look for messages that are prefixed with `[CodePush]`.
 

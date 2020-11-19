@@ -34,7 +34,7 @@ npm install -g appcenter-cli
 ```
 
 > [!NOTE]
-> If you encounter an `EACCES` error executing this command, you may have to [fix npm permissions on your system](https://docs.npmjs.com/getting-started/fixing-npm-permissions). Many sites recommend using the `sudo` command to get around this error, but you should never install npm modules using `sudo`.
+> If you find an `EACCES` error executing this command, you may have to [fix npm permissions on your system](https://docs.npmjs.com/getting-started/fixing-npm-permissions). Many sites recommend using the `sudo` command to get around this error, but you should never install npm modules using `sudo`.
 
  After successfully installing the App Center CLI, execute the `appcenter login` command to configure the CLI for your App Center account details.
 
