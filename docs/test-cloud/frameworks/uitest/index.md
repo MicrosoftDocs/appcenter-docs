@@ -52,7 +52,7 @@ All test interactions with the mobile application occur through an instance of `
 * **`Xamarin.UITest.iOS.iOSApp`** &nbsp; This class will automate tests against iOS.
 * **`Xamarin.UITest.Android.AndroidApp`** &nbsp; This class is for automating tests on Android.
 
-`iOSApp` and `AndroidApp` objects aren't instantiated directly. Instead, they are created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
+`iOSApp` and `AndroidApp` objects aren't instantiated directly. Instead, they're created using the helper `ConfigureApp` class. This class is a builder that ensures that the `iOSApp` or `AndroidApp` is properly instantiated.
 
 It's recommended that a new `IApp` instance be used for each test; this will prevent state from one test spilling over into another, affecting the results and reliability of the downstream tests. There are two places where an NUnit test could initialize an instance of `IApp`:
 
@@ -236,7 +236,7 @@ We can see that there's a `UIButton` in this view with the `id` of **ValidateBut
 app.Tap(c=>c.Marked("ValidateButton"))
 ```
 
-As commands are being entered, they are remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
+As commands are being entered, they're remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This technique allows us to prototype a test interactively. We can copy the work performed in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
 
 ## Using Marked To Locate Views
 The [AppQuery.Marked](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.

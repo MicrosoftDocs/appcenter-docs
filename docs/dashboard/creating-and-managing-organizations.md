@@ -61,7 +61,7 @@ There are two ways to add users to an organization:
 2. Select **People**
 3. Type the user's email address to add the user
 
-This gives the user access to the organization as a collaborator. However, they won't see any of the apps listed in the organization unless they are explicitly invited to the app or if they are an admin of the organization.
+This gives the user access to the organization as a collaborator. However, they won't see any of the apps listed in the organization unless they're explicitly invited to the app or if they're an admin of the organization.
 
 **In-directly through an app:**
 

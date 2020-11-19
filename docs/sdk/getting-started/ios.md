@@ -104,7 +104,7 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
     > [!NOTE]
-    > If you use `carthage copy-frameworks` in your **Build Phase** you shouldn't add the App Center SDKs there, as they are shipped as static frameworks.
+    > If you use `carthage copy-frameworks` in your **Build Phase** you shouldn't add the App Center SDKs there, as they're shipped as static frameworks.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 

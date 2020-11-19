@@ -56,7 +56,7 @@ To set this up, perform the following steps:
         buildTypes {
             debug {
                 ...
-                // Note: CodePush updates shouldn't be tested in Debug mode as they are overriden by the RN packager. However, because CodePush checks for updates in all modes, we must supply a key.
+                // Note: CodePush updates shouldn't be tested in Debug mode as they're overriden by the RN packager. However, because CodePush checks for updates in all modes, we must supply a key.
                 resValue "string", "CodePushDeploymentKey", '""'
                 ...
             }
@@ -110,7 +110,7 @@ To set this up, perform the following steps:
         buildTypes {
             debug {
                 ...
-                // Note: CodePush updates shouldn't be tested in Debug mode as they are overridden by the RN packager. However, because CodePush checks for updates in all modes, we must supply a key.
+                // Note: CodePush updates shouldn't be tested in Debug mode as they're overridden by the RN packager. However, because CodePush checks for updates in all modes, we must supply a key.
                 buildConfigField "String", "CODEPUSH_KEY", '""'
                 ...
             }

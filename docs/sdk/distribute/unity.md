@@ -50,7 +50,7 @@ To do this, choose **Private** in the **Update Track** dropdown under **Distribu
 
 When using the private track, a browser window will open up to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they are a member of.
+If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they're a member of.
 If a user is on the **public track**, it means that they'll get the latest release from any public distribution group.
 
 ## Disable Automatic Check for Update

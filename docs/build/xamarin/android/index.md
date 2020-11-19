@@ -42,7 +42,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.2. Project and Configuration
 
-The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
+The available projects in your repository will populate if they're located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository.
@@ -86,7 +86,7 @@ Use your newly produced `.apk` file to test if your app starts on a real device.
 
 ### 3.8. NuGet restore
 
-If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
+If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -150,4 +150,4 @@ The `.apk` file is an Android application packaged file which stores the Android
 
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
-App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you're using a Component which can't be replaced, reach out to us. See [help and feedback](../../../help.md).
+App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever they're available. If you're using a Component which can't be replaced, reach out to us. See [help and feedback](../../../help.md).

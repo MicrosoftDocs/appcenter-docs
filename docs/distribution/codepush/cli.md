@@ -265,7 +265,7 @@ This parameter specifies the store/binary version of the application you're rele
 
 1. If a user is running an older binary version, it's possible that there are breaking changes in the CodePush update that wouldn't be compatible with what they're running.
 
-2. If a user is running a newer binary version, then it's presumed that what they are running is newer (and potentially incompatible) with the CodePush update.
+2. If a user is running a newer binary version, then it's presumed that what they're running is newer (and potentially incompatible) with the CodePush update.
 
 If you ever want an update to target multiple versions of the app store binary, we also allow you to specify the parameter as a [semver range expression](https://github.com/npm/node-semver#advanced-range-syntax). That way, any client device running a version of the binary that satisfies the range expression (`semver.satisfies(version, range)` returns `true`) will get the update. Examples of valid **semver** range expressions are as follows:
 
@@ -749,7 +749,7 @@ If you ran the `rollback` command on that deployment, a new release (`v4`) would
 | v3                          | Bug fixes         | Yes       |
 | v4 (Rollback from v3 to v2) | Added new feature | No        |
 
-End users that'd already acquired `v3` would now be "moved back" to `v2` when the app performs an update check. Additionally, any users that were still running `v2`, and therefore, had never acquired `v3`, wouldn't receive an update since they are already running the latest release (this is why our update check uses the package hash in addition to the release label).
+End users that'd already acquired `v3` would now be "moved back" to `v2` when the app performs an update check. Additionally, any users that were still running `v2`, and therefore, had never acquired `v3`, wouldn't receive an update since they're already running the latest release (this is why our update check uses the package hash in addition to the release label).
 
 If you want to roll back a deployment to a release other than the previous (for example, `v3` -> `v2`), you can specify the optional `--target-release` parameter:
 

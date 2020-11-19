@@ -25,7 +25,7 @@ Yes. When there's no network connectivity, the SDK saves up to 10 MB (by default
 A session is defined as the time from the app coming to foreground to the last event before going to the background. If no custom events are identified within 5 minutes in a session, the session won't be counted.
 
 ## Why's my "OS Distribution" chart showing more devices than the number of installs?
-OS Distribution counts aren't snapshots. They are counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they'll be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
+OS Distribution counts aren't snapshots. They're counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they'll be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
 
 ## Why's the country information not showing? / The country information doesn't seem to be correct.
 The country is determined by the carrier country and requires that the device has a SIM. If you're using a tablet or a device with no SIM card, the country won't be reported. If you're using a simulator, the country information will most probably not be accurate.
@@ -34,7 +34,7 @@ The country is determined by the carrier country and requires that the device ha
 The maximum number of distinct custom events that we'll track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
 
 ## What's the maximum number of event properties that I can define per event? What happens if I send more than the limit?
-The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they are automatically rejected.
+The maximum number of event properties is currently set to twenty. If more than twenty properties are sent, they're automatically rejected.
 
 ## What's the maximum number of property values that I can send per event?
 You'll see the count for the ten property values with highest count.

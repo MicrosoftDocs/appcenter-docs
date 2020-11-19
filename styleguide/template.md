@@ -52,7 +52,7 @@ File names use the following rules:
 - Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
 - No small words - don't include a, and, the, in, or, etc.
 - Must be in Markdown and use the .md file extension.
-- Keep file names reasonably short. They are part of the URL for your articles.
+- Keep file names reasonably short. They're part of the URL for your articles.
 
 ## Headings
 
@@ -223,7 +223,7 @@ int sum = i + j;
 
 In other languages, use the comment syntax for that language.
 
-Finally, you can use line numbers: `#L1-L10` would include lines 1 through 10. However, we discourage line numbers because they are very brittle.
+Finally, you can use line numbers: `#L1-L10` would include lines 1 through 10. However, we discourage line numbers because they're very brittle.
 
 Including snippets from full programs ensures that all code runs through our Continuous Integration (CI) system. However, if you need to show something that causes compile time or runtime errors, you can use inline code blocks.
 
