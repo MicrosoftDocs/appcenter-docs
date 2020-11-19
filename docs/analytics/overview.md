@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Overview Page
 
-The objective of the Overview page is to provide you with the key metrics about your app users. This includes their devices, location, activity and engagement. This allows you to answer questions such as:
+The goal of the Overview page is to provide you with the key metrics about your app users. This includes their devices, location, activity, and engagement. This allows you to answer questions such as:
 
 - What are the main devices being used?
 - Can I remove support for an old OS version?
@@ -64,7 +64,7 @@ The country is determined by the carrier country and requires the device to have
 
 The language is the one defined at the OS level by the user.
 
-- The panel will show the top 7 major languages.
+- The panel will show the top seven major languages.
 
 ## Active Users per Version
 
