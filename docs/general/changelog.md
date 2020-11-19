@@ -444,7 +444,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **July, 2017**
 
 - **Carthage support for your iOS builds**:
-  If you use Carthage to manage your dependencies for iOS apps written in Objective C/Swift, App Center will automatically detect this and resolve the dependencies as part of the build process.
+  If you use Carthage to manage your dependencies for iOS apps written in Objective-C/Swift, App Center will automatically detect this and resolve the dependencies as part of the build process.
 
 - **Faster builds**:
   Xamarin and UWP builds which rely on restoring NuGet packages and iOS builds using Cocoapods are now faster.

@@ -143,7 +143,7 @@ After (App Center):
 
 ### Core
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -166,7 +166,7 @@ Identify users | `BITHockeyManager.shared().userID` | [AppCenter.userId = "your-
 The HockeySDK enables metrics collecting per default.
 App Center SDK registers Analytics service only if you pass `Analytics` class to the `start` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -189,7 +189,7 @@ Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled
 The HockeySDK enables crash reporting per default. Crashes will be immediately sent to the server the next time the app is launched.
 App Center SDK registers Crashes service only if you pass `Crashes` class to the `start` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -223,7 +223,7 @@ If the app is using a private distribution group, once the app is installed and 
 The HockeySDK doesn't enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `Distribute` class to the `start` method. This module is enabled by default, unlike in the HockeySDK.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---

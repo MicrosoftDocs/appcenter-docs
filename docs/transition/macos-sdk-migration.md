@@ -125,7 +125,7 @@ After (App Center):
 
 ### Core
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -144,7 +144,7 @@ Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](ht
 The HockeySDK collects metrics per default.
 The App Center SDK doesn't collect any (analytics) metrics per default. To collect metrics using the App Center SDK, pass `MSACAnalytics` to the `start:` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -167,7 +167,7 @@ Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled
 The HockeySDK reports crashes per default. Crashes will be immediately sent to the server the next time the app is launched.
 The App Center SDK doesn't report any crashes per default. To collect crashes using the App Center SDK, pass `MSACCrashes` to the `start:` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
