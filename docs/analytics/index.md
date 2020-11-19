@@ -40,4 +40,4 @@ Learn more about the interaction of your users with your app by tracking [Custom
 
 ## Export
 
-[Continuously Export](~/analytics/export.md) all your Analytics data into Azure Blob Storage or Application Insights. This allows you to keep your data as long as you need, as well as provide you with further insights into your data with powerful filtering, data visualizations, and query capabilities.
+[Continuously Export](~/analytics/export.md) all your Analytics data into Azure Blob Storage or Application Insights. This allows you to keep your data as long as you need, as well as provide further insights into your data with powerful filtering, data visualizations, and query capabilities.
