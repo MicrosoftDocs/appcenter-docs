@@ -38,7 +38,7 @@ Replace **HockeySDK.Xamarin** NuGet package with App Center ones in all projects
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* If you're working in **Visual Studio for Mac**, make sure you've installed **NuGet Package Management Extensions**. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following command in the console:
 
 ```shell
@@ -48,7 +48,7 @@ Install-Package Microsoft.AppCenter.Crashes
 Install-Package Microsoft.AppCenter.Distribute
 ```
 
-Note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
+The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
@@ -136,7 +136,7 @@ After (App Center):
     > [!NOTE]
     > If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
     > The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
-    > Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
+    > Once the `AppCenter.Start` method returns, it's safe to try/catch null reference exceptions again.
     > You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
 
     **Xamarin.Forms**:
@@ -148,10 +148,10 @@ After (App Center):
     ```
 
     > [!IMPORTANT]
-    > The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
+    > The curly braces is just to document that you must replace that content with the actual app secrets, don't put curly braces in the `Start` call.
 
     > [!NOTE]
-    > In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, remember that it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+    > In case you're using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
     > [!NOTE]
     > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
@@ -180,7 +180,7 @@ Identify users | Crash only | [AppCenter.SetUserId](~/sdk/other-apis/xamarin.md#
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled only on Android | [Documentation (cannot be disabled)](~/sdk/analytics/xamarin.md#session-and-device-information)
+Automatically track sessions | Yes, can be disabled only on Android | [Documentation (can't be disabled)](~/sdk/analytics/xamarin.md#session-and-device-information)
 Custom events with properties | [HockeyApp.MetricsManager.TrackEvent](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-5-add-custom-events) | [Analytics.TrackEvent](~/sdk/analytics/xamarin.md#custom-events)
 Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or [SharedHockeyManager.DisableMetricsManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#for-ios_1) | [Analytics.SetEnabledAsync](~/sdk/analytics/xamarin.md#enable-or-disable-app-center-analytics-at-runtime)
 
@@ -200,7 +200,7 @@ Disable service at runtime | `SharedHockeyManager.DisableCrashManager` (iOS only
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.
-If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that will not occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work) for more details.
+If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that won't occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/xamarin.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---

@@ -63,7 +63,7 @@ Crashes.hasReceivedMemoryWarningInLastSession()
 > This method must only be used after `Crashes` has been started, it will always return `false` before start.
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory can't send events.
 
 ### Did the app crash in the previous session?
 
@@ -124,7 +124,7 @@ val customListener = object : CrashesListener {
 Crashes.setListener(customListener)
 ```
 
-In case you are only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead:
+In case you're only interested in customizing some of the callbacks, use the `AbstractCrashesListener` instead:
 
 ```java
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
@@ -144,7 +144,7 @@ Crashes.setListener(customListener)
 
 ### Should the crash be processed?
 
-Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Implement this callback if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```java
 @Override
@@ -162,10 +162,10 @@ override fun shouldProcess(report: ErrorReport?): Boolean {
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
@@ -173,7 +173,7 @@ The following callback shows how to tell the SDK to wait for user confirmation b
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
@@ -203,7 +203,7 @@ As an example you can refer to [our custom dialog example](https://aka.ms/custom
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what is going on:
+At times, you want to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what's going on:
 
 #### The following callback will be invoked before the SDK sends a crash log
 
@@ -219,7 +219,7 @@ override fun onBeforeSending(report: ErrorReport?) {
 }
 ```
 
-In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+In case we have network issues or an outage on the endpoint, and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
@@ -251,11 +251,11 @@ override fun onSendingFailed(report: ErrorReport?, e: Exception?) {
 
 Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). 
+This callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). 
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here's an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback will be invoked right before sending the stored crash from previous application launches. It won't be invoked when the crash happens. Be sure the attachment file **isn't** named `minidump.dmp` as that name is reserved for minidump files. Here's an example of how to attach text and an image to a crash:
 
 ```java
 @Override
@@ -292,7 +292,7 @@ override fun getErrorAttachments(report: ErrorReport?): MutableIterable<ErrorAtt
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't do any crash reporting for the app.
 
 ```java
 Crashes.setEnabled(false);
@@ -336,8 +336,7 @@ Crashes.isEnabled()
 
 ## Handled Errors
 
-App Center also allows you to track errors by using handled exceptions.
-In order to do so, simply use the `trackError` method:
+App Center also allows you to track errors by using handled exceptions. To do so, use the `trackError` method:
 
 ```java
 try {
@@ -423,7 +422,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID).
 
 > [!NOTE]
-> The App Center SDK does not bundle Google Breakpad by default.
+> The App Center SDK doesn't bundle Google Breakpad by default.
 
 #### Attaching the exception handler
 
@@ -483,7 +482,7 @@ To troubleshoot, you can use verbose logs (`AppCenter.setLogLevel(Log.VERBOSE)` 
 > App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it's a minidump file so we can handle it properly.
 
 > [!NOTE]
-> There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
+> There's a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 

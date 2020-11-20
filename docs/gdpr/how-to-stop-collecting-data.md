@@ -16,14 +16,14 @@ This section describes how to stop collection of *all* data coming from apps con
 
 ## Stop collecting all SDK data for a specific app from the server
 
-If you would like to stop using the Analytics, Diagnostics (Crashes and Errors) and Push services in App Center and stop processing all the SDK logs being sent, but you would still like to use other App Center services such as Build, Distribution, or Test, you can use the [Analytics block logs API](https://openapi.appcenter.ms/#/analytics/App_BlockLogs).
+If you want to stop using the Analytics, Diagnostics (Crashes and Errors) and Push services in App Center and stop processing all the SDK logs being sent, but you still want to use other App Center services such as Build, Distribution, or Test, you can use the [Analytics block logs API](https://openapi.appcenter.ms/#/analytics/App_BlockLogs).
 
 ```json
 PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 ```
 
 > [!NOTE]
-> This will stop ingestion of all data coming from the App Center SDK, but will not delete existing data associated with the app.
+> This stops ingestion of all data coming from the App Center SDK, but won't delete existing data associated with the app.
 
 ## Stop collecting all SDK data for a specific device from the server
 
@@ -38,4 +38,4 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{i
 The App Center SDK can be configured to stop collecting data per service. Instructions for doing so can be found under the ["Other APIs" section for the SDK.](~/sdk/index.md)
 
 > [!NOTE]
-> This will not delete existing data associated with the app.
+> This won't delete existing data associated with the app.

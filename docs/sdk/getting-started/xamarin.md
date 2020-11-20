@@ -35,8 +35,8 @@ Let's get started with setting up App Center Xamarin SDK in your app to use App 
 Before you begin, make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2017 or Visual Studio for Mac.
-* You are targeting devices running iOS 9.0 or later or Android 5.0 (API level 21) or later.
-* You are not using any other SDK that provides Crash Reporting functionality.
+* You're targeting devices running iOS 9.0 or later or Android 5.0 (API level 21) or later.
+* You're not using any other SDK that provides Crash Reporting functionality.
 
 The App Center SDK for Xamarin supports the following platforms:
 
@@ -56,11 +56,11 @@ Choose this option if you target only iOS platform. You need to create one app i
 
 Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in App Center – one for each OS.
 
-You need to select **Xamarin** as the platform for Android and iOS applications (UWP does not have a Xamarin option).
+You need to select **Xamarin** as the platform for Android and iOS applications (UWP doesn't have a Xamarin option).
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -68,7 +68,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS and platform depending on your project as described above.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK to your solution
 
@@ -92,7 +92,7 @@ The App Center SDK can be integrated using Visual Studio or the Package Manager 
 ### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* If you're working in **Visual Studio for Mac**, make sure you've installed **NuGet Package Management Extensions**. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following command in the console:
 
 ```shell
@@ -107,7 +107,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ## 4. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the using statements
 
@@ -128,7 +128,7 @@ using Microsoft.AppCenter.Crashes;
 #### 4.2.1 Xamarin.Android
 
 > [!NOTE]
-> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK.
+> In case you're using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK.
 
 Open the project's **MainActivity.cs** file and add the `Start()` call inside the `OnCreate()` method
 
@@ -142,7 +142,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 #### 4.2.2 Xamarin.iOS
 
 > [!NOTE]
-> Remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+> It isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
 Open the project's `AppDelegate.cs` file and add the `Start()` call inside the `FinishedLaunching()` method
 
@@ -153,7 +153,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 > [!NOTE]
 > If using Crashes, you must call this method in the UI/main thread and avoid starting background tasks until the `Start` method returns.
 > The reason is that any null reference exception caught from another thread while Crashes is initializing may trigger a native crash and ignore the catch clause.
-> Once the `AppCenter.Start` method returns, it is safe to try/catch null reference exceptions again.
+> Once the `AppCenter.Start` method returns, it's safe to try/catch null reference exceptions again.
 > You can read more about the cause of this timing issue in the [Signals and third-party crash reporters](https://www.mono-project.com/docs/advanced/signals/) article.
 
 ##### 4.2.3 Xamarin.Forms
@@ -165,10 +165,10 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 ```
 
 > [!IMPORTANT]
-> The curly braces is just to document you have to replace that content with the actual app secrets, don't put curly braces in the `Start` call.
+> The curly braces is just to document you must replace that content with the actual app secrets, don't put curly braces in the `Start` call.
 > 
 > [!NOTE]
-> In case you are using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, remember that it is not possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
+> In case you're using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
 
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
@@ -209,9 +209,9 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 The example above shows how to use the `Start()` method and include both App Center Analytics and App Center Crashes.
 
-If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
 
@@ -229,11 +229,11 @@ AppCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App s
 
 ---
 
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md) and [App Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you will see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP does not support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.
+> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.

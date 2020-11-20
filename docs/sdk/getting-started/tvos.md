@@ -60,7 +60,7 @@ The App Center SDK for tvOS can be integrated into your app via [Cocoapods](http
 
 ### 3.1  Integration via Cocoapods
 
-1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This will pull in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
+1. Add the following dependencies to your `podfile` to include App Center Analytics and App Center Crashes into your app. This pulls in the following frameworks: **AppCenter**, **AppCenterAnalytics**, and **AppCenterCrashes**. Instead, you can specify which services you want to use in your app. Each service has its own subspec and they all rely on `AppCenter`. It will get pulled in automatically.
 
 	```ruby
 	# Use the following line to use App Center Analytics and Crashes.
@@ -71,7 +71,7 @@ The App Center SDK for tvOS can be integrated into your app via [Cocoapods](http
 	pod 'AppCenter/Crashes'
 	```
 
-2. Run `pod install` to install your newly defined pod and open the project's **.xcworkspace**.
+2. Run `pod install` to install your newly defined pod and open the project's `.xcworkspace`.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -91,12 +91,12 @@ Below are the steps on how to integrate the App Center SDK in your Xcode project
     github "microsoft/appcenter-sdk-apple" ~> X.X.X
     ```
 
-1. Run `carthage update --platform tvOS`. This will fetch dependencies into a **Carthage/Checkouts** folder, and then build each framework.
+1. Run `carthage update --platform tvOS`. This fetches dependencies into a **Carthage/Checkouts** folder, and then builds each framework.
 1. Open your application target's **General** settings tab. Drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** files from the **Carthage/Build/tvOS** folder into Xcode's Project Navigator. The **AppCenter.framework** is required to start the SDK. If it isn't added to the project, the other modules won't work and your app won't compile.
 1. A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
     > [!NOTE]
-    > If you use `carthage copy-frameworks` in your **Build Phase** you should not add the App Center SDKs there as they are shipped as static frameworks.
+    > If you use `carthage copy-frameworks` in your **Build Phase** you shouldn't add the App Center SDKs there as they're shipped as static frameworks.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
@@ -110,7 +110,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you'll see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you'll see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that's shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party libraries.
    * As a best practice, 3rd-party libraries are usually inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
@@ -120,16 +120,16 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 
 5. Add the SDK frameworks to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
+   * Now drag and drop **AppCenter.framework**, **AppCenterAnalytics.framework**, and **AppCenterCrashes.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it's added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
    
 > [!NOTE]
-> The SDK binary isn't packaged following the tvOS framework convention. The reason is that the App Center SDK for tvOS isn't a conventional framework but a static one. You have to link it as a static framework: make sure that you're not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
+> The SDK binary isn't packaged following the tvOS framework convention. The reason is that the App Center SDK for tvOS isn't a conventional framework but a static one. You must link it as a static framework: make sure that you're not embedding the binaries, and don't include them in the "copy bundle resources" build phase.
 
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you'll have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 4.1 Add the import statements
 Open the project's **AppDelegate** file and add the following import statements:

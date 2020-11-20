@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Diagnostics Features
 
-In this section, you will learn about the feature set available for the App Center’s Diagnostics service.
+In this section, you'll learn about the feature set available for the App Center’s Diagnostics service.
 
 ## Crash and Errors Analytics
 
@@ -33,7 +33,7 @@ App Center Diagnostics groups crashes and errors by similarities, such as reason
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You will find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
@@ -90,7 +90,7 @@ In a crash report, you can see the current threads that were active when the app
 ![App Center shows you current threads at the time of the crash](~/diagnostics/images/new-threads.png)
 
 > [!NOTE]
-> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment of the crash is not supported on Windows.
+> On Windows, the report shows only the stack trace from the thread that crashed. Showing the state of other threads at the moment of the crash isn't supported on Windows.
 
 ## Configure Alerts
 
@@ -113,7 +113,7 @@ You can integrate third party bug tracker tools with App Center to stay informed
 
 You can set your diagnostics data retention to 28 or 90 days via our APIs, as listed in the [App Center API documentation](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings), or in the app settings page. If you change your retention setting from 90 to 28 days, any existing diagnostics data older than 28 days will be removed and any new data will only be stored for 28 days.
 
-If you change your settings from 28 to 90 days, older diagnostics data will not be backfilled. If you would like to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started.
+If you change your settings from 28 to 90 days, older diagnostics data won't be backfilled. If you want to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started.
 
 ![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
 

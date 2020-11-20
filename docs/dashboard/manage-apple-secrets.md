@@ -15,7 +15,7 @@ ms.custom: dashboard
 
 ## How does Secret storage work
 
-Your Apple ID and certificate are stored securely in an encrypted vault designed so that only App Center internal services are allowed to read the values. As with any other credentials, it is not possible to download them from the Secret storage. However, the Apple ID owner can assign it to services in App Center.
+Your Apple ID and certificate are stored securely in an encrypted vault designed so that only App Center internal services are allowed to read the values. As with any other credentials, it isn't possible to download them from the Secret storage. However, the Apple ID owner can assign it to services in App Center.
 
 ## How do I add Apple ID and certificate to storage?
 
@@ -30,7 +30,7 @@ App Center uses your Apple ID to manage your provisioning profile and your signi
 
 ## How can app members use my Apple ID?
 
-When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members, and they will use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
+When you add an Apple ID to an App Center service, like App Store connect or automatically manage devices. The Apple ID is made available to app members, and they'll use it for tasks in App Store Connect and automatic device management. Because the Apple ID is a personal login, it's only possible to add it to an app and not an organization.
 
 ## Two factor authentication
 

@@ -71,7 +71,7 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it must be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions](~/build/xamarin/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
 ### 3.7. Launch your successful build on a real device
-Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. More information is available in our [test integration guide](~/build/build-test-integration.md).
+Use your newly produced `.apk` file to test if your app starts on a real device. This adds approximately 10 more minutes to the total build time. There's more information in our [test integration guide](~/build/build-test-integration.md).
 
 ### 3.8. NuGet restore
 If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
@@ -110,7 +110,7 @@ After a build triggers, the build will be in one of the following states:
 * **queued** - the build is in a queue waiting for resources to be freed up.
 * **building** - the build is running.
 * **succeeded** - the build completed successfully.
-* **failed** - the build stopped with failures. You can troubleshoot what went wrong by downloading and inspecting the build log
+* **failed** - the build stopped with failures. You can troubleshoot what went wrong by downloading and inspecting the build log.
 * **canceled** - the build was canceled by a user action or it timed out.
 
 ### 4.1. Build logs
@@ -128,7 +128,7 @@ For a completed build (succeeded or failed), download the logs to understand mor
 The build step logs (located in the `build/` directory of the archive) are helpful for understanding in which step and why the build failed.
 
 ### 4.2. The app (.apk)
-The `.apk` file is an Android application packaged file that stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
+The `.apk` file is an Android application packaged file that stores the Android app. If the build has been correctly signed, the `.apk` file can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
 
 ## Supported versions and requirements
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.

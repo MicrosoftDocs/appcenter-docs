@@ -13,7 +13,7 @@ ms.custom: build
 
 # Custom Build Dependency Handling
 > [!NOTE] 
-> Issues you encounter with custom dependency handling are generally beyond the scope of App Center support, because it's infeasible to QA highly custom functionality.
+> Issues you find with custom dependency handling are generally beyond the scope of App Center support, because it's infeasible to QA highly custom functionality.
 
 The App Center Build service automatically restores your app's dependencies necessary for the build. 
 

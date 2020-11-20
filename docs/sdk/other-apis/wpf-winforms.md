@@ -26,7 +26,7 @@ ms.tgt_pltfrm: wpf-winforms
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel` API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel` API to enable additional logging while debugging. By default, it's set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
 To have as many log messages as possible, use `LogLevel.Verbose`.
 
@@ -44,7 +44,7 @@ System.Guid? installId = await AppCenter.GetInstallIdAsync();
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
 2. Set a `userID` in the SDK using the following code:
@@ -57,7 +57,7 @@ AppCenter.SetUserId("your-user-id");
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK won't forward any information to App Center.
 
 ```csharp
 AppCenter.SetEnabledAsync(false);
@@ -75,7 +75,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-Enable or disable desired services at the runtime with following code:
+Enable or disable the services at the runtime with following code:
 
 ```csharp
 Analytics.SetEnabledAsync(false);
@@ -91,7 +91,7 @@ bool enabled = await AppCenter.IsEnabledAsync();
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```csharp
 AppCenter.SdkVersion;
@@ -100,5 +100,5 @@ AppCenter.SdkVersion;
 ## Other APIs
 
 The .NET NuGet package is shared with Xamarin and UWP, which have more functionalities.
-All the APIs that are not documented for WPF and WinForms in this page will return `null` or `false` and will not do anything on WPF and WinForms.
-The other APIs are visible so that you can use them in a portable library (such as when using the SDK in a Xamarin.Forms application that contains a UWP project), but those extra APIs are not implemented on WPF and WinForms.
+All the APIs that aren't documented for WPF and WinForms in this page will return `null` or `false` and won't do anything on WPF and WinForms.
+The other APIs are visible so that you can use them in a portable library (such as when using the SDK in a Xamarin.Forms application that contains a UWP project), but those extra APIs aren't implemented on WPF and WinForms.

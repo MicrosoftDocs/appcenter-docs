@@ -21,11 +21,11 @@ UITest provides a large number of APIs to simulate gestures or physical interact
 * **IApp.PinchToZoomIn** - This method will do a pinch gesture on the matched view to zoom in.
 * **IApp.PinchToZoomOut** - This method will do a pinch gesture on the matched view to zoom out.
 * **IApp.ScrollUp** / **IApp.ScrollDown** - Does a touch gesture that scrolls down or up.
-* **IApp.SwipeLeftToRight** / **IApp.RightToLeft** - This will simulate a left-to-right or a right-to-left gesture swipe.
-* **IApp.Tap** - This will tap the first matched element.
+* **IApp.SwipeLeftToRight** / **IApp.RightToLeft** - This simulates a left-to-right or a right-to-left gesture swipe.
+* **IApp.Tap** - This taps the first matched element.
 * **IApp.TouchAndHold** - This method will continuously touch view.
 
-These APIs all take an [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery) that is used to locate the view in question. If more than one view is located by the query, then the API will act on the first view found. For example, this code snippet will double tap:
+These APIs all take an [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery) that's used to locate the view in question. If more than one view is located by the query, then the API will act on the first view found. For example, this code snippet will double tap:
 
 ```csharp
 app.DoubleTap(c=>c.Marked("save_button"))
@@ -40,7 +40,7 @@ app.DoubleTap("save_button")
 ```
 
 > [!NOTE]
-> Due to a bug in the iOS simulator, `flick`/`swipe` does not work in scroll views such as `UITableView` or `UIScrollView`.
+> Because of a bug in the iOS simulator, `flick`/`swipe` doesn't work in scroll views such as `UITableView` or `UIScrollView`.
 
 ## Scrolling the Screen to Locate Views
 UITest may only interact with views that are visible on the screen. It's possible to use `IApp.ScrollUp` or `IApp.ScrollDown` to programatically scroll the view onto the screen. This methods take an `AppQuery` or a *Marked string* to reference a specific view. UITest will then scroll until the view is visible on screen. The following snippet demonstrates how to scroll down until a Save button is visible:

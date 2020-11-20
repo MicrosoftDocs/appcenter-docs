@@ -21,7 +21,7 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 
 # Test - Sample Swift iOS App and Tutorials
 
-XCUITests are included with the sample app. In this tutorial, you will learn to run the UI tests using App Center.
+XCUITests are included with the sample app. In this tutorial, you'll learn to run the UI tests using App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
@@ -83,6 +83,6 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
    ddp/Build/Products/Debug-iphoneos
    ```
 
-4. Run the command. You will see the tests begin to run.
+4. Run the command. You'll see the tests begin to run.
 
 5. In App Center, click **Done** to close the panel.

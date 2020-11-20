@@ -11,7 +11,7 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 ---
 
 # Build - Sample Swift (iOS) App and Tutorials
-In this tutorial, you will learn to build a sample Swift app in App Center.
+In this tutorial, you'll learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
@@ -33,7 +33,7 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 
 2. Click **Configure build**. The Build configuration panel will show up.
 
-3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This will let you distribute the app later.
+3. If the code is signed, turn **Sign build** on. Upload your Provisioning Profile and Certificate, which can be found in the [Apple Developer Center](https://developer.apple.com/account/). This lets you distribute the app later.
 
    ![Signing Builds](images/Signing_builds_ios.png)  
 

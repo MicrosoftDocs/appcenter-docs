@@ -43,7 +43,7 @@ Customize your organization by uploading an org icon:
 1. On the left side navigation, select the organization
 2. Select the **Manage** tab
 3. On the right side of the screen, click the placeholder org icon
-4. Select an image file no larger than 512px and does not exceed 1 MB
+4. Select an image file no larger than 512px and doesn't exceed 1 MB
 
 ![How to upload org icon](images/org-upload-icon.png)
 
@@ -61,7 +61,7 @@ There are two ways to add users to an organization:
 2. Select **People**
 3. Type the user's email address to add the user
 
-This gives the user access to the organization as a collaborator. However, they will not see any of the apps listed in the organization unless they are explicitly invited to the app or if they are an admin of the organization.
+This gives the user access to the organization as a collaborator. However, they won't see any of the apps listed in the organization unless they're explicitly invited to the app or if they're an admin of the organization.
 
 **In-directly through an app:**
 
@@ -95,10 +95,10 @@ Removing a collaborator from an organization will remove the user from all apps 
 1. Click on the App Center user menu in the upper-right corner of any page
 2. Select **Account Settings**
 3. Select **Organizations**
-4. Click the **Leave** button by the organization you would like to leave
+4. Click the **Leave** button by the organization you want to leave.
 
 > [!NOTE]
-> If you are the sole 'Admin' of an organization, you cannot leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.
+> If you're the sole 'Admin' of an organization, you can't leave the organization. You can either promote another collaborator to 'Admin' or delete the entire organization.
 
 ## Deleting an organization
 

@@ -16,7 +16,7 @@ ms.custom: analytics
 App Center Diagnostics supports multiple API functionalities listed under the crashes and errors section of the [App Center swagger page](https://openapi.appcenter.ms/). Read the [App Center API Documentation](~/api-docs/index.md) to learn how to acquire an API token and make calls to the App Center API.
 
 > [!NOTE]
-> The App Center Diagnostics API does not support CORS (Cross-Origin Resource Sharing), so requests from clients which mandate this such as browsers will fail. To interact with the API from a browser, you can use a proxy service under your own domain which forwards requests to the App Center API.
+> The App Center Diagnostics API doesn't support CORS (Cross-Origin Resource Sharing), so requests from clients which mandate this such as browsers will fail. To interact with the API from a browser, you can use a proxy service under your own domain which forwards requests to the App Center API.
 
 ## Transitioning to the new APIs
 
@@ -64,7 +64,7 @@ Old APIs listed in the crashes section are deprecated and have been removed. You
 
 ### Unaltered Crashes APIs
 
-There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there is no action needed at this time.
+There are some crashes APIs that remain the same in the new pipeline. The following APIs will continue to work as expected and there isn't action needed at this time.
 
 | Unaltered Crashes APIs        |
 | ----------------------------- |

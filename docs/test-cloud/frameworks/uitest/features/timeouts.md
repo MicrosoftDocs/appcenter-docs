@@ -26,7 +26,7 @@ The methods `IApp.WaitForElement`, and `IApp.WaitForNoElement` fundamentally wor
 
 ```csharp
 app.WaitForElement(c=>c.Marked("success_message_label"),
-                   "Did not see the success message.",
+                   "Didn't see the success message.",
                    new TimeSpan(0,0,0,90,0));
 ```
 It's a good idea to call `IApp.WaitForElement` before interacting with views. Many of the gesture APIs will fail if the view isn't visible or is still animating. The following snippet is an extension method that verifies the visibility of a view, and then tries to enter text:

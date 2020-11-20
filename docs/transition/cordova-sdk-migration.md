@@ -94,7 +94,7 @@ Generate test crash | [hockeyapp.forceCrash](https://github.com/bitstadium/Hocke
 Display a dialog on crash | [ignoreDefaultHandler (disabled by default, Android only)](https://github.com/bitstadium/HockeySDK-Cordova#hockeyappstart) | [AppCenter.Crashes.process (callback on processing a crash)](~/sdk/crashes/cordova.md#processing-crashes-in-javascript)
 
 ### Version updates
-App Center Distribute service is not supported in App Center Cordova SDK yet. Follow [our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to stay up-to-date on it.
+App Center Distribute service isn't supported in App Center Cordova SDK yet. Follow [our roadmap](https://github.com/Microsoft/appcenter/wiki/Roadmap) to stay up-to-date on it.
 
 ### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).

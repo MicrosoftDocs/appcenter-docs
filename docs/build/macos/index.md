@@ -13,17 +13,17 @@ ms.tgt_pltfrm: macos
 ---
 
 # Building Objective-C or Swift apps for macOS
-To start building your first Mac app, you'll need to do these steps:
+To start building your first Mac app, do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+3. Configure the build's project or workspace, and the scheme you want to build.
 
 > [!NOTE]
 > For the app to be distributed, the build needs to be code signed with a certificate. A provisioning profile is optional.  Additionally, build for Mac Installers is currently not supported.
 
 ## 1. Linking your repository
-You need to connect to your repository service account. Once your account is connected, select the repository where your Mac project is located. To set up a build for a repository, you need admin and pull permission for it.
+You must connect to your repository service account. Once your account is connected, select the repository where your Mac project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
@@ -51,7 +51,7 @@ When enabled, the `CFBundleVersion` in the Info.plist of your app automatically 
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests. App Center doesn't support launch tests for Mac builds.
 
 ### 3.6. Code signing
-A successful build will produce a `.app` file. To install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](~/build/macos/code-signing.md#uploading-code-signing-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. A provisioning profile is optional for code signing.
+A successful build will produce a `.app` file. To install the build on a device, it needs to be signed certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a valid certificate (.p12)](~/build/macos/code-signing.md#uploading-code-signing-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you're uploading. A provisioning profile is optional for code signing.
 
 Currently, App Center only supports these signing configurations:
 
@@ -62,7 +62,7 @@ Currently, App Center only supports these signing configurations:
 You can read more about code signing in [App Center's macOS code signing guide](~/build/macos/code-signing.md) and in the [official Apple Developer guide](https://developer.apple.com/support/code-signing/).
 
 ### 3.7. CocoaPods
-App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
+App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This ensures that all dependencies are installed.
 
 If the repository already contains a */Pods* folder, App Center assumes you've checked in the pods in your repository and will no longer run `pod install`.
 
@@ -77,7 +77,7 @@ After a build is triggered, it can be in the following states:
 - **queued** -  the build is queued, waiting for resources to be free.
 - **building** - the build is running the predefined tasks.
 - **succeeded** - the build completed successfully.
-- **failed** - the build encountered failures that prevented it from completing. You can troubleshoot the build by [downloading and inspecting the build logs](~/build/troubleshooting/build-failed.md#isolating-and-interpreting-error-messages).
+- **failed** - the build found failures that prevented it from completing. You can troubleshoot the build by [downloading and inspecting the build logs](~/build/troubleshooting/build-failed.md#isolating-and-interpreting-error-messages).
 - **canceled** - the build was canceled by a user action or it timed out.
 
 ### 4.1. Build logs

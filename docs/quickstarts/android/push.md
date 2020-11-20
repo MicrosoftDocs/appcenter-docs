@@ -29,9 +29,9 @@ You need a Google Account and use the Firebase console.
 
 1. Create a project on the [Firebase console](https://console.firebase.google.com/).
 2. Go to project settings (the cog icon).
-3. Download the **google-services.json** file, as you will need it for the SDK integration.
+3. Download the **google-services.json** file, as you'll need it for the SDK integration.
 4. Go to **Cloud Messaging** tab.
-5. Copy the **Server Key**. You will need this key as part of the configuration of Push on the App Center portal for your application.
+5. Copy the **Server Key**. You'll need this key as part of the configuration of Push on the App Center portal for your application.
 
 ## Integrate App Center SDK
 

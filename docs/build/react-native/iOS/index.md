@@ -18,7 +18,7 @@ App Center can build React Native apps written in React Native version 0.34 or n
 To build a React Native app for iOS, you must:
 1. Connect to your repository service account (for example: Azure DevOps, Bitbucket, GitHub, or VSTS).
 2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+3. Configure the build's project or workspace, and the scheme you want to build.
 
 > [!NOTE]
 > For the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
@@ -39,9 +39,9 @@ Select your project’s `package.json`. App Center will automatically detect the
 Select the Xcode version to run the build on from the dropdown list.
 If the toggle "Use legacy build system" is `On`, then the legacy build system will be used whatever the project or workspace settings.
 If the toggle "Use legacy build system" is `Off`, then the build system configuration from the project or workspace settings will be used.
-*Note that:*
-   - Workspace setting should be committed to the repository
-   - If workspace setting isn't committed, then the modern build system will be used
+> [!NOTE]
+>   - Workspace setting should be committed to the repository
+>   - If workspace setting isn't committed, then the modern build system will be used
 
 ### 3.3. Node.js version
 Select the Node.js version to use for the build. Learn more about [how to select Node.js version](~/build/react-native/nodejs.md)
@@ -63,7 +63,7 @@ Signing apps with [app or watchOS extensions](https://developer.apple.com/librar
 Use the newly produced `.ipa` file to test if your app starts on a real device; the launch test adds about 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.8. CocoaPods
-App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This will ensure that all dependencies are installed.
+App Center scans the selected branch and if it finds a Podfile, it will automatically do a `pod install` step at the beginning of every build. This ensures that all dependencies are installed.
 
 ### 3.9. Distribute to a distribution group
 Configure each successful build from a branch to be distributed to a previously created distribution group. Add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all users who have access to the app.
@@ -95,7 +95,7 @@ The build logs (located in the `build/` directory of the archive) are helpful fo
 ### 4.2. The app (.ipa)
 The `.ipa` file is an iPhone application archive file that contains the iOS app.
 
-- If the build was signed correctly, you can install the `.ipa` file on a real device that is included in the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
+- If the build was signed correctly, you can install the `.ipa` file on a real device that's included in the provisioning profile used when signing. More details about code signing and distribution with App Center can be found in [App Center's iOS code signing documentation](~/build/ios/code-signing.md).
 - If the build isn't signed during the build, developers can sign the `.ipa` file (locally using codesign) or used for other purposes (for example, upload to Test service for UI testing on real devices or run in the simulator).
 - Unsigned builds won't produce an `.ipa` file. The artifact of an unsigned build is the `.xcarchive` file, which can be used to generate an `.ipa` file with the Xcode Archives organizer.
 
@@ -117,7 +117,7 @@ If this app has the crashes SDK included, iOS symbols and source maps will be se
 
 There are several options for running scripts before App Center's default build commands are executed.
 
-- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This will automatically execute after your dependencies are installed.
+- Create a [postinstall](https://docs.npmjs.com/misc/scripts#examples) script in your project's `package.json` file. This automatically executes after your dependencies are installed.
 
   ```javascript
     "scripts": {

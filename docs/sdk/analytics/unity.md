@@ -59,7 +59,7 @@ Analytics.TrackEvent("Video clicked");
 ```
 
 >[!WARNING]
->`Analytics.TrackEvent()` will behave inconsistently across platforms if it is called prior to the `Awake()` method in the script `AppCenterBehavior.cs`. To be safe, you should only rely on events to be sent after the first scene in your application has awakened all of the `MonoBehaviour` scripts. To track an event in conjunction with a `MonoBehavour`'s initialization, consider adding the API to your script's `Start()` method instead of `Awake()`.
+>`Analytics.TrackEvent()` will behave inconsistently across platforms if it's called prior to the `Awake()` method in the script `AppCenterBehavior.cs`. To be safe, you should only rely on events to be sent after the first scene in your application has awakened all of the `MonoBehaviour` scripts. To track an event in conjunction with a `MonoBehavour`'s initialization, consider adding the API to your script's `Start()` method instead of `Awake()`.
 
 ## Enable or disable App Center Analytics at runtime
 
@@ -124,7 +124,7 @@ By default, the SDK stores up to 10MB of logs in the storage.
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
+When there isn't any network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
 
 ## Batching event logs
 

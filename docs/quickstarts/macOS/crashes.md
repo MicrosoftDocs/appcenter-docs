@@ -16,12 +16,12 @@ dev_langs:
 ---
 
 # Crashes - Sample Swift (macOS) App and Tutorials
-In this tutorial, you will learn to view crashes from a sample Swift app in App Center.
+In this tutorial, you'll learn to view crashes from a sample Swift app in App Center.
 
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
+If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Get the symbols
-In order to symbolicate crashes in macOS, App Center needs you to upload a **symbol file to App Center**. You can download symbols from a build in App Center, or skip this section and use your own.
+To symbolicate crashes in macOS, App Center needs you to upload a **symbol file to App Center**. You can download symbols from a build in App Center, or skip this section and use your own.
 
 If you already completed the [Build tutorial](build.md) and built the sample app:
 1. Navigate to the **Build** service in the portal.

@@ -17,13 +17,13 @@ dev_langs:
 
 # Analytics - Sample Swift App (macOS) and Tutorials
 
-In this tutorial, you will learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
+In this tutorial, you'll learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
+If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.
 
 ## Open the app and view user Analytics
 To see users, session, and other information on the Overview page:
-1. Run the app using .xcworkspace, or from your device.
+1. Run the app using `.xcworkspace`, or from your device.
 
 2. Interact with the sample app from your device.
 

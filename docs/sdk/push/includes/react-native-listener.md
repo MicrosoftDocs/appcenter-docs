@@ -5,7 +5,7 @@ ms.topic: include
 ms.date: 12/02/2019
 ---
 
-You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
+You need to register the listener when your app starts. A convenient place to do that's at the outer level in the .js file for your root component:
 
 ```javascript
 import Push from 'appcenter-push';

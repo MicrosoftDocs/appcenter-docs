@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Testing Android Apps
 
-After getting invited to test an Android Application in App Center you will receive an email notifying you of your pending invitation. The following sections outline the steps you need to take to get started testing this app.
+After getting invited to test an Android Application in App Center you'll receive an email notifying you of your pending invitation. The following sections outline the steps you need to take to get started testing this app.
 
 ## Device configuration
 
@@ -21,7 +21,7 @@ After getting invited to test an Android Application in App Center you will rece
 > Changing security settings put your phone at risk of malicious software. Only install apps from developers you trust. [Read about Google Play Protect which helps you protect your data](https://support.google.com/nexus/answer/2812853?hl=en&ref_topic=3416293).
 
 ### Android 9.x and higher 
-* Grant permission to the app to install unknown apps. This will trigger the installation.
+* Grant permission to the app to install unknown apps. This triggers the installation.
 * Android Oreo removed **allow unknown sources** from settings, for more info see refer to the blog post [Making it safer to get apps on Android O](https://android-developers.googleblog.com/2017/08/making-it-safer-to-get-apps-on-android-o.html)
 
 ### Android 8.x and higher
@@ -44,40 +44,40 @@ After getting invited to test an Android Application in App Center you will rece
 
 Installing an app on your Android device is done primarily from the App Center install portal or our native app, which is explained in the next section. Installing your apps can be done in two different ways depending on the developer's preference:
 
-1. You will receive an email from App Center that directs you to the release in the App Center. You can also elect to go directly to the [App Center Install Portal](https://install.appcenter.ms) at any point to see apps you've been added to and their releases.
+1. You'll receive an email from App Center that directs you to the release in the App Center. You can also elect to go directly to the [App Center Install Portal](https://install.appcenter.ms) at any point to see apps you've been added to and their releases.
 
-2. The developer sends you an installation link. By using this link, you will be navigated directly to the app in the install portal where you can view and download a release. 
+2. The developer sends you an installation link. By using this link, you'll be navigated directly to the app in the install portal where you can view and download a release. 
 
-Once you have navigated to the install portal, you will see a list of all available apps you have been added to as a tester.
+Once you have navigated to the install portal, you'll see a list of all available apps you have been added to as a tester.
 
 When you click on an app, App Center displays additional information about the app. Click the blue **Install** button to install the app.
 
 ![App Details View in the Portal](images/a-appdetails-installportal.png)
 
-Clicking this button initiates the application install, which will result in the app being placed onto your home screen.
+Clicking this button initiates the application install, which results in the app being placed onto your home screen.
 
 Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps)  and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
 
 ## Using the App Center Android App
 
-To get started using our native app, simply download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
+To get started using our native app, download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
 
 ![Google App Store Listing](images/a-store-listing.png)
 
 This app allows you to manage all of your apps and their releases within the app, rather than navigating to our install portal.
 
-After logging in, you will be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this will initiate the installation process on your phone.
+After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this initiates the installation process on your phone.
 
 ![App Details View in the  App](images/a-appdetails-app.png)
 
 > [!TIP]
-> Located on the top-right of the screen, you can use the search bar to quickly find your desired app.
+> Located on the top-right of the screen, you can use the search bar to quickly find your app.
 
 ## Troubleshooting
 
 Here are some common issues along with their solutions we've seen in the installation process:
 
-**While installing the app, I get an "Install Blocked" due to an unknown sources error:**
+**While installing the app, I get an "Install Blocked" because of an unknown sources error:**
 
 In order for the app to be available for use, you must allow for apps to be installed from sources outside the Google Play Store. From your home screen or menu, tap on **Settings>Security**. Under the **Device Administration** heading, check the box next to **Unknown Sources**. 
 

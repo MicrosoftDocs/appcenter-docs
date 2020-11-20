@@ -74,7 +74,7 @@ You can track business critical events that have higher importance than other ev
 * When the local storage is full, and new events need to be stored, the oldest events with the lowest priority are deleted first.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
 **Normal** priority will fail as the SDK can't make room in that case.
-* If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
+* If you also use the **Crashes** service, crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
 You can use the following API to track an event as **Critical**:
@@ -86,13 +86,13 @@ properties.put("FileName", "favorite.avi");
 
 Analytics.trackEvent("eventName", properties, Flags.CRITICAL);
 
-// If you are using name only, you can pass null as properties.
+// If you're using name only, you can pass null as properties.
 ```
 ```kotlin
 val properties = hashMapOf("Category" to "Music", "FileName" to "favorite.avi")
 Analytics.trackEvent("Video clicked", properties, Flags.CRITICAL)
 
-// If you are using name only, you can pass null as properties.
+// If you're using name only, you can pass null as properties.
 ```
 
 ## Pause and resume sending logs

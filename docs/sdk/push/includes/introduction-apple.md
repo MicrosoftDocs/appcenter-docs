@@ -13,7 +13,7 @@ The App Center SDK is designed with a modular approach – you only need to inte
 
 #### Integration via Cocoapods
 
-If you are integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
+If you're integrating App Center into your app via Cocoapods, add the following dependency to your podfile and run `pod install`.
 
 ```ruby
 pod 'AppCenter/Push'
@@ -43,7 +43,7 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 
-2. Unzip the file and you will see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
+2. Unzip the file and you'll see a folder called **AppCenter-SDK-Apple** that contains different frameworks for each App Center service on each platform folder. The framework called `AppCenter` is required in the project as it contains code that's shared between the different modules.
 
 3. [Optional] Create a subdirectory for 3rd-party-libraries.
    * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now.
@@ -53,12 +53,12 @@ If you don't want to use Cocoapods, you can integrate the modules by copying the
 
 5. Add the SDK framework to the project in Xcode:
    * Make sure the Project Navigator is visible (⌘+1).
-   * Now drag and drop **AppCenter.framework** and **AppCenterPush.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. Note that **AppCenter.framework** is required to start the SDK, make sure it is added to your project, otherwise the other module will not work and your project will not compile successfully.
+   * Now drag and drop **AppCenter.framework** and **AppCenterPush.framework** from the Finder (the ones inside the **Vendor** folder) into Xcode's Project Navigator. **AppCenter.framework** is required to start the SDK, make sure it's added to your project, otherwise the other module won't work and your project won't compile successfully.
    * A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ### 2. Start App Center Push
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 #### 2.1 Add the import for App Center Push
 

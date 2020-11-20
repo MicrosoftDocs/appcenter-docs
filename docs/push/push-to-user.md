@@ -67,7 +67,7 @@ On the next page, select **User list** as the target for the notification.
 
 ### SDK set identity
 
-To send a notification to one or more users, the app must set the User ID through the SDK, and keep a copy of the identity later in order to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later. Collect up to 100 user identifiers, build them into a comma-separated list, and paste them into the input field shown in the following figure.
+To send a notification to one or more users, the app must set the User ID through the SDK, and keep a copy of the identity later to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later. Collect up to 100 user identifiers, build them into a comma-separated list, and paste them into the input field shown in the following figure.
 
 ![App Center Push User ID input](~/push/images/user-id-input.png)
 

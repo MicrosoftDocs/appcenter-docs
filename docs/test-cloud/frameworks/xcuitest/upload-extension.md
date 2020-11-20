@@ -14,9 +14,9 @@ ms.custom: test
 # Preparing XCUITest Tests for Upload with App Center Extensions Framework
 
 > [!WARNING]
-> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you are just starting with XCUITest, don't link this framework.
+> This framework has been *deprecated* & is *no longer required* for running XCUITest tests in App Center. It won't be updated to be compatible with versions of Xcode > 10.0. If you're just starting with XCUITest, don't link this framework.
 
-If you are already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
+If you're already running XCUITest in App Center using the AppCenterXCUITestExtensions.framework, you need to migrate your tests to use Apple's `XCTContext runActivityNamed:block` API.
 
 For additional information and examples, see the [App Center XCUITest documentation](~/test-cloud/frameworks/xcuitest/index.md).
 
@@ -79,11 +79,11 @@ Create a `Cartfile` file with the following contents:
 github "Microsoft/AppCenter-Test-XCUITest-Extensions"
 ```
 
-Follow the [Carthage Instructions for adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework). This will use the `Cartfile` you created to configure your Xcode project to link with the `AppCenterXUITestExtensions.framework`. For an example, you can review this [example code for setting up App Center XCUITest with Carthage](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido) which includes a sample `Cartfile`.
+Follow the [Carthage Instructions for adding frameworks to unit tests or a framework](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework). This uses the `Cartfile` you created to configure your Xcode project to link with the `AppCenterXUITestExtensions.framework`. For an example, you can review this [example code for setting up App Center XCUITest with Carthage](https://github.com/Microsoft/AppCenter-Test-XCUITest-Extensions/tree/master/Dido) which includes a sample `Cartfile`.
 
 For more information on using Carthage, see the [Carthage GitHub repository](https://github.com/Carthage/Carthage).
 
-Remember that the `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
+The `AppCenterXUITestExtensions.framework` must be linked with the XCUITest target and *not* the iOS application.
 
 ### Building from Source
 
@@ -117,11 +117,11 @@ In Xcode, in the 'Build Phases' tab of the *XCUITest target* (not the main appli
 
 In the same tab, add a 'Copy Files' phase with Destination: Frameworks and add the `AppCenterXCUITestExtensions.framework`.
 
-Note that your project may already have a 'Copy Files' phase.
+Your project may already have a 'Copy Files' phase.
 
 ![Inside Xcode select Frameworks in Destination](images/xcuitest-link-framework.gif)
 
-When you are finished, your Build Phases pane should resemble the following:
+When you're finished, your Build Phases pane should resemble the following:
 
 ![Showing the configured Build Phases pane](images/xcuitest-build-settings.png)
 
@@ -129,7 +129,7 @@ Here is a [Swift code example](https://github.com/Microsoft/AppCenter-Test-XCUIT
 
 ### Cocoapods
 
-If you are not already using CocoaPods, we recommend you use Carthage or manually linking the framework.
+If you aren't already using CocoaPods, we recommend you use Carthage or manually linking the framework.
 
 Update your `Podfile` in your Xcode project folder with the following:
 
@@ -161,10 +161,10 @@ $ xcrun xcodebuild build-for-testing \
   -derivedDataPath DerivedData
 ```
 
-This will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be
+This builds your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be
 located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
-`YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default it is usually the name of your application. To see the list of schemes defined in your Xcode project, run:
+`YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default it's usually the name of your application. To see the list of schemes defined in your Xcode project, run:
 
 ```shell
 $ xcrun xcodebuild -list
@@ -178,7 +178,7 @@ Once a test suite is prepared, next [setup a test run](~/test-cloud/starting-a-t
 
 ```shell
 # Follow the instructions to generate a resuable API token.
-# Save this token, you will use it later, but keep it private.
+# Save this token, you'll use it later, but keep it private.
 $ appcenter login
 
 # Generate an XCUITest bundle and your iOS application as describe above.

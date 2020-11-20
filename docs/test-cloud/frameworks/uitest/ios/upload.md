@@ -24,7 +24,7 @@ For an iOS project in Visual Studio for Mac, right click on the **Packages** fol
 
 ### Visual Studio (Windows)
 > [!IMPORTANT]
-> Xamarin.UITests for iOS apps cannot be executed locally on Windows. You can still create, compile and upload to App Center Test from Windows.
+> Xamarin.UITests for iOS apps can't be executed locally on Windows. You can still create, compile and upload to App Center Test from Windows.
 
 For an iOS project in Visual Studio for Windows, right click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
 

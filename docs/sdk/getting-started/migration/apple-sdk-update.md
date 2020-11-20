@@ -15,7 +15,7 @@ dev_langs:
 
 # Migrate to App Center SDK 4.0.0 and higher
 
-In order to avoid a naming conflict with classes in Apple's private frameworks, SDK now uses `MSAC` prefix instead of `MS` which changes the SDK API.
+To avoid a naming conflict with classes in Apple's private frameworks, SDK now uses `MSAC` prefix instead of `MS` which changes the SDK API.
 
 Swift API has now a more _swifty_ style, and all classes should be used without a prefix, e.g. `AppCenter`. There are also changes in functions and properties naming based on Apple Swift best practices.
 

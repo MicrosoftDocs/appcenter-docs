@@ -11,18 +11,18 @@ ms.service: vs-appcenter
 ms.custom: errors
 ---
 # Errors Feature Set
-In this page, you will learn about the feature set available for Xamarin errors.
+In this page, you'll learn about the feature set available for Xamarin errors.
 
 > [!NOTE]
-> While the Crashes and Errors section portal experience is similar, there is not feature parity between the two sections of App Center.
+> While the Crashes and Errors section portal experience is similar, there isn't feature parity between the two sections of App Center.
 
 
 ## Error Group Overview
-The Error group overview page provides you with the key metrics about the errors happening in your app. In order to easily manage all your error instances and allow you to get an understanding of what are the most common errors or the ones that affect most users, App Center creates Error Groups based on the similarity of the error instances' stack traces.
+The Error group overview page provides you with the key metrics about the errors happening in your app. To easily manage all your error instances and allow you to get an understanding of what are the most common errors or the ones that affect most users, App Center creates Error Groups based on the similarity of the error instances' stack traces.
 
 ![App Center lists the error groups generated based on your errors instances](~/errors/images/groupsoverview.png)
 
-Note that you can filter this page based on **time range**, **app version** and **status** (open, closed and ignored). The latest will help you track the status of your error groups and close them or ignore them if taken care of.
+You can filter this page based on **time range**, **app version** and **status** (open, closed and ignored). The latest will help you track the status of your error groups and close them or ignore them if taken care of.
 
 ## Detailed Error Group View
 Drill down into error groups to get more information to help you fix the root cause of the error.

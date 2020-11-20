@@ -81,7 +81,7 @@ With these simple steps, App Center crash reporting will behave as usual.
 
 ### Retrieve symbols for bitcode enabled apps
 
-If you'd like to keep bitcode enabled, you can download the proper dSYM files by following these steps:
+If you want to keep bitcode enabled, you can download the proper dSYM files by following these steps:
 
 1. Open the Xcode's Organizer
 2. Select the specific archive of your app that you uploaded to iTunes Connect

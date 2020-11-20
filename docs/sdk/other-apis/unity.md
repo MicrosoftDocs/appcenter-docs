@@ -43,7 +43,7 @@ System.Guid? installId = await AppCenter.GetInstallIdAsync();
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK as described in the [App Center SDK Getting started guide](~/sdk/getting-started/unity.md).
 2. Set a `userID` in the SDK using the following code:
@@ -74,7 +74,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-You can enable or disable desired service at the runtime with following code:
+You can enable or disable the service at the runtime with following code:
 
 ```csharp
 Analytics.SetEnabledAsync(true);
@@ -101,8 +101,8 @@ AppCenter.SdkVersion;
 App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to those segments by [creating targeted audiences](~/push/send-notification.md#audiences).
 
 > [!NOTE]
-> Only devices that have Push successfully registered are matched in audiences. Make sure to refer to the relevant getting started documentation depending on the platform you are targeting.
-> As a consequence, the iOS simulator can not be used to test audience matching.
+> Only devices that have Push successfully registered are matched in audiences. Make sure to refer to the relevant getting started documentation depending on the platform you're targeting.
+> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `SetCustomProperties()` method. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool`, and `DateTime`.
 
@@ -126,7 +126,7 @@ AppCenter.SetCustomProperties(properties);
 ## Delay the start of App Center
 
 There may be cases where you want to delay the start of App Center until after **AppCenterBehavior** starts. For example, if you want to request user consent before starting any App Center services.  
-To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This will start the SDK the in `Start` method of **AppCenterBehavior** and allow you to add a custom dialog or other logic you may require.
+To do this, add **AppCenterBehaviorAdvanced** to the game object and check the **Start native SDK from iOS/Android app** checkboxes. This starts the SDK at the `Start` method of **AppCenterBehavior** and allows you to add a custom dialog or other logic.
 
 > [!TIP]
 > If you generate the settings at build time, another way is to go to **Player Settings** > **Other Settings** > **Scripting Define Symbols** and paste `APPCENTER_DONT_USE_NATIVE_STARTER`. 
