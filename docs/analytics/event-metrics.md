@@ -59,7 +59,7 @@ Property values are optimized for values of type 'String'.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped.
 - The SDK truncates event names to the first 256 characters.
 - The SDK truncates each property key and value to the first 125 characters.
-- The portal will show up the 10 property values with highest count.
+- The portal will show up to the 10 property values with highest counts.
 
 ## Breadcrumbs (Events before a crash)
 

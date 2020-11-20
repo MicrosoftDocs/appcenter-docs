@@ -202,7 +202,7 @@ For React Native 0.58 and below:
 This change configures your app to always load the most recent version of your app's JS bundle. On the first launch, this corresponds to the file that was compiled with the app. However, after an update has been pushed via CodePush, this returns the location of the most recently installed update.
 
 > [!NOTE]
-> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior*
+> The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
 Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
 

@@ -39,7 +39,7 @@ If you're creating a new FCM project and not attaching to the existing GCM proje
 
 **Q**: Why am I getting this email about old GCM endpoints being used? What must I do?
 
-**A**: Nothing. We've migrated to the new endpoints and no other changes are necessary. Nothing is broken, our one missed endpoint  caused warning messages from Google.
+**A**: Nothing. We've migrated to the new endpoints and no other changes are necessary. Nothing is broken, our one missed endpoint caused warning messages from Google.
 
 **Q**: How can I transition to the new FCM SDKs and libraries without breaking existing users?
 

@@ -140,7 +140,7 @@ Crashes.setListener({
 
     shouldAwaitUserConfirmation: function (report) {
 
-        // Build your own UI to ask for user consent here. SDK does't provide one by default.
+        // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
         // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
         return true;

@@ -15,7 +15,7 @@ ms.custom: analytics
 > [!IMPORTANT]
 > Handled Errors aren't available yet as part of the Crashes service in App Center. One workaround is to use Custom Events. This isn't how "Handled Errors" are intended to be supported and it isn't the main purpose of Events either. However, this page contains advice on how to best leverage Events to report on handled errors.
 
-In this section, you'll learn how to use events to get information about your handled errors. Such events for handled errors are helpful if you're interested in counting the number of times an error has happened. You'll get six different measures per event: count, count change, users, user change, count per user and count per session.
+In this section, you'll learn how to use events to get information about your handled errors. Such events for handled errors are helpful if you're interested in counting the number of times an error has happened. You'll get six different measures per event: count, count change, users, user change, count per user, and count per session.
 
 ## Event name
 
