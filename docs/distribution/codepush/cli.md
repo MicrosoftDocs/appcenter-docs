@@ -44,7 +44,7 @@ appcenter login
 
 This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key to copy-paste into the CLI (it will prompt you for it). You're now successfully authenticated and can safely close your browser window.
 
-If at any time you want to determine if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
+Anytime you want to check if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
 
 ```shell
 appcenter profile list
@@ -162,7 +162,7 @@ Collaborators can't do any of the following actions:
 
 Over time, if someone is no longer working on an app with you, you can also remove them as a collaborator using this collaborator menu in the portal.
 
-If at any time you want to list all collaborators that have been added to an app, you can visit the collaborator menu in the portal.
+Anytime you want to list all collaborators that have been added to an app, you can visit the collaborator menu in the portal.
 
 ### Deployment Management
 From the CodePush perspective, an app is a named grouping for one or more "deployments". While the app represents a conceptual "namespace" or "scope" for a platform-specific version of an app (for example, the iOS port of Foo app), its deployments represent the actual target for releasing updates (for developers) and synchronizing updates (for end users). Deployments allow you to have multiple "environments" for each app in-flight at any given time, and help model the reality that apps typically move from a developer's personal environment to a testing/QA/staging environment, before finally making their way into production.
@@ -185,7 +185,7 @@ appcenter codepush deployment remove -a <ownerName>/<appName> <deploymentName>
 appcenter codepush deployment rename -a <ownerName>/<appName> <deploymentName> <newDeploymentName>
 ```
 
-If at any time you want to view the list of deployments that a specific app includes, you can run the following command:
+Anytime you want to view the list of deployments that a specific app includes, you can run the following command:
 
 ```shell
 appcenter codepush deployment list -a <ownerName>/<appName>
