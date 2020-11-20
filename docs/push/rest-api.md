@@ -77,7 +77,7 @@ https://appcenter.ms/orgs/{owner_name}/apps/{app_name}
 
 For either example URL, the portion of the URL represented by `{owner_name}` in the example is the account or organization name. The portion of the URL represented by `{app_name}` is the app project name.
 
-You can also use the App Center API to retrieve an account's user name; just open a browser window and navigate to [https://openapi.appcenter.ms/#/account/users_get](https://openapi.appcenter.ms/#/account/users_get). Once you've authorized access using an API token, when you execute the API the successful result body the account name in the `name` property.
+You can also use the App Center API to retrieve an account's user name. Open a browser window and navigate to [https://openapi.appcenter.ms/#/account/users_get](https://openapi.appcenter.ms/#/account/users_get). Once you've authorized access using an API token, when you execute the API the successful result body the account name in the `name` property.
 
 If the app belongs to an org, you can use the [https://openapi.appcenter.ms/#/account/apps_listForOrg](https://openapi.appcenter.ms/#/account/apps_listForOrg) API to retrieve the app name. Once you've authorized access using an API token, populate the **Organization** field with the organization name and execute the API. The successful result body contains an array of apps for the organization, you'll find the account name for each app in the array in the item's `name` property.
 
