@@ -137,7 +137,7 @@ If you'll be working with other developers on the same CodePush app, you can add
 1. In the App Center portal, select the app for which you want to add collaborators
 2. In the navigation area on the left side of the page, click **Settings**
 3. Click the **Collaborators** link
-4. Within the collaborators menu, enter the email addresses of the collaborators to invite them
+4. Within the collaborators menu, enter the email addresses of the collaborators to invite them.
 
 > [!IMPORTANT]
 > App Center's Collaborators feature expects that each collaborator has already [registered with App Center](#account-management) using the specified e-mail address.
