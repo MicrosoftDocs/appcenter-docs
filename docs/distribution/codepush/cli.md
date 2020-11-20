@@ -123,7 +123,7 @@ If at some point you no longer need an app, you can remove it from the server us
 appcenter apps delete -a <ownerName>/<appName>
 ```
 
-Use caution when executing this command as any apps that have been configured to use it will obviously stop receiving updates.
+Use caution when executing this command as any apps that have been configured to use it will stop receiving updates.
 
 Finally, if you want to list all apps that you've registered with the App Center server, run the following command:
 
