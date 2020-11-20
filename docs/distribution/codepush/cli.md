@@ -23,7 +23,7 @@ ms.custom: distribute
 4. [Release and update for your app](#releasing-updates).
 
 ## Account Management
-Before you can begin releasing app updates, you must sign in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
+Before you can begin releasing app updates, sign in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
 
 ```shell
 appcenter login
@@ -36,13 +36,13 @@ This command will launch a browser, asking you to authenticate with either your 
 
 ### Authentication
 
-Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must sign in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
+Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, sign in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
 
 ```shell
 appcenter login
 ```
 
-This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key that you must copy/paste into the CLI (it will prompt you for it). You're now successfully authenticated and can safely close your browser window.
+This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key to copy-paste into the CLI (it will prompt you for it). You're now successfully authenticated and can safely close your browser window.
 
 If at any time you want to determine if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
 
@@ -81,7 +81,7 @@ When signing in using this method, the access token won't automatically invalida
 
 ## App Management
 
-Before deploying updates, you must create an app with App Center using the following command:
+Before deploying updates, create an app with App Center using the following command:
 
 ```shell
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
@@ -643,7 +643,7 @@ Indicates which release (for example, `v23`) you want to update within the speci
 
 ### Mandatory parameter
 
-It's the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag isn't equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. You must set this parameter to `--mandatory false` to explicitly make a release optional.
+It's the same parameter as the one described in the [above section](#mandatory-parameter), and allows you to update whether the release should be considered mandatory or not. Pay attention that `--mandatory` and `--mandatory true` are equivalent, but the absence of this flag isn't equivalent to `--mandatory false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's mandatory property. Set this parameter to `--mandatory false` to explicitly make a release optional.
 
 ### Description parameter
 
@@ -651,7 +651,7 @@ It's the same parameter as the one described in the [above section](#description
 
 ### Disabled parameter
 
-It's the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag isn't equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. You must set this parameter to `--disabled false` to explicitly make a release acquirable if it was previously disabled.
+It's the same parameter as the one described in the [above section](#disabled-parameter), and allows you to update whether the release should be disabled or not. Pay attention `--disabled` and `--disabled true` are equivalent, but the absence of this flag isn't equivalent to `--disabled false`. Therefore, if the parameter is omitted, no change will be made to the value of the target release's disabled property. Set this parameter to `--disabled false` to explicitly make a release acquirable, if it was previously disabled.
 
 ### Rollout parameter
 

@@ -23,7 +23,7 @@ In App Center, non-UWP apps are built on macOS, so they can use Bash scripts. UW
 You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). Feel free to use the sample scripts, modify them, or submit new pull requests with your most useful scripts for the rest of the community to use.
 
 > [!WARNING]
-> When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
+> When App Center detects build scripts for the first time, or you change the location of scripts, or you change where CocoaPods are stored; you must apply the changes by clicking the **Save** or **Save & Build** button in the build configuration. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 

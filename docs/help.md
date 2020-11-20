@@ -38,7 +38,7 @@ The comments feature on our documentation is intended for docs suggestions or qu
 1. The **Feedback** section has two buttons:
    - **This product** - Learn how to connect with the App Center Support team. 
    - **This page** - Suggest changes to the document. 
-2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, you must sign in with your GitHub account. 
+2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, sign in with your GitHub account. 
 3. **View on GitHub** - click to view suggestions directly on GitHub. This link isn't available on all pages.
 4. Prompt asking you if the current page is helpful. This prompt will be in different locations depending on the screen size. Your vote here helps us understand how we're doing.
 

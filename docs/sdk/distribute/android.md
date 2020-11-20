@@ -54,7 +54,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
+To use App Center, opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 

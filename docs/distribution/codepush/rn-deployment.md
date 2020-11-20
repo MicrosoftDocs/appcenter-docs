@@ -248,7 +248,7 @@ Additionally, if you want to give them separate names and/or icons, you can modi
 
 The above section illustrated how you can leverage multiple CodePush deployments to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and therefore, only they need a build that knows how to sync with staging. However, if you want to perform A/B tests, or provide early access of your app to certain users, it can prove useful to dynamically place specific users (or audiences) into specific deployments at runtime.
 
-To achieve this workflow, you must specify the deployment key you want the current user to synchronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's **Info.plist** (iOS) or **MainActivity.java** (Android) files. This allows you to produce a build for staging or production, that's also capable of being dynamically "redirected" as needed.
+To achieve this workflow, specify the deployment key you want the current user to synchronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's **Info.plist** (iOS) or **MainActivity.java** (Android) files. This allows you to produce a build for staging or production, that's also capable of being dynamically "redirected" as needed.
 
 ```javascript
 // Imagine that "userProfile" is a prop that this component received

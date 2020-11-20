@@ -75,7 +75,7 @@ Install-Package Microsoft.AppCenter.Crashes
 
 ## 5. Start the SDK
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
+To use App Center, opt in to the module(s) you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 5.1 Add the `Start()` method
 

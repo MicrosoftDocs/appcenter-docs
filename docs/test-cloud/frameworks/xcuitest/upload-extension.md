@@ -149,7 +149,7 @@ For additional information, refer to the [CocoaPods Code example](https://github
 
 ## Build For Testing
 
-To run a test in App Center, you must build your application and an XCUITest bundle. To do this, run the following command from the root of your application project directory:
+To run a test in App Center, build your application and an XCUITest bundle. To do this, run the following command from the root of your application project directory:
 
 ```shell
 $ rm -rf DerivedData

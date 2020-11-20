@@ -90,7 +90,7 @@ There are numerous use cases for this API, the most common one is people who cal
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 > [!NOTE]
-> You must set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
+> Set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 

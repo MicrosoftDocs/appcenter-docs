@@ -69,7 +69,7 @@ If you ever want an update to target multiple versions of the app store binary, 
 | ^1.2.3         | Equivalent to >=1.2.3 <2.0.0                                                       |
 
 > [!NOTE]
-> As defined in the semver spec, ranges only work for non pre-release versions (see [pre-release tags](https://github.com/npm/node-semver#prerelease-tags)). If you want to update a version with pre-release tags, then you must write the exact version you want to update (1.2.3-beta for example).
+> As defined in the semver spec, ranges only work for non pre-release versions (see [pre-release tags](https://github.com/npm/node-semver#prerelease-tags)). If you want to update a version with pre-release tags, write the exact version you want to update (1.2.3-beta for example).
 
 ### Description
 A brief description of this release, which provides an optional "change log" for the deployment. The value is round-tripped to the client so that when the update is detected, your app can display it to the end user, for example, with a "What's new?" dialog. This string accepts control characters such as `\n` and `\t` so that you can include whitespace formatting within your descriptions for improved readability.

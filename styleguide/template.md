@@ -1,6 +1,6 @@
 # Metadata and Markdown Template
 
-This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
+This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
 
 When creating a Markdown file, you should copy this template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
 ## Metadata
@@ -38,7 +38,7 @@ All basic and GitHub Flavored Markdown (GFM) is supported. For more information 
 - [Baseline Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
 - [GFM documentation](https://guides.github.com/features/mastering-markdown)
 
-Markdown uses special characters such as \*, \`, and \# for formatting. If you wish to include one of these characters in your content, you must do one of two things:
+Markdown uses special characters such as \*, \`, and \# for formatting. To include one of these characters in your content, you must do one of two things:
 
 - Put a backslash before the special character to "escape" it (for example, `\*` for a \*)
 - Use the [HTML entity code](https://www.ascii.cl/htmlcodes.htm) for the character (for example, `&#42;` for a &#42;).

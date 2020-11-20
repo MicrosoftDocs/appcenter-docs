@@ -133,7 +133,7 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 Now that you've integrated the frameworks in your application, it's time to start the SDK and make use of the App Center services.
 
 ## 4. Start the SDK
-To use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must call each one when starting the SDK.
+To use App Center, opt in to the module(s) that you want to use. By default, no modules are started and you must call each one when starting the SDK.
 
 The instructions below are slightly different depending on what lifecycle you're using. Starting from Xcode 12 you can select one of two lifecycles: "Swift UI App" (selected by default in Xcode 12) and "UI Kit AppDelegate". If you're using Xcode 11 or lower, then you're using UI Kit AppDelegate lifecycle.
 If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).

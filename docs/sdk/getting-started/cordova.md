@@ -107,7 +107,7 @@ cordova plugin add cordova-plugin-appcenter-analytics cordova-plugin-appcenter-c
 
 #### App Secret
 
-Before you can use the App Center SDK in your Apache Cordova project, you must first configure the project with your App Center project app secret.
+You must configure the project with your App Center project app secret before you can use the App Center SDK in your Apache Cordova project.
 
 Open the Apache Cordova project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
 
@@ -131,7 +131,7 @@ As a complete example, for a Apache Cordova project that supports both Android a
 
 #### Analytics Preferences
 
-If you're using App Center Analytics in your app, there's some additional configuration steps you must perform. Open the Apache Cordova project's **config.xml** file in an editor, and add one or more of the following `preferences` elements to the file:
+If you're using App Center Analytics in your app, there's some additional configuration steps to perform. Open the Apache Cordova project's **config.xml** file in an editor, and add one or more of the following `preferences` elements to the file:
 
 - `APPCENTER_ANALYTICS_ENABLE_IN_JS` - *(optional, default is false)* Controls whether Analytics is enabled automatically. When `false`, Analytics is enabled by default. When `true`, the application must call `AppCenter.Analytics.setEnabled(true)` (in its JavaScript code) to enable Analytics before sending data to App Center. This preference is useful when you want to ask users whether they want to share analytics information before enabling it within the application. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
 
