@@ -102,7 +102,7 @@ Allows you to release a CodePush update to the App Center server. This task beha
 
 4. **Update Contents Path** *(File path, Required)* - Path to the file or directory that contains the update you want to release. For Cordova, it should be the platform-specific **www** folder (e.g **platforms/ios/www**) and for React Native it should point to either your generated JS bundle file (e.g. **ios/main.jsbundle**) or a directory containing your JS bundle and assets, depending on if you're using the React Native assets system. View the [CLI docs](./cli.md#update-contents-parameter) for more details.
 
-5. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
+5. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app versions this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
 
 ##### Update Metadata
 
@@ -142,7 +142,7 @@ In addition to the basic properties, the follow options provide more advanced co
 
 2. **Description** *(String)* - Description of the changes made to the app in this release. When this task is used within an Azure DevOps release definition, this field can be set to the `$(Release.ReleaseDescription)` variable to inherit the description that was given to the release.
 
-3. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting `Auto-Detect` will automatically read the app's version from the **config.xml** file.
+3. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app versions this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting `Auto-Detect` will automatically read the app's version from the **config.xml** file.
 
 4. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Defaults to `false`.
 
@@ -174,7 +174,7 @@ By default, no release attributes are modified by the patch operation, so to upd
 
 2. **Description** *(String)* - Description of the changes made to the app in this release. Selecting **Inherit** will leave these attributes unmodified. When this task is used within an Azure DevOps release definition, this field can be set to the `$(Release.ReleaseDescription)` variable to inherit the description that was given to the release. Defaults to **Inherit**.
 
-3. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting **Inherit** will leave these attributes unmodified. Defaults to **Inherit**.
+3. **Target Binary Version** *(String, Required)* - **Semver** expression that specifies the binary app versions this release is targeting (e.g. 1.1.0, ~1.2.3). View the [CLI docs](./cli.md#target-binary-version-parameter) for more details. Selecting **Inherit** will leave these attributes unmodified. Defaults to **Inherit**.
 
 4. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Selecting **Inherit** will leave these attributes unmodified. Defaults to **Inherit**.
 
@@ -206,7 +206,7 @@ By default, when a release is promoted from one deployment to another, the newly
 
 2. **Description** *(String)* - Description of the changes made to the app in this release. Selecting **Inherit** will use the description from the release being promoted. When this task is used within an Azure DevOps release definition, this field can be set to the `$(Release.ReleaseDescription)` variable to inherit the description that was given to the release. Defaults to **Inherit**.
 
-3. **Target Binary Version** *(String)* - **Semver** expression that specifies the binary app version(s) this release is targeting (e.g. 1.1.0, ~1.2.3). Selecting **Inherit** will use the target binary version attribute from the release being promoted. Defaults to **Inherit**. View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
+3. **Target Binary Version** *(String)* - **Semver** expression that specifies the binary app versions this release is targeting (e.g. 1.1.0, ~1.2.3). Selecting **Inherit** will use the target binary version attribute from the release being promoted. Defaults to **Inherit**. View the [CLI docs](./cli.md#target-binary-version-parameter) for more details.
 
 4. **Mandatory** *(Boolean)* - Specifies whether this release should be considered mandatory. Selecting **Inherit** will use the mandatory attribute from the release being promoted. Defaults to **Inherit**.
 

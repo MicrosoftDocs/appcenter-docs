@@ -32,7 +32,7 @@ To ensure that your end users always have a functioning version of your app, the
 
 We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but because of the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin to support the exact version of React Native you're using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
-| React Native version(s) | Supporting CodePush version(s)                       |
+| React Native versions | Supporting CodePush versions                       |
 |-------------------------|------------------------------------------------------|
 | <0.14                   | **Unsupported**                                      |
 | v0.14                   | v1.3 *(introduced Android support)*                  |

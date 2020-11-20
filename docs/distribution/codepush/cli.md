@@ -336,7 +336,9 @@ If an end user is currently running `v1`, and they query the server for an updat
 
 If an end user is currently running `v2`, and they query the server for an update, it will respond with `v3`, but leave the release as optional. This is because they already received the mandatory update, and therefore, there isn't a need to modify the policy of `v3`. This behavior is why we say that the server will "dynamically convert" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It's only changed on-the-fly as necessary when responding to an update check from an end user.
 
-If you never release an update that's marked as mandatory, then the above behavior doesn't apply to you, since the server will never change an optional release to mandatory unless there were intermingled mandatory updates as illustrated above. Additionally, if a release is marked as mandatory, it will never be converted to optional, since that wouldn't make any sense. The server will only change an optional release to mandatory to respect the semantics described above.
+The described behavior only applies to you if you release an update that's marked as `mandatory`. The server will only change an `optional` release to `mandatory` if there are intermingled `mandatory` updates as illustrated above. 
+
+A release marked as `mandatory` will never be converted to `optional`.
 
 > [!TIP]
 > This parameter can be set using either `--mandatory` or `-m`*
@@ -424,7 +426,7 @@ It's the same parameter as the one described in the [above section](#app-name-pa
 
 #### Platform parameter
 
-This parameter specifies which platform the current update is targeting, and can be either `android`, `ios` or `windows` (case-insensitive). This value is only used to determine how to properly bundle the app's update contents and isn't sent to the server.
+This parameter specifies which platform the current update is targeting, and can be either `android`, `ios` or `windows` (case-insensitive). This value is only used for properly bundling the app's update contents and isn't sent to the server.
 
 #### Deployment name parameter
 
@@ -661,7 +663,7 @@ Additionally, as mentioned above, when you release an update without a rollout v
 
 ### Target binary version parameter
 
-It's the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to update the **semver** range that indicates which binary version(s) a release is compatible with. This can be useful if you made a mistake when originally releasing an update (for example, you specified `1.0.0` but meant `1.1.0`) or you want to increase or decrease the version range that a release supports (for example, you discovered that a release doesn't work with `1.1.2` after all). If this parameter is omitted, no change will be made to the value of the target release's version property.
+It's the same parameter as the one described in the [above section](#target-binary-version-parameter), and allows you to update the **semver** range that indicates which binary versions a release is compatible with. This can be useful if you made a mistake when originally releasing an update (for example, you specified `1.0.0` but meant `1.1.0`) or you want to increase or decrease the version range that a release supports (for example, you discovered that a release doesn't work with `1.1.2` after all). If this parameter is omitted, no change will be made to the value of the target release's version property.
 
 ```shell
 # Add a "max binary version" to an existing release
