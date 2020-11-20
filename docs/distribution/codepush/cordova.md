@@ -174,7 +174,7 @@ The CodePush API is exposed to your app via the global `codePush` object, which 
 * **[checkForUpdate](#codepushcheckforupdate)**: Asks the CodePush service whether the configured app deployment has an update available.
 * **[getCurrentPackage](#codepushgetcurrentpackage)**: Retrieves the metadata about the currently installed update (e.g. description, installation time, size).
 * **[getPendingPackage](#codepushgetpendingpackage)**: Retrieves the metadata for an update (if one exists) that was downloaded and installed, but hasn't been applied yet via a restart.
-* **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and rollback to the previous version when the app next restarts.
+* **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and roll back to the previous version when the app next restarts.
 * **[restartApplication](#codepushrestartapplication)**: Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user.
 * **[sync](#codepushsync)**: Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps.
 
@@ -278,7 +278,7 @@ codePush.getPendingPackage(function (update) {
 codePush.notifyApplicationReady(notifySucceeded?, notifyFailed?);
 ```
 
-Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side rollback isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
+Notifies the CodePush runtime that a freshly installed update should be considered successful, and therefore, an automatic client-side roll back isn't necessary. It's mandatory to call this function somewhere in the code of the updated bundle. Otherwise, when the app next restarts, the CodePush runtime will assume that the installed update has failed and roll back to the previous version. This behavior exists to help ensure that your end users aren't blocked by a broken update.
 
 If you're using the `sync` function, and doing your update check on app start, then you don't need to manually call `notifyApplicationReady` since `sync` will call it for you. This behavior exists because of the assumption that when `sync` is called in your app represents a good approximation of a successful startup.
 

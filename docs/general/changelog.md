@@ -542,7 +542,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
+- When you receive an email to install a build, you can now also sign in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
 
 ### **Mar 02, 2017**
 

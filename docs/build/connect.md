@@ -18,7 +18,7 @@ App Center supports connections to the following code repository services: [Bitb
 > Except self-hosted GitLab Instances, App Center doesn't support connections to self-hosted or on-prem versions of the above repository services.
 
 ## Connecting to a source repository
-To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign-in using the code repository service account credentials if you aren't already signed in. Authorizing App Center is required to complete the connection.
+To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign in using the code repository service account credentials if you aren't already signed in. Authorizing App Center is required to complete the connection.
 
 Available repositories will populate in App Center after a successful connection. Select a repository and a branch where your app lives and set up your first build.
 

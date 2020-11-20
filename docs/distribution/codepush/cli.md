@@ -17,26 +17,26 @@ ms.custom: distribute
 * Install the App Center CLI: `npm install -g appcenter-cli`
 
 ## Getting Started
-1. Create an [App Center account](https://appcenter.ms) or sign-in through the CLI using the `appcenter login` command.
+1. Create an [App Center account](https://appcenter.ms) or sign in through the CLI using the `appcenter login` command.
 2. [Register your app](#app-management) with CodePush, and optionally [share your app with other developers](#app-collaboration) on your team.
 3. CodePush-ify your app and point it at the deployment you wish to use ([Apache Cordova](~/distribution/codepush/cordova.md) and [React Native](~/distribution/codepush/rn-overview.md)).
 4. [Release and update for your app](#releasing-updates).
 
 ## Account Management
-Before you can begin releasing app updates, you must sign-in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
+Before you can begin releasing app updates, you must sign in with your existing CodePush account or create a new App Center account. You can do this by running the following command once you've installed the CLI:
 
 ```shell
 appcenter login
 ```
 
-This command will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. Once authenticated, it will create a CodePush account "linked" to your GitHub/MSA identity, and generate an access key you can copy/paste into the CLI to sign-in.
+This command will launch a browser, asking you to authenticate with either your GitHub or Microsoft account. Once authenticated, it will create a CodePush account "linked" to your GitHub/MSA identity, and generate an access key you can copy/paste into the CLI to sign in.
 
 > [!NOTE]
-> After registering, you're automatically logged-in with the CLI, so until you explicitly log out, you don't have to sign-in again from the same machine.
+> After registering, you're automatically logged in with the CLI, so until you explicitly log out, you don't have to sign in again from the same machine.
 
 ### Authentication
 
-Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must sign-in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
+Most commands within the App Center CLI require authentication, and therefore, before you can begin managing your account, you must sign in using the GitHub or Microsoft account you used when registering. You can do this by executing the following command:
 
 ```shell
 appcenter login
@@ -50,13 +50,13 @@ If at any time you want to determine if you're already logged in, you can run th
 appcenter profile list
 ```
 
-When you sign-in from the CLI, your access key persists to disk for the duration of your session so that you don't have to sign-in every time you attempt to access your account. To end your session and delete this access key, execute the following command:
+When you sign in from the CLI, your access key persists to disk for the duration of your session so that you don't have to sign in every time you attempt to access your account. To end your session and delete this access key, execute the following command:
 
 ```shell
 appcenter logout
 ```
 
-If you forget to sign-out from a machine you don't want to leave a running session on (for example, your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
+If you forget to sign out from a machine you don't want to leave a running session on (for example, your friend's laptop), you can use the following commands to list and remove any current log-in sessions.
 
 ```shell
 appcenter tokens list
@@ -77,7 +77,7 @@ The key will only display once, so remember to save it somewhere if needed! Afte
 appcenter login --token <accessToken>
 ```
 
-When signing in using this method, the access token won't automatically invalidate on sign-out, and can be used in future sessions until it's explicitly removed from the App Center server. However, you should sign-out once your session is complete, to remove your credentials from disk.
+When signing in using this method, the access token won't automatically invalidate on sign out, and can be used in future sessions until it's explicitly removed from the App Center server. However, you should signout once your session is complete, to remove your credentials from disk.
 
 ## App Management
 
@@ -147,7 +147,7 @@ Once added, all collaborators will immediately have the following permissions in
 1. View the app, its collaborators, [deployments](#deployment-management), and [release history](#viewing-release-history)
 2. [Release](#releasing-updates) updates to any of the app's deployments
 3. [Promote](#promoting-updates) an update between any of the app's deployments
-4. [Rollback](#rolling-back-updates) any of the app's deployments
+4. [Roll back](#rolling-back-updates) any of the app's deployments
 5. [Patch](#patching-update-metadata) any releases within any of the app's deployments
 
 Collaborators can't do any of the following actions:
