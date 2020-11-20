@@ -16,7 +16,7 @@ author: king-of-spades (maintainer Github user name)
 ms.author: kegr (maintainer Microsoft Alias)
 ms.date: 02/26/2018 (Expected publish date, in **US format: mm/dd/yyyy**)
 ms.topic: article (one only of the following: article, get-started-article, hero-article, hub-page, landing-page, non-content, reference, search)
-ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - just use a GUID, you can generate one at https://www.guidgenerator.com/)
+ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - Use a GUID, you can generate one at https://www.guidgenerator.com/)
 ms.custom: Analytics data, a field that gets imported into SkyEye so you can use it in custom reports
 ---
 ```

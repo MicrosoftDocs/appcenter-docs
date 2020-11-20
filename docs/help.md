@@ -52,7 +52,7 @@ We're constantly adding features and more capabilities to App Center. Do you not
 The App Center docs are an open-source project [hosted on GitHub](https://github.com/MicrosoftDocs/appcenter-docs).
 
 > [!Note]
-> When you choose the option to provide content feedback described in the previous section, you're really just creating a Github issue in the App Center docs repository.
+> When you choose the option to provide content feedback described in the previous section, you're really creating a Github issue in the App Center docs repository.
 
 If you have ideas on how to make the docs better, you can make the changes yourself:
 

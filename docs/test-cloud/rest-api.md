@@ -48,7 +48,7 @@ https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0c
 
    - **checksum** - hash values from step 2 
 
-   - **relative_path** - you can just define File Name with Extension, no need to specify the complete path.
+   - **relative_path** - you can define File Name with Extension, no need to specify the complete path.
    
 The JSON Body looks like:
 

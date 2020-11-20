@@ -21,7 +21,7 @@ The first paragraph above follows our recommendation conversational style. The s
 
 ### Write in second person
 #### Appropriate Style
-You should write your articles as though you're speaking directly to the reader. You should use second person often (as I just have in these two sentences). 2nd person doesn't always mean using the word 'you'. Write directly to the reader. Write imperative sentences. Tell your reader what you want them to learn.
+You should write your articles as though you're speaking directly to the reader. You should use second person often (as I have in these two sentences). 2nd person doesn't always mean using the word 'you'. Write directly to the reader. Write imperative sentences. Tell your reader what you want them to learn.
 
 #### Inappropriate Style
 An author could also choose to write in third person. In that model, an author must find some pronoun or noun to use when referring to the reader. A reader might often find this third person style less engaging and less enjoyable to read.

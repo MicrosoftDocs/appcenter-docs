@@ -393,7 +393,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
   Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services.
 
 - **HockeyApp side-by-side enabled**:
-  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, just log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
+  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
 
 ### **November 15, 2017**
 
@@ -464,7 +464,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you want to use which isn't there yet, just let us know.
+  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you want to use which isn't there yet, let us know.
 
 ### **June 8, 2017**
 

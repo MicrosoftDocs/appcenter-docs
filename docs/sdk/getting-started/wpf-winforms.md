@@ -131,7 +131,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
-The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
 
 The example above shows how to use the `Start()` method and includes App Center Analytics.
 

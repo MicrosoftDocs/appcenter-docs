@@ -28,7 +28,7 @@ App API tokens have either Manager or Viewer rights, but within only one app.
 Each App Center account may create up to 5000 API tokens.
 
 > [!TIP]
-> We recommend creating and using App API tokens to limit the authorization scope to only one app at a time (and therefore limit the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a User API token.
+> We recommend creating and using App API tokens to limit the authorization scope to only one app at a time (and therefore limit the risk if a token is exposed). If you need to automate something beyond one app, like working with organizations or shared distribution groups, you should create a User API token.
 
 > [!WARNING]
 > Don't embed API tokens into source code. API tokens should be treated as secrets, and stored securely.

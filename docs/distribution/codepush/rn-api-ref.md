@@ -279,7 +279,7 @@ class OnboardingProcess extends Component {
 ### codePush.getCurrentPackage
 
 > [!NOTE]
-> This method is considered deprecated as of `v1.10.3-beta` of the CodePush module. If you're running this version (or newer), we'd recommend using the [`codePush.getUpdateMetadata`](#codepushgetupdatemetadata) instead, since it has more predictable behavior.
+> This method is considered deprecated as of `v1.10.3-beta` of the CodePush module. If you're running this version (or newer), we recommend using the [`codePush.getUpdateMetadata`](#codepushgetupdatemetadata) instead, since it has more predictable behavior.
 
 ```javascript
 codePush.getCurrentPackage(): Promise<LocalPackage>;
@@ -501,7 +501,7 @@ This method returns a `Promise`, which is resolved to a `SyncStatus` code that i
 
 - **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation running that prevents the current call from being executed.
 
-The `sync` method can be called anywhere you want to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
 ### Package objects
 

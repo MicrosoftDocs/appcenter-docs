@@ -112,7 +112,7 @@ codePush.sync();
 
 If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS), which ensures the least invasive experience for your end users. If an available update is mandatory, then it will be installed immediately, ensuring that the end user gets it as soon as possible.
 
-If you want your app to discover updates more quickly, you can also choose to call `sync` every time the app resumes from the background, by adding the following code (or something equivalent) as part of your app's startup behavior. You can call `sync` as frequently as you want, so when and where you call it just depends on your personal preference.
+If you want your app to discover updates more quickly, you can also choose to call `sync` every time the app resumes from the background, by adding the following code (or something equivalent) as part of your app's startup behavior. You can call `sync` as frequently as you want, so when and where you call it depends on your personal preference.
 
 ```javascript
 document.addEventListener("resume", function () {
@@ -151,7 +151,7 @@ The `release-cordova` command enables such a simple workflow because it understa
 # Release a mandatory update with a changelog
 appcenter codepush release-cordova -a <ownerName>/MyApp-ios -m --description "Modified the header color"
 
-# Release a dev Android build to just 1/4 of your end users
+# Release a dev Android build to 1/4 of your end users
 appcenter codepush release-cordova -a <ownerName>/MyApp-android --rollout 25
 
 # Release an update that targets users running any 1.1.* binary, as opposed to
@@ -398,7 +398,7 @@ function downloadProgress(downloadProgress) {
 }
 ```
 
-The `sync` method can be called anywhere you want to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Just like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it will perform the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
 
 ### Package objects
 The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide access to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:

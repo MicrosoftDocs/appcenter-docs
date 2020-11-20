@@ -142,7 +142,7 @@ Crashes.setListener({
 
         // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
-        // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+        // Return true if you built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
         return true;
     },
 

@@ -87,7 +87,7 @@ Before deploying updates, you must create an app with App Center using the follo
 appcenter apps create -d <appDisplayName> -o <operatingSystem>  -p <platform> 
 ```
 
-If your app targets both Android and iOS, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people just suffix the app name with `-Android` and `-iOS`. for example:
+If your app targets both Android and iOS, we highly recommend creating separate apps with CodePush. One for each platform. This way, you can manage and release updates to them separately, which in the long run, tends to make things simpler. Most people suffix the app name with `-Android` and `-iOS`. for example:
 
 ```shell
 appcenter apps create -d MyApp-Android -o Android -p React-Native
@@ -178,7 +178,7 @@ If having a staging and production version of your app is enough to meet your ne
 appcenter codepush deployment add -a <ownerName>/<appName> <deploymentName>
 ```
 
-Just like with apps, you can remove and rename deployments as well, using the following commands respectively:
+Like with apps, you can remove and rename deployments as well, using the following commands respectively:
 
 ```shell
 appcenter codepush deployment remove -a <ownerName>/<appName> <deploymentName>
@@ -348,7 +348,7 @@ This parameter specifies that if the update is identical to the latest release o
 #### Rollout parameter
 
 > [!IMPORTANT]
-> In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Therefore, until you've adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we'd advise not setting a rollout value on the app's releases, since no one would end up receiving it.
+> In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Therefore, until you've adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we advise not setting a rollout value on the app's releases, since no one would end up receiving it.
 
 This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it's set to `100%`, and therefore, you only must set it if you want to limit how many users will receive it.
 
@@ -627,7 +627,7 @@ appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-rel
 > [!NOTE]
 > This command doesn't allow modifying the actual update contents of a release (for example, `www` folder of a Cordova app). If you want to respond to a release that has been identified as being broken, you should use the [rollback](#rolling-back-updates) command to immediately roll it back, and then if necessary, release a new update with the appropriate fix when it's available.
 
-Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update just a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
+Aside from the `<ownerName>/<appName>` and `deploymentName`, all parameters are optional, and therefore, you can use this command to update a single attribute or all of them at once. Calling the `patch` command without specifying any attribute flag will result in a no-op.
 
 ```shell
 # Mark the latest production release as mandatory
