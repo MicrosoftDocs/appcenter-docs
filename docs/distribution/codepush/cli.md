@@ -395,7 +395,7 @@ The `release-react` command is a React Native-specific version of the "vanilla" 
 
 2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that's specified in the project's **Info.plist** (for iOS) and **build.gradle** (for Android) files.
 
-To illustrate the difference that the `release-react` command can make, the following is an example of how you might generate and release an update for a React Native app using the "vanilla" `release` command:
+To illustrate the difference that the `release-react` command can make, the following example shows how you might generate and release an update for a React Native app using the "vanilla" `release` command:
 
 ```shell
 mkdir ./CodePush
@@ -551,7 +551,7 @@ The `release-cordova` command is a Cordova-specific version of the "vanilla" [`r
 
 2. Inferring the [`targetBinaryVersion`](#target-binary-version-parameter) of this release by using the version name that's specified in the project's **config.xml** file.
 
-To illustrate the difference that the `release-cordova` command can make, the following is an example of how you might generate and release an update for a Cordova app using the "vanilla" `release` command:
+To illustrate the difference that the `release-cordova` command can make, the following example shows how you might generate and release an update for a Cordova app using the "vanilla" `release` command:
 
 ```shell
 cordova prepare ios

@@ -174,7 +174,7 @@ Leveraging the workflow discussed below can greatly reduce the effort needed to 
 
 ### Prerequisites
 
-The following is required to complete this module:
+Requirements to complete this module:
 
 - Azure DevOps Account ([Sign up for a free Azure DevOps account(https://www.visualstudio.com/products/free-developer-offers-vs))
 - App Center Account (Follow these [steps](~/distribution/codepush/index.md) to get set up)

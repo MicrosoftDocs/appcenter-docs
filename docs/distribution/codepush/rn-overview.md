@@ -100,7 +100,7 @@ This isn't necessarily the case for `updateDialog`, since it won't force the use
 
 ## Example Apps / Starters
 
-The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following is a list of OSS React Native apps that are also using CodePush, and can therefore be used to see how others are using the service:
+The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following list is of OSS React Native apps that are also using CodePush, and can therefore be used to see how others are using the service:
 
 - [F8 App](https://github.com/fbsamples/f8app) - The official conference app for [F8 2016](https://www.fbf8.com/).
 - [Feline for Product Hunt](https://github.com/arjunkomath/Feline-for-Product-Hunt) - An Android client for Product Hunt.
