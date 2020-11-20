@@ -252,7 +252,7 @@ A few seconds later, the source will be added to your Azure DevOps repository:
 
 To build the project you'll need to install an extension from the Azure DevOps Marketplace.
 
-For React Native projects do the following:
+For React Native projects do the following steps:
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
