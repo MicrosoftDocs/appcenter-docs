@@ -39,7 +39,7 @@ The App Center SDK supports setting a **user ID** that's used to augment crash r
 AppCenter.SetUserId("your-user-id");
 ```
 
-[!INCLUDE [user id](includes/user-id.md)]
+[!INCLUDE [user id](user-id.md)]
 
 ## Disable all services at runtime
 
