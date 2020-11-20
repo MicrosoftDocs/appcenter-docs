@@ -62,7 +62,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
 ## <a name="changeState"/></a> Changing the state of a crash group in App Center
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app that has a bug tracker integration.
 
-2. In your app, select **Diagnostics**, **Crashes**, and click on the crash group that has a connected bug associated with it.
+2. In your app, select **Diagnostics**, **Crashes**, and click on the crash group that has a connected bug for it.
 
 3. In the top right corner, click on the **green drop down box** that has either of the states:
    - **Open**

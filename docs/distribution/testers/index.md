@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Getting started for testers
 
-Navigating through any new tool can be overwhelming as a tester. There are many different elements and hurdles associated with getting builds on your devices, which can ultimately make testing apps a frustrating experience. To help you, we  created a simple workflow in App Center for testers. In addition, we've created this guide to aid in any parts of testing in App Center that may seem unclear. We know that testing is an important part of the app development process, so we aim to ensure a smooth and successful experience.
+Navigating through any new tool can be overwhelming as a tester. There are many different elements and hurdles for getting builds on your devices, which can ultimately make testing apps a frustrating experience. To help you, we  created a simple workflow in App Center for testers. In addition, we've created this guide to aid in any parts of testing in App Center that may seem unclear. We know that testing is an important part of the app development process, so we aim to ensure a smooth and successful experience.
 
 ## What's App Center?
 
@@ -39,7 +39,7 @@ To get started with installing the app you've been invited to test, select one o
 
 ## Stop Testing
 
-You can stop testing an app and remove yourself from all distribution groups for that app. When you do this, you'll no longer receive notification associated with that app, and will no longer have access to the app in the App Center developer and install portals. To remove yourself from an app, the following conditions must be true:
+You can stop testing an app and remove yourself from all distribution groups for that app. When you do this, you'll no longer receive notifications for that app, and will no longer have access to the app in the App Center developer and install portals. To remove yourself from an app, the following conditions must be true:
 
 - You're not an app collaborator for the app
 - You're not part of a shared group for the app

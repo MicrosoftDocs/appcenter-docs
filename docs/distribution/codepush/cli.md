@@ -44,7 +44,7 @@ appcenter login
 
 This command will launch a browser window asking you to authenticate with either your GitHub or Microsoft account. It will generate an access key to copy-paste into the CLI (it will prompt you for it). You're now successfully authenticated and can safely close your browser window.
 
-Anytime you want to check if you're already logged in, you can run the following command to display the e-mail address associated with your current authentication session, your username, and your display name:
+Anytime you want to check if you're already logged in, you can run the following command to display the e-mail address for your current authentication session, your username, and your display name:
 
 ```shell
 appcenter profile list
@@ -612,7 +612,7 @@ This parameter specifies whether you want to run `cordova build` instead of `cor
 
 ## Patching Update Metadata
 
-After releasing an update, there may be scenarios where you want to modify one or more of the metadata attributes associated with it (for example, you forgot to mark a critical bug fix as mandatory, you want to increase the rollout percentage of an update). You can easily do this by running the following command:
+After releasing an update, there may be scenarios where you want to modify one or more of the metadata attributes for it (for example, you forgot to mark a critical bug fix as mandatory, you want to increase the rollout percentage of an update). You can easily do this by running the following command:
 
 ```NA
 appcenter codepush patch -a <ownerName>/<appName> <deploymentName> <existing-release-label>
@@ -647,7 +647,7 @@ It's the same parameter as the one described in the [above section](#mandatory-p
 
 ### Description parameter
 
-It's the same parameter as the one described in the [above section](#description-parameter), and allows you to update the description associated with the release (for example, you made a typo when releasing, or you forgot to add a description at all). If this parameter is omitted, no change will be made to the value of the target release's description property.
+It's the same parameter as the one described in the [above section](#description-parameter), and allows you to update the description for the release (for example, you made a typo when releasing, or you forgot to add a description at all). If this parameter is omitted, no change will be made to the value of the target release's description property.
 
 ### Disabled parameter
 
@@ -687,7 +687,7 @@ appcenter codepush promote -a <ownerName>/<appName> -s <sourceDeploymentName> -d
 
 The `promote` command creates a new release for the destination deployment, which includes the **exact code and metadata** (description, mandatory, and target binary version) from the latest release of the source deployment. While you could use the `release` command to "manually" migrate an update from one environment to another, the `promote` command has the following benefits:
 
-1. It's quicker, since you don't have to reassemble the release assets you want to publish or remember the description/binary version that's associated with the source deployment's release.
+1. It's quicker, since you don't have to reassemble the release assets you want to publish or remember the description/binary version that's for the source deployment's release.
 
 2. It's less error-prone, since the promote operation ensures that the exact thing that you already tested in the source deployment (for example, `Staging`) will become active in the destination deployment (for example, `Production`).
 
@@ -780,7 +780,7 @@ By default, the history doesn't display the author of each release, but if you'r
 
 ## Clearing Release History
 
-You can clear the release history associated with a deployment using the following command:
+You can clear the release history for a deployment using the following command:
 
 ```shell
 appcenter codepush deployment clear -a <ownerName>/<appName> <deploymentName>

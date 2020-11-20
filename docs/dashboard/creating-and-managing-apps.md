@@ -91,7 +91,7 @@ To transfer an app from your personal account to an organization or from one org
 You can delete any App Center app that you no longer need.
 
 > [!WARNING]
-> Be careful: if you delete your app, you'll lose all data associated with the app permanently.
+> Be careful: if you delete your app, you'll lose all data for the app permanently.
 
 Follow these steps to delete any of your apps:
 

@@ -455,7 +455,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                 withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
 
         // User tapped on notification
@@ -470,7 +470,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if (response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
 
         // User tapped on notification.

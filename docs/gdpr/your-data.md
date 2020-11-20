@@ -32,7 +32,7 @@ X-API-Token: <your api key here>
 Host: api.appcenter.ms
 ```
 
-When you POST to the `delete` method, it returns a receipt token you'll pass as a query string variable along with the email associated with your defunct account to check the progress of the request. Once the request has completed, subsequent GET calls to this endpoint will anonymously confirm execution. 
+When you POST to the `delete` method, it returns a receipt token you'll pass as a query string variable along with the email for your defunct account to check the progress of the request. Once the request has completed, subsequent GET calls to this endpoint will anonymously confirm execution. 
 
 ```TEXT
 https://appcenter.ms/api/v0.1/user/dsr/delete

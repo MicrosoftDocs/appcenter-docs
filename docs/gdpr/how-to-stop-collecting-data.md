@@ -23,7 +23,7 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/
 ```
 
 > [!NOTE]
-> This stops ingestion of all data coming from the App Center SDK, but won't delete existing data associated with the app.
+> This stops ingestion of all data coming from the App Center SDK, but won't delete existing data for the app.
 
 ## Stop collecting all SDK data for a specific device from the server
 
@@ -38,4 +38,4 @@ PUT https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{i
 The App Center SDK can be configured to stop collecting data per service. Instructions for doing so can be found under the ["Other APIs" section for the SDK.](~/sdk/index.md)
 
 > [!NOTE]
-> This won't delete existing data associated with the app.
+> This won't delete existing data for the app.

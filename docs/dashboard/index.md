@@ -26,7 +26,7 @@ To get started, [add an app to your App Center account](~/dashboard/creating-and
 
 ## Manage your account preferences and settings
 ### Account Profile Photos
-App Center uses [Gravatar](https://gravatar.com/) to manage user profile photos. To get started, [create a Gravatar account](https://gravatar.com/) using the same email associated with your App Center account. Once your account has been created, follow the instructions on Gravatar's website to pick your new profile image. When you return to App Center, refresh the browser to see your new profile photo. If your new profile photo doesn't immediately appear, hard refresh your browser to replace the previously cached image.
+App Center uses [Gravatar](https://gravatar.com/) to manage user profile photos. To get started, [create a Gravatar account](https://gravatar.com/) using the same email for your App Center account. Once your account has been created, follow the instructions on Gravatar's website to pick your new profile image. When you return to App Center, refresh the browser to see your new profile photo. If your new profile photo doesn't immediately appear, hard refresh your browser to replace the previously cached image.
 
 ### Email Notifications
 [Manage your email preferences](~/dashboard/email-notifications/index.md) to sign up for automatic notifications for builds, distributions, and crashes.

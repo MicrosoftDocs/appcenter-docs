@@ -446,7 +446,7 @@ codePush.sync({ mandatoryInstallMode: codePush.InstallMode.ON_NEXT_RESUME });
 codePush.sync({ updateDialog: { title: "An update is available!" } });
 
 // Displaying an update prompt which includes the
-// description associated with the CodePush release
+// description for the CodePush release
 codePush.sync({
    updateDialog: {
     appendReleaseDescription: true,
