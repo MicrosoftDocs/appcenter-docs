@@ -34,10 +34,10 @@ Crash logs on iOS require Symbolication. To enable symbolication, refer to the [
 > The Crashes SDK for Unity [doesn't support UWP](~/sdk/index.md#unity). The instructions in this page cover only Android and iOS.
 
 > [!NOTE]
-> The SDK will not forward any crash logs if you have attached the debugger. Make sure the debugger is not attached when you crash the app.
+> The SDK won't forward any crash logs if you've attached the debugger. Make sure the debugger isn't attached when you crash the app.
 
 > [!NOTE]
-> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK will not collect crash logs.
+> If you have `Enable CrashReport API` enabled in **PlayerSettings**, the SDK won't collect crash logs.
 
 ## Generate a test crash
 
@@ -63,10 +63,10 @@ bool hadLowMemoryWarning = Crashes.HasReceivedMemoryWarningInLastSessionAsync().
 ```
 
 > [!NOTE]
-> This method will not work in `Awake()`.
+> This method won't work in `Awake()`.
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory can't send events.
 
 ### Did the app crash in the previous session?
 
@@ -97,7 +97,7 @@ App Center Crashes provides callbacks for developers to take additional actions 
 
 ### Should the crash be processed?
 
-Set the following callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you want to ignore and not send to App Center.
+Set the following callback if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you want to ignore and not send to App Center.
 
 ```csharp
 Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
@@ -111,17 +111,17 @@ Crashes.ShouldProcessErrorReport = (ErrorReport report) =>
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If your code uses this callback, you are responsible for obtaining the user's confirmation. One option is through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
+If your code uses this callback, you're responsible for obtaining the user's confirmation. One option is through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell the App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
 ```csharp
 Crashes.ShouldAwaitUserConfirmation = () =>
 {
-    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+    // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
     // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
@@ -141,7 +141,7 @@ As an example you can refer to [our custom dialog example](https://aka.ms/custom
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is displaying a UI that informs the user the app is submitting a crash report. Another Scenario is when you want to adjust the behavior of the app to ensure the crash logs can be submitted shortly after relaunch. App Center Crashes provides three different callbacks you can make to be notified of what has taken place:
+At times, you want to know the status of your app crash. A common use case is displaying a UI that informs the user the app is submitting a crash report. Another Scenario is when you want to adjust the behavior of the app to ensure the crash logs can be submitted shortly after relaunch. App Center Crashes provides three different callbacks you can make to be notified of what's taken place:
 
 #### The following callback will be invoked before the SDK sends a crash log
 
@@ -152,7 +152,7 @@ Crashes.SendingErrorReport += (errorReport) =>
 };
 ```
 
-In case we have network issues or we have an outage on the endpoint and you restart the app, `SendingErrorReport` is triggered again after process restart.
+In case we have network issues or an outage on the endpoint, and you restart the app, `SendingErrorReport` is triggered again after process restart.
 
 #### The following callback will be invoked after the SDK sent a crash log successfully
 
@@ -174,11 +174,11 @@ Crashes.FailedToSendErrorReport += (errorReport, exception) =>
 
 Receiving `FailedToSendErrorReport` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
+This callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down).
 
 ### Add attachments to a crash or an unhandled exception report
 
-You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to be able to send attachments. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
+You can also optionally add binary and text attachments to a crash or an [unhandled exception](#unhandled-exceptions-in-unity) report. The SDK will send them along with the report so that you can see them in App Center portal. The following callback will be invoked right before sending the stored report. For crashes it happens on the next application launch. For unhandled exceptions, you must [opt-in](#add-attachments-to-an-unhandled-exception-report) to send attachments. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a report:
 
 ```csharp
 Crashes.GetErrorAttachments = (ErrorReport report) =>
@@ -198,11 +198,11 @@ Crashes are differentiated from unhandled exceptions in reports with the `IsCras
 > The size limit is for attachments currently 7 MB. Attempting to send a larger attachment will trigger an error.
 
 > [!NOTE]
-> `GetErrorAttachments` is invoked on the main thread and does not split work over frames. To avoid blocking the game loop, do not perform any long running tasks in this callback.
+> `GetErrorAttachments` is invoked on the main thread and doesn't split work over frames. To avoid blocking the game loop, don't perform any long running tasks in this callback.
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not perform any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't perform any crash reporting for the app.
 
 ```csharp
 Crashes.SetEnabledAsync(false);
@@ -285,7 +285,7 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore is not considered a crash.
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash.
 
 ### Add attachments to an unhandled exception report
 
@@ -305,10 +305,10 @@ To receive proper crash reports in App Center, first make sure you have the App 
 
 #### Building the breakpad library
 
-Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). In order to use it in Unity, just include the binary with your app.
+Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). To use it in Unity, just include the binary with your app.
 
 > [!NOTE]
-> The App Center SDK does not bundle Google Breakpad by default.
+> The App Center SDK doesn't bundle Google Breakpad by default.
 
 #### Attaching the exception handler
 
@@ -365,10 +365,10 @@ static bool dumpCallback(const google_breakpad::MinidumpDescriptor &descriptor,
 Once these methods are properly set up, the app sends the minidump to App Center automatically upon restart. To troubleshoot, you can use verbose logs to check if minidumps are sent after the app is restarted.
 
 > [!NOTE]
-> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it is a minidump file so we can handle it properly.
+> App Center uses the reserved name `minidump.dmp` for minidump attachments. Make sure to give your attachment a different name unless it's a minidump file so we can handle it properly.
 
 > [!WARNING]
-> There is a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
+> There's a known bug in breakpad which makes it impossible to capture crashes on x86 emulators.
 
 ### Symbolication
 

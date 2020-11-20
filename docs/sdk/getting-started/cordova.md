@@ -61,7 +61,7 @@ In order for the App Center SDK to connect with your application project in App 
 
 If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You can also the app secret on the application project's **Settings** page. Access the menu in the page's upper right corner, then select **Copy app secret** to copy the app secret to the clipboard.
 
-If you do not have an application created in the App Center Dashboard, complete the following steps.
+If you don't have an application created in the App Center Dashboard, complete the following steps.
 
 1. Register for an App Center account, or Login to an existing App Center account at [https://appcenter.ms](https://appcenter.ms).
 2. In the App Center Dashboard, click the **Add new** drop-down in the upper-right corner of the page. Select **Add new app** from the menu.
@@ -127,7 +127,7 @@ As a complete example, for a Apache Cordova project that supports both Android a
 </platform>
 ```
 > [!Note]
-> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. Notice that the app secrets are different, this is because you'll have unique secrets for your Android and iOS application projects in App Center.
+> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. The app secrets are different because you'll have unique secrets for your Android and iOS application projects in App Center.
 
 #### Analytics Preferences
 
@@ -185,4 +185,4 @@ If you're using App Center Analytics in your app, there's some additional config
 
   ## 4. Where to go next?
 
-Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There is no additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.
+Great, you're all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There isn't any additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.

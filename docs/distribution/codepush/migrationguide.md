@@ -18,7 +18,7 @@ Visual Studio App Center is the new home of CodePush. App Center is a developmen
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
-Regardless, change is hard. This guide was made to make moving from CodePush to App Center a seamless experience. Besides the use of a new CLI, we've tried to limit the changes you have to make immediately. You won't have to make any changes in your code until the release of the new SDK next year.
+This guide was made to make moving from CodePush to App Center a seamless experience. Besides the use of a new CLI, we've tried to limit the changes you must make immediately. You won't have to make any changes in your code until the release of the new SDK next year.
 
 If you're a current CodePush user, your account has already been migrated for you. All of your CodePush data can be accessed by logging into [App Center](https://appcenter.ms). If not, that's okay too! You can get started by [creating an account](https://appcenter.ms).
 
@@ -37,7 +37,7 @@ Once you log in, the first thing you'll see is a list of all your applications. 
 
 ![All Your Apps](./images/mg-portal-1.png)
 
-The back-end migration of CodePush was completed on June 2, 2017. If any of your apps were made before this date, you'll have to specify the OS and Platform of the app.
+The back-end migration of CodePush was completed on June 2, 2017. If any of your apps were made before this date, you must specify the OS and Platform of the app.
 
 ![Import](./images/mg-portal-2.png)
 
@@ -79,7 +79,7 @@ Clicking the "Edit" button will provide you with a panel for patching your relea
 
 ![Release Patch](./images/mg-portal-4.png)
 
-For now, developers using CodePush must distribute releases using the release commands in the App Center CLI. You'll have to create default deployments using App Center, if you create your React Native app using the dashboard.
+For now, developers using CodePush must distribute releases using the release commands in the App Center CLI. You must create default deployments using App Center, if you create your React Native app using the dashboard.
 
 ![CreateDeployments](./images/mg-portal-5.png)
 
@@ -161,7 +161,7 @@ appcenter codepush deployment list MyApp
 No.
 
 #### What changes for CodePush?
-For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team would like to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
+For now, the only significant change is the use of the App Center CLI and the structure of the commands. No changes in your code will be necessary until the release of the new SDK, which currently has no ETA. The CodePush team wants to extend our gratitude for your help in making CodePush what it is today, it wouldn't be possible without such an amazing community.
 
 #### Is using CodePush functionality still free?
 Yes.
@@ -176,7 +176,7 @@ Yes.
 Yes, we're committed to maintain the CLI through September 2018. You're free to continue using the CLI, but all features besides release and viewing metrics will be disabled in Late March 2018. Finally, the CodePush CLI will be retired in Mid-October 2018.
 
 #### Will I need to create a new account for App Center if I already have one?
-If you used the same email for both accounts, you can log into App Center using your original account. If not, one will be created for your CodePush app. If you'd like to manage your apps from the same account you'll need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
+If you used the same email for both accounts, you can log into App Center using your original account. If not, one will be created for your CodePush app. If you want to manage your apps from the same account you'll need to create an organization in App Center, add your new account to it, and transfer your application to the organization.  
 
 ## Helpful Resources
 

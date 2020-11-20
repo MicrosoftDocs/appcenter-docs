@@ -20,7 +20,7 @@ In the context of Push Notifications, your customer's data can reside in one of 
 
 ## Installations/Device information
 
-If you are collecting custom properties from your customers and using them for Push Notifications, each of these values are associated with a unique install ID.
+If you're collecting custom properties from your customers and using them for Push Notifications, each of these values are associated with a unique install ID.
 
 To handle a delete request for a Data Subject, you must first to export all data and look for the install ID associated with the requestor. Once you have the install ID, you can send a request to delete data associated with it.
 
@@ -34,7 +34,7 @@ https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/devices/{install_id}
 
 ## Audience definition and description
 
-If you are sending push notifications to an audience, this method will help you learn how to delete an audience. Here are the steps to get the audience information:
+If you're sending push notifications to an audience, this method will help you learn how to delete an audience. Here are the steps to get the audience information:
 
 **1. Retrieve all Audiences under your App**
 

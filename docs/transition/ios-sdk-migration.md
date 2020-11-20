@@ -23,9 +23,9 @@ dev_langs:
 
 #### Manual
 
-If you have added the SDK manually, follow these steps:
+If you've added the SDK manually, follow these steps:
 
-1. Remove `HockeySDK.embeddedframework` reference from the XCode project. Do not click _Move to Trash_ button, just click the _Remove reference_ button.
+1. Remove `HockeySDK.embeddedframework` reference from the XCode project. Don't click _Move to Trash_ button, just click the _Remove reference_ button.
 
 1. Open your project settings and under **Build Settings** tab in the **Header Search Paths** / **Framework Search Paths** sections, remove the locations for header files related to HockeySDK.
 
@@ -35,7 +35,7 @@ If you have added the SDK manually, follow these steps:
 
 #### Podfile
 
-If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line from the Podfile, then run `pod install`.
+If you've added the SDK using **CocoaPods**, remove the `pod "HockeySDK"` line from the Podfile, then run `pod install`.
 
 #### Carthage
 
@@ -125,7 +125,7 @@ After (App Center):
    ```
 
    > [!NOTE]
-   > App Center SDK does not have equivalents for `[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:liveIdentifier:delegate]`.
+   > App Center SDK doesn't have equivalents for `[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:liveIdentifier:delegate]`.
 
 1. [Optional] Modify the project's **Info.plist**
 
@@ -143,7 +143,7 @@ After (App Center):
 
 ### Core
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -166,7 +166,7 @@ Identify users | `BITHockeyManager.shared().userID` | [AppCenter.userId = "your-
 The HockeySDK enables metrics collecting per default.
 App Center SDK registers Analytics service only if you pass `Analytics` class to the `start` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -189,7 +189,7 @@ Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled
 The HockeySDK enables crash reporting per default. Crashes will be immediately sent to the server the next time the app is launched.
 App Center SDK registers Crashes service only if you pass `Crashes` class to the `start` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -218,12 +218,12 @@ Disable service at runtime | [BITHockeyManager.shared().isCrashManagerDisabled =
 ### Distribute
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature will ONLY work with builds that are distributed using the App Center Distribute service. Distribute won't work when the debugger is attached.
-If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a one-time step that will not occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/ios.md#how-do-in-app-updates-work) for more details.
+If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a one-time step that won't occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/ios.md#how-do-in-app-updates-work) for more details.
 
-The HockeySDK does not enable in-app updates by default.
+The HockeySDK doesn't enable in-app updates by default.
 App Center SDK registers in-app updates service only if you pass `Distribute` class to the `start` method. This module is enabled by default, unlike in the HockeySDK.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---

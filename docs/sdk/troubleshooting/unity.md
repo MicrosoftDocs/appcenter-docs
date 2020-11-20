@@ -29,7 +29,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 3. Check the logs say "App Center SDK configured successfully" (in **Verbose** log level), then check if you see HTTPS request logs.
 4. Make sure your device is online.
 5. At times, logs might take a few minutes to surface in the portal. Wait for some time if that’s the case.
-6. To check if App Center backend received your data, go to the **Log flow** section in Analytics service. Your events should appear once it has been sent.
+6. To check if App Center backend received your data, go to the **Log flow** section in Analytics service. Your events should appear once it's been sent.
 
 ## Crashes don't show up in the portal
 
@@ -40,7 +40,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 5. Make sure your device is online.
 6. At times, logs might take a few minutes to surface in the portal. Wait for some time if that’s the case.
 7. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it has been sent.
+8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it's been sent.
 9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
 
 ## Protect the App Center secret value

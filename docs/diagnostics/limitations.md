@@ -15,8 +15,8 @@ ms.custom: analytics
 
 ## Crashes
 
-- Android React Native source maps are not supported.
-- App Center only accepts up to 60 crashes per minute per unique app. We will not ingest or process any crashes that exceed this limit. 
+- Android React Native source maps aren't supported.
+- App Center only accepts up to 60 crashes per minute per unique app. We won't ingest or process any crashes that exceed this limit. 
 
 
 ## Handled Errors
@@ -25,6 +25,6 @@ ms.custom: analytics
 - Attachments are only available for Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
 - You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
 - The maximum number of characters per error property key and error property value is 125 characters.
-- App Center only accepts up to 60 handled errors per minute per unique app. We will not ingest or process any errors that exceed this limit. 
+- App Center only accepts up to 60 handled errors per minute per unique app. We won't ingest or process any errors that exceed this limit. 
 
 

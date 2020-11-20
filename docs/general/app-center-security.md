@@ -13,7 +13,7 @@ ms.custom: general
 
 # Visual Studio App Center Security and Compliance
 
-App Center takes security seriously. As a first-party Microsoft Azure service, we are responsible for following all of Microsoft's internal requirements for operating in a secure and reliable way.
+App Center takes security seriously. As a first-party Microsoft Azure service, we're responsible for following all of Microsoft's internal requirements for operating in a secure and reliable way.
 
 We want to give you an idea of some of the principles that we follow to keep App Center secure. Although it isn't meant to be an exhaustive list of security concepts, it's shaped by a number of requests from customers for similar information.
 
@@ -52,7 +52,7 @@ App Center's code base is scanned by internal Microsoft tools for issues such as
 
 To ensure that activities within the service are legitimate, as well as to detect breaches or attempted breaches, we use Azure's infrastructure to log and monitor key aspects of the service. In addition, all deployment and administrator activities are securely logged, as is operator access to production storage.
 
-In the case where a possible intrusion or high priority security vulnerability has been identified, we have a clear security incident response plan. This plan outlines responsible parties, steps required to secure customer data, and how to engage with security experts in [Microsoft Security Response Center](https://www.microsoft.com/msrc) (MSRC), Microsoft Azure, and members of the App Center leadership team. We also notify any organization owners if we believe their data is disclosed or corrupted.
+In case a possible intrusion or high priority security vulnerability has been identified, we have a clear security incident response plan. This plan outlines responsible parties, steps required to secure customer data, and how to engage with security experts in [Microsoft Security Response Center](https://www.microsoft.com/msrc) (MSRC), Microsoft Azure, and members of the App Center leadership team. We also notify any organization owners if we believe their data is disclosed or corrupted.
 
 In general, App Center follows the [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl).
 

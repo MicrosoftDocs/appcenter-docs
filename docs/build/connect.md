@@ -15,7 +15,7 @@ ms.assetid: 1EFB8DFD-76D5-4F8C-B73A-2CFBE3E3BD97
 App Center supports connections to the following code repository services: [Bitbucket](https://bitbucket.org/), [GitHub](https://github.com/), [Gitlab.com](https://gitlab.com), and [Azure DevOps (formerly VSTS)](https://visualstudio.microsoft.com/team-services/). Build apps in App Center by connecting to one of these providers.
 
 > [!NOTE]
-> Except self-hosted GitLab Instances, App Center does not support connections to self-hosted or on-prem versions of the above repository services.
+> Except self-hosted GitLab Instances, App Center doesn't support connections to self-hosted or on-prem versions of the above repository services.
 
 ## Connecting to a source repository
 To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign-in using the code repository service account credentials if you aren't already signed in. Authorizing App Center is required to complete the connection.
@@ -31,7 +31,7 @@ You may connect to a self-hosted GitLab instance by providing the instance URL, 
 ## Removing connections and reconnecting
 With so many identities, apps, and authentication methods, you might end up with your App Center account connected to a different code repository service than where your apps are hosted.
 
-If you've connected to a repository service with the wrong account, you'll have to open your User settings in the hosting service (Azure DevOps, GitHub, or Bitbucket) and revoke the Oauth token manually. Then you can reconnect to another account in App Center.
+If you connected to a repository service with the wrong account, you must open your User settings in the hosting service (Azure DevOps, GitHub, or Bitbucket) and revoke the Oauth token manually. Then you can reconnect to another account in App Center.
 
 > [!IMPORTANT]
 > Keep in mind that if you connect to a new account, you'll lose all the build configuration and previous builds for ALL the apps configured with the previous account.

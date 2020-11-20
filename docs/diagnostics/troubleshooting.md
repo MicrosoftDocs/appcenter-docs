@@ -26,7 +26,7 @@ For Breakpad, iOS, macOS, and UWP apps; crash reports are only visible if they'r
 To see deobfuscated stack traces for ProGuard enabled Android apps, follow the instructions in [App Center's ProGuard documentation](~/diagnostics/Android-ProGuard.md) to upload mapping files for your app.
 
 ### How does App Center parse your .zip file?
-App Center first looks for `dsym` directories at any level, then it looks for a source map by the title of `index.ios.map`. If `index.ios.map` file does't exist, App Center uses the first `.map` it finds.
+App Center first looks for `dsym` directories at any level, then it looks for a source map by the title of `index.ios.map`. If `index.ios.map` file doesn't exist, App Center uses the first `.map` it finds.
 
 ### I updated my symbols for the correct executable of my app in the store, but the crash reports are still unreadable.
 App Center Crash Reporting doesn't support **bitcode** yet. See the guide on [how to disable bitcode](~/diagnostics/iOS-symbolication.md#bitcode) to learn more and fix that issue.

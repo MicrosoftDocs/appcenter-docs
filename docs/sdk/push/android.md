@@ -34,7 +34,7 @@ dev_langs:
 > * [Unity Windows](unity-windows.md)
 
 > [!NOTE]
-> Google announced it is migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, refer to [the SDK migration guide](migration/android.md).
+> Google announced it's migrating from the Google Cloud Messaging (GSM) platform to Firebase Cloud Messaging (FCM). For Android developers, the Firebase SDK is required to use Push Notifications. For additional information, refer to [the SDK migration guide](migration/android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
@@ -106,7 +106,7 @@ AppCenter.start(application, "{Your App Secret}", Push::class.java)
 
 Replace `{Your App Secret}` in the sample with the App Secret for the App Center project associated with this application. Refer to the [Get started](~/sdk/getting-started/android.md) section if the SDK isn't configured in the application yet.
 
-Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Android Studio automatically suggests the required import statement once you add `Push` to the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
@@ -122,7 +122,7 @@ import com.microsoft.appcenter.push.Push
 Set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> The device does not generate a notification when an application receives a push notification when the app is in the foreground.
+> The device doesn't generate a notification when an application receives a push notification when the app is in the foreground.
 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.
@@ -171,7 +171,7 @@ public class MyPushListener implements PushListener {
         Map<String, String> customData = pushNotification.getCustomData();
 
         /*
-         * Message and title cannot be read from a background notification object.
+         * Message and title can't be read from a background notification object.
          * Message being a mandatory field, you can use that to check foreground vs background.
          */
         if (message != null) {
@@ -206,7 +206,7 @@ class MyPushListener : PushListener {
         val customData = pushNotification.getCustomData()
 
         /*
-         * Message and title cannot be read from a background notification object.
+         * Message and title can't be read from a background notification object.
          * Message being a mandatory field, you can use that to check foreground vs background.
          */
         if (message != null) {
@@ -245,7 +245,7 @@ class MyPushListener : PushListener {
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
+App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call the following method before `AppCenter.start`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

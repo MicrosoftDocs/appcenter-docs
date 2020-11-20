@@ -18,7 +18,7 @@ ms.tgt_pltfrm: unity
 
 ### 1.1 Remove old HockeySDK
 
-1. Choose the game object that you had created for the SDK and remove `HockeyAppAndroid` / `HockeyAppiOS` component by clicking the **Settings** icon > **Remove Component**.
+1. Choose the game object that you'd created for the SDK and remove `HockeyAppAndroid` / `HockeyAppiOS` component by clicking the **Settings** icon > **Remove Component**.
 
 1. Remove **HockeyAppUnityAndroid** / **HockeyAppUnityiOS** folder(s) from the **Assets** folder inside your Unity project.
 
@@ -26,7 +26,7 @@ ms.tgt_pltfrm: unity
 
 The App Center SDK is integrated by importing Unity Packages into your project. To do so, first install the [App Center Unity Editor Extensions](https://github.com/Microsoft/AppCenter-SDK-Unity-Extension) plugin. Open the Editor Extensions via the Unity menu: **Window** > **App Center** > **Editor Extensions** and select **Install App Center SDK**.
 
-Note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
+The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. See the equivalences in the next table:
 
 HockeyApp module         | App Center module
 ------------------------ | -----------------
@@ -61,7 +61,7 @@ In the Project window, navigate to the **AppCenter** folder that was added to yo
 
 #### Configure App Center settings
 
-Click on this game object and in the **Inspector** window, you will see the App Center configuration.
+Click on this game object and in the **Inspector** window, you'll see the App Center configuration.
 
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 
@@ -71,7 +71,7 @@ Fill in the additional information using the detailed configuration mapping tabl
 
 HockeyApp Setting | App Center Setting | Notes
 ------------------- | ------------------- | ---
-App ID | Android/iOS App Secret | Use the App ID that you have converted in the previous step
+App ID | Android/iOS App Secret | Use the App ID that you've converted in the previous step
 Server URL | Custom Log URL, _Other Setup_ section | Check **Use Custom Log URL**
 Restricted in-app updates | NA | [Distribute.UpdateTrack](~/sdk/distribute/unity.md#use-private-distribution-group)
 Crashes and Exceptions (enabled by default) | Use Crashes | [Crashes module](~/sdk/crashes/unity.md)
@@ -82,7 +82,7 @@ Version Updates (enabled by default) | Use Distribute | [Distribute module](~/sd
 Update Alert | NA | [Documentation (has to be configured)](~/sdk/distribute/unity.md#2-customize-the-update-dialog)
 
 > [!NOTE]
-> If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
+> If your project doesn't support one of the three platforms listed in the settings, leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
 
 If your project has the HockeySDK API calls throughout the application, replace them using the detailed API mapping table given below.
 

@@ -25,7 +25,7 @@ Open a terminal/command prompt, and run `npm install -g appcenter-cli`.
 
 ### Logging in
 1. Open a terminal/command window.
-2. Run `appcenter login`. This will open a browser and generate a new `API token`.
+2. Run `appcenter login`. This opens a browser and generates a new `API token`.
 3. Copy the `API token` from the browser, and paste this into the command window.
    ![Image of browser token](~/cli/images/browserToken.png)
 4. The command window will display `Logged in as {user-name}`.
@@ -37,10 +37,10 @@ There are two ways to use App Center CLI commands without running `appcenter log
 **Using the `--token` parameter**
 1. Create a `Full Access` [API token](https://docs.microsoft.com/appcenter/api-docs/) (See steps 1-5).
 2. Open a terminal/command window.
-3. Add the `--token` switch to the CLI command you are running. For example, run `appcenter apps list --token {API-token}` to get a list of your configured applications. 
+3. Add the `--token` switch to the CLI command you're running. For example, run `appcenter apps list --token {API-token}` to get a list of your configured applications. 
 
 **Using the `APPCENTER_ACCESS_TOKEN` environment variable**
-You can set the `APPCENTER_ACCESS_TOKEN` environment variable with your API token. This will work without having to append the `--token` switch to each CLI command.
+You can set the `APPCENTER_ACCESS_TOKEN` environment variable with your API token. This works without having to append the `--token` switch to each CLI command.
 
 ### Running your first CLI command
 1. Open a terminal/command window.

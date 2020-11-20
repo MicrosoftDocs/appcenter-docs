@@ -49,7 +49,7 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
 4. Make sure your device is online.
 5. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
-6. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it has been sent.
+6. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it's been sent.
 
 ## Crashes don't show up in the portal
 
@@ -69,15 +69,15 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 7. Make sure your device is online.
 8. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
 9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it has been sent.
+10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it's been sent.
 
 ## Distribute and in-app updates are blocking my automated UI tests
 
-If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
+If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
 
 ## Messages in the console that indicate that the database couldn't be opened on iOS
 
-App Center uses SQLite to persist logs before they are sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
+App Center uses SQLite to persist logs before they're sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
 
 ## Protect the App Center secret value
 

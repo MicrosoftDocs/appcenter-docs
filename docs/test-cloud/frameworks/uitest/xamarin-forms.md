@@ -1,6 +1,7 @@
 ---
 title: "Get started with UITest and Xamarin.Forms"
 description: "UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center."
+zone_pivot_groups: platform
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
@@ -10,11 +11,9 @@ ms.date: 10/24/2018
 ---
 
 # Get started with UITest and Xamarin.Forms
-
-_UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices._
+UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices.
 
 ## Overview
-
 **[App Center Test](~/test-cloud/index.md)** allows developers to write automated user interface tests for iOS and Android apps. With some minor tweaks, Xamarin.Forms apps can be tested using Xamarin.UITest, including sharing the same test code. This article introduces specific tips to get Xamarin.UITest working with Xamarin.Forms.
 
 This guide does assume that familiarity with Xamarin.UITest. The following guides are recommended for gaining familiarity with Xamarin.UITest:
@@ -26,11 +25,9 @@ This guide does assume that familiarity with Xamarin.UITest. The following guide
 Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
 ## Requirements
-
 Refer to [Xamarin.UITest](~/test-cloud/frameworks/uitest/index.md) to confirm your project is ready for automated UI testing.
 
 ## Adding UITest support to Xamarin.Forms apps
-
 UITest automates the user interface by activating controls on the screen and performing input anywhere a user would normally interact with the application. To enable tests that can *press a button* or *enter text in a box* the test code will need a way to identify the controls on the screen.
 
 To enable the UITest code to reference controls, each control needs a unique identifier. In Xamarin.Forms, the recommended way to set this identifier is by using the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property as shown below:
@@ -59,11 +56,10 @@ The [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property can also 
 A unique [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) should be added to all controls that are required for testing (including buttons, text entries, and labels whose value might need to be queried).
 
 > [!WARNING]
-> Note that an `InvalidOperationException` will be thrown if an attempt is made to set the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property of an [`Element`](xref:Xamarin.Forms.Element) more than once.
+> An `InvalidOperationException` will be thrown if an attempt is made to set the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property of an [`Element`](xref:Xamarin.Forms.Element) more than once.
 
 ### iOS application project
-
-To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it has been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
+To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it's been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
 
 ```csharp
 #if ENABLE_TEST_CLOUD
@@ -72,10 +68,10 @@ Xamarin.Calabash.Start();
 #endif
 ```
 
-The Calabash assembly makes uses of non-public Apple API's which will cause apps to be rejected by the App Store. However, the Xamarin.iOS linker will remove the Calabash assembly from the final IPA if it isn't explicitly referenced from code.
+The Calabash assembly makes uses of non-public Apple APIs, which causes apps to be rejected by the App Store. However, the Xamarin.iOS linker will remove the Calabash assembly from the final IPA if it isn't explicitly referenced from code.
 
 > [!NOTE]
-> Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Calabash assembly to be removed from app bundle. However, debug builds do have the compiler directive defined, preventing the linker from removing the assembly.
+> By default, release builds don't have the `ENABLE_TEST_CLOUD` compiler variable, which causes the Calabash assembly to be removed from app bundle. However, debug builds do have the compiler directive defined by default, preventing the linker from removing the assembly.
 
 The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for Debug builds:
 
@@ -92,7 +88,7 @@ The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for
 
 ### Android application project
 
-Unlike iOS, Android projects do not need any special startup code.
+Unlike iOS, Android projects don't need any special startup code.
 
 ## Writing UITests
 
@@ -128,7 +124,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     ![Add New Project](images/get-started-xamarin-forms-08-new-uitest-project-vs.png "Add New Project")
 
-    This will add a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
+    This adds a new project with the **NUnit**, **Xamarin.UITest**, and **NUnitTestAdapter** NuGet packages to the solution:
 
     ![NuGet Package Manager](images/get-started-xamarin-forms-09-new-uitest-project-xs.png "NuGet Package Manager")
 
@@ -140,7 +136,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     ![Project Reference Manager](images/get-started-xamarin-forms-10-test-apps-vs.png "Project Reference Manager")
 
-    This will allow the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
+    This allows the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -151,7 +147,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     ![Choose a Template](images/get-started-xamarin-forms-02-new-uitest-project-xs.png "Choose a Template")
 
-    This will add a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
+    This adds a new project that already has the **NUnit** and **Xamarin.UITest** NuGet packages in the solution:
 
     ![Xamarin UITest NuGet Packages](images/get-started-xamarin-forms-03-new-uitest-project-xs.png "Xamarin UITest NuGet Packages")
 
@@ -165,7 +161,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     ![Test Apps Dialog](images/get-started-xamarin-forms-05-add-test-apps-xs.png "Test Apps Dialog")
 
-    The **Unit Test** pad should now have a reference to the iOS and Android projects. This will allow the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
+    The **Unit Test** pad should now have a reference to the iOS and Android projects. This allows the Visual Studio for Mac test runner to execute UITests locally against the two Xamarin.Forms projects.
 
 #### Adding UITest to the iOS app
 

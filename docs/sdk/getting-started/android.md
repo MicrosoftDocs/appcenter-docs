@@ -38,11 +38,11 @@ Let's get started with setting up App Center Android SDK in your app to use App 
 Before you begin, make sure that the following prerequisites are met:
 
 * Your Android project is set up in Android Studio.
-* You are targeting devices running Android Version 5.0 (API level 21) or later.
+* You're targeting devices running Android Version 5.0 (API level 21) or later.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and click the **Add new** button in the upper-right corner of the page, and select **Add new app** from the dropdown menu.
@@ -50,11 +50,11 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **Android** as the OS and **Java** as a platform.
 5. Click the **Add new app** button.
 
-Once you have created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
+Once you've created an app, you can obtain its App Secret on the **Getting Started** page under **2. Start the SDK**. Or, you can click **Settings**, and at the top right hand corner, click on the **triple vertical dots** and select **Copy app secret** to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
-1. Open the project's app level **build.gradle** file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use App Center Analytics and Crashes, add the following lines:
+1. Open the project's app level **build.gradle** file (`app/build.gradle`) and add the following lines after `apply plugin`. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you want to use App Center Analytics and Crashes, add the following lines:
 
   ```groovy
   dependencies {
@@ -103,7 +103,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
 ### 4.1 Add the start() method
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.  
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.  
 Insert the following line inside your app's main activity class' `onCreate`-callback to use **App Center Analytics** and **App Center Crashes**:
 
 ```java
@@ -134,9 +134,9 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 The example above shows how to use the `start()` method and include both App Center Analytics and App Center Crashes.
 
-If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
 
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
 For example - If you just want to onboard to App Center Analytics, you should modify the `start()` API call as follows:
 
@@ -147,7 +147,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Android Studio automatically suggests the required import statements once you insert the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
@@ -160,7 +160,7 @@ import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 ```
 
-You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+You're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md) and [App Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 

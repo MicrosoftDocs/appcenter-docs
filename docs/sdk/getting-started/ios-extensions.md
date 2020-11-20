@@ -29,7 +29,7 @@ dev_langs:
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
-Note that application extensions only support crash reporting.
+Application extensions only support crash reporting.
 
 To learn how to add App Center SDK to your container app, refer to the documentation for [App Center iOS Getting Started](./ios.md).
 
@@ -40,12 +40,12 @@ Let's get started with setting up App Center iOS SDK in your app extension to us
 The following requirements must be met to use App Center SDK:
 
 * Your iOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
-* You are targeting devices running on iOS 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality.
+* You're targeting devices running on iOS 9.0 or later.
+* You're not using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -53,7 +53,7 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select **iOS** as the OS and **Objective-C/Swift** as a platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right-hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 > [!NOTE]
 > Using an existing App Secret from another iOS project has side effects. App Center doesn't support filtering by project on the same App Center application. For instance listing crashes for a particular version will list all the crashes from both projects for this version without distinction. It can be confusing.

@@ -16,35 +16,35 @@ ms.custom: distribute
 Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers, or can represent stages or rings of releases, such as Staging.
 
 ## Creating a Distribution Group
-To create a new Distribution Group, sign in to the App Center portal, select your desired app, click **Distribute** in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
+To create a new Distribution Group, sign in to the App Center portal, select your app, click **Distribute** in the navigation pane, and lastly select the **New Group** group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
 
 ## Types of Distribution Groups
 ### Private Distribution Groups
-In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to sign in to their App Center account in order to access and download releases.
+In App Center, distribution groups are private by default. Only testers invited via email can access the releases available to this group. Testers added to this group will receive a notification that they have been added to the app to test. After a release, testers that were previously added to this group will receive the new release notification email and will be required to sign in to their App Center account to access and download releases.
 
 ### Public Distribution Groups
 Distribution groups must be public to enable unauthenticated installs from public links. When creating a new distribution group, the options is available during the setup process. After giving your group a name, you can enable **Allow public access**.
 
 To make an existing distribution group public, open the distribution group and click on the settings icon in the upper right-hand corner of the screen. From the settings modal, you can enable **Allow public access**.
 
-As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. In order to access the app from here, testers will be required to sign in with their App Center account.
+As with private distribution groups, testers will receive an email notifying them that they've been invited to test the app and when a release is available to them. To access the app from here, testers will be required to sign in with their App Center account.
 
 In addition to this, a **public download link** is displayed underneath the distribution group name at the top of the distribution group page. **Anyone, including testers who aren't explicitly added to the distribution group, can access the release without signing in using the public download link**.
 
 ### Shared Distribution Groups
 Shared distribution groups are private or public distribution groups that are shared across multiple apps in a single organization. Shared distribution groups eliminate the need to replicate distribution groups across multiple apps. With a few clicks, you can give a shared distribution group access to any combination of apps belonging to a particular organization.
 
-Unlike app-level distribution groups, shared distribution groups are at the organization level rather than the app level. Due to this, the steps to create one are slightly different:
-1. Sign in to the App Center portal, then select the organization to which you would like to add a shared group.
+Unlike app-level distribution groups, shared distribution groups are at the organization level rather than the app level. Because of this, the steps to create one are slightly different:
+1. Sign in to the App Center portal, then select the organization to which you want to add a shared group.
 2. On the navigator pane that opens, click **People**.
 3. On the People page, click the distribution group link to open the shared distribution groups page.
 4. On the top-right corner of the shared distribution groups page, select the blue **Create new group** button.
 
 Once you have a distribution group, click the group entry in the table to add testers and apps to the group.
 
-To add testers to your new shared distribution group, select the **Testers** tab and enter the emails of the desired testers.
+To add testers to your new shared distribution group, select the **Testers** tab and enter the emails of the testers.
 
-To add apps to your new shared distribution group, select the **Apps** tab and enter the name of the desired apps that this group should have access to.
+To add apps to your new shared distribution group, select the **Apps** tab and enter the name of the apps that this group should have access to.
 
 ## Managing Users in a Distribution Group
 ### Adding testers
@@ -60,7 +60,7 @@ From this page, you can also see the full release history for this Distribution 
 ## Automatically manage devices
 Ordinarily, when you release an iOS app signed with an ad-hoc or development provisioning profile, you must obtain each tester's device IDs (UDIDs) and add them to the provisioning profile before compiling the release.
 
-By enabling the distribution group's **Automatically manage devices** setting, App Center automates this process, updating the provisioning profile every time a tester registers a new device. This setting can only be accessed through an app-level distribution group and is not available through a global group. You can access an app-level distribution group by selecting the app in App Center, then clicking on **Distribute**. Under Distribute, click on **Groups** and then click the specific group that you want to manage. You can also opt in to automatically adding devices when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
+By enabling the distribution group's **Automatically manage devices** setting, App Center automates this process, updating the provisioning profile every time a tester registers a new device. This setting can only be accessed through an app-level distribution group and isn't available through a global group. You can access an app-level distribution group by selecting the app in App Center, then clicking on **Distribute**. Under Distribute, click on **Groups** and then click the specific group that you want to manage. You can also opt in to automatically adding devices when you distribute a new release. This option is in the **Devices** step in the wizard for distributing a new release.
 
 > [!NOTE]
 > As part of automating the workflow, you must provide the user name and password for your Apple ID and your production certificate in a .p12 format.
@@ -82,7 +82,7 @@ Once your tenant is connected to the organization, you can add AAD security grou
 To [release a new build][upload] to a Distribution Group. Make use of the **Distribute new Release** button at the top of the screen and choose the Distribution Group from the list during the steps.
 
 > [!NOTE]
-> Testers added to a distribution group because they are members of an AAD security group will not receive emails when new builds are released. If you have users who should receive emails for each release, you should add them directly to the distribution group.
+> Testers added to a distribution group because they're members of an AAD security group won't receive emails when new builds are released. If you have users who should receive emails for each release, you should add them directly to the distribution group.
 
 ## User Download Analytics
 User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page as well as on the Release Details page. The total download count represents the total number of times the Install button has been clicked by a tester. The unique download count represents the number of users that have installed the release. For example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download.

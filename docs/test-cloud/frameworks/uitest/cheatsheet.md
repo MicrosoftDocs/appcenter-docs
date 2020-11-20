@@ -44,7 +44,7 @@ namespace MyApp.MyUITests
         [SetUp]
         public void BeforeEachTest()
         {
-            // Uncomment the line that is appropriate for the platform:
+            // Uncomment the line that's appropriate for the platform:
             // app = ConfigureApp.Android.StartApp();
             // app = ConfigureApp.iOS.StartApp();
         }
@@ -115,7 +115,7 @@ Xamarin.Calabash.Start();
 #endregion
 ```
 
-The Xamarin Test Cloud Agent uses non-public Apple APIs, which will cause your app to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds do not have the `ENABLE_TEST_CLOUD` compiler variable, which will cause the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds will have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
+The Xamarin Test Cloud Agent uses non-public Apple APIs, which causes apps to be rejected by the App Store. The Xamarin.iOS linker will remove the Xamarin Test Cloud Agent from the final IPA if it not explicitly referenced anywhere by the code. Release builds don't have the `ENABLE_TEST_CLOUD` compiler variable, which causes the Xamarin Test Cloud Agent to be removed from app bundle. Debug builds have the compiler directive defined, preventing the linker from removing the Xamarin Test Cloud Agent.
 
 ### Determine Device ID for iOS Simulator
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
@@ -190,11 +190,11 @@ It is possible to execute native methods on underlying views with the `AppQuery.
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
 
-Notice that the `Invoke` uses Java `TextView.setGravity` method and not the C# [TextView.Gravity](https://docs.microsoft.com/dotnet/api/Android.Widget.TextView.Gravity) property.
+The `Invoke` uses Java `TextView.setGravity` method and not the C# [TextView.Gravity](https://docs.microsoft.com/dotnet/api/Android.Widget.TextView.Gravity) property.
 
 ### Handling Android permissions
 ```csharp
 ConfigureApp.Android.Debug().ApkFile(apkpath).StartApp()
 ```
 
-If you install using `.ApkFile(apkpath)` instead of `PreferIdeSettings()` then the app is granted with "all" permissions, which will remove the permission pop-ups. In the `.ApkFile(apkpath)` method, `apkpath` must point to the apps compiled apk file.
+If you install using `.ApkFile(apkpath)` instead of `PreferIdeSettings()` then the app is granted with "all" permissions, which removes the permission pop-ups. In the `.ApkFile(apkpath)` method, `apkpath` must point to the compiled apk file.

@@ -37,7 +37,7 @@ All we need to know is the app you want us to build, from the repositories hoste
 > [!TIP]
 > We still offer you a way to do some customizations during build, using [Build Scripts!](https://docs.microsoft.com/appcenter/build/custom/scripts/) 
 
-**3. Do you want to have a true/continuous Build, Test, and Distribute flow from a Single Service?**
+**3. Do you want a true/continuous Build, Test, and Distribute flow from a Single Service?**
  
 App Center lets you not only build the app, but can also execute [launch tests](https://docs.microsoft.com/appcenter/build/build-test-integration) and distribute to Alpha/Beta Testers and [App Stores](https://docs.microsoft.com/appcenter/build/build-to-store) as part of the build. 
  
@@ -50,7 +50,7 @@ When building your app using the App Center Build service, the corresponding deb
 App Center brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services and engage with users using the Push service. 
 
 > [!NOTE]
-> If you feel we are missing something critical from App Center Build or need help, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
+> If you feel we're missing something critical from App Center Build or need help, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
 
 ## Azure Pipelines
 
@@ -63,7 +63,7 @@ You should stick to Azure Pipelines. App Center only supports the OS/Platforms a
   
 Azure Pipelines will work out best for you if your app is:
 - Fairly complex 
-- Has a lot of customizations 
+- Has many customizations 
 - Uses a framework that’s not supported by App Center 
 - Has requirements not currently served by App Center, like special signing considerations
 
@@ -77,7 +77,7 @@ If you already have a billing plan set for Azure Pipelines, because your organiz
  
 Billing isn't shared between Azure Pipelines and App Center. The pipelines you purchased for Azure Pipelines can't be used with App Center. 
   
-Your team might also be used to Azure Pipelines, and would like to continue using the service for builds, in this case, Azure Pipelines might be better for you.   
+Your team might also be used to Azure Pipelines, and want to continue using the service for builds. In this case, Azure Pipelines might be better for you.   
 
 > [!TIP]
 > If you still want to use App Center Features as part of Build, you can use [Distribute](https://docs.microsoft.com/appcenter/distribution/vsts-deploy) and [Test](https://docs.microsoft.com/appcenter/test-cloud/vsts-plugin) tasks created for Azure Pipelines!

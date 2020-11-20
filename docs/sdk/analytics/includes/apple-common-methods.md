@@ -11,7 +11,7 @@ Once you add App Center Analytics to your app and start the SDK, it will automat
 > [!NOTE]
 > On Mac Catalyst apps, the amount of sessions may be lower than on iOS apps. Lifecycle events used to track sessions on Mac Catalyst behave differently from those on iOS.
 
-The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices will not report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices won't report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK. Our advice is to be mindful about tracking user locations, and use a low location resolution. The sample below uses `kCLLocationAccuracyKilometer`.
 
 * Make sure that you [enable Location Services](https://support.apple.com/HT204690) on the device.
 * Get the device's current location using `CLLocationManager`.
@@ -99,7 +99,7 @@ func locationManager(_ Manager: CLLocationManager, didFailWithError error: Error
 ## Custom events
 You can track your own custom events with **up to 20 properties** to know what's happening in your app, understand user actions, and see the aggregates in the App Center portal.
 
-Once you have started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Once you've started the SDK, use the `trackEvent:withProperties` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```objc
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
@@ -126,8 +126,8 @@ You can track business critical events that have higher importance than other ev
 * Events with priority set as **Critical** will be retrieved from storage first and sent before **Normal** events.
 * When the local storage is full and new events need to be stored. The oldest events with the lowest priority are deleted first to make room for the new ones.
 * If the storage is full of logs with **Critical** priority, then tracking an event with
-**Normal** priority will fail as the SDK cannot make room in that case.
-* If you also use the **Crashes** service, note that crash logs are set as **Critical** and share the same storage as events.
+**Normal** priority will fail as the SDK can't make room in that case.
+* If you also use the **Crashes** service, crash logs are set as **Critical** and share the same storage as events.
 * The transmission interval is only applied to **Normal** events, **Critical** events will be sent after 3 seconds.
 
 You can use the following API to track an event as **Critical**:
@@ -135,13 +135,13 @@ You can use the following API to track an event as **Critical**:
 NSDictionary *properties = @{@"Category" : @"Music", @"FileName" : @"favorite.avi"};
 [MSACAnalytics trackEvent:@"Video clicked" withProperties:properties flags:MSACFlagsCritical];
 
-// If you are using name only, you can pass nil as properties.
+// If you're using name only, you can pass nil as properties.
 ```
 ```swift
 let properties = ["Category" : "Music", "FileName" : "favorite.avi"];
 Analytics.trackEvent("Video clicked", withProperties: properties, flags: .critical)
 
-// If you are using name only, you can pass nil as properties.
+// If you're using name only, you can pass nil as properties.
 ```
 
 ## Pause and resume sending logs
@@ -159,7 +159,7 @@ Analytics.resume()
 
 ## Enable or disable App Center Analytics at runtime
 
-You can enable and disable App Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+You can enable and disable App Center Analytics at runtime. If you disable it, the SDK won't collect any more analytics information for the app.
 
 ```objc
 [MSACAnalytics setEnabled:NO];
@@ -202,7 +202,7 @@ By default, the SDK stores all logs up to 10 MB. Developers can use an API to in
 
 ## No internet access
 
-When there is no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there isn't any network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
 
 > [!NOTE]
 > The logs older than 25 days will be discarded.

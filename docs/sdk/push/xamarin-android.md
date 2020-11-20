@@ -31,7 +31,7 @@ ms.tgt_pltfrm: xamarin.android
 > * [Unity Windows](unity-windows.md)
 > 
 > [!NOTE]
-> For all the Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
+> For all the Android developers using App Center, there's a change coming where Firebase SDK is required to use Push Notifications. For Android P, its scheduled at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. Follow the [How to add Firebase SDK guide](migration/xamarin-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
@@ -50,7 +50,7 @@ Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven'
 
 * Copy the **google-services.json** file into the root of your Android specific project using Visual Studio so that the file is visible in the solution.
 * Close and reopen your solution.
-* The next step depends if you are on Mac or Windows:
+* The next step depends if you're on Mac or Windows:
     * On Visual Studio for Mac, open the context menu on the **google-services.json** file then select **GoogleServicesJson** in **Build Action**.
     * On Visual Studio for Windows, select the **google-services.json** file in the Solution explorer. In **Properties > Advanced > Build Action**, select **GoogleServicesJson**.
 
@@ -120,7 +120,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 [!INCLUDE [dotnet push event intro](includes/dotnet-push-event-intro.md)]
 
 > [!NOTE]
-> A notification is not generated when your application receives a push in the foreground.
+> A notification isn't generated when your application receives a push in the foreground.
 > 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
@@ -142,7 +142,7 @@ If (**and only if**) your launcher activity uses a `launchMode` of `singleTop`, 
 
 ## Existing Firebase Analytics users
 
-App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call `Push.EnableFirebaseAnalytics()` before `AppCenter.Start()` like so:
+App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call `Push.EnableFirebaseAnalytics()` before `AppCenter.Start()` like so:
 
 ```csharp
 Push.EnableFirebaseAnalytics();

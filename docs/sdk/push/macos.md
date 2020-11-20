@@ -64,11 +64,11 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [MSPush.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
+Make sure you've replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/macos.md) section if you haven't configured the SDK in your application.
 
 ### 2.3 Add internet capabilities for sandboxed apps
 
-If your app is using the App Sandbox, you have to set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+If your app is using the App Sandbox, you must set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
 Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
 
 Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
@@ -77,7 +77,7 @@ Select your project in the project navigator, select the **Capabilities** tab an
 
 You can set up a delegate to be notified whenever a push notification is received while the application is active (currently frontmost) or a notification in Notification Center has been clicked by the user.
 
-By default, App Center Push does not generate notifications when the push is received while the application is active, you can use the delegate to customize the push experience when received while the application is active or do a specific action when the application is being active by clicking on the notification from Notification Center when received while the application is inactive. *App Center Push will not generate any notifications if the push is received while the application is not running.*
+By default, App Center Push doesn't generate notifications when the push is received while the application is active, you can use the delegate to customize the push experience when received while the application is active or do a specific action when the application is being active by clicking on the notification from Notification Center when received while the application is inactive. *App Center Push won't generate any notifications if the push is received while the application isn't running.
 
 You need to register the delegate before starting App Center as shown in the following example:
 
@@ -168,10 +168,10 @@ var enabled = MSPush.isEnabled()
 
 ## Disable automatic forwarding of application delegate's methods to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
-2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This will disable application delegate forwarding for all App Center services.
+2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables application delegate forwarding for all App Center services.
 3. Implement the callbacks to register push notifications
 
     Implement the `application:didRegisterForRemoteNotificationsWithDeviceToken:` callback and the `application:didFailToRegisterForRemoteNotificationsWithError:` callback in your **AppDelegate** to register for Push notifications.

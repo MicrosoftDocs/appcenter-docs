@@ -31,4 +31,4 @@ This section contains instructions for how to use the App Center Push SDK in you
 + [Xamarin.Forms Push SDK](~/sdk/push/xamarin-forms.md)
 
 > [!NOTE]
-> When Google announced deprecation of the Google Cloud Messaging service, we updated the SDK and backend to support this change. You should not have to make any changes to your app to support Google's change. To learn more, refer to this [Help Center article](https://intercom.help/appcenter/push/google-gcm-to-fcm-migration).
+> When Google announced deprecation of the Google Cloud Messaging service, we updated the SDK and backend to support this change. You shouldn't have to make any changes to your app to support Google's change. To learn more, refer to this [Help Center article](https://intercom.help/appcenter/push/google-gcm-to-fcm-migration).

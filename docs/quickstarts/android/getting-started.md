@@ -11,7 +11,7 @@ ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
 ---
 
 # Getting Started by Creating Android App and Codesigning
-In this tutorial, you will learn to set up a sample Android app with App Center.
+In this tutorial, you'll learn to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
 - Create [GitHub account](https://github.com/join).
@@ -52,7 +52,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## Sign the Android Package Kit (APK)
 *Code signing is optional, but recommended.*
-In order to run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
+To run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
 
 1. Open Android Studio and click **Open an existing Android Studio project**.
 2. Navigate to the forked sample app repository location on your machine and upload it to Android Studio.

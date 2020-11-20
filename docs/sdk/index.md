@@ -15,7 +15,7 @@ App Center is your continuous integration, delivery and learning solution for iO
 Get faster release cycles, higher-quality apps, and the insights to build what users want.
 
 > [!WARNING]
-> Do not embed any of your [API tokens](../api-docs/index.md) into source code.
+> Don't embed any of your [API tokens](../api-docs/index.md) into source code.
 
 ## App Center Services
 
@@ -31,7 +31,7 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 ### App Center Distribute
 
-The App Center SDK will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature will NOT work if your app is deployed to the app store.
+The App Center SDK will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature WON'T work if your app is deployed to the app store.
 
 ### App Center Push
 

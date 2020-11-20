@@ -84,7 +84,7 @@ The team creator or any org admin can change the app permission of the team. Onl
 > Users get the highest permission assigned (team level or app level). 
 
 ## Leaving a team 
-Users can leave a team upon confirmation and will lose access to any apps associate with the team. The team creator cannot leave the team. The only option is to delete the team. 
+Users can leave a team upon confirmation and will lose access to any apps associate with the team. The team creator can't leave the team. The only option is to delete the team. 
 
 ## Deleting a team
 The team creator or any admin can delete a team. All users in the team will have app permissions revoked. 
