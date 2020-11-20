@@ -284,7 +284,7 @@ If you're using the `sync` function, and doing your update check on app start, t
 
 Parameters:
 * **notifySucceeded**: Optional callback invoked if the plugin was successfully notified.
-* **notifyFailed**: Optional callback invoked in case of an error during notifying the plugin.
+* **notifyFailed**: Optional callback invoked if there's an error notifying the plugin.
 
 ### codePush.restartApplication
 ```javascript
