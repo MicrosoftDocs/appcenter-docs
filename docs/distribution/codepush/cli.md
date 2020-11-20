@@ -521,7 +521,7 @@ This parameter specifies the relative path to where the generated JS bundle's so
 
 #### Build configuration name
 
-Name of the build configuration which specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
+Name of the build configuration that specifies the binary version you want to target this release at. For example, "Debug" or "Release" (iOS only).
 
 > [!NOTE]
 > This parameter should be used when building with Xcode 11 and later to override the default configuration used by Xcode.
