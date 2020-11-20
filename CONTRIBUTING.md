@@ -34,7 +34,7 @@ If it's a new topic, you can use this [template file](./styleguide/template.md) 
 Navigate to the folder that corresponds to the TOC location determined for your article in step 1.
 That folder contains the Markdown files for all articles in that section. If necessary, create a new folder to place the files for your content.
 
-For images and other static resources, add them to the subfolder called **images**. If you are creating a new folder for content, add an images folder to the new folder.
+For images and other static resources, add them to the subfolder called **images**. If you're creating a new folder for content, add an images folder to the new folder.
 
 Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide/template.md) for more information.
 
@@ -50,17 +50,17 @@ Be sure to follow the proper Markdown syntax. See the [style guide](./styleguide
 
 If your PR is addressing an existing issue, add the `Fixes #Issue_Number` keyword to the commit message or PR description, so the issue can be automatically closed when the PR is merged. For more information, see [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
 
-The App Center team will review your PR and let you know if the change looks good or if there are any other updates/changes necessary in order to approve it.
+The App Center team will review your PR and let you know if the change looks good, or if there's other changes necessary to approve it.
 
 **Step 6:** Make any necessary updates to your branch as discussed with the team.
 
 The maintainers will merge your PR into the live branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from live branch into the live site and then you'll be able to see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
+On a certain cadence, we push all commits from live branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
 
 ## DOs and DON'Ts
 
-Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
+Below is a short list of guiding rules that you should keep in mind when you're contributing to the .NET documentation.
 
 * **DON'T** surprise us with big pull requests. Instead, file an issue and start a discussion so we can agree on a direction before you invest a large amount of time.
 * **DO** read the [style guide](./styleguide/template.md) and [voice and tone](./styleguide/voice-tone.md) guidelines.
@@ -70,4 +70,4 @@ Below is a short list of guiding rules that you should keep in mind when you are
 * **DO** blog and tweet (or whatever) about your contributions, frequently!
 
 > [!NOTE]
-> You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.
+> You might notice some of the topics aren't currently following all the guidelines specified here and on the [style guide](./styleguide/template.md) as well. We're working towards achieving consistency throughout the site.

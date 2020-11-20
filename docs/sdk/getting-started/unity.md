@@ -43,9 +43,9 @@ The App Center SDK for Unity supports the following platforms:
 > [!NOTE]
 > .NET 3.5 scripting runtime version and .NET scripting backend are no longer supported on the UWP platform.
 
-In order to learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asynchronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
+To learn how to use coroutines/callbacks instead of `async/await` with `.NET 3.5` backend, refer to the [Asynchronous APIs in the Unity SDK](~/sdk/unity-async.md) section of the documentation.
 
-Also note that the App Center SDK for Unity is only available in C#.
+Also, the App Center SDK for Unity is only available in C#.
 
 ## 2. Create your app in the App Center Portal to acquire the App Secret
 
@@ -57,7 +57,7 @@ If you've already created your app in the App Center portal, you can skip this s
 5. Select the appropriate OS and platform depending on your project as described above.
 6. Click the **Add new app** button in the bottom-right of the page.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK to your project
 
@@ -118,7 +118,7 @@ App Center works as a component that you attach to a game object in the scene th
 In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
 
 > [!NOTE]
-> You do not need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
+> You don't need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
 
 ### 4.3 Configure App Center settings
 
@@ -127,7 +127,7 @@ Click on this new "App Center" object and add your app secrets to the correspond
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 
 > [!NOTE]
-> If your project does not support one of the three platforms listed in the settings, simply leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center does not support, the APIs and configuration will have no effect for those platforms.
+> If your project doesn't support one of the three platforms listed in the settings, leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
 
 ---
 Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK will automatically collect.

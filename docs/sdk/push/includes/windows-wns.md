@@ -25,11 +25,11 @@ ms.date: 12/02/2019
 
     ![uwp app registration](../images/appcenter-uwp-sdk-push-registration.png)
     
-1. Below at this page in the **Platforms** > **Windows store** section, copy the value of the **Package SID** as you will use it later.
+1. Below at this page in the **Platforms** > **Windows store** section, copy the value of the **Package SID** as you'll use it later.
 
     ![uwp app registration sid](../images/appcenter-uwp-sdk-push-registration-get-package-sid.png)
 
-1. At the top of this page, copy the value under **Application Secrets** as you will use it later.
+1. At the top of this page, copy the value under **Application Secrets** as you'll use it later.
 
     ![uwp app registration secret](../images/appcenter-uwp-sdk-push-registration-secret.png)
 

@@ -20,7 +20,7 @@ Environment variables help manage your [build script tasks](~/build/custom/scrip
 | **General variables**             | **Description**                             |
 | --------------------------------- | ------------------------------------------- |
 | `APPCENTER_BUILD_ID`              | The unique identifier for the current build |
-| `APPCENTER_BRANCH`                | Name of the branch that is being built from |
+| `APPCENTER_BRANCH`                | Name of the branch that's being built from |
 | `APPCENTER_SOURCE_DIRECTORY`      | Location of the source code on the build machine |
 | `APPCENTER_OUTPUT_DIRECTORY`      | Location where the build results are stored in |
 | `APPCENTER_TRIGGER`               | What triggered the build, was it `manual` or `continuous` by push |
@@ -43,7 +43,7 @@ Environment variables help manage your [build script tasks](~/build/custom/scrip
 
 ## Variables declared in Build Configuration
 
-Custom environment variables allow you to define sensitive information that is required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
+Custom environment variables allow you to define sensitive information that's required for your build without checking them into your repository. You can create your environment variables in the build configuration and use them in your build. For example, to access an API key, a webhook token, or other secrets.
 
 >[!NOTE]
 > 'Platform' is reserved from use as an environment variable.

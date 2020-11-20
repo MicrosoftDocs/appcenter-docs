@@ -67,6 +67,6 @@ ms.assetid: 7d2aa750-c7d0-47cb-acc8-97892bc78cf2
 
 3. Copy the pathname to **app-debug-androidTest.apk** and replace the placeholder text `pathToFile.apk` in the custom command with the pathname text.
 
-4. Run the command. You will see the tests begin to run.
+4. Run the command. You'll see the tests begin to run.
 
 5. In App Center, click **Done** to close the panel.  

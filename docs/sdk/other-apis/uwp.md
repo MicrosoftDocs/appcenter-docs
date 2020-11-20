@@ -44,7 +44,7 @@ AppCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `Clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

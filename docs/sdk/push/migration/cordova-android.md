@@ -30,7 +30,7 @@ Open the Apache Cordova project's **config.xml** file, and add **google-services
 </platform>
 ```
 
-Remove the following line that is not needed anymore:
+Remove the following line that isn't needed anymore:
 
 ```xml
 <preference name="FIREBASE_SENDER_ID" value="'your-sender-id'" />

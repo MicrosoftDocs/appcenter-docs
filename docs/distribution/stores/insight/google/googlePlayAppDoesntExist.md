@@ -28,7 +28,7 @@ First verify you used the correct app package name. You can see this in the Goog
 * Make sure the app exists in the **All applications** list.
   * If the app isn't there, create it and go through the publishing steps below.
 * The app package name is written in the **App name** column under the app name itself.
-  * If it is not there, go through the publishing steps below.
+  * If it isn't there, go through the publishing steps below.
 
 ### Publish the app
 If you have the correct app package name and it still doesn't work, that means the app isn't yet published in the Google Play Console. Publish it there first, to the **Production**, **Beta** or **Alpha** track. App Center doesn't support manually created tracks.

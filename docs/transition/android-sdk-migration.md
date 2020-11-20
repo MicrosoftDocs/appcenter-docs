@@ -33,7 +33,7 @@ implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}
 implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
 ```
 
-Note that the App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
+The App Center SDK is designed with a modular approach – you can integrate only those services that you're interested in. Each SDK module needs to be added as a separate dependency in this section. See the equivalences in the next table:
 
 HockeyApp class  | App Center module
 ---------------- | -----------------
@@ -114,7 +114,7 @@ Identify users | [Documentation (crashes only)](https://support.hockeyapp.net/kb
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (cannot be disabled)](~/sdk/analytics/android.md#session-and-device-information)
+Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (can't be disabled)](~/sdk/analytics/android.md#session-and-device-information)
 Custom events with properties | [MetricsManager.trackEvent](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-5-add-user-metrics) | [Analytics.trackEvent](~/sdk/analytics/android.md#custom-events)
 Disable service at runtime | `MetricsManager.disableUserMetrics` and `MetricsManager.enableUserMetrics` | [Analytics.setEnabled](~/sdk/analytics/android.md#enable-or-disable-app-center-analytics-at-runtime)
 
@@ -132,7 +132,7 @@ Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getL
 
 > [!NOTE]
 > Unlike in HockeyApp, App Center in-app updates feature only works with **RELEASE** builds (by default) that are distributed using the **App Center Distribute** service.
- If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that will not occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/android.md#how-do-in-app-updates-work) for more details.
+ If the app is using a private distribution group, once the app is installed and opened for the first time after the App Center Distribute SDK has been added, a browser will open to authenticate the user and enable in-app updates. This browser will also open if you set the private in-app update track at runtime. This is a ONE-TIME step that won't occur for subsequent releases of your app. Refer to the [App Center Distribute Documentation](~/sdk/distribute/android.md#how-do-in-app-updates-work) for more details.
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---

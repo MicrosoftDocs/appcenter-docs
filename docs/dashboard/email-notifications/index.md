@@ -23,16 +23,16 @@ You can choose to have email notifications automatically sent for the following 
   - On build success:
     - **Always**: when your app builds successfully
     - **Only if previously failed**: when your app has successfully built after one or more failed builds
-    - **Never**: you will not receive notifications for build success
+    - **Never**: you won't receive notifications for build success
   - On build failure:
     - **Always**: when your app fails to build
     - **Only if previously successful**: when your app has failed to build after one or more successful builds
-    - **Never**: you will not receive notifications for build failure    
+    - **Never**: you won't receive notifications for build failure    
 
 - **Crashes**: 
     - **Immediately**: when a new crash group is created
     - **Daily**: a summary of all your new crash groups for that day will be sent at approximately 0:00 UTC
-    - **Never**: you will not receive notifications when a new crash group is created
+    - **Never**: you won't receive notifications when a new crash group is created
 
 > [!NOTE]
 > Only the top 3 crash groups based on number of occurrences will be included in the daily email. 
@@ -41,10 +41,10 @@ You can choose to have email notifications automatically sent for the following 
   - A new version is released:
     - **Immediately**: when a new version is released
     - **Daily**: a summary of all your releases for that day will be sent at approximately 0:00 UTC
-    - **Never**: you will not receive notifications when a new version is released
+    - **Never**: you won't receive notifications when a new version is released
   - Adding new devices to a release failed:
     - **Checked**: when adding new devices to a release failed
-    - **Unchecked**: you will not receive notifications when adding new devices to a release fails
+    - **Unchecked**: you won't receive notifications when adding new devices to a release fails
 - **Test:** when a test run completes
 
 ### Email notification preferences
@@ -75,7 +75,7 @@ The default email notification settings at the user-level are toggled **On**.
 
 App-level email notifications send information for the specific app to the user.
 
-1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the app you would like to configure email notifications for.
+1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the app you want to configure email notifications for.
 
 2. In the left panel, select **Settings** from the menu list.
 
@@ -93,9 +93,9 @@ The default email notification settings at the app-level are:
   - **Never** for Crashes
   - **Never** for Test events
 
-You will receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
+You'll receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
 
 ![Email notification for a successful build](media/emailSuccessfulBuild.png)
 
 > [!NOTE]
-> If your branch name contains alphanumeric characters other than `a-z`, `A-Z`, `0-9`, `-`, `+` and `/`, all email notifications will be successfully delivered. However, when you click on the **View Build** button in the email received, you might be directed to a non-existent page. This is due to the encodings for alphanumeric characters by some email services. We advise you to only use the supported characters in branch names. If this is a blocking issue for you, contact us via support.
+> If your branch name contains alphanumeric characters other than `a-z`, `A-Z`, `0-9`, `-`, `+` and `/`, all email notifications will be successfully delivered. However, when you click on the **View Build** button in the email received, you might be directed to a non-existent page. This is because of the encodings for alphanumeric characters by some email services. We advise you to only use the supported characters in branch names. If this is a blocking issue for you, contact us via support.

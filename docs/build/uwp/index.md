@@ -13,14 +13,14 @@ ms.tgt_pltfrm: windows
 ---
 
 # Building UWP C# apps for Windows
-To start building your first UWP app, you'll need to do these steps:
+To start building your first UWP app, do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
 3. Set up your first build.
 
 ## 1. Linking your repository
-First you need to connect to your repository service account. Once your account is connected, select the repository where your UWP project is located. To setup a build for a repository, you need admin and pull permission for it.
+First you must connect to your repository service account. Once your account is connected, select the repository where your UWP project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed. 
@@ -45,7 +45,7 @@ Select the platforms your UWP app should be built for.
 When enabled, the version number of your app automatically increments for each build. The version format is `{Major}.{Minor}.{Build}.{Revision}`, we only increase the Build number. The change happens pre build and won't be committed to your repository.
 
 ### 3.5. Simulator build
-Simulator builds can only be ran on simulators and can't be installed on the device, however the builds complete faster than device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
+Simulator builds can only be ran on simulators and can't be installed on the device, however the builds complete faster than device builds. If your build isn't a simulator build, you need to upload code signing files in the next step.
 
 ### 3.6. Code signing
 Uploading your own certificate is optional. In case you don't provide one, App Center will automatically generate a temporary certificate and sign the build for you. This certificate is unique for each build.

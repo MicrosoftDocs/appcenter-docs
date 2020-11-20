@@ -21,7 +21,7 @@ App Center Errors allow you to handle the errors in your app and avoid potential
 
 ## General information
 
-When running App Center in an application, the service reports all errors during the lifetime of the application. These errors are sent to the server when they occur (provided there is a network connection) or the next time the application is started.
+When running App Center in an application, the service reports all errors during the lifetime of the application. These errors are sent to the server when they occur (provided there's a network connection) or the next time the application is started.
 
 Learn more about our feature set in [our Errors documentation](~/errors/featureset.md).
 
@@ -46,7 +46,7 @@ There are a number of benefits using the `TrackError` method:
 
 #### Track Handled Errors in App Center
 
-Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you will be able to track errors by using the `TrackError` method:
+Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you can track errors by using the `TrackError` method:
 
 ```csharp
 try

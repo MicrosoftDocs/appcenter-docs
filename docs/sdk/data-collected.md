@@ -94,7 +94,7 @@ App Center SDKs send data to App Center services. The data sent varies by the SD
         The bundle identifier, package identifier, or namespace, depending on what the individual platform uses (example: com.microsoft.example)
 
 *	**Live Update Release Label (liveUpdateReleaseLabel)** 
-        The label that is used to identify the application code 'version' released via the Live Update beacon running on the device.
+        The label that's used to identify the application code 'version' released via the Live Update beacon running on the device.
 
 *	**Live Update Deployment Key (liveUpdateDeploymentKey)** 
         The identifier of the environment that current application release belongs to, deployment key then maps to environment like Production, Staging

@@ -64,7 +64,7 @@ There are two ways to run Xamarin.UITests according to category:
 * `nunit-console.exe` - The command-line runner for NUnit tests. It's also used to run Xamarin.UITests locally.
 
 > [!NOTE]
-> App Center does not honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
+> App Center doesn't honor the [`ExplicitAttribute`](http://www.nunit.org/index.php?p=explicit&r=2.6.4); tests marked as `Explicit` will still be run.
 
 ## Running Tests Locally by Category
 
@@ -87,7 +87,7 @@ nunit-console ./CreditCardValidator.iOS.UITests/bin/Debug/CreditCardValidator.iO
 ## Submitting Tests to App Center Test by Category
 
 > [!WARNING]
-> ️ NUnit category names which contain spaces cannot be specified for upload.
+> ️ NUnit category names that contain spaces can't be specified for upload.
 
 You can instruct App Center Test to run a subset of your tests using the `--include-category` parameter.  
 

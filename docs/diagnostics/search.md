@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Search in Diagnostics
 
-In this section, you will learn about the ability to search Diagnostics data in App Center.
+In this section, you'll learn about the ability to search Diagnostics data in App Center.
 
 ## How to use Search
 
@@ -25,7 +25,7 @@ App Center Diagnostics allows you to search for specific crashes and handled err
 
 App Center searches in the indexed fields, and can be done in two ways:
 
-1. Use the search box to include free text. Note that this text will be searched in just the indexed fields.
+1. Use the search box to include free text. This text will be searched in just the indexed fields.
 
   ![Free text search](~/diagnostics/images/crashes-results-freetext.png)
 
@@ -62,5 +62,5 @@ For crash and error groups:
 
 - Only symbolicated crashes are searchable; you must upload the symbols to search for them.
 - The maximum number of matching reports we display is 100.
-- Search results show the last 30 days of data, regardless of the retention settings.
+- Search results show the last 30 days of data, whatever the retention settings.
 - The report or group ID is only searchable via the search box, not the query builder. The group ID is the 10 digit string after `crashes/errors` in the URL of the crash or error group.  The crash and error report ID is the last 32 character string in the URL of the specific crash or error report. For example, your URL might look something like: `appcenter.ms/orgs/appcenter/apps/test-app/crashes/errors/3132303808u/reports/2518291138564839999-00000000-0000-0000-0000-000000000000/threads`. The group ID is `3132303808` and crash ID is `00000000-0000-0000-0000-000000000000`.

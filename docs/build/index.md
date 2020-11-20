@@ -23,7 +23,7 @@ With App Center's other services, you can further automate your workflow:
 
 ![App Center Build Getting Started](~/build/images/build_getting-started-dashboard.jpg)
 
-To get started using the Build service, you'll first need to connect to a source control system. On the Build getting started dashboard, select the repository where the app is located and then select the branch to be built. App Center currently supports building apps in Git repositories hosted on:
+To get started using the Build service, you first must connect to a source control system. On the Build getting started dashboard, select the repository where the app is located and then select the branch to be built. App Center currently supports building apps in Git repositories hosted on:
 
 - Azure DevOps (formerly Visual Studio Team Services or VSTS)
 - Bitbucket

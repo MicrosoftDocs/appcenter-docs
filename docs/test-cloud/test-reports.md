@@ -56,7 +56,7 @@ Click in the Test Runs navigation list on the left to view the summary for that 
 * The **Devices passed** graphic shows the percentage and number of devices on which all tests passed.
 * The **Tests** list displays the tests in the test run.
 
-Click on a test of interest in the detail pane and either the *Test overview* page or the *Test detail* page opens, depending on the number of devices in the test run. If there is one device, App Center opens the *Test detail* page and if there are multiple devices, App Center opens the *Test overview* page where you can navigate to a *Test detail* page for a specific device.
+Click on a test of interest in the detail pane and either the *Test overview* page or the *Test detail* page opens, depending on the number of devices in the test run. If there's one device, App Center opens the *Test detail* page and if there are multiple devices, App Center opens the *Test overview* page where you can navigate to a *Test detail* page for a specific device.
 
 ## Test overview
 
@@ -72,7 +72,7 @@ Click on a screenshot to navigate to the **Test detail** page for that device.
 
 ### Download the full sized screenshot
 
-To speed up the page rendering, all screenshots are resized to match multiple browser windows sizes. For larger screenshots, the test report automatically renders with the 50% screenshot. The API can be used to download the full sized screenshots by getting the test report `https://openapi.appcenter.ms/#/test/test_getTestReport` and from the report fetch the step report (step_report_url). Within the step report, there will be a field called original (/deviceScreenshots/*/screenshot/urls/original) that will point to the full size screenshot.
+To speed up the page rendering, all screenshots are resized to match multiple browser windows sizes. For larger screenshots, the test report automatically renders with the 50% screenshot. The API can be used to download the full sized screenshots by getting the test report `https://openapi.appcenter.ms/#/test/test_getTestReport` and from the report fetch the step report (step_report_url). Within the step report, there'll be a field called original (/deviceScreenshots/*/screenshot/urls/original) that will point to the full size screenshot.
 
 [Follow this link for instructions on how to use App Center's API](https://docs.microsoft.com/appcenter/api-docs/)
 
@@ -87,7 +87,7 @@ The **Tests** navigation list on the left shows the test step name or test label
 * The **Details** icon displays device information like memory, CPU speed, and dimensions.
 * Clicking the **Logs** icon will navigate to the *Test logs* page.
 * The **Hardware usage** graph displays the **Memory** and **CPU** utilization during the test. 
-* **Duration** shows the time to complete this test and test step. The test step time shown here is the test time starting with the displayed screenshot and the selected test step until the following screenshot. It is not the time ending with this screenshot.
+* **Duration** shows the time to complete this test and test step. The test step time shown here is the test time starting with the displayed screenshot and the selected test step until the following screenshot. It isn't the time ending with this screenshot.
 
 ## Test logs
 
@@ -107,7 +107,7 @@ Click the **Stack Trace** tab near the top of the page.
 
 Stack traces are errors captured during the test run. Any stack traces should be examined along with the test logs and device logs for more context to troubleshoot application issues.
 
-On iOS, the stack trace is relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it is relevant.
+On iOS, the stack trace is relevant to any issues with the tests. On Android, if your application code is included in part of the stack trace it's relevant.
 
 ### Device log tab
 

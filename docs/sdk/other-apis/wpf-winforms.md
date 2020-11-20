@@ -29,5 +29,5 @@ ms.tgt_pltfrm: wpf-winforms
 ## Other APIs
 
 The .NET NuGet package is shared with Xamarin and UWP, which have more functionalities.
-All the APIs that are not documented for WPF and WinForms in this page will return `null` or `false` and will not do anything on WPF and WinForms.
-The other APIs are visible so that you can use them in a portable library (such as when using the SDK in a Xamarin.Forms application that contains a UWP project), but those extra APIs are not implemented on WPF and WinForms.
+All the APIs that aren't documented for WPF and WinForms in this page will return `null` or `false` and won't do anything on WPF and WinForms.
+The other APIs are visible so that you can use them in a portable library (such as when using the SDK in a Xamarin.Forms application that contains a UWP project), but those extra APIs aren't implemented on WPF and WinForms.

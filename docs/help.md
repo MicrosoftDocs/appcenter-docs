@@ -38,12 +38,12 @@ The comments feature on our documentation is intended for docs suggestions or qu
 1. The **Feedback** section has two buttons:
    - **This product** - Learn how to connect with the App Center Support team. 
    - **This page** - Suggest changes to the document. 
-2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, you have to sign in with your GitHub account. 
+2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, you must sign in with your GitHub account. 
 3. **View on GitHub** - click to view suggestions directly on GitHub. This link isn't available on all pages.
 4. Prompt asking you if the current page is helpful. This prompt will be in different locations depending on the screen size. Your vote here helps us understand how we're doing.
 
 > [!Note]
-> **This product** is the preferred method to provide product feedback because it goes directly to the App Center product team and will get a quicker response. Voting whether the page is helpful simply records your vote (and comments), but doesn't allow us to directly respond to you.
+> **This product** is the preferred method to provide product feedback because it goes directly to the App Center product team and will get a quicker response. Voting whether the page is helpful records your vote (and comments), but doesn't allow us to directly respond to you.
 
 ### Feedback on the product
 We're constantly adding features and more capabilities to App Center. Do you not see your feature or are you curious about what new features are coming soon? We invite you to help shape the future of App Center by sharing your feedback on our [monthly public roadmap](https://github.com/Microsoft/appcenter/wiki/Iteration-Plans), or by submitting and upvoting [feature requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc).

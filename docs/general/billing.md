@@ -19,7 +19,7 @@ You can configure a billing plan for your App Center organization or user accoun
 3. In the panel that opens, select **Billing**.
 4. In the Billing settings page, click the **Configure Plan** button. The panel that appears will walk you through purchasing your new plan. The sliders in the panel default to the free tier; adjust the sliders to add more Build or Test concurrency.
    - For **Test**: To choose concurrent device(s) without device hours limits, choose the number of devices, then select **Enterprise usage** from the drop-down menu in the **Test** section.
-5. When you have completed customizing your billing plan, click the **Continue** button to save your changes.
+5. When you've completed customizing your billing plan, click the **Continue** button to save your changes.
    - To connect your user account to an Azure subscription, refer to the [Azure Subscriptions](~/general/azure-subscriptions.md) article.
    - If you already have one or more subscriptions associated with your user account, you can choose which one to use for billing.
 6. Follow the remaining steps to complete the configuration process.
@@ -31,7 +31,7 @@ You can configure a billing plan for your App Center organization or user accoun
 4. In the panel that opens, select **Billing**.
 5. In the Billing settings page, click the **Configure Plan** button. The panel that appears will walk you through purchasing your new plan. The sliders in the panel default to the free tier; adjust the sliders to add more Build or Test concurrency.
    - For **Test**: To choose concurrent device(s) without device hours limits, choose the number of devices, then select **Enterprise usage** from the drop-down menu in the **Test** section.
-6. When you have completed customizing your billing plan, click the **Continue** button to save your changes.
+6. When you've completed customizing your billing plan, click the **Continue** button to save your changes.
    - To connect your user account to an Azure subscription, refer to the [Azure Subscriptions](~/general/azure-subscriptions.md) article.
    - If you already have one or more subscriptions associated with your user account, you can choose which one to use for billing.
 7. Follow the remaining steps to complete the configuration process.
@@ -40,19 +40,19 @@ You can configure a billing plan for your App Center organization or user accoun
 
 - What happens if I delete my organization during the month?
 
-  You will lose the data from your org and will still pay for the full month.
+  You'll lose the data from your org and will still pay for the full month.
 
 - What happens if a paid user's subscription has an issue (credit card expiry)?
 
-  Azure will notify you via an email notification first. In App Center, you will be downgraded to the free tier temporarily until the subscription issue is fixed. Once it's fixed, we will convert you back to your previously selected paid plan.
+  Azure will notify you via an email notification first. In App Center, you'll be downgraded to the free tier temporarily until the subscription issue is fixed. Once it's fixed, we'll convert you back to your previously selected paid plan.
 
 - Can I downgrade during the month?
 
-  You can, but it will not take effect until the next calendar month.
+  You can, but it won't take effect until the next calendar month.
 
 - Can I use my Free Azure subscription or credits from my Dev Essentials subscription?
 
-  No, free Azure Subscriptions or credits from Dev Essentials subscriptions cannot be used to pay for App Center.
+  No, free Azure Subscriptions or credits from Dev Essentials subscriptions can't be used to pay for App Center.
 
 - Can I use an Azure Subscription with spending limits?
 

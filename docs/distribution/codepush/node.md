@@ -66,7 +66,7 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 >  `access key` here refers to an AppCenter API Token.
 
 - **addAccessKey(description: string): Promise&lt;AccessKey&gt;** - Creates a new access key with the specified description (e.g. "Azure DevOps CI").
-- **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If `manuallyProvisionDeployments` is set to true, the app will not create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
+- **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If `manuallyProvisionDeployments` is set to true, the app won't create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
 - **addCollaborator(appName: string, email: string): Promise&lt;void&gt;** - Adds the specified CodePush user as a collaborator to the specified CodePush app.
 - **addDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Creates a new deployment with the specified name, and associated with the specified app.
 - **clearDeploymentHistory(appName: string, deploymentName: string): Promise&lt;void&gt;** - Clears the release history associated with the specified app deployment.
@@ -98,6 +98,6 @@ When an error occurs in any of the methods, the promise will be rejected with a 
 - **statusCode**: An HTTP response code that identifies the category of error:
   - **CodePush.ERROR_GATEWAY_TIMEOUT**: A network error prevented you from connecting to the CodePush server.
   - **CodePush.ERROR_INTERNAL_SERVER**: An error occurred internally on the CodePush server.
-  - **CodePush.ERROR_NOT_FOUND**: The resource you are attempting to retrieve does not exist.
-  - **CodePush.ERROR_CONFLICT**: The resource you are attempting to create already exists.
+  - **CodePush.ERROR_NOT_FOUND**: The resource you're attempting to retrieve does not exist.
+  - **CodePush.ERROR_CONFLICT**: The resource you're attempting to create already exists.
   - **CodePush.ERROR_UNAUTHORIZED**: The access key you configured is invalid or expired.
