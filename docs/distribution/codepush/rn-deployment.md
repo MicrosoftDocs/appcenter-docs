@@ -15,7 +15,7 @@ ms.custom: distribute
 
 ## Multi-Deployment Testing
 
-In our [getting started](rn-get-started.md) docs, we illustrated how to configure the CodePush plugin using a specific deployment key. However, to effectively test your releases, it's critical that you leverage the `Staging` and `Production` deployments that we recommend making when you first create your CodePush app (or any custom deployments you may have created). This way, you never release an update to your end users that you haven't been able to validate yourself.
+In our [getting started](rn-get-started.md) docs, we illustrated how to configure the CodePush plugin using a specific deployment key. However, to effectively test your releases, it's critical that you use the `Staging` and `Production` deployments that we recommend making when you first create your CodePush app (or any custom deployments you may have created). This way, you never release an update to your end users that you haven't been able to validate yourself.
 
 > [!NOTE]
 > Our client-side rollback feature can help unblock users after installing a release that resulted in a crash, and server-side roll backs (i.e. `appcenter codepush rollback`) allow you to prevent additional users from installing a bad release once it's been identified. However, it's better if you can prevent an erroneous update from being broadly released in the first place.
@@ -246,7 +246,7 @@ Additionally, if you want to give them separate names and/or icons, you can modi
 
 ## Dynamic Deployment Assignment
 
-The above section illustrated how you can leverage multiple CodePush deployments to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and therefore, only they need a build that knows how to sync with staging. However, if you want to perform A/B tests, or provide early access of your app to certain users, it can prove useful to dynamically place specific users (or audiences) into specific deployments at runtime.
+The above section illustrated how you can use multiple CodePush deployments to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and therefore, only they need a build that knows how to sync with staging. However, if you want to perform A/B tests, or provide early access of your app to certain users, it can prove useful to dynamically place specific users (or audiences) into specific deployments at runtime.
 
 To achieve this workflow, specify the deployment key you want the current user to synchronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's **Info.plist** (iOS) or **MainActivity.java** (Android) files. This allows you to produce a build for staging or production, that's also capable of being dynamically "redirected" as needed.
 

@@ -17,7 +17,7 @@ ms.custom: distribute
 
 CodePush provides Cordova and React Native developers with multiple options to configure the end users update experience.
 
-This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
+This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Using these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
 
 > [!NOTE]
 > This tutorial doesn't cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
@@ -30,7 +30,7 @@ Silent mode updates are the simplest way to update an app and the least invasive
 codePush.sync();
 ```
 
-If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS). However, developers can modify the install behavior if they so choose, by leveraging the `installMode` parameter:
+If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS). However, developers can modify the install behavior by using the `installMode` parameter:
 
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: The update is downloaded but not installed immediately. The new content will be available the next time the application is started.
@@ -149,9 +149,9 @@ codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, on
 
 ## Automate your deployments with Azure DevOps
 
-Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to leverage the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
+Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to use the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
-This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
+This tutorial covers how to use Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
 
 ### Overview
 
@@ -170,7 +170,7 @@ In addition, Azure DevOps allows developers to extend the service by creating Az
 
 The CodePush service provides an Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
 
-Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
+Using the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
 ### Prerequisites
 
@@ -332,7 +332,7 @@ As a best practice, we recommend creating three release environments: "Staging",
 
 #### Install Azure DevOps extension
 
-To leverage the CodePush service as the release vehicle, you'll need to install another extension from the Azure DevOps Marketplace.
+To use the CodePush service as the release vehicle, you'll need to install another extension from the Azure DevOps Marketplace.
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 

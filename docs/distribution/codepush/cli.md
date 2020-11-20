@@ -65,7 +65,7 @@ appcenter tokens delete <machineName>
 
 ### Access Tokens
 
-To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub and/or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it's for):
+To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it's for):
 
 ```shell
 appcenter tokens create -d "Azure DevOps Integration"
@@ -216,7 +216,7 @@ Once your app has been configured to query for updates against the App Center se
 
 3. [Cordova](#releasing-updates-cordova) - Performs the same functionality as the general release command, but also handles the task of preparing the app update for you, instead of requiring you to run both `cordova prepare` (or `phonegap prepare`)  and then `appcenter codepush release`.
 
-Which of these commands you should use is mostly a matter of requirements and/or preference. However, we recommend using the relevant platform-specific command to start (since it greatly simplifies the experience), and then leverage the general purpose `release` command if/when greater control is needed.
+Which of these commands you should use is mostly a matter of requirements and/or preference. However, we recommend using the relevant platform-specific command to start (since it greatly simplifies the experience), and then use the general purpose `release` command if/when greater control is needed.
 
 > [!NOTE]
 > Only the 50 most recent releases in a deployment can be discovered and downloaded by the clients.
@@ -354,7 +354,7 @@ This parameter specifies that if the update is identical to the latest release o
 
 This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it's set to `100%`, and therefore, you only must set it if you want to limit how many users will receive it.
 
- When leveraging the rollout capability, there are a few additional considerations to keep in mind:
+ When using the rollout capability, there are a few additional considerations to keep in mind:
 
 1. You can't release a new update to a deployment whose latest release is an "active" rollout (its rollout property is non-null). The rollout needs to be "completed" (setting the `rollout` property to `100`) before you can release further updates to the deployment.
 
