@@ -285,7 +285,7 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash.
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and isn't considered a crash.
 
 ### Add attachments to an unhandled exception report
 

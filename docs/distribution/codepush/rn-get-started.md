@@ -51,7 +51,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
    > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
 
-   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds. We recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still using the Chrome Dev Tools, live reload, etc. at debug-time.
 
    Your `sourceURLForBridge` method should look like this:
 
@@ -163,7 +163,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
+Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
 
 1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 
@@ -204,7 +204,7 @@ This change configures your app to always load the most recent version of your a
 > [!NOTE]
 > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
-Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds. We recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still using the Chrome Dev Tools, live reload, etc. at debug-time.
 
 For React Native 0.59 - 0.59.10:
 
@@ -293,7 +293,7 @@ MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANkWYydPuyOumR/sn2agNBVDnzyRpM16NAUpYPGxNgjSEp0e
 
 ## Android Setup
 
-To integrate CodePush into your Android project, perform the following steps:
+To integrate CodePush into your Android project, do the following steps:
 
 ### Plugin Installation (Android)
 

@@ -31,7 +31,7 @@ Taking advantage of the `Staging` and `Production` deployments allows you to ach
 4. Run your production/release build of your app, sync the update from the server and verify it works as expected
 
    > [!TIP]
-   > If you want to take a more cautious approach, you can even choose to perform a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `appcenter codepush promote -a <ownerName>/<appName> -s Staging -d Production -r 20`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100`.
+   > If you want to take a more cautious approach, you can even choose to do a "staged rollout" as part of #3, which allows you to mitigate additional potential risk with the update (like did your testing in #2 touch all possible devices/conditions?) by only making the production update available to a percentage of your users (for example `appcenter codepush promote -a <ownerName>/<appName> -s Staging -d Production -r 20`). Then, after waiting for a reasonable amount of time to see if any crash reports or customer feedback comes in, you can expand it to your entire audience by running `appcenter codepush patch -a <ownerName>/<appName> Production -r 100`.
 
 The steps above refer to a "staging build" and "production build" of your app. If your build process already generates distinct binaries per "environment", then you don't need to read any further, since swapping out CodePush deployment keys is like handling environment-specific config for any other service your app uses (like Facebook). However, if you're looking for examples on how to setup your build process to accommodate this, then refer to the following sections, depending on the platforms your app is targeting.
 
@@ -42,7 +42,7 @@ The [Android Gradle plugin](https://google.github.io/android-gradle-dsl/current/
 > [!NOTE]
 > As a reminder, you can retrieve these keys by running `appcenter codepush deployment list -a <ownerName>/<appName> -k` from your terminal.
 
-To set this up, perform the following steps:
+To set this up, follow these steps:
 
 **For React Native >= v0.60**
 
@@ -166,7 +166,7 @@ And that's it! Now when you run or build your app, your debug builds will automa
 > [!NOTE]
 > By default, the `react-native run-android` command builds and deploys the debug version of your app, so if you want to test out a release/production build, run `react-native run-android --variant release. Refer to the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#conten) for details about how to configure and create release builds for your Android apps.
 
-If you want to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS, or you, can differentiate between the two. You can configure unique identities by performing the following steps:
+If you want to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS, or you, can differentiate between the two. You can configure unique identities by doing the following steps:
 
 1. In your **build.gradle** file, specify the [`applicationIdSuffix`](https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
 
@@ -192,7 +192,7 @@ And that's it! Refer to [resource merging](https://developer.android.com/studio/
 
 Xcode allows you to define custom build settings for each "configuration" (like debug, release), which can be referenced as the value of keys within the **Info.plist** file (like the `CodePushDeploymentKey` setting). This mechanism allows you to easily configure your builds to produce binaries, which are configured to synchronize with different CodePush deployments.
 
-To set this up, perform the following steps:
+To set this up, follow these steps:
 
 1. Open up your Xcode project and select your project in the **Project navigator** window
 
@@ -246,7 +246,7 @@ Additionally, if you want to give them separate names and/or icons, you can modi
 
 ## Dynamic Deployment Assignment
 
-The above section illustrated how you can use multiple CodePush deployments to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and therefore, only they need a build that knows how to sync with staging. However, if you want to perform A/B tests, or provide early access of your app to certain users, it can prove useful to dynamically place specific users (or audiences) into specific deployments at runtime.
+The above section illustrated how you can use multiple CodePush deployments to effectively test your updates before broadly releasing them to your end users. However, since that workflow statically embeds the deployment assignment into the actual binary, a staging or production build will only ever sync updates from that deployment. In many cases, this is sufficient, since you only want your team, customers, stakeholders, etc. to sync with your pre-production releases, and so, they only need a build that knows how to sync with staging. However, if you want to do A/B tests, or provide early access of your app to certain users, it can prove useful to dynamically place specific users (or audiences) into specific deployments at runtime.
 
 To achieve this workflow, specify the deployment key you want the current user to synchronize with when calling the `codePush` method. When specified, this key will override the "default" one that was provided in your app's **Info.plist** (iOS) or **MainActivity.java** (Android) files. This allows you to produce a build for staging or production, that's also capable of being dynamically "redirected" as needed.
 
@@ -258,14 +258,14 @@ codePush.sync({ deploymentKey: userProfile.CODEPUSH_KEY });
 
 With that change in place, now it's a matter of choosing how your app determines the right deployment key for the current user. In practice, there are typically two solutions for this:
 
-1. Expose a user-visible mechanism for changing deployments at any time. For example, your settings page could have a toggle for enabling "beta" access. This model works well if you're not concerned with the privacy of your pre-production updates, and you have power users that may want to opt-in to earlier (and potentially buggy) updates at their own will (like Chrome channels). However, this solution puts the decision in the hands of your users, which doesn't help you perform A/B tests transparently.
+1. Expose a user-visible mechanism for changing deployments at any time. For example, your settings page could have a toggle for enabling "beta" access. This model works well if you're not concerned with the privacy of your pre-production updates, and you have power users that may want to opt-in to earlier (and potentially buggy) updates at their own will (like Chrome channels). However, this solution puts the decision in the hands of your users, which doesn't help you run A/B tests transparently.
 
 2. Annotate the server-side profile of your users with an additional piece of metadata that indicates the deployment they should sync with. By default, your app could use the binary-embedded key, but after a user has authenticated, your server can choose to "redirect" them to a different deployment, which allows you to incrementally place certain users or groups in different deployments as needed. You could even choose to store the server-response in local storage so that it becomes the new default. How you store the key alongside your user's profiles is entirely up to your authentication solution (for example Auth0, Firebase, custom DB + REST API), but is generally pretty trivial to do.
 
    > [!NOTE]
    > If needed, you could also implement a hybrid solution that allowed your end-users to toggle between different deployments, while also allowing your server to override that decision. This way, you have a hierarchy of "deployment resolution" that ensures your app has the ability to update itself out-of-the-box, your end users can feel rewarded by getting early access to bits, but you also have the ability to run A/B tests on your users as needed.
 
-Since we recommend using the `Staging` deployment for pre-release testing of your updates (as explained in the previous section), it doesn't necessarily make sense to use it for performing A/B tests on your users, as opposed to allowing early-access (as explained in option #1 above). Therefore, we recommend making full use of custom app deployments, so that you can segment your users however makes sense for your needs. For example, you could create long-term or even one-off deployments, release a variant of your app to it, and then place certain users into it to see how they engage.
+Since we recommend using the `Staging` deployment for pre-release testing of your updates (as explained in the previous section), it doesn't necessarily make sense to use it for A/B tests on your users, as opposed to allowing early-access (as explained in option #1 above). So, we recommend making full use of custom app deployments, so that you can segment your users however makes sense for your needs. For example, you could create long-term or even one-off deployments, release a variant of your app to it, and then place certain users into it to see how they engage.
 
 ```javascript
 // #1) Create your new deployment to hold releases of a specific app variant

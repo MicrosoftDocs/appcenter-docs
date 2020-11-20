@@ -68,11 +68,11 @@ Registering a device means making it part of the list of devices on the Apple De
 3. Once you sign in with your Apple username and password, App Center adds the unprovisioned devices to both your Apple developer account and the releases provisioning profile.
 4. Optionally you can upload a .p12 file to re-sign the app and distribute it to the newly added devices. Read more on [how to generate a .p12 file](#how-to-generate-a-p12-file).
 
-If you prefer to handle re-building your app with the updated provisioning profile separately, you can still use App Center to register your tester's devices automatically in the Apple developer portal without performing the re-signing step. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
+If you prefer to handle re-building your app with the updated provisioning profile separately, you can still use App Center to register your tester's devices automatically in the Apple developer portal without the re-signing step. To do this, leave **Re-sign my app** unchecked and download the updated provisioning profile with the button on the review screen. You can also download the provisioning profile through Xcode or the Apple Developer portal.
 
 ## Distribute a new release
 
-When you distribute a new release to a group that doesn't have automatic device management enabled, a **Devices** step is part of the wizard. The step checks if you have unprovisioned devices in the distribution group; if this happens, you can check the **Register devices and re-sign app** checkbox. App Center then performs three operations for you:
+When you distribute a new release to a group that doesn't have automatic device management enabled, a **Devices** step is part of the wizard. The step checks if you have unprovisioned devices in the distribution group; if this happens, you can check the **Register devices and re-sign app** checkbox. App Center then runs three operations for you:
 
 1. Register new device IDs in the Apple Developer portal.
 2. Add the devices to the provisioning profile and download it.
@@ -96,7 +96,7 @@ You can store an Apple distribution certificate and private key in a Private Inf
 
 1. Open the **Keychain Access** app on your Mac and select the **My Certificates** category on the left.
 2. Find the right distribution certificate and expand it to see the corresponding private key.
-  a. If the private key isn't there, you must either create a new certificate or perform these steps on the machine where you created the certificate.
+  a. If the private key isn't there, you must either create a new certificate or run these steps on the machine where you created the certificate.
 3. Select either the certificate or the private key or both. Then right-click on the selected item(s) to get the context menu and select the action that starts with **Export**. ![Export certificate from keychain](images/ios-keychain-certificates.png)
 4. Select a location on disk to save the file as a .p12. Choose a strong password for the file.
 

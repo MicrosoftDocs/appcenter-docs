@@ -30,7 +30,7 @@ An author could also choose to write in third person. In that model, an author m
 The first paragraph follows our recommended style. The second uses third person. Please write in second person. You probably found that much easier to read.
 
 ### Use Active Voice
-Write your articles in active voice. Active voice means that the subject of the sentence performs the action (verb) of that sentence. It contrasts with passive voice, where the sentence is arranged such that the subject of the sentence is acted upon. Contrast these two examples:
+Write your articles in active voice. Active voice means that the subject of the sentence does the action (verb) of that sentence. It contrasts with passive voice, where the sentence is arranged such that the subject of the sentence is acted upon. Contrast these two examples:
 
 > The compiler transformed source code into an executable.
 

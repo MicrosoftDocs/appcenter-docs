@@ -417,7 +417,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it's helpful to determine if user has tapped push notification. To perform this task, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it's helpful to determine if user has tapped push notification. For this task, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -447,7 +447,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
     }
     ```
 
-3. Implement the following callback to detect various actions performed by users with push notifications:
+3. Implement the following callback to detect various actions by users with push notifications:
 
     ```objc
     // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.

@@ -54,7 +54,7 @@ When you click on an app, App Center displays additional information about the a
 
 ![App Details View in the Portal](images/a-appdetails-installportal.png)
 
-Clicking this button initiates the application install, which results in the app being placed onto your home screen.
+Clicking this button starts the application install, which results in the app being placed onto your home screen.
 
 Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps)  and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
 
@@ -66,7 +66,7 @@ To get started using our native app, download it from the [Google Play Store](ht
 
 This app allows you to manage all of your apps and their releases within the app, rather than navigating to our install portal.
 
-After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this initiates the installation process on your phone.
+After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this starts the installation process on your phone.
 
 ![App Details View in the  App](images/a-appdetails-app.png)
 

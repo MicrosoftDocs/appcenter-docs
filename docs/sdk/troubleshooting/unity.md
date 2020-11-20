@@ -41,7 +41,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 6. At times, logs might take a few minutes to surface in the portal. Wait for some time if that’s the case.
 7. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it's been sent.
-9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
+9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and it isn't considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
 
 ## Protect the App Center secret value
 

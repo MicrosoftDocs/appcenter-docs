@@ -22,7 +22,7 @@ The CodePush plugin helps get product improvements in front of your end users in
 To ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to [roll back](./cli.md#rolling-back-updates) on the server.
 
 > [!NOTE]
-> Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).
+> Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) can't be distributed via CodePush, and so, must be updated via the appropriate store(s).
 
 ## Supported React Native platforms
 
@@ -86,7 +86,7 @@ We'll update this list as new core components are released, which support refere
 ## Store Guideline Compliance
 While Google Play and internally distributed apps (for example Enterprise, Fabric, HockeyApp) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
 
-[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed performing over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
+[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
 
 > Interpreted code may be downloaded to an Application but only so long as such code: (a) doesn't change the primary purpose of the Application by providing features or functionality that's inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) doesn't bypass signing, sandbox, or other security features of the OS.
 
@@ -100,7 +100,7 @@ This isn't necessarily the case for `updateDialog`, since it won't force the use
 
 ## Example Apps / Starters
 
-The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following list is of OSS React Native apps that are also using CodePush, and can therefore be used to see how others are using the service:
+The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following list is of OSS React Native apps that are also using CodePush, and can be used to see how others are using the service:
 
 - [F8 App](https://github.com/fbsamples/f8app) - The official conference app for [F8 2016](https://www.fbf8.com/).
 - [Feline for Product Hunt](https://github.com/arjunkomath/Feline-for-Product-Hunt) - An Android client for Product Hunt.
@@ -117,7 +117,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 
 ## Continuous Integration / Delivery
 
-In addition to being able to use the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you and/or your team to create and maintain the rhythm of performing agile deployments. To assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
+In addition to using the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you and/or your team to create and maintain the rhythm of agile deployments. To assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
 
 - [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)

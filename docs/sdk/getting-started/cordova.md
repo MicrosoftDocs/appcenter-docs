@@ -116,7 +116,7 @@ Open the Apache Cordova project's **config.xml** file; for each of your Apache C
 ```
 In this example, you're adding an element with a `name` attribute with a value of `APP_SECRET`, and a `value` attribute with the value shown in the example. Here, the `0000-0000-0000-0000-000000000000` shown in the example is an arbitrary representation of a App Center project app secret. Replace the app secret shown in the example with the actual app secret for your App Center project.
 
-As a complete example, for a Apache Cordova project that supports both Android and iOS targets, you'll have separate app project definitions in App Center, and therefore different app secret values for each target platform. The relevant section of the project's **config.xml** file will look like the following:
+As a complete example, for a Apache Cordova project that supports both Android and iOS targets, you'll have separate app project definitions in App Center, and so, different app secret values for each target platform. The relevant section of the project's **config.xml** file will look like the following:
 
 ```xml
 <platform name="android">
