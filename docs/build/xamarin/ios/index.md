@@ -23,13 +23,13 @@ To start building your first Xamarin iOS app, you'll need to:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
 2. Select a repository and a branch where your app lives.
-3. Configure the build's project or workspace, and the scheme you would like to build.
+3. Configure the build's project or workspace, and the scheme you want to build.
 
 > [!NOTE]
 > For the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
 
 ## 1. Linking your repository
-If you haven't previously connected to your repository service account, you'll need to connect it. Once your account is connected, select the repository where your iOS project is located. To set up a build for a repository, you need admin and pull permission for it.
+If you haven't previously connected to your repository service account, you must connect it. Once your account is connected, select the repository where your iOS project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default all the active branches will be listed.
@@ -38,7 +38,7 @@ After selecting a repository, select the branch you want to build. By default al
 Before your first build, the Xamarin project needs to be configured.
 
 ### 3.1. Project/solution
-App Center automatically detects the solution and project files in your repository if they're located within the range of analysis. Select the **.sln** or **.csproj/.fsproj** you would like to build.
+App Center automatically detects the solution and project files in your repository if they're located within the range of analysis. Select the **.sln** or **.csproj/.fsproj** you want to build.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to two directory levels for **.sln** and four directory levels for **.csproj/fsproj** including the root of your repository.
@@ -50,7 +50,7 @@ In your code make sure to disable Android and UWP projects for build configs tha
 To build from a **.csproj/.fsproj** file all the referenced projects (for example, your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in App Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
 
 ### 3.2. Configuration
-Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
+Select the configuration you want to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
 ### 3.3. Mono version
 App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono version, you'll see the Xamarin.iOS SDK version that's bundled with it. To track Xamarin SDK version updates, you can read posts in the [Xamarin release blog](https://releases.xamarin.com/).
@@ -144,9 +144,9 @@ After a build has been triggered, it can be in the following states:
 
 * **queued** - The build is in a queue waiting for resources to be freed up.
 * **building** - The build is running and executing the predefined tasks.
-* **succeeded** - The build is completed and it has succeeded.
-* **failed** - The build has completed but it has failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
-* **canceled** - The build has been canceled by a user action or it has timed out.
+* **succeeded** - The build is completed and it's succeeded.
+* **failed** - The build has completed but it's failed. You can troubleshoot what went wrong by downloading and inspecting the build log.
+* **canceled** - The build has been canceled by a user action or it's timed out.
 
 ### 4.1. Build logs
 For a completed build (succeeded or failed), download the logs to understand more about how the build went. App Center provides an archive with the following files:

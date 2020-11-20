@@ -104,14 +104,14 @@ cordova plugin add cordova-plugin-appcenter-push
 
 ## Intercept push notifications
 
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enabled [silent notifications](~/sdk/push/react-native-ios.md#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md) flag set to true.
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you've enabled [silent notifications](~/sdk/push/react-native-ios.md#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](~/push/index.md) flag set to true.
 
 > [!NOTE]
-> If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+> If silent notifications are enabled and you push a notification with `content-available: 1`, then the listener may be triggered twice for the same notification: when the notification is received in background and when it's tapped.
 
-By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+By default, iOS doesn't generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
-You need to register the listener when your app starts. A convenient place to do that is at `app.onDeviceReady` method of your `js/index.js:
+You need to register the listener when your app starts. A convenient place to do that's at the `app.onDeviceReady` method of your `js/index.js:
 
 ```js
 var app = {

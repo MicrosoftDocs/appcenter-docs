@@ -16,7 +16,7 @@ Put all .so files from the project's `obj/local/$ABI/` directory into a .zip fil
 1. Dump the symbols using the Breakpad toolchain as described in the [Breakpad documentation](https://chromium.googlesource.com/breakpad/breakpad/+/master/README.ANDROID#93) under section "Get the debugging symbols".
 2. Create a **symbols.zip** file with the following structure:
 > [!NOTE]
-> If you are uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
+> If you're uploading your symbols from macOS, then you must clean your symbols of any extraneous folders, e.g. __MACOS gets generated and to delete this you can use `zip -d <symbols.zip> __MACOSX/\*`.
 
 ```text
 $ unzip -l symbols.zip

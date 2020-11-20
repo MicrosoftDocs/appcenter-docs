@@ -16,7 +16,7 @@ ms.custom: api
 ## App Center OpenAPI Specification (Swagger)
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 
-The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can interactively call App Center APIs to learn about the API and see what data it returns.
+The App Center OpenAPI specification allows you to authenticate using your API token. Once you're authenticated, you can call App Center APIs to learn about the API and see what data it returns.
 
 ## <a name="section02"></a>Types of tokens: user tokens and app tokens
 App Center exposes two kinds of API tokens: user tokens, and app tokens.
@@ -31,7 +31,7 @@ Each App Center account may create up to 5000 API tokens.
 > We recommend creating and using App API tokens to limit the authorization scope to only one app at a time (and therefore limit the risk if a token is exposed). If you need to automate something beyond just one app, like working with organizations or shared distribution groups, you should create a User API token.
 
 > [!WARNING]
-> Do not embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
+> Don't embed API tokens into source code. API tokens should be treated as secrets, and stored securely.
 
 > [!WARNING]
 > **A request must contain a payload body** for POST/PUT/PATCH API calls. Use `{}` for an empty payload body, API calls will receive a **411 Length Required** error response otherwise.
@@ -84,7 +84,7 @@ You can find the app name and owner name from an App Center URL, or using the [A
 ### Find owner_name and app_name from an App Center URL
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. Navigate to your app.
-3. When you look at your app's URL, it is in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
+3. When you look at your app's URL, it's in the format `https://appcenter.ms/users/{owner-name}/apps/{app-name}`.
 
 Owner can be a user or an organization. For example:
 

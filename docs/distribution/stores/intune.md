@@ -20,7 +20,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 * Create a [DNS CNAME](https://docs.microsoft.com/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
 * Manually [add users](https://docs.microsoft.com/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator permission.
 * Create [groups](https://docs.microsoft.com/intune/groups-add) to organize users or devices by geographic location, department, or hardware characteristics.
-* It's important to note that Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. The tenants Azure Active Directory (AD) global admin needs to give consent. To provide this consent, the global admin of your company's Azure Active Directory global admin will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph APIs. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). Providing consent is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, can navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
+* Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. The tenants Azure Active Directory (AD) global admin needs to give consent. To provide this consent, the global admin of your company's Azure Active Directory global admin will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph APIs. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). Providing consent is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, can navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
 * For more information, review the [introduction to Intune](https://docs.microsoft.com/intune/introduction-intune).
 
 
@@ -34,7 +34,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 6. **Select Category** of the app from the drop-down.
 7. For **Audience**, provide the Azure AD group (security or O365) name to distribute this application to. The early version of this feature requires the developer to know the Azure AD group that the app is being distributed to. The Intune administrator that connected App Center to the Intune Graph API in step 1.3 must be a member of the group for it to be eligible and appear in the autocomplete drop-down.
 8. Click **Connect**.
-9. A connection to Intune Company Portal has now been set up. You should be able to see a store with the name provided on the **Stores** home page. The connection is valid for 90 days for an application in App Center. 
+9. A connection to Intune Company Portal has now been set up. You should see a store with the name provided on the **Stores** home page. The connection is valid for 90 days for an application in App Center. 
 
 
 ## Step 2: Publish your application to the Intune Company Portal
@@ -67,7 +67,7 @@ You'll get a result like this:
 [["Alpha","googleplay","alpha"],["Beta","googleplay","beta"],["Production","googleplay","production"]
 ```
 
-And it's the Store column we will use in the final step.
+And it's the Store column we'll use in the final step.
 
 The final step is to publish your app by running:
 

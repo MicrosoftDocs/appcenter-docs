@@ -17,7 +17,7 @@ To build your first native iOS app, you must take the following actions:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps)
 2. Select a repository and a branch where your app lives
-3. Configure the build's project or workspace, and the scheme you would like to build
+3. Configure the build's project or workspace, and the scheme you want to build
 
 > [!NOTE]
 > To run the app on a real device, the build must be code signed with a valid provisioning profile and a certificate.

@@ -36,4 +36,4 @@ ms.assetid: faef539f-3bbe-43b5-af8c-7f48a14340ed
 
 5. Click **Save** at the bottom of the page, and the build will begin.
 
-The build should complete after a couple minutes. Once the build has completed, you can download the results by clicking **Download**. This will include logs and, if the build was successful, build output and symbols. 
+The build should complete after a couple minutes. Once the build has completed, you can download the results by clicking **Download**. This includes logs and, if the build was successful, build output and symbols. 

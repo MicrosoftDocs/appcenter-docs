@@ -18,7 +18,7 @@ dev_langs:
 
 Asynchronous APIs return a `AppCenterFuture` object instead of returning the result directly.
 
-You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this, filling in the respective return types when calling the desired API:
+You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this, filling in the respective return types when calling the API:
 
 ```java
 AppCenterFuture<{ReturnType}> future = {AnyAsyncApi}();
@@ -42,7 +42,7 @@ future.thenAccept(object : AppCenterConsumer<{ReturnType}> {
 
 To avoid blocking UI thread that causes slowing down your application, consider using `thenAccept` with the callback all the time.
 
-On a worker thread you can simply call `{AnyAsyncApi}().get()`.
+On a worker thread you can call `{AnyAsyncApi}().get()`.
 
 Callback example:
 

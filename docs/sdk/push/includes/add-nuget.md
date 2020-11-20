@@ -23,7 +23,7 @@ ms.date: 12/02/2019
 #### Package Manager Console
 
 * Open the console in [Visual Studio](https://visualstudio.microsoft.com/vs/). To do this, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-* If you're working in **Visual Studio for Mac**, make sure you have **NuGet Package Management Extensions** installed. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
+* If you're working in **Visual Studio for Mac**, make sure you've installed **NuGet Package Management Extensions**. For this, choose **Visual Studio** > **Extensions**, search for **NuGet** and install, if necessary.
 * Type the following command in Package Manager Console:
 
 ```shell
@@ -34,5 +34,5 @@ Install-Package Microsoft.AppCenter.Push
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
 
 > [!NOTE]
-> If your Android project does not target the Mono framework version 9.0 or higher, you will not be able to install the package.
+> If your Android project doesn't target the Mono framework version 9.0 or higher, you won't be able to install the package.
 > You can safely bump this version in **Options > General > Target framework** as this has no impact on minimum API level or target API level fields.

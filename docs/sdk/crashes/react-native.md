@@ -28,7 +28,7 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 Follow the [Getting Started](~/sdk/getting-started/react-native.md) section if you haven't set up the SDK in your application yet.
 
-Wherever you are using App Center Crashes, add the following import at the top of the file.
+Wherever you're using App Center Crashes, add the following import at the top of the file.
 ```javascript
 // Import App Center Crashes at the top of the file.
 import Crashes from 'appcenter-crashes';
@@ -52,7 +52,7 @@ throw new Error('This is a test javascript crash!');
 > Your React Native app needs to be compiled in **release mode** for this crash to be sent to App Center.
 
 > [!NOTE]
-> At this time, App Center does not support source maps to unminify JavaScript stack traces for Android React Native apps.
+> At this time, App Center doesn't support source maps to unminify JavaScript stack traces for Android React Native apps.
 
 > [!NOTE]
 > It's best practice to avoid JavaScript `throw` statement with a string value (e.g.: `throw 'message'`), as [React Native doesn't preserve full JavaScript stack](https://github.com/facebook/react-native/blob/v0.57.1/Libraries/Core/ExceptionsManager.js#L67-L71) in this scenario. Instead, `throw` a JavaScript `Error` (e.g.: `throw Error('message')`).
@@ -70,7 +70,7 @@ const hadLowMemoryWarning = await Crashes.hasReceivedMemoryWarningInLastSession(
 ```
 
 > [!NOTE]
-> In some cases, a device with low memory may not be able to send events.
+> In some cases, a device with low memory may not send events.
 
 ### Did the app crash in the previous session?
 
@@ -105,7 +105,7 @@ All the different callbacks of the event listener are discussed one by one in th
 
 ### Should the crash be processed?
 
-Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
+Implement this callback if you want to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to App Center.
 
 ```javascript
 Crashes.setListener({
@@ -115,7 +115,7 @@ Crashes.setListener({
     },
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -128,10 +128,10 @@ Crashes.setListener({
 
 If user privacy is important to you, you should get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
 
@@ -140,14 +140,14 @@ Crashes.setListener({
 
     shouldAwaitUserConfirmation: function (report) {
 
-        // Build your own UI to ask for user consent here. SDK does not provide one by default.
+        // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
         // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
         return true;
     },
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -169,7 +169,7 @@ Crashes.notifyUserConfirmation(UserConfirmation.ALWAYS_SEND);
 
 ### Get information about the sending status for a crash log
 
-At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
+At times, you want to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. App Center Crashes has three different callbacks that you can use in your app to be notified of what's going on.
 
 To do this, you must define an event listener in your code as shown in the following example:
 
@@ -182,11 +182,11 @@ Crashes.setListener({
         // called when crash report sent successfully.
     },
     onSendingFailed: function (report) {
-        // called when crash report could not be sent.
+        // called when crash report couldn't be sent.
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -202,11 +202,11 @@ All callbacks are optional. You don't have to provide all 3 methods in the event
 
 Receiving `onSendingFailed` means a non-recoverable error such as a **4xx** code occurred. For example, **401** means the `appSecret` is wrong.
 
-Note that this callback is not triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or we have an outage on the endpoint and you restart the app, `onBeforeSending` is triggered again after process restart.
+This callback isn't triggered if it's a network issue. In this case, the SDK keeps retrying (and also pauses retries while the network connection is down). In case we have network issues or an outage on the endpoint, and you restart the app, `onBeforeSending` is triggered again after process restart.
 
 ### Add attachments to a crash report
 
-You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It will not be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
+You can add binary and text attachments to a crash report. The SDK will send them along with the crash so that you can see them in App Center portal. The following callback is invoked right before sending the stored crash from previous application launches. It won't be invoked when the crash happens. Be sure the attachment file is **not** named `minidump.dmp` as that name is reserved for minidump files. Here is an example of how to attach text and an image to a crash:
 
 ```javascript
 import Crashes, { ErrorAttachmentLog } from 'appcenter-crashes';
@@ -219,7 +219,7 @@ Crashes.setListener({
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -242,7 +242,7 @@ Crashes.setListener({
     }
 
     // Other callbacks must also be defined at the same time if used.
-    // Default values are used if a method with return parameter is not defined.
+    // Default values are used if a method with return parameter isn't defined.
 });
 ```
 
@@ -280,7 +280,7 @@ Example:
 
 ## Enable or disable App Center Crashes at runtime
 
-You can enable and disable App Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+You can enable and disable App Center Crashes at runtime. If you disable it, the SDK won't do any crash reporting for the app.
 
 ```javascript
 await Crashes.setEnabled(false);

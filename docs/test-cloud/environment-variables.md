@@ -129,7 +129,7 @@ string appCenterTest = Environment.GetEnvironmentVariable("APP_CENTER_TEST");
 > [!NOTE]
 > See [Support by framework](#support-by-framework) for details of which frameworks support application variables in App Center Test.
 
-Since Android does not support environment variables, App Center Test sets `InstrumentationRegistry` values instead. The following code snippet shows how to access the `InstrumentationRegistry` values.
+Since Android doesn't support environment variables, App Center Test sets `InstrumentationRegistry` values instead. The following code snippet shows how to access the `InstrumentationRegistry` values.
 
 ```java
 

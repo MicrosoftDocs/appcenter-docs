@@ -34,7 +34,7 @@ Let's get started with setting up App Center UWP SDK in your app to use App Cent
 Before you begin, make sure that the following prerequisites are met:
 
 * Your project is set up in Visual Studio 2017 Update 15.9 or later.
-* You are targeting devices running Windows 10 build 16299 or later.
+* You're targeting devices running Windows 10 build 16299 or later.
 * Your project references Universal Windows Platform [6.2.8](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.2.8) or later (this package is typically referenced implicitly).
 * NuGet 4.3 or later.
 
@@ -84,7 +84,7 @@ In Visual Studio solution explorer, double-click the **Package.appxmanifest** fi
 
 ## 5. Start the SDK
 
-In order to use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 ### 5.1 Add the using directives
 
@@ -112,8 +112,8 @@ The Getting Started page contains the above code sample with your App Secret in 
 
 The example above shows how to use the `Start()` method and includes App Center Analytics.
 
-Note that, unless you explicitly specify each service as parameters in the start method, you can't use that App Center service. In addition, the `Start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the services included in the first call will be available.
+Unless you explicitly specify each service as parameters in the start method, you can't use that App Center service. In addition, the `Start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the services included in the first call will be available.
 
-Great, you are all set to visualize Analytics on the portal that the SDK collects automatically.
+Great, you're all set to visualize Analytics on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) and [App Center Crashes](~/sdk/crashes/wpf-winforms.md) to learn how to customize and use more advanced functionalities of both services.

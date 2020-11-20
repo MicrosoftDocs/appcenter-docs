@@ -39,4 +39,4 @@ You can read more about how to ask for the user's consent to send Analytics data
 4. If the user chooses '**No**', in your application code, you can call this App Center SDK API which disables sending of data to App Center backend. Make sure to pass the parameter as '**false**' in the API.
 
 
-You are done. Your app users should see this consent dialog box when they interact with the app. 
+You're done. Your app users should see this consent dialog box when they interact with the app. 

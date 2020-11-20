@@ -31,7 +31,7 @@ ms.tgt_pltfrm: react-native
 > * [Unity Windows](unity-windows.md)
 > 
 > [!NOTE]
-> For Android developers using App Center, there is a change coming where Firebase SDK is required to use Push Notifications. For Android P, its required at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. For additional information, refer to the [App Center React Native migration guide](migration/react-native-android.md).
+> For Android developers using App Center, there's a change coming where Firebase SDK is required to use Push Notifications. For Android P, its required at the release date for the latest OS version. For all other versions of Android, it will be required after April 2019. For additional information, refer to the [App Center React Native migration guide](migration/react-native-android.md).
 
 [!INCLUDE [introduction to android](includes/introduction-android.md)]
 
@@ -88,7 +88,7 @@ First, open a Terminal and navigate to the root of your React Native project. Th
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
 
 > [!NOTE]
-> A notification is not generated when your application receives a push in the foreground.
+> A notification isn't generated when your application receives a push in the foreground.
 > 
 > [!NOTE]
 > If the push is received in background, the event is **NOT** triggered at receive time.
@@ -123,7 +123,7 @@ public void onNewIntent(Intent intent) {
 
 ## Existing Firebase Analytics users
 
-The App Center Push SDK automatically disables Firebase Analytics. If you are a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
+The App Center Push SDK automatically disables Firebase Analytics. If you're a Firebase customer and want to keep reporting analytics data to Firebase, you must call a method to enable it by default. To do this, look for the `onCreate` method in the `MainApplication.java` file and add the following before `SoLoader.init`:
 
 ```java
 Push.enableFirebaseAnalytics(getApplication());

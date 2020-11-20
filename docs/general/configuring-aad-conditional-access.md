@@ -18,7 +18,7 @@ Visual Studio App Center supports [Azure Active Directory Conditional Access](ht
 > Azure Active Directory Conditional Access is available in the Premium tier of Azure AD. For more information about Azure AD Premium, see [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## Connecting your organization to Azure Active Directory
-If your App Center organization is not already connected to an Azure Active Directory tenant, you'll have to connect it first. See [Connecting to Azure Active Directory](./connecting-to-azure-active-directory.md) for how to do that.
+If your App Center organization isn't already connected to an Azure Active Directory tenant, you must connect it first. See [Connecting to Azure Active Directory](./connecting-to-azure-active-directory.md) for how to do that.
 
 ## Setting up Conditional Access
 > [!NOTE]
@@ -30,7 +30,7 @@ In Conditional Access settings, click **New policy** to create a policy.
 
 ![Azure Active Directory Conditional Access](./images/conditional-access-2.png)
 
-In New policy settings, click on **Cloud apps or actions** and select Visual Studio App Center as the target of the policy. Then [select the other conditions](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) that you'd like to apply, enable the policy, and click **Create** to save it.
+In New policy settings, click on **Cloud apps or actions** and select Visual Studio App Center as the target of the policy. Then [select the other conditions](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices) that you want to apply, enable the policy, and click **Create** to save it.
 
 ![AAD Conditional Access: Cloud apps or actions](./images/conditional-access-1.png)
 

@@ -11,9 +11,9 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 ---
 
 # Distribute - Sample Swift (iOS) App and Tutorials
-In this tutorial, you will learn to distribute a sample Swift app to a group of users, who can install the app on their device.
+In this tutorial, you'll learn to distribute a sample Swift app to a group of users, who can install the app on their device.
 
-If you have not already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
+If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 
 ### Prerequisites

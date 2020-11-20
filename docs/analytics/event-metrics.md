@@ -12,19 +12,19 @@ ms.custom: analytics
 ---
 
 # Events Metrics
-Events are actions that users take in your app. By tracking events in your app, you will learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
+Events are actions that users take in your app. By tracking events in your app, you'll learn more about your users' behavior and understand the interaction between your users and your apps. Attaching properties to your events will provide you with contextual information about the events.
 
 Tracking events in your app allows you to answer questions like:
 
-- What is the top N content viewed?
-- What is the most liked content?
+- What's the top N content viewed?
+- What's the most liked content?
 - What type of files do my users send?
 
-To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md) and [Unity](~/sdk/analytics/unity.md).
+To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [Unity](~/sdk/analytics/unity.md).
 
 ## General information
 
-You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. This allows you to drill down into your events data to the selected time period and/or app version.
+You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period and/or app version.
 
 ## Events Page
 
@@ -38,36 +38,36 @@ The Events Page provides a table with an overview of the events happening in you
 
 ## Detailed event view
 
-By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you will see distribution of counts for your event properties.
+By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you'll see distribution of counts for your event properties.
 
-Remove individual events from this page by clicking the settings option on top right of the page. Note that this action cannot be undone.
+Remove individual events from this page by clicking the settings option on top right of the page. This action can't be undone.
 
 ## Events Properties
 
-Events Properties provide contextual information about the events. They allow to have a deeper understanding about the actions that the users take in your app.
+Events Properties provide contextual information about the events. They allow a deeper understanding about the actions that the users take in your app.
 
 Examples of events and properties are:
 
 - *Event Name:* "File Upload", *Event properties:* ".PDF", ".txt", ".PNG".
 - *Event Name:* "Question answered", *Event properties:* "Accept", "Decline", "Ignore".
 
-Note that property values are optimized for values of type 'String'.
+Property values are optimized for values of type 'String'.
 
 ## Limits
 
-- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12 AM UTC. However, there is no limit on the maximum number of events instances sent per device.
+- The maximum number of distinct custom events that can be tracked daily is 200. This count resets at 12 AM UTC. However, there isn't a limit on the maximum number of events instances sent per device.
 - The maximum number of event properties per event is 20. When more than 20 properties are sent, the first 20 properties are processed, and the rest are automatically dropped.
 - The SDK truncates event names to the first 256 characters.
 - The SDK truncates each property key and value to the first 125 characters.
-- The portal will show up the ten property values with highest count.
+- The portal will show up to the 10 property values with highest counts.
 
 ## Breadcrumbs (Events before a crash)
 
 Events can help you identify the root cause of app crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session.
 
-In order to see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
+To see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
 
-Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you are looking at a crash which is older than 28 days, you will not see the corresponding breadcrumbs.
+Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash that's older than 28 days, you won't see the corresponding breadcrumbs.
 
 ## Handled Errors
 

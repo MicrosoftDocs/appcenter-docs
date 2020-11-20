@@ -26,7 +26,7 @@ ms.tgt_pltfrm: xamarin
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it is set to `ASSERT` for the App Store environments and `WARN` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `LogLevel`-API to enable additional logging while debugging. By default, it's set to `ASSERT` for the App Store environments and `WARN` otherwise.
 
 To have as many log messages as possible, use `LogLevel.Verbose`.
 
@@ -47,7 +47,7 @@ System.Guid? installId = await AppCenter.GetInstallIdAsync();
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
 2. Set a `userID` in the SDK using the following code:
@@ -60,7 +60,7 @@ AppCenter.SetUserId("your-user-id");
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `Enabled` property. When disabled, the SDK won't forward any information to App Center.
 
 ```csharp
 AppCenter.SetEnabledAsync(false);
@@ -81,7 +81,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-You can enable or disable desired service at the runtime with following code:
+You can enable or disable the service at runtime with the following code:
 
 ```csharp
 Analytics.SetEnabledAsync(true);
@@ -103,7 +103,7 @@ bool enabled = await AppCenter.IsEnabledAsync();
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```csharp
 AppCenter.SdkVersion;
@@ -115,7 +115,7 @@ App Center allows you to define custom properties as key value pairs in your app
 
 > [!NOTE]
 > Only devices that have [Push](../push/xamarin-ios.md) successfully registered are matched in audiences.
-> As a consequence, the iOS simulator can not be used to test audience matching.
+> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
 
@@ -128,7 +128,7 @@ AppCenter.SetCustomProperties(properties);
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `Clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `Clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```csharp
 CustomProperties properties = new CustomProperties();

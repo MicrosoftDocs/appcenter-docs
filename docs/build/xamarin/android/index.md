@@ -26,7 +26,7 @@ To start building your first Xamarin Android app, you must:
 
 ## 1. Linking your repository
 
-If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your Xamarin project is located. You must have admin and pull permissions to setup a build for a repository.
+If you haven't previously connected to your repository service account, you must do this first. Once your account is connected, select the repository where your Xamarin project is located. You must have admin and pull permissions to set up a build for a repository.
 
 ## 2. Selecting a branch
 
@@ -42,7 +42,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.2. Project and Configuration
 
-The available projects in your repository will populate if they are located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
+The available projects in your repository will populate if they're located within the range of analysis. Select the correct project for your Android build and select the appropriate configuration.
 
 > [!NOTE]
 > For best performance, the analysis is currently limited to four directory levels including the root of your repository.
@@ -55,7 +55,7 @@ When selecting a Mono version in the build configuration, the bundled Xamarin.An
 
 #### 3.3.1. .Net Core version
 
-Proper .Net Core version will be selected automatically based on Mono version used for build and can not be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
+Proper .Net Core version will be selected automatically based on Mono version used for build and can't be overwritten. You can view the mapping of Mono to the .Net Core used by our services in the table below:
 
 | Mono | .Net Core |
 | ---- | --------- |
@@ -82,11 +82,11 @@ A successful build will produce an `.apk` file and an additional `.aab` file if 
 
 ### 3.7. Launch your successful build on a real device
 
-Use your newly produced `.apk` file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information](~/build/build-test-integration.md).
+Use your newly produced `.apk` file to test if your app starts on a real device. This adds approximately 10 more minutes to the total build time. There's more [specific test integration information](~/build/build-test-integration.md).
 
 ### 3.8. NuGet restore
 
-If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they are added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
+If the `NuGet.config` file is checked-in into the repository and sitting next to the `.sln` file or at the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/variables/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,7 +112,7 @@ If you have complex configurations and need more information, refer to [Configur
 
 ### 3.9. Distribute the build
 
-You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 > [!NOTE]
 > If distributing to the Google Play Store, an Android App Bundle (`.aab`) is preferred and will be distributed if enabled. For App Center distribution groups and Intune store destinations, a regular `.apk` will be used even if an `.aab` is also generated.
@@ -123,9 +123,9 @@ After a build triggers, the build will be in one of the following states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up
 * **building** - the build is running and performing the predefined tasks
-* **succeeded** - the build is completed and it has succeeded
-* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-* **canceled** - the build has been canceled by a user action or it has timed out
+* **succeeded** - the build is completed and it's succeeded
+* **failed** - the build has completed but it's failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+* **canceled** - the build has been canceled by a user action or it's timed out
 
 ### 4.1. Build logs
 
@@ -144,10 +144,10 @@ The build step specific logs (located in the build/ directory of the archive) ar
 
 ### 4.2. The app (.apk)
 
-The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build has not been signed, the app can run on an emulator or be used for other purposes.
+The `.apk` file is an Android application packaged file which stores the Android app. If the build has been correctly signed, the A`.apk` file can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
 
 ## Supported versions and requirements
 
 App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
-App Center does not support Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available. If you are using a Component which cannot be replaced, reach out to us. See [help and feedback](../../../help.md).
+App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever they're available. If you're using a Component which can't be replaced, reach out to us. See [help and feedback](../../../help.md).

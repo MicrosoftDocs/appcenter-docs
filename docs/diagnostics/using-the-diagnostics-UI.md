@@ -28,7 +28,7 @@ For all apps, you can filter the diagnostics data by app version, build number, 
 ![Diagnostics overview page](~/diagnostics/images/diagnostics-overview.png)
 
 > [!NOTE]
-> When filtering crashes or errors in groups list, the total count and affected user count values will always reflect the total number of crashes for the respective group. They are not affected by Time filters.
+> When filtering crashes or errors in groups list, the total count and affected user count values will always reflect the total number of crashes for the respective group. They aren't affected by Time filters.
 
 ### Annotate a group
 
@@ -49,7 +49,7 @@ Mark each of your groups as open, closed, or ignored. To mark the status of your
 2. Click on the **Mark as** button  
 3. Select the state (open, closed, ignored)
 
-Any new crash or error instance which is part of a closed or ignored group will not reopen or unignore the corresponding group.
+Any new crash or error instance which is part of a closed or ignored group won't reopen or unignore the corresponding group.
 
 ![Track the status of your crash and error groups](~/diagnostics/images/track-status.png)
 

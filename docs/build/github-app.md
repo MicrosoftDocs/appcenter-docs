@@ -37,7 +37,7 @@ Opening a pull request on GitHub will start an App Center build, copying the bui
 ![An image showing the Checks tab in GitHub's pull request view](~/build/images/github-checks-tab.png)
 
 > [!NOTE]
-> When opening a pull request on an unconfigured branch, the Checks tab will show that there is **Action Required**. Click the **Resolve** link to configure the branch.
+> When opening a pull request on an unconfigured branch, the Checks tab will show that there's **Action Required**. Click the **Resolve** link to configure the branch.
 
 ## Connecting a New Repository
 Add a new app by adding repository access to your GitHub app installation. [Configure your GitHub app installation](https://github.com/settings/installations) and select the new repository to grant access to and connect. After clicking **Save**, you'll be redirected to App Center to configure your new app.

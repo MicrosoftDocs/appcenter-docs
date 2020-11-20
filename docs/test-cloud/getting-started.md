@@ -33,7 +33,7 @@ For iOS developers, however, it can be more challenging:
 - Apps built for iOS devices and simulators aren't cross-compatible because of different processor architectures.
 - Apps built for iOS devices MUST be provisioned using Apple's signing process. iOS provisioning can be difficult to setup initially, and update later when profiles expire or require modification. 
 - Some testing frameworks, like Xamarin.UITest & Calabash, are explicitly incompatible with publishing iOS apps to the App Store. These frameworks add assemblies to the IPA that should only be present during development.
-- The first time you test on a physical iOS device, you'll have to **Enable UIAutomation** in the device settings.
+- The first time you test on a physical iOS device, you must **Enable UIAutomation** in the device settings.
 
 Skipping local testing is possible, but not recommended. It's much more difficult to diagnose issues running in App Center if the app has unresolved local testing issues. 
 
