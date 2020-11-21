@@ -73,7 +73,7 @@ CODE_SECTION
 ```
 
 ## I want to run unit tests for my Xamarin application
-To run unit tests in your Xamarin builds, you must use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run, and display the results:
+To run unit tests in your Xamarin builds, use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run, and display the results:
 
 ```bash
 echo "Found NUnit test projects:"

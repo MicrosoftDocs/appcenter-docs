@@ -51,7 +51,7 @@ Once you have the CodePush plugin, you must integrate it into the Xcode project 
    > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
 
-   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+   Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds. We recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still using the Chrome Dev Tools, live reload, etc. at debug-time.
 
    Your `sourceURLForBridge` method should look like this:
 
@@ -100,7 +100,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command. If you already have RNPM installed, make sure you have v1.9.0+ to benefit from this one step install.
 
-2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. You'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we recommend using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 #### Plugin Installation (iOS - CocoaPods)
 1. Add the React Native and CodePush plugin dependencies to your `Podfile`, pointing at the path where NPM has installed modules
@@ -163,7 +163,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, perform the following steps:
+Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
 
 1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 
@@ -204,7 +204,7 @@ This change configures your app to always load the most recent version of your a
 > [!NOTE]
 > The `bundleURL` method assumes your app's JS bundle is named `main.jsbundle`. If you've configured your app to use a different file name, call the `bundleURLForResource:` method (which assumes you're using the `.jsbundle` extension) or `bundleURLForResource:withExtension:` method instead, to overwrite that default behavior.
 
-Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds, and therefore, we recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still being able to use the Chrome Dev Tools, live reload, etc. at debug-time.
+Typically, you're only going to want to use CodePush to resolve your JS bundle location within release builds. We recommend using the `DEBUG` pre-processor macro to dynamically switch between using the packager server and CodePush, depending on whether you're debugging or not. This makes it much simpler to ensure you get the right behavior you want in production, while still using the Chrome Dev Tools, live reload, etc. at debug-time.
 
 For React Native 0.59 - 0.59.10:
 
@@ -245,7 +245,7 @@ CodePush plugin makes HTTPS requests to the following domains:
 - codepush.blob.core.windows.net
 - codepushupdates.azureedge.net
 
-If you want to change the default HTTP security configuration for any of these domains, you must define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside the project's **Info.plist** file:
+If you want to change the default HTTP security configuration for any of these domains, define the [`NSAppTransportSecurity` (ATS)][ats] configuration inside the project's **Info.plist** file:
 
 ```xml
 <plist version="1.0">
@@ -293,7 +293,7 @@ MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANkWYydPuyOumR/sn2agNBVDnzyRpM16NAUpYPGxNgjSEp0e
 
 ## Android Setup
 
-To integrate CodePush into your Android project, perform the following steps:
+To integrate CodePush into your Android project, do the following steps:
 
 ### Plugin Installation (Android)
 
@@ -382,7 +382,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
    > [!NOTE]
    > If you don't already have RNPM installed, you can do so by running `npm i -g rnpm` and then executing the above command.
 
-2. If you're using RNPM >=1.6.0, you'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we'd recommend just using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
+2. If you're using RNPM >=1.6.0, you'll be prompted for the deployment key you want to use. If you don't already have it, you can retrieve this value by running `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, or you can choose to ignore it (by hitting `<ENTER>`) and add it in later. To get started, we recommend using your `Staging` deployment key, so that you can test out the CodePush end-to-end.
 
 And that's it for installation using RNPM! Continue below to the [Plugin Configuration](#plugin-configuration-for-react-native-lower-than-060-android) section to complete the setup.
 

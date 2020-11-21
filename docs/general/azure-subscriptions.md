@@ -54,7 +54,7 @@ If you already set as an "Owner" of an Azure subscription, you can connect it to
 If you need to remove an Azure subscription from your organization/personal account, complete the following steps.
 
 > [!NOTE]
-> To remove an Azure subscription, there can't be an active billing plan associated with the subscription. Make sure to set your billing back to the free plan and at the end of the month, the billing cycle, you can remove the subscription once the new settings take place.
+> To remove an Azure subscription, there can't be an active billing plan for the subscription. Make sure to set your billing back to the free plan and at the end of the month, the billing cycle, you can remove the subscription once the new settings take place.
 
 1. In App Center, select **Manage** under your Organization, or your **Account Settings** for your personal account, and select **Azure**.
 2. Select the subscription you want to remove.

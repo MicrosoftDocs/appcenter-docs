@@ -75,7 +75,7 @@ Distribute.CheckForUpdate();
 This sends a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being done. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
@@ -221,7 +221,7 @@ You must upload release builds (that use the Distribute module of the App Center
 1. Review the Distribution and distribute the build to your in-app testing group.
 1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 1. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android).
-1. Build the release version of your app and upload a new build just like you did in the previous step. Distribute to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Build the release version of your app and upload a new build like you did in the previous step. Distribute to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

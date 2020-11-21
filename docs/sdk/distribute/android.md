@@ -54,7 +54,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
+To use App Center, opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
@@ -78,7 +78,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
 1. Open the project's app level **build.gradle** file (`app/build.gradle`).
 2. Configure build variants by adding product flavors:
@@ -165,7 +165,7 @@ Distribute.checkForUpdate()
 This sends a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being done. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
@@ -212,7 +212,7 @@ public class MyDistributeListener implements DistributeListener {
 
         // Build our own dialog title and message
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
-        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead, this is just a simple example
         dialogBuilder.setMessage(releaseNotes);
 
         // Mimic default SDK buttons
@@ -266,7 +266,7 @@ class MyDistributeListener : DistributeListener {
 
         // Build our own dialog title and message
         val dialogBuilder = AlertDialog.Builder(activity)
-        dialogBuilder.setTitle("Version $versionName available!") // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setTitle("Version $versionName available!") // you should use a string resource instead, this is just a simple example
         dialogBuilder.setMessage(releaseNotes)
 
         // Mimic default SDK buttons
@@ -392,15 +392,15 @@ The in-app updates feature works as follows:
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the App Center Portal if you haven't already.
-1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+1. Create a new distribution group and name it, so you can recognize that it's meant for testing the in-app update feature.
 1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that wasn't used for that app on App Center. This ensures that your experience is close to the experience of your real testers.
 1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above. If the group is private, don't forget to set the private in-app update track before start using the [setUpdateTrack API](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
-1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+1. Once the upload has finished, click **Next** and select the **Distribution group** that you created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.
 1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 1. Bump the `versionCode` of your app.
-1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Build the release version of your app and upload a new build of your app like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.

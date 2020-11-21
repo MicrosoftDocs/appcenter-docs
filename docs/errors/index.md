@@ -36,7 +36,7 @@ An uncaught error (crash) is an error that occurs outside of a try/catch block. 
 
 ### Inside a Try/Catch Enclosure (Errors)
 
-By calling `TrackError` method inside try/catch enclosure, you can control what information is sent to the App Center service when an error occurs, and therefore get a clearer picture of the error and the state of the device.
+By calling `TrackError` method inside try/catch enclosure, you can control what information is sent to the App Center service when an error occurs, and get a clearer picture of the error and the state of the device.
 
 There are a number of benefits using the `TrackError` method:
 

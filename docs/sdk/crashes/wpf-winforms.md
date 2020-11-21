@@ -117,7 +117,7 @@ There are numerous use cases for this API, the most common one is people who cal
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
 > [!NOTE]
-> You must set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
+> Set the callback *before* calling `AppCenter.Start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
@@ -150,7 +150,7 @@ Crashes.ShouldAwaitUserConfirmation = () =>
 {
     // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
-    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    // Return true if you built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
 };
 ```

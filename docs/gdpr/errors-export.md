@@ -28,7 +28,7 @@ Additional details are available in the [Analytics API](https://openapi.appcente
 
 ## How to provide a copy of this data to my users
 
-**Prerequisite:** The following requires that you must have a way to map the App Center install IDs and your users.
+**Prerequisite:** The following requires that you have a way to map the App Center install IDs and your users.
 
 To provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.
 

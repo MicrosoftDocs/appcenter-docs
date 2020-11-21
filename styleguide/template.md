@@ -1,6 +1,6 @@
 # Metadata and Markdown Template
 
-This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, you must view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
+This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
 
 When creating a Markdown file, you should copy this template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
 ## Metadata
@@ -16,7 +16,7 @@ author: king-of-spades (maintainer Github user name)
 ms.author: kegr (maintainer Microsoft Alias)
 ms.date: 02/26/2018 (Expected publish date, in **US format: mm/dd/yyyy**)
 ms.topic: article (one only of the following: article, get-started-article, hero-article, hub-page, landing-page, non-content, reference, search)
-ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - just use a GUID, you can generate one at https://www.guidgenerator.com/)
+ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - Use a GUID, you can generate one at https://www.guidgenerator.com/)
 ms.custom: Analytics data, a field that gets imported into SkyEye so you can use it in custom reports
 ---
 ```
@@ -27,7 +27,7 @@ Some key notes:
 - If an optional metadata element doesn't have a value, comment out the element with a # or remove it (don't leave it blank or use "na"); if you're adding a value to an element that was commented out, be sure to remove the #.
 - Colons in a value (for example, a title) break the metadata parser. In this case, surround the title with double quotes (for example, `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
 - **title**: This title will appear in search engine results. You can also add a pipe (|) followed by the product name (for example, `title: Developing Libraries with Cross Platform Tools | .NET Core`). The title doesn't need be identical to the title in your H1 heading and it should contain 65 characters or less (including | PRODUCT NAME).
-- **author**, **ms.author**, **ms.manager**, **ms.reviewer**: The `author` field should contain the **GitHub username** of the author, not their alias. The `ms.author`, `ms.manager` and `ms.reviewer` fields, on the other hand, should contain Microsoft aliases. `ms.reviewer` specifies the name of the PM/dev associated with the article or feature.
+- **author**, **ms.author**, **ms.manager**, **ms.reviewer**: The `author` field should contain the **GitHub username** of the author, not their alias. The `ms.author`, `ms.manager` and `ms.reviewer` fields, on the other hand, should contain Microsoft aliases. `ms.reviewer` specifies the name of the PM/dev for the article or feature.
 - **ms.devlang** defines the technology. Some of the supported values are: dotnet, cpp, csharp, fsharp, vb and xml.
 - **ms.assetid**: This is the GUID of the article that's used for internal tracking purposes such as Business Intelligence (BI). When creating a new Markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
 
@@ -38,7 +38,7 @@ All basic and GitHub Flavored Markdown (GFM) is supported. For more information 
 - [Baseline Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
 - [GFM documentation](https://guides.github.com/features/mastering-markdown)
 
-Markdown uses special characters such as \*, \`, and \# for formatting. If you wish to include one of these characters in your content, you must do one of two things:
+Markdown uses special characters such as \*, \`, and \# for formatting. To include one of these characters in your content, you must do one of two things:
 
 - Put a backslash before the special character to "escape" it (for example, `\*` for a \*)
 - Use the [HTML entity code](https://www.ascii.cl/htmlcodes.htm) for the character (for example, `&#42;` for a &#42;).

@@ -160,7 +160,7 @@ AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, C
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
-The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
 
 The example above shows how to use the `start:withServices` (`start(withAppSecret:services:)` for Swift) method and include both App Center Analytics and App Center Crashes.
 
@@ -168,7 +168,7 @@ If you don't want to use one of the two services, remove the corresponding param
 
 Unless you specify each module as a parameter in the start method, you can't use that App Center service. Also, the `start:withServices` (`start(withAppSecret:services:)` for Swift) API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to App Center Analytics, you should modify the `start:withServices` (`start(withAppSecret:services:)` for Swift) API call as follows:
+For example - If you want to onboard to App Center Analytics, you should modify the `start:withServices` (`start(withAppSecret:services:)` for Swift) API call as follows:
 
 ```objc
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class]]];

@@ -114,6 +114,6 @@ Currently, only crash reporting is supported for application extensions.
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application extension. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
-The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
 
 Great, you're all set to visualize Crashes data on the portal that the SDK collects automatically.

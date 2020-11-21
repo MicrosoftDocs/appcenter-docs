@@ -175,7 +175,7 @@ If you've already integrated our SDK into your application and want to upgrade t
 4. `react-native link`.
 
 > [!TIP]
-> If you see error message similar to the following CocoaPods error message during `react-native link`, just delete the auto-generated **Podfile.lock** in your **ios** folder and run `react-native link` again.
+> If you see error message similar to the following CocoaPods error message during `react-native link`, delete the auto-generated **Podfile.lock** in your **ios** folder and run `react-native link` again.
 
 > ```Text
 > [!] Unable to satisfy the following requirements:

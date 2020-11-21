@@ -37,7 +37,7 @@ App Center Push enables you to send push notifications to users of your app from
 
 ## Prerequisite - Perform platform-specific setup
 
-Push notifications work differently on UWP, iOS, and Android, therefore, before the shared APIs can be leveraged in Xamarin.Forms, you need to perform some setup on each platform. Follow the instructions for integrating push with each of the platform-specific setup guides for Push, and then return here.
+Push notifications work differently on UWP, iOS, and Android, therefore, before the shared APIs can be used in Xamarin.Forms, you need to perform some setup on each platform. Follow the instructions for integrating push with each of the platform-specific setup guides for Push, and then return here.
 
 ### Setup Guides
 * [Xamarin.Android](xamarin-android.md)
