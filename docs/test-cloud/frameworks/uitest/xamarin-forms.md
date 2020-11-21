@@ -28,7 +28,7 @@ Once a UITest project has been added to a Xamarin.Forms solution, the steps for 
 Refer to [Xamarin.UITest](~/test-cloud/frameworks/uitest/index.md) to confirm your project is ready for automated UI testing.
 
 ## Adding UITest support to Xamarin.Forms apps
-UITest automates the user interface by activating controls on the screen and performing input anywhere a user would normally interact with the application. To enable tests that can *press a button* or *enter text in a box* the test code will need a way to identify the controls on the screen.
+UITest automates the user interface by activating controls on the screen and providing input anywhere a user would normally interact with the application. To enable tests that can *press a button* or *enter text in a box* the test code will need a way to identify the controls on the screen.
 
 To enable the UITest code to reference controls, each control needs a unique identifier. In Xamarin.Forms, the recommended way to set this identifier is by using the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property as shown below:
 
@@ -165,7 +165,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
 #### Adding UITest to the iOS app
 
-There are some additional changes that need to be performed to the iOS application before Xamarin.UITest will work:
+There are some additional changes that need to be done to the iOS application before Xamarin.UITest will work:
 
 1. Add the **Xamarin Test Cloud Agent** NuGet package. Right click on **Packages**, select **Add Packages**, search NuGet for the **Xamarin Test Cloud Agent** and add it to the Xamarin.iOS project:
 

@@ -105,7 +105,7 @@ There are numerous use cases for this API, the most common one is people who cal
 
 App Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to App Center.
 
-To handle the callbacks, you must either implement all methods in the `CrashesListener` interface, or override the `AbstractCrashesListener` class and pick only the ones you're interested in.
+To handle the callbacks, either implement all methods in the `CrashesListener` interface, or override the `AbstractCrashesListener` class and pick only the ones you're interested in.
 
 ### Use your own CrashesListener
 
@@ -140,7 +140,7 @@ Crashes.setListener(customListener)
 ```
 
 > [!NOTE]
-> You must set the listener *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
+> Set the listener *before* calling `AppCenter.start()`, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
@@ -175,7 +175,7 @@ public boolean shouldAwaitUserConfirmation() {
 
     // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
-    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    // Return true if you built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
 }
 ```
@@ -419,7 +419,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 
 #### Building the breakpad library
 
-Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID).
+Next, include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID).
 
 > [!NOTE]
 > The App Center SDK doesn't bundle Google Breakpad by default.

@@ -61,7 +61,7 @@ Additional information can be found in the [Push Export API documentation](https
 
 **2. Search in the data you exported in step 1 for user identifier data**
 
-Search for user data associated with the custom property; for example: user_id = "1234'. This provides you with the install ID, or if you already have the install ID you can search by it.
+Search for user data for the custom property; for example: user_id = "1234'. This provides you with the install ID, or if you already have the install ID you can search by it.
 
 **3. Retrieve personal information for the user**
 
@@ -69,7 +69,7 @@ Go through the data retrieved in Step 2, package it, and transmit this data your
 
 ### Push Segment definition
 
-To send your push campaign to your users you can use either installation IDs, or an audience for customers you want to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, you must follow these steps to send your customers any personal information residing in the audience name, definition, or description.
+To send your push campaign to your users you can use either installation IDs, or an audience for customers you want to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, follow these steps to send your customers any personal information residing in the audience name, definition, or description.
 
 Here’s a summary of what to do:
 
@@ -105,7 +105,7 @@ Every time you send a push notification (campaign), the push notification detail
 
 **1. Retrieve all Push Notifications under your App**
 
-Use the [App Center Push List API](https://openapi.appcenter.ms/#/push/Push_List) to retrieve the list of push notifications associated with your App by App name:
+Use the [App Center Push List API](https://openapi.appcenter.ms/#/push/Push_List) to retrieve the list of push notifications for your App by App name:
 
 ```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/notifications

@@ -122,7 +122,7 @@ You can configure each successful build from a branch to be distributed to a pre
 After a build triggers, the build will be in one of the following states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up
-* **building** - the build is running and performing the predefined tasks
+* **building** - the build is running the predefined tasks
 * **succeeded** - the build is completed and it's succeeded
 * **failed** - the build has completed but it's failed; you can troubleshoot what went wrong by downloading and inspecting the build log
 * **canceled** - the build has been canceled by a user action or it's timed out

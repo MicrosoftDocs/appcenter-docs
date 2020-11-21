@@ -27,5 +27,5 @@ POST https://openapi.appcenter.ms/v0.1/apps/{username}/{appname}/export_configur
 ## Provide a copy of this data to my users
 **Prerequisite:** To copy this data for your users, you need to map the App Center install IDs to individual users.
 
-To provide a specific user with their data, you must review the exported data and copy the logs with the relevant install ID(s) to a separate file. This new file should contain all exportable data for your end user. If you have any questions about what data you're required to return, check with appropriate legal counsel.
+To provide a specific user with their data, review the exported data and copy the logs with the relevant install ID(s) to a separate file. This new file should contain all exportable data for your end user. If you have any questions about what data you're required to return, check with appropriate legal counsel.
 

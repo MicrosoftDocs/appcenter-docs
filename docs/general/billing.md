@@ -21,7 +21,7 @@ You can configure a billing plan for your App Center organization or user accoun
    - For **Test**: To choose concurrent device(s) without device hours limits, choose the number of devices, then select **Enterprise usage** from the drop-down menu in the **Test** section.
 5. When you've completed customizing your billing plan, click the **Continue** button to save your changes.
    - To connect your user account to an Azure subscription, refer to the [Azure Subscriptions](~/general/azure-subscriptions.md) article.
-   - If you already have one or more subscriptions associated with your user account, you can choose which one to use for billing.
+   - If you already have one or more subscriptions for your user account, you can choose which one to use for billing.
 6. Follow the remaining steps to complete the configuration process.
 
 ## Organization account billing configuration
@@ -33,7 +33,7 @@ You can configure a billing plan for your App Center organization or user accoun
    - For **Test**: To choose concurrent device(s) without device hours limits, choose the number of devices, then select **Enterprise usage** from the drop-down menu in the **Test** section.
 6. When you've completed customizing your billing plan, click the **Continue** button to save your changes.
    - To connect your user account to an Azure subscription, refer to the [Azure Subscriptions](~/general/azure-subscriptions.md) article.
-   - If you already have one or more subscriptions associated with your user account, you can choose which one to use for billing.
+   - If you already have one or more subscriptions for your user account, you can choose which one to use for billing.
 7. Follow the remaining steps to complete the configuration process.
 
 ## FAQ

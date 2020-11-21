@@ -11,7 +11,7 @@ ms.custom: test
 ---
 
 # Automate iOS native apps with Xamarin.UITest
-To follow the guide, you must have access to the app source code.
+To follow the guide, you need access to the app source code.
 
 ## Add an automation backend to your app
 Part of the Xamarin.UITest toolchain is the backend that runs alongside the app. The Xamarin.UITest test script communicates with the backend, which executes the commands on the simulator or device.

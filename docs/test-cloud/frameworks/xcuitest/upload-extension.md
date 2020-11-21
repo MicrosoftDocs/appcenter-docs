@@ -149,7 +149,7 @@ For additional information, refer to the [CocoaPods Code example](https://github
 
 ## Build For Testing
 
-To run a test in App Center, you must build your application and an XCUITest bundle. To do this, run the following command from the root of your application project directory:
+To run a test in App Center, build your application and an XCUITest bundle. To do this, run the following command from the root of your application project directory:
 
 ```shell
 $ rm -rf DerivedData
@@ -164,7 +164,7 @@ $ xcrun xcodebuild build-for-testing \
 This builds your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be
 located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
-`YOUR_WORKSPACE` should point to a **.xcworkspace** file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default it's usually the name of your application. To see the list of schemes defined in your Xcode project, run:
+`YOUR_WORKSPACE` should point to a `.xcworkspace` file, likely titled `PROJECT_NAME.xcworkspace`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default it's usually the name of your application. To see the list of schemes defined in your Xcode project, run:
 
 ```shell
 $ xcrun xcodebuild -list

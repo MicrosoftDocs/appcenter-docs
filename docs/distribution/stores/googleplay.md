@@ -27,7 +27,7 @@ For more information, review [How to use the Google Play console](https://suppor
 
 ## Linking your API Project
 
-To access the Google API, you must link your Google Play Console to a Google API project. In most cases, we recommend you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
+To access the Google API, link your Google Play Console to a Google API project. In most cases, we recommend you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
 
 **Creating a new API project**
 
