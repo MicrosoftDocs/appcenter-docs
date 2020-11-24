@@ -31,7 +31,7 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 
 If the application is installed from Google Play or other stores instead of App Center, checking for new versions will be disabled.
 
-Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#remove-in-app-updates-for-google-play-builds), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#remove-in-app-updates-for-google-play-builds), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
 
 ### iOS
 

@@ -56,7 +56,7 @@ Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven'
 
 ### 4. Modify the project's AndroidManifest.xml file
 
-If you're migrating from Google Cloud Messaging to Firebase, your project's **AndroidManifest.xml** file might contain outdated GCM configuration which may cause notification duplication. Edit the file and remove the following lines **inside** the `<application>` section, if present:
+If you're migrating from Google Cloud Messaging to Firebase, your project's **AndroidManifest.xml** file might contain an outdated GCM configuration, which may cause notification duplication. Edit the file and remove the following lines **inside** the `<application>` section, if present:
 
 ```xml
 <receiver

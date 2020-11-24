@@ -68,7 +68,7 @@ You can configure each successful build from a branch to be distributed to a pre
 After a build is triggered, it can be in these states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up.
-* **building** - the app is building and performing related tasks.
+* **building** - the app is building and running related tasks.
 * **succeeded** - the build is completed successfully.
 * **failed** - the build completed, but it failed. You can download and inspect the build log for troubleshooting.
 * **canceled** - the build was canceled by user action, or it timed out.

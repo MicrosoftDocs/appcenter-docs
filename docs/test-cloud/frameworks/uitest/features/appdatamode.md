@@ -20,4 +20,4 @@ AppDataMode has three options that manage how your app is managed between separa
 
 ## AppDataMode.DoNotClear
 - Locally the app is never reinstalled and the data isn't cleared. It will still get terminated and restarted every time you call StartApp() though.
-- In the cloud your app won't get reinstalled and its data won't get cleared (just as it works locally).
+- In the cloud your app won't get reinstalled and its data won't get cleared (as it works locally).

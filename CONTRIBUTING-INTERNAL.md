@@ -47,7 +47,7 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
 
     There are two tools that run every time you create a PR that you need to pay attention to: Build Status and PR Merger. They work together as follows:
 
-    - Build status will check for any basic quality issues, including spelling and valid links. **You must fix all these issues before you can go to the next step**
+    - Build status will check for any basic quality issues, including spelling and valid links. **Fix all these issues before you can go to the next step**
     - Once there's a successful build on your PR, PR Merger will assess these validation filters on your changes. 
     - If the PR meets all the criteria:
         - it will add the label “qualifies-for-automerge”

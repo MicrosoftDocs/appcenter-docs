@@ -19,6 +19,7 @@ Note the following limitations for Appium support:
 * No support for TestNG.
 * No support for Android 4.2 or prior.
 * No support for automating browsers or WebView context.
+* No support for [JUnit @Category attribute](http://maven.apache.org/surefire/maven-surefire-plugin/examples/junit.html). (Can use [Include/Exclude](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html) instead)
 * Maven version must be at least 3.3.9.
 * Support for Appium version 1.18.0 only. This appium version requires the appium java client to be at least 6.1.0
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.

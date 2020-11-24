@@ -93,7 +93,7 @@ The most common use case for this API is when a user is implementing their custo
 App Center Crashes provides callbacks for developers to take additional actions before and when they send crash logs to App Center.
 
 > [!NOTE]
-> You must set the callback *before* App Center starts, For example in `Awake` method, since App Center starts processing crashes immediately after the start.
+> Set the callback *before* App Center starts, For example in `Awake` method, since App Center starts processing crashes immediately after the start.
 
 ### Should the crash be processed?
 
@@ -123,12 +123,12 @@ Crashes.ShouldAwaitUserConfirmation = () =>
 {
     // Build your own UI to ask for user consent here. SDK doesn't provide one by default.
 
-    // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
+    // Return true if you built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
     return true;
 };
 ```
 
-If the callback returns `true` you must obtain user permission, and message the SDK with the result using the following API.
+If the callback returns `true`, you must obtain user permission and message the SDK with the result using the following API:
 
 ```csharp
 // Depending on the user's choice, call Crashes.NotifyUserConfirmation() with the right value.
@@ -285,7 +285,7 @@ Crashes.ReportUnhandledExceptions(false);
 ```
 
 > [!NOTE]
-> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and therefore isn't considered a crash.
+> Some unhandled exceptions detected by the App Center SDK will appear as errors in the App Center UI. This is because Unity catches unhandled exceptions by default, meaning the app doesn't exit and isn't considered a crash.
 
 ### Add attachments to an unhandled exception report
 
@@ -305,7 +305,7 @@ To receive proper crash reports in App Center, first make sure you have the App 
 
 #### Building the breakpad library
 
-Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). To use it in Unity, just include the binary with your app.
+Next, you must include and compile Google Breakpad by following the instructions listed in the official [Google Breakpad for Android README](https://github.com/google/breakpad/blob/master/README.ANDROID). To use it in Unity, include the binary with your app.
 
 > [!NOTE]
 > The App Center SDK doesn't bundle Google Breakpad by default.

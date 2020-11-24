@@ -31,7 +31,7 @@ App Center currently supports cloud hosted Git repositories on Azure DevOps (for
 
 ## Repository connection broken after...
 ### Repo name change
-This breaks the connection, to resolve the issue you must revert to the original name or create a new repo with the original name.
+This breaks the connection. To resolve the issue, revert to the original name or create a new repo with the original name.
 
 ### Account ownership change
 If the user who originally connected the repository has their permission to access that repository revoked because of being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
@@ -46,7 +46,7 @@ Disconnect the repository account, and reconnect to the correct one:
 - [Azure DevOps](~/build/connect.md#azure-devops)
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
-It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
+It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are for an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
 
 Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
 

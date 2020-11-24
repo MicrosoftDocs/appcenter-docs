@@ -393,7 +393,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
   Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services.
 
 - **HockeyApp side-by-side enabled**:
-  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, just log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
+  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
 
 ### **November 15, 2017**
 
@@ -464,7 +464,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you want to use which isn't there yet, just let us know.
+  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you want to use which isn't there yet, let us know.
 
 ### **June 8, 2017**
 
@@ -542,7 +542,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
+- When you receive an email to install a build, you can now also sign in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
 
 ### **Mar 02, 2017**
 

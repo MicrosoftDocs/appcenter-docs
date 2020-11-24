@@ -45,7 +45,7 @@ Publish new and upgrade existing line-of-business (LOB) iOS and Android applicat
 4. Once the package has been uploaded, you should see some details of the application. Click **Next**.
 5. Click on **Publish** to push the app to the **Intune Company Portal**. The status for this release on the store details page will show as **Processing**.
 6. Once App Center has completed the hand-over of the app to Intune, the status of the app will change to **Submitted**.
-7. In case of a failure while publishing, the status is **failed** with an error message.
+7. If there's a failure while publishing, the status is **failed** with an error message.
 
 For any issues, you can always open a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
 

@@ -154,7 +154,7 @@ appcenter codepush deployment list MyApp
 | `appcenter codepush release`         | Release an update to an app deployment |  `appcenter codepush release -a ownerName/MyApp` |
 | `appcenter codepush release-cordova` | Release a Cordova update to an app deployment | `appcenter codepush release-cordova --description "modified assets"` |
 | `appcenter codepush release-react`   | Release a React Native update to an app deployment | `appcenter codepush release-react -x` |
-| `appcenter codepush rollback`| Rollback the latest release for an app deployment | `appcenter codepush rollback Staging` |
+| `appcenter codepush rollback`| Roll back the latest release for an app deployment | `appcenter codepush rollback Staging` |
 
 ## FAQ
 #### Will the move impact my customers?
