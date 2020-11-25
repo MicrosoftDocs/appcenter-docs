@@ -59,6 +59,9 @@ App Center has bug tracker integration for the crashes service. Users can be qui
    2. Toggle to the extreme right hand of the bug tracker to **Disconnect** it.
    3. Repeat [step 3](#step3).
 
+  > [!NOTE]
+  > A new work item will be created for new error groups with symbols provided. If no symbols are found for the new error group, the bug tracker integration will not create a new work item.
+
 ## <a name="changeState"/></a> Changing the state of a crash group in App Center
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app that has a bug tracker integration.
 
