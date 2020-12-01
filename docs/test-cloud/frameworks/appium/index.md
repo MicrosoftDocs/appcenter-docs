@@ -4,7 +4,7 @@ description: How to upload Appium tests to App Center Test Cloud
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/19/2020
+ms.date: 11/30/2020
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7
 ms.service: vs-appcenter
@@ -24,6 +24,8 @@ Note the following limitations for Appium support:
 * Support for Appium version 1.18.0 only. This appium version requires the appium java client to be at least 6.1.0
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
 * Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
+
+> [!NOTE] In some cases, tests may be able to run in App Center Test with different tooling than what's listed. Generally if it works for you, then you can keep using the tooling. However, keep in mind that the tooling is outside our normal QA, so it could break later.     
 
 ## Prerequisites
 Tests will be run using Maven Surefire, which requires tests to follow [certain naming conventions](https://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
