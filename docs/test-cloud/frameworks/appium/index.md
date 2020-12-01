@@ -25,7 +25,8 @@ Note the following limitations for Appium support:
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
 * Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
 
-> [!NOTE] In some cases, tests can still work in App Center if using unsupported tooling or features. However, that unsupported functionality isn't QA'd in future updates and could break without warning.
+> [!NOTE] 
+> In some cases, tests can still work in App Center if using unsupported tooling or features. However, that unsupported functionality isn't QA'd in future updates and could break without warning.
 
 ## Prerequisites
 Tests will be run using Maven Surefire, which requires tests to follow [certain naming conventions](https://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html):
