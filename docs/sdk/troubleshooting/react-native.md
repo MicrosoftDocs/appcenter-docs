@@ -99,6 +99,23 @@ In this case, run `npm install` and try `react-native link` again.
 
 ## Build error such as 'AppCenterCrashes/MSACErrorReport.h' file not found
 
+There are two possible cases of the problem:
+
+### React-Native 0.60 and above
+
+The probable cause is the conflict between the [major](https://semver.org/) packages versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/blob/develop/CHANGELOG.md#app-center-1) in our Apple SDK.
+
+1. Make sure that all appcenter packages use the same major version. Update them with `npm install` or `yarn` if needed.
+
+> [!NOTE]
+> If you are still using **appcenter-push** then you should use appcenter version 3 packages because App Center Push [has been retired](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
+
+1. Go to **ios** folder of your project and remove **Podfile.lock** and the **Pods** folder.
+1. Run `pod install --repo-update` in your **ios** folder.
+1. Verify that **Podfile.lock** contains appcenter dependencies of the same major version.
+
+### React Native lower than 0.60
+
 One possible cause is when running `react-native link` without **CocoaPods** installed.
 
 To confirm the cause, execute `react-native link`, and in the logs, check for the following line:
@@ -119,7 +136,7 @@ rnpm-install info Platform 'android' module appcenter-analytics is already linke
 
 If you see that error, make sure the `pod` command from **CocoaPods** is available in your system's **PATH** environment variable.
 
-After you fix your **CocoaPods** installation, run `pod install` in the **iOS** folder to fix your project.
+After you fix your **CocoaPods** installation, run `pod install` in the **ios** folder to fix your project.
 
 ## CocoaPods unable to find a specification for AppCenterReactNativeShared during react-native link
 
