@@ -99,11 +99,9 @@ In this case, run `npm install` and try `react-native link` again.
 
 ## Build error such as 'AppCenterCrashes/MSACErrorReport.h' file not found
 
-There are two possible cases of the problem:
-
 ### React-Native 0.60 and above
 
-The probable cause is the conflict between the [major](https://semver.org/) packages versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/blob/develop/CHANGELOG.md#app-center-1) in our Apple SDK.
+The likely cause is the conflict between [major](https://semver.org/) package versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/blob/develop/CHANGELOG.md#app-center-1) in our Apple SDK.
 
 1. Make sure that all appcenter packages use the same major version. Update them with `npm install` or `yarn` if needed.
 
