@@ -1,7 +1,7 @@
 ---
 title: Preparing Appium Tests for Upload
-description: How to upload Appium tests to App Center Test Cloud
-keywords: test cloud
+description: How to upload Appium tests to App Center Test
+keywords: app center, test cloud, test
 author: king-of-spades
 ms.author: kegr
 ms.date: 11/30/2020
@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Preparing Appium Tests for Upload
-The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Appium tests written in Java with JUnit for upload to Test Cloud. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/about-appium/intro/).
+The steps to prepare an app and its test suite for upload vary depending on the test framework. This guide how to prepare Appium tests using Java with JUnit for upload to App Center. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/about-appium/intro/).
 
 Note the following limitations for Appium support:
 
@@ -85,7 +85,7 @@ This code will ensure the enhanced Android and iOS drivers are available at comp
 ### Step 2 - Add upload profile
 
 Copy [this snippet](https://github.com/Microsoft/AppCenter-Test-Appium-Java-Extensions/blob/master/uploadprofilesnippet.xml) into your `pom.xml` in the `<profiles>` tag. If there's no `<profiles>` section in your pom, make one.
-The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test Cloud.
+The profile, when activated, will pack your test classes and all dependencies into the `target/upload` folder, ready to be uploaded to Test.
 
 ## 2. Changes to the tests
 
@@ -131,7 +131,7 @@ Replace the way you *instantiate* your driver, such that lines in the form of:
     driver = Factory.createAndroidDriver(url, capabilities);
 ```
 
-Using these drivers will still allow you to run your tests locally without additional modifications, but enables you to "label" test steps in your test execution using `driver.label("text")`. The text and a screenshot from the device will be visible in test report in  Test Cloud.
+Using these drivers will still allow you to run your tests locally without additional modifications, but enables you to "label" test steps in your test execution using `driver.label("text")`. The text and a screenshot from the device will be visible in test report in App Center.
 
 It's recommended to call `driver.label` in the `@After` method, which takes a screenshot of the app final state. An example `@After` method for a test could look like this code:
 
@@ -166,10 +166,10 @@ There are three main sources of slower test runs: re-signing, reinstallation, an
 ### Re-signing (on iOS)
 Before being installed on the iOS device, your app goes through a process called re-signing. This process is necessary to make the provisioning profile match the device in the cloud. Re-signing does take some time, typically ~1-2 minutes. Rarely, re-signing also causes performance degradation because re-signed apps are cached. The time consuming process will only run once per binary.
 
-If you have an automated Continuous Delivery setup where the IPA is having its version bumped before being built and tested, then the binary will be different for each test and the re-signing penalty will occur more often.
+If your Continuous Delivery setup updates the IPA version before building and testing, then the binary will be different for each test and the re-signing penalty will occur more often.
 
 ### Reinstallation
-On a shared device cloud, it's important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization.  In App Center Test, the app is automatically uninstalled after the completion of your test run. 
+On a shared device cloud, it's important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization. In App Center Test, the app is automatically uninstalled after the completion of your test run. 
 
 It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.
 
