@@ -29,7 +29,8 @@ dev_langs:
 
 1. In the console, look for an Assert log with the message - "App Center SDK configured successfully". The message implies that the SDK is configured successfully.
 2. If you're using **Cocoapods** to integrate App Center in your iOS app and run into an error with the message - `CocoaPods - Unable to find a specification for AppCenter`, run `pod repo update` to update your local Cocoapods repository and then run `pod install` again.
-3. If you're integrating the SDK binaries manually, make sure you have modules enabled for your project.
+3. If you're using **Cocoapods** to integrate App Center in your iOS app and while project compilation you run into an error with the message - `framework not found AppCenter.xcframework` then you need to update(reinstall) Cocoapods to the lates version by running `[sudo] gem install cocoapods`. 
+4. If you're integrating the SDK binaries manually, make sure you have modules enabled for your project.
 
 ## Analytics data doesn't show up in the portal
 
