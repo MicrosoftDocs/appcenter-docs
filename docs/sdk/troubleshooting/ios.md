@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 12/03/2020
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
