@@ -159,7 +159,7 @@ Steps to upload a test:
    ```
 
 ## 4. Performance Troubleshooting
-Tests on devices in App Center will execute slightly slower than on a local device. Normally, slower execution is outweighed by having many more devices available and the ability to parallelize test runs.
+Tests on devices in App Center will execute slightly slower than on a local device. Normally, slower execution is outweighed by having more devices available, allowing parallel test runs.
 
 There are three main sources of slower test runs: re-signing, reinstallation, and network tasks.
 
