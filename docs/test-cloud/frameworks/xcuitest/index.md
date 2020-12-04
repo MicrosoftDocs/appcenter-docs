@@ -63,7 +63,7 @@ For a concrete example of submitting tests to App Center, see [this shell script
 
 ## Additional Screenshots and Test Steps
 
-At the end of each test method, a label and screenshot are automatically generated for the test report. Labels and screenshots are displayed in the App Center Test Report as separate _Test Steps_.
+At the end of each test method, a screenshot is automatically taken for the test report. Each screenshot is displayed in the App Center Test Report as a separate _Test Step_.
 
 ### Activities
 
