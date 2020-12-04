@@ -155,7 +155,6 @@
 ##### [REPL Tree command unresponsive](test-cloud/frameworks/uitest/troubleshooting/repl-tree.md)
 ### XCUITest
 #### [Preparing for upload](test-cloud/frameworks/xcuitest/index.md)
-#### [Preparing for upload with Extensions](test-cloud/frameworks/xcuitest/upload-extension.md)
 ### Calabash [Deprecated]
 #### [Preparing for upload](test-cloud/frameworks/calabash/index.md)
 ## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
