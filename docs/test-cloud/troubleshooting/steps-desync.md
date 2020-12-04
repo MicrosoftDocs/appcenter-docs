@@ -12,11 +12,11 @@ ms.custom: test
 ---
 
 # Test Report Steps are Out-of-Sync
-App Center Test attempts to generate reports that synchronize each test & test step across devices used. To do this, the system relies on the filename and order for each screenshot taken.
+App Center Test creates reports that synchronize each test & test step across devices used. To organize the report, Test relies on the filename and order for each screenshot taken.
 
-If your test suite runs on multiple devices, and your test suite allows devices to take different paths through your test code, you might see affected tests with steps that appear to be out-of-order, skipped and/or duplicated in the report. 
+If your test suite runs on multiple devices, and your test suite allows devices to take different paths through your test code, you might see tests with steps that appear to be out-of-order, skipped or duplicated in the report. 
 
-Skipped tests aren't treated as test failures. 
+Tests with these symptoms aren't counted as failures in the report summary. 
 
 ### Pseudocode to reproduce issue
 ```
@@ -33,7 +33,7 @@ if(bool)
 
 This example will create discrepancies in the test report if both apply:
 - Multiple devices are being tested.
-- Each path is taken by at least 1 device.
+- Each path is taken by at least one device.
 
 ### Pseudocode workaround
 ```
