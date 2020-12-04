@@ -12,13 +12,13 @@ ms.custom: test
 ---
 
 # Test Report Steps are Out-of-Sync
-App Center Test attempts to generate reports that syncronize each test & test step across devices used. In order to achieve this, the system relies on the filenames and sequence that screenshots are taken in. 
+App Center Test attempts to generate reports that synchronize each test & test step across devices used. To do this, the system relies on the filename and order for each screenshot taken.
 
 If your test suite runs on multiple devices, and your test suite allows devices to take different paths through your test code, you might see affected tests with steps that appear to be out-of-order, skipped and/or duplicated in the report. 
 
-Skipped tests are not treated as test failures. 
+Skipped tests aren't treated as test failures. 
 
-### Psuedocode to reproduce issue
+### Pseudocode to reproduce issue
 ```
 if(bool)
 {
@@ -31,11 +31,11 @@ if(bool)
 };
 ```
 
-This code will create discrepancies in the test report if both apply:
+This example will create discrepancies in the test report if both apply:
 - Multiple devices are being tested.
-- At least some devices take each path.
+- Each path is taken by at least 1 device.
 
-### Psuedocode workaround
+### Pseudocode workaround
 ```
 if(bool)
 {
@@ -48,4 +48,4 @@ if(bool)
 };
 ```
 
-Since both code paths create the same name & sequence of screenshots, the final test report will be able to reconcile them as belonging to the same test step. 
+Since both code paths create the same name & sequence of screenshots, the final test report can reconcile them to the same test step. 
