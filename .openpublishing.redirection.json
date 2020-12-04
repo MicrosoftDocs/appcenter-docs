@@ -663,6 +663,10 @@
     {
         "source_path": "docs/distribution/codepush/react-native-updates.md",
         "redirect_url": "/appcenter/distribution/codepush/rn-updates.md"
-    }
+    },
+        {
+            "source_path": "docs/test-cloud/frameworks/xcuitest/upload-extension.md",
+            "redirect_url": "/appcenter/test-cloud/frameworks/xcuitest/"
+        },
  ]
 }
