@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 12/04/2020
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
 ms.tgt_pltfrm: react-native
@@ -101,7 +101,7 @@ In this case, run `npm install` and try `react-native link` again.
 
 ### React-Native 0.60 and above
 
-The likely cause is the conflict between [major](https://semver.org/) package versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/blob/develop/CHANGELOG.md#app-center-1) in our Apple SDK.
+The likely cause is the conflict between [major](https://semver.org/) package versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/releases/tag/4.0.0) in our Apple SDK.
 
 1. Make sure that all appcenter packages use the same major version. Update them with `npm install` or `yarn` if needed.
 
