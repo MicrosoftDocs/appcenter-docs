@@ -29,7 +29,7 @@ To make an existing group public, open the group and click on the settings icon 
 
 As with private distribution groups, testers receive emails notifying inviting them to test the app and when releases are available. To access the app, testers are required to sign in with their App Center account.
 
-Additionally, a **public download link** is under the distribution group name at the top of the distribution group page. **Anyone, including testers who aren't explicitly added to the distribution group, can access the release without signing in using the public download link**.
+Also, a **public download link** is under the distribution group name at the top of the distribution group page. **Anyone can access the release without signing in using the public download link**.
 
 ### Shared Distribution Groups
 Shared distribution groups are private or public distribution groups that are shared across multiple apps in a single organization. Shared distribution groups eliminate the need to replicate distribution groups across multiple apps. You can give a shared distribution group access to any combination of apps in your organization.
@@ -65,9 +65,9 @@ By enabling the distribution group's **Automatically manage devices** setting, A
 > [!NOTE]
 > As part of automating the workflow, you must provide the user name and password for your Apple ID and your production certificate in a .p12 format.
 
-Whenever a new device is added, App Center ensures that all devices from the target distribution group are registered in your developer portal, using your Apple ID, and that all provisioning profiles used in the app are regenerated with existing and new device IDs. The regenerated provisioning profiles are then downloaded to App Center servers.
+When a new device is added, App Center ensures that all devices from the target distribution group are registered in your developer portal using your Apple ID. App Center also checks that all provisioning profiles used in the app are regenerated with existing and new device IDs. The regenerated provisioning profiles are then downloaded to App Center servers.
 
-App Center uses your saved certificate, and the regenerated provisioning profiles, to re-sign the current version of your app so it can be installed on any device in the release's distribution group, without waiting for a new version of your app to be built. A download link to the newly signed release will be available through the [App Center Install portal](https://install.appcenter.ms).
+App Center uses your saved certificate and the regenerated provisioning profiles, to re-sign the current version of your app. This way it can be installed on any device in the release's distribution group, without needing a new version to be built. A download link to the newly signed release will be available through the [App Center Install portal](https://install.appcenter.ms).
 
 Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing-and-device-provisioning) and [privacy concerns when App Center stores your Apple ID and certificate](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
@@ -85,7 +85,7 @@ To [release a new build][upload] to a Distribution Group, use the **Distribute n
 > Testers added to a distribution group because they're members of an AAD security group won't receive emails when new builds are released. If you have users who should receive emails for each release, you should add them directly to the distribution group.
 
 ## User Download Analytics
-User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page and on the Release Details page. The total download count represents the total number of times the Install button has been clicked by a tester. The unique download count represents the number of users that have installed the release. For example, if one tester has downloaded a release to two different test devices, this would equal two total downloads and one unique download.
+User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page and on the Release Details page. The total download count represents the total number of times the Install button has been clicked by a tester. The unique download count represents the number of users that have installed the release. For example, if one tester has downloaded a release to two different test devices, you'd see two total downloads and one unique download.
 
 Public distribution groups include only the total download count, and not the unique download count.
 
