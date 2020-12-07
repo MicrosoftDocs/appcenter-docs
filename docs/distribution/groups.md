@@ -82,7 +82,7 @@ Once your tenant is connected to the organization, you can add AAD security grou
 To [release a new build][upload] to a Distribution Group, use the **Distribute new Release** button at the top of the screen. Finally, choose the Distribution Group from the list.
 
 > [!NOTE]
-> Testers added to a distribution group because they're members of an AAD security group won't receive emails when new builds are released. If you have users who should receive emails for each release, you should add them directly to the distribution group.
+> Testers added as members of an AAD security group don't require an App Center login, so they won't be emailed for new build releases. Add testers directly to the distribution group if they should be emailed for each release.
 
 ## User Download Analytics
 User download analytics allow you to monitor how testers within a distribution group are interacting with a release. Total and unique download counts for a release are available both at the top of each distribution group page and on the Release Details page. The total download count represents the total number of times the Install button has been clicked by a tester. The unique download count represents the number of users that have installed the release. For example, if one tester has downloaded a release to two different test devices, you'd see two total downloads and one unique download.
