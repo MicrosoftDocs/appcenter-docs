@@ -4,7 +4,7 @@ description: How to connect/reconnect to a repository to start building your app
 keywords: android
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/04/2020
+ms.date: 12/07/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -21,6 +21,9 @@ App Center supports connections to the following code repository services: [Bitb
 To build an app, connect to your code repository service account by selecting the appropriate service from the **Build** tab in your app. Sign in using the code repository service account credentials if you aren't already signed in. Authorizing App Center is required to complete the connection.
 
 Available repositories will populate in App Center after a successful connection. Select a repository and a branch where your app lives and set up your first build.
+
+> [!TIP]
+> You may need to unblock `build.appcenter.ms` to allow the build agent to connect to your repo. Possible IP addresses can be found here: https://docs.microsoft.com/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#networking
 
 ### Connecting to Self-Hosted GitLab Instances
 > [!WARNING]

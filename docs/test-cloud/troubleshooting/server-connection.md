@@ -4,7 +4,7 @@ description: Making sure your server or web service is reachable by devices in A
 keywords: appcenter, test, stall
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/24/2020
+ms.date: 12/07/2020
 ms.topic: article
 ms.assetid: 2acf5e51-954f-4b38-aa09-bdcf5756e288 
 ---
@@ -17,12 +17,9 @@ There are several common reasons why your app may have trouble communicating wit
 - Additional time is needed for the communication to reliably complete.
 - If a secondary app is required, or the connection process requires taking your app being tested out of focus. App Center Test allows single app automation, not multiple apps, or system processes.
 
-## AllowList
+## Allow List
 If any of the following are blocked, you may need to explicitly allow them for your connection: 
 
-- api.appcenter.ms 
-- api.mobile.azure.com 
-- *.appcenter.ms 
 - testcloud.xamarin.com (to allow incoming/outgoing traffic on ports 80 and 443)
 - These IP addresses:
    - 195.249.159.238
