@@ -381,7 +381,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 ## Disable automatic forwarding of application delegate's methods to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third-party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables application delegate forwarding for all App Center services.

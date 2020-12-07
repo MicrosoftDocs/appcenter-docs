@@ -107,7 +107,7 @@ You can learn more about notification in our [App Center dashboard documentation
 
 ## Create a Bug Tracker
 
-You can integrate third party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.
+You can integrate third-party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.
 
 ## Set Data Retention
 
