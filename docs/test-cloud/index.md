@@ -4,7 +4,7 @@ description: Key features of App Center Test Cloud
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/31/2020
+ms.date: 12/07/2020
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798
 ms.service: vs-appcenter
@@ -17,6 +17,9 @@ App Center Test is a test automation service for native and hybrid mobile apps, 
 Test runs execute in a hosted fashion: upload the necessary assets, typically an app binary and test files, to execute tests in our data center. Generated assets, such as screenshots and device logs, are kept for test reports.
 
 App Center Test maintains a six-month data retention policy for test report data. All test reports older than six months are removed.
+
+> [!TIP]
+> The App Center Test UI only displays the 50 most recent test runs for each Test Series. You can access older test runs using the App Center API.
 
 ## Key Features 
 - **Real devices** - Test Cloud uses real mobile devices that aren't rooted or jailbroken, providing the best approximation of your users' environment. 
