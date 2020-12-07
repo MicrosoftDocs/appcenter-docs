@@ -177,7 +177,7 @@ codePush.allowRestart(): void;
 
 Reallows programmatic restarts to occur, that would've otherwise been rejected because of a previous call to `disallowRestart`. If `disallowRestart` was never called in the first place, then calling this method results in a no-op.
 
-If a CodePush update is currently pending, which attempted to restart the app (for example it used `InstallMode.IMMEDIATE`), but was blocked because of `disallowRestart` having been called, then calling `allowRestart` will result in an immediate restart. This allows the update to be applied as soon as possible, without interrupting the end user during critical workflows (for example an onboarding process).
+If a CodePush update is currently pending, which attempted to restart the app (for example it used `InstallMode.IMMEDIATE`), but was blocked because of `disallowRestart` having been called, then calling `allowRestart` will result in an immediate restart. This restart allows the update to be applied as soon as possible, without interrupting the end user during critical workflows (for example an onboarding process).
 
 For example, calling `allowRestart` would trigger an immediate restart if either of the three scenarios mentioned in the [`disallowRestart` docs](#codepushdisallowrestart) occurred after `disallowRestart` was called. However, calling `allowRestart` wouldn't trigger a restart if the following points are true:
 
