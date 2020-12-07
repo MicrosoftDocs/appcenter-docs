@@ -1,6 +1,6 @@
 ---
 title: Preparing Calabash Tests for Upload
-description: How to upload Calabash tests to App Center Test Cloud
+description: How to upload Calabash tests to App Center Test
 keywords: test 
 author: king-of-spades
 ms.author: kegr

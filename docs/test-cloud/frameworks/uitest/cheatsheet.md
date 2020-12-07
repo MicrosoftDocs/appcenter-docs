@@ -98,7 +98,7 @@ namespace MyApp.MyCrossPlatformUITests
 }
 ```
 
-Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and Test Cloud](~/test-cloud/frameworks/uitest/xamarin-forms.md).
+Xamarin.Forms solutions should follow the instructions described in the guide [Automating Xamarin.Forms testing with Xamarin.UITest and App Center](~/test-cloud/frameworks/uitest/xamarin-forms.md).
 
 ### Initializing Xamarin.UITest on iOS
 Add the following snippet to the `FinishedLaunching` method of the **AppDelegate** class:

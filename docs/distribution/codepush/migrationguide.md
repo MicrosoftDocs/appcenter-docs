@@ -1,6 +1,6 @@
 ---
 title: CodePush Migration Guide
-description: "How to migrate from CodePush to App Center"
+description: How to migrate from CodePush to App Center
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
@@ -13,7 +13,6 @@ ms.custom: distribute
 ---
 
 # Migration Guide
-
 Visual Studio App Center is the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.

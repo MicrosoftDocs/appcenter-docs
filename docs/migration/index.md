@@ -1,5 +1,5 @@
 ---
-title: "Migration"
+title: Migration
 description: App Center migration guide
 author: king-of-spades
 ms.author: kegr
@@ -10,10 +10,9 @@ ms.service: vs-appcenter
 ---
 
 # Migrating Existing Services
-
 App Center is the next generation of HockeyApp and CodePush.
 
-It provides a unified suite of capabilities that will greatly benefit a mobile app developer during their continuous delivery process of build, test and distribute to testers, while monitoring the app for crashes and user analytics. Some of these capabilities are built from ground-up while most others are using existing services like HockeyApp (Distribute & Crashes services) and Xamarin Test Cloud (Test service) under the hood.
+It provides a unified suite of capabilities that will greatly benefit a mobile app developer during their continuous delivery process of building, testing and distributing to testers, while monitoring the app for crashes and user analytics. Some of these capabilities are built from ground-up while most others are using existing services like HockeyApp (Distribute & Crashes services) and Xamarin Test Cloud (Test service) under the hood.
 
 ## [HockeyApp](~/transition/index.md)
 HockeyApp has been retired and all apps have been migrated to App Center.

@@ -1,6 +1,6 @@
 ---
-title: "Get started with UITest and Xamarin.Forms"
-description: "UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center."
+title: Get started with UITest and Xamarin.Forms
+description: UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center.
 zone_pivot_groups: platform
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
@@ -59,7 +59,7 @@ A unique [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) should be add
 > An `InvalidOperationException` will be thrown if an attempt is made to set the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) property of an [`Element`](xref:Xamarin.Forms.Element) more than once.
 
 ### iOS application project
-To run tests on iOS ,the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it's been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
+To run tests on iOS, the [Xamarin Test Cloud Agent NuGet package](https://www.nuget.org/packages/Xamarin.TestCloud.Agent/) must be added to the project. Once it's been added, copy the following code into the `AppDelegate.FinishedLaunching` method:
 
 ```csharp
 #if ENABLE_TEST_CLOUD
@@ -190,7 +190,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 
 ::: zone-end
 
-After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to create UITests, run them locally, and submit them to Xamarin Test Cloud.
+After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to create UITests, run them locally, and submit them to App Center Test.
 
 ## Summary
 

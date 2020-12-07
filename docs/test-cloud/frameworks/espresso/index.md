@@ -13,7 +13,7 @@ ms.custom: test
 
 # Preparing Espresso Tests for Upload
 
-The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework being used. This document provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
+The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework being used. This document provides instructions for preparing Espresso tests for upload to Test. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
 
 ## 1. Changes to the build system
 
