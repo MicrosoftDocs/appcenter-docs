@@ -14,7 +14,7 @@ ms.custom: test
 # Environment Variables in Test
 When testing, it's often helpful to launch your application or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
 
-For most frameworks, useful environment variables are available within the test and/or application and you can set additional environment variables via the App Center CLI.
+For most frameworks, useful environment variables are available within the test, application, or both. You can set additional environment variables via the App Center CLI.
 
 ## Support by framework
 In App Center, some frameworks and platform combinations support setting and using custom environment variables as well as using variables that are made available to your application and tests automatically (for example `RUNNING_IN_APP_CENTER` and `APP_CENTER_TEST`). 

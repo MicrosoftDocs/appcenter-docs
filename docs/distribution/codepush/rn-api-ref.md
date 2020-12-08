@@ -42,7 +42,7 @@ When you require `react-native-code-push`, the module object provides the follow
 
 - [restartApp](#codepushrestartapp): Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user. Otherwise, calling this method has the same behavior as the end user killing and restarting the process.
 
-- [sync](#codepushsync): Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps
+- [sync](#codepushsync): Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI or behavior, we recommend most developers to use this method when integrating CodePush into their apps
 
 ### codePush
 
@@ -62,7 +62,7 @@ Used to wrap a React component inside a "higher order" React component that know
 
 This decorator provides support for letting you customize its behavior to easily enable apps with different requirements. Below are some examples of ways you can use it (you can pick one or even use a combination):
 
-1. **Silent sync on app start** *(the simplest, default behavior)*. Your app will automatically download available updates, and apply them the next time the app restarts (like the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt and/or "synthetic" app restarts.
+1. **Silent sync on app start** *(the simplest, default behavior)*. Your app will automatically download available updates, and apply them the next time the app restarts (like the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt or "synthetic" app restarts.
 
     ```javascript
     // Fully silent update that keeps the app in
@@ -90,7 +90,7 @@ This decorator provides support for letting you customize its behavior to easily
     MyApp = codePush({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE })(MyApp);
     ```
 
-4. **Log/display progress**. While the app is syncing with the server for updates, make use of the `codePushStatusDidChange` and/or `codePushDownloadDidProgress` event hooks to log down the different stages of this process, or even display a progress bar to the user.
+4. **Log/display progress**. While the app is syncing with the server for updates, make use of the `codePushStatusDidChange` or `codePushDownloadDidProgress` event hooks to log down the different stages of this process, or even display a progress bar to the user.
 
     ```javascript
     // Make use of the event hooks to keep track of
@@ -217,7 +217,7 @@ This method returns a `Promise`, which resolves to one of two possible values:
    4. The latest release within the configured deployment is currently marked as disabled, so it isn't allowed to be downloaded.
    5. The latest release within the configured deployment is in an "active rollout" state, and the requesting device doesn't fall within the percentage of users who are eligible for it.
 
-2. A [`RemotePackage`](#remotepackage) instance, which represents an available update that can be inspected and/or later downloaded.
+2. A [`RemotePackage`](#remotepackage) instance, which represents an available update that can be inspected or later downloaded.
 
 Example Usage:
 
@@ -389,7 +389,7 @@ Synchronizes your app's JavaScript bundle and image assets with the latest relea
 
 This method provides support for two different (but customizable) "modes" to easily enable apps with different requirements:
 
-1. **Silent mode** *(the default behavior)* automatically downloads available updates, and applies them the next time the app restarts (for example the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt and/or "synthetic" app restarts.
+1. **Silent mode** *(the default behavior)* automatically downloads available updates, and applies them the next time the app restarts (for example the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt or "synthetic" app restarts.
 
 2. **Active mode**, which when an update is available, prompts the end user for permission before downloading it, and then immediately applies the update. If an update was released using the `mandatory` flag, the end user would still be notified about the update, but they wouldn't have the choice to ignore it.
 
@@ -408,7 +408,7 @@ codePush.sync({ updateDialog: true, installMode: codePush.InstallMode.IMMEDIATE 
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when wanted.
+> If you want to decide whether you check or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to `sync` in a condition that ensures you only call it when wanted.
 
 #### SyncOptions
 
@@ -501,7 +501,7 @@ This method returns a `Promise`, which is resolved to a `SyncStatus` code that i
 
 - **codePush.SyncStatus.SYNC_IN_PROGRESS** *(7)* - There's an ongoing `sync` operation running that prevents the current call from being executed.
 
-The `sync` method can be called anywhere you want to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it does the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `componentWillMount` lifecycle event of your root component, the onPress handler of a `<TouchableHighlight>` component, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it does the network request to check for an update in the background, so it won't impact your UI thread or JavaScript thread's responsiveness.
 
 ### Package objects
 
@@ -590,7 +590,7 @@ This enum is provided to the `syncStatusChangedCallback` function that can be pa
 
 This enum specifies the state that an update is currently in, and can be specified when calling the `getUpdateMetadata` method. It includes the following values:
 
-- **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that's currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics and/or crash reporting service.
+- **codePush.UpdateState.RUNNING** *(0)* - Indicates that an update represents the version of the app that's currently running. This can be useful for identifying attributes about the app, for scenarios such as displaying the release description in a "what's new?" dialog or reporting the latest version to an analytics or crash reporting service.
 
 - **codePush.UpdateState.PENDING** *(1)* - Indicates that an update has been installed, but the app hasn't been restarted yet to apply it. This can be useful for determining whether there's a pending update, which you may want to force a programmatic restart (via `restartApp`) to apply.
 
@@ -626,7 +626,7 @@ Because of this behavior, you can safely deploy updates to both the app store(s)
 
 - **(void)overrideAppVersion:(NSString \*)appVersionOverride** - Sets the version of the application's binary interface, which would otherwise default to the App Store version specified as the `CFBundleShortVersionString` in the **Info.plist**. This should be called a single time, before the bundle URL is loaded.
 
-- **(void)setDeploymentKey:(NSString \*)deploymentKey** - Sets the deployment key that the app should use when querying for updates. This is a dynamic alternative to setting the deployment key in your **Info.plist** and/or specifying a deployment key in JS when calling `checkForUpdate` or `sync`.
+- **(void)setDeploymentKey:(NSString \*)deploymentKey** - Sets the deployment key that the app should use when querying for updates. This is a dynamic alternative to setting the deployment key in your **Info.plist** or specifying a deployment key in JS when calling `checkForUpdate` or `sync`.
 
 ## Java API Reference (Android)
 
