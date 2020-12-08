@@ -19,21 +19,21 @@ In this section, you'll learn about the feature set available for the App Center
 
 In App Center Diagnostics, you can view analytics data generated automatically by App Center to understand when a crash or error occurs in your app.
 
-By default, App Center displays an app's crashes and errors per day in a side by side view.
+By default, App Center displays an app's crashes and errors per day in a side-by-side view.
 
-Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame and status for a more focused view.
+Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame, and status for a more focused view.
 
 ![App Center shows you analytics on crashes and errors](~/diagnostics/images/new-crash-analytics.png)
 
 ### Grouping
 
-App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
+App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash, or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
 
 ![App Center groups crashes and errors based on similarities](~/diagnostics/images/crash-groups.png)
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users) and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users), and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
@@ -42,7 +42,7 @@ After attaching a user ID, you can use App Center's search feature to search for
 
 In the App Center Diagnostics UI, you can view and download binary and text attachments of your crash and error reports.
 
-You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [UWP](~/sdk/crashes/uwp.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report) and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
+You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [Apache Cordova](~/sdk/crashes/cordova.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [UWP](~/sdk/crashes/uwp.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report), and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
 
 Attachments for handled errors are only supported for Android, Unity, UWP, WPF, WinForms, and Xamarin platforms. Learn how to add attachments to your error reports in the SDK documentation for your [Android](~/sdk/crashes/android.md#handled-errors), [Unity](~/sdk/crashes/unity.md#add-attachments-to-a-crash-or-an-unhandled-exception-report), [UWP](~/sdk/crashes/uwp.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [Xamarin](~/sdk/crashes/xamarin.md#handled-errors) apps.
 
@@ -64,7 +64,7 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Key Value Pairs
 
-You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are completely optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
+You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
 
 > [!NOTE]
 > This feature is only supported for Android, Xamarin, Unity, UWP, WinForms, and WPF Errors today.
@@ -99,7 +99,7 @@ Stay on top of your crashes by configuring your App Center app definition settin
 1. Log into App Center and select your app
 2. In the left menu, navigate to **Settings**
 3. Click on **Email Notifications**
-4. Select **Immediately** ,**Daily**, or **Never**. The default configuration is set to **Never**.
+4. Select **Immediately**, **Daily**, or **Never**. The default configuration is set to **Never**.
 
 ![Screenshot setting Crashes email notification frequency](~/diagnostics/images/email-notifications.png)
 
