@@ -1,6 +1,6 @@
 ---
-title: URLs and IP addresses to allow list for App Center
-description: URLs and IP addresses to allowlist
+title: App Center Connections to allow list
+description: URLs to allowlist
 keywords: allowlist, appcenter, networking
 author: king-of-spades
 ms.author: kegr
@@ -10,7 +10,7 @@ ms.assetid: fb001bf2-3c2b-49a9-b839-2855c997950d
 ms.service: vs-appcenter
 ---
 
-# URLs and IP addresses to allow list for App Center
+# URLs to allow list for App Center
 If you're behind a firewall and want to connect to App Center, here are the URLs to allow list for App Center:
 
 - api.appcenter.ms
