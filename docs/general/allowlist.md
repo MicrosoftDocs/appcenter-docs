@@ -1,6 +1,6 @@
 ---
 title: App Center Connections to allow list
-description: URLs to allowlist
+description: URLs to allow list
 keywords: allowlist, appcenter, networking
 author: king-of-spades
 ms.author: kegr
@@ -18,7 +18,7 @@ If you're behind a firewall and want to connect to App Center, here are the URLs
 - *.appcenter.ms
 
 ## Service-specific considerations
-Depending on which services you're using in App Center and how you're using them, you might need to set additional items on your allow list. 
+Some App Center services might need additional items on your allow list:
 
-- [Build allow list](~/build/connect.md#connecting-to-a-source-repository)
-- [Test allow list](~/test-cloud/troubleshooting/server-connection.md)
+- [Build allow list info](~/build/connect.md#connecting-to-a-source-repository)
+- [Test allow list info](~/test-cloud/troubleshooting/server-connection.md)
