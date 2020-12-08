@@ -36,5 +36,5 @@ if (!AppCenter.Configured)
 }
 
 // AppCenter.start after
-AppCenter.Start(..., ... ,typeof(Push), ...);
+AppCenter.Start(..., ..., typeof(Push), ...);
 ```
