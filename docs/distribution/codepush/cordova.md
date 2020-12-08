@@ -35,7 +35,7 @@ To check the versions of each Cordova platform you're currently using, you can r
     cordova platform ls
 ```
 
-If you're running an older Android and/or iOS platform than is mentioned above, and would be open to upgrading, you can easily do so by running the following commands (omitting a platform if it isn't necessary):
+If you're running an older Android or iOS platform than is mentioned above, and would be open to upgrading, you can easily do so by running the following commands (omitting a platform if it isn't necessary):
 
 ```shell
     cordova platform update android
@@ -126,7 +126,7 @@ Additionally, if you want to display an update confirmation dialog (an "active i
 > While [Apple's developer agreement](https://developer.apple.com/app-store/review/guidelines/#software-requirements) fully allows over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don't enable the `updateDialog` option when calling `sync`, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
 
 ## Releasing Updates
-Once your app has been configured and distributed to your users, and you've made some code and/or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which handles preparing and releasing your update to the CodePush server.
+Once your app has been configured and distributed to your users, and you've made some code or asset changes, it's time to instantly release them! The simplest (and recommended) way to do this is to use the `release-cordova` command in the CodePush CLI, which handles preparing and releasing your update to the CodePush server.
 
 > [!NOTE]
 > Before you can start releasing updates, log into App Center by running the `appcenter login` command
@@ -143,7 +143,7 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android
 > By using the App Center CLI `set-current` function you don't have to use the -a flag to specify the app a command is directed at.
 >
 > [!TIP]
-> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova and/or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) to help identify it within your release history.
+> When releasing updates to CodePush, you don't need to bump your app's version in the **config.xml** file, since you aren't modifying the binary version at all. You only need to bump this version when you upgrade Cordova or one of your plugins, at which point, you need to release an update to the native store(s). CodePush will automatically generate a "label" for each release you make (e.g. `v3`) to help identify it within your release history.
 
 The `release-cordova` command enables such a simple workflow because it understands the standard layout of a Cordova app, and so, can generate your update and know exactly which files to upload. Additionally, to support flexible release strategies, the `release-cordova` command exposes numerous optional parameters that let you customize how the update should be distributed to your end users (e.g. Which binary versions are compatible with it? Should the release be viewed as mandatory?).
 
@@ -163,11 +163,11 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-android --target-binary-
 appcenter codepush release-cordova -a <ownerName>/MyApp-ios -x
 ```
 
-The CodePush client supports differential updates, so even though you're releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end user downloads.
+The CodePush client supports differential updates, so even though you're releasing your app code on every update, your end users will only actually download the files they need. The service handles this automatically so that you can focus on creating awesome apps and we can worry about optimizing end-user downloads.
 
 For more details about how the `release-cordova` command works, as well as the various parameters it exposes, refer to the [CLI docs](./cli.md#releasing-updates-cordova). Additionally, if you'd prefer to handle running the `cordova prepare` command yourself, and so, want an even more flexible solution than `release-cordova`, refer to the [`release` command](./cli.md#releasing-updates-general) for more details.
 
-If you run into any issues, or have any questions/comments/feedback, you can [e-mail us](mailto:codepushfeed@microsoft.com) and/or open a new issue on this repo and we'll respond ASAP! See also [help and feedback](../../help.md).
+If you run into any issues, or have any questions/comments/feedback, you can [e-mail us](mailto:codepushfeed@microsoft.com) or open a new issue on this repo and we'll respond ASAP! See also [help and feedback](../../help.md).
 
 ## API Reference
 The CodePush API is exposed to your app via the global `codePush` object, which is available after the `deviceready` event fires. This API exposes the following top-level methods:
@@ -176,7 +176,7 @@ The CodePush API is exposed to your app via the global `codePush` object, which 
 * **[getPendingPackage](#codepushgetpendingpackage)**: Retrieves the metadata for an update (if one exists) that was downloaded and installed, but hasn't been applied yet via a restart.
 * **[notifyApplicationReady](#codepushnotifyapplicationready)**: Notifies the CodePush runtime that an installed update is considered successful. If you're manually checking for and installing updates (i.e. not using the sync method to handle it all for you), then this method **MUST** be called; otherwise CodePush will treat the update as failed and roll back to the previous version when the app next restarts.
 * **[restartApplication](#codepushrestartapplication)**: Immediately restarts the app. If there's an update pending, it will be immediately displayed to the end user.
-* **[sync](#codepushsync)**: Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI and/or behavior, we recommend most developers to use this method when integrating CodePush into their apps.
+* **[sync](#codepushsync)**: Allows checking for an update, downloading it and installing it, all with a single call. Unless you need custom UI or behavior, we recommend most developers to use this method when integrating CodePush into their apps.
 
 Additionally, the following objects and enums are also exposed globally as part of the CodePush API:
 * **[InstallMode](#installmode)**: Defines the available install modes for updates.
@@ -303,7 +303,7 @@ codePush.sync(syncCallback?, syncOptions?, downloadProgress?, syncErrback?);
 Synchronizes your app's code and images with the latest release to the configured deployment. Unlike the `checkForUpdate` method, which checks for the presence of an update, and lets you control what to do next, `sync` handles the update check, download and installation experience for you.
 
 This method provides support for two different (but customizable) "modes" to easily enable apps with different requirements:
-1. **Silent mode** *(the default behavior)*, which automatically downloads available updates, and applies them the next time the app restarts (e.g. the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt and/or "synthetic" app restarts.
+1. **Silent mode** *(the default behavior)*, which automatically downloads available updates, and applies them the next time the app restarts (e.g. the OS or end user killed it, or the device was restarted). This way, the entire update experience is "silent" to the end user, since they don't see any update prompt or "synthetic" app restarts.
 2. **Active mode**, which when an update is available, prompts the end user for permission before downloading it, and then immediately applies the update. If an update was released using the mandatory flag, the end user would still be notified about the update, but they wouldn't have the choice to ignore it.
 
 Example Usage:
@@ -320,7 +320,7 @@ codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });
 ```
 
 > [!TIP]
-> If you want to decide whether you check and/or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when wanted.
+> If you want to decide whether you check or download an available update based on the end user's device battery level, network conditions, etc. then wrap the call to sync in a condition that ensures you only call it when wanted.
 
 While the sync method tries to make it easy to do silent and active updates with little configuration, it accepts the following optional parameters that allow you to customize numerous aspects of the default behavior mentioned above:
 * **syncCallback**: Called when the sync process moves from one stage to another in the overall update process. The method is called with a status code that represents the current state, and can be any of the [`SyncStatus`](#syncstatus) values.
@@ -337,7 +337,7 @@ While the `sync` method tries to make it easy to do silent and active updates wi
 * **mandatoryInstallMode** *(InstallMode)* - Specifies when you want to install updates that are marked as mandatory. Defaults to `InstallMode.IMMEDIATE`. Refer to the [`InstallMode`](#installmode) enum reference for a description of the available options and what they do.
 * **minimumBackgroundDuration** *(Number)* - Specifies the minimum number of seconds for the app to be in the background before restarting the app. This property only applies to updates which are installed using `InstallMode.ON_NEXT_RESUME`, and can be useful for getting your update in front of end users sooner, without being too obtrusive. Defaults to `0`, which applies the update immediately after a resume, however long it was in the background.
 * **ignoreFailedUpdates** *(Boolean)* - Specifies whether an available update should be ignored if it had been previously installed and rolled back on the client (because `notifyApplicationReady` wasn't successfully called). Defaults to `true`.
-* **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog completely. Setting this to any truthy value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
+* **updateDialog** *(UpdateDialogOptions)* - An "options" object used to determine whether a confirmation dialog should be displayed to the end user when an update is available, and if so, what strings to use. Defaults to `null`, which disables the dialog. Setting this to any `true` value will enable the dialog with the default strings, and passing an object to this parameter allows enabling the dialog as well as overriding one or more of the default strings.
 
 The following list represents the available options and their defaults:
 * **appendReleaseDescription** *(Boolean)* - Indicates whether you want to append the description of an available release to the notification message that's displayed to the end user. Defaults to `false`.
@@ -398,7 +398,7 @@ function downloadProgress(downloadProgress) {
 }
 ```
 
-The `sync` method can be called anywhere you want to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it will run the network request to check for an update in the background, so it won't impact your UI thread and/or JavaScript thread's responsiveness.
+The `sync` method can be called anywhere you want to check for an update. That could be in the `deviceready` event handler, the `click` event of a button, in the callback of a periodic timer, or whatever else makes sense for your needs. Like the `checkForUpdate` method, it will run the network request to check for an update in the background, so it won't impact your UI thread or JavaScript thread's responsiveness.
 
 ### Package objects
 The `checkForUpdate` and `getCurrentPackage` methods invoke success callbacks, that when triggered, provide access to "package" objects. The package represents your code update as well as any extra metadata (e.g. description, mandatory?). The CodePush API has the distinction between the following types of packages:

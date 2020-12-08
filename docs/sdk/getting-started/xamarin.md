@@ -78,7 +78,7 @@ The App Center SDK can be integrated using Visual Studio or the Package Manager 
 
 * Open Visual Studio for Mac.
 * Click **File** > **Open** and choose your solution.
-* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* In the solution navigator, right-click the **Packages** section, and choose **Add NuGet packages...**.
 * Search for **App Center**, and select **App Center Analytics** and **App Center Crashes**.
 * Click **Add Packages**.
 

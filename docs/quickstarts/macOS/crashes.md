@@ -40,7 +40,7 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 ## Open the sample app
 1. Run the sample app. If you're running it from **Xcode**, follow these additional steps to detach the debugger:
 
-2. Right click on the app icon in the dock, **Options** then **Keep in Dock**.
+2. Right-click on the app icon in the dock, **Options** then **Keep in Dock**.
 
 3. Press the **Stop** icon to stop running the app.
 

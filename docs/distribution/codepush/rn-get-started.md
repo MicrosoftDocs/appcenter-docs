@@ -163,7 +163,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
+Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to check CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
 
 1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 
@@ -419,7 +419,7 @@ And that's it for installation using RNPM! Continue below to the [Plugin Configu
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
+After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to check CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
 
 **For React Native >= v0.29**
 
@@ -647,7 +647,7 @@ Once you've acquired the CodePush plugin, you need to integrate it into the Visu
 
 ### Plugin Configuration (Windows)
 
-After installing the plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this, update the `AppReactPage.cs` file to use CodePush via the following changes:
+After installing the plugin, you need to configure your app to check CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this, update the `AppReactPage.cs` file to use CodePush via the following changes:
 
 ```c#
 ...

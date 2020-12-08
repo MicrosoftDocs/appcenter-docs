@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # CodePush Management SDK
 
-A JavaScript library for programmatically managing your App Center account (e.g. creating apps, promoting releases), which allows authoring Node.js-based build and/or deployment scripts, without needing to shell out to the [CLI](./CLI.md).
+A JavaScript library for programmatically managing your App Center account (e.g. creating apps, promoting releases), which allows authoring Node.js-based build or deployment scripts, without needing to shell out to the [CLI](./CLI.md).
 
 ## Getting Started
 

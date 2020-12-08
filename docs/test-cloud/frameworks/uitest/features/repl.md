@@ -138,7 +138,7 @@ The REPL will keep a history of the commands that you have entered into it durin
 Copying history to clipboard.
 ```
 
-This allows you to try and debug commands in the REPL, and then promptly update your test code.
+This allows you to try to debug commands in the REPL, and then promptly update your test code.
 
 > [!NOTE]
 > If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the REPL tool doesn't appear. Turning it on makes the REPL tool appear.
