@@ -18,7 +18,7 @@ Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the app's .i
 > Non-Xamarin iOS apps are also supported by Xamarin.UITest, but instead of the Xamarin Test Cloud Agent require [linking Calabash](https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode).
 
 ### Visual Studio for Mac
-For an iOS project in Visual Studio for Mac, right click on the **Packages** folder, select **Add Package**. Search for **Xamarin Test Cloud Agent**, and click **Add Package**:
+For an iOS project in Visual Studio for Mac, right-click on the **Packages** folder, select **Add Package**. Search for **Xamarin Test Cloud Agent**, and click **Add Package**:
 
 ![Adding the Xamarin Test Cloud Agent (macOS)](~/test-cloud/frameworks/uitest/images/05-addpackage-xs.png)
 
@@ -26,7 +26,7 @@ For an iOS project in Visual Studio for Mac, right click on the **Packages** fol
 > [!IMPORTANT]
 > Xamarin.UITests for iOS apps can't be executed locally on Windows. You can still create, compile and upload to App Center Test from Windows.
 
-For an iOS project in Visual Studio for Windows, right click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
+For an iOS project in Visual Studio for Windows, right-click on project and select **Manage NuGet Packages** from the context menu. In the **NuGet Package Manager** Search for **Xamarin Test Cloud Agent** and click **OK** to install that package:
 
 ![Adding the Xamarin Test Cloud Agent (windows)](~/test-cloud/frameworks/uitest/images/05-addpackage-vs.png)
 

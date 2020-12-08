@@ -1,6 +1,6 @@
 ---
 title: Preparing XCUITest Tests for Upload
-description: How to upload XCUITests to App Center Test Cloud
+description: How to upload XCUITests to App Center Test
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr

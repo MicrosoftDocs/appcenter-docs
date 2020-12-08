@@ -65,7 +65,7 @@ appcenter tokens delete <machineName>
 
 ### Access Tokens
 
-To authenticate against the CodePush service without launching a browser and/or without needing to use your GitHub or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it's for):
+To authenticate against the CodePush service without launching a browser or without needing to use your GitHub or Microsoft credentials (for example, in a CI environment), you can execute the following command to create an "access token" (along with a name describing what it's for):
 
 ```shell
 appcenter tokens create -d "Azure DevOps Integration"
@@ -197,7 +197,7 @@ The install metrics have the following meaning:
 
 * **Total** - The total number of successful installations that this update has received overall. This number only ever increases as new users/devices install it, so it's always a superset of the total active count. An update is considered successful once `notifyApplicationReady` (or `sync`) is called after it was installed. Between the moment that an update is downloaded, and it's marked as being successful, it will be reported as a "pending" update (see below for details).
 
-* **Pending** - The number of times this release has been downloaded, but not yet installed (the app was restarted to apply the changes). So, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume and/or restart to apply an update (for example, I want to roll back an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that starts sending install reports and marks installed updates as being considered successful.
+* **Pending** - The number of times this release has been downloaded, but not yet installed (the app was restarted to apply the changes). So, this metric increases as updates are downloaded, and decreases as those corresponding downloaded updates are installed. This metric primarily applies to updates that aren't configured to install immediately, and helps provide the broader picture of release adoption for apps that rely on app resume or restart to apply an update (for example, I want to roll back an update and I'm curious if anyone has downloaded it yet). If you've configured updates to install immediately, and are still seeing pending updates being reported, then it's likely that you're not calling `notifyApplicationReady` (or `sync`) on app start, which is the method that starts sending install reports and marks installed updates as being considered successful.
 
 * **Rollbacks** - The number of times that this release has been automatically rolled back on the client. Ideally this number should be zero, and in that case, this metric isn't even shown. However, if you released an update that includes a crash as part of the installation process, the CodePush plugin will roll the end user back to the previous release, and report that issue back to the server. This allows your end users to remain unblocked if releases are broken, and by seeing this telemetry in the CLI, you can identify erroneous releases and respond to them by [rolling it back](#rolling-back-updates) on the server.
 
@@ -216,7 +216,7 @@ Once your app has been configured to query for updates against the App Center se
 
 3. [Cordova](#releasing-updates-cordova) - Uses the same functionality as the general release command, but also handles the task of preparing the app update for you, instead of requiring you to run both `cordova prepare` (or `phonegap prepare`)  and then `appcenter codepush release`.
 
-Which of these commands you should use is mostly a matter of requirements and/or preference. However, we recommend using the relevant platform-specific command to start (since it greatly simplifies the experience), and then use the general purpose `release` command if/when greater control is needed.
+Which of these commands you should use is mostly a matter of requirements or preference. However, we recommend using the relevant platform-specific command to start (since it greatly simplifies the experience), and then use the general purpose `release` command if/when greater control is needed.
 
 > [!NOTE]
 > Only the 50 most recent releases in a deployment can be discovered and downloaded by the clients.
@@ -261,7 +261,7 @@ It's important that the path you specify refers to the platform-specific, prepar
 
 #### Target binary version parameter
 
-This parameter specifies the store/binary version of the application you're releasing the update for, so that only users running that version will receive the update, while users running an older and/or newer version of the app binary won't. It's useful for the following reasons:
+This parameter specifies the store/binary version of the application you're releasing the update for, so that only users running that version will receive the update, while users running an older or newer version of the app binary won't. It's useful for the following reasons:
 
 1. If a user is running an older binary version, it's possible that there are breaking changes in the CodePush update that wouldn't be compatible with what they're running.
 
@@ -352,7 +352,7 @@ This parameter specifies that if the update is identical to the latest release o
 > [!IMPORTANT]
 > In order for this parameter to take effect, your end users must be running version `1.6.0-beta+` (for Cordova) or `1.9.0-beta+` (for React Native) of the CodePush plugin. If you release an update that specifies a rollout property, no end user running an older version of the Cordova or React Native plugins will be eligible for the update. Until you've adopted the necessary version of the platform-specific CodePush plugin (as previously mentioned), we don't recommend setting a rollout value on the app's releases, since no one would end up receiving it.
 
-This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback and/or watch for exceptions/crashes, before making it broadly available for everyone. If this parameter isn't set, it defaults to `100%`. You only need to set it to limit how many users will receive it.
+This parameter specifies the percentage of users (as an integer between `1` and `100`) that should be eligible to receive this update. It can be helpful if you want to "flight" new releases with a portion of the app's audience (for example, 25%), and get feedback, or watch for exceptions or crashes, before making it broadly available for everyone. If this parameter isn't set, it defaults to `100%`. You only need to set it to limit how many users will receive it.
 
  When using the rollout capability, there are a few additional considerations to keep in mind:
 
@@ -607,7 +607,7 @@ It's the same parameter as the one described in the [above section](#disabled-pa
 
 #### Build parameter
 
-This parameter specifies whether you want to run `cordova build` instead of `cordova prepare` (which is the default behavior), when generating your updated web assets. It's valuable if your project includes before and/or after build hooks (for example, to transpile TypeScript), and so, having CodePush run `cordova prepare` isn't sufficient to create and release an update. If left unspecified, it defaults to `false`.
+This parameter specifies whether you want to run `cordova build` instead of `cordova prepare` (which is the default behavior), when generating your updated web assets. It's valuable if your project includes before or after build hooks (for example, to transpile TypeScript), and so, having CodePush run `cordova prepare` isn't sufficient to create and release an update. If left unspecified, it defaults to `false`.
 
 > [!TIP]
 > This parameter can be set using either `--build` or `-b`*
