@@ -77,7 +77,7 @@ https://appcenter.ms/orgs/{owner_name}/apps/{app_name}
 
 For either example URL, the portion of the URL represented by `{owner_name}` in the example is the account or organization name. The portion of the URL represented by `{app_name}` is the app project name.
 
-You can also use the App Center API to retrieve an account's user name; just open a browser window and navigate to [https://openapi.appcenter.ms/#/account/users_get](https://openapi.appcenter.ms/#/account/users_get). Once you've authorized access using an API token, when you execute the API the successful result body the account name in the `name` property.
+You can also use the App Center API to retrieve an account's user name. Open a browser window and navigate to [https://openapi.appcenter.ms/#/account/users_get](https://openapi.appcenter.ms/#/account/users_get). Once you've authorized access using an API token, when you execute the API the successful result body the account name in the `name` property.
 
 If the app belongs to an org, you can use the [https://openapi.appcenter.ms/#/account/apps_listForOrg](https://openapi.appcenter.ms/#/account/apps_listForOrg) API to retrieve the app name. Once you've authorized access using an API token, populate the **Organization** field with the organization name and execute the API. The successful result body contains an array of apps for the organization, you'll find the account name for each app in the array in the item's `name` property.
 
@@ -97,7 +97,7 @@ https://appcenter.ms/api/v0.1/apps/{owner_name}/{app_name}/push
 
 Where, as described in the previous section, the portion of the URL represented by `{owner_name}` in the example is the account or organization name, and the portion of the URL represented by `{app_name}` is the app project name.
 
-To invoke the API to send notifications, you would build an API endpoint similar to the following:
+To invoke the API to send notifications, you'd build an API endpoint similar to the following:
 
 ```text
 https://appcenter.ms/api/v0.1/apps/{owner_name}/{app_name}/push/notifications
@@ -161,7 +161,7 @@ Send the body of the request in JSON format (using the `application/json` conten
 }
 ```
 
-**Note**: Available `notification_target` options are: `[ audiences_target, devices_target, user_ids_target, account_ids_target ]`. There is no `notification_target` option for broadcast, so the application simply passes in the `null` value, or omits the property all together.
+**Note**: Available `notification_target` options are: `[ audiences_target, devices_target, user_ids_target, account_ids_target ]`. There isn't a `notification_target` option for broadcast, so the application either passes in the `null` value, or omits the property all together.
 
 In this example:
 
@@ -328,7 +328,7 @@ To set an app user's identity using the App Center SDK, refer to the following a
 > [!NOTE]
 > The user's identity set through the SDK can be whatever the developer wants it to be: the user's name, email address, phone number, or some other unique identifier.
 
-To send a notification to one or more users, the app must set the User ID (as described above) and keep a copy of the identity later in order to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later.
+To send a notification to one or more users, the app must set the User ID (as described above) and keep a copy of the identity later to identify target users for notifications. Developers typically store the ID in the app's backend system for reference later.
 
 In the following example, we'll assume the app uses email addresses to identify users and sends a notification to the following users identities: `["james@somecomany.com", "allison@somecompany.com", "anna@somecompany.com"]`. To send a notification message to the specified users, use the [`push/notifications`](https://openapi.appcenter.ms/#/push/Push_Send) API. Submit an HTTP POST request using the following URL:
 

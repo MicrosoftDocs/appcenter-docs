@@ -16,15 +16,15 @@ In App Center Push, your customer's information can be in the following fields:
 
 * Custom Properties used to define your audience
 
-    If you are using Custom Properties in App Center Analytics, every device registered for push notifications is associated with a number of custom properties. Other device related information is associated as well such as language, country, etc. More about custom properties and how to use it in Push can be found here.
+    If you're using Custom Properties in App Center Analytics, every device registered for push notifications is associated with a number of custom properties. Other device related information is associated as well such as language, country, etc. More about custom properties and how to use it in Push can be found here.
 
 * Audience definition and description
 
-    This is only if you are using a App Center Push's Audience feature to send push notifications; if you are pushing directly to install IDs, you don’t have to worry about this.
+    This is only if you're using a App Center Push's Audience feature to send push notifications; if you're pushing directly to install IDs, you don’t have to worry about this.
 
 * Push Notification: message details, or the campaign description
 
-    This data is stored for every Push Notification you make, regardless of whether you are using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
+    This data is stored for every Push Notification you make, whether you're using an Audience or device IDs. This data includes the Push Notification title, body, and any custom data you have added to customize your Push Notification.
 
 To get a copy of any personal information associated with your end-user for Push, there are three different APIs you must call, each corresponding to one of the categories listed above.
 
@@ -57,11 +57,11 @@ A status indicating completion indicates that the data will has been copied the 
 Additional information can be found in the [Push Export API documentation](https://openapi.appcenter.ms/#/push/Push_ExportDevicesStatus).
 
 > [!NOTE]
-> Each row of the exported document will be a valid JSON Object, but the whole document will not be a valid JSON file.
+> Each row of the exported document will be a valid JSON Object, but the whole document won't be a valid JSON file.
 
 **2. Search in the data you exported in step 1 for user identifier data**
 
-Search for user data associated with the custom property; for example: user_id = "1234'. This will provide you with the install ID, or if you already have the install ID you can search by it.
+Search for user data for the custom property; for example: user_id = "1234'. This provides you with the install ID, or if you already have the install ID you can search by it.
 
 **3. Retrieve personal information for the user**
 
@@ -69,9 +69,9 @@ Go through the data retrieved in Step 2, package it, and transmit this data your
 
 ### Push Segment definition
 
-In order to send your push campaign to your users you can use either installation IDs, or an audience for customers you would like to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, you must follow these steps to send your customers any personal information residing in the audience name, definition, or description.
+To send your push campaign to your users you can use either installation IDs, or an audience for customers you want to target who meet certain criteria for your campaign. If you go with a list of installation IDs, you can skip this section. Otherwise, follow these steps to send your customers any personal information residing in the audience name, definition, or description.
 
-Here’s a summary of what you need to do:
+Here’s a summary of what to do:
 
 * Retrieve all Audiences under your App
 * Get the Audience name(s) which have customer information
@@ -105,7 +105,7 @@ Every time you send a push notification (campaign), the push notification detail
 
 **1. Retrieve all Push Notifications under your App**
 
-Use the [App Center Push List API](https://openapi.appcenter.ms/#/push/Push_List) to retrieve the list of push notifications associated with your App by App name:
+Use the [App Center Push List API](https://openapi.appcenter.ms/#/push/Push_List) to retrieve the list of push notifications for your App by App name:
 
 ```json
 GET https://appcenter.ms/v0.1/apps/{owner_name}/{app_name}/push/notifications

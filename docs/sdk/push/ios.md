@@ -71,19 +71,19 @@ Insert the following line to start the SDK in the project's **AppDelegate.m** cl
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [MSPush.self])
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
+Make sure you've replaced `{Your App Secret}` in the code sample above with your App Secret. Also check out the [Get started](~/sdk/getting-started/ios.md) section if you haven't configured the SDK in your application.
 
 > [!NOTE]
 > The first time App Center Push starts, the system may prompt the user to grant the application permission to send notifications. To delay this prompt, start App Center Push later by omitting the `MSPush` class from the `start:withServices:` method. When you're ready to prompt the user, call the `startService:` method and pass the `MSPush` class. For all subsequent app launches, start `MSPush` as early as possible to ensure that all push notifications are captured.
 
 ## Intercept push notifications
 
-You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enabled [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](#custom-data-in-your-notifications) flag set to true.
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you've enabled [silent notifications](#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](#custom-data-in-your-notifications) flag set to true.
 
 > [!NOTE]
-> If silent notifications are enabled and you push a notification with `content-available: 1`, then the delegate may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+> If silent notifications are enabled and you push a notification with `content-available: 1`, then the delegate may be triggered twice for the same notification: when the notification is received in background and when it's tapped.
 
-By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+By default, iOS doesn't generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 You need to register the delegate before starting App Center as shown in the following example:
 
@@ -318,9 +318,9 @@ The App Center SDK uses swizzling to improve its integration by forwarding itsel
 
 ### Handle a push notification while the app is in foreground
 
-App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it is helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback is not enough in this case since the application's state will always be reported as `active`.
+App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it's helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback isn't enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -353,7 +353,7 @@ To distinguish between notifications received in the foreground and notification
 3. Implement the following callback to detect a foreground notification:
 
     ```objc
-    // iOS 10 and later, called when a notification is delivered to an app that is in the foreground.
+    // iOS 10 and later, called when a notification is delivered to an app that's in the foreground.
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
           willPresentNotification:(UNNotification *)notification
             withCompletionHandler:(void (^)(UNNotificationPresentationOptions options)) completionHandler API_AVAILABLE(ios(10.0)) {
@@ -378,7 +378,7 @@ To distinguish between notifications received in the foreground and notification
     }
     ```
 
-4. (Optional) If you have implemented the App Center Push SDK `push:didReceivePushNotification:` callback, you should adjust its behavior to a handle the foreground detection:
+4. (Optional) If you've implemented the App Center Push SDK `push:didReceivePushNotification:` callback, you should adjust its behavior to a handle the foreground detection:
 
     ```objc
     - (void)push:(MSPush *)push didReceivePushNotification:(MSPushNotification *)pushNotification {
@@ -417,7 +417,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it is helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it's helpful to determine if user has tapped push notification. For this task, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -447,7 +447,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
     }
     ```
 
-3. Implement the following callback to detect various actions performed by users with push notifications:
+3. Implement the following callback to detect various actions by users with push notifications:
 
     ```objc
     // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.
@@ -455,7 +455,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                 withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
 
         // User tapped on notification
@@ -470,7 +470,7 @@ Sometimes it is helpful to determine if user has tapped push notification. To pe
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if (response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
 
         // User tapped on notification.

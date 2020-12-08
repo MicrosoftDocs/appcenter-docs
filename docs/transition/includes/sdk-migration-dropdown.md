@@ -18,4 +18,4 @@ ms.date: 12/02/2019
 > * [WPF/Winforms](../wpf-winforms-sdk-migration.md)
 
 
-Follow this documentation if you are looking to update your application to use App Center SDK instead of HockeySDK.
+Follow this documentation if you're looking to update your application to use App Center SDK instead of HockeySDK.

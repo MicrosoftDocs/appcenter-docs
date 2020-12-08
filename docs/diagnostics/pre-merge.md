@@ -21,7 +21,7 @@ Because we want you to enjoy the new improved experience as early as possible, w
 
 If during this period, you need access to older data contact us via **? > Contact Support** and we'll grant you access. Your current retention settings haven't been altered and that you still have control over these settings.
 
-## What is different in the new experience?
+## What's different in the new experience?
 ### More stable backend
 We're building a more stable, performant, and scalable backend to provide a great crash and error reporting service for your apps.
 

@@ -16,6 +16,8 @@ ms.custom: test
 > * [Android](android.md)
 > * [iOS](ios.md)
 
+> [!NOTE]
+> This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
 Model | OS
 -- | --

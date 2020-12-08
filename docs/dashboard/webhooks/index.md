@@ -32,16 +32,17 @@ App Center's webhooks allow users to send automatic notifications to connected a
 - Distribute: when a new version is released to a distribution group
   > [!NOTE]
   > For Distribute, the webhook will be triggered when you when a new version is released to a distribution group. If you checked **do not notify testers** in the **Review** step of creating a new release, the webhook won't fire.
+  > For Diagnostics, the webhook will be triggered for new error groups with symbols provided. If no symbols are found for the new error group, the webhook won't fire.
 
 App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
 
 ## Getting Started
 
-1. Navigate to [App Center](https://appcenter.ms), and select the specific app you would like for webhooks integration.
+1. Navigate to [App Center](https://appcenter.ms), and select the specific app you want for webhooks integration.
 
 2. In your app, in the far left-hand panel, select **Settings**
 
-3. In the row panel titled **Webhooks**, go to the right-hand corner and click on the **pencil icon**, which will bring up the **Webhooks** panel.
+3. In the row panel titled **Webhooks**, go to the right-hand corner and click on the **pencil icon**, which brings up the **Webhooks** panel.
 
     ![How to edit the webhook's settings](media/editWebhook.png)
 
@@ -77,10 +78,10 @@ Here are examples of the JSON webhook payload for:
 ```JSON
 {
   "app_name": "myFirstApp",
-  "branch": "master",
+  "branch": "main",
   "build_status": "Succeeded",
   "build_id": "33",
-  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/master/builds/33",
+  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/main/builds/33",
   "build_reason": "manual",
   "finish_time": "2018-06-14T23:59:05.2542221Z",
   "icon_link": "https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/f7794e4c-42f1-4e7c-8013-07ed2e1b733d/ic_launcher.png?sv=2020-02-18&sr=c&sig=gs4JfcWjpKeYH%2F%2Fg0jEtSKKbeRkug9q%2FldslmzzeOg0%3D&se=2020-02-26T08%3A57%3A58Z&sp=r",

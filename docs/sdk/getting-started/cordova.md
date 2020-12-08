@@ -61,7 +61,7 @@ In order for the App Center SDK to connect with your application project in App 
 
 If you have an existing App Center application project, access the [App Center Dashboard](https://appcenter.ms), and open your project. You can also the app secret on the application project's **Settings** page. Access the menu in the page's upper right corner, then select **Copy app secret** to copy the app secret to the clipboard.
 
-If you do not have an application created in the App Center Dashboard, complete the following steps.
+If you don't have an application created in the App Center Dashboard, complete the following steps.
 
 1. Register for an App Center account, or Login to an existing App Center account at [https://appcenter.ms](https://appcenter.ms).
 2. In the App Center Dashboard, click the **Add new** drop-down in the upper-right corner of the page. Select **Add new app** from the menu.
@@ -107,7 +107,7 @@ cordova plugin add cordova-plugin-appcenter-analytics cordova-plugin-appcenter-c
 
 #### App Secret
 
-Before you can use the App Center SDK in your Apache Cordova project, you must first configure the project with your App Center project app secret.
+You must configure the project with your App Center project app secret before you can use the App Center SDK in your Apache Cordova project.
 
 Open the Apache Cordova project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
 
@@ -116,7 +116,7 @@ Open the Apache Cordova project's **config.xml** file; for each of your Apache C
 ```
 In this example, you're adding an element with a `name` attribute with a value of `APP_SECRET`, and a `value` attribute with the value shown in the example. Here, the `0000-0000-0000-0000-000000000000` shown in the example is an arbitrary representation of a App Center project app secret. Replace the app secret shown in the example with the actual app secret for your App Center project.
 
-As a complete example, for a Apache Cordova project that supports both Android and iOS targets, you'll have separate app project definitions in App Center, and therefore different app secret values for each target platform. The relevant section of the project's **config.xml** file will look like the following:
+As a complete example, for a Apache Cordova project that supports both Android and iOS targets, you'll have separate app project definitions in App Center, and so, different app secret values for each target platform. The relevant section of the project's **config.xml** file will look like the following:
 
 ```xml
 <platform name="android">
@@ -127,11 +127,11 @@ As a complete example, for a Apache Cordova project that supports both Android a
 </platform>
 ```
 > [!Note]
-> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. Notice that the app secrets are different, this is because you'll have unique secrets for your Android and iOS application projects in App Center.
+> The example doesn't show actual app secret values; these are merely mock-ups, you'll need to grab your App Center project's app secrets and use them here. The app secrets are different because you'll have unique secrets for your Android and iOS application projects in App Center.
 
 #### Analytics Preferences
 
-If you're using App Center Analytics in your app, there's some additional configuration steps you must perform. Open the Apache Cordova project's **config.xml** file in an editor, and add one or more of the following `preferences` elements to the file:
+If you're using App Center Analytics in your app, there's some additional configuration steps to perform. Open the Apache Cordova project's **config.xml** file in an editor, and add one or more of the following `preferences` elements to the file:
 
 - `APPCENTER_ANALYTICS_ENABLE_IN_JS` - *(optional, default is false)* Controls whether Analytics is enabled automatically. When `false`, Analytics is enabled by default. When `true`, the application must call `AppCenter.Analytics.setEnabled(true)` (in its JavaScript code) to enable Analytics before sending data to App Center. This preference is useful when you want to ask users whether they want to share analytics information before enabling it within the application. [Learn more about sending user events manually.](~/sdk/analytics/cordova.md#wait-for-js-to-enable-app-center-analytics)
 
@@ -185,4 +185,4 @@ If you're using App Center Analytics in your app, there's some additional config
 
   ## 4. Where to go next?
 
-Great, you are all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There is no additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.
+Great, you're all set to visualize Analytics and Crashes data collected automatically by the SDK on the portal. There isn't any additional setup required. Look at [Analytics](~/sdk/analytics/cordova.md) and [Crashes](~/sdk/crashes/cordova.md) sections for APIs guides and walkthroughs to learn what App Center can do.

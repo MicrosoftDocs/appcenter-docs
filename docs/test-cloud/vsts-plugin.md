@@ -64,7 +64,7 @@ The second method uses your App Center account credentials:
 * Populate the **App Center Username** and **App Center Password** fields with the credentials from your App Center account.
 
 > [!NOTE]
-> Your App Center username is in your [App Center account profile](https://appcenter.ms/settings/profile). If signing in using your Microsoft credentials, you must set up your account with a password or the task can't login. You can [set up a password in App Center](https://appcenter.ms/settings/password).
+> Your App Center username is in your [App Center account profile](https://appcenter.ms/settings/profile). If signing in using your Microsoft credentials, set up your account with a password or the task can't log in. You can [set up a password in App Center](https://appcenter.ms/settings/password).
 
 ## Appium
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
@@ -82,7 +82,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run appium --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir target/upload
 ```
 
@@ -93,7 +93,7 @@ appcenter test run appium --app "username/appname" --devices 209ed689
 * **Test series** is a free text field - it can be anything. It's the `--test-series` parameter.
 * **System Language** is a drop-down menu. If **Other** is selected, an **Other Locale** field appears where you can enter language and country code like this format: `en_US`.
 
-Save the configuration and you are all set to start the build and App Center Test run.
+Save the configuration and you're all set to start the build and App Center Test run.
 
 ## Espresso
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.
@@ -110,7 +110,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run espresso --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir pathToEspressoBuildFolder
 ```
 
@@ -139,7 +139,7 @@ Now you can configure the test run. All the information you need is found by cre
 
 ```shell
 appcenter test run uitest --app "username/appname" --devices 209ed689
- --app-path pathToFile.apk --test-series "master" --locale "en_US"
+ --app-path pathToFile.apk --test-series "main" --locale "en_US"
   --build-dir pathTUITestBuildDir
 ```
 
@@ -157,7 +157,7 @@ Save the configuration and you're all set to start the build and App Center Test
 * [Read how to prepare your repository for App Center Test, XCUITest testing](frameworks/xcuitest/index.md).
 
 > [!NOTE]
-> In your pipeline, before the App Center Test task, you will need an **Xcode** task step with an action of `build-for-testing` to build the test runner app needed for testing. In that task, under **Arguments** in the **Advanced** section, specify a derived data path, typically using `-derivedDataPath DerivedData`. You will also need an `.ipa file` for your application. You can build the `.ipa file` in the same **Xcode** `build-for-testing` task by checking the `Create app package` option, or in a separate **Xcode** build step or in a **Bash** script step.
+> In your pipeline, before the App Center Test task, you'll need an **Xcode** task step with an action of `build-for-testing` to build the test runner app needed for testing. In that task, under **Arguments** in the **Advanced** section, specify a derived data path, typically using `-derivedDataPath DerivedData`. You'll also need an `.ipa file` for your application. You can build the `.ipa file` in the same **Xcode** `build-for-testing` task by checking the `Create app package` option, or in a separate **Xcode** build step or in a **Bash** script step.
 
 ### Azure Pipelines configuration for XCUITest
 
@@ -170,7 +170,7 @@ In the Prepare Tests section, make sure the **Prepare Tests** checkbox is checke
 Now you can configure the test run. All the information you need is found by creating a new test under Test in App Center. Follow the instructions at [Starting a Test Run](~/test-cloud/starting-a-test-run.md). Leave the submit page (last page on test run setup) open, so you can use that information as you set up the App Center Test task.
 
 ```shell
-appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "master" --locale "en_US" --build-dir pathToXCUItestBuildFolder
+appcenter test run xcuitest --app "username/appname" --devices 209ed689 --test-series "main" --locale "en_US" --build-dir pathToXCUItestBuildFolder
 ```
 
 ![Run section for the App Center Test task](images/vsts-run-test.png)

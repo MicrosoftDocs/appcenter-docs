@@ -31,7 +31,7 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 Follow the [Getting Started](~/sdk/getting-started/macos.md) section if you haven't set up the SDK in your application yet.
 
-Also note that crash logs on macOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
+Also, crash logs on macOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
 > In the `4.0.0` version of App Center breaking changes were introduced. Follow the [Migrate to App Center SDK 4.0.0 and higher](../getting-started/migration/apple-sdk-update.md) section to migrate App Center from previous versions.
@@ -46,10 +46,10 @@ App Center supports crash reporting in macOS extensions. The usage is the same a
 
 If user privacy is important to you, you might want to get user confirmation before sending a crash report to App Center. The SDK exposes a callback that tells App Center Crashes to await user confirmation before sending any crash reports.
 
-If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you will tell App Center Crashes what to do and the crash will then be handled accordingly.
+If you chose to do so, you're responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always send**, **Send**, and **Don't send**. Based on the input, you'll tell App Center Crashes what to do and the crash will then be handled accordingly.
 
 > [!NOTE]
-> The SDK does not display a dialog for this, the app must provide its own UI to ask for user consent.
+> The SDK doesn't display a dialog for this, the app must provide its own UI to ask for user consent.
 
 The following method shows how to set up a user confirmation handler:
 
@@ -112,7 +112,7 @@ Crashes.setUserConfirmationHandler({ (errorReports: [ErrorReport]) in
 })
 ```
 
-In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it based on the result (**ModalResponse**) of `runModal` call.
+In case you return `YES`/`true` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you're using an alert for this, as we do in the sample above, you'd call it based on the result (**ModalResponse**) of `runModal` call.
 
 ```objc
 // Depending on the user's choice, call notifyWithUserConfirmation: with the right value.
@@ -129,7 +129,7 @@ Crashes.notify(with: .always)
 
 ## Enable catching uncaught exceptions thrown on the main thread
 
-AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK cannot catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this will allow the application to crash on uncaught exceptions and the SDK can report them.
+AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK can't catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this flag allows the application to crash on uncaught exceptions and the SDK can report them.
 
 ```objc
 [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions" : @YES }];
@@ -177,7 +177,7 @@ The App Center Crashes SDK uses swizzling to improve its integration by forwardi
 
 2. Open **Info.plist** file and replace the **NSApplication** in the **Principal class** field with your application class name, **ReportExceptionApplication** in this example.
 
-3. In order to disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
+3. To disable swizzling in **App Center SDK**, add the `AppCenterApplicationForwarderEnabled` key to **Info.plist** file, and set the value to `0`.
 
 [!INCLUDE [apple common methods](includes/apple-common-methods-2.md)]
 

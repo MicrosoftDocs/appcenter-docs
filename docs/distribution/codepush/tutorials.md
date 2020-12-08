@@ -17,10 +17,10 @@ ms.custom: distribute
 
 CodePush provides Cordova and React Native developers with multiple options to configure the end users update experience.
 
-This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Leveraging these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
+This tutorial covers three potential "update modes" or deployment strategies for CodePush updates: Silent, Active, and Custom. Using these options allow developers to control when (and how often) to check for updates as well as how to present any update notifications to end users.
 
 > [!NOTE]
-> This tutorial does not cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
+> This tutorial doesn't cover how to enable CodePush on an app. If you need help setting up CodePush, visit the [Cordova](./cordova.md#getting-started) or [React Native](./rn-get-started.md) "Getting Started" sections.
 
 ### 1.  Silent mode
 
@@ -30,7 +30,7 @@ Silent mode updates are the simplest way to update an app and the least invasive
 codePush.sync();
 ```
 
-If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS). However, developers can modify the install behavior if they so choose, by leveraging the `installMode` parameter:
+If an update is available, it will be silently downloaded, and installed the next time the app is restarted (either explicitly by the end user or by the OS). However, developers can modify the install behavior by using the `installMode` parameter:
 
 * **IMMEDIATE**: The update will be applied to the running application immediately. The application will be reloaded with the new content immediately.
 * **ON_NEXT_RESTART**: The update is downloaded but not installed immediately. The new content will be available the next time the application is started.
@@ -54,7 +54,7 @@ codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDurati
 ```
 
 > [!NOTE]
-> If `codePush.sync()` is not called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
+> If `codePush.sync()` isn't called on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova), developers will need to notify the update was successfully installed by calling the `codePush.notifyApplicationReady()` method. Otherwise the CodePush runtime will assume the installed update has failed and roll back to the previous version.
 
 > [!NOTE]
 > For Cordova, the first parameter that `codePush.sync()` expects is a `syncStatusCallback`, so to do the same thing, you should insert `null` as the first parameter to the call, i.e:
@@ -94,7 +94,7 @@ To customize the update dialog, developers can create an updateDialogOption obje
 Visit the  [Cordova](./cordova.md#api-reference) or [React Native](./rn-api-ref.md) API Reference pages for a full description of all the available UpdateDialogOptions options.
 
 > [!IMPORTANT]
-> While Apple’s developer agreement fully allows performing over-the-air updates of JavaScript and assets (which is what enables CodePush!), it is against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
+> While Apple’s developer agreement fully allows over-the-air updates of JavaScript and assets (which is what enables CodePush!), it's against their policy for an app to display an update prompt. Because of this, we recommend that App Store-distributed apps don’t enable the updateDialog option when calling sync, whereas Google Play and internally distributed apps (e.g. Enterprise, Fabric, HockeyApp) can choose to enable/customize it.
 
 ### 3.  Custom mode
 
@@ -149,9 +149,9 @@ codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, on
 
 ## Automate your deployments with Azure DevOps
 
-Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to leverage the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
+Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to use the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
-This tutorial covers how to leverage Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush in order to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
+This tutorial covers how to use Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
 
 ### Overview
 
@@ -170,11 +170,11 @@ In addition, Azure DevOps allows developers to extend the service by creating Az
 
 The CodePush service provides an Azure DevOps extension with a set of deployment tasks that allows the automation of releases and the promotion of app updates directly from your CI environment.
 
-Leveraging the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can simply push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
+Using the workflow discussed below can greatly reduce the effort needed to keep your dev/alpha/beta deployments up-to-date, since you can push changes to the configured source control branches, and let your automated build take care of the rest. No need to manually release, promote or rollout from the App Center CLI!
 
 ### Prerequisites
 
-The following is required to complete this module:
+Requirements to complete this module:
 
 - Azure DevOps Account ([Sign up for a free Azure DevOps account(https://www.visualstudio.com/products/free-developer-offers-vs))
 - App Center Account (Follow these [steps](~/distribution/codepush/index.md) to get set up)
@@ -226,7 +226,7 @@ Give it a name and ensure `Git` is selected for `Version control`:
 
 ![New project dialog](images/tutorials4.png)
 
-Once the project is created, copy the remote string as you will use it to update the local repository's remote URL to point to your new Azure DevOps project:
+Once the project is created, copy the remote string as you'll use it to update the local repository's remote URL to point to your new Azure DevOps project:
 
 ![Getting Azure DevOps remote](images/tutorials5.png)
 
@@ -250,9 +250,9 @@ A few seconds later, the source will be added to your Azure DevOps repository:
 
 #### Install Azure DevOps extension
 
-To build the project you will need to install an extension from the Azure DevOps Marketplace.
+To build the project you'll need to install an extension from the Azure DevOps Marketplace.
 
-For React Native projects do the following:
+For React Native projects do the following steps:
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
@@ -272,12 +272,12 @@ For React Native projects do the following:
 
     ![Selecting empty build definition](images/tutorials10.png)
 
-3. Make sure that the repo settings are correct (it should be the master branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
+3. Make sure that the repo settings are correct (it should be the master or main branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
 
     ![Configuring empty build definition](images/tutorials11.png)
 
 > [!NOTE]
-> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` branch.
+> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` (or `main`) branch.
 
 #### Configure the build task
 
@@ -324,7 +324,7 @@ Pressing `OK` on the "Queue build" dialog starts the build process:
 ![Build running](images/tutorials14.png)
 
 > [!NOTE]
-> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` branch.
+> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` (or `main`) branch.
 
 ### 5. Configure the CD environment
 
@@ -332,7 +332,7 @@ As a best practice, we recommend creating three release environments: "Staging",
 
 #### Install Azure DevOps extension
 
-To leverage the CodePush service as the release vehicle, you will need to install another extension from the Azure DevOps Marketplace.
+To use the CodePush service as the release vehicle, you'll need to install another extension from the Azure DevOps Marketplace.
 
 1. In the upper right corner, click the Basket icon and select Browse Marketplace.
 
@@ -391,7 +391,7 @@ Create the described release definition by following these steps:
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
    - Use `Staging` as the `Source Deployment`
    - Use `Production` as the `Destination Deployment`
-   - Use `20%` for `Rollout` in order to deploy to only 20% of your production users
+   - Use `20%` for `Rollout` to deploy to only 20% of your production users
 
 6. Save and name the release definition by pressing the Save toolbar button.
 
@@ -406,7 +406,7 @@ Create the described release definition by following these steps:
    - Use `VSTSCDSample-android` (or the app name used when registering the app with CodePush if different) as the `App Name`
    - Use `Production` as the `Deployment`
    - Use `Latest` as the `Release Label`
-   - Use `100%` for `Rollout` in order to deploy to all remaining production users
+   - Use `100%` for `Rollout` to deploy to all remaining production users
 
 9. Save and name the release definition by pressing the Save toolbar button.
 
@@ -414,7 +414,7 @@ Create the described release definition by following these steps:
 
 If you had both `Staging` and `Production` users, you could test the full release environment as configured. Since that's not the case for this tutorial, you can focus on testing the `Staging` environment.
 
-To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch in order to kick off a build and eventually a release.
+To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch to kick off a build and eventually a release.
 
 You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content).
 

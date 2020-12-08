@@ -17,8 +17,8 @@ Enable your testers to easily stay up to date with the latest releases. Integrat
 
 > [!IMPORTANT]
 > At this time, there are some limitations to In-App Updates:
-> 1) Android devices won't be prompted for an update if there is no change in `versionCode` or `versionName`.
-> 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that will have to be dismissed. Login is not required for the public flow.
+> 1) Android devices won't be prompted for an update if there's no change in `versionCode` or `versionName`.
+> 2) For iOS public in-app updates, if you use the private track, Apple has a default dialog that must be dismissed. Login isn't required for the public flow.
 > 3) In-App Updates don't work on windows/UWP applications.
 
 ## Public In-App Updates
@@ -31,11 +31,11 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 
 If the application is installed from Google Play or other stores instead of App Center, checking for new versions will be disabled.
 
-Note that Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#remove-in-app-updates-for-google-play-builds), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#remove-in-app-updates-for-google-play-builds), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
 
 ### iOS
 
-If the application is installed from the App Store or TestFlight, in-app updates are not available, and checking for new versions will be disabled.
+If the application is installed from the App Store or TestFlight, in-app updates aren't available, and checking for new versions will be disabled.
 
 ## FAQ
 
@@ -59,7 +59,7 @@ If the application is installed from the App Store or TestFlight, in-app updates
   - The app wasn't installed from App Center.
   - The version a tester installed wasn't released via App Center or the release was deleted on App Center.
   - App secret used in the SDK is incorrect. To get your app secret, go to your app's settings page, click on the triple vertical dots at the top right-hand corner, and copy app secret.
-     - If you have migrated your App from HockeyApp, refer to the following articles: 
+     - If you've migrated your App from HockeyApp, refer to the following articles: 
         - iOS: [Migrating from HockeyApp][ios-sdk-migration]
         - Android: [Migrating from HockeyApp][android-sdk-migration]
 

@@ -30,7 +30,7 @@ To modify settings for a particular release, select (click on) the release in th
 At the top of the page are three options:
 
 + **Download Bundle** button: Click the button to download the packaged release assets. You'll do this in troubleshooting when you want to view what data is being deployed to devices. The bundle is essentially a zip file (without an extension); after you've downloaded the bundle, add a `.zip` extension to the file, then interact with the file like any other zip file.
-+ **Promote** button: Click this button to promote this release from the current deployment to a different deployment. For example, you would use this feature to promote a release from the **Staging** to **Production** deployments for release to a larger target audience.
++ **Promote** button: Click this button to promote this release from the current deployment to a different deployment. For example, you'd use this feature to promote a release from the **Staging** to **Production** deployments for release to a larger target audience.
 + **Wrench Icon**: Click the icon to edit settings for the selected release.
 
 The body of the pane displays deployment statistics for the release, enabling you to understand how this release is deployed:
@@ -69,16 +69,16 @@ If you ever want an update to target multiple versions of the app store binary, 
 | ^1.2.3         | Equivalent to >=1.2.3 <2.0.0                                                       |
 
 > [!NOTE]
-> As defined in the semver spec, ranges only work for non pre-release versions (see [pre-release tags](https://github.com/npm/node-semver#prerelease-tags)). If you want to update a version with pre-release tags, then you must write the exact version you want to update (1.2.3-beta for example).
+> As defined in the semver spec, ranges only work for non pre-release versions (see [pre-release tags](https://github.com/npm/node-semver#prerelease-tags)). If you want to update a version with pre-release tags, write the exact version you want to update (1.2.3-beta for example).
 
 ### Description
-A brief description of this release, which provides an optional "change log" for the deployment. The value is simply round tripped to the client so that when the update is detected, your app can display it to the end user, for example, with a "What's new?" dialog. This string accepts control characters such as `\n` and `\t` so that you can include whitespace formatting within your descriptions for improved readability.
+A brief description of this release, which provides an optional "change log" for the deployment. The value is round-tripped to the client so that when the update is detected, your app can display it to the end user, for example, with a "What's new?" dialog. This string accepts control characters such as `\n` and `\t` so that you can include whitespace formatting within your descriptions for improved readability.
 
 > [!NOTE]
 > This setting corresponds to the [CLI's description parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#description-parameter).
 
 ### Enabled
-Controls whether the update is available for deployment to users. This option is enabled by default, you would disable this setting when you want to keep a particular release from deploying, for example, because of a bug in the code, or when you're not ready to deploy a version yet.
+Controls whether the update is available for deployment to users. This option is enabled by default, you'd disable this setting when you want to keep a particular release from deploying, for example, because of a bug in the code, or when you're not ready to deploy a version yet.
 
 > [!NOTE]
 > This setting corresponds to the [CLI's disabled parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#disabled-parameter).
@@ -99,9 +99,11 @@ The required attribute is unique because the server will dynamically modify it, 
 
 If a device is running v1 of the app, and queries the server for an update, the server responds with v3. The server will dynamically convert the release to `mandatory`, since a `mandatory` update was released in between. The code contained in v3 is incremental to the code in v2, so whatever made v2 mandatory, continues to make v3 mandatory for anyone missing v2.
 
-If an end user is currently running v2, and they query the server for an update, it will respond with v3, but leave the release as `optional`. Because they already received the mandatory update, there isn't a need to modify the policy of v3. This behavior is why we said that the server "dynamically converts" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It is only changed on-the-fly as necessary when responding to an update check from a device.
+If an end user is currently running v2, and they query the server for an update, it will respond with v3, but leave the release as `optional`. Because they already received the mandatory update, there isn't a need to modify the policy of v3. This behavior is why we said that the server "dynamically converts" the mandatory flag, because as far as the release goes, its mandatory attribute will always be stored using the value you specified when releasing it. It's only changed on-the-fly as necessary when responding to an update check from a device.
 
-If you never release an update marked as `mandatory`, then the described behavior doesn't apply to you, since the server will never change an `optional` release to `mandatory`. If a release is marked as `mandatory`, it'll never be converted to `optional`. The server will only change an `optional` release to `mandatory` in order to respect the semantics described above.
+The described behavior only applies to you if you release an update that's marked as `mandatory`. The server will only change an `optional` release to `mandatory` if there are intermingled `mandatory` updates as illustrated above. 
+
+A release marked as `mandatory` will never be converted to `optional`.
 
 ### Rollout Percentage
 Developers use the [CLI's rollout parameter](https://github.com/Microsoft/code-push/tree/v3.0.1/cli#rollout-parameter) to instruct CodePush to push a particular release to a percentage of the devices running the app. This feature enables developers to test out a release before rolling it out to everyone.

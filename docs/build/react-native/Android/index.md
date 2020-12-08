@@ -50,7 +50,7 @@ Select your project’s `package.json`. App Center will automatically extract in
 The available build variants will populate from the Build Types and Product Flavors specified in the project's **build.gradle [(app level)](https://developer.android.com/studio/build)** file. Select which build variant should be built.
 
 > [!NOTE]
-> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one optional Product Flavor. Detecting combinations of multiple product flavors are not supported at this time.
+> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one optional Product Flavor. Detecting combinations of multiple product flavors aren't supported at this time.
 
 ### 3.3. Node.js version
 
@@ -91,9 +91,9 @@ After a build triggers, the build will be in one of the following states:
 
 - **queued** -  the build is in a queue waiting for resources to be freed up
 - **building** - the build is running the predefined tasks
-- **succeeded** - the build is completed and it has succeeded
-- **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
-- **canceled** - the build has been canceled by a user action or it has timed out
+- **succeeded** - the build is completed and it's succeeded
+- **failed** - the build has completed but it's failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+- **canceled** - the build has been canceled by a user action or it's timed out
 
 ### 4.1. Build logs
 
@@ -115,7 +115,7 @@ The `.apk` file is an Android application packaged file that stores the Android 
 
 ## 5. Supported versions and requirements
 
-The minimum version supported to build Android apps is 5.0 (API level 21). Android apps can have a lower minimum API level required to run, but have to target at least API level 21.
+The minimum version supported to build Android apps is 5.0 (API level 21). Android apps can have a lower minimum API level required to run, but must target at least API level 21.
 
 ## 6. Build tips
 

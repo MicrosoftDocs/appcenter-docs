@@ -12,8 +12,7 @@ ms.custom: test
 ---
 
 # Preparing Espresso Tests for Upload
-
-The steps necessary to prepare an app and its corresponding test suite for upload to App Center vary depending on the test framework being used. This document provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
+This document provides instructions for preparing Espresso tests for upload to Test. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
 
 ## 1. Changes to the build system
 
@@ -33,9 +32,9 @@ Add the following dependency in your app module's **build.gradle** file:
 androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
 ```
 
-This adds the Test Cloud [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature. 
+This code adds the Test [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature. 
 
-If you are using a version of Gradle lower that 3.0, then you might need to replace `androidTestImplementation` with `androidTestCompile` as explained in the [gradle docs](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
+If you're using a version of Gradle lower that 3.0, then you might need to replace `androidTestImplementation` with `androidTestCompile` as explained in the [gradle docs](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation).
 
 ## 2. Changes to the tests
 
@@ -63,7 +62,7 @@ public ReportHelper reportHelper = Factory.getReportHelper();
 
 Using the helper still allows you to run your tests locally without additional modifications, but enables you to *label* test steps in your test execution using `reportHelper.label("myTestStepLabel")`. The label text is used to navigate the test steps and corresponding screenshots in the test report.
 
-A recommended practice is to have a call to `label` in the `@After` method, this includes a screenshot of the app final state in the test report. The screenshot is taken, even if a test is failing, and often provides valuable information as to why it does so. An example `@After` method for a test could look like this:
+It's recommended to call `label` in the `@After` method, this call takes a screenshot of the app final state for the test report. The screenshot is taken even if a test fails. An example `@After` method for a test could look like this:
 
 ```java
 @After

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Handling User Consent for Analytics
 ## Ask for the User's Consent To Send Analytics logs
-If you want to get your user's confirmation before sending any Analytics data to App Center, the App Center SDK exposes an API that you can leverage before sending any Analytics data to App Center.
+If you want to get your user's confirmation before sending any Analytics data to App Center, the App Center SDK exposes an API that you can use before sending any Analytics data to App Center.
 
 Follow the steps below:
 1. In your application code, build your own UI to ask for user consent.
@@ -39,4 +39,4 @@ You can read more about how to ask for the user's consent to send Analytics data
 4. If the user chooses '**No**', in your application code, you can call this App Center SDK API which disables sending of data to App Center backend. Make sure to pass the parameter as '**false**' in the API.
 
 
-You are done. Your app users should see this consent dialog box when they interact with the app. 
+You're done. Your app users should see this consent dialog box when they interact with the app. 

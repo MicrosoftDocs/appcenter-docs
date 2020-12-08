@@ -175,7 +175,7 @@ App Center's standard export of app data to Azure requires an Azure subscription
 
 ### Linking an app to an Azure Subscription
 
-Once you've added your Azure subscription to the user or org account, you need to provide apps with access so that the subscription can be used within that app. By doing this, you're allowing any manager/developer in that app to use the subscription for exporting purposes. This will have an associated cost charged against your Azure Subscription.
+Once you've added your Azure subscription to the user or org account, you need to provide apps with access so that the subscription can be used within that app. By doing this, you're allowing any manager/developer in that app to use the subscription for exporting purposes. This has an associated cost charged against your Azure Subscription.
 
 ## Set up Export
 
@@ -200,7 +200,7 @@ Custom Export enables users to customize their export configuration in [Azure](h
 1. Sign in to the [Azure portal](https://portal.azure.com).
 2. Click on **Create a new resource**
 3. Search for **Storage account** in Search the Marketplace.
-4. Click on **Create**. This will open the Create storage account page.
+4. Click on **Create**. This opens the Create storage account page.
 5. Select an Azure Subscription.
 6. Choose an existing resource group or create a new one. (A resource group is a container that holds related resources for an Azure solution)
 7. For Account kinds, you'll see the following drop-down. There are three options supported. Choose what's right for you.

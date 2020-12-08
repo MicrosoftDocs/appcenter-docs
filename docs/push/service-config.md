@@ -26,18 +26,18 @@ The App Center Push (ACP) service abstracts away the complexities of dealing wit
 
 ## App project initial configuration
 
-When you created your app project in App Center, you selected a target platform for your app, so App Center already knows what information it needs to send notifications to your app's users, now you simply have to provide it using the following instructions:
+When you created your app project in App Center, you selected a target platform for your app, so App Center already knows what information it needs to send notifications to your app's users, now you must provide it using the following instructions:
 
 1. Log into [App Center](https://appcenter.ms).
 2. Using the project navigator on the left side of the page, select the your user account, or an organization where the app project is defined, then select the app from the list that appears.
 3. In the project navigator that opens, select **Push**.
-4. At this point, App Center displays a **Getting Started** page describing how to add the App Center SDK to your project. Take a moment to follow these instructions, as this page will not appear again once you configure the app's push settings. Bookmark the documentation page linked here, just in case you need it again later. The page also displays your project's **App Secret**, but there are other ways to get that value later (it's displayed on the project overview page, just click **Overview** in the project navigator).
+4. At this point, App Center displays a **Getting Started** page describing how to add the App Center SDK to your project. Take a moment to follow these instructions, as this page won't appear again once you configure the app's push settings. Bookmark the documentation page linked here, in case you need it again later. The page also displays your project's **App Secret**, but there are other ways to get that value later (it's displayed on the project overview page, click **Overview** in the project navigator).
 5. Click the **Next** button to continue (there may be several pages to view before you get to the configuration settings) page.
 6. At this point, App Center displays a page with instructions for how to configure App Center to use the app's target platform notification service. Follow the instructions to complete the Push configuration.
 7. Click the **Done** button when you're done with the configuration.
 
 > [!NOTE]
-> The settings you need here are provided by the vendor service, so you'll have to open up a separate browser or browser window, log into the platform vendor's service, and copy settings between the two browser tabs. As much as we'd like to automate all of this, or provide you with detailed, step-by-step instructions for completing this configuration, we can't. The vendors generally don't expose APIs for collecting the settings we need, and they regularly move things around in their admin UIs as they add new features. We'll provide the best instructions we can in the App Center portal and send you off to collect the data we need.
+> The settings you need here are provided by the vendor service, so you must open up a separate browser or browser window, log into the platform vendor's service, and copy settings between the two browser tabs. As much as we'd like to automate all of this, or provide you with detailed, step-by-step instructions for completing this configuration, we can't. The vendors generally don't expose APIs for collecting the settings we need, and they regularly move things around in their admin UIs as they add new features. We'll provide the best instructions we can in the App Center portal and send you off to collect the data we need.
 
 ## Changing your project's Push configuration
 

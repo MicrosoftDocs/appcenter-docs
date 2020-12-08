@@ -4,7 +4,7 @@ description: Troubleshooting App Center Test.
 keywords: appcenter test cloud, troubleshooting
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/29/2020
+ms.date: 12/03/2020
 ms.topic: article
 ms.assetid: 63f6b52d-ecd6-4270-b179-0ce580c8916c
 ms.service: vs-appcenter
@@ -32,6 +32,7 @@ If you're unsure how to diagnose your issue, here are some general tips:
 - [Device idling](sleep.md)
 - [Device log analysis](device-logs.md)
 - [Stalled devices](stalls.md)
+- [Test Report Steps out-of-sync](steps-desync.md)
 - [Time limits](time-outs.md)
 - [Web & server connection issues](server-connection.md) 
 

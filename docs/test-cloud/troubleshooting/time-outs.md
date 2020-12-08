@@ -15,7 +15,7 @@ ms.custom: test
 App Center Test enforces time limits per device on test suites and on individual tests. App Center Test stops a test or test suite that exceeds the limit, to prevent tests from trying to run forever.
 
 > [!NOTE]
-> These limits apply to the time spent installing your app and running your tests. Time that a device is queued for running or processing completed test results do not count against these limits.
+> These limits apply to the time spent installing your app and running your tests. Time that a device is queued for running or processing completed test results don't count against these limits.
 
 App Center Test enforces time limits for test suites and individual tests independently for each device. Exceeding a limit on one device doesn't impact other devices.
 
@@ -53,12 +53,12 @@ A test might exceed the limit because of a bug, like a loop that never finishes.
 It could be because the test has too many long-running steps. The solution here is to break up the test into multiple smaller and faster tests.
 
 ### Troubleshooting timed-out test suites
-This error could be caused by an issue with test code or perhaps your test suite is too large to complete within the time limit. Without a test report, it's hard to determine the cause. Try running fewer tests per test suite. The goal is to get a test report and associated log files so you can see what is happening.
+This error could be caused by an issue with test code or perhaps your test suite is too large to complete within the time limit. Without a test report, it's hard to determine the cause. Try running fewer tests per test suite. The goal is to get a test report and associated log files so you can see what's happening.
 
 If the test suite completes successfully, sometimes but not always, check the test time using the [Test Reports](~/test-cloud/test-reports.md) for the completed tests. If it's close to the timeout limits, then small variances in execution time could make the difference between completion or timing out. Again, running fewer tests in a test suite can help get test results consistently.
 
 > [!NOTE]
-> Tests may need additional time to execute in App Center Test compared to running locally due to network latency or additional time for screenshots. Emulators and simulators are not accurate for time comparison since App Center Test only uses real devices. The **Duration** from the *Test Report* is for the combined duration of all devices in the test, even those which did not time out.
+> Tests may need additional time to execute in App Center Test compared to running locally because of network latency or additional time for screenshots. Emulators and simulators aren't accurate for time comparison since App Center Test only uses real devices. The **Duration** from the *Test Report* is for the combined duration of all devices in the test, even those that didn't time out.
 
 If you don't know which devices hit the test suite time limit, you can contact App Center Support. Include a link to the test run and they can look at internal data for the run.
 

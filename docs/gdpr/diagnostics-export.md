@@ -12,14 +12,14 @@ ms.service: vs-appcenter
 
 # Exporting Diagnostics Data
 
-This article walks you through how to export data per your user request. In order to export data, you have two options:
+This article walks you through how to export data per your user request. To export data, you have two options:
 
 1. Use Azure Blob Storage
 2. Call our APIs for specific crash/error information
 
 ## Use Azure Blob Storage
 
-Export all your errors and symbolicated crashes, including stack traces and attachments, to Azure Blog Storage. Note that you need an Azure subscription to export your data to Azure Blob Storage. You can learn more about how App Center works with Azure Blob Storage in the [App Center Export documentation](https://docs.microsoft.com/appcenter/analytics/export).
+Export all your errors and symbolicated crashes, including stack traces and attachments, to Azure Blog Storage. You need an Azure subscription to export your data to Azure Blob Storage. You can learn more about how App Center works with Azure Blob Storage in the [App Center Export documentation](https://docs.microsoft.com/appcenter/analytics/export).
 
 To export Diagnostics data to Blob Storage, call the following App Center API:
 
@@ -97,6 +97,6 @@ https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/atta
 
 ## How to provide a copy of this data to my users
 
-**Prerequisite:** The following requires that you must have a way to map the App Center install IDs and your users.
+**Prerequisite:** The following process requires you have a way to map the App Center install IDs and your users.
 
-In order to provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.
+To provide a specific user with their data, you must search the exported data and copy the logs with a specific install ID in a different file. That file will contain all the data that has been exported corresponding to that specific user.

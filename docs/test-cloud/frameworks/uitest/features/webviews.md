@@ -48,7 +48,7 @@ Once the webview has been isolated, there are two main APIs for interacting with
 * **CSS** &ndash; This API uses CSS selectors to locate DOM elements displayed by the webview.
 * **XPath** &ndash; UITest can use XPath expressions to locate DOM elements in the webview.
 
-The XPath API, which more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
+The XPath API, while more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
 
 ### CSS
 It's possible to match HTML elements using the [AppQuery.Css](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Css#Xamarin_UITest_Queries_AppQuery_Css_System_String_) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.
@@ -160,7 +160,7 @@ Query for XPath("//h1") gave 1 results.
 ```
 
 ## Invoking JavaScript
-It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are encountered, the execution will halt and an Exception will be thrown.
+It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
 
 ### InvokeJS on Android
 Generally speaking Android requires that the JavaScript `returns` the value; otherwise the query will return `null`:
@@ -177,7 +177,7 @@ Generally speaking Android requires that the JavaScript `returns` the value; oth
 ```
 
 ### InvokeJS on iOS
-Generally speaking, on iOS the `return` is not used:
+Generally speaking, on iOS the `return` isn't used:
 
 ```text
 >>> app.Query (w => w.WebView ().InvokeJS ("return document.getElementById('lastname').value"))
@@ -192,7 +192,7 @@ Generally speaking, on iOS the `return` is not used:
 ```
 
 ## Examples
-This section will cover some common use cases that may be encountered when writing Calabash tests involving webviews.
+This section will cover some common use cases that may be found when writing Calabash tests involving webviews.
 
 ### Scrolling
 It's possible to scroll a webview to bring DOM elements onto the screen. This is accomplished using the `IApp.ScrollDownTo` or `IApp.ScrollUpTo` methods. The signature of these methods is similar:
@@ -240,7 +240,7 @@ The output from the `tree` command tells us that the webview has an the ID `webV
 * an HTML input field `firstname`, with the markup `<input type="text" name="firstname" id='firstname'>`
 * an HTML input field `lastname`, with the markup `<input type="text" name="lastname" id='lastname'>`
 
-The `show_secret` button is visible on the screen, but `firstname` and `lastname` aren't. Before a UITest may interact with those DOM elements, it's necessary to use the scrolling APIs to bring those fields into view. The following snippet from the REPL shows how to can scroll the HTML input elements into view using the `ScrollDownTo` API:
+The `show_secret` button is visible on the screen, but `firstname` and `lastname` aren't. Before a UITest may interact with those DOM elements, it's necessary to use the scrolling APIs to bring those fields into view. The following snippet from the REPL shows how to scroll the HTML input elements into view using the `ScrollDownTo` API:
 
 ```text
 >>> app.ScrollDownTo(c=>c.Css("#firstname"))                              

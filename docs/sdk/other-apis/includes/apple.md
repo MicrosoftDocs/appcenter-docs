@@ -27,7 +27,7 @@ dev_langs:
 
 ## Adjust the log level
 
-You can control the amount of log messages that show up from App Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it is set to `LogLevelAssert` for the App Store environment and `LogLevelWarning` otherwise.
+You can control the amount of log messages that show up from App Center in the console. Use the `setLogLevel:`-API to enable additional logging while debugging. By default, it's set to `LogLevelAssert` for the App Store environment and `LogLevelWarning` otherwise.
 
 To have as many log messages as possible, use `MSACLogLevelVerbose`/`LogLevel.verbose`.
 
@@ -51,7 +51,7 @@ var installId = AppCenter.installId
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `:start:withServices:` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/ios.md). 
 2. Set a `userID` in the SDK using the following code:
@@ -66,7 +66,7 @@ AppCenter.userId = "your-user-id"
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `setEnabled` API. When disabled, the SDK won't forward any information to App Center.
 
 ```objc
 [MSACAppCenter setEnabled:NO];
@@ -91,7 +91,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-Enable or disable desired services at the runtime with following code:
+Enable or disable the services at the runtime with following code:
 
 ```objc
 [MSACAnalytics setEnabled:NO];
@@ -119,7 +119,7 @@ AppCenter.enabled
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```objc
 [MSACAppCenter sdkVersion];
@@ -134,7 +134,7 @@ App Center allows you to define custom properties as key value pairs in your app
 
 > [!NOTE]
 > Only devices that have [Push](../../push/ios.md) successfully registered are matched in audiences.
-> As a consequence, the iOS simulator can not be used to test audience matching.
+> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
@@ -154,7 +154,7 @@ AppCenter.customProperties = customProperties
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clearPropertyForKey` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `clearPropertyForKey` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```objc
 MSACCustomProperties *customProperties = [MSACCustomProperties new];
@@ -169,7 +169,7 @@ AppCenter.customProperties = customProperties
 
 ## Storage size
 
-When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
+When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It's also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
 
 Use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the `completionHandler` is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start`. You may only call the API once.
 
@@ -177,7 +177,7 @@ Use the `setMaxStorageSize` API to set the size of the local DB. The API is asyn
 // Use 20 MB for storage.
 [MSACAppCenter setMaxStorageSize:(20 * 1024 * 1024) completionHandler:^(BOOL success) {
     if (!success) {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 }];
 [MSACAppCenter start:@"{Your App Secret}", withServices:@[[MSACAnalytics class]]];
@@ -186,16 +186,16 @@ Use the `setMaxStorageSize` API to set the size of the local DB. The API is asyn
 // Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024, completionHandler: { (success) in
     if !success {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 })
 AppCenter.start(withAppSecret: "{Your App Secret}", services:[Analytics.self])
 ```
 
-If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
+If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you're allowed to set is 20 KB.
 
 > [!NOTE]
-> The actual max storage size may be slightly higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
+> The actual max storage size may be slightly higher than the value you've chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
 
 > [!NOTE]
 > The logs older than 25 days will be discarded.

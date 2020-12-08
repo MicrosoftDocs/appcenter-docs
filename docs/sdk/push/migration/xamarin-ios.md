@@ -14,13 +14,13 @@ ms.tgt_pltfrm: ios
 > [!IMPORTANT]
 > Note this feature is being retired. For more information, see the [blog post](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/). For more information, refer to the [Push Migration Guide](~/migration/push/index.md).
 
-Version 1.11.0 (released in November 2018) fixes a bug in the `Push.DidReceiveRemoteNotification(...)` callback. If (and only if) the developer sets their own `UNUserNotificationCenterDelegate`, the callback was not triggered once a notification was tapped or once it was received while the app was in the foreground. To fix this issue, App Center Push captures the `UNUserNotificationCenter`'s delegate and swizzles its methods to forward incoming notifications and notification-related actions to the App Center SDK.
+Version 1.11.0 (released in November 2018) fixes a bug in the `Push.DidReceiveRemoteNotification(...)` callback. If (and only if) the developer sets their own `UNUserNotificationCenterDelegate`, the callback wasn't triggered once a notification was tapped or once it was received while the app was in the foreground. To fix this issue, App Center Push captures the `UNUserNotificationCenter`'s delegate and swizzles its methods to forward incoming notifications and notification-related actions to the App Center SDK.
 
 If you want to disable the swizzling of `UNUserNotificationCenterDelegate` callbacks, refer to [the documentation to disable automatic method forwarding of UNUserNotificationCenterDelegate methods](~/sdk/push/xamarin-ios.md#user-notification-center-delegate).
 
-In case you did not implement your own `UNUserNotificationCenterDelegate`, there is no action required.
+In case you didn't implement your own `UNUserNotificationCenterDelegate`, there's no action required.
 
-If you are using App Center Push's default setup logic (i.e. you did NOT add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` entry to your **Info.plist** or it is set to `1`) and are implementing your own `UNUserNotificationCenterDelegate` callbacks, do the following:
+If you're using App Center Push's default setup logic (i.e. you didn't add the `AppCenterUserNotificationCenterDelegateForwarderEnabled` entry to your **Info.plist** or it's set to `1`) and are implementing your own `UNUserNotificationCenterDelegate` callbacks, do the following steps:
 
-1. Check if you are calling `Push.DidReceiveRemoteNotification(...)`. If you are not, skip step 2; no action is required.
+1. Check if you're calling `Push.DidReceiveRemoteNotification(...)`. If you're not, skip step 2; no action is required.
 2. Remove any explicit calls to `Push.DidReceiveRemoteNotification(...)`. For example, you no longer need to call `didReceiveRemoteNotification:` inside your `UNUserNotificationCenterDelegate` callbacks as App Center will swizzle the `UNUserNotificationCenterDelegate` callbacks in addition to your custom implementation.

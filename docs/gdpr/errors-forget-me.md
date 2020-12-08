@@ -12,11 +12,11 @@ ms.service: vs-appcenter
 
 # Deleting User Errors Data
 
-Since Data Subject requests to be forgotten must be serviced within thirty days, App Center Errors retains raw data for just twenty-eight days. In the event that you wish to stop collecting all Errors data from a specific end-user, there are two ways to do so:
+Since Data Subject requests to be forgotten must be serviced within 30 days, App Center Errors retains raw data for 28 days. In the event that you wish to stop collecting all Errors data from a specific end-user, there are two ways to do so:
 
 ## Block incoming Errors data by install ID
 
-**Step 1.** If you are already keeping a mapping between the App Center install IDs to a way to identify your users, you can skip to Step 3.
+**Step 1.** If you're already keeping a mapping between the App Center install IDs to a way to identify your users, you can skip to Step 3.
 
 **Step 2.** Continuously [Export to Blob Storage](~/analytics/export.md) and search for a specific install ID following the steps explained in the [Install ID](~/gdpr/install-id.md) section.
 

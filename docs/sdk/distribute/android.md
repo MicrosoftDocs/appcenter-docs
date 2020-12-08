@@ -28,7 +28,7 @@ App Center Distribute will let your users install a new version of the app when 
 > Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Use a variant of the Distribute SDK as directed in [this section](#remove-in-app-updates-for-google-play-builds) before submitting your app to Google Play. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play.
 
 > [!NOTE]
-> If you are running automated UI tests, enabled in-app updates will block your automated UI tests as they will try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
+> If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests.
 
 ## Add in-app updates to your app
 Follow the [Get started](~/sdk/getting-started/android.md) section if you haven't set up and started the SDK in your application, yet.
@@ -54,7 +54,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default no modules are started and you will have to explicitly call each of them when starting the SDK.
+To use App Center, opt in to the module(s) that you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
 Add the Distribute class to your `AppCenter.start()` method to start App Center Distribute service.
 
@@ -65,7 +65,7 @@ AppCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 AppCenter.start(application, "{Your App Secret}", Distribute::class.java)
 ```
 
-Make sure you have replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+Make sure you've replaced `{Your App Secret}` in the code sample above with your App Secret. Android Studio automatically suggests the required import statement once you add a reference to the `Distribute` class to the `start()` method, but if you see an error that the class names aren't recognized, add the following lines to the import statements in your activity class:
 
 ```java
 import com.microsoft.appcenter.AppCenter;
@@ -78,7 +78,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. In order to make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
 1. Open the project's app level **build.gradle** file (`app/build.gradle`).
 2. Configure build variants by adding product flavors:
@@ -114,7 +114,7 @@ You can read more about configuring build variants in the [Android documentation
 
 ## Use private distribution group
 
-By default, Distribute uses a public distribution group. If you want to use a private distribution group, you will need to explicitly set it via `setUpdateTrack` API.
+By default, Distribute uses a public distribution group. If you want to use a private distribution group, you'll need to explicitly set it via `setUpdateTrack` API.
 
 ```java
 Distribute.setUpdateTrack(UpdateTrack.PRIVATE);
@@ -124,12 +124,12 @@ Distribute.setUpdateTrack(UpdateTrack.PRIVATE)
 ```
 
 > [!NOTE]
-> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track are not persisted when the application process restarts, and so if the method is not always called before the `AppCenter.start` call, it will be public, by default.
+> The default value is `UpdateTrack.PUBLIC`. This method can only be called before the `AppCenter.start` method call. Changes to the update track aren't persisted when the application process restarts, and so if the method isn't always called before the `AppCenter.start` call, it will be public, by default.
 
 When the app is in foreground (after `Distribute.setUpdateTrack(UpdateTrack.PRIVATE);` and `AppCenter.start`), a browser window opens to authenticate the user. All the subsequent update checks will get the latest release on the private track.
 
-If a user is on the **private track**, it means that after the successful authentication, they will get the latest release from any private distribution groups they are a member of.
-If a user is on the **public track**, it means that they will get the latest release from any public distribution group.
+If a user is on the **private track**, it means that after the successful authentication, they'll get the latest release from any private distribution groups they're a member of.
+If a user is on the **public track**, it means that they'll get the latest release from any public distribution group.
 
 ## Disable Automatic Check for Update
 
@@ -162,16 +162,16 @@ Distribute.checkForUpdate();
 Distribute.checkForUpdate()
 ```
 
-This will send a request to App Center and display an update dialog in case there is a new release available.
+This sends a request to App Center and display an update dialog in case there's a new release available.
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update will not be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being done. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/AppCenter-SDK-Android/blob/master/sdk/appcenter-distribute/src/main/res/values/appcenter_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+You can easily provide your own resource strings if you want to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/AppCenter-SDK-Android/blob/master/sdk/appcenter-distribute/src/main/res/values/appcenter_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ### 2. Customize the update dialog
 
@@ -212,7 +212,7 @@ public class MyDistributeListener implements DistributeListener {
 
         // Build our own dialog title and message
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
-        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead, this is just a simple example
         dialogBuilder.setMessage(releaseNotes);
 
         // Mimic default SDK buttons
@@ -226,7 +226,7 @@ public class MyDistributeListener implements DistributeListener {
             }
         });
 
-        // We can postpone the release only if the update is not mandatory
+        // We can postpone the release only if the update isn't mandatory
         if (!releaseDetails.isMandatoryUpdate()) {
             dialogBuilder.setNegativeButton(com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
 
@@ -241,7 +241,7 @@ public class MyDistributeListener implements DistributeListener {
         dialogBuilder.setCancelable(false); // if it's cancelable you should map cancel to postpone, but only for optional updates
         dialogBuilder.create().show();
 
-        // Return true if you are using your own dialog, false otherwise
+        // Return true if you're using your own dialog, false otherwise
         return true;
     }
 }
@@ -266,7 +266,7 @@ class MyDistributeListener : DistributeListener {
 
         // Build our own dialog title and message
         val dialogBuilder = AlertDialog.Builder(activity)
-        dialogBuilder.setTitle("Version $versionName available!") // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setTitle("Version $versionName available!") // you should use a string resource instead, this is just a simple example
         dialogBuilder.setMessage(releaseNotes)
 
         // Mimic default SDK buttons
@@ -277,7 +277,7 @@ class MyDistributeListener : DistributeListener {
             Distribute.notifyUpdateAction(UpdateAction.UPDATE)
         }
 
-        // We can postpone the release only if the update is not mandatory
+        // We can postpone the release only if the update isn't mandatory
         if (!releaseDetails.isMandatoryUpdate) {
             dialogBuilder.setNegativeButton(
                 com.microsoft.appcenter.distribute.R.string.appcenter_distribute_update_dialog_postpone
@@ -289,13 +289,13 @@ class MyDistributeListener : DistributeListener {
         dialogBuilder.setCancelable(false) // if it's cancelable you should map cancel to postpone, but only for optional updates
         dialogBuilder.create().show()
 
-        // Return true if you are using your own dialog, false otherwise
+        // Return true if you're using your own dialog, false otherwise
         return true
     }
 }
 ```
 
-As shown in the example, you have to either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
+As shown in the example, you must either call `Distribute.notifyUpdateAction(UpdateAction.UPDATE);` or `Distribute.notifyUpdateAction(UpdateAction.POSTPONE);` if your listener returns `true`.
 
 If you don't call `notifyUpdateAction`, the callback will repeat on every activity change.
 
@@ -310,7 +310,7 @@ In that case, the activity hosting the dialog might be replaced without user int
 
 ## Enable or disable App Center Distribute at runtime
 
-You can enable and disable App Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in App Center portal.
+You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use Distribute service in App Center portal.
 
 ```java
 Distribute.setEnabled(false);
@@ -377,9 +377,9 @@ The in-app updates feature works as follows:
 
 1. This feature only works with **RELEASE** builds (by default) that are distributed using **App Center Distribute** service.
 2. Once you integrate the SDK, build release version of your app and upload to App Center, users in that distribution group will be notified for the new release via an email.
-3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
-4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser will not open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
-5. A new release of the app shows the in-app update dialog asking users to update your application if it has:
+3. When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we don't support side-loading. When an application is downloaded from the link, the SDK saves important information from cookies to check for updates later, otherwise the SDK doesn’t have that key information.
+4. If the application sets the track to private, a browser will open to authenticate the user and enable in-app updates. The browser won't open again as long as the authentication information remains valid even when switching back to the public track and back to private again later. If the browser authentication is successful, the user is redirected back to the application automatically. If the track is public (which is the default), the next step happens directly.
+5. A new release of the app shows the in-app update dialog asking users to update your application if it's:
 
    * a higher value of `versionCode` or
    * an equal value of `versionCode` but a different value of `versionName`.
@@ -391,17 +391,17 @@ The in-app updates feature works as follows:
 
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
-1. Create your app in the App Center Portal if you haven't done that already.
-1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
-1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on App Center. This ensures that you have an experience that's close to the experience of your real testers.
+1. Create your app in the App Center Portal if you haven't already.
+1. Create a new distribution group and name it, so you can recognize that it's meant for testing the in-app update feature.
+1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that wasn't used for that app on App Center. This ensures that your experience is close to the experience of your real testers.
 1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described above. If the group is private, don't forget to set the private in-app update track before start using the [setUpdateTrack API](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
-1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+1. Once the upload has finished, click **Next** and select the **Distribution group** that you created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.
 1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 1. Bump the `versionCode` of your app.
-1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Build the release version of your app and upload a new build of your app like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
-> While it is possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.
+> While it's possible to use App Center Distribute to distribute a new version of your app without adding any code, adding App Center Distribute to your app's code will result in a more seamless experience for your testers and users as they get the in-app update experience.

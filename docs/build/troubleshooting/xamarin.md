@@ -34,7 +34,7 @@ To fix it, open **Project Options > Build > iOS Bundle Signing** in your IDE and
 One common reason for a build failing during **Xamarin Android Postprocess** task is an incorrect value in the `<OutputPath>` property in the Android project file. To check it, go to **Xamarin.Android > Project Options > Build > Output** and verify that your build configuration (Debug/Release) points to the default location. Usually, it should be `YourProjectDir/bin/$(Configuration)`.
 
 ## I set up my Xamarin.iOS app branch to build without signing but my build failed claiming I need to provide the signing information
-If you selected **Sign builds: Off** in the App Center branch configuration and your build log contains `RequireProvisioningProfile: True`, it means that your project itself is configured for signing and will try to apply signing despite the App Center configuration. To fix it open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (for example, **Debug|iPhoneSimulator**) doesn't contain any signing information other than **Automatic**.
+If you selected `Sign builds: Off` in the App Center branch configuration, and your build log contains `RequireProvisioningProfile: True`, it means that your project itself is configured for signing and will try to apply signing despite the App Center configuration. To fix it open **Project Options > Build > iOS Bundle Signing** in your IDE and make sure that your project configuration (for example, **Debug|iPhoneSimulator**) doesn't contain any signing information other than **Automatic**.
 
 ![Disable signing for Debug configuration in Xamarin.iOS application](~/build/images/xamarin-ios-empty-codesigning.png "Disable signing for Debug configuration in Xamarin.iOS application")
 
@@ -64,7 +64,7 @@ warning MSB3245: Could not resolve this reference. Could not locate the assembly
 error CS0246: The type or namespace name 'TYPE_OR_NAMESPACE_NAME' could not be found (are you missing a using directive or an assembly reference?)
 ```
 
-To resolve this issue, you can use [pre-build script](https://docs.microsoft.com/appcenter/build/custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following commands, which will restore all packages for each solution in your repository:
+To resolve this issue, you can use [pre-build script](https://docs.microsoft.com/appcenter/build/custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following commands, which restores all packages for each solution in your repository:
 
 ```bash
 #!/bin/bash
@@ -73,7 +73,7 @@ CODE_SECTION
 ```
 
 ## I want to run unit tests for my Xamarin application
-To run unit tests in your Xamarin builds, you have to use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run, and display the results:
+To run unit tests in your Xamarin builds, use a [post-build script](~/build/custom/scripts/index.md#post-build). For example when your NUnit based project has *Test* in the name, you can use the following script to build, run, and display the results:
 
 ```bash
 echo "Found NUnit test projects:"

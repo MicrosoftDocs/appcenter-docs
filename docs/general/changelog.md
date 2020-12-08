@@ -31,7 +31,7 @@ This document lists new features as they're added to [Visual Studio App Center](
 - **Node.js switching support**
     - Node.js version can be specified in the app's branch configuration.  
 The following versions are available for use in App Center Build: 6, 8, 10, 12.  
-Also there is way to [specify](~/build/react-native/nodejs.md) custom version of Node.js.
+Also there's a way to [specify](~/build/react-native/nodejs.md) a custom version of Node.js.
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
@@ -110,7 +110,7 @@ Also there is way to [specify](~/build/react-native/nodejs.md) custom version of
 
 - **Diagnostics to General Availability**:
 
-Diagnostics is becoming Generally Available very soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
+Diagnostics is becoming Generally Available soon. This means that Diagnostics will be ready for your production apps, with a much more stable and performant offering.
 
 - **Diagnostics UI Improvements**:
   - Merged view for crashes and errors for Xamarin apps. This provides a more intuitive visualization, allowing developers to prioritize the most crucial issues in their apps, whether these are errors or crashes.
@@ -258,7 +258,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **July 2, 2018**
 
 - **CLI version 1.1.0 released**:
-  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the `appcenter test` wizard command for interactively creating and running test runs, with prompts for each required parameter, and updated to Typescript 2.8.3.
+  In CLI version 1.1.0, the CLI now informs you if a newer version is available. We've also added the `appcenter test` wizard command for creating and running tests, with prompts for each required parameter, and updated to Typescript 2.8.3.
 
   Bug fixes:
 
@@ -317,12 +317,12 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **April 26, 2018**
 
 - **Signing improvements for iOS and macOS builds**:
-  Apps are signed with the provided assets regardless of the project settings.
+  Apps are signed with the provided assets whatever the project settings.
 
 ### **April 25, 2018**
 
 - **Increased number of property keys**:
-  Increased the number of property keys from five to twenty for both errors and custom events.
+  Increased the number of property keys from 5 to 20 for both errors and custom events.
 - **Increased number of characters allowed in property keys and values**:
   Increased the number of characters allowed in custom event and error property keys and values.
 
@@ -378,7 +378,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
 ### **November 17, 2017**
 
 - **Added support for re-releasing builds for distribution**:
-  You will be able to select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
+  You can select a release, and re-release it to an additional distribution group, without needing to download or re-upload the binary package.
 
 - **Shipped support for publishing directly to the Apple Store and Testflight**:
   You can create new stores that target release to the production Apple Store or beta TestFlight service.
@@ -393,7 +393,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   Visual Studio App Center now offers preview support for macOS apps with our Build, Distribute, Analytics, Crash and Push Notifications services.
 
 - **HockeyApp side-by-side enabled**:
-  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, just log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
+  We've enabled a HockeyApp and App Center side-by-side experience for all HockeyApp customers. To view the side-by-side experience, log in to App Center using your HockeyApp credentials. Your app data has already been synced - allowing you to explore App Center while continuing to use HockeyApp as normal.
 
 ### **November 15, 2017**
 
@@ -412,7 +412,7 @@ Diagnostics is becoming Generally Available very soon. This means that Diagnosti
   Now you can save device & OS combinations into named device sets for reuse in future test runs.
 
 - **Export your data to Blob Storage and Application Insights**:
-  You are now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
+  You're now able to export your analytics data to either Blob Storage or Application Insights on Azure. This gives you more control over your data to do what you want with it. See our [docs](~/analytics/export.md) to help you connect your Azure subscription and get started.
 
 - **Crash Results now include Events leading up to a Crash (Breadcrumbs)**:
   Events leading up to a crash are now listed, helping you diagnose issues more easily.
@@ -444,7 +444,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **July, 2017**
 
 - **Carthage support for your iOS builds**:
-  If you use Carthage to manage your dependencies for iOS apps written in Objective C/Swift, App Center will automatically detect this and resolve the dependencies as part of the build process.
+  If you use Carthage to manage your dependencies for iOS apps written in Objective-C/Swift, App Center will automatically detect this and resolve the dependencies as part of the build process.
 
 - **Faster builds**:
   Xamarin and UWP builds which rely on restoring NuGet packages and iOS builds using Cocoapods are now faster.
@@ -464,15 +464,15 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   Now you can execute builds for Xamarin C#7 apps. Learn more about getting started with Xamarin Apps in App Center here.
 
 - **Auto-increment build number for builds:**
-  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there is a format you would like to use which is not there yet, just let us know.
+  Automatically increment the build number of your builds with a specific format. Choose the continuous App Center build ID or other predefined formats. If there's a format you want to use which isn't there yet, let us know.
 
 ### **June 8, 2017**
 
 - **Get deeper insights by attaching your own logs to crashes:**
-  The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what is happening before a crash.
+  The App Center SDKs now provide new options to add your own log data (text or binary) to each crash report. This allows you to get even more insights on what's happening before a crash.
 
 - **Annotate your findings to crash groups:**
-  It is now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.
+  It's now possible to document your findings, ideas, or thoughts about the root causes of crash groups right in App Centers using the new Crash Group annotation feature.
 
 - **Use CodePush in App Center:**
   Distribute content updates and fixes to your React Native apps quickly using CodePush without having to rebuild binaries. Manage your releases in the App Center across multiple deployments. Keep an eye out for more features and improvements here!
@@ -519,10 +519,10 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
   In addition to previously supported GitHub and Bitbucket, you can now connect to your git source code repositories in Visual Studio Team Services (VSTS) to build your mobile apps.
 
 - **XCUITest now available for testing iOS apps**:
-  Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, simply select this option in the "new test run" dialog.
+  Use Apple's native test automation framework to test the behavior of your iOS apps. To access this framework, select this option in the "new test run" dialog.
 
 - **Get the latest build from distribution with in-app updates**:
-  Notify testers of the latest releases from inside your distributed application. Simply integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release.
+  Notify testers of the latest releases from inside your distributed application. Integrate the latest App Center SDK to automatically enable in-app update notifications each time you push a new release.
 
 - **Auto-detect missing symbols in your Crash reports**:
   If you forget to upload symbols for your iOS app, App Center will remind you so your crash reports always include rich, helpful detail – making it easier for your developers to troubleshoot problems.
@@ -542,7 +542,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **Mar 16, 2017**
 - Choose and easily distribute your successfully signed build right from the Build service. This gives you greater control of which build you want your testers to validate. 
 - Remove events from Analytics that you don’t want to see. You can easily get rid of events sent during testing & validation or even the ones you sent incorrectly.
-- When you receive an email to install a build, you can now also sign-in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you are using to login to install the build so there is no more confusion about it.
+- When you receive an email to install a build, you can now also sign in with a different set of credentials and App Center will update your access automatically.  App Center now also displays the account you're using to login to install the build so there isn't any more confusion about it.
 
 ### **Mar 02, 2017**
 

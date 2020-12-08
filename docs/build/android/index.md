@@ -24,7 +24,7 @@ To build your first Android app, follow these steps:
 > For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 ## 1. Linking your repository
-You'll need to connect to your repository service account if you haven't already. Once your account is connected, select the repository where your Android project is located. To set up a build for a repository, you need admin and pull permission for it.
+You must connect to your repository service account if you haven't already. Once your account is connected, select the repository where your Android project is located. To set up a build for a repository, you need admin and pull permission for it.
 
 ## 2. Selecting a branch
 After selecting a repository, select the branch you want to build. By default, all the active branches will be listed.
@@ -53,7 +53,7 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 A successful build will produce an `.apk` file and an additional `.aab` file if enabled. To release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about code signing in [App Center's Android code signing documentation](~/build/android/code-signing.md). The `.aab` will be signed using the same credentials as the `.apk`.
 
 ### 3.6. Launch your successful build on a real device
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
+Use your newly produced APK file to test if your app starts on a real device. This adds approximately 10 more minutes to the total build time. Read more about [how to configure launch tests](~/build/build-test-integration.md).
 
 ### 3.7. Configure from the build.gradle [(app level)](https://developer.android.com/studio/build) File
 Specific information about your build will be collected from your Gradle file including dependencies, build tools version, build types, and product flavors.
@@ -68,7 +68,7 @@ You can configure each successful build from a branch to be distributed to a pre
 After a build is triggered, it can be in these states:
 
 * **queued** -  the build is in a queue waiting for resources to be freed up.
-* **building** - the app is building and performing related tasks.
+* **building** - the app is building and running related tasks.
 * **succeeded** - the build is completed successfully.
 * **failed** - the build completed, but it failed. You can download and inspect the build log for troubleshooting.
 * **canceled** - the build was canceled by user action, or it timed out.
@@ -93,14 +93,14 @@ The APK is a package that contains the Android app and assets. If the build is c
 ### 4.3. Building multiple APKs
 If your app configuration builds multiple APKs, you need to build a universal APK too. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and building a universal APK, read the [ABI split guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
 
-### 4.4. The deobfuscation mapping file (mapping.txt)
+### 4.4. The deobfuscation-mapping file (mapping.txt)
 The `mapping.txt` file contains information on how to map obfuscated stack traces for the app back to the original class and method names.
 
 * If you've previously integrated the App Center SDK in your app with the crash reporting module enabled and use either Proguard or R8 to minify and obfuscate the app binary, the crash reporting service requires this `mapping.txt` file for a build to display [human readable (deobfuscated) crash reports](~/diagnostics/Android-Deobfuscation.md).
 * If you've previously integrated another SDK for crash reporting purposes in your app (for example, HockeyApp SDK), the corresponding service requires the `mapping.txt` file to display readable crash reports.
 
 ## 5. Supported versions and requirements
-The minimum version supported to build Android apps is 7.0 (API level 24). Android apps can have a lower minimum API level required to run, but have to target at least API level 24. 
+The minimum version supported to build Android apps is 7.0 (API level 24). Android apps can have a lower minimum API level required to run, but must target at least API level 24. 
 
 Apps must build with Gradle and the Android Gradle plugin to be configured correctly. Your repository needs to include a Gradle wrapper.
 

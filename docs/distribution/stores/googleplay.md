@@ -21,13 +21,13 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 * A Google Play Developer account. If you don't have one, you can sign up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
 * Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google APIs on your behalf.
 * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
-* Set up App signing by Google to publish Android App bundles (AAB) files.
+* Set up App signing by Google to publish Android App bundles `.aab` files.
 
 For more information, review [How to use the Google Play console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
 
 ## Linking your API Project
 
-To access the Google API, you must link your Google Play Console to a Google API project. In most cases, we recommend you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
+To access the Google API, link your Google Play Console to a Google API project. In most cases, we recommend you create a new API project, although current API users can link to an existing API project. Keep in mind that each API project can only be linked to a single Google Play Console account.
 
 **Creating a new API project**
 
@@ -41,7 +41,7 @@ To access the Google API, you must link your Google Play Console to a Google API
 * If you're already a user of the Google Play Developer API, you can link to your existing API project by following these steps. If the API project to link to isn't listed, verify that your Google Play Console account is designated as an Owner, and the Google Play Developer API is enabled.
 * Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAccessPlace) on the Google Play Console.
 * Accept the API Terms of Service.
-* Choose the project you would like to link.
+* Choose the project you want to link.
 * Click on **Link**.
 
 ## Setting Up API Access Clients

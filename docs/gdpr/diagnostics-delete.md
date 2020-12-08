@@ -24,7 +24,7 @@ In both cases, once you have the install IDs of the user, you should delete the 
 
 ## You don't have a mapping of your user IDs to install IDs
 
-If you did not keep a mapping between your user IDs and install IDs, you must follow some extra steps, described in the following subsections.
+If you didn't keep a mapping between your user IDs and install IDs, you must follow some extra steps, described in the following subsections.
 
 1. Export diagnostics data to Blob Storage.
 2. Search for personal data within the exported information in Azure Blob Storage.

@@ -4,7 +4,7 @@ description: Get Started with React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/10/2020
+ms.date: 11/24/2020
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.tgt_pltfrm: react-native
@@ -33,14 +33,14 @@ Let's get started with setting up App Center React Native SDK in your app to use
 
 Before you begin, make sure that the following prerequisites are met:
 
-* You are using a React Native project that runs React Native 0.34 or later.
-* You are targeting devices that are running on Android Version 5.0/API level 21 or later, or iOS version 9.0 or later.
-* You are not using any other library that provides Crash Reporting functionality on iOS.
-* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it is possible to link the SDK manually.
+* You're using a React Native project that runs React Native 0.34 or later.
+* You're targeting devices that are running on Android Version 5.0/API level 21 or later, or iOS version 9.0 or later.
+* You're not using any other library that provides Crash Reporting functionality on iOS.
+* For iOS, the default way to use the SDK requires [CocoaPods](https://cocoapods.org). (If you haven't installed CocoaPods, follow the [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html) to do so). Nonetheless, it's possible to link the SDK manually.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
-If you have already created your app in the App Center portal, you can skip this step.
+If you've already created your app in the App Center portal, you can skip this step.
 
 1. Head over to [appcenter.ms](https://appcenter.ms).
 2. Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
@@ -48,11 +48,11 @@ If you have already created your app in the App Center portal, you can skip this
 4. Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
 5. Hit the button at the bottom right that says **Add new app**.
 
-Once you have created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
+Once you've created an app, you can obtain its **App Secret** on the **Settings** page on the App Center Portal. At the top right hand corner of the **Settings** page, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.
 
 ## 3. Add the App Center SDK modules
 
-The default integration of the SDK uses CocoaPods for iOS. If you are not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
+The default integration of the SDK uses CocoaPods for iOS. If you're not using CocoaPods in your app, you need to integrate the React Native SDK manually for your iOS app.
 
 Open a Terminal and navigate to the root of your React Native project, then enter the following line to add App Center Analytics and Crashes to the app:
 
@@ -89,7 +89,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 3. Modify the app's **AppDelegate.m** file to include code for starting SDK:
 
-    * Add these lines to import section
+    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
 
     ```objc
     #import <AppCenterReactNative.h>
@@ -114,7 +114,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
         "app_secret": "{APP_SECRET_VALUE}"
     }
     ```
-Note: If the folder named assets does not exist, it should be created under "project_root/android/app/src/main/assets"
+Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets"
 
 2. Modify the app's **res/values/strings.xml** to include the following lines:
 
@@ -126,7 +126,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
 > [!NOTE]
-> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You will either have to follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you have already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
+> If you have your React modules linked using relative path inside your Podfile but not referenced in the project, the linking script will fail because it links App Center using static pod versions. You either must follow the steps from the [React Native troubleshooting section](~/sdk/troubleshooting/react-native.md#reactrctdefinesh-file-not-found) if you've already run the linking script, or [link it yourself](#33-ios-only-integrate-the-sdk-manually-for-react-native-without-react-native-link-or-cocoapods)
 
 1. Link the plugins to the React Native app by using the react-native link command.
 
@@ -152,7 +152,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
     And then retry running `react-native link`.
 
     > [!NOTE]
-    > App Center SDK does not set up mocks automatically for App Center modules during the linking process. If you are using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you're using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
     
     > ```JSON
     > "setupFiles": [
@@ -164,7 +164,7 @@ Note: If the folder named assets does not exist, it should be created under "pro
     >```
 
     > [!NOTE]
-    > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes cannot be processed at the time the application crashes.
+    > Whether processing of crashes is automatic or triggered by Javascript methods, crashes are always processed after the restart of the application. Crashes can't be processed at the time the application crashes.
 
 2. Edit the project's `android/app/src/main/assets/appcenter-config.json` and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
 
@@ -178,18 +178,18 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 > [!NOTE]
 > The latest App Center React Native SDK doesn't necessarily depend on the latest App Center iOS SDK, because the iOS SDK is updated and released before the React Native one.
 >
-> The consequence is that you have to know which version of the iOS SDK the React Native SDK depends on.
+> The consequence is that you must know which version of the iOS SDK the React Native SDK depends on.
 
 1. Download the [App Center SDK for React Native](https://github.com/Microsoft/appcenter-sdk-react-native/releases/latest) frameworks provided as a zip file and unzip it.
 
-2. You will see a folder named **AppCenterReactNativeShared** which contains a single framework for the required React Native iOS bridge.
+2. You'll see a folder named **AppCenterReactNativeShared** which contains a single framework for the required React Native iOS bridge.
 
 3. Download the corresponding [App Center SDK for iOS](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file and unzip it.
 
-4. You will see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that is shared between the different modules.
+4. You'll see a folder called **AppCenter-SDK-Apple/iOS** that contains different frameworks for each App Center service. The framework called `AppCenter` is required in the project as it contains code that's shared between the different modules.
 
 5. [Optional] Create a subdirectory for 3rd-party libraries.
-   * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it is often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
+   * As a best practice, 3rd-party libraries usually reside inside a subdirectory (it's often called **Vendor**), so if you don't have your project organized with a subdirectory for libraries, create a **Vendor** subdirectory now (under the **ios** directory of your project).
    * Create a group called **Vendor** inside your Xcode project to mimic your file structure on disk.
 
 6. Open Finder and copy the previously unzipped **AppCenter-SDK-Apple/iOS** and **AppCenterReactNativeShared** folders into your project's folder at the location where you want it to reside.
@@ -197,7 +197,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 7. Add the SDK frameworks to the project in Xcode:
 
    * Make sure the Project Navigator is visible (⌘+1).
-   * Drag and drop the **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** files from the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that the **AppCenter.framework** and **AppCenterReactNativeShared.framework** files are required to start the SDK, make sure they are added to your project, otherwise the other modules won't work and your app won't compile.
+   * Drag and drop the **AppCenter.framework**, **AppCenterAnalytics.framework**, **AppCenterCrashes.framework** and **AppCenterReactNativeShared.framework** files from the Finder (in the location from the previous step) into Xcode's Project Navigator. The **AppCenter.framework** and **AppCenterReactNativeShared.framework** files are required to start the SDK, make sure they're added to your project, otherwise the other modules won't work and your app won't compile.
    * A dialog will appear, make sure your app target is checked, then click **Finish**.
 
 8. Link AppCenter React Native plugins projects to your app's project:
@@ -227,7 +227,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
 11. Modify the app's AppDelegate.m file to include code for starting SDK:
-    * Add these lines to import section
+    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
 
     ```objc
     #import <AppCenterReactNative/AppCenterReactNative.h>
@@ -279,7 +279,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
 14. Modify **Header Search Paths** to find React Native headers from the App Center React Native plugins projects:
 
     * Make sure the Project Navigator is visible (⌘+1).
-    * For each AppCenter React Native plugins project that you have added to the **Libraries** group in step 8:
+    * For each AppCenter React Native plugins project that you've added to the **Libraries** group in step 8:
       * Select the project and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files with a `recursive` option: `${SRCROOT}/../../../ios/Pods/Headers`
 
 ### 3.4 [Android only] Integrate the SDK manually for React Native lower than 0.60 without react-native link
@@ -408,4 +408,4 @@ For iOS, open your project's `ios/{appname}.xcworkspace` or `ios/{appname}.xcode
 
 For Android, import your **android** project in Android Studio and build from there.
 
-You are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.
+You're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There's no additional setup required. Look at [Analytics](~/sdk/analytics/react-native.md) and [Crashes](~/sdk/crashes/react-native.md) section for APIs guides and walkthroughs to learn what App Center can do.

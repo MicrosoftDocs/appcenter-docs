@@ -22,19 +22,19 @@ To create an app:
 
 ## Release Type
 
-Select one of the suggested release types: Alpha, Beta, Enterprise, Production or Store. You can also use a custom release type by selecting the 'Custom' field. This custom release type must be a single word, alphanumeric, starting with a capital letter or number, followed by lowercase or numbers.
+Select one of the suggested release types: Alpha, Beta, Enterprise, Production, or Store. You can also use a custom release type by selecting the 'Custom' field. This custom release type must be a single word, alphanumeric, starting with a capital letter or number, followed by lowercase or numbers.
 
 ## Uploading an app icon
 
-Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Note that uploading an icon in App Center does not change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
+Upload an app icon in the **Add new app** dialog, or in the settings page of your app. Uploading an icon in App Center doesn't change the icon in the app bundle, meaning the icon of the app when viewed on the install portal and installed on devices won't reflect this change.
 
 ## Accessing apps
 
-All apps you belong to can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
+All apps that belong to you can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
 
 ## App secrets
 
-App secret is like an api key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
+App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## App roles
 
@@ -42,9 +42,9 @@ On each app there are three roles:
 
 * **Managers** can manage app settings, collaborators, and integrations.
 * **Developers** can manage app services (e.g. create builds, run tests).
-* **Viewers** can view and download all data but cannot make changes.
+* **Viewers** can view and download all data but can't make changes.
 
-For every app you create, whether owned by you or your organization, you are automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
+For every app you create, whether owned by you or your organization, you're automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
 
 > [!NOTE]
 > When someone gets added to an app owned by an organization, they get invited as **Members** to that organization.
@@ -66,7 +66,7 @@ To change the permission of a collaborator:
 To share your app with others, select an app from the dashboard and then click **Manage app** to add collaborators by typing in the user's email address.
 
 > [!NOTE]
-> If you are not a 'Manager' role on an app, you cannot add collaborators to that app.
+> If you're not a 'Manager' role on an app, you can't add collaborators to that app.
 
 ## Transferring an app
 
@@ -81,8 +81,8 @@ To transfer an app from your personal account to an organization or from one org
 5. Select the organization you wish to transfer the app into.
 
 > [!NOTE]
-> * You can only transfer an app in and out of organizations you are an admin of.
-> * After transferring an app into an organization, you cannot transfer it back to your personal account.
+> * You can only transfer an app in and out of organizations you're an admin of.
+> * After transferring an app into an organization, you can't transfer it back to your personal account.
 
 ![The three dots 'More' settings menu](images/settings-dot-menu.png)
 
@@ -91,7 +91,7 @@ To transfer an app from your personal account to an organization or from one org
 You can delete any App Center app that you no longer need.
 
 > [!WARNING]
-> Be careful: if you delete your app, you'll lose all data associated with the app permanently.
+> Be careful: if you delete your app, you'll lose all data for the app permanently.
 
 Follow these steps to delete any of your apps:
 

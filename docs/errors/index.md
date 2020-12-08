@@ -21,7 +21,7 @@ App Center Errors allow you to handle the errors in your app and avoid potential
 
 ## General information
 
-When running App Center in an application, the service reports all errors during the lifetime of the application. These errors are sent to the server when they occur (provided there is a network connection) or the next time the application is started.
+When running App Center in an application, the service reports all errors during the lifetime of the application. These errors are sent to the server when they occur (provided there's a network connection) or the next time the application is started.
 
 Learn more about our feature set in [our Errors documentation](~/errors/featureset.md).
 
@@ -36,7 +36,7 @@ An uncaught error (crash) is an error that occurs outside of a try/catch block. 
 
 ### Inside a Try/Catch Enclosure (Errors)
 
-By calling `TrackError` method inside try/catch enclosure, you can control what information is sent to the App Center service when an error occurs, and therefore get a clearer picture of the error and the state of the device.
+By calling `TrackError` method inside try/catch enclosure, you can control what information is sent to the App Center service when an error occurs, and get a clearer picture of the error and the state of the device.
 
 There are a number of benefits using the `TrackError` method:
 
@@ -46,7 +46,7 @@ There are a number of benefits using the `TrackError` method:
 
 #### Track Handled Errors in App Center
 
-Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you will be able to track errors by using the `TrackError` method:
+Include the Crashes SDK to handle errors and report them to App Center. As part of this module, you can track errors by using the `TrackError` method:
 
 ```csharp
 try
@@ -62,7 +62,7 @@ Learn more about how to use the Crashes SDK to track errors in Xamarin in our [C
 
 ## Adding Additional Information to Error Catching
 
-It's possible to tailor the error report sent to App Center to provide additional information for further context about the error. Achieve this by passing a Dictionary of strings key/value pairs to the `TrackError` method. These properties are completely optional. For example:
+It's possible to tailor the error report sent to App Center to provide additional information for further context about the error. Achieve this by passing a Dictionary of strings key/value pairs to the `TrackError` method. These properties are optional. For example:
 
 ```csharp
 try

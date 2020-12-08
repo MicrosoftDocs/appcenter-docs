@@ -14,16 +14,16 @@ ms.reviewer: nirajpur
 
 # Build scripts
 > [!NOTE]
-> Build scripts allow you to customize your builds; but issues you encounter during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
+> Build scripts allow you to customize your builds; but issues you find during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
 
-You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (**.xcodeproj**, **.csproj**, **.sln**, or **package.json**) file or module-level (**build.gradle**) file that you've selected in the build configuration and we'll run them as custom build steps. 
+You can add custom build scripts that run at pre-defined stages during build time: [post-clone](~/build/custom/scripts/index.md#post-clone), [pre-build](~/build/custom/scripts/index.md#pre-build), [post-build](~/build/custom/scripts/index.md#post-build). Place the scripts with the format specified below next to the project-level (`.xcodeproj`, `.csproj`, `.sln`, or `package.json`) file or module-level (`build.gradle`) file that you've selected in the build configuration and we'll run them as custom build steps. 
 
-In App Center, non-UWP apps are built on macOS, so they can use Bash scripts. UWP apps are built on Windows, so they can use PowerShell scripts. Many similar tasks can be performed in either script format, but you might need to do some conversion if migrating between them. For example, macOS Bash requires the use of UNIX-style line endings (LF).
+In App Center, non-UWP apps are built on macOS, so they can use Bash scripts. UWP apps are built on Windows, so they can use PowerShell scripts. Many similar tasks can be done in either script format, but you might need to do some conversion if migrating between them. For example, macOS Bash requires the use of UNIX-style line endings (LF).
 
 You can find a collection of build script examples on the [dedicated public GitHub repository](https://github.com/Microsoft/appcenter/tree/master/sample-build-scripts). Feel free to use the sample scripts, modify them, or submit new pull requests with your most useful scripts for the rest of the community to use.
 
 > [!WARNING]
-> When App Center detects build scripts for the first time, or whenever you make changes to the location of scripts or, for iOS projects, where you store CocoaPods, you must click the **Save** or **Save & Build** button in the build configuration to apply the changes. When you do this, App Center performs an analysis to index your repository tree and updates the build definition.
+> When App Center detects build scripts for the first time, or you change the location of scripts, or you change where CocoaPods are stored; you must apply the changes by clicking the **Save** or **Save & Build** button in the build configuration. When you do this, App Center runs an analysis to index your repository tree and updates the build definition.
 
 ![Save detected scripts](~/build/custom/scripts/images/build-scripts-detected.png "Build configuration shows detected build scripts")
 
@@ -47,7 +47,7 @@ To run scripts post-clone, add the following file next to the project file in yo
 - **appcenter-post-clone.ps1** (PowerShell for UWP)
 
 ## Pre-build
-The pre-build script runs before the actual build starts. For React Native apps, the script runs before generating source maps. For other platforms, it runs after we have installed dependencies, for example from NuGet, CocoaPods, or Carthage.
+The pre-build script runs before the actual build starts. For React Native apps, the script runs before generating source maps. For other platforms, it runs after we've installed dependencies, for example from NuGet, CocoaPods, or Carthage.
 
 To run scripts pre-build, add the following file next to the project file in your repository:
 
@@ -57,7 +57,7 @@ To run scripts pre-build, add the following file next to the project file in you
     #!/usr/bin/env bash
 
     # Example: Change bundle name of an iOS app for non-production
-    if [ "$APPCENTER_BRANCH" != "master" ];
+    if [ "$APPCENTER_BRANCH" != "main" ];
     then
         plutil -replace CFBundleDisplayName -string "\$(PRODUCT_NAME) Beta" $APPCENTER_SOURCE_DIRECTORY/MyApp/Info.plist
     fi

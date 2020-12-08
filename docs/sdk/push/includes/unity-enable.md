@@ -10,4 +10,4 @@ ms.date: 12/02/2019
 >```csharp
 >using Microsoft.AppCenter.Unity.Push;
 >```
->You also have to make sure that **Use Push** is checked in the settings of your App Center game object.
+>You also must make sure that **Use Push** is checked in the settings of your App Center game object.

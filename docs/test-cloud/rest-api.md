@@ -48,7 +48,7 @@ https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0c
 
    - **checksum** - hash values from step 2 
 
-   - **relative_path** - you can just define File Name with Extension, no need to specify the complete path.
+   - **relative_path** - you can define File Name with Extension, no need to specify the complete path.
    
 The JSON Body looks like:
 
@@ -210,7 +210,7 @@ Sample JSON Request Body:
    "test_framework":"ui_test",
    "device_selection":"MSKASANI/ui-test",
    "locale":"en_US",
-   "test_series":"apimaster",
+   "test_series":"apimain",
  
    "test_parameters":
         {
@@ -258,7 +258,7 @@ PS: For other Test Frameworks, if you want to know how the JSON looks like (for 
 
 Run the Test command manually with `--debug` switch.
 
-> appcenter test run appium --app "MSKASANI/Appium" --devices "MSKASANI/my" --app-path C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\swiftnote.apk --test-series "master" --locale "en_US" --build-dir C:\VSAC\AllTest\AppCenter-Test-Samples-master\Appium\Android\Mavenex\target\upload --debug
+> appcenter test run appium --app "MSKASANI/Appium" --devices "MSKASANI/my" --app-path C:\VSAC\AllTest\AppCenter-Test-Samples-main\Appium\Android\swiftnote.apk --test-series "main" --locale "en_US" --build-dir C:\VSAC\AllTest\AppCenter-Test-Samples-main\Appium\Android\Mavenex\target\upload --debug
 
 Once the test is complete, you can check out the Command output to see how the Request Body looks like:
 

@@ -16,12 +16,12 @@ ms.custom: diagnostics
 You can upload a crash report if you don't want to use our SDK or develop for a custom platform. Upload a [crash](~/diagnostics/index.md#crashes), [error](~/diagnostics/index.md#errors), or attachment log to App Center and view the details in the App Center Diagnostics UI. The following sections will explain how to upload [crashes](~/diagnostics/upload-crashes.md#upload-a-crash-report), [errors](~/diagnostics/upload-crashes.md#upload-an-error-report), and [attachments](~/diagnostics/upload-crashes.md#upload-an-attachment).
 
 > [!NOTE]
-> App Center only accepts up to 60 crashes and handled errors per minute per unique app. We will not ingest any crashes or errors that exceed this limit.
+> App Center only accepts up to 60 crashes and handled errors per minute per unique app. We won't ingest any crashes or errors that exceed this limit.
 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
-- `App-Secret`: string that is the unique identifier associated with each app. You can find the app secret in the settings of an app.
+- `App-Secret`: string that's the unique identifier for each app. You can find the app secret in the settings of an app.
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:
@@ -49,7 +49,7 @@ Log properties:
 You can find examples of how to upload a crash report, error report, and attachment below. For more specifications, you can find the complete file [here](https://in.appcenter.ms/preview/swagger.json).
 
 > [!NOTE]
-> Due to retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
+> Because of retention policies, the report `timestamp` must be no more than 25 days in the past or 3 days in the future.
 
 ## Upload a crash report
 
@@ -581,7 +581,7 @@ Attachment-specific properties:
 - `contentType`: required string with content type, for example, "text/plain" for text. You can find examples of supported type listed [here](https://en.wikipedia.org/wiki/Media_type)
 - `data`: required string with data encoded as base 64
 - `errorId`: required string containing the unique identifier of the attachment's associated error report
-- `fileName`: required string for NDK crashes that is set to "minidump.dmp"
+- `fileName`: required string for NDK crashes that's set to "minidump.dmp"
 
 > [!NOTE]
 > The size limit for attachments is currently 7 MB. Attempting to send a larger attachment will trigger an error.

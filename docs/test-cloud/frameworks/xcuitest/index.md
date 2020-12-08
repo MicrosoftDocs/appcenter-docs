@@ -1,10 +1,10 @@
 ---
 title: Preparing XCUITest Tests for Upload
-description: How to upload XCUITests to App Center Test Cloud
+description: How to upload XCUITests to App Center Test
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/29/2020
+ms.date: 12/04/2020
 ms.topic: article
 ms.assetid: 64de4cef-207e-48fb-a1f7-c3f04d69a1bb
 ms.service: vs-appcenter
@@ -14,15 +14,15 @@ ms.custom: test
 # Preparing XCUITest Tests for Upload
 This guide provides instructions for preparing XCUITest tests for upload to App Center Test.
 
-## Requirements
-> [!NOTE]
-> Xcode 12 / iOS 14 support is being worked on but not yet available.
-
+## Test service Requirements
 * Xcode >= 9.4.1
 * iOS >= 9.0
 
-## Build For Testing
+## Test service limitations
+- Xcode 12 / iOS 14 support isn't available yet.
+- Only the uploaded app can be tested, not interactions via apps or the rest of the system.
 
+## Build For Testing
 To run a test in App Center, you need to build your application and an XCUITest bundle. Run one of the two following commands from the root of your application project directory:
 
 ```shell
@@ -36,7 +36,7 @@ xcrun xcodebuild build-for-testing \
   -derivedDataPath DerivedData
 ```
 
-`YOUR_XCODEPROJ` should point to a **.xcodeproj** file, likely titled `PROJECT_NAME.xcodeproj`. If you use a `.xcworkspace`, use `-workspace` instead of `-project`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it's usually the name of your application.
+`YOUR_XCODEPROJ` should point to a `.xcodeproj` file, likely titled `PROJECT_NAME.xcodeproj`. If you use a `.xcworkspace`, use `-workspace` instead of `-project`. `YOUR_APP_SCHEME` should be the scheme you use to build your application. By default, it's usually the name of your application.
 
 The xcrun will build your app and an XCUITest bundle into the `DerivedData/Build` directory. Your app and XCUITest bundle will be located in the `DerivedData/Build/Products/Debug-iphoneos/` directory.
 
@@ -63,7 +63,7 @@ For a concrete example of submitting tests to App Center, see [this shell script
 
 ## Additional Screenshots and Test Steps
 
-At the end of each test method, a label and screenshot are automatically generated for the test report. Labels and screenshots are displayed in the App Center Test Report as separate _Test Steps_.
+At the end of each test method, a screenshot is automatically taken for the test report. Each screenshot is displayed in the App Center Test Report as a separate _Test Step_.
 
 ### Activities
 

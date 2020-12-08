@@ -29,7 +29,7 @@ dev_langs:
 
 ## Adjust the log level
 
-You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it is set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
+You can control the amount of log messages by App Center that show up in LogCat. Use the `AppCenter.setLogLevel()` API to enable additional logging while debugging. The log levels correspond to the ones defined in `android.util.Log`. By default, it's set it to `ASSERT` for non-debuggable applications and `WARN` for debuggable applications. You can set the log level at any time you want.
 
 To have as many log messages as possible, use `Log.Verbose`.
 
@@ -58,7 +58,7 @@ AppCenter.getInstallId()
 
 ## Identify users
 
-The App Center SDK supports setting a **user ID** that is used to augment crash reports. To use this capability:
+The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
 1. Configure the App Center SDK by calling `AppCenter.start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/android.md). 
 2. Set a `userID` in the SDK using the following code:
@@ -74,7 +74,7 @@ AppCenter.setUserId("your-user-id")
 
 ## Disable all services at runtime
 
-If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK will not forward any information to App Center.
+If you want to disable all App Center services at once, use the `setEnabled()` API. When disabled, the SDK won't forward any information to App Center.
 
 ```java
 AppCenter.setEnabled(false);
@@ -101,7 +101,7 @@ The state is persisted in the device's storage across application launches.
 
 ## Change state of service in runtime
 
-Enable or disable desired services at the runtime with following code:
+Enable or disable the services at the runtime with following code:
 
 ```java
 Analytics.setEnabled(false);
@@ -131,7 +131,7 @@ AppCenter.isEnabled()
 
 ## Check App Center SDK version at runtime
 
-You can get the version of App Center SDK that you are currently using.
+You can get the version of App Center SDK that you're currently using.
 
 ```java
 AppCenter.getSdkVersion();
@@ -163,7 +163,7 @@ AppCenter.setCustomProperties(properties)
 > [!NOTE]
 > If you set the same custom property more than once, previous values will be overwritten by the last one.
 
-You may remove any custom property by calling the `clear()` API. This will only remove the value of the property for a device. It will not remove the property name from App Center portal.
+You may remove any custom property by calling the `clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
 
 ```java
 CustomProperties properties = new CustomProperties();
@@ -178,7 +178,7 @@ AppCenter.setCustomProperties(properties)
 
 ## Storage size
 
-When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It is also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
+When using the App Center SDK, logs are stored locally on the device. Large logs can take up a lot of space, so you may choose to limit the size of the local database. It's also useful in conjunction with the `pause` and `resume` APIs. If you expect to be paused for a long time, you can use a larger database size to store more events.
 
 You can use the `setMaxStorageSize` API to set the size of the local DB. The API is asynchronous, and the callback is called when you start App Center services. For this reason, `setMaxStorageSize` must be called before your call to `AppCenter.start(...)`. You may only call the API once.
 
@@ -188,7 +188,7 @@ AppCenter.setMaxStorageSize(20 * 1024 * 1024L).thenAccept(new AppCenterConsumer<
 
     @Override
     public void accept(Boolean success) {
-        // The success parameter is false when the size cannot be honored.
+        // The success parameter is false when the size can't be honored.
     }
 });
 AppCenter.start("{Your App Secret}", Analytics.class);
@@ -196,16 +196,16 @@ AppCenter.start("{Your App Secret}", Analytics.class);
 ```kotlin
 // Use 20 MB for storage.
 AppCenter.setMaxStorageSize(20 * 1024 * 1024).thenAccept {
-    // The success parameter (it) is false when the size cannot be honored.
+    // The success parameter (it) is false when the size can't be honored.
 }
 
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java)
 ```
 
-If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you are allowed to set is 20 KB.
+If you don't set the max storage size, the SDK uses a default max size of 10 MB. The minimum size you're allowed to set is 20 KB.
 
 > [!NOTE]
-> The actual max storage size may be higher than the value you have chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
+> The actual max storage size may be higher than the value you've chosen. SQLite rounds the size up to the next multiple of the page size. The App Center SDK uses a page size of 4 KB.
 
 > [!NOTE]
 > The logs older than 25 days will be discarded.

@@ -23,9 +23,9 @@ dev_langs:
 
 #### Manual
 
-If you have added the SDK manually, follow these steps:
+If you've added the SDK manually, follow these steps:
 
-1. Remove `HockeySDK.framework` reference from the XCode project. Do not click _Move to Trash_ button, just click the _Remove reference_ button.
+1. Remove `HockeySDK.framework` reference from the XCode project. Click the _Remove reference_ button, don't click _Move to Trash_ button.
 
 1. Open your project settings and under **Build Settings** tab in the **Header Search Paths** / **Framework Search Paths** sections, remove the locations for header files related to HockeySDK.
 
@@ -35,11 +35,11 @@ If you have added the SDK manually, follow these steps:
 
 #### Podfile
 
-If you have added the SDK using **CocoaPods**, remove the `pod "HockeySDK-Mac"` line from the Podfile, then run `pod install`.
+If you've added the SDK using **CocoaPods**, remove the `pod "HockeySDK-Mac"` line from the Podfile, then run `pod install`.
 
 #### Carthage
 
-If you have added the SDK using **Carthage**, follow these steps:
+If you've added the SDK using **Carthage**, follow these steps:
 
 1. Remove HockeySDK references from the `Cartfile`. Delete `Cartfile.Resolved` from the file system.
 
@@ -125,7 +125,7 @@ After (App Center):
 
 ### Core
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -142,9 +142,9 @@ Adjust log level | [BITHockeyManager.shared().logLevel = BITLogLevel.verbose](ht
 ### Analytics
 
 The HockeySDK collects metrics per default.
-The App Center SDK does not collect any (analytics) metrics per default. To collect metrics using the App Center SDK, pass `MSACAnalytics` to the `start:` method.
+The App Center SDK doesn't collect any (analytics) metrics per default. To collect metrics using the App Center SDK, pass `MSACAnalytics` to the `start:` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---
@@ -165,9 +165,9 @@ Disable service at runtime | [BITHockeyManager.shared().isMetricsManagerDisabled
 ### Crashes
 
 The HockeySDK reports crashes per default. Crashes will be immediately sent to the server the next time the app is launched.
-The App Center SDK does not report any crashes per default. To collect crashes using the App Center SDK, pass `MSACCrashes` to the `start:` method.
+The App Center SDK doesn't report any crashes per default. To collect crashes using the App Center SDK, pass `MSACCrashes` to the `start:` method.
 
-#### [Objective C](#tab/objc/)
+#### [Objective-C](#tab/objc/)
 
 Feature | HockeyApp | App Center
 ------- | ---------- | ---

@@ -64,7 +64,7 @@ Step-by-step instructions:
 6. Also within your build script, provide and execute an upload command for App Center Test that:
 - Points to all your Test dependencies, including your test dlls, app package & any other requirements of your test such as included datafiles. 
 - Use the `--async` command to make sure your Build doesn't wait for the test suite to complete
-- **DO NOT** include any of your app dependencies, which should already be present in your app package. Including app dependencies in the upload can cause unpredictable behavior in your test run. 
+- **Exclude** your app dependencies, which should already be present in your app package. Including app dependencies in the upload can cause unpredictable behavior in your test run. 
 
 #### Sample Test Build Scripts
 You can view examples of valid build scripts here:

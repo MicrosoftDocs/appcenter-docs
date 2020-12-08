@@ -1,6 +1,6 @@
 ---
 title: Working with the REPL
-description: How to perform common tasks when writing and running Xamarin.UITest.
+description: Common tasks when writing and running Xamarin.UITest.
 keywords: uitest test cloud
 author: king-of-spades
 ms.author: kegr
@@ -13,13 +13,13 @@ ms.custom: test
 
 # Working with the REPL
 
-One of the important tools in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment in which the developer enters expressions or a commands. It will then evaluate those expressions, and display the results to the user.
+One of the important tools in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where the developer enters expressions or a commands. It will then evaluate those expressions, and display the results to the user.
 
 The REPL is helpful when creating Xamarin.UITests; it allows us to explore the user interface and create the queries and statements so that the test may interact with the application.
 
 ## Starting the REPL
 
-The REPL can only be started by running a test which calls the `IApp.Repl()` method:
+The REPL can only be started by running a test that calls the `IApp.Repl()` method:
 
 ```csharp
 [TestFixture]
@@ -80,7 +80,7 @@ The `tree` command will display a hierarchical list of the views that are visibl
 * * *
 ## Discovering Views with IApp.Flash
 
-Many of the Xamarin.UITest API's take an `AppQuery` object to locate views on the screen. The `IApp.Flash()` method can be very helpful in testing these queries in the REPL. `IApp.Flash()` will highlight the results of the query by making them flash, and return some details about the views in the results.
+Many of the Xamarin.UITest API's take an `AppQuery` object to locate views on the screen. The `IApp.Flash()` method can be helpful in testing these queries in the REPL. `IApp.Flash()` will highlight the results of the query by making them flash, and return some details about the views in the results.
 
 As an example, the following snippet shows how we can locate all of the `EditText` views that are visible on an Android activity:
 
@@ -138,7 +138,7 @@ The REPL will keep a history of the commands that you have entered into it durin
 Copying history to clipboard.
 ```
 
-This allows you to try and debug commands in the REPL, and then promptly update your test code.
+This allows you to try to debug commands in the REPL, and then promptly update your test code.
 
 > [!NOTE]
 > If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the REPL tool doesn't appear. Turning it on makes the REPL tool appear.

@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 8/21/2020
+ms.date: 11/10/2020
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -15,6 +15,9 @@ ms.custom: test
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
+
+> [!NOTE]
+> This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
 Model  | OS
 -- | --
