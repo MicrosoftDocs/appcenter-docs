@@ -30,10 +30,10 @@ If that doesn't solve the problem, the solution is to add the `--uitest-tools-di
 `test-cloud.exe` is inside your Xamarin.UITest package. To find that package, check the **properties > path** setting for Xamarin.UITest in the Visual Studio Project Explorer.
 
 ##### Visual Studio for Mac
-**References > From Packages > Xamarin.UITest (ctrl+click or right click) > properties > path**
+**References > From Packages > Xamarin.UITest (ctrl+click or right-click) > properties > path**
 
 ##### Visual Studio
-**Solution Explorer > References > Xamarin.UITest (right click) > properties > path**
+**Solution Explorer > References > Xamarin.UITest (right-click) > properties > path**
 
 This path will point to the `Xamarin.UITest.dll` and look something like (on Mac): 
 > /Users/user/.../PROJECT/packages/Xamarin.UITest.3.0.7/lib/net45/Xamarin.UITest.dll 

@@ -16,7 +16,7 @@ ms.custom: test
 
 Typically, each Xamarin.UITest is written as a method that's referred to as a *test*. The class that contains the test is known as a *test fixture*. The test fixture contains either a single test or a logical grouping of tests and is responsible for any setup to make the test run and any cleanup that needs to be done when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:
 
-1. **Arrange**: The test will setup conditions and initialize things so that the test can be actioned.
+1. **Arrange**: The test will set up conditions and initialize things so that the test can be actioned.
 2. **Act**: The test will interact with the application, enter text, pushing buttons, and so on.
 3. **Assert**: The test examines the results of the actions run in the Act step to determine correctness. For example, the application may verify that a particular error message is displayed.
 
@@ -195,7 +195,7 @@ public class ValidateCreditCard
 }
 ```
 
-To run the test by right clicking in the gutter of Visual Studio and selecting **Run**:
+To run the test by right-clicking in the gutter of Visual Studio and selecting **Run**:
 
 [ ![Screenshot of the popup menu with the run options for a test](./images/index-01-xs-sml.png)](./images/index-01-xs.png#lightbox)
 

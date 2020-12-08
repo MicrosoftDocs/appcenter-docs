@@ -37,7 +37,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 * Open Visual Studio for Mac.
 * Click **File** > **Open** and choose your solution.
-* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* In the solution navigator, right-click the **Packages** section, and choose **Add NuGet packages...**.
 * Search for **App Center**, and install **App Center Distribute**.
 * Click **Add Packages**.
 

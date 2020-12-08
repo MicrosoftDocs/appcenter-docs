@@ -119,7 +119,7 @@ The shorter form `app.Query("MyButton")` also works.
 
 Visual Studio has a template to help add a Xamarin.UITest project to an existing Xamarin.Forms solution:
 
-1. Right click on the solution, and select **File > New Project**.
+1. Right-click on the solution, and select **File > New Project**.
 1. From the **Visual C#** Templates, select the **Test** category. Select the **UI Test App > Cross-Platform** template:
 
     ![Add New Project](images/get-started-xamarin-forms-08-new-uitest-project-vs.png "Add New Project")
@@ -157,7 +157,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     ![Unit Test Pad](images/get-started-xamarin-forms-04-unit-test-pad-xs.png "Unit Test Pad")
 
-1. Right click on **Test Apps**, click on **Add App Project**, and select iOS and Android projects in the dialog that appears:
+1. Right-click on **Test Apps**, click on **Add App Project**, and select iOS and Android projects in the dialog that appears:
 
     ![Test Apps Dialog](images/get-started-xamarin-forms-05-add-test-apps-xs.png "Test Apps Dialog")
 
@@ -167,7 +167,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
 There are some additional changes that need to be done to the iOS application before Xamarin.UITest will work:
 
-1. Add the **Xamarin Test Cloud Agent** NuGet package. Right click on **Packages**, select **Add Packages**, search NuGet for the **Xamarin Test Cloud Agent** and add it to the Xamarin.iOS project:
+1. Add the **Xamarin Test Cloud Agent** NuGet package. Right-click on **Packages**, select **Add Packages**, search NuGet for the **Xamarin Test Cloud Agent** and add it to the Xamarin.iOS project:
 
     ![Add NuGet Packages](images/get-started-xamarin-forms-07-add-test-cloud-agent-xs.png "Add NuGet Packages")
 
