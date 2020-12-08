@@ -32,7 +32,7 @@ Available repositories will populate in App Center after a successful connection
 You may connect to a self-hosted GitLab instance by providing the instance URL, for example, `gitlab.my-company.com`, and a personal access token (PAT). Choose `api` as the scope when creating the PAT for the connection to App Center. The instance must be reachable over the internet. When the PAT expires, any admin on the App Center app can reconnect the connection using their PAT. Edit the connection settings either in the **Build** service when connecting a repository or in **User Settings > Developer Accounts**.
 
 ## Removing connections and reconnecting
-With so many identities, apps, and authentication methods, your App Center account get connected to a different service than is hosting your apps.
+With so many identities, apps, and authentication methods, your App Center account may get connected to a different service than is hosting your apps.
 
 If you connected to a repository service with the wrong account, you must open your User settings in the hosting service (Azure DevOps, GitHub, or Bitbucket) and revoke the OAuth token manually. Then you can reconnect to another account in App Center.
 
