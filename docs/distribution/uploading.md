@@ -64,7 +64,7 @@ Archive your build for apps with a custom operating system in .zip format.
 To distribute a package with App Center, go to [App Center][app-center-home], go to your app, then go to **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
-In the first step, choose the **Release** area to browse for the file you want to upload, or drag and drop the file onto the area. Depending on the operating system of your app and the file extension, App Center may ask you to enter a version and build number for your release. Enter the information and choose **Next**.
+In the first step, choose the **Release** area to browse for the file you want to upload, or drag and drop the file onto the area. Depending on the OS and file extension for your app, App Center may ask for a version and build number for the release. Enter this information and choose **Next**.
 
 You can include release notes as a part of your release, both in plain text or Markdown format. Choose **Next**.
 
