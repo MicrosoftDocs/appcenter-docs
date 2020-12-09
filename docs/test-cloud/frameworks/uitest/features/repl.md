@@ -49,9 +49,14 @@ When the test is run and `.Repl()` is invoked, Xamarin.UITest will halt the test
 
 
 #### [Visual Studio for Mac](#tab/vsmac/)
-[ ![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
+[![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
+
+> [!NOTE]
+> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure **Terminal** is checked. If it's off, then the repl tool does not appear. Turning it on makes the REPL tool appear.
+[![Allow terminal to control Visual Studio](./images/repl-permission.png)](./images/repl-permission.png#lightbox)
 
 * * *
+
 There are three ways to exit the REPL:
 
 * Pressing **Ctrl-C**
