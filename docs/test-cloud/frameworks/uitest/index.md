@@ -323,9 +323,9 @@ public void CreditCardNumber_TooLong_DisplayErrorMessage()
 
     /* Act */
     app.EnterText(c => c.Marked("CreditCardTextField"), new string('9', 17));
-    // Screenshot can be used to break this test up into "steps". The
-    // screenshot can be inspected after the test run to verify the
-    // visual correctness of the screen.
+    // Screenshot can be used to break this test up into "steps".
+    // The screenshot can be inspected after the test run to verify
+    // the visual correctness of the screen.
     app.Screenshot("Entering a 17 digit credit card number.");
 
     app.Tap(c => c.Marked("ValidateButton"));
