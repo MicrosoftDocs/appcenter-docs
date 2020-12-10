@@ -4,7 +4,7 @@ description: Common tasks when writing and running Xamarin.UITest.
 keywords: uitest test cloud
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/09/2020
+ms.date: 12/10/2020
 ms.topic: article
 ms.assetid: 3D0C8F9C-69D6-42D9-80FB-4228EEC8849C
 ms.service: vs-appcenter
@@ -51,8 +51,7 @@ When the test is run and `.Repl()` is invoked, Xamarin.UITest will halt the test
 #### [Visual Studio for Mac](#tab/vsmac/)
 [![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
-> [!NOTE]
-> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure **Terminal** is checked. If it's off, then the repl tool does not appear. Turning it on makes the REPL tool appear.
+If the terminal window doesn't appear, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio, and make sure **Terminal** is checked. If it's off, then the repl tool does not appear. Turning it on makes the REPL tool appear.
 [![Allow terminal to control Visual Studio](./images/repl-permission.png)](./images/repl-permission.png#lightbox)
 
 * * *
@@ -144,7 +143,3 @@ Copying history to clipboard.
 ```
 
 This allows you to try to debug commands in the REPL, and then promptly update your test code.
-
-> [!NOTE]
-> If the terminal window doesn't appear and you're on Visual Studio for Mac, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for Visual Studio for Mac, and make sure "terminal" is checked. If it's off, then the REPL tool doesn't appear. Turning it on makes the REPL tool appear.
- ![image](./images/items.png)
