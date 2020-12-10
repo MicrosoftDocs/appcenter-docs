@@ -12,9 +12,7 @@ ms.custom: test
 ---
 
 # Working with the REPL
-One of the important tools in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where the developer enters expressions or commands. It will then evaluate those expressions, and display the results to the user.
-
-The REPL is helpful when creating Xamarin.UITests; it allows us to explore the user interface and create the queries and statements so that the test may interact with the application.
+An important tool in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where you can dynamically experiment with UITest expressions. The REPL evaluates them, performs them live in the app, and logs detailed output. Expressions can be copied from the REPL tool and used directly in your UITest project.
 
 ## Starting the REPL
 The REPL can only be started by running a test that calls the `IApp.Repl()` method:
