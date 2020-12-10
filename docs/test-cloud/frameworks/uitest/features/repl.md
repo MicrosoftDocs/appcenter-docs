@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Working with the REPL
-An important tool in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where you can dynamically experiment with UITest expressions. The REPL evaluates them, performs them live in the app, and logs detailed output. Expressions can be copied from the REPL tool and used directly in your UITest project.
+An important tool in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where you can dynamically experiment with UITest expressions. The REPL evaluates them, runs them live in the app, and logs detailed output. Expressions can be copied from the REPL tool and used directly in your UITest project.
 
 ## Starting the REPL
 The REPL can only be started by running a test that calls the `IApp.Repl()` method:
@@ -47,9 +47,10 @@ When the test is run and `.Repl()` is invoked, Xamarin.UITest will halt the test
 #### [Visual Studio for Mac](#tab/vsmac/)
 [ ![The Xamarin.UITest REPL on macOS Terminal](./images/repl-02-xs-sml.png)](./images/repl-02-xs.png#lightbox)
 
-If the REPL window doesn't appear, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for **Visual Studio**, and make sure **Terminal** is checked. Then try launching it again.
-
 * * *
+
+> [!TIP]
+> If the REPL window doesn't appear on macOS, go to **System Preferences > Security & Privacy > Privacy > Automation**, search for **Visual Studio**, and make sure **Terminal** is checked. Then try launching it again.
 
 There are three ways to exit the REPL:
 
