@@ -24,7 +24,7 @@ ms.tgt_pltfrm: react-native
 > * [Xamarin](xamarin.md)
 
 ## 'React/RCTDefines.h' file not found
-This error appears when RN core libraries aren't referenced correctly, which can be caused by different kinds of integrating/linking issues. It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
+This error appears when RN core libraries aren't referenced correctly, which can be caused by different kinds of integrating or linking issues. It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.
 
 Our linking script supports only the standard way of linking pods, so to resolve the problem:
 
@@ -101,16 +101,16 @@ In this case, run `npm install` and try `react-native link` again.
 
 ### React-Native 0.60 and above
 
-The likely cause is the conflict between [major](https://semver.org/) package versions due to a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/releases/tag/4.0.0) in our Apple SDK.
+The likely cause is the conflict between [major](https://semver.org/) package versions because of a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/releases/tag/4.0.0) in our Apple SDK.
 
-1. Make sure that all appcenter packages use the same major version. Update them with `npm install` or `yarn` if needed.
+1. Make sure that all `appcenter` packages use the same major version. Update them with `npm install` or `yarn` if needed.
 
 > [!NOTE]
 > If you are still using **appcenter-push** then you should use appcenter version 3 packages because App Center Push [has been retired](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
 
 1. Go to **ios** folder of your project and remove **Podfile.lock** and the **Pods** folder.
 1. Run `pod install --repo-update` in your **ios** folder.
-1. Verify that **Podfile.lock** contains appcenter dependencies of the same major version.
+1. Verify that **Podfile.lock** contains `appcenter` dependencies of the same major version.
 
 ### React Native lower than 0.60
 
