@@ -2,9 +2,9 @@
 title: iOS Devices Available
 description: iOS devices that you can run tests on in App Center
 keywords: test cloud
-author: king-of-spades
-ms.author: kegr
-ms.date: 9/9/2020
+author: priskorn
+ms.author: miprisk
+ms.date: 12/11/2020
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -125,6 +125,7 @@ Apple iPad Pro 11" (2018) | 13.7
 Apple iPad Pro 11" (2020) | 13.4.1
 Apple iPad Pro 11" (2020) | 13.5.1
 Apple iPad Pro 11" (2020) | 13.6.1
+Apple iPad Pro 11" (2020) | 13.7
 Apple iPad Pro 12.9" (2017) | 11.0.3
 Apple iPad Pro 12.9" (2017) | 11.1.2
 Apple iPad Pro 12.9" (2017) | 11.2.6
