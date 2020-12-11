@@ -325,6 +325,30 @@ If in private mode, App Center Distribute will open up its UI/browser at applica
  #endif
  ```
 
+## Perform clean up before the app gets closed for update
+
+Implement the `DistributeDelegate` protocol and register the delegate as shown in the following example:
+
+```objc
+[MSACDistribute setDelegate:self];
+```
+```swift
+Distribute.delegate = self;
+```
+
+The `distributeWillClose:` delegate method will be called right before the app gets terminated for the update installation:
+
+```objc
+- (void)distributeWillClose:(MSACDistribute *)distribute {
+  // Perform the required clean up here.
+}
+```
+```swift
+func distributeWillClose(_ distribute: Distribute) {
+  // Perform the required clean up here.
+}
+```
+
 ## How do in-app updates work?
 
 > [!NOTE]
