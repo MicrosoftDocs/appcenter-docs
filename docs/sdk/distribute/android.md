@@ -308,6 +308,21 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
+### 3. Execute code if no updates are found
+
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `onNoReleaseAvailable` from `DistributeListener` interface callback is invoked. This allows you to execute custom code in such scenarios.
+
+Here is an example which shows how to display toast message when no updates are found:
+
+```java
+public class MyDistributeListener implements DistributeListener {
+    @Override
+    public void onNoReleaseAvailable(Activity activity) {
+        Toast.makeText(activity, activity.getString(R.string.no_updates_available), Toast.LENGTH_LONG).show();
+    }
+}
+```
+
 ## Enable or disable App Center Distribute at runtime
 
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use Distribute service in App Center portal.

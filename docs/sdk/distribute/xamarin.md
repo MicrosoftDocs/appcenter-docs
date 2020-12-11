@@ -299,6 +299,24 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
+### 3. Execute code if no updates are found
+
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `NoReleaseAvailable `  callback is invoked. This allows you to execute custom code in such scenarios.
+You need to register the callback before calling `AppCenter.Start` as shown in the following example:
+
+```csharp
+// In this example NoReleaseAvailable is a method name in same class
+Distribute.NoReleaseAvailable = NoReleaseAvailable;
+AppCenter.Start(...);
+```
+
+```csharp
+void NoReleaseAvailable()
+{
+    AppCenterLog.Info(LogTag, "No release available callback invoked.");
+}
+```
+
 ## Enable or disable App Center Distribute at runtime
 
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use Distribute service in App Center portal.
