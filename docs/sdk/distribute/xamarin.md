@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/02/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -330,6 +330,27 @@ bool enabled = await Distribute.IsEnabledAsync();
 
 > [!NOTE]
 > This method must only be used after `Distribute` has been started, it will always return `false` before start.
+
+## Perform clean up right before the app closes for update
+
+> [!NOTE]
+> This callback only works on iOS.
+
+Register callback as shown in the following example:
+
+```csharp
+// In this example, OnWillExitApp is a method name in same class
+Distribute.WillExitApp = OnWillExitApp;
+```
+
+```csharp
+void OnWillExitApp()
+{
+    // Perform clean up here
+}
+```
+
+With that, `OnWillExitApp()` will be invoked when Distribute is about to close.
 
 ## How do in-app updates work?
 
