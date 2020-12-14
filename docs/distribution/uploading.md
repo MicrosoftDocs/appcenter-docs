@@ -15,7 +15,7 @@ ms.custom: distribute
 
 Upload your application binary package to App Center to distribute it. App Center supports package distribution for Android, iOS, macOS, Windows, and custom operating system apps. You can distribute releases to individual testers or groups of testers. For iOS and Android applications, you can also release to the stores like Google Play, the App Store, and Intune. See [Publish to consumer and enterprise stores](stores/index.md).
 
-On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal or the command-line interface (CLI).
+On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API).
 
 ## Generating an application binary package
 
@@ -64,7 +64,7 @@ Archive your build for apps with a custom operating system in .zip format.
 To distribute a package with App Center, go to [App Center][app-center-home], go to your app, then go to **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
-In the first step, choose the **Release** area to browse for the file you want to upload, or drag and drop the file onto the area. Depending on the OS and file extension for your app, App Center may ask for a version and build number for the release. Enter this information and choose **Next**.
+In the first step, choose the **Release** area to browse for the file you want to upload, or drag and drop the file onto the area. Depending on the operating system of your app and the file extension, App Center may ask you to enter a version and build number for your release. Enter the information and choose **Next**.
 
 You can include release notes as a part of your release, both in plain text or Markdown format. Choose **Next**.
 
@@ -92,11 +92,12 @@ To release a build to another distribution group, from any place in App Center g
 
 Make a release mandatory to force all users to run the same version of your app. When you do this, App Center will install the selected update on all tester devices.
 
-You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
+You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory via the API or by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
 
 For mandatory releases, App Center displays a red dot next to the release icon in your releases table under a selected distribution group.
 
 ## Link to Releases
+
 Once you've released successfully, your testers can access the release through email, logging in to App Center, or through a direct link.
 
 You can find links to specific releases on the release page for private destinations.
@@ -109,7 +110,14 @@ You can find links to specific releases to public destinations on the releases t
 [google-prepare-for-release]: https://developer.android.com/studio/publish/preparing.html
 [gradle-config]: https://developer.android.com/studio/build/build-variants.html
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
+[api-token-docs]: ~/api-docs/index.md
 [appcenter-cli]: https://github.com/Microsoft/appcenter-cli
+[POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_create
+[POSTtesters]: https://openapi.appcenter.ms/#/distribute/releases_addTesters
+[POSTgroups]: https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup
+[POSTstores]: https://openapi.appcenter.ms/#/distribute/releases_addStore
+[PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_complete
+[PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
 [groups]: https://docs.microsoft.com/appcenter/distribution/groups
