@@ -336,15 +336,15 @@ Implement the `DistributeDelegate` protocol and register the delegate as shown i
 Distribute.delegate = self;
 ```
 
-The `distributeWillClose:` delegate method will be called right before the app gets terminated for the update installation:
+The `distributeWillExitApp:` delegate method will be called right before the app gets terminated for the update installation:
 
 ```objc
-- (void)distributeWillClose:(MSACDistribute *)distribute {
+- (void)distributeWillExitApp:(MSACDistribute *)distribute {
   // Perform the required clean up here.
 }
 ```
 ```swift
-func distributeWillClose(_ distribute: Distribute) {
+func distributeWillExitApp(_ distribute: Distribute) {
   // Perform the required clean up here.
 }
 ```
