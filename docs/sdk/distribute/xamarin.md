@@ -305,13 +305,13 @@ In cases when the SDK checks for updates and doesn't find any updates available 
 You need to register the callback before calling `AppCenter.Start` as shown in the following example:
 
 ```csharp
-// In this example NoReleaseAvailable is a method name in same class
-Distribute.NoReleaseAvailable = NoReleaseAvailable;
+// In this example OnNoReleaseAvailable is a method name in same class
+Distribute.NoReleaseAvailable = OnNoReleaseAvailable;
 AppCenter.Start(...);
 ```
 
 ```csharp
-void NoReleaseAvailable()
+void OnNoReleaseAvailable()
 {
     AppCenterLog.Info(LogTag, "No release available callback invoked.");
 }
