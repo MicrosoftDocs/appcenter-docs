@@ -90,15 +90,14 @@ You can call the App Center API to distribute a release.
 1. Prerequisite: [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
 2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/JoshuaWeber/apps/APIExample>. Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `APIExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
 3. Upload a new release using three sequential API calls:
-    1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes three body parameters:
-        - `release_id` is optional and normally not needed. You can only use this to specify the ID of an already existing release, to change that release's binary. This value must be a number, so don't use quotes or it will be a string.
+    1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes two body parameters:
         - `build_version` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files, and Windows or custom operating system .zip or .msi files. It becomes the version of your release for macOS, or the build number of your release for Windows and custom operating system apps.
         - `build_number` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files. It becomes the build number of your release.
 
-        The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/release_uploads][POST_releaseUpload]
+        The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
 
         ```shell
-        curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/release_uploads' -d '{}'
+        curl -X POST "https://api.appcenter.ms/v0.1/apps/Microsoft/APIExample/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" -H  "Content-Type: application/json" -d "{  \"build_version\": \"1.0\",  \"build_number\": \"1\"}"
         ```
 
     2. Copy the `upload_url` from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
@@ -153,7 +152,7 @@ You can find links to specific releases to public destinations on the releases t
 [android-manifest]: https://developer.android.com/guide/topics/manifest/manifest-intro.html
 [api-token-docs]: ~/api-docs/index.md
 [appcenter-cli]: https://github.com/Microsoft/appcenter-cli
-[POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_create
+[POST_releaseUpload]: https://openapi.appcenter.ms/#/distribute/releases_createReleaseUpload
 [POSTtesters]: https://openapi.appcenter.ms/#/distribute/releases_addTesters
 [POSTgroups]: https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup
 [POSTstores]: https://openapi.appcenter.ms/#/distribute/releases_addStore
