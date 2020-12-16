@@ -5,7 +5,7 @@ keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 11/10/2020
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: 9DBB5B10-4F1F-4A93-9797-BC2ECAE62903
 ms.tgt_pltfrm: cordova
 ---
