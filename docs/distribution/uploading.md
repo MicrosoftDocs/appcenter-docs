@@ -88,7 +88,7 @@ appcenter distribute release --app David/My-App --file ~/releases/my_app-23.ipa 
 You can call the App Center API to distribute a release.
 
 1. Prerequisite: [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
-2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/JoshuaWeber/apps/APIExample.> Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `APIExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
+2. Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/JoshuaWeber/apps/APIExample>. Here, the `{owner_name}` is `JoshuaWeber` and the `{app_name}` is `APIExample`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Microsoft/apps/APIExample> and the `{owner_name}` would be `Microsoft`.
 3. Upload a new release using three sequential API calls:
     1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes three body parameters:
         - `release_id` is optional and normally not needed. You can only use this to specify the ID of an already existing release, to change that release's binary. This value must be a number, so don't use quotes or it will be a string.
