@@ -4,7 +4,7 @@ description: Get Started with React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/10/2020
+ms.date: 11/24/2020
 ms.topic: get-started-article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.tgt_pltfrm: react-native
@@ -89,7 +89,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 3. Modify the app's **AppDelegate.m** file to include code for starting SDK:
 
-    * Add these lines to import section
+    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
 
     ```objc
     #import <AppCenterReactNative.h>
@@ -227,7 +227,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
 11. Modify the app's AppDelegate.m file to include code for starting SDK:
-    * Add these lines to import section
+    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
 
     ```objc
     #import <AppCenterReactNative/AppCenterReactNative.h>

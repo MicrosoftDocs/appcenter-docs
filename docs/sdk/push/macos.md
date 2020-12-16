@@ -68,7 +68,7 @@ Make sure you've replaced `{Your App Secret}` in the code sample above with your
 
 ### 2.3 Add internet capabilities for sandboxed apps
 
-If your app is using the App Sandbox, you must set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
+If your app is using the App Sandbox, set the capability to allow incoming (Server) and outgoing (Client) connections to allow the app to have access to the internet.
 Xcode 9 enables the App Sandbox by default but the capabilities for incoming and outgoing connections need to be set explicitly.
 
 Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable incoming and outgoing connections.
@@ -168,7 +168,7 @@ var enabled = MSPush.isEnabled()
 
 ## Disable automatic forwarding of application delegate's methods to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third-party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables application delegate forwarding for all App Center services.

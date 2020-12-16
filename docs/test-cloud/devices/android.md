@@ -2,9 +2,9 @@
 title: Android Devices Available
 description: Android devices that you can run tests on in App Center
 keywords: test cloud
-author: king-of-spades
-ms.author: kegr
-ms.date: 8/21/2020
+author: priskorn
+ms.author: miprisk
+ms.date: 12/11/2020
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -16,7 +16,10 @@ ms.custom: test
 > * [Android](android.md)
 > * [iOS](ios.md)
 
-Model  | OS
+> [!NOTE]
+> This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
+
+Model | OS
 -- | --
 Acer Iconia A1-830 | 4.2.2
 Acer Iconia Tab A1 | 4.2.2
@@ -33,30 +36,32 @@ Google Pixel | 10
 Google Pixel | 7.1.2
 Google Pixel | 8.0.0
 Google Pixel | 9
-Google Pixel 2 | 11
 Google Pixel 2 | 10
+Google Pixel 2 | 11
 Google Pixel 2 | 8.1.0
 Google Pixel 2 | 9
-Google Pixel 2 XL | 11
 Google Pixel 2 XL | 10
+Google Pixel 2 XL | 11
 Google Pixel 2 XL | 8.1.0
 Google Pixel 2 XL | 9
-Google Pixel 3 | 11
 Google Pixel 3 | 10
+Google Pixel 3 | 11
 Google Pixel 3 | 9
 Google Pixel 3 XL | 10
+Google Pixel 3 XL | 11
 Google Pixel 3 XL | 9
-Google Pixel 3a | 11
 Google Pixel 3a | 10
+Google Pixel 3a | 11
 Google Pixel 3a | 9
-Google Pixel 3a XL | 11
 Google Pixel 3a XL | 10
+Google Pixel 3a XL | 11
 Google Pixel 3a XL | 9
-Google Pixel 4 | 11
 Google Pixel 4 | 10
-Google Pixel 4 XL | 11
+Google Pixel 4 | 11
 Google Pixel 4 XL | 10
+Google Pixel 4 XL | 11
 Google Pixel 4a | 11
+Google Pixel 5 | 11
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
@@ -74,6 +79,7 @@ HTC One (M8) | 4.4.3
 HTC One (M8) | 5.0.1
 HTC One A9 | 6.0.1
 HTC One M9 | 5.0.2
+HTC One M9 | 7.0
 HTC One S | 4.1.1
 HTC One X | 4.1.1
 HTC One mini 2 | 4.4.2
@@ -132,7 +138,6 @@ LG Nexus 5X | 7.1.2
 LG Nexus 5X | 8.0.0
 LG Nexus 5X | 8.1.0
 LG Optimus G Pro | 4.1.2
-LG Optimus GJ | 4.1.2
 LG V30 | 7.1.2
 LG V30 | 9
 LG V40 ThinQ | 9
@@ -206,6 +211,8 @@ OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
 OnePlus Nord | 10
+OnePlus Nord N10 | 10
+OnePlus Nord N100 | 10
 OnePlus One | 4.4.4
 Oppo N1 | 4.3
 Samsung Galaxy A3 | 4.4.4
@@ -342,7 +349,6 @@ Samsung Galaxy S9 | 9
 Samsung Galaxy S9 Plus | 10
 Samsung Galaxy S9 Plus | 8.0.0
 Samsung Galaxy S9 Plus | 9
-Samsung Galaxy Star | 4.1.2
 Samsung Galaxy Tab 2 | 4.2.2
 Samsung Galaxy Tab 2 7.0 | 4.1.2
 Samsung Galaxy Tab 3 10.1 | 4.2.2
@@ -360,6 +366,7 @@ Samsung Galaxy Tab A | 8.1.0
 Samsung Galaxy Tab A7 (2020) | 10
 Samsung Galaxy Tab Active 2 | 8.1.0
 Samsung Galaxy Tab Active 2 | 9
+Samsung Galaxy Tab Active 3 | 10
 Samsung Galaxy Tab Pro 10.1 | 4.4.2
 Samsung Galaxy Tab Pro 8.4 | 4.4.2
 Samsung Galaxy Tab S 10.5 | 4.4.2
@@ -388,7 +395,6 @@ Samsung Google Nexus 10 | 4.2.2
 Samsung Google Nexus 10 | 4.3
 Sharp Aquos Phone Zeta | 4.4.2
 Sony Ericsson Xperia S | 4.1.2
-Sony Tablet S | 4.1.1
 Sony Xperia 1 | 10
 Sony Xperia 1 | 9
 Sony Xperia 10 | 10
@@ -400,7 +406,6 @@ Sony Xperia 5 | 10
 Sony Xperia 5 | 9
 Sony Xperia 5 II | 10
 Sony Xperia A | 4.2.2
-Sony Xperia E1 | 4.4.2
 Sony Xperia M2 | 4.4.2
 Sony Xperia M2 Aqua | 4.4.4
 Sony Xperia T | 4.1.2

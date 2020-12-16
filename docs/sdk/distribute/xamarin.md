@@ -37,7 +37,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
 * Open Visual Studio for Mac.
 * Click **File** > **Open** and choose your solution.
-* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* In the solution navigator, right-click the **Packages** section, and choose **Add NuGet packages...**.
 * Search for **App Center**, and install **App Center Distribute**.
 * Click **Add Packages**.
 
@@ -107,7 +107,7 @@ Distribute.SetEnabledForDebuggableBuild(true);
 
 ##### Xamarin.Forms
 
-To create a Xamarin.Forms app targeting both Android and iOS platforms, you must create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
+To create a Xamarin.Forms app targeting both Android and iOS platforms, create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
 
 ```csharp
 AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute));
@@ -158,7 +158,7 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is just a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
 1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
 2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into the conditional item group:
@@ -220,7 +220,7 @@ Distribute.CheckForUpdate();
 ```
 
 > [!NOTE]
-> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being performed. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
+> A manual check for update call works even when automatic updates are enabled. A manual check for update is ignored if another check is already being done. The manual check for update won't be processed if the user has postponed updates (unless the latest version is a mandatory update).
 
 ## Customize or localize the in-app update dialog
 
@@ -364,15 +364,15 @@ The in-app updates feature works as follows:
 You need to upload release builds (that use the Distribute module of the App Center SDK) to the App Center Portal to test in-app updates, increasing version numbers every time.
 
 1. Create your app in the App Center Portal if you haven't already.
-1. Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+1. Create a new distribution group and name it, so you can recognize it's meant for testing the in-app update feature.
 1. Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that wasn't used for that app on App Center. This ensures that your experience is close to the experience of your real testers.
 1. Create a new build of your app that includes **App Center Distribute** and contains the setup logic as described below. If the group is private, don't forget to set the private in-app update track before start using the [`UpdateTrack` property](#use-private-distribution-group).
 1. Click on the **Distribute new release** button in the portal and upload your build of the app.
-1. Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+1. Once the upload has finished, click **Next** and select the **Distribution group** that you created as the **Destination** of that app distribution.
 1. Review the Distribution and distribute the build to your in-app testing group.
 1. People in that group will receive an invite to be testers of the app. Once they accept the invite, they can download the app from the App Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
 1. Bump the version of your app (`CFBundleShortVersionString ` or `CFBundleVersion ` for iOS, `versionCode` for Android)
-1. Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
+1. Build the release version of your app and upload a new build of your app like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app starts.
 
 > [!TIP]
 > Have a look at the information on how to [utilize App Center Distribute](~/distribution/index.md) for more detailed information about **Distribution Groups** etc.
@@ -381,7 +381,7 @@ You need to upload release builds (that use the Distribute module of the App Cen
 
 ## Disable automatic forwarding of application delegate's methods to App Center services
 
-App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward your application delegate's methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third-party libraries or the application delegate itself. In this case, you might want to disable the App Center application delegate forwarding for all App Center services by following the steps below:
 
 1. Open the project's **Info.plist** file.
 2. Add `AppCenterAppDelegateForwarderEnabled` key and set the value to `0`. This disables application delegate forwarding for all App Center services.

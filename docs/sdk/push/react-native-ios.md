@@ -149,7 +149,7 @@ After calling `Push.setEnabled(true)` once, App Center Push will be started auto
 
 ## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third-party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
 ### Application Delegate
 
@@ -298,7 +298,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it's helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it's helpful to determine if user has tapped push notification. This task requires one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -318,7 +318,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
     }
     ```
 
-3. Implement the following callback to detect various actions performed by users with push notifications:
+3. Implement the following callback to detect various actions done by users with push notifications:
 
     ```objc
     // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.
@@ -326,7 +326,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                 withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
-      // Perform the task associated with the action.
+      // Run the task associated with the action.
       if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
 
         // User tapped on notification

@@ -15,14 +15,14 @@ ms.custom: distribute
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your React Native app(s).
 
 ## How does it work?
-React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time associated with the stores to which you're publishing.
+React Native apps are composed of JavaScript files and any associated [images](https://facebook.github.io/react-native/docs/images.html#content), which are bundled together by the [packager](https://github.com/facebook/metro) and distributed as part of a platform-specific binary (an `.ipa` or `.apk` file). When the app is released, updating either the JavaScript code (for example making bug fixes, adding new features) or image assets, requires you to recompile and redistribute the entire binary, which includes any review time for the stores to which you're publishing.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your JavaScript and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they're available.
 
 To ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to [roll back](./cli.md#rolling-back-updates) on the server.
 
 > [!NOTE]
-> Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) can't be distributed via CodePush, and therefore, must be updated via the appropriate store(s).
+> Any product changes which touch native code (e.g. modifying your **AppDelegate.m**/**MainActivity.java** file, adding a new plugin) can't be distributed via CodePush, and so, must be updated via the appropriate store(s).
 
 ## Supported React Native platforms
 
@@ -32,7 +32,7 @@ To ensure that your end users always have a functioning version of your app, the
 
 We try our best to maintain backwards compatibility of our plugin with previous versions of React Native, but because of the nature of the platform, and the existence of breaking changes between releases, it's possible that you need to use a specific version of the CodePush plugin to support the exact version of React Native you're using. The following table outlines which CodePush plugin versions officially support the respective React Native versions:
 
-| React Native version(s) | Supporting CodePush version(s)                       |
+| React Native versions | Supporting CodePush versions                       |
 |-------------------------|------------------------------------------------------|
 | <0.14                   | **Unsupported**                                      |
 | v0.14                   | v1.3 *(introduced Android support)*                  |
@@ -86,7 +86,7 @@ We'll update this list as new core components are released, which support refere
 ## Store Guideline Compliance
 While Google Play and internally distributed apps (for example Enterprise, Fabric, HockeyApp) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
 
-[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed performing over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
+[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
 
 > Interpreted code may be downloaded to an Application but only so long as such code: (a) doesn't change the primary purpose of the Application by providing features or functionality that's inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) doesn't bypass signing, sandbox, or other security features of the OS.
 
@@ -100,7 +100,7 @@ This isn't necessarily the case for `updateDialog`, since it won't force the use
 
 ## Example Apps / Starters
 
-The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following is a list of OSS React Native apps that are also using CodePush, and can therefore be used to see how others are using the service:
+The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following list is of OSS React Native apps that are also using CodePush, and can be used to see how others are using the service:
 
 - [F8 App](https://github.com/fbsamples/f8app) - The official conference app for [F8 2016](https://www.fbf8.com/).
 - [Feline for Product Hunt](https://github.com/arjunkomath/Feline-for-Product-Hunt) - An Android client for Product Hunt.
@@ -117,7 +117,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 
 ## Continuous Integration / Delivery
 
-In addition to being able to use the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you and/or your team to create and maintain the rhythm of performing agile deployments. To assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
+In addition to using the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you or your team to create and maintain the rhythm of agile deployments. To assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
 
 - [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)
@@ -126,4 +126,4 @@ Additionally, if you want more details of what a complete mobile CI/CD workflow 
 
 ## TypeScript Consumption
 
-This module ships its `*.d.ts` file as part of its NPM package, which allows you to `import` it, and receive intellisense in supporting editors (like Visual Studio Code), as well as compile-time type checking if you're using TypeScript. For the most part, this behavior should just work out of the box, however, if you've specified `es6` as the value for either the `target` or `module` [compiler option](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in your [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, then just make sure that you also set the `moduleResolution` option to `node`. This ensures that the TypeScript compiler will look within the `node_modules` for the type definitions of imported modules. Otherwise, you'll get an error like the following when trying to import the `react-native-code-push` module: `error TS2307: Cannot find module 'react-native-code-push'`.
+This module ships its `*.d.ts` file as part of its NPM package, which allows you to `import` it, and receive intellisense in supporting editors (like Visual Studio Code), as well as compile-time type checking if you're using TypeScript. For the most part, this behavior should work out of the box, however, if you've specified `es6` as the value for either the `target` or `module` [compiler option](https://www.typescriptlang.org/docs/handbook/compiler-options.html) in your [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, then make sure that you also set the `moduleResolution` option to `node`. This ensures that the TypeScript compiler will look within the `node_modules` for the type definitions of imported modules. Otherwise, you'll get an error like the following when trying to import the `react-native-code-push` module: `error TS2307: Cannot find module 'react-native-code-push'`.

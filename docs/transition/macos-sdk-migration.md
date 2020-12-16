@@ -25,7 +25,7 @@ dev_langs:
 
 If you've added the SDK manually, follow these steps:
 
-1. Remove `HockeySDK.framework` reference from the XCode project. Don't click _Move to Trash_ button, just click the _Remove reference_ button.
+1. Remove `HockeySDK.framework` reference from the XCode project. Click the _Remove reference_ button, don't click _Move to Trash_ button.
 
 1. Open your project settings and under **Build Settings** tab in the **Header Search Paths** / **Framework Search Paths** sections, remove the locations for header files related to HockeySDK.
 

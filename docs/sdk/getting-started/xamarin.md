@@ -78,7 +78,7 @@ The App Center SDK can be integrated using Visual Studio or the Package Manager 
 
 * Open Visual Studio for Mac.
 * Click **File** > **Open** and choose your solution.
-* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* In the solution navigator, right-click the **Packages** section, and choose **Add NuGet packages...**.
 * Search for **App Center**, and select **App Center Analytics** and **App Center Crashes**.
 * Click **Add Packages**.
 
@@ -165,7 +165,7 @@ AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App S
 ```
 
 > [!IMPORTANT]
-> The curly braces is just to document you must replace that content with the actual app secrets, don't put curly braces in the `Start` call.
+> The curly braces show where to place the actual app secrets, don't put curly braces in the `Start` call.
 > 
 > [!NOTE]
 > In case you're using the HockeyApp SDK for Android, make sure to initialize the HockeyApp SDK **AFTER** the App Center SDK. For your iOS application, it isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
@@ -205,7 +205,7 @@ android:fullBackupContent="@xml/appcenter_backup_rule"
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
-The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
 
 The example above shows how to use the `Start()` method and include both App Center Analytics and App Center Crashes.
 
@@ -213,7 +213,7 @@ If you don't want to use one of the two services, remove the corresponding param
 
 Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
+For example - If you want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
 
 #### 4.3.1 Xamarin.Android and Xamarin.iOS
 

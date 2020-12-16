@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # CodePush Management SDK
 
-A JavaScript library for programmatically managing your App Center account (e.g. creating apps, promoting releases), which allows authoring Node.js-based build and/or deployment scripts, without needing to shell out to the [CLI](./CLI.md).
+A JavaScript library for programmatically managing your App Center account (e.g. creating apps, promoting releases), which allows authoring Node.js-based build or deployment scripts, without needing to shell out to the [CLI](./CLI.md).
 
 ## Getting Started
 
@@ -68,17 +68,17 @@ The `code-push` module exports a single class (typically referred to as `CodePus
 - **addAccessKey(description: string): Promise&lt;AccessKey&gt;** - Creates a new access key with the specified description (e.g. "Azure DevOps CI").
 - **addApp(appName: string, os: string, platform: string, manuallyProvisionDeployments: boolean = false): Promise&lt;App&gt;** - Creates a new CodePush app with the specified name, os, and platform. If `manuallyProvisionDeployments` is set to true, the app won't create the default deployments of "Staging" and "Production"; if unspecified or set to false, it will.
 - **addCollaborator(appName: string, email: string): Promise&lt;void&gt;** - Adds the specified CodePush user as a collaborator to the specified CodePush app.
-- **addDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Creates a new deployment with the specified name, and associated with the specified app.
-- **clearDeploymentHistory(appName: string, deploymentName: string): Promise&lt;void&gt;** - Clears the release history associated with the specified app deployment.
+- **addDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Creates a new deployment with the specified name, and for the specified app.
+- **clearDeploymentHistory(appName: string, deploymentName: string): Promise&lt;void&gt;** - Clears the release history for the specified app deployment.
 - **getAccessKey(accessKey: string): Promise&lt;AccessKey&gt;** - Retrieves the metadata about the specific access key.
-- **getAccessKeys(): Promise&lt;AccessKey[]&gt;** - Retrieves the list of access keys associated with your CodePush account.
+- **getAccessKeys(): Promise&lt;AccessKey[]&gt;** - Retrieves the list of access keys for your CodePush account.
 - **getApp(appName: string): Promise&lt;App&gt;** - Retrieves the metadata about the specified app.
-- **getApps(): Promise&lt;App[]&gt;** - Retrieves the list of apps associated with your CodePush account.
-- **getCollaborators(appName: string): Promise&lt;CollaboratorMap&gt;** - Retrieves the list of collaborators associated with the specified app.
+- **getApps(): Promise&lt;App[]&gt;** - Retrieves the list of apps for your CodePush account.
+- **getCollaborators(appName: string): Promise&lt;CollaboratorMap&gt;** - Retrieves the list of collaborators for the specified app.
 - **getDeployment(appName: string, deploymentName: string): Promise&lt;Deployment&gt;** - Retrieves the metadata for the specified app deployment.
 - **getDeploymentHistory(appName: string, deploymentName: string): Promise&lt;Package[]&gt;** - Retrieves the list of releases that have been made to the specified app deployment.
 - **getDeploymentMetrics(appName: string, deploymentName): Promise&lt;DeploymentMetrics&gt;** - Retrieves the installation metrics for the specified app deployment.
-- **getDeployments(appName: string): Promise&lt;Deployment[]&gt;** - Retrieves the list of deployments associated with the specified app.
+- **getDeployments(appName: string): Promise&lt;Deployment[]&gt;** - Retrieves the list of deployments for the specified app.
 - **patchRelease(appName: string, deploymentName: string, label: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Updates the specified release's metadata with the given information.
 - **promote(appName: string, sourceDeploymentName: string, destinationDeploymentName: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Promotes the latest release from one deployment to another for the specified app and updates the release with the given metadata.
 - **release(appName: string, deploymentName: string, updateContentsPath: string, targetBinaryVersion: string, updateMetadata: PackageInfo): Promise&lt;void&gt;** - Releases a new update to the specified deployment with the given metadata.

@@ -64,7 +64,7 @@ The second method uses your App Center account credentials:
 * Populate the **App Center Username** and **App Center Password** fields with the credentials from your App Center account.
 
 > [!NOTE]
-> Your App Center username is in your [App Center account profile](https://appcenter.ms/settings/profile). If signing in using your Microsoft credentials, you must set up your account with a password or the task can't login. You can [set up a password in App Center](https://appcenter.ms/settings/password).
+> Your App Center username is in your [App Center account profile](https://appcenter.ms/settings/profile). If signing in using your Microsoft credentials, set up your account with a password or the task can't log in. You can [set up a password in App Center](https://appcenter.ms/settings/password).
 
 ## Appium
 * Before creating a test run, complete the steps at the [Before you start](#before-you-start) section of this guide.

@@ -13,6 +13,7 @@
 ## [Azure Subscriptions](general/azure-subscriptions.md)
 ## [Platform Service Matrix](general/platform-service-matrix.md)
 ## [Supported Browsers](general/browsers.md)
+## [URL Allow List](general/allowlist.md)
 ## [App Center Security and Compliance](general/app-center-security.md)
 ## [Platform Limits](general/platform-limits.md)
 ## [Support Center](general/support-center.md)
@@ -155,7 +156,6 @@
 ##### [REPL Tree command unresponsive](test-cloud/frameworks/uitest/troubleshooting/repl-tree.md)
 ### XCUITest
 #### [Preparing for upload](test-cloud/frameworks/xcuitest/index.md)
-#### [Preparing for upload with Extensions](test-cloud/frameworks/xcuitest/upload-extension.md)
 ### Calabash [Deprecated]
 #### [Preparing for upload](test-cloud/frameworks/calabash/index.md)
 ## [Signing iOS apps for testing](test-cloud/ios-sign-for-testing.md)
@@ -175,6 +175,7 @@
 ### [Device idling](test-cloud/troubleshooting/sleep.md)
 ### [Device log analysis](test-cloud/troubleshooting/device-logs.md)
 ### [Stalled devices](test-cloud/troubleshooting/stalls.md)
+### [Test Report steps out-of-sync](test-cloud/troubleshooting/steps-desync.md)
 ### [Time limits](test-cloud/troubleshooting/time-outs.md)
 ### [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
 

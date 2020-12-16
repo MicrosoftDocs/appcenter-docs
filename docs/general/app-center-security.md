@@ -62,7 +62,7 @@ From time to time, Microsoft employees need access to customer data stored withi
 
 Data in App Center is classified to distinguish between customer data (what you upload to App Center), organizational data (information used when signing up for or administering your organization), and Microsoft data (information required for or collected through the operation of the service). Based on the classification we control usage scenarios, access restrictions, and retention requirements.
 
-All logins are performed using [Azure Active Directory multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) (MFA / 2FA).
+All logins use [Azure Active Directory multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) (MFA / 2FA).
 
 ## Business Continuity and Disaster Recovery (BCDR)
 

@@ -21,7 +21,7 @@ You can upload a crash report if you don't want to use our SDK or develop for a 
 To upload a report, call the App Center ingestion endpoint at `https://in.appcenter.ms/logs?Api-Version=1.0.0` with the following headers:
 
 - `Content-Type`: describes the format of the body. App Center currently only supports JSON format.
-- `App-Secret`: string that's the unique identifier associated with each app. You can find the app secret in the settings of an app.
+- `App-Secret`: string that's the unique identifier for each app. You can find the app secret in the settings of an app.
 - `Install-ID`: string that can be any GUID used to keep track of counts.
 
 Log properties:

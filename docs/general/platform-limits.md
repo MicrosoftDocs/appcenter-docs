@@ -4,7 +4,7 @@ description: These are the size limits for various entities in App Center.
 keywords: limits distribution groups teams organizations releases
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/03/2020
+ms.date: 12/03/2020
 ms.topic: article
 ms.assetid: e25d003b-f5eb-4fd7-b64b-a68c178adf5c
 ms.service: vs-appcenter
@@ -20,7 +20,7 @@ The following limits are in effect for App Center usage.
 
 - Maximum number of members in an organization: 2,000 members
 - Maximum number of members in a team: 2,000 members
-- Maximum number of members in a distribution group: 500 members
+- Maximum number of members in a distribution group: 30,000 members
 - Maximum number of distribution groups for each app: 100 groups
 - Maximum number of apps for each account: 2,000 apps
 - Maximum number of apps per organization: 2,000 apps

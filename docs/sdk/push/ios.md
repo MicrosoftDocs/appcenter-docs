@@ -320,7 +320,7 @@ The App Center SDK uses swizzling to improve its integration by forwarding itsel
 
 App Center Push allows apps to intercept push notifications and react to them, e.g. to display an alert, as described in the App Center Push documentation above. In some cases, it's helpful to distinguish between push notifications received while the app is in the foreground or background, and handle them differently. The App Center SDK-provided callback isn't enough in this case since the application's state will always be reported as `active`.
 
-To distinguish between notifications received in the foreground and notifications received while the app was in the background, you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+To distinguish between notifications received in the foreground and notifications received while the app was in the background, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -417,7 +417,7 @@ To distinguish between notifications received in the foreground and notification
 
 ### Detecting when a user has tapped on a push notification
 
-Sometimes it's helpful to determine if user has tapped push notification. To perform this task you must implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
+Sometimes it's helpful to determine if user has tapped push notification. For this task, implement one of the callbacks defined in `UNUserNotificationDelegate`. See [Apple's documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) for more details.
 
 > [!NOTE]
 > The solution below requires iOS 10 or later.
@@ -447,7 +447,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
     }
     ```
 
-3. Implement the following callback to detect various actions performed by users with push notifications:
+3. Implement the following callback to detect various actions by users with push notifications:
 
     ```objc
     // iOS 10 and later, asks the delegate to process the user's response to a delivered notification.
@@ -455,7 +455,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                 withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0)) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if ([[response actionIdentifier] isEqualToString:UNNotificationDefaultActionIdentifier]) {
 
         // User tapped on notification
@@ -470,7 +470,7 @@ Sometimes it's helpful to determine if user has tapped push notification. To per
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center:UNUserNotificationCenter,didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
-      // Perform the task associated with the action.
+      // Perform the task for the action.
       if (response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
 
         // User tapped on notification.

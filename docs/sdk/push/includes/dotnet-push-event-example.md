@@ -19,7 +19,7 @@ if (!AppCenter.Configured)
                             $"\n\tNotification title: {e.Title}" +
                             $"\n\tMessage: {e.Message}";
     
-        // If there's custom data associated with the notification,
+        // If there's custom data for the notification,
         // print the entries
         if (e.CustomData != null)
         {
@@ -36,5 +36,5 @@ if (!AppCenter.Configured)
 }
 
 // AppCenter.start after
-AppCenter.Start(..., ... ,typeof(Push), ...);
+AppCenter.Start(..., ..., typeof(Push), ...);
 ```

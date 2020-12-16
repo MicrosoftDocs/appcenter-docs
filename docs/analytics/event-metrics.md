@@ -24,7 +24,7 @@ To track custom events in your app, use our `trackEvent` API from the App Center
 
 ## General information
 
-You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period and/or app version.
+You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period or app version.
 
 ## Events Page
 
@@ -65,9 +65,9 @@ Property values are optimized for values of type 'String'.
 
 Events can help you identify the root cause of app crashes. As part of the App Center Crashes service, you can see all the events that happened before a crash for a specific session.
 
-To see the events before a crash, you must integrate the Analytics SDK into the app, and define one or more events.
+To see the events before a crash, integrate the Analytics SDK into the app, and define one or more events.
 
-Breadcrumbs are stored for just 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash that's older than 28 days, you won't see the corresponding breadcrumbs.
+Breadcrumbs are stored for 28 days, while crashes can potentially be stored indefinitely. This means that if you're looking at a crash that's older than 28 days, you won't see the corresponding breadcrumbs.
 
 ## Handled Errors
 

@@ -129,7 +129,7 @@ Crashes.notify(with: .always)
 
 ## Enable catching uncaught exceptions thrown on the main thread
 
-AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK can't catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this allows the application to crash on uncaught exceptions and the SDK can report them.
+AppKit catches exceptions thrown on the main thread, preventing the application from crashing on macOS, so the SDK can't catch these crashes. To mimic iOS behavior, set `NSApplicationCrashOnExceptions` flag before SDK initialization, this flag allows the application to crash on uncaught exceptions and the SDK can report them.
 
 ```objc
 [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions" : @YES }];

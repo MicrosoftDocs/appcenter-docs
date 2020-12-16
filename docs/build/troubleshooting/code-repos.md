@@ -16,7 +16,7 @@ ms.custom: build
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.
 * **Connecting to a user-owned repository must be done by the owner**. If you aren't the owner, you can still onboard the app by inviting the repository owner as a collaborator in App Center. Then, the owner can connect the repository as a source to the App Center build service.
 * **Connecting to a repository owned by an organization on GitHub or team on Bitbucket requires admin access**. This access is required because App Center will register a webhook on the repository coming from the appcenter.ms domain.
-* **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
+* **For GitHub repositories, an organization member with owner privileges might need to approve the initial access request**. See GitHub's instructions on [approving third-party apps for your organization](https://help.github.com/articles/approving-third-party-applications-for-your-organization/). It can take up to a few minutes until repositories from that organization will show up in App Center.
 
 ## When configuring a branch, I get an error message saying "no projects can be found" in my branch
 > [!TIP]
@@ -31,7 +31,7 @@ App Center currently supports cloud hosted Git repositories on Azure DevOps (for
 
 ## Repository connection broken after...
 ### Repo name change
-This breaks the connection, to resolve the issue you must revert to the original name or create a new repo with the original name.
+This breaks the connection. To resolve the issue, revert to the original name or create a new repo with the original name.
 
 ### Account ownership change
 If the user who originally connected the repository has their permission to access that repository revoked because of being removed from App Center or the repository ownership, then generally reconnecting the repository requires removing the old connection and creating it again. 
@@ -46,7 +46,7 @@ Disconnect the repository account, and reconnect to the correct one:
 - [Azure DevOps](~/build/connect.md#azure-devops)
 
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
-It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are associated with an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
+It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are for an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
 
 Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
 

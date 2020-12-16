@@ -18,7 +18,7 @@ ms.tgt_pltfrm: android
 
 Signing an app is a requirement to run an app on real devices during the development process or to distribute it via a beta program or in the Play Store. Without code signing, the app can only run on an emulator.
 
-When App Center builds an Android application with a debug build type, a keystore associated with a developer isn't required but can be uploaded. These builds will be automatically code signed with a debug key. For a release build that will be deployed, you must upload a keystore to App Center.
+When App Center builds an Android application with a debug build type, a keystore for a developer isn't required but can be uploaded. These builds will be automatically code signed with a debug key. For a release build that will be deployed, upload a keystore to App Center.
 
 ## Generating a keystore
 If you don't currently have a keystore, you can generate one in Android Studio. You can find instructions on generating a keystore to sign APKs in [Android Studio's official User Guide](https://developer.android.com/studio/publish/app-signing.html).

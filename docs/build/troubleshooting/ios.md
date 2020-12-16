@@ -27,7 +27,7 @@ To share a scheme in Xcode, use the following steps:
 
 
 ## My iOS builds fail with "clang: error: linker command failed with exit code 1"
-The error could be caused by App Center building with the xcodeproj instead of the workspace. When adding CocoaPods to your project, you must switch to using the workspace when building in App Center. 
+The error could be caused by App Center building with the xcodeproj instead of the workspace. When adding CocoaPods to your project, switch to using the workspace when building in App Center. 
 
 Indicator: Look for this line in your build log:
 ```text
