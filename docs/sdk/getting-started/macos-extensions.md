@@ -5,7 +5,7 @@ keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 10/22/2020
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1
 ms.tgt_pltfrm: macos
 dev_langs:  

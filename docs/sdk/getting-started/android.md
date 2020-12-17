@@ -5,7 +5,7 @@ keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 11/12/2020
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
 dev_langs:
