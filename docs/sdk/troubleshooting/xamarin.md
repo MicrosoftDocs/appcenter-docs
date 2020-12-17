@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/06/2020
+ms.date: 12/17/2020
 ms.topic: article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
@@ -81,8 +81,9 @@ App Center uses SQLite to persist logs before they're sent to the backend. If yo
 
 ## App Center SDK Behavior in Unit Tests
 
-If you are going to write unit tests for your Xamarin project on some code where use our SDK you should consider that for the shared Xamarin project we use `.NETStandard 1.0` binaries in the package. Thus to avoid some unexpected behavior during implementing tests you have to use `.NETStandard 1.0` target framework for your project.
-If you are going to target `.NET Core` framework, or any framework version higher than `.NETStandard 2.0` then the one way to avoid any issues in unit tests is to mock the App Center SDK.
+The SDK package uses `.NETStandard 1.0` binaries. When implementing tests you must use `.NETStandard 1.0` as the target framework, or else your tests might have unexpected behavior. 
+
+If your project targets `.NET Core` or frameworks higher than `.NETStandard 2.0`, you can avoid issues by mocking the App Center SDK.
 
 ## Protect the App Center secret value
 
