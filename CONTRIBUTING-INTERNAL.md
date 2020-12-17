@@ -17,7 +17,7 @@ Requirements:
    - If your PR is tagged `needs human review` then it's double-checked by a maintainer before merging as a precaution against risky updates. 
 6. Periodically (often daily) the `master` (soon `main`) branch is merged to `live`.
 
-If you're stuck on any of these steps or have an especially urgent update to publish, ping the maintainer for assistance. (https://github.com/King-of-Spades/)
+If you're stuck on any of these steps or have an especially urgent update to publish, ping the maintainer for assistance. (@King-of-Spades)
 
 ### Report bugs or suggest enhancements
 Use the feedback tool at the bottom of any article to submit bugs and suggestions.
