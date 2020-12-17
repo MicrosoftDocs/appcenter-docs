@@ -79,6 +79,11 @@ If you're running automated UI tests, enabled in-app updates will block your aut
 
 App Center uses SQLite to persist logs before they're sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
 
+## App Center SDK Behavior in Unit Tests
+
+If you are going to write unit tests for your Xamarin project on some code where use our SDK you should consider that for the shared Xamarin project we use `.NETStandard 1.0` binaries in the package. Thus to avoid some unexpected behavior during implementing tests you have to use `.NETStandard 1.0` target framework for your project.
+If you are going to target `.NET Core` framework, or any framework version higher than `.NETStandard 2.0` then the one way to avoid any issues in unit tests is to mock the App Center SDK.
+
 ## Protect the App Center secret value
 
 [!INCLUDE [app secret secure](../includes/app-secret-secure.md)]
