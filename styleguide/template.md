@@ -3,8 +3,8 @@
 This core-docs template contains examples of Markdown syntax, as well as guidance on setting the metadata. To get the most of it, view both the [raw Markdown](https://raw.githubusercontent.com/dotnet/docs/master/styleguide/template.md) and the [rendered view](https://github.com/dotnet/docs/blob/master/styleguide/template.md) (for instance, the raw Markdown shows the metadata block, while the rendered view doesn't).
 
 When creating a Markdown file, you should copy this template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
-## Metadata
 
+## Metadata
 The full metadata block, with a bunch of annotations, is shown below:
 
 ```
@@ -15,7 +15,7 @@ keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, howev
 author: king-of-spades (maintainer Github user name)
 ms.author: kegr (maintainer Microsoft Alias)
 ms.date: 02/26/2018 (Expected publish date, in **US format: mm/dd/yyyy**)
-ms.topic: article (one only of the following: article, get-started-article, hero-article, hub-page, landing-page, non-content, reference, search)
+ms.topic: article (one only of the following: article, hub-page, reference)
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256 (a unique number representing the asset - Use a GUID, you can generate one at https://www.guidgenerator.com/)
 ms.custom: Analytics data, a field that gets imported into SkyEye so you can use it in custom reports
 ---
