@@ -325,7 +325,7 @@ If in private mode, App Center Distribute will open up its UI/browser at applica
  #endif
  ```
 
-## Perform clean up right before the app closes for update
+## Perform clean up right before the application closes for update
 
 Implement the `DistributeDelegate` protocol and register the delegate as shown in the following example:
 
