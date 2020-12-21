@@ -4,7 +4,7 @@ description: Getting started with the React Native SDK & CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/14/2020
+ms.date: 12/21/2020
 ms.topic: article
 ms.assetid: EE233A46-0D14-4E01-970B-37C025F1A390
 ms.service: vs-appcenter
