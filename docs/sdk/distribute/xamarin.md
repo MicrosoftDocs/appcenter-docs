@@ -331,10 +331,7 @@ bool enabled = await Distribute.IsEnabledAsync();
 > [!NOTE]
 > This method must only be used after `Distribute` has been started, it will always return `false` before start.
 
-## Perform clean up right before the app closes for update
-
-> [!NOTE]
-> This callback only works on iOS.
+## Perform clean up right before the app closes for update (iOS only)
 
 Register callback as shown in the following example:
 
