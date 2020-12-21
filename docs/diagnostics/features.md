@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/14/2019
+ms.date: 12/21/2020
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -23,11 +23,15 @@ By default, App Center displays an app's crashes and errors per day in a side-by
 
 Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame, and status for a more focused view.
 
+App Center edits the exception stack traces for formatting and filtering sensitive information. Examples of sensitive information that will be filtered are URLs, Json strings, RequestIDs etc...
+
 ![App Center shows you analytics on crashes and errors](~/diagnostics/images/new-crash-analytics.png)
 
 ### Grouping
 
 App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash, or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
+
+App Center can group by URL, however we remove URLs prepended with either HTTP or HTTPS, so if you want URL grouping avoid using that syntax.
 
 ![App Center groups crashes and errors based on similarities](~/diagnostics/images/crash-groups.png)
 
