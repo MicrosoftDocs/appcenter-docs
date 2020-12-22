@@ -23,7 +23,7 @@ By default, App Center displays an app's crashes and errors per day in a side-by
 
 Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame, and status for a more focused view.
 
-App Center edits the exception stack traces for formatting and filtering sensitive information. Examples of sensitive information that will be filtered are URLs, Json strings, RequestIDs etc...
+App Center edits the exception stack traces for formatting and filtering sensitive information. Examples of sensitive information that will be filtered are URLs, JSON strings, request IDs.
 
 ![App Center shows you analytics on crashes and errors](~/diagnostics/images/new-crash-analytics.png)
 
