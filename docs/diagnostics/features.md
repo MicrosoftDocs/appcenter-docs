@@ -31,7 +31,7 @@ App Center edits the exception stack traces for formatting and filtering sensiti
 
 App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash, or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
 
-App Center can group by URL, however we remove URLs prepended with either HTTP or HTTPS, so if you want URL grouping avoid using that syntax.
+If a crash is caused by afailed call to a URL (such as "Error calling azure.com or google.com") App Center can group crashes by that URL (ie all failed to call azure.com will be grouped together and failed to call google.com will be grouped together). However, because we remove URLs prepended with either HTTP or HTTPS from the crash log, this grouping will only work when avoiding this syntax ie  "Error calling http://azure.com" will not be grouped with other azure calls but "Error calling azure.com" will be grouped with other azure calls.
 
 ![App Center groups crashes and errors based on similarities](~/diagnostics/images/crash-groups.png)
 
