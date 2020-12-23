@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/02/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -184,6 +184,27 @@ To enable in-app updates for debug builds on Android and iOS, check the **Enable
 ![App Center behavior](images/unity_distribute_debug.png)
 
 In Unity, a debuggable build is a build with a **Development build** option checked.
+
+## Perform clean up right before the app closes for update
+
+> [!NOTE]
+> This callback only works on iOS.
+
+Register callback as shown in the following example:
+
+```csharp
+// In this example, OnWillExitApp is a method name in same class
+Distribute.WillExitApp = OnWillExitApp;
+```
+
+```csharp
+void OnWillExitApp()
+{
+    // Perform clean up here
+}
+```
+
+With that, `OnWillExitApp()` will be invoked when Distribute is about to close.
 
 ## How in-app updates work
 
