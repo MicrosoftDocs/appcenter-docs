@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/11/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -348,6 +348,30 @@ If in private mode, App Center Distribute will open up its UI/browser at applica
      AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self, Distribute.self])
  #endif
  ```
+
+## Perform clean up right before the application closes for update
+
+Implement the `DistributeDelegate` protocol and register the delegate as shown in the following example:
+
+```objc
+[MSACDistribute setDelegate:self];
+```
+```swift
+Distribute.delegate = self;
+```
+
+The `distributeWillExitApp:` delegate method will be called right before the app gets terminated for the update installation:
+
+```objc
+- (void)distributeWillExitApp:(MSACDistribute *)distribute {
+  // Perform the required clean up here.
+}
+```
+```swift
+func distributeWillExitApp(_ distribute: Distribute) {
+  // Perform the required clean up here.
+}
+```
 
 ## How do in-app updates work?
 

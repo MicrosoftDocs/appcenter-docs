@@ -4,7 +4,7 @@ description: Help using the Analytics features of App Center
 keywords: app center, analytics, faq
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/19/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: bca077bb-4cd9-4b79-bb93-01077680f58e
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.custom: analytics
 The data isn't sampled. Analytics will use all the data that's sent, unless it's sent in the wrong format or some of the known limits are reached.
 
 ## What's the latency between a log sent and its representation in the Analytics dashboards?
-The latency is typically a few seconds.
+The latency is typically a few minutes.
 
 ## If the app is offline, does the SDK store the logs and then send them once it's back online?
 Yes. When there's no network connectivity, the SDK saves up to 10 MB (by default) of logs in the local storage. The size limitation is applied only for [Android](~/sdk/other-apis/android.md#storage-size) and [iOS](~/sdk/other-apis/ios.md#storage-size) (Windows SDK doesn't have the limit yet) and can be changed via `setMaxStorageSize` API. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once the network connectivity is restored, the SDK will send these logs to the App Center backend.
@@ -31,7 +31,9 @@ OS Distribution counts aren't snapshots. They're counts of devices that match th
 The country is determined by the carrier country and requires that the device has a SIM. If you're using a tablet or a device with no SIM card, the country won't be reported. If you're using a simulator, the country information probably won't be accurate.
 
 ## What's the maximum number of distinct events that can be sent per app?
-The maximum number of distinct custom events that we'll track per day is 200. This count will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
+For Analytics, the maximum number of distinct custom events that we'll track per day is 200. Counts will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.
+
+The 200 distinct events a day limit does not apply to [Export](./export.md). We export all logs we accept, even if we do not track them in Analytics.
 
 ## What's the maximum number of event properties that I can define per event? What happens if I send more than the limit?
 The maximum number of event properties is currently set to 20. If more than 20 properties are sent, they're automatically rejected.
