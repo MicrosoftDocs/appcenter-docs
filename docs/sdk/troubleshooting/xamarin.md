@@ -81,9 +81,9 @@ App Center uses SQLite to persist logs before they're sent to the backend. If yo
 
 ## App Center SDK Behavior in Unit Tests
 
-The SDK package uses `.NETStandard 1.0` binaries. When implementing tests you must use `.NETStandard 1.0` as the target framework, or else your tests might have unexpected behavior. 
+The SDK package uses `.NETStandard 1.0` binaries for shared Xamarin project. When implementing tests you must use `.NETStandard 1.0` as the target framework, or else your tests might have unexpected behavior. 
 
-If your project targets `.NET Core` or frameworks higher than `.NETStandard 2.0`, you can avoid issues by mocking the App Center SDK.
+If your project targets `.NET Core` or frameworks higher than `.NETStandard 2.0` then in this case in tests will be used Windows Desktop binaries instead, so to avoid any issues you can mocking the App Center SDK.
 
 ## Protect the App Center secret value
 
