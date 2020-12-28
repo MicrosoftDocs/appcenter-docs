@@ -4,7 +4,7 @@ description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
 author: king-of-spades
 ms.author: kegr
-ms.date: 05/04/2020
+ms.date: 12/28/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
