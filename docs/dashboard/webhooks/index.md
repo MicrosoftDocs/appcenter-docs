@@ -32,6 +32,7 @@ App Center's webhooks allow users to send automatic notifications to connected a
 - Distribute: when a new version is released to a distribution group
   > [!NOTE]
   > For Distribute, the webhook will be triggered when you when a new version is released to a distribution group. If you checked **do not notify testers** in the **Review** step of creating a new release, the webhook won't fire.
+  > For Diagnostics, the webhook will be triggered for new error groups with symbols provided. If no symbols are found for the new error group, the webhook won't fire.
 
 App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
 

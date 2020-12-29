@@ -62,7 +62,7 @@ Learn more about how to use the Crashes SDK to track errors in Xamarin in our [C
 
 ## Adding Additional Information to Error Catching
 
-It's possible to tailor the error report sent to App Center to provide additional information for further context about the error. Achieve this by passing a Dictionary of strings key/value pairs to the `TrackError` method. These properties are completely optional. For example:
+It's possible to tailor the error report sent to App Center to provide additional information for further context about the error. Achieve this by passing a Dictionary of strings key/value pairs to the `TrackError` method. These properties are optional. For example:
 
 ```csharp
 try

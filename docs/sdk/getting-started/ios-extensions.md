@@ -5,7 +5,7 @@ keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 06/22/2020
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.tgt_pltfrm: ios
 dev_langs:  

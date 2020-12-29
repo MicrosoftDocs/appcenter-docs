@@ -5,7 +5,7 @@ keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
 ms.date: 08/09/2019
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: 0953B40C-ED43-430A-9609-43ED212A1884
 ms.tgt_pltfrm: cordova
 ---

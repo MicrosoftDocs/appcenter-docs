@@ -5,7 +5,7 @@ keywords: sdk, apple
 author: king-of-spades
 ms.author: kegr
 ms.date: 10/22/2020
-ms.topic: migration
+ms.topic: article
 ms.assetid: 408cdcba-07bb-11eb-adc1-0242ac120002
 ms.tgt_pltfrm: apple
 dev_langs:
