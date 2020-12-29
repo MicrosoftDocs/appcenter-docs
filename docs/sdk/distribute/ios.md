@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/13/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -274,6 +274,30 @@ Distribute.notify(.postpone);
 
 If you don't call the above method, the `releaseAvailableWithDetails:`-method will repeat whenever your app is entering to the foreground.
 
+### 3. Execute code if no updates are found
+
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `distributeNoReleaseAvailable:` from `MSACDistributeDelegate` delegate callback is invoked. This allows you to execute custom code in such scenarios.
+
+Here are examples which show how to display alert UI when no updates are found:
+
+```objc
+- (void)distributeNoReleaseAvailable:(MSACDistribute *)distribute {
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                 message:NSLocalizedString(@"No updates available", nil)
+                                                          preferredStyle:UIAlertControllerStyleAlert];
+  [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:nil]];
+  [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+}
+```
+
+```swift
+  func distributeNoReleaseAvailable(_ distribute: Distribute) {
+    let alert = UIAlertController(title: nil, message: "No updates available", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    self.window?.rootViewController?.present(alert, animated: true)
+  }
+```
+
 ## Enable or disable App Center Distribute at runtime
 
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use Distribute service in App Center portal.
@@ -331,6 +355,30 @@ If in private mode, App Center Distribute will open up its UI/browser at applica
      AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self, Distribute.self])
  #endif
  ```
+
+## Perform clean up right before the application closes for update
+
+Implement the `DistributeDelegate` protocol and register the delegate as shown in the following example:
+
+```objc
+[MSACDistribute setDelegate:self];
+```
+```swift
+Distribute.delegate = self;
+```
+
+The `distributeWillExitApp:` delegate method will be called right before the app gets terminated for the update installation:
+
+```objc
+- (void)distributeWillExitApp:(MSACDistribute *)distribute {
+  // Perform the required clean up here.
+}
+```
+```swift
+func distributeWillExitApp(_ distribute: Distribute) {
+  // Perform the required clean up here.
+}
+```
 
 ## How do in-app updates work?
 

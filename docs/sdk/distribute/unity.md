@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/02/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -143,6 +143,23 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
+### 3. Execute code if no updates are found
+
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `NoReleaseAvailable `  callback is invoked. This allows you to execute custom code in such scenarios.
+You need to register the callback before calling `AppCenter.Start` as shown in the following example:
+
+```csharp
+// In this example OnNoReleaseAvailable is a method name in same class
+Distribute.NoReleaseAvailable = OnNoReleaseAvailable;
+AppCenter.Start(...);
+```
+
+```csharp
+void OnNoReleaseAvailable()
+{
+    AppCenterLog.Info(LogTag, "No release available callback invoked.");
+}
+
 ## Enable or disable App Center Distribute at runtime
 
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use the Distribute service in the App Center portal.
@@ -184,6 +201,27 @@ To enable in-app updates for debug builds on Android and iOS, check the **Enable
 ![App Center behavior](images/unity_distribute_debug.png)
 
 In Unity, a debuggable build is a build with a **Development build** option checked.
+
+## Perform clean up right before the app closes for update
+
+> [!NOTE]
+> This callback only works on iOS.
+
+Register callback as shown in the following example:
+
+```csharp
+// In this example, OnWillExitApp is a method name in same class
+Distribute.WillExitApp = OnWillExitApp;
+```
+
+```csharp
+void OnWillExitApp()
+{
+    // Perform clean up here
+}
+```
+
+With that, `OnWillExitApp()` will be invoked when Distribute is about to close.
 
 ## How in-app updates work
 
