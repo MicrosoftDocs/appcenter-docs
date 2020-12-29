@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/02/2020
+ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -299,6 +299,24 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
+### 3. Execute code if no updates are found
+
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `NoReleaseAvailable `  callback is invoked. This allows you to execute custom code in such scenarios.
+You need to register the callback before calling `AppCenter.Start` as shown in the following example:
+
+```csharp
+// In this example OnNoReleaseAvailable is a method name in same class
+Distribute.NoReleaseAvailable = OnNoReleaseAvailable;
+AppCenter.Start(...);
+```
+
+```csharp
+void OnNoReleaseAvailable()
+{
+    AppCenterLog.Info(LogTag, "No release available callback invoked.");
+}
+```
+
 ## Enable or disable App Center Distribute at runtime
 
 You can enable and disable App Center Distribute at runtime. If you disable it, the SDK won't provide any in-app update functionality but you can still use Distribute service in App Center portal.
@@ -330,6 +348,24 @@ bool enabled = await Distribute.IsEnabledAsync();
 
 > [!NOTE]
 > This method must only be used after `Distribute` has been started, it will always return `false` before start.
+
+## Perform clean up right before the app closes for update (iOS only)
+
+Register callback as shown in the following example:
+
+```csharp
+// In this example, OnWillExitApp is a method name in same class
+Distribute.WillExitApp = OnWillExitApp;
+```
+
+```csharp
+void OnWillExitApp()
+{
+    // Perform clean up here
+}
+```
+
+With that, `OnWillExitApp()` will be invoked when Distribute is about to close.
 
 ## How do in-app updates work?
 
