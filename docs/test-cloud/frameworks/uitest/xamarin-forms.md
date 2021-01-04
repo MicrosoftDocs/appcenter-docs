@@ -74,16 +74,13 @@ The Calabash assembly uses non-public Apple APIs, which cause apps to be rejecte
 
 The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for Debug builds:
 
-::: zone pivot="windows"
-
+# [Visual Studio](#tab/windows)
 ![conditional compilation symbols option in Visual Studio](images/get-started-xamarin-forms-12-compiler-directive-vs.png "Build Options")
 
-::: zone-end
-::: zone pivot="macos"
-
+# [Visual Studio for Mac](#tab/macos)
 ![Define symbols option in Visual Studio for Mac](images/get-started-xamarin-forms-11-compiler-directive-xs.png "Compiler Options")
 
-::: zone-end
+-----
 
 ### Android application project
 
@@ -182,13 +179,11 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     return base.FinishedLaunching(app, options);
 }
 ```
-
-::: zone-end
+-----
 
 After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to create UITests, run them locally, and submit them to App Center Test.
 
 ## Summary
-
 Xamarin.Forms applications can be easily tested with **Xamarin.UITest** using a simple mechanism to expose the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) as a unique view identifier for test automation. Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
 For information about how to submit tests to App Center Test, see [Submitting UITests for Xamarin.Android](~/test-cloud/frameworks/uitest/android/index.md) or [Submitting UITests for Xamarin.iOS](~/test-cloud/frameworks/uitest/ios/upload.md). For more information about UITest, see [App Center Test documentation](~/test-cloud/index.md).
