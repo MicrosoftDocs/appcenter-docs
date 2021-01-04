@@ -4,7 +4,7 @@ description: Deploy Azure DevOps builds with App Center
 keywords: deploy, vsts, visual studio team services, build
 author: king-of-spades
 ms.author: kegr
-ms.date: 05/04/2020
+ms.date: 12/28/2020
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
@@ -12,6 +12,9 @@ ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 
 # Deploy Azure DevOps Builds with App Center
 You can deploy your apps from Azure DevOps to  App Center with the **Deploy with App Center** Task.
+
+> [!NOTE]
+> For on-premise version servers, please ensure that you are using the `3.173.0` version or newer. All older versions will not be working after **February 1, 2021**.
 
 ## Creating a signed build
 Only signed builds can be deployed and installed to devices, ensure your existing Azure DevOps build definition produces a signed build.

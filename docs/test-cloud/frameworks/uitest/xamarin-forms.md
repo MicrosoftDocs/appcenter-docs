@@ -1,13 +1,12 @@
 ---
 title: Get started with UITest and Xamarin.Forms
 description: UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices using App Center.
-zone_pivot_groups: platform
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/24/2018
+ms.date: 01/04/2021
 ---
 
 # Get started with UITest and Xamarin.Forms
@@ -75,16 +74,13 @@ The Calabash assembly uses non-public Apple APIs, which cause apps to be rejecte
 
 The following screenshot shows the `ENABLE_TEST_CLOUD` compiler variable set for Debug builds:
 
-::: zone pivot="windows"
-
+# [Visual Studio](#tab/windows)
 ![conditional compilation symbols option in Visual Studio](images/get-started-xamarin-forms-12-compiler-directive-vs.png "Build Options")
 
-::: zone-end
-::: zone pivot="macos"
-
+# [Visual Studio for Mac](#tab/macos)
 ![Define symbols option in Visual Studio for Mac](images/get-started-xamarin-forms-11-compiler-directive-xs.png "Compiler Options")
 
-::: zone-end
+-----
 
 ### Android application project
 
@@ -114,9 +110,7 @@ app.Query(c=>c.Marked("MyButton"))
 The shorter form `app.Query("MyButton")` also works.
 
 ### Adding a UITest project to an existing solution
-
-::: zone pivot="windows"
-
+# [Visual Studio](#tab/windows)
 Visual Studio has a template to help add a Xamarin.UITest project to an existing Xamarin.Forms solution:
 
 1. Right-click on the solution, and select **File > New Project**.
@@ -138,9 +132,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 
     This step allows the **NUnitTestAdapter** to run the UITests for the Android app from Visual Studio.
 
-::: zone-end
-::: zone pivot="macos"
-
+# [Visual Studio for Mac](#tab/macos)
 It is possible to add a new Xamarin.UITest project to an existing solution manually:
 
 1. Start by adding a new project by selecting the solution, and clicking **File > Add New Project**. In the **New Project** dialog, select **Cross-platform > Tests > Xamarin Test Cloud > UI Test App**:
@@ -187,13 +179,11 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     return base.FinishedLaunching(app, options);
 }
 ```
-
-::: zone-end
+-----
 
 After adding Xamarin.UITest to the Xamarin.Forms solution, it's possible to create UITests, run them locally, and submit them to App Center Test.
 
 ## Summary
-
 Xamarin.Forms applications can be easily tested with **Xamarin.UITest** using a simple mechanism to expose the [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) as a unique view identifier for test automation. Once a UITest project has been added to a Xamarin.Forms solution, the steps for writing and running the tests for a Xamarin.Forms application are the same as for a Xamarin.Android or Xamarin.iOS application.
 
 For information about how to submit tests to App Center Test, see [Submitting UITests for Xamarin.Android](~/test-cloud/frameworks/uitest/android/index.md) or [Submitting UITests for Xamarin.iOS](~/test-cloud/frameworks/uitest/ios/upload.md). For more information about UITest, see [App Center Test documentation](~/test-cloud/index.md).
