@@ -3,11 +3,21 @@ Thanks for your interest in contributing to the App Center documentation!
 
 This guide covers some general topics around contributing and refers out to the docs.microsoft.com contributors guide for more detailed explanations.
 
-## Code of conduct
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/), or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Internal Contributor Quick Guide
+Requirements:
+- Join the MicrosoftDocs team through the [MS Open Source Portal](https://repos.opensource.microsoft.com/)
+- Request to join [AppCenter Docs Write](https://github.com/orgs/MicrosoftDocs/teams/appcenter-docs-write/members)
 
-## How can I contribute?
-There's a variety of ways to contribute to the documentation. Review the sections below to find out which one is right for you.
+1. Create a branch on the private mirror. [appcenter-docs-pr](appcenter-docs-pr)
+2. Make your changes and open a PR. 
+3. Your PR will be automatically built and pass checks. 
+4. (Optional) Add reviewers if needed.  
+5. Comment `#sign-off` to indicate your PR is finished. You _must_ wait for any active build or tests to complete. 
+   - If your PR is tagged `qualifies for auto-merge` then it's automatically be merged to the `master` (soon `main`) branch.
+   - If your PR is tagged `needs human review` then it's double-checked by a maintainer before merging as a precaution against risky updates. 
+6. Periodically (often daily) the `master` (soon `main`) branch is merged to `live`.
+
+If you're stuck on any of these steps or have an especially urgent update to publish, ping the maintainer for assistance. (@King-of-Spades)
 
 ### Report bugs or suggest enhancements
 Use the feedback tool at the bottom of any article to submit bugs and suggestions.

@@ -5,7 +5,7 @@ keywords: sdk
 author: king-of-spades
 ms.author: kegr
 ms.date: 04/23/2019
-ms.topic: get-started-article
+ms.topic: article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.tgt_pltfrm: uwp
 ---

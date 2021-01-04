@@ -4,7 +4,7 @@ description: Getting started with the React Native SDK & CodePush
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/14/2020
+ms.date: 12/21/2020
 ms.topic: article
 ms.assetid: EE233A46-0D14-4E01-970B-37C025F1A390
 ms.service: vs-appcenter
@@ -163,7 +163,7 @@ To accommodate as many developer preferences as possible, the CodePush plugin su
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
+Once your Xcode project has been set up to build/link the CodePush plugin, you need to configure your app to check CodePush for the location of your JS bundle, since it's responsible for synchronizing it with updates that are released to the CodePush server. To do this, follow these steps:
 
 1. Open up the **AppDelegate.m** file, and add an import statement for the CodePush headers:
 
@@ -419,7 +419,7 @@ And that's it for installation using RNPM! Continue below to the [Plugin Configu
 > [!NOTE]
 > If you used RNPM or `react-native link` to automatically link the plugin, these steps have already been done for you so you may skip this section.
 
-After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
+After installing the plugin and syncing your Android Studio project with Gradle, you need to configure your app to check CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this:
 
 **For React Native >= v0.29**
 
@@ -627,9 +627,42 @@ new CodePushBuilder("deployment-key-here",getApplicationContext())
 
 Once you've acquired the CodePush plugin, you need to integrate it into the Visual Studio project of your React Native app and configure it correctly. To do this, take the following steps:
 
-### Plugin Installation (Windows)
+### Plugin Installation and Configuration for React Native version 0.63.6 and above (Windows)
 
-1. Open the Visual Studio solution located at `windows\<AppName>\<AppName>.sln` within your app
+#### Plugin Installation (Windows-npx)
+
+Once the plugin has been downloaded, run `npx react-native autolink-windows` in your application's root directory to automatically add the CodePush c++ project to your application's windows solution file.
+
+#### Plugin Configuration (Windows)
+
+1. Replace the following files located at `windows/<app name>` with those in the CodePushDemoAppCpp example app in this repo found at `Examples/CodePushDemoAppCpp/windows/CodePushDemoAppCpp`:
+   1. app.h
+   2. app.cpp
+   3. app.xaml
+
+2. In the above files, replace any occurance of `CodePushDemoAppCpp` with the name of your application
+
+3. Enter your application's app version and deployment key to the `configMap` object at the top of your app's `OnLaunched` method in `App.cpp`:
+
+```c++
+//...
+void App::OnLaunched(activation::LaunchActivatedEventArgs const& e)
+{
+    winrt::Microsoft::CodePush::ReactNative::CodePushConfig::SetHost(Host());
+    auto configMap{ winrt::single_threaded_map<hstring, hstring>() };
+    configMap.Insert(L"appVersion", L"1.0.0");
+    configMap.Insert(L"deploymentKey", L"<app deployment key>");
+    winrt::Microsoft::CodePush::ReactNative::CodePushConfig::Init(configMap);
+//...
+}
+//...
+```
+
+### Plugin Installation and Configuration for React Native lower than 0.60 (Windows)
+
+#### Plugin Installation (Windows)
+
+1. Open the Visual Studio solution located at `windows-legacy\<AppName>\<AppName>.sln` within your app
 
 2. Right-click the solution node in the `Solution Explorer` window and select the `Add -> Existing Project...` menu item
 
@@ -645,9 +678,9 @@ Once you've acquired the CodePush plugin, you need to integrate it into the Visu
 
    ![Add Reference Dialog](./images/rn-windows-7.png)
 
-### Plugin Configuration (Windows)
+#### Plugin Configuration (Windows)
 
-After installing the plugin, you need to configure your app to consult CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this, update the `AppReactPage.cs` file to use CodePush via the following changes:
+After installing the plugin, you need to configure your app to check CodePush for the location of your JS bundle, since it will "take control" of managing the current and all future versions. To do this, update the `AppReactPage.cs` file to use CodePush via the following changes:
 
 ```c#
 ...

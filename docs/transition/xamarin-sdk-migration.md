@@ -22,7 +22,7 @@ Replace **HockeySDK.Xamarin** NuGet package with App Center ones in all projects
 
 * Open Visual Studio for Mac.
 * Click **File** > **Open** and choose your solution.
-* In the solution navigator, right click the **Packages** section, and choose **Add NuGet packages...**.
+* In the solution navigator, right-click the **Packages** section, and choose **Add NuGet packages...**.
 * Remove the **HockeySDK.Xamarin** package.
 * Search for **App Center**, and select **App Center Analytics**, **App Center Crashes**, and **App Center Distribute**.
 * Click **Add Packages**.

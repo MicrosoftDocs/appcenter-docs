@@ -15,7 +15,7 @@ ms.custom: distribute
 
 The Azure DevOps CodePush extension can reduce the effort needed to keep your dev/alpha/beta/etc. deployments up to date by pushing changes to the configured source control branches. Your automated build takes care of the rest, meaning there's no need to manually release, promote, or rollout from the App Center CLI.
 
-These tasks can be used with either Azure DevOps or TFS 2015 Update 2 and are intended to work with any Cordova or React Native project. Additionally, the tasks can be paired nicely with the [Cordova Command task](https://marketplace.visualstudio.com/items/ms-vsclient.cordova-extension) and/or the [React Native Bundle task](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension), which allow you to easily "prepare" the platform-specific assets that can be later released to CodePush.
+These tasks can be used with either Azure DevOps or TFS 2015 Update 2 and are intended to work with any Cordova or React Native project. Additionally, the tasks can be paired nicely with the [Cordova Command task](https://marketplace.visualstudio.com/items/ms-vsclient.cordova-extension) or the [React Native Bundle task](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension), which allow you to easily "prepare" the platform-specific assets that can be later released to CodePush.
 
 ![CodePush Task + Cordova](images/vsts1.png)
 
@@ -35,7 +35,7 @@ Follow these steps to automate the release and promotion of app updates via Code
    > [!NOTE]
    > If you already have a build definition setup for your app, you can feel free to re-use that. CodePush doesn't require a distinct build/release definition to work.
 
-4. Click **Add build step...** and select one of the following tasks from the **Deploy** category, depending on your app type and/or requirements:
+4. Click **Add build step...** and select one of the following tasks from the **Deploy** category, depending on your app type or requirements:
 
    1. **CodePush - Release (Cordova)** - Select this item if you're releasing updates for a Cordova app. See the [reference docs](./cli.md#releasing-updates-cordova) for details about how it works.
 

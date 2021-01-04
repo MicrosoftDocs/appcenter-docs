@@ -4,8 +4,8 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/12/2020
-ms.topic: get-started-article
+ms.date: 12/22/2020
+ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
 dev_langs:
@@ -58,7 +58,7 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '4.0.0'
+      def appCenterSdkVersion = '4.1.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }

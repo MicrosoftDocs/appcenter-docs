@@ -149,7 +149,7 @@ After calling `Push.setEnabled(true)` once, App Center Push will be started auto
 
 ## Disable automatic method forwarding to App Center services
 
-App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
+App Center uses swizzling to automatically forward various delegate methods to App Center services to improve SDK integration. There's a possibility of conflicts with other third-party libraries or the delegates defined in your application. In this case, you should disable the App Center delegate forwarding for all App Center services by following the steps below:
 
 ### Application Delegate
 
