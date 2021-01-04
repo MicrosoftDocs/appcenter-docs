@@ -4,7 +4,7 @@ description: Shared docs for Apple Swift Package Manager
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 13/11/2020
+ms.date: 1/4/2020
 ms.topic: include
 ms.assetid: 12b31177-2d25-4fda-a193-136e84049f90
 ms.tgt_pltfrm: apple
