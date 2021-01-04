@@ -80,4 +80,4 @@ appcenter crashes upload-symbols --appxsym {symbol file}
 [!INCLUDE [ignoring symbols](includes/ignoring-symbols.md)]
 
 ## WinRT, Silverlight, and Other Platforms
-App Center doesn't support any other Windows platforms besides UWP, WPF, and WinForms. If you have a Windows app with native C++ crashes, you can upload these crashes to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump). If you have any feature requests, leave your feedback in the [App Center Github Repo](https://github.com/Microsoft/appcenter).
+App Center doesn't support any other Windows platforms besides UWP, WPF, and WinForms. If you have a Windows app with native C++ crashes, you can upload these crashes to App Center via the [upload crashes API](~/diagnostics/upload-crashes.md#upload-a-breakpad-crash-log-and-minidump). 

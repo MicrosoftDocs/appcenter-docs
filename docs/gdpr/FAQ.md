@@ -17,7 +17,7 @@ The following content is a list of frequently asked questions for GDPR. If you h
 For operational reasons, we aren't signing agreements sent to us by our customers. The terms and agreements of our product are here: [Azure Legal Information](https://azure.microsoft.com/support/legal/). GDPR-specific terms are near the end of the Azure Online Service Terms.
 
 ### What personal information does your service store?
-The information stored by HockeyApp or App Center depends on several factors including how you've configured the SDK, what data your application handles, and so on. For example, if your application transmits crashes back, our services can't determine what personal information is in the stack trace or crash dump. We have several features under development to help you find data associated with your customers. You can check our [roadmap](https://docs.microsoft.com/appcenter/general/roadmap) for updates and details.
+The information stored by HockeyApp or App Center depends on several factors including how you've configured the SDK, what data your application handles, and so on. For example, if your application transmits crashes back, our services can't determine what personal information is in the stack trace or crash dump. 
 
 ### GDPR - what type of data does App Center collect? 
 You can see the data App Center collects by [turning on verbose logging](https://docs.microsoft.com/appcenter/sdk/other-apis/react-native#adjust-the-log-level). (Although the article is specific to React Native, you can use the API for all app platforms). Then look at the HTTP logs, which contain headers and JSON payload to see the data type. 
