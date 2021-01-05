@@ -21,4 +21,4 @@ You can build React Native apps for both Android and iOS. To get started, use th
 
 Currently React Native Build doesn't contain support for Expo.
 
-We're constantly adding features and more capabilities. If you need further support in building your app, [contact us](~/help.md) and let us know more about your needs.
+If you need further support in building your app, [contact us](~/help.md) and let us know more about your needs.
