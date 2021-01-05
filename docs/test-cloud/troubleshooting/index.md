@@ -4,7 +4,7 @@ description: Troubleshooting App Center Test.
 keywords: appcenter test cloud, troubleshooting
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/03/2020
+ms.date: 01/04/2020
 ms.topic: article
 ms.assetid: 63f6b52d-ecd6-4270-b179-0ce580c8916c
 ms.service: vs-appcenter
@@ -22,6 +22,7 @@ If you're unsure how to diagnose your issue, here are some general tips:
 - **iOS simulator app packages can't be uploaded to Test**. Test requires a iOS device build (IPA) that our system can re-sign using our Development Provisioning files. 
 - **Your test suite might need [extra time](time-outs.md) or a [server connection](server-connection.md)** to reliably pass tests in App Center.
 - **Test can't automate multiple apps, or system apps (browser, camera, and so on)**. This limitation is true even for testing frameworks that allow full system control locally. 
+- **Don't include App DLLs in your Test suite**. App DLLs aren't neccessary because your app binary is provided to Test. If you include those DLLs anyways, it can cause unexpected behavior such as stalls or other strange symptoms. 
 
 ## Common Documented Issues
 - [(Android) missing or corrupted screenshots](android-screenshots.md)
