@@ -43,7 +43,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it's been sent.
 9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and it isn't considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
 
-## Project build is failed
+## Android project build fails
 
 In the Distribute module version `4.1.0` a new tag was added to the manifest for correct work on Android 11. When using Unity of version prior `2019.4` you should explicitly specify the gradle version to avoid the error `AAPT: error: unexpected element <queries> found in <manifest>.`.
 To avoid problems with building your project you have to add `mainTemplate.gradle` file to implicitly specify the gradle version. Please open **Project Settings** > **Player** > **Android tab** > **Publishing Settings** > **Build** and select **Custom Main Gradle Template** checkbox and update gradle version to `3.4.3`:
