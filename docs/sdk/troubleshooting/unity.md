@@ -45,8 +45,8 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 
 ## Project build is failed
 
-In the Distribute module version `4.1.0` was added a new tag to the manifest for correct work on Android 11. In the Unity version until `2019.4` it require to specific gradle version to avoid error `AAPT: error: unexpected element <queries> found in <manifest>.`. 
-To avoid problems with build your project you have to add `mainTemplate.gradle` file to implicitly specify the gradle version. Please open **Project Settings** > **Player** > **Android tab** > **Publishing Settings** > **Build** and select **Custom Main Gradle Template** checkbox and update gradle version to `3.4.3`:
+In the Distribute module version `4.1.0` a new tag was added to the manifest for correct work on Android 11. When using Unity of version prior `2019.4` you should explicitly specify the gradle version to avoid the error `AAPT: error: unexpected element <queries> found in <manifest>.`.
+To avoid problems with building your project you have to add `mainTemplate.gradle` file to implicitly specify the gradle version. Please open **Project Settings** > **Player** > **Android tab** > **Publishing Settings** > **Build** and select **Custom Main Gradle Template** checkbox and update gradle version to `3.4.3`:
 
 ```groovy
 dependencies {
