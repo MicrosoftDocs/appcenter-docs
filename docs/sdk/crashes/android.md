@@ -4,7 +4,7 @@ description:  App Center Crashes for Android
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/04/2019
+ms.date: 01/08/2019
 ms.topic: article
 ms.assetid: a9ac95b3-488f-40c5-ad11-99d8da0fa00b
 ms.custom: sdk
@@ -391,7 +391,7 @@ try {
     ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg");
 
     // Track an exception with attachments.
-    Crashes.trackException(exception, null, Arrays.asList(textLog, binaryLog));
+    Crashes.trackError(exception, null, Arrays.asList(textLog, binaryLog));
 }
 ```
 ```kotlin
@@ -407,7 +407,7 @@ try {
     val binaryLog = ErrorAttachmentLog.attachmentWithBinary(binaryData, "your_filename.jpeg", "image/jpeg")
 
     // Track an exception with attachments.
-    Crashes.trackException(exception, null, listOf(textLog, binaryLog))
+    Crashes.trackError(exception, null, listOf(textLog, binaryLog))
 }
 ```
 
