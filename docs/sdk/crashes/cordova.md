@@ -4,7 +4,7 @@ description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/12/2019
+ms.date: 01/12/2021
 ms.topic: article
 ms.assetid: B4CF1969-CD4B-44E0-A59D-634A6A0A6FA1
 ms.custom: sdk
@@ -155,9 +155,11 @@ var errorCallback = function(error) {
 };
 
 var processFunction = function(attachments, sendCallback) {
-    attachments.addTextAttachment('Hello text attachment!', 'hello.txt');
-    var imageAsBase64string = '...';
-    attachments.addBinaryAttachment(imageAsBase64string, 'logo.png', 'image/png');
+    for (var i = 0; i < attachments.length; i++) {
+        attachments[i].addTextAttachment('Hello text attachment!', 'hello.txt');
+        var imageAsBase64string = '...';
+        attachments[i].addBinaryAttachment(imageAsBase64string, 'logo.png', 'image/png');
+    }
     sendCallback(true); //crash will be sent
 };
 
