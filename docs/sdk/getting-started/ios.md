@@ -4,7 +4,7 @@ description: Get started with iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/03/2020
+ms.date: 01/06/2020
 ms.topic: article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -37,7 +37,7 @@ The following requirements must be met to use App Center SDK:
 * Your iOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
 * You're targeting devices running on iOS 9.0 or later.
 * You're not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
-* If you are using **CocoaPods** to integrate App Center, you need CocoaPods version above 1.9.
+* If you are using **CocoaPods** to integrate App Center, you need CocoaPods version 1.10 or later.
 
 App Center SDK Analytics and Crashes are compatible with Mac Catalyst via XCFramework or SwiftPM.
 
