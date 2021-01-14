@@ -91,7 +91,6 @@ You can call the App Center API to distribute a release. The approach below is i
 Upload a new release using these sequential API calls:
 1. Create an upload resource and get an `upload_url` (good for 24 hours):
     The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
-
     ```shell
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
@@ -100,8 +99,7 @@ Upload a new release using these sequential API calls:
     ```
         
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
-
-    ```json
+   ```json
         {
             "id": "{RELEASES_ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
@@ -144,7 +142,7 @@ Upload a new release using these sequential API calls:
     ```
 
 3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
-    ```bash
+    ```shell
     split -b $CHUNK_SIZE $APP_PACKAGE temp/split
     ```
 
