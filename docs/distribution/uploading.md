@@ -97,7 +97,7 @@ Upload a new release using these sequential API calls:
         APP_NAME="Example-App"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME}/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
-        ```
+    ```
         
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
 
@@ -109,7 +109,7 @@ Upload a new release using these sequential API calls:
             "token": "{TOKEN}",
             "url_encoded_token": "{URL_ENCODED_TOKEN}"
         }
-        ```
+    ```
         
 2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
@@ -145,7 +145,7 @@ Upload a new release using these sequential API calls:
 
 3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
     ```bash
-        split -b $CHUNK_SIZE $APP_PACKAGE temp/split
+    split -b $CHUNK_SIZE $APP_PACKAGE temp/split
     ```
 
     This command generates sequential files in the `temp` directory named `splitaa`, `splitab`, and so on. Each file is split within the `chunk_size` limit. 
@@ -167,24 +167,23 @@ Upload a new release using these sequential API calls:
     
 5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
     ```shell
-        FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
+    FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
+    curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
         
-        curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
-        
-        COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
-        curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
-        --data '{"upload_status": "uploadFinished","id": "$ID"}' \
-        -X PATCH \
-        $COMMIT_URL
-        ```
+    COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+    curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
+    --data '{"upload_status": "uploadFinished","id": "$ID"}' \
+    -X PATCH \
+    $COMMIT_URL
+    ```
         
 6. Finally, release the build. The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
         
-```shell
+    ```shell
         RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
         
         curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL
-```
+    ```
         
         
 ##### Distribute Release      
