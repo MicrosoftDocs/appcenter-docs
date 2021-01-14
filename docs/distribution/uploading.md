@@ -12,19 +12,18 @@ ms.custom: distribute
 ---
 
 # Release a Build
-
 Upload your application binary package to App Center to distribute it. App Center supports package distribution for Android, iOS, macOS, Windows, and custom operating system apps. You can distribute releases to individual testers or groups of testers. For iOS and Android applications, you can also release to the stores like Google Play, the App Store, and Intune. See [Publish to consumer and enterprise stores](stores/index.md).
 
-On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API).
+On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API). 
+
+You can also use the [App Center Distribute Task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) in Azure DevOps.
 
 ## Generating an application binary package
-
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
 
 The following sections explain how to create the files for all app types App Center supports for distribution.
 
 ### Android
-
 For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
 
 1. Ensure you've [updated the manifest][android-manifest] and have a correctly [configured Gradle build][gradle-config].
@@ -36,7 +35,6 @@ Android Studio places built app bundles in *project-name*/*module-name*/build/ou
 > You can only distribute Android app bundles to the Google Play Store, not to groups or individual testers.
 
 ### iOS
-
 For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
 
 1. [Register UDIDs][auto-provisioning] for all hardware devices in your provisioning profile.
@@ -44,7 +42,6 @@ For iOS, you must produce an IPA package for your application. For full details 
 3. Export the archive using the proper provisioning profile.
 
 ### macOS
-
 For macOS, you must produce an app package. App Center supports releasing app packages of type .app.zip, .pkg or .dmg. For full details of this process, see the official [Apple macOS documentation][apple-macos].
 
 1. [Register a single device][apple-register-single-device] or [register multiple devices][apple-register-multiple-devices] in your Apple developer account.
@@ -52,15 +49,12 @@ For macOS, you must produce an app package. App Center supports releasing app pa
 3. Export the archive using the proper provisioning profile.
 
 ### Windows
-
 App Center supports releasing Windows app packages of type `.appx`, `.appxbundle`, `.appxupload`, `.msi`, `.msix`, `.msixbundle`, `.msixupload`, or `.zip`. For full details on how to package your app in AppX or MSIX formats, see the official [Microsoft UWP documentation][uwp-package].
 
 ### Custom operating system
-
 Archive your build for apps with a custom operating system in .zip format.
 
 ## Distributing the package
-
 To distribute a package with App Center, go to [App Center][app-center-home], go to your app, then go to **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
@@ -93,20 +87,21 @@ You can call the App Center API to distribute a release. The approach below is i
 - The Distribution Group ID
 - Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
  
-#### Upload New Release
-1. Upload a new release using three sequential API calls:
-    1. Create an upload resource and get an `upload_url` (good for 24 hours):
-        The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
+##### Upload New Release
+Upload a new release using these sequential API calls:
+1. Create an upload resource and get an `upload_url` (good for 24 hours):
+    The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
 
-        ```shell
+```shell
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME}/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
-        ```
+```
         
-        The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
-        ```json
+   The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
+
+```json
         {
             "id": "{RELEASES_ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
@@ -114,19 +109,19 @@ You can call the App Center API to distribute a release. The approach below is i
             "token": "{TOKEN}",
             "url_encoded_token": "{URL_ENCODED_TOKEN}"
         }
-        ```
+```
         
-    2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
+2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
-    You must also determine the `MIME Type` for the `content_type` based on your app:
-        - **Android** uses vendor type `application/vnd.android.package-archive`
-        - **iOS** uses general type `application/octet-stream`
+   You must also determine the `MIME Type` for the `content_type` based on your app:
+    - **Android** uses vendor type `application/vnd.android.package-archive`
+    - **iOS** uses general type `application/octet-stream`
 
     You also must determine the filesize of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
 
     The final command should look something like this:
     
-    ```shell
+```shell
     FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
     APP_TYPE=`application/vnd.android.package-archive` # Android
     # APP_TYPE=`application/octet-stream`   # iOS
@@ -134,10 +129,10 @@ You can call the App Center API to distribute a release. The approach below is i
     $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
      curl -s -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$METADATA_URL"
-     ```
+```
     
-    The output returned should look something like this:
-    ```json
+   The output returned should look something like this:
+```json
     {
         "error":false,
         "id":"{UPLOAD_ID}",
@@ -147,18 +142,17 @@ You can call the App Center API to distribute a release. The approach below is i
         "blob_partitions":1,
         "status_code":"Success"
     }
-    ```
+```
 
 
-    3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
+3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
     ```bash
         split -b $CHUNK_SIZE $APP_PACKAGE temp/split
     ```
 
     This command generates sequential files in the `temp` directory named `splitaa`, `splitab` and so on, so that each file is within the `chunk_size` limit. 
 
-    4. Next you need to upload each chunk of the split app package with the respective block:
-
+4. Next you need to upload each chunk of the split app package with the respective block:
     ```shell
     BLOCK_NUMBER=0
     
@@ -173,8 +167,8 @@ You can call the App Center API to distribute a release. The approach below is i
     done
     ```
     
-    5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
-        ```shell
+5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
+```shell
         FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
         
         curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
@@ -184,34 +178,33 @@ You can call the App Center API to distribute a release. The approach below is i
         --data '{"upload_status": "uploadFinished","id": "$ID"}' \
         -X PATCH \
         $COMMIT_URL
-        ```
+```
         
-    6. Finally, release the build. The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
+6. Finally, release the build. The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
         
-        ```shell
+```shell
         RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
         
         curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL
-        ```
+```
         
         
-        
-2. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
+##### Distribute Release      
+Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
 
-    An example for groups:
-
-    ```shell
+An example for groups:
+```shell
     curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" -d "{ \"id\": "$DISTRIBUTION_GROUP_ID", \"mandatory_update\": false, \"notify_testers\": false}" 
-    ```
-    You can find the distribution group ID on that group's settings page.
+```
+You can find the distribution group ID on that group's settings page.
 
 The request to distribute to multiple destinations is referenced here for more complex scenarios: [PATCH /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateRelease]
 
 ## Re-Release a build
-To release a build to another distribution group, from any place in App Center go to **Distribute** > **Releases** and then select the release you want to distribute again. The release details page opens. Select the **Distribute** button in the upper right-hand corner of the screen and select the destination to start the re-release process. Follow the steps in the wizard and finally select **Distribute** to send the release to groups/testers or the store.
+To release a build to another distribution group, from any place in App Center go to **Distribute > Releases** and then select the release you want to distribute again. The release details page opens. Select the **Distribute** button in the upper right-hand corner of the screen and select the destination to start the re-release process. Follow the steps in the wizard and finally select **Distribute** to send the release to groups/testers or the store.
 
 ## Mandatory Updates
 
