@@ -81,11 +81,11 @@ appcenter distribute release --app David/My-App --file ~/releases/my_app-23.ipa 
 ### Distributing using the API
 You can call the App Center API to distribute a release. The approach below is intended to describe a minimal working approach, many of the tasks can be further customized or automated.
 
-#### Prerequistes
+#### Prerequisites
 - The App package to upload and distribute.
 - [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
 - The Distribution Group ID
-- Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
+- Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These identifiers are used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
  
 ##### Upload New Release
 Upload a new release using these sequential API calls:
@@ -113,14 +113,13 @@ Upload a new release using these sequential API calls:
         
 2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
-   You must also determine the `MIME Type` for the `content_type` based on your app:
-    - **Android** uses vendor type `application/vnd.android.package-archive`
-    - **iOS** uses general type `application/octet-stream`
+    Determine the size of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
 
-    You also must determine the filesize of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
+    Set the `MIME Type` for the `content_type` based on your app:
+        - **Android** uses vendor type `application/vnd.android.package-archive`
+        - **iOS** uses general type `application/octet-stream`
 
     The final command should look something like this:
-    
     ```shell
     FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
     APP_TYPE=`application/vnd.android.package-archive` # Android
@@ -144,13 +143,12 @@ Upload a new release using these sequential API calls:
     }
     ```
 
-
 3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
     ```bash
         split -b $CHUNK_SIZE $APP_PACKAGE temp/split
     ```
 
-    This command generates sequential files in the `temp` directory named `splitaa`, `splitab` and so on, so that each file is within the `chunk_size` limit. 
+    This command generates sequential files in the `temp` directory named `splitaa`, `splitab`, and so on. Each file is split within the `chunk_size` limit. 
 
 4. Next you need to upload each chunk of the split app package with the respective block:
     ```shell
@@ -190,7 +188,7 @@ Upload a new release using these sequential API calls:
         
         
 ##### Distribute Release      
-Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
+Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
@@ -207,15 +205,13 @@ The request to distribute to multiple destinations is referenced here for more c
 To release a build to another distribution group, from any place in App Center go to **Distribute > Releases** and then select the release you want to distribute again. The release details page opens. Select the **Distribute** button in the upper right-hand corner of the screen and select the destination to start the re-release process. Follow the steps in the wizard and finally select **Distribute** to send the release to groups/testers or the store.
 
 ## Mandatory Updates
-
 Make a release mandatory to force all users to run the same version of your app. When you do this, App Center will install the selected update on all tester devices.
 
-You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory via the API or by selecting the **Mandatory update** checkbox in the review stage of distributing a release.
+You can only make a release mandatory if your app uses the App Center Distribute SDK. Make a release mandatory by selecting the **Mandatory update** checkbox in the review stage of distributing a release, or you can use the API.
 
-For mandatory releases, App Center displays a red dot next to the release icon in your releases table under a selected distribution group.
+You can view mandatory releases in App Center by opening **[Your App] > Distribute > Groups > Releases**. Mandatory releases are indicated by a red dot.
 
 ## Link to Releases
-
 Once you've released successfully, your testers can access the release through email, logging in to App Center, or through a direct link.
 
 You can find links to specific releases on the release page for private destinations.
