@@ -92,16 +92,16 @@ Upload a new release using these sequential API calls:
 1. Create an upload resource and get an `upload_url` (good for 24 hours):
     The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
 
-```shell
+    ```shell
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME}/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
-```
+        ```
         
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
 
-```json
+    ```json
         {
             "id": "{RELEASES_ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
@@ -109,7 +109,7 @@ Upload a new release using these sequential API calls:
             "token": "{TOKEN}",
             "url_encoded_token": "{URL_ENCODED_TOKEN}"
         }
-```
+        ```
         
 2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
@@ -121,7 +121,7 @@ Upload a new release using these sequential API calls:
 
     The final command should look something like this:
     
-```shell
+    ```shell
     FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
     APP_TYPE=`application/vnd.android.package-archive` # Android
     # APP_TYPE=`application/octet-stream`   # iOS
@@ -129,10 +129,10 @@ Upload a new release using these sequential API calls:
     $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
      curl -s -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$METADATA_URL"
-```
+     ```
     
    The output returned should look something like this:
-```json
+   ```json
     {
         "error":false,
         "id":"{UPLOAD_ID}",
@@ -142,7 +142,7 @@ Upload a new release using these sequential API calls:
         "blob_partitions":1,
         "status_code":"Success"
     }
-```
+    ```
 
 
 3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
@@ -168,7 +168,7 @@ Upload a new release using these sequential API calls:
     ```
     
 5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
-```shell
+    ```shell
         FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
         
         curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
@@ -178,7 +178,7 @@ Upload a new release using these sequential API calls:
         --data '{"upload_status": "uploadFinished","id": "$ID"}' \
         -X PATCH \
         $COMMIT_URL
-```
+        ```
         
 6. Finally, release the build. The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
         
