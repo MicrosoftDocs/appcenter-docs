@@ -84,38 +84,116 @@ Distribute your release using the `appcenter distribute release` command in the 
 appcenter distribute release --app David/My-App --file ~/releases/my_app-23.ipa --group "Beta testers"
 ```
 
-### Distributing using the APIs
-You can call the App Center API to distribute a release.
+### Distributing using the API
+You can call the App Center API to distribute a release. The approach below is intended to describe a minimal working approach, many of the tasks can be further customized or automated.
 
 #### Prerequistes
 - The App package to upload and distribute.
 - [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
 - The Distribution Group ID
-- Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Ex-User/apps/Ex-App>. Here, the `{owner_name}` is `Ex-User` and the `{app_name}` is `Ex-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Ex-Org/apps/Ex-App> and the `{owner_name}` would be `Ex-Org`.
+- Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These will be used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
  
-
-3. Upload a new release using three sequential API calls:
-    1. Create an upload resource and get an `upload_url` (good for 24 hours). This call takes two body parameters:
-        - `build_version` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files, and Windows or custom operating system .zip or .msi files. It becomes the version of your release for macOS, or the build number of your release for Windows and custom operating system apps.
-        - `build_number` is only used for certain releases. At the time of writing, these are macOS .pkg and .dmg files. It becomes the build number of your release.
-
+#### Upload New Release
+1. Upload a new release using three sequential API calls:
+    1. Create an upload resource and get an `upload_url` (good for 24 hours):
         The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
 
         ```shell
-        curl -X POST "https://api.appcenter.ms/v0.1/apps/Microsoft/APIExample/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" -H  "Content-Type: application/json" -d "{  \"build_version\": \"1.0\",  \"build_number\": \"1\"}"
+        OWNER_NAME="Example-Org"
+        APP_NAME="Example-App"
+        
+        curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME}/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
         ```
+        
+        The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
+        ```json
+        {
+            "id": "{RELEASES_ID}",
+            "package_asset_id": "{PACKAGE_ASSET_ID}",
+            "upload_domain": "https://file.appcenter.ms",
+            "token": "{TOKEN}",
+            "url_encoded_token": "{URL_ENCODED_TOKEN}"
+        }
+        ```
+        
+    2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
-    2. Copy the `upload_url` from the response in the previous step, and also save the `upload_id` for the step after this one. Upload to `upload_url` using a POST request. Use `multipart/form-data` as the Content-Type, where the `key` is always `ipa` (even when uploading other file types) and the `value` is `@/path/to/your/build.ipa`.
+    You must also determine the `MIME Type` for the `content_type` based on your app:
+        - **Android** uses vendor type `application/vnd.android.package-archive`
+        - **iOS** uses general type `application/octet-stream`
+
+    You also must determine the filesize of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
+
+    The final command should look something like this:
+    
+    ```shell
+    FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
+    APP_TYPE=`application/vnd.android.package-archive` # Android
+    # APP_TYPE=`application/octet-stream`   # iOS
+    
+    $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
+
+     curl -s -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$METADATA_URL"
+     ```
+    
+    The output returned should look something like this:
+    ```json
+    {
+        "error":false,
+        "id":"{UPLOAD_ID}",
+        "chunk_size":4194304,
+        "resume_restart":false,
+        "chunk_list":[1,2,3,4,5],
+        "blob_partitions":1,
+        "status_code":"Success"
+    }
+    ```
+
+
+    3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
+    ```bash
+        split -b $CHUNK_SIZE $APP_PACKAGE temp/split
+    ```
+
+    This command generates sequential files in the `temp` directory named `splitaa`, `splitab` and so on, so that each file is within the `chunk_size` limit. 
+
+    4. Next you need to upload each chunk of the split app package with the respective block:
 
     ```shell
-     curl -F "ipa=@Versions_1_1_0_12.ipa" https://upload.appcenter.ms/v0.1/apps/4cf3837f-c074-4014-ba6a-07550fcf588a/uploads/85cf7d9c-1a77-4197-8d1c-1a0c19dbdf60%7C4534cc89-164d-474d-8806-4c672c41dfea%7C096c735c-62cf-4280-88ef-baec5596b803%7CP3N2PTIwMTgtMDMtMjgmc3I9YyZzaT0wOTZjNzM1Yy02MmNmLTQyODAtODhlZi1iYWVjNTU5NmI4MDMyfDIwLTItMTgtMDktMDItMTAmc2lnPUF6UiUyQjNod3Q5OFpJSnJuQ2l5a3g2RFplVWdZSCUyRmdIUjN6JTJCa2ZuenJtJTJGVSUzRCZzZT0yMDIwLTAyLTIzVDA5JTNBNDUlM0ExMFomdD1kaXN0cmlidXRpb24%3D%7Cfile.appcenter.ms
-     ```
-
-    3. After the upload has finished, update the upload resource's status to `committed` and get a `release_id`. Save that for the next step.
-
+    BLOCK_NUMBER=0
+    
+    for i in temp/*
+    do
+        BLOCK_NUMBER=$(($BLOCK_NUMBER + 1))
+        CONTENT_LENGTH=(wc -c i | awk '{print $1}')
+        
+        $UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
+    
+        curl -X POST $UPLOAD_CHUNK_URL --data-binary "@$i" -H "Content-Length: $CONTENT_LENGTH" -H "Content-Type: $CONTENT_TYPE"
+    done
+    ```
+    
+    5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
+        ```shell
+        FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
+        
+        curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
+        
+        COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+        curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
+        --data '{"upload_status": "uploadFinished","id": "$ID"}' \
+        -X PATCH \
+        $COMMIT_URL
+        ```
+        
         The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
-4. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
-
+        ```shell
+        release_status_url="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+        ```
+        
+        
+        
+2. Distribute the uploaded release to testers, groups, or stores. You can't see the release in the App Center portal until you do this. The three endpoints are:
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
     - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
@@ -123,7 +201,7 @@ You can call the App Center API to distribute a release.
     An example for groups:
 
     ```shell
-    curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "id": "10d82aa2-8449-499f-b6d3-44a855058eca", "mandatory_update": false, "notify_testers": false }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/releases/2/groups'
+    curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -H "X-API-Token: $API_TOKEN" -d '{ "id": "10d82aa2-8449-499f-b6d3-44a855058eca", "mandatory_update": false, "notify_testers": false }' 'https://api.appcenter.ms/v0.1/apps/JoshuaWeber/APIExample/releases/2/groups'
     ```
 
     You can find the distribution group ID on that group's settings page.
