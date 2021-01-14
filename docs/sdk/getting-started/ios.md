@@ -30,6 +30,8 @@ dev_langs:
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
+The App Center SDK do not collect or store any user private data from your application automatically. You can find more details about data we collect [here](~/gpdr/index.md) and in a [FAQ](~/gpdr/FAQ.md) about privacy. Also in [FAQ](~/gpdr/FAQ.md) there are an answers, which you need to provide for AppStore privacy configuration.
+
 Let's get started with setting up App Center iOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to your app, look at the documentation for [App Center Distribute](~/sdk/distribute/ios.md).
 
 ## 1. Prerequisites

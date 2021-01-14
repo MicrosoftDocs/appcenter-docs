@@ -26,3 +26,22 @@ For HockeyApp and App Center SxS users, the data that HockeyApp collects can be 
 
 ### How to submit GDPR DSR (Data Subject Right) Delete and Export requests for App Center
 App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request at [https://docs.microsoft.com/appcenter/gdpr/your-data](https://docs.microsoft.com/appcenter/gdpr/your-data). 
+
+### AppStore privacy report
+Here you can found answers for a questions for AppStore privacy report. Please notice, that we do not chech what information you send us in logs and in custom exception messages. So this lines could have some senditive information. The answers, provided below is only about data which AppCenter collect itself. Assuming you not sending us any analytic and do not create a custom exceptions. 
+
+#### Data collection
+AppCenter collect only diagnostic type of data, such as Crash Data, Performance Data. We collect and store stacktraces for crash and analyutic information: count of launches and restarts.
+
+#### Data use
+We use data for "Analytics" and "Other Purposes". "Other Purposes" means collecting crash reports to improve stability of the app.
+
+#### Data linked to the user
+The data collected by AppCenter is not linked with user and do not contatin any personal information.
+
+#### Tracking
+AppCenter collects only country of the device usage based on the cellular data. This infomation is stored without link to a user and is using only for showing statistics of usages in different regions.
+
+
+
+
