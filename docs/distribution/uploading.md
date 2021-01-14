@@ -186,9 +186,9 @@ Upload a new release using these sequential API calls:
         
 ##### Distribute Release      
 Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
-    - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
+- [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
+- [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
+- [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
 
 An example for groups:
 ```shell
