@@ -4,7 +4,7 @@ description: Get started (WPF/Winforms)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/09/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.tgt_pltfrm: wpf-winforms
@@ -52,6 +52,9 @@ Once you have created an app, you can obtain its **App Secret** on the **Setting
 ## 3. Add the App Center SDK modules
 
 The App Center SDK can be integrated using Visual Studio, or the Package Manager Console.
+
+> [!NOTE]
+> App Center SDK uses [strong-named assemblies](https://docs.microsoft.com/en-us/dotnet/standard/assembly/strong-named).
 
 ### Visual Studio
 

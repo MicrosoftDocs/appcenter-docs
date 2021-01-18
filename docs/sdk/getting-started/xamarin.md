@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/10/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -73,6 +73,9 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 ## 3. Add the App Center SDK to your solution
 
 The App Center SDK can be integrated using Visual Studio or the Package Manager Console.
+
+> [!NOTE]
+> App Center SDK uses [strong-named assemblies](https://docs.microsoft.com/en-us/dotnet/standard/assembly/strong-named).
 
 ### Visual Studio for Mac
 
