@@ -4,7 +4,7 @@ description: Get started with iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/06/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
