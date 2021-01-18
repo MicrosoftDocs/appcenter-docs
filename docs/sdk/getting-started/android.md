@@ -113,6 +113,21 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 ```
 
+If you need to start App Center services separately, you can use the following methods:
+
+```java
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics.class);
+}
+```
+```kotlin
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics::class.java);
+}
+```
+
 If you have more than one entry point to your application (for example, a deep link activity, a service or a broadcast receiver), call `start` in the application custom class or in each entry point. In the latter case, check if App Center is already configured before the `start` call:
 
 ```java

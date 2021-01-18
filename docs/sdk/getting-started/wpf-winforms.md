@@ -110,6 +110,8 @@ public partial class App : Application
 }
 ```
 
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
+
 #### WinForms
 
 For your WinForms application, modify the `Program.cs` file and add the following using statements:
@@ -125,6 +127,8 @@ Then in the same file, add the following code in the `Main` method, before the `
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
 
 ### 5.2 Replace the placeholder with your App Secret

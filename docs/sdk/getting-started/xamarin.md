@@ -164,6 +164,17 @@ To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you
 AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
+If you need to start App Center services separately, you can use the following methods:
+
+```csharp
+AppCenter.Configure("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}");
+if (AppCenter.Configured)
+{
+    //Call Start without an App Secret
+    AppCenter.Start(typeof(Analytics)); 
+}
+```
+
 > [!IMPORTANT]
 > The curly braces show where to place the actual app secrets, don't put curly braces in the `Start` call.
 > 

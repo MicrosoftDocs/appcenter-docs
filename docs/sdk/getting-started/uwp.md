@@ -104,6 +104,8 @@ Add the following call to your application's **constructor**:
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
+
 ### 5.3 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
