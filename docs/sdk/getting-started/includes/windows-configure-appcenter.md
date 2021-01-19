@@ -11,13 +11,17 @@ ms.tgt_pltfrm: wpf-winforms
 dev_langs:  
  - csharp
 ---
-If you need to start App Center services separately, you can use the following methods:
+If you need to start App Center services separately, you should:
+
+1. Configure or start it with the App Secret.
+1. If the code can be called multiple times, check if the App Center is already configured.
+1. Start the required service(s) without the App Secret.
 
 ```csharp
 AppCenter.Configure("{Your App Secret}");
 if (AppCenter.Configured)
 {
-    //Call Start without an App Secret
     AppCenter.Start(typeof(Analytics)); 
+    AppCenter.Start(typeof(Crashes)); 
 }
 ```

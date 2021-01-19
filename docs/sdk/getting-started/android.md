@@ -113,18 +113,24 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 ```
 
-If you need to start App Center services separately, you can use the following methods:
+If you need to start App Center services separately, you should:
+
+1. Configure or start it with the App Secret.
+1. If the code can be called multiple times, check if the App Center is already configured.
+1. Start the required service(s) without the App Secret.
 
 ```java
 AppCenter.configure(application, "{Your App Secret}");
 if (AppCenter.isConfigured()) {
     AppCenter.start(Analytics.class);
+    AppCenter.start(Crashes.class);
 }
 ```
 ```kotlin
 AppCenter.configure(application, "{Your App Secret}");
 if (AppCenter.isConfigured()) {
     AppCenter.start(Analytics::class.java);
+    AppCenter.start(Crashes::class.java);
 }
 ```
 
