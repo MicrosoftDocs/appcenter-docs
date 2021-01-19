@@ -75,7 +75,7 @@ Once you've created an app, you can obtain its **App Secret** on the **Settings*
 The App Center SDK can be integrated using Visual Studio or the Package Manager Console.
 
 > [!NOTE]
-> App Center SDK uses [strong-named assemblies](https://docs.microsoft.com/en-us/dotnet/standard/assembly/strong-named).
+> App Center SDK uses [strong-named assemblies](https://docs.microsoft.com/en-us/dotnet/standard/assembly/strong-named) for compatibility with applications that use strong-named sign.
 
 ### Visual Studio for Mac
 
