@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Unity
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 01/08/2021
 ms.topic: article
 ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 ---
@@ -42,6 +42,34 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 7. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
 8. To check if App Center backend received the crash, go to the **Log flow** section in the Analytics service. Your crashes should appear there, once it's been sent.
 9. Make sure that the app has actually crashed and restarted: Unity catches most of the unhandled exceptions by default, meaning the app doesn't exit and it isn't considered a crash. If a crash is caught by Unity, it will be reported as "Error" by the SDK.
+
+## Android project build fails
+
+The Distribute module version 4.1.0 or later has a new manifest tag for supporting Android 11. If you’re using Unity of version prior `2019.4` you should explicitly specify the gradle version to avoid the error `AAPT: error: unexpected element <queries> found in <manifest>.`.
+To avoid problems with building your project you have to add `mainTemplate.gradle` and `launcherTemplate.gradle` (this file should be added only if you use Unity 2019.4) files to explicitly specify the gradle version. Please open **Project Settings** > **Player** > **Android tab** > **Publishing Settings** > **Build** and select **Custom Main Gradle Template** and **Custom Launcher Gradle Template**. After generating files insert the following lines at the top of the files:
+
+```groovy
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.3'
+    }
+}
+
+allprojects {
+   repositories {
+      google()
+      jcenter()
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+```
+Read more about [build for Android 11 with Unity](https://developers.google.com/ar/develop/unity/android-11-build) guideline.
 
 ## Protect the App Center secret value
 
