@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/30/2020
+ms.date: 01/20/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -16,7 +16,9 @@ Upload your application binary package to App Center to distribute it. App Cente
 
 On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API). 
 
-You can also use the [App Center Distribute Task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) in Azure DevOps.
+You can also use Azure DevOps or Jenkins: 
+- Azure DevOps uses the [App Center Distribute Task (version 3+)](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
+- [Jenkins Plugin](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
@@ -114,8 +116,8 @@ Upload a new release using these sequential API calls:
     Determine the size of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
 
     Set the `MIME Type` for the `content_type` based on your app:
-        - **Android** uses vendor type `application/vnd.android.package-archive`
-        - **iOS** uses general type `application/octet-stream`
+    - **Android** uses the vendor type `application/vnd.android.package-archive`
+    - **iOS** uses the general type `application/octet-stream`
 
     The final command should look something like this:
     ```shell
