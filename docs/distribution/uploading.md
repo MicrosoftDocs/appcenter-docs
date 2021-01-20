@@ -95,7 +95,7 @@ Upload a new release using these sequential API calls:
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         
-        curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME}/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
+        curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
     ```
         
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
