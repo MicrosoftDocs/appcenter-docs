@@ -122,8 +122,7 @@ Upload a new release using these sequential API calls:
     The final command should look something like this:
     ```shell
     FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
-    APP_TYPE=`application/vnd.android.package-archive` # Android
-    # APP_TYPE=`application/octet-stream`   # iOS
+    APP_TYPE=`application/vnd.android.package-archive` # iOS uses `application/octet-stream` instead.
     
     $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
