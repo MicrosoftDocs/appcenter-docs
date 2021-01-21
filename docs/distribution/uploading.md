@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/30/2020
+ms.date: 01/20/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -16,7 +16,9 @@ Upload your application binary package to App Center to distribute it. App Cente
 
 On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API). 
 
-You can also use the [App Center Distribute Task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) in Azure DevOps.
+You can also use Azure DevOps or Jenkins: 
+- Azure DevOps uses the [App Center Distribute Task (version 3+)](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
+- [Jenkins Plugin](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
@@ -114,14 +116,13 @@ Upload a new release using these sequential API calls:
     Determine the size of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
 
     Set the `MIME Type` for the `content_type` based on your app:
-        - **Android** uses vendor type `application/vnd.android.package-archive`
-        - **iOS** uses general type `application/octet-stream`
+    - **Android** uses the vendor type `application/vnd.android.package-archive`
+    - **iOS** uses the general type `application/octet-stream`
 
     The final command should look something like this:
     ```shell
     FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
-    APP_TYPE=`application/vnd.android.package-archive` # Android
-    # APP_TYPE=`application/octet-stream`   # iOS
+    APP_TYPE=`application/vnd.android.package-archive` # iOS uses `application/octet-stream` instead.
     
     $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
@@ -163,7 +164,7 @@ Upload a new release using these sequential API calls:
     done
     ```
     
-5. After the upload has finished, update the upload resource's status to `committed` and get a `release_id` for the next step.
+5. After the upload is done, update the upload resource's status to `uploadFinished`.
     ```shell
     FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
     curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
@@ -175,12 +176,12 @@ Upload a new release using these sequential API calls:
     $COMMIT_URL
     ```
         
-6. Finally, release the build. The endpoint to call is [PATCH /v0.1/apps/{owner_name}/{app_name}/release_uploads/{upload_id}][PATCH_updateReleaseUpload]
-        
+6. Finally, release the build. The endpoint to call is [PATCH
+/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]    
     ```shell
-        RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+    RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
         
-        curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL
+    curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL
     ```
         
         
@@ -227,7 +228,7 @@ You can find links to specific releases to public destinations on the releases t
 [POSTtesters]: https://openapi.appcenter.ms/#/distribute/releases_addTesters
 [POSTgroups]: https://openapi.appcenter.ms/#/distribute/releases_addDistributionGroup
 [POSTstores]: https://openapi.appcenter.ms/#/distribute/releases_addStore
-[PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releaseUploads_complete
+[PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releases_updateReleaseUploadStatus
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
