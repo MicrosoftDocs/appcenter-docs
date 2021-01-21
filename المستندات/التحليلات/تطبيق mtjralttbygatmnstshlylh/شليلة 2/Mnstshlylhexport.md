@@ -1,6 +1,6 @@
----
-title: App Center Export
-description: Explain Export feature
+نم- متجر التطبيقات منصة شليله
+العنوان: تصدير مركز التطبيقاتن
+الوصف: شرح ميزة التصدير
 keywords: app center, analytics, export
 author: king-of-spades
 ms.author: kegr
