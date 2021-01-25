@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/20/2021
+ms.date: 01/25/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -175,6 +175,14 @@ Upload a new release using these sequential API calls:
     -X PATCH \
     $COMMIT_URL
     ```
+
+> ![TIP]
+> Once uploaded, there is a short delay before the upload is marked as finished. You can poll for this status:
+> ```sh
+> release_status_url="https://api.appcenter.ms/v0.1/apps/$owner/$app/uploads/releases/$ID"
+> poll_result=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: > $token" $release_status_url)
+> release_id=$(echo $poll_result | jq -r '.release_distinct_id')
+> ```
         
 6. Finally, release the build. The endpoint to call is [PATCH
 /v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]    
