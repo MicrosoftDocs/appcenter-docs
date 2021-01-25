@@ -27,20 +27,19 @@ For HockeyApp and App Center SxS users, the data that HockeyApp collects can be 
 ### How to submit GDPR DSR (Data Subject Right) Delete and Export requests for App Center
 App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request at [https://docs.microsoft.com/appcenter/gdpr/your-data](https://docs.microsoft.com/appcenter/gdpr/your-data). 
 
-### AppStore privacy report
-Here you can found answers to questions for the AppStore privacy report. Please notice, that we do not check what information you send us in logs and in custom exception messages. So these lines could have some sensitive information. The answers below only apply to data that AppCenter collects itself, provided that you do not send us analytic data or custom exceptions.
+### App Store privacy report
+Here you can find answers to questions for the App Store privacy report. Please notice, that we do not filter the information you send us in logs and in custom exception messages. So these lines could have some sensitive information. The answers below only apply to data that AppCenter collects itself, provided that you do not send us analytic data or custom exceptions.
 
 #### Data collection
-AppCenter collects only diagnostic data such as crash data and performance data. We collect and store crash stack traces and analytic information: the number of starts and restarts.
+App Center collects only diagnostic data such as crash data and performance data. We collect and store crash stack traces and analytics information: the number of app starts and restarts.
 
 #### Data use
 We use data for "Analytics" and "Other Purposes". "Other Purposes" means collecting crash reports to improve the stability of the app.
 
 #### Data linked to the user
-The data collected by AppCenter is not linked with a user and does not contain any personal information.
+The data collected by App Center is not linked with a user and does not contain any personal information.
 
 #### Tracking
-AppCenter only collects information about the country of use of the device based on cellular data. This information is stored without reference to the user and is only used to display usage statistics in different regions.
-
+App Center only collects information about the country of use of the device based on cellular data. This information is stored without reference to the user and is only used to display usage statistics in different regions.
 
 
