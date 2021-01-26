@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/18/2021
+ms.date: 01/26/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android

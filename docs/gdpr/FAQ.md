@@ -4,7 +4,7 @@ description: Answer frequently asked customer questions
 keywords: app center, gdpr, faq
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/08/2020
+ms.date: 01/26/2021
 ms.topic: article
 ms.assetid: d2e8613c-afb1-423f-9bdf-949524ef426e
 ms.service: vs-appcenter
