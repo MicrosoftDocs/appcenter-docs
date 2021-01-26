@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/18/2021
+ms.date: 01/26/2021
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -42,7 +42,7 @@ The App Center SDK for Xamarin supports the following platforms:
 
 * Xamarin.Android
 * Xamarin.iOS
-* Xamarin.Forms (iOS, Android, and UWP)
+* Xamarin.Forms (iOS, Android, UWP and Windows Desktop applications)
 
 ### 1.1 About Xamarin.Android
 
@@ -52,11 +52,13 @@ Choose this option if you target only Android platform. You need to create one a
 
 Choose this option if you target only iOS platform. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-### 1.3 About Xamarin.Forms (iOS, Android, and UWP)
+### 1.3 About Xamarin.Forms (iOS, Android, UWP and Windows Desktop)
 
-Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in App Center – one for each OS.
+Choose this option if you want to create a cross platform app for iOS, Android, UWP and Windows Desktop devices. You need to create 4 apps in App Center – one for each OS.
 
 You need to select **Xamarin** as the platform for Android and iOS applications (UWP doesn't have a Xamarin option).
+
+For the **Windows Desktop** applications you have to configure your project for compatibility with the **Xamarin** platform. 
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -161,7 +163,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open the project's **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
 
 ```csharp
-AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
+AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 If you need to start App Center services separately, you should:
@@ -171,7 +173,7 @@ If you need to start App Center services separately, you should:
 1. Start the required service(s) without the App Secret.
 
 ```csharp
-AppCenter.Configure("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}");
+AppCenter.Configure("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}");
 if (AppCenter.Configured)
 {
     AppCenter.Start(typeof(Analytics));
@@ -239,7 +241,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics));
 #### 4.3.2 Xamarin.Forms
 
 ```csharp
-AppCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
+AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics));
 ```
 
 ---
@@ -251,4 +253,4 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md)
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
 
 > [!NOTE]
-> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** platform and are doing nothing when running on your **UWP** application. In particular UWP doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on a UWP application.
+> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** and **Windows Desktop** platforms and are doing nothing when running on your **UWP** and **Windows Desktop** applications. In particular UWP and Windows Desktop doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on UWP and Windows Desktop application.
