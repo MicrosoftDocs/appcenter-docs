@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/22/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -111,6 +111,27 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 ```
 ```kotlin
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
+
+If you need to start App Center services separately, you should:
+
+1. Configure or start it with the App Secret.
+1. If the code can be called multiple times, check if the App Center is already configured.
+1. Start the required service(s) without the App Secret.
+
+```java
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics.class);
+    AppCenter.start(Crashes.class);
+}
+```
+```kotlin
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics::class.java);
+    AppCenter.start(Crashes::class.java);
+}
 ```
 
 If you have more than one entry point to your application (for example, a deep link activity, a service or a broadcast receiver), call `start` in the application custom class or in each entry point. In the latter case, check if App Center is already configured before the `start` call:

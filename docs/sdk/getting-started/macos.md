@@ -4,7 +4,7 @@ description: Get started with macOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/26/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: macos
@@ -166,6 +166,8 @@ If you have a Catalyst application, you can pass app secrets for both iOS and ma
 ```swift
 AppCenter.start(withAppSecret:"ios={Your iOS App Secret};macos={Your macOS App Secret}", services: [Analytics.self, Crashes.self])
 ```
+
+[!INCLUDE [apple-configure-appcenter](includes/apple-configure-appcenter.md)]
 
 ### 4.3 Replace the placeholder with your App Secret
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.

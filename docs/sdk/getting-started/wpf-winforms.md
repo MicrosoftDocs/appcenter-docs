@@ -4,7 +4,7 @@ description: Get started (WPF/Winforms)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/09/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.tgt_pltfrm: wpf-winforms
@@ -110,6 +110,8 @@ public partial class App : Application
 }
 ```
 
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
+
 #### WinForms
 
 For your WinForms application, modify the `Program.cs` file and add the following using statements:
@@ -125,6 +127,8 @@ Then in the same file, add the following code in the `Main` method, before the `
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
 
 ### 5.2 Replace the placeholder with your App Secret
