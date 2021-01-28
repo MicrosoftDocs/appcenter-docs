@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/20/2021
+ms.date: 01/25/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -83,10 +83,12 @@ appcenter distribute release --app David/My-App --file ~/releases/my_app-23.ipa 
 ### Distributing using the API
 You can call the App Center API to distribute a release. The approach below is intended to describe a minimal working approach, many of the tasks can be further customized or automated.
 
+A sample implementation can be seen here: https://github.com/microsoft/appcenter-Xamarin.UITest-Demo/blob/main/ac-distribute.sh
+
 #### Prerequisites
 - The App package to upload and distribute.
 - [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
-- The Distribution Group ID
+- The Distribution Group Name (optional, if missing or invalid the upload will still complete) 
 - Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These identifiers are used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
  
 ##### Upload New Release
@@ -175,6 +177,14 @@ Upload a new release using these sequential API calls:
     -X PATCH \
     $COMMIT_URL
     ```
+
+> [!TIP]
+> Once uploaded, there is a short delay before the upload is marked as finished. You can poll for this status:
+> ```sh
+> release_status_url="https://api.appcenter.ms/v0.1/apps/$owner/$app/uploads/releases/$ID"
+> poll_result=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: > $token" $release_status_url)
+> release_id=$(echo $poll_result | jq -r '.release_distinct_id')
+> ```
         
 6. Finally, release the build. The endpoint to call is [PATCH
 /v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]    
