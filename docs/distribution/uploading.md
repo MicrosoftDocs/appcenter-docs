@@ -88,7 +88,7 @@ A sample implementation can be seen here: https://github.com/microsoft/appcenter
 #### Prerequisites
 - The App package to upload and distribute.
 - [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
-- The Distribution Group Name (optional, if the value is invalid you can still upload). 
+- The Distribution Group Name (optional, if missing or invalid the upload will still complete) 
 - Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These identifiers are used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
  
 ##### Upload New Release
