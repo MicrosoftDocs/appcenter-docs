@@ -28,7 +28,7 @@ For HockeyApp and App Center SxS users, the data that HockeyApp collects can be 
 App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request at [https://docs.microsoft.com/appcenter/gdpr/your-data](https://docs.microsoft.com/appcenter/gdpr/your-data). 
 
 ### App Store privacy report
-Here you can find answers to questions for the App Store privacy report. Please notice, that we do not filter the information you send us in logs and in custom exception messages. So these lines could have some sensitive information. The answers below only apply to data that AppCenter collects itself, provided that you do not send us analytic data or custom exceptions.
+Here you can find answers to questions for the App Store privacy report. Please notice, that we do not filter the information you send us in the logs and custom exception messages. So if you are sending some personal data or user ids in analytic events, you should mention it in a privacy report. The answers below only apply to data that App Center collects itself, provided that you do not send us analytics events or custom exceptions.
 
 #### Data collection
 App Center collects only diagnostic data such as crash data and performance data. We collect and store crash stack traces and analytics information: the number of app starts and restarts.
