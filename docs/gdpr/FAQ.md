@@ -4,7 +4,7 @@ description: Answer frequently asked customer questions
 keywords: app center, gdpr, faq
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/08/2020
+ms.date: 01/26/2021
 ms.topic: article
 ms.assetid: d2e8613c-afb1-423f-9bdf-949524ef426e
 ms.service: vs-appcenter
@@ -26,3 +26,20 @@ For HockeyApp and App Center SxS users, the data that HockeyApp collects can be 
 
 ### How to submit GDPR DSR (Data Subject Right) Delete and Export requests for App Center
 App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request at [https://docs.microsoft.com/appcenter/gdpr/your-data](https://docs.microsoft.com/appcenter/gdpr/your-data). 
+
+### App Store privacy report
+Here you can find answers to questions for the App Store privacy report. Please notice, that we do not filter the information you send us in the logs and custom exception messages. So if you are sending some personal data or user ids in analytic events, you should mention it in a privacy report. The answers below only apply to data that App Center collects itself, provided that you do not send us analytics events or custom exceptions.
+
+#### Data collection
+App Center collects only diagnostic data such as crash data and performance data. We collect and store crash stack traces and analytics information: the number of app starts and restarts.
+
+#### Data use
+We use data for "Analytics" and "Other Purposes". "Other Purposes" means collecting crash reports to improve the stability of the app.
+
+#### Data linked to the user
+The data collected by App Center is not linked with a user and does not contain any personal information.
+
+#### Tracking
+App Center only collects information about the country of use of the device based on cellular data (for all platforms except Windows). This information is stored without reference to the user and is only used to display usage statistics in different regions. For Windows, App Center does not collect any geo location tracking by default.
+
+
