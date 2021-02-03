@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 1/12/2021
+ms.date: 2/3/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ ms.custom: test
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
-Model | OS
+Model | OS 
 -- | --
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
@@ -166,11 +166,15 @@ OnePlus 6 | 9
 OnePlus 6T | 10
 OnePlus 6T | 9
 OnePlus 7 | 10
+OnePlus 7 | 11
 OnePlus 7 | 9
 OnePlus 7 Pro | 10
+OnePlus 7 Pro | 11
 OnePlus 7 Pro | 9
 OnePlus 7T | 10
+OnePlus 7T | 11
 OnePlus 7T Pro | 10
+OnePlus 7T Pro | 11
 OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
@@ -211,9 +215,12 @@ Samsung Galaxy M20 | 8.1.0
 Samsung Galaxy M30 | 10
 Samsung Galaxy M30 | 9
 Samsung Galaxy Note 10 | 10
+Samsung Galaxy Note 10 | 11
 Samsung Galaxy Note 10 | 9
 Samsung Galaxy Note 10 Lite | 10
+Samsung Galaxy Note 10 Lite | 11
 Samsung Galaxy Note 10+ | 10
+Samsung Galaxy Note 10+ | 11
 Samsung Galaxy Note 10+ | 9
 Samsung Galaxy Note 20 | 10
 Samsung Galaxy Note 20 | 11
@@ -247,6 +254,9 @@ Samsung Galaxy S20 Plus | 10
 Samsung Galaxy S20 Plus | 11
 Samsung Galaxy S20 Ultra | 10
 Samsung Galaxy S20 Ultra | 11
+Samsung Galaxy S21 | 11
+Samsung Galaxy S21 Plus | 11
+Samsung Galaxy S21 Ultra | 11
 Samsung Galaxy S4 | 5.0.1
 Samsung Galaxy S4 Active | 5.0.1
 Samsung Galaxy S5 | 5.0
@@ -296,7 +306,9 @@ Samsung Galaxy Tab S6 | 10
 Samsung Galaxy Tab S6 | 9
 Samsung Galaxy Tab S6 Lite | 10
 Samsung Galaxy Tab S7 | 10
+Samsung Galaxy Tab S7 | 11
 Samsung Galaxy Tab S7 Plus | 10
+Samsung Galaxy Tab S7 Plus | 11
 Samsung Galaxy XCover Pro | 10
 Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4 | 9
@@ -331,4 +343,5 @@ Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
 Xiaomi Mi A3 | 10
+Xiaomi Mi A3 | 11
 Xiaomi Mi A3 | 9
