@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/25/2021
+ms.date: 02/03/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -95,7 +95,7 @@ A sample implementation can be seen here: https://github.com/microsoft/appcenter
 Upload a new release using these sequential API calls:
 1. Create an upload resource and get an `upload_url` (good for 24 hours):
     The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
-    ```shell
+    ```sh
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         
@@ -145,14 +145,14 @@ Upload a new release using these sequential API calls:
     ```
 
 3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
-    ```shell
+    ```sh
     split -b $CHUNK_SIZE $APP_PACKAGE temp/split
     ```
 
     This command generates sequential files in the `temp` directory named `splitaa`, `splitab`, and so on. Each file is split within the `chunk_size` limit. 
 
 4. Next you need to upload each chunk of the split app package with the respective block:
-    ```shell
+    ```sh
     BLOCK_NUMBER=0
     
     for i in temp/*
@@ -167,7 +167,7 @@ Upload a new release using these sequential API calls:
     ```
     
 5. After the upload is done, update the upload resource's status to `uploadFinished`.
-    ```shell
+    ```sh
     FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
     curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
         
@@ -178,22 +178,29 @@ Upload a new release using these sequential API calls:
     $COMMIT_URL
     ```
 
-> [!TIP]
-> Once uploaded, there is a short delay before the upload is marked as finished. You can poll for this status:
-> ```sh
-> release_status_url="https://api.appcenter.ms/v0.1/apps/$owner/$app/uploads/releases/$ID"
-> poll_result=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: > $token" $release_status_url)
-> release_id=$(echo $poll_result | jq -r '.release_distinct_id')
-> ```
+6. Once uploaded, there is a short delay before the upload is marked as finished. Poll for this status to get the `$RELEASE_ID` for the next step:
+     ```sh
+     RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$ID"
+     POLL_RESULT=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL)
+     RELEASE_ID=$(echo $POLL_RESULT | jq -r '.release_distinct_id')
+
+     if [[ $RELEASE_ID == null ]];
+     then
+        echo "Failed to find release from appcenter"
+        exit 1
+     fi
+     ```
         
-6. Finally, release the build. The endpoint to call is [PATCH
-/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]    
-    ```shell
-    RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+7. Finally, release the build. The endpoint to call is [PATCH
+/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]   
+    ```sh
+    DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$RELEASE_ID"
         
-    curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL
+    curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
+    --data '{"destinations": [{ "name": "'"$DISTRIBUTION_GROUP"'"}] }' \    
+    -X PATCH \
+    $DISTRIBUTE_URL
     ```
-        
         
 ##### Distribute Release      
 Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
@@ -202,7 +209,7 @@ Distribute the uploaded release to testers, groups, or stores to see the release
 - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores][POSTstores]
 
 An example for groups:
-```shell
+```sh
     curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" -d "{ \"id\": "$DISTRIBUTION_GROUP_ID", \"mandatory_update\": false, \"notify_testers\": false}" 
 ```
 You can find the distribution group ID on that group's settings page.
