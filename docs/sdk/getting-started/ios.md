@@ -4,7 +4,7 @@ description: Get started with iOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/26/2021
+ms.date: 02/09/2021
 ms.topic: article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900
 ms.tgt_pltfrm: ios
@@ -31,7 +31,7 @@ dev_langs:
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
 
-You can find information about data collected by App Center [here](~/sdk/data-collected.md), [here](~/gdpr/index.md) and in a [FAQ](~/gdpr/FAQ.md) about privacy. Also in [FAQ](~/gdpr/FAQ.md) there are answers, which you need to provide for App Store privacy configuration.
+You can find information about data collected by App Center on [Data Collected by App Center SDKs](~/sdk/data-collected.md), [General Data Protection Regulation](~/gdpr/index.md), and [FAQ](~/gdpr/FAQ.md#app-store-privacy-report) pages. Also, [FAQ](~/gdpr/FAQ.md#app-store-privacy-report) contains the answers, which you need to provide for App Store privacy configuration.
 
 Let's get started with setting up App Center iOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to your app, look at the documentation for [App Center Distribute](~/sdk/distribute/ios.md).
 

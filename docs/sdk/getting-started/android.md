@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/26/2021
+ms.date: 02/09/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -31,7 +31,7 @@ dev_langs:
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-You can find information about data collected by App Center [here](~/sdk/data-collected.md), [here](~/gdpr/index.md) and in a [FAQ](~/gdpr/FAQ.md) about privacy.
+You can find information about data collected by App Center on [Data Collected by App Center SDKs](~/sdk/data-collected.md), [General Data Protection Regulation](~/gdpr/index.md), and [FAQ](~/gdpr/FAQ.md#app-store-privacy-report) pages.
 
 Let's get started with setting up App Center Android SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, have a look at the [documentation for App Center Distribute](~/sdk/distribute/android.md).
 
