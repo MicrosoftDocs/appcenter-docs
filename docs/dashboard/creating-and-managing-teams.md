@@ -28,6 +28,9 @@ Any collaborator can create teams within an organization. Organizations can have
 ## Adding users to a team
 
 The team creator or any organization admin can invite other collaborators to a team. A user must be invited (and have accepted the invitation) to the organization before they can join a team. 
+
+> [!NOTE]
+> Invites are acceptable for 30 days. It is possible to send a new invite if the previous one was not accepted.
  
 ## Removing users from a team
 
