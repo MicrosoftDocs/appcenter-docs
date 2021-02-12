@@ -4,7 +4,7 @@ description: Distribute mobile apps to groups of users
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/04/2019
+ms.date: 02/11/2021
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640
 ms.service: vs-appcenter
@@ -51,7 +51,7 @@ To add apps to your new shared distribution group, select the **Apps** tab and e
 Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users.
 
 > [!NOTE]
-> Invites are acceptable for 30 days. It is possible to send a new invite if the previous one was not accepted.
+> Invites are active for 30 days. You can send a new invite if the previous one wasn't accepted.
 
 If your organization is connected to Azure Active Directory, you can also [add Azure AD security groups](#adding-azure-active-directory-aad-security-groups-to-a-distribution-group) to your distribution group.
 
