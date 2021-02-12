@@ -4,7 +4,7 @@ description: Using the dashboard to create and access teams in App Center.
 keywords: dashboard teams
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/13/2019
+ms.date: 02/11/2021
 ms.topic: article
 ms.assetid: 041D1B07-64DA-4B90-A2A9-430023632AD6
 ms.service: vs-appcenter
@@ -27,10 +27,10 @@ Any collaborator can create teams within an organization. Organizations can have
 
 ## Adding users to a team
 
-The team creator or any organization admin can invite other collaborators to a team. A user must be invited (and have accepted the invitation) to the organization before they can join a team. 
+The team creator or any organization admin can invite other collaborators to a team. Users must join the organization before they can join a team. 
 
 > [!NOTE]
-> Invites are acceptable for 30 days. It is possible to send a new invite if the previous one was not accepted.
+> Invites are active for 30 days. You can send a new invite if the previous one wasn't accepted.
  
 ## Removing users from a team
 
