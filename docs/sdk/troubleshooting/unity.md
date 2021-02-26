@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Unity
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 01/08/2021
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 ---
@@ -52,7 +52,7 @@ To avoid problems with building your project you have to add `mainTemplate.gradl
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.3'
@@ -62,7 +62,7 @@ buildscript {
 allprojects {
    repositories {
       google()
-      jcenter()
+      mavenCenter()
       flatDir {
         dirs 'libs'
       }

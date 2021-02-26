@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/09/2021
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -68,6 +68,9 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+
+  > [!NOTE]
+  Due to [shutting down supporting of jCenter](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision move our assemblies to the maven repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 

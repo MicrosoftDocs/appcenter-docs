@@ -4,7 +4,7 @@ description: Using Push in App Center (Android)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
-ms.date: 09/15/2020
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: 45ba2c1e-55ad-4261-8f59-61e0b8f7edbc
 ms.tgt_pltfrm: android
@@ -50,9 +50,9 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     buildscript {
         repositories {
-            // Add google line if missing before jcenter
+            // Add google line if missing before mavenCenter
             google()
-            jcenter()
+            mavenCenter()
         }
 
         dependencies {
@@ -63,9 +63,9 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     allprojects {
         repositories {
-            // Add google line if missing before jcenter
+            // Add google line if missing before mavenCenter
             google()
-            jcenter()
+            mavenCenter()
         }
     }
     ```
