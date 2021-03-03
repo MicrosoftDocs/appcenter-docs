@@ -30,8 +30,8 @@ You build the `.app` file from the terminal like below:
   -project ProjectFile.xcodeproj \
   -configuration ConfiguratonWithCalabashLinked \
   -sdk iphonesimulator \
-  ARCHS="i386 x86_64" \
-  VALID_ARCHS="i386 x86_64" \
+  ARCHS="x86_64" \
+  VALID_ARCHS="x86_64" \
   ONLY_ACTIVE_ARCH=NO \
   -scheme SchemeWithCalabashLinked \
   -derivedDataPath DerivedData \
