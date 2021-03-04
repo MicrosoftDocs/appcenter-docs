@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/22/2020
+ms.date: 03/04/2021
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -78,7 +78,7 @@ import com.microsoft.appcenter.distribute.Distribute
 
 ## Remove in-app updates for Google Play builds
 
-Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
+Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Please use a variant of the Distribute SDK as directed in this section or completely remove the Distribute SDK that contains in-app update code before submitting your app to Google Play. Failure to do so  can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
 1. Open the project's app level **build.gradle** file (`app/build.gradle`).
 2. Configure build variants by adding product flavors:
