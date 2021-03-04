@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 2/3/2021
+ms.date: 3/4/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -19,7 +19,7 @@ ms.custom: test
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
-Model | OS 
+Model | OS
 -- | --
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
@@ -190,6 +190,7 @@ Samsung Galaxy A5 | 5.0.2
 Samsung Galaxy A50 | 10
 Samsung Galaxy A50 | 9
 Samsung Galaxy A51 | 10
+Samsung Galaxy A51 | 11
 Samsung Galaxy A6+ | 10
 Samsung Galaxy A6+ | 8.0.0
 Samsung Galaxy A7 (2018) | 10
@@ -310,20 +311,25 @@ Samsung Galaxy Tab S7 | 11
 Samsung Galaxy Tab S7 Plus | 10
 Samsung Galaxy Tab S7 Plus | 11
 Samsung Galaxy XCover Pro | 10
+Samsung Galaxy XCover Pro | 11
 Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4 | 9
 Samsung Galaxy Xcover 4s | 10
 Samsung Galaxy Xcover 4s | 9
 Sony Xperia 1 | 10
+Sony Xperia 1 | 11
 Sony Xperia 1 | 9
 Sony Xperia 10 | 10
 Sony Xperia 10 | 9
 Sony Xperia 10 II | 10
+Sony Xperia 10 II | 11
 Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10
+Sony Xperia 5 | 11
 Sony Xperia 5 | 9
 Sony Xperia 5 II | 10
+Sony Xperia 5 II | 11
 Sony Xperia XZ | 6.0.1
 Sony Xperia XZ | 8.0.0
 Sony Xperia XZ2 | 10
