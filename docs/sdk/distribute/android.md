@@ -76,7 +76,7 @@ import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
 
-## Remove in-app updates for Google Play builds
+## Prepare your Google Play build
 
 Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Use a variant of the Distribute SDK as directed in this section or completely remove the Distribute SDK that contains in-app update code before submitting your app to Google Play. Failure to do so can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
