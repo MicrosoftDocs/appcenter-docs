@@ -4,7 +4,7 @@ description: App Center Crashes for UWP
 keywords: sdk, crash
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/05/2020
+ms.date: 03/05/2020
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.custom: sdk
@@ -59,9 +59,6 @@ Add or edit the following call to your application's **constructor** to include 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Crashes));
 ```
-
-> [!IMPORTANT]
-> UWP only supports starting Crashes with `AppCenter.Start` and none of the other API calls provided by the `Crashes` class are supported on UWP, They only work for Xamarin.iOS, Xamarin.Android and Xamarin.Forms apps deployed to iOS and Android.
 
 ## Generate a test crash
 
