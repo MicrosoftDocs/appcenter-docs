@@ -103,8 +103,8 @@ The numbers below can vary and depend on your build settings, so consider them a
 [!INCLUDE [app secret secure](../includes/app-secret-secure.md)]
 
 ## Migration from jCenter to Maven
-Due to [shutting down supporting of jCenter](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision move our assemblies to the Maven repository. 
-For using App Center you have to add `mavenCenter()` to the repository in your Gradle file like below:
+Due to [shutting down support of jCenter](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision to move our assemblies to the Maven repository. 
+To use App Center, you need to add `mavenCenter()` to the repository in your Gradle file like below:
 
    ```groovy
    repositories {
