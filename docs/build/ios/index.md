@@ -49,10 +49,13 @@ By default, a new build is triggered every time a developer pushes to a configur
 ### 3.4. Increment build number
 When enabled, the `CFBundleVersion` in the `Info.plist` of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
+> [!NOTE]
+> To make the Increment build number work, please named the `.plist file` as `*Info.plist` such as `Production-Info.plist`.
+
 ### 3.5. Tests
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests.
 
-### 3.6. Code signing
+### 3.6. Code signing`
 Building an iOS app for real devices requires signing it with valid credentials. To sign builds in App Center, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision`) and a valid certificate (`.p12`)](~/build/ios/code-signing.md), along with the password for the certificate. 
 
 The settings in your Xcode project must be compatible with the files you're uploading. You can read more about code signing in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
