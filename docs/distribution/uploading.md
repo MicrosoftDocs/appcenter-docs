@@ -158,9 +158,9 @@ Upload a new release using these sequential API calls:
     for i in temp/*
     do
         BLOCK_NUMBER=$(($BLOCK_NUMBER + 1))
-        CONTENT_LENGTH=$(wc -c i | awk '{print $1}')
+        CONTENT_LENGTH=$(wc -c "$i" | awk '{print $1}')
         
-        $UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
+        UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
     
         curl -X POST $UPLOAD_CHUNK_URL --data-binary "@$i" -H "Content-Length: $CONTENT_LENGTH" -H "Content-Type: $CONTENT_TYPE"
     done
