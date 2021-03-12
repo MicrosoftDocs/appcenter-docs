@@ -4,7 +4,7 @@ description: How to add Firebase SDK (Android)
 keywords: sdk, push
 author: king-of-spades
 ms.author: kegr
-ms.date: 08/28/2018
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: cdd0a651-29b6-4fb2-8fc5-4a25b54eb2ca
 ms.tgt_pltfrm: android
@@ -23,9 +23,9 @@ ms.tgt_pltfrm: android
     ```groovy
     buildscript {
         repositories {
-            // Add google line if missing before jcenter
+            // Add google line if missing before mavenCentral
             google()
-            jcenter()
+            mavenCentral()
         }
 
         dependencies {
@@ -36,9 +36,9 @@ ms.tgt_pltfrm: android
 
     allprojects {
         repositories {
-            // Add google line if missing before jcenter
+            // Add google line if missing before mavenCentral
             google()
-            jcenter()
+            mavenCentral()
         }
     }
     ```

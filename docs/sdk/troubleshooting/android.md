@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Android
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1
 dev_langs:
@@ -101,3 +101,15 @@ The numbers below can vary and depend on your build settings, so consider them a
 ## Protect the App Center secret value
 
 [!INCLUDE [app secret secure](../includes/app-secret-secure.md)]
+
+## Migration from jCenter to Maven Central
+
+Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. 
+To use App Center, you need to add `mavenCentral()` to the repository in your Gradle file like below:
+
+   ```groovy
+   repositories {
+      google()
+      mavenCentral()
+   }
+   ```

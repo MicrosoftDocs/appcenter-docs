@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/04/2020
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc
 ms.tgt_pltfrm: react-native
@@ -201,6 +201,18 @@ If you've already integrated our SDK into your application and want to upgrade t
 > - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Analytics (1.0.0)`
 > - `AppCenter/Core (= 1.0.1)` required by `AppCenterReactNativeShared (1.0.1)`
 > ```
+
+## Migration from jCenter to Maven Central
+
+Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. 
+To use App Center, you need to add `mavenCentral()` to the repository in your Gradle file like below:
+
+   ```groovy
+   repositories {
+      google()
+      mavenCentral()
+   }
+   ```
 
 ## Protect the App Center secret value
 

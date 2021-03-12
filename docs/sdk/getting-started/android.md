@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 02/09/2021
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -68,6 +68,10 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+
+  > [!NOTE]
+  > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
+  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
