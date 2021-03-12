@@ -202,9 +202,9 @@ If you've already integrated our SDK into your application and want to upgrade t
 > - `AppCenter/Core (= 1.0.1)` required by `AppCenterReactNativeShared (1.0.1)`
 > ```
 
-## Migration from jCenter to Maven
+## Migration from jCenter to Maven Central
 
-Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision to move our assemblies to the Maven repository. 
+Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision to move our assemblies to the Maven Central repository. 
 To use App Center, you need to add `mavenCentral()` to the repository in your Gradle file like below:
 
    ```groovy
