@@ -71,7 +71,7 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
-  > Please note that Maven Central doesn't contain deprecated modules. If you still use deprecated modules then we recommend that you stop using them. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
+  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
