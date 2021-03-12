@@ -23,9 +23,9 @@ ms.tgt_pltfrm: android
     ```groovy
     buildscript {
         repositories {
-            // Add google line if missing before mavenCenter
+            // Add google line if missing before mavenCentral
             google()
-            mavenCenter()
+            mavenCentral()
         }
 
         dependencies {
@@ -36,9 +36,9 @@ ms.tgt_pltfrm: android
 
     allprojects {
         repositories {
-            // Add google line if missing before mavenCenter
+            // Add google line if missing before mavenCentral
             google()
-            mavenCenter()
+            mavenCentral()
         }
     }
     ```

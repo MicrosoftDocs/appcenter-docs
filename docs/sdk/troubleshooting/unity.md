@@ -52,7 +52,7 @@ To avoid problems with building your project you have to add `mainTemplate.gradl
 buildscript {
     repositories {
         google()
-        mavenCenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.3'
@@ -62,7 +62,7 @@ buildscript {
 allprojects {
    repositories {
       google()
-      mavenCenter()
+      mavenCentral()
       flatDir {
         dirs 'libs'
       }

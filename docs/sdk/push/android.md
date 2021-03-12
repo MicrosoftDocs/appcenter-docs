@@ -50,9 +50,9 @@ The App Center SDK is designed with a modular approach – a developer only need
     ```groovy
     buildscript {
         repositories {
-            // Add google line if missing before mavenCenter
+            // Add google line if missing before mavenCentral
             google()
-            mavenCenter()
+            mavenCentral()
         }
 
         dependencies {
@@ -63,9 +63,9 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     allprojects {
         repositories {
-            // Add google line if missing before mavenCenter
+            // Add google line if missing before mavenCentral
             google()
-            mavenCenter()
+            mavenCentral()
         }
     }
     ```
