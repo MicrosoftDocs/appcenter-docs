@@ -70,7 +70,7 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
 
   > [!NOTE]
-  > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we're moving our assemblies to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
+  > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
   > Please note that we didn't move deprecated modules. If you still use deprecated modules then we recommend that you stop using them. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
 
 2. Make sure to trigger a Gradle sync in Android Studio.

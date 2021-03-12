@@ -298,7 +298,7 @@ Integration steps without the `react-native link` command.
       ```
 
 > [!NOTE]
-> Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we're moving our assemblies to the Maven Central repository. Please follow [this guide](../troubleshooting/react-native.md) about migration from jCenter to Maven Central.
+> Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/react-native.md) about migration from jCenter to Maven Central.
 
 2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and add the following lines into `dependencies` section:
 

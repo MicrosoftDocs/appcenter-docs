@@ -104,7 +104,7 @@ The numbers below can vary and depend on your build settings, so consider them a
 
 ## Migration from jCenter to Maven Central
 
-Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) we have made a decision to move our assemblies to the Maven Central repository. 
+Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. 
 To use App Center, you need to add `mavenCentral()` to the repository in your Gradle file like below:
 
    ```groovy
