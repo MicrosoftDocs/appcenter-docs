@@ -4,7 +4,7 @@ description: Get Started with React Native
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 11/24/2020
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392
 ms.tgt_pltfrm: react-native
@@ -296,6 +296,9 @@ Integration steps without the `react-native link` command.
       include ':appcenter'
       project(':appcenter').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter/android')
       ```
+
+> [!NOTE]
+> Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/react-native.md) about migration from jCenter to Maven Central.
 
 2. Open the project's app level **build.gradle** file (`android/app/build.gradle`) and add the following lines into `dependencies` section:
 

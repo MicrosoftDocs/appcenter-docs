@@ -123,10 +123,10 @@ Upload a new release using these sequential API calls:
 
     The final command should look something like this:
     ```shell
-    FILE_SIZE_BYTES=(wc -c "ExampleApp.apk" | awk '{print $1}')
-    APP_TYPE=`application/vnd.android.package-archive` # iOS uses `application/octet-stream` instead.
+    FILE_SIZE_BYTES=$(wc -c "ExampleApp.apk" | awk '{print $1}')
+    APP_TYPE='application/vnd.android.package-archive' # iOS uses `application/octet-stream` instead.
     
-    $METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
+    METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
      curl -s -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$METADATA_URL"
      ```
@@ -158,9 +158,9 @@ Upload a new release using these sequential API calls:
     for i in temp/*
     do
         BLOCK_NUMBER=$(($BLOCK_NUMBER + 1))
-        CONTENT_LENGTH=(wc -c i | awk '{print $1}')
+        CONTENT_LENGTH=$(wc -c "$i" | awk '{print $1}')
         
-        $UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
+        UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
     
         curl -X POST $UPLOAD_CHUNK_URL --data-binary "@$i" -H "Content-Length: $CONTENT_LENGTH" -H "Content-Type: $CONTENT_TYPE"
     done
