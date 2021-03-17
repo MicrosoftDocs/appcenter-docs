@@ -4,7 +4,7 @@ description: Guide on testing
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 03/15/2021
+ms.date: 03/17/2021
 ms.topic: article
 ms.assetid: 43e7ae62-16b2-4c1e-8798-fafcd5040ba3
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ After getting invited to test an Android Application in App Center you'll receiv
 
 ## Installing an app via Install Portal
 
-Installing an app on your Android device is done primarily from the App Center install portal or our native app, which is explained in the next section. Installing your apps can be done in two different ways depending on the developer's preference:
+Installing an app on your Android device is done primarily from the App Center install portal. Installing your apps can be done in two different ways depending on the developer's preference:
 
 1. You'll receive an email from App Center that directs you to the release in the App Center. You can also elect to go directly to the [App Center Install Portal](https://install.appcenter.ms) at any point to see apps you've been added to and their releases.
 
@@ -56,7 +56,7 @@ When you click on an app, App Center displays additional information about the a
 
 Clicking this button starts the application install, which results in the app being placed onto your home screen.
 
-Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps)  and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
+Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps) and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
 
 ## Troubleshooting
 
