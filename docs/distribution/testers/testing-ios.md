@@ -4,7 +4,7 @@ description: How to test iOS Apps in App Center
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 06/08/2020
+ms.date: 03/14/2021
 ms.topic: article
 ms.assetid: a4101ef9-3272-49fc-96e5-a8b9ac5a15d6
 ms.service: vs-appcenter
@@ -23,7 +23,7 @@ Adding your device consists of the following steps:
 1. Navigate to the App Center install portal device menu on the device you're attempting to add. This can be done through either of the following methods:
 
     * Click the add device button located in the email you received when a release was distributed.
-    * Click the profile icon in the upper-left corner of the App Center portal.
+    * Click the profile icon in the upper-right corner of the App Center portal.
 
     ![Adding a Device](images/I-add-device.png)
 
