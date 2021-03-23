@@ -2,8 +2,8 @@
 title: App Center Errors
 description: Errors in App Center
 keywords: app center, errors, exceptions, handled
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: C0320343-CCA1-4C2B-91D6-DF88608E8446

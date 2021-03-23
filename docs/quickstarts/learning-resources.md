@@ -2,8 +2,8 @@
 title: App Center Learning Resources
 description: Links to additional resources related to App Center
 keywords: app center
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 09/02/2020
 ms.topic: article
 ms.assetid: aefc34a7-9e33-4f96-a91c-a508763aee35

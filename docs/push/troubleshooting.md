@@ -2,8 +2,8 @@
 title: Push Troubleshooting
 description: Troubleshooting help for the push service
 keywords: push
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: c0ade5f0-4c37-4a04-8615-142b6a09a192

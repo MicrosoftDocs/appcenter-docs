@@ -2,8 +2,8 @@
 title: App Center Platform Services Matrix
 description: App Center matrix for Operating System/Platforms and services
 keywords: matrix
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 11/12/2020
 ms.topic: article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28

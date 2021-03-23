@@ -2,8 +2,8 @@
 title: No permission to publish to Google Play
 description: Insight documentation about granting the correct permissions so that App Center can access the Google Play Account and perform the necessary actions to publish an app
 keywords: google, google play store, store, insight
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: 536d7c06-ceeb-40e4-91e3-5ed90b03bbd0

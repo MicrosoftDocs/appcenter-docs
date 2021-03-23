@@ -2,8 +2,8 @@
 title: Configure Objective-C or Swift Mac builds
 description: How to set up a build for a Mac app
 keywords: build, macos, mac
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 07/31/2020
 ms.topic: article
 ms.assetid: 7e04c8d4-8b72-46ea-906d-596fa174d126

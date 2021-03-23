@@ -1,8 +1,8 @@
 ---
 title: HockeySDK for Cordova Migration
 description: Migrate from the HockeySDK to App Center SDK for Cordova
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: d2aec910-d9db-4386-9d46-1f34d2918472

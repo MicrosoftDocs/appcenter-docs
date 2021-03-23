@@ -2,9 +2,8 @@
 title: Configure a Xamarin iOS build in App Center
 description: How to set up a build for Xamarin.iOS apps
 keywords: build, xamarin, ios
-author: king-of-spades
-ms.author: kegr
-ms.reviewer: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 11/17/2020
 ms.topic: article
 ms.assetid: 08a32d64-6369-49d9-a6c9-78bfc9ef36b6

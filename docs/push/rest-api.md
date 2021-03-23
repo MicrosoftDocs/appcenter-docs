@@ -2,8 +2,8 @@
 title: Using the Push API
 description: Instructions on how to send push notifications using the App Center REST API.
 keywords: app center, push, audiences, API
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: AE53841A-B5EF-4A41-BEBD-8210908CD1BA

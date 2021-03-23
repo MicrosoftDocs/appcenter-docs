@@ -2,8 +2,8 @@
 title: REPL Tree command fails to give output and becomes unresponsive on complex views
 description: Failure may occur when too many queryable elements are on-screen
 keywords: Xamarin.UITest, REPL, writing tests
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 07/28/2020
 ms.topic: article
 ms.assetid: 089742e5-1344-4730-8699-cd9ccab01062

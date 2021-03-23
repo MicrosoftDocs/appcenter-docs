@@ -2,8 +2,8 @@
 title: Using the CodePush UI
 description: Describes the CodePush capabilities exposed through the App Center Portal
 keywords: distribution
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/01/2018
 ms.topic: article
 ms.assetid: 607EEEB8-81C5-4E4E-8ADE-9D88C5D86661

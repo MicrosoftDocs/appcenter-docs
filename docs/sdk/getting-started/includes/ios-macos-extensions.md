@@ -2,8 +2,8 @@
 title: Shared docs for Apple Extensions
 description: Shared docs for Apple Extensions
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: include
 ms.assetid: 15fb99ba-7f1a-47ec-94ac-a4b9f8ffaed0

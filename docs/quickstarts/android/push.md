@@ -2,8 +2,8 @@
 title: Send Push Notifications to Users
 description: Tutorial to send a push notification to the sample Android app.
 keywords: app center
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.topic: article
 ms.service: vs-appcenter
 ms.date: 09/15/2020

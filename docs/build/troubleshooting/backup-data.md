@@ -1,8 +1,8 @@
 ---
 title: Backing up Build data
 description: How to download build logs, binaries and symbols
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 07/13/2020
 ms.topic: article 
 ms.assetid: e2ec279b-f29d-49f9-a5bc-3b1189275458

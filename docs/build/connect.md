@@ -2,8 +2,8 @@
 title: Managing source repository connections
 description: How to connect/reconnect to a repository to start building your app
 keywords: android
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 12/08/2020
 ms.topic: article
 ms.service: vs-appcenter

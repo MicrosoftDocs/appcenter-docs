@@ -1,6 +1,6 @@
 ---
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.service: vs-appcenter
 ms.topic: include
 ms.date: 12/02/2019

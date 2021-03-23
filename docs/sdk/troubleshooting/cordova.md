@@ -2,8 +2,8 @@
 title: Cordova SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Cordova
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: e1ef1165-dbc6-4e16-8438-c12060d529db

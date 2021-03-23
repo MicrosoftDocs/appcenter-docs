@@ -1,8 +1,8 @@
 ---
 title: Preparing Xamarin.iOS app for testing
 description: A step-by-step guide to configure Xamarin.UITest for Xamarin.iOS apps
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/08/2020
 ms.topic: article
 ms.assetid: D938098B-EA2F-4EC8-BCB2-A79D25B2F964

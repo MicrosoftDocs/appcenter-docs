@@ -2,8 +2,8 @@
 title: App Center Push for iOS
 description: Using Push in App Center (iOS)
 keywords: sdk, push
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 5617b13b-940e-47e3-a67e-2aca255ab4e7

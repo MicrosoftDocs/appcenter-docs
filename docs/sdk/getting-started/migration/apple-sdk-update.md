@@ -2,8 +2,8 @@
 title: How to migrate to App Center SDK 4.0.0 and higher
 description: How to migrate to App Center SDK 4.0.0 and higher
 keywords: sdk, apple
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 408cdcba-07bb-11eb-adc1-0242ac120002

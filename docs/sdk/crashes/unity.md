@@ -2,8 +2,8 @@
 title: App Center Crashes for Unity
 description: Reporting crashes from Unity apps in App Center
 keywords: crash reporting
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 05/15/2020
 ms.topic: article
 ms.assetid: 462e7acf-5033-46f9-9554-d029ad9b933a

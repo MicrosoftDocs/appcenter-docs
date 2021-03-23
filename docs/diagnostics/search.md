@@ -2,8 +2,8 @@
 title: Search in Diagnostics
 description: A description of the search functionality in Diagnostics
 keywords: crashes, errors, search
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/09/2019
 ms.topic: article
 ms.assetid: 92ABCD39-D03A-4560-BE32-31C44DE1EAC6

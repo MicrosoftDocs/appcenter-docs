@@ -2,8 +2,8 @@
 title: Enable Sparkle updates
 description: Easily stay up-to-date on the latest build with Sparkle update notifications.
 keywords: distribution
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 04/02/2020
 ms.topic: article
 ms.service: vs-appcenter

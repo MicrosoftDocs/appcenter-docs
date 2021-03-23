@@ -2,8 +2,8 @@
 title: macOS SDK Troubleshooting
 description: Troubleshooting the App Center SDK for macOS
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 170bfa7a-55de-11e7-907b-a6006ad3dba0

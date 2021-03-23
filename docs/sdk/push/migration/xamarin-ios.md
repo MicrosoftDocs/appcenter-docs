@@ -2,8 +2,8 @@
 title: How to migrate to a newer version of App Center Push (Xamarin.iOS)
 description: How to migrate to a newer version of App Center Push (Xamarin.iOS)
 keywords: sdk, push
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: e22ae043-c8a8-445b-886b-7283a180cbad

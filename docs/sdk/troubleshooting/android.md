@@ -2,8 +2,8 @@
 title: Android SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Android
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: 4ad55002-05c9-4f5b-82b7-d29ba1234ce1

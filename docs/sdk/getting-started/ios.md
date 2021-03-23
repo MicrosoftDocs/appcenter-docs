@@ -2,8 +2,8 @@
 title: Get Started with iOS
 description: Get started with iOS
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/09/2021
 ms.topic: article
 ms.assetid: 513247e0-9a7e-4f7a-b212-43fd32474900

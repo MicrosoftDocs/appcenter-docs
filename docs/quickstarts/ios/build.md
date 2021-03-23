@@ -2,8 +2,8 @@
 title: iOS Build Sample Tutorials
 description: Tutorial to build sample iOS app in App Center.
 keywords: app center
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/27/2017
 ms.topic: article
 ms.service: vs-appcenter

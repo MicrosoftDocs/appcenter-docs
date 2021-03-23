@@ -2,8 +2,8 @@
 title: macOS Push Sample App Tutorials
 description: Tutorial to send a push notification to the sample macOS app.
 keywords: app center
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter

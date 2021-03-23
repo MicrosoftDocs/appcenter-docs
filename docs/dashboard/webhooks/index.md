@@ -2,8 +2,8 @@
 title: App Center Webhooks Documentation
 description: how to configure App Center webhooks to applications like Slack, Microsoft Teams
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, webhook, webhooks, documentation, Slack, Microsoft Teams
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 04/24/2020
 ms.topic: article
 ms.service: vs-appcenter
