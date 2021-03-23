@@ -2,8 +2,8 @@
 title: GDPR 
 description: How to manage your personal information. 
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 01/02/2018 
 ms.topic: article 
 ms.assetid: A044F6C1-A7BC-4F68-AD0F-6170EA55F08A

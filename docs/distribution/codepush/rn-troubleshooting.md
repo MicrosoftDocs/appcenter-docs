@@ -2,8 +2,8 @@
 title: Troubleshooting the React Native SDK with CodePush
 description: Common issues with React Native SDK & CodePush
 keywords: distribution
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/19/2020
 ms.topic: article
 ms.assetid: 3D5B9952-1962-450B-8F3C-4F2A02AE1F5F

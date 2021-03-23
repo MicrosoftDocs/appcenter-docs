@@ -2,8 +2,8 @@
 title: Creating and managing apps
 description: Using the dashboard to create and access app info in App Center.
 keywords: dashboard apps
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 12/09/2019
 ms.topic: article
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820

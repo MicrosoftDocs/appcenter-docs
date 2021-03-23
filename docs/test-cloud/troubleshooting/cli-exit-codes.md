@@ -3,8 +3,8 @@
 title: CLI exit codes
 description: Troubleshooting App Center Test
 keywords: test, troubleshooting
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/07/2019
 ms.topic: article
 ms.service: vs-appcenter

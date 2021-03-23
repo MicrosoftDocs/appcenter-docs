@@ -2,8 +2,8 @@
 title: App Center Crashes for macOS
 description: App Center Crashes for macOS
 keywords: sdk, crash
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: 3f6481de-55d6-11e7-907b-a6006ad3dba0

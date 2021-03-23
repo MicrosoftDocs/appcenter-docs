@@ -2,8 +2,8 @@
 title: How to add Firebase SDK (Xamarin.Android)
 description: Contains instructions for how to configure your project to use Firebase Cloud Messaging (Xamarin.Android)
 keywords: sdk, push
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 09/24/2019
 ms.topic: article
 ms.assetid: f8a120ed-d217-4e01-9811-685a1c64c498

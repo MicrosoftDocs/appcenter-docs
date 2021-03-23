@@ -2,8 +2,8 @@
 title: Xamarin Solution File Configuration Mappings
 description: How to set up configuration mappings for your Xamarin solution
 keywords: build, ios, xamarin, solution, configuration, mapping
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 08/07/2020
 ms.topic: article
 ms.assetid: 1f49c30b-3657-4e8e-9ffa-9a07f16a6751

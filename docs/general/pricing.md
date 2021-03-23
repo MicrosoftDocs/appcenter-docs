@@ -2,8 +2,8 @@
 title: App Center Pricing
 description: Information about Visual Studio App Center pricing plans
 keywords: pricing
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 04/02/2020
 ms.topic: article
 ms.assetid: 1f8b1157-0574-4cc7-a278-a9ff5fa67178

@@ -2,8 +2,8 @@
 title: Get Started with macOS
 description: Get started with macOS
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 669af2f0-553c-11e7-b114-b2f933d5fe66

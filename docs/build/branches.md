@@ -2,8 +2,8 @@
 title: Branches and Build configurations
 description: How to configure your branch
 keywords: build, branches, build configuration, build definition
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 05/28/2019
 ms.topic: article
 ms.service: vs-appcenter

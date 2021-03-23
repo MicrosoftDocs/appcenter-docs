@@ -2,7 +2,7 @@
 title: Enable In-app Updates
 description: Easily stay up to date on the latest build with in-app update notifications.
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/08/2021
 ms.topic: article

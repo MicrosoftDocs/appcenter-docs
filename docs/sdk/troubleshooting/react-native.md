@@ -2,8 +2,8 @@
 title: React Native SDK Troubleshooting
 description: Troubleshooting the App Center SDK for React Native
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: e92ba11b-fa9f-41b0-8c7e-aa7650b3cfcc

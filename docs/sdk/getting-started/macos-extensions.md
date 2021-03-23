@@ -2,8 +2,8 @@
 title: Get Started with macOS Extensions
 description: Get started with macOS extensions
 keywords: sdk
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: bf7b3627-3ee0-41a8-9023-98a08a3ad4c1

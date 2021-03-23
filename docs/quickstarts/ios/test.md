@@ -1,22 +1,13 @@
 ---
-# required metadata
-
 title: Test| Sample App Tutorials
 description: Tutorial to test the sample ios app with App Center.
 keywords: app center
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/26/2017
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
 ---
 
 # Test - Sample Swift iOS App and Tutorials

@@ -2,8 +2,8 @@
 title: Using the Diagnostics UI
 description: help using the Diagnostics UI in App Center
 keywords: crashes, errors, annotate, status, download
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 12/16/2019
 ms.topic: article
 ms.assetid: 5c420816-0fe9-4da1-bfaf-bc2a1fb6739b

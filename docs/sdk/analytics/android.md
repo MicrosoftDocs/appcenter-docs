@@ -2,8 +2,8 @@
 title: App Center Analytics for Android
 description: App Center Analytics for Android
 keywords: analytics
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/19/2020
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3

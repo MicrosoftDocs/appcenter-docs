@@ -2,8 +2,8 @@
 title: App Center Test
 description: Key features of App Center Test
 keywords: test cloud
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 12/07/2020
 ms.topic: article
 ms.assetid: 151bd6eb-9238-469a-a598-002849a70798

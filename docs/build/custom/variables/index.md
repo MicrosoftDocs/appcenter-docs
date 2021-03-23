@@ -2,14 +2,13 @@
 title: Build Environment Variables
 description: Using environment variables in your build configurations
 keywords: build, pre, post, custom, scripts
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 11/08/2019
 ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: vs-appcenter
 ms.custom: build
-ms.reviewer: nirajpur
 ---
 
 # Build Environment variables

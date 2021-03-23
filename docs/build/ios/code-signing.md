@@ -2,8 +2,8 @@
 title: iOS Code Signing in App Center
 description: Code signing iOS apps built with App Center
 keywords: code signing,  ios
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 03/24/2020
 ms.topic: article
 ms.assetid: aba79461-01c9-4a47-a8d9-0ef015c8c8a5

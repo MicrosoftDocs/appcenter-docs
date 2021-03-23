@@ -2,8 +2,8 @@
 title: Web Service and Server connection troubleshooting
 description: Making sure your server or web service is reachable by devices in App Center Test
 keywords: appcenter, test, stall
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 12/07/2020
 ms.topic: article
 ms.assetid: 2acf5e51-954f-4b38-aa09-bdcf5756e288 

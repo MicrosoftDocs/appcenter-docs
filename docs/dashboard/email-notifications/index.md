@@ -2,8 +2,8 @@
 title: App Center Email Notifications Documentation
 description: How to configure App Center email notifications
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group, test, test run, test run completed, test run complete
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 11/19/2019
 ms.topic: article
 ms.service: vs-appcenter

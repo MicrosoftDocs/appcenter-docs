@@ -2,8 +2,8 @@
 title: Install a Build from App Center
 description: Instructions on how to install a build
 keywords: distribution
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 02/06/2020
 ms.topic: article
 ms.assetid: 89a78fd8-ee2d-4f2d-9026-756047866351

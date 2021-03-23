@@ -2,8 +2,8 @@
 title: Analyzing Device Logs in App Center Test
 description: Using device logs to troubleshoot application issues
 keywords: appcenter, test, device, logs
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 07/27/2020
 ms.topic: article
 ms.assetid: 03c91b81-477c-43a5-9019-f99202776951

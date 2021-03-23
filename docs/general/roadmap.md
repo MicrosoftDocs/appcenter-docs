@@ -2,8 +2,8 @@
 title: App Center Product Roadmap
 description: App Center roadmap for future features/updates
 keywords: roadmap
-author: king-of-spades
-ms.author: kegr
+author: lucen-ms
+ms.author: lucen
 ms.date: 06/29/2020
 ms.topic: article
 ms.assetid: 4866fa6c-ba1b-4656-89b0-5276c11a5a28

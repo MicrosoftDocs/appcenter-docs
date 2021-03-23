@@ -2,9 +2,8 @@
 title: App Center Supported Browsers
 description: Table showing browser support across different platforms
 keywords: browsers
-author: king-of-spades
-ms.author: kegr
-ms.reviewer: tomasv
+author: lucen-ms
+ms.author: lucen
 ms.date: 03/31/2020
 ms.topic: reference
 ms.assetid: 9b616aa1-079a-4bbc-abf5-6ffbdf53c0cf
