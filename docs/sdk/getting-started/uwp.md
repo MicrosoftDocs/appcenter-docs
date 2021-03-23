@@ -4,7 +4,7 @@ description: Get Started with UWP
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 04/23/2019
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.tgt_pltfrm: uwp
@@ -103,6 +103,8 @@ Add the following call to your application's **constructor**:
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+
+[!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
 ### 5.3 Replace the placeholder with your App Secret
 

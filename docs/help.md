@@ -27,10 +27,7 @@ Support is provided in English only and during business hours. You can expect an
 ## Microsoft Premier Support
 Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support). 
 
-## Providing feedback
-You can provide feedback on the documentation and the product in different ways, publicly and privately.
-
-### Feedback on the documentation
+## Feedback on the documentation
 The comments feature on our documentation is intended for docs suggestions or questions. Every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
 
 ![App Center docs feedback options](images/app-center-feedback-options.png)
@@ -41,12 +38,6 @@ The comments feature on our documentation is intended for docs suggestions or qu
 2. Example of a closed document suggestion. To leave suggestions or comment on existing suggestions, sign in with your GitHub account. 
 3. **View on GitHub** - click to view suggestions directly on GitHub. This link isn't available on all pages.
 4. Prompt asking you if the current page is helpful. This prompt will be in different locations depending on the screen size. Your vote here helps us understand how we're doing.
-
-> [!Note]
-> **This product** is the preferred method to provide product feedback because it goes directly to the App Center product team and will get a quicker response. Voting whether the page is helpful records your vote (and comments), but doesn't allow us to directly respond to you.
-
-### Feedback on the product
-We're constantly adding features and more capabilities to App Center. Do you not see your feature or are you curious about what new features are coming soon? We invite you to help shape the future of App Center by sharing your feedback on our [monthly public roadmap](https://github.com/Microsoft/appcenter/wiki/Iteration-Plans), or by submitting and upvoting [feature requests](https://github.com/Microsoft/appcenter/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc).
 
 ## Contributing to the docs
 The App Center docs are an open-source project [hosted on GitHub](https://github.com/MicrosoftDocs/appcenter-docs).

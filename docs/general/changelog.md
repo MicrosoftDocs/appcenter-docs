@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ---
 
 # App Center Changelog
-This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). These features will also live for a while, marked as [SHIPPED], in the [App Center Roadmap](~/general/roadmap.md).
+This document lists new features as they're added to [Visual Studio App Center](https://appcenter.ms). 
 
 ### **July 31, 2019**
 - **Build support for Xcode 10.3**

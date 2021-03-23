@@ -4,7 +4,7 @@ description: Guide on testing
 keywords: distribution
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/19/2020
+ms.date: 03/17/2021
 ms.topic: article
 ms.assetid: 43e7ae62-16b2-4c1e-8798-fafcd5040ba3
 ms.service: vs-appcenter
@@ -42,7 +42,7 @@ After getting invited to test an Android Application in App Center you'll receiv
 
 ## Installing an app via Install Portal
 
-Installing an app on your Android device is done primarily from the App Center install portal or our native app, which is explained in the next section. Installing your apps can be done in two different ways depending on the developer's preference:
+Installing an app on your Android device is done primarily from the App Center install portal. Installing your apps can be done in two different ways depending on the developer's preference:
 
 1. You'll receive an email from App Center that directs you to the release in the App Center. You can also elect to go directly to the [App Center Install Portal](https://install.appcenter.ms) at any point to see apps you've been added to and their releases.
 
@@ -56,22 +56,7 @@ When you click on an app, App Center displays additional information about the a
 
 Clicking this button starts the application install, which results in the app being placed onto your home screen.
 
-Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps)  and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
-
-## Using the App Center Android App
-
-To get started using our native app, download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.hockeyapp.testerapp&hl=en_US) or by searching for **"HockeyApp"**. You can also download the .apk from [App Center Distribution](https://install.appcenter.ms/orgs/bitstadium/apps/app-center/distribution_groups/all-users-of-app-center). 
-
-![Google App Store Listing](images/a-store-listing.png)
-
-This app allows you to manage all of your apps and their releases within the app, rather than navigating to our install portal.
-
-After logging in, you'll be presented with list of all the apps you've been invited to test. By selecting any of the apps you can review the release history and download the selected app by clicking the **blue install button**. Clicking this starts the installation process on your phone.
-
-![App Details View in the  App](images/a-appdetails-app.png)
-
-> [!TIP]
-> Located on the top-right of the screen, you can use the search bar to quickly find your app.
+Lastly, if you have a QR code reader handy, you can navigate to our [App Center Developer Portal](https://appcenter.ms/apps) and select the application you're testing there. App Center will display a QR code that navigates you directly to the app's download page.
 
 ## Troubleshooting
 

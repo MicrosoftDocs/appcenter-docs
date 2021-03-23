@@ -16,8 +16,6 @@ ms.service: vs-appcenter
 
 [API Docs](~/api-docs/index.md)
 
-[Product Roadmap](~/general/roadmap.md)
-
 ## Troubleshooting
 ### Services
 [Build](~/build/troubleshooting/index.md)
@@ -48,4 +46,4 @@ SDKs (open-sourced on GitHub)
 Check if there are any ongoing issues on the [App Center status page](https://status.appcenter.ms).
 
 ## Contact us
-To make a feature request, use our [App Center GitHub Repo](https://github.com/microsoft/appcenter/issues). To get help, click the help menu (?) in the upper right corner of the App Center portal, then select **Contact support**. Once you fill out the form, our team will be in contact with you via email. Responsiveness might vary based on the support load at a given moment. Read more about [App Center support](../help.md).
+To get help, click the help menu (?) in the upper right corner of the App Center portal, then select **Contact support**. Once you fill out the form, our team will be in contact with you via email. Responsiveness might vary based on the support load at a given moment. Read more about [App Center support](../help.md).

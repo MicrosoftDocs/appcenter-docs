@@ -4,7 +4,7 @@ description: Get started with tvOS
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 10/22/2020
+ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66
 ms.tgt_pltfrm: tvOS
@@ -147,7 +147,7 @@ import AppCenterCrashes
 
 ### 4.2 Add the `start:withServices:` method
 
-*Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
+Insert the following line in the app's `didFinishLaunchingWithOptions` delegate method:
 
 ```objc
 [MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
@@ -155,6 +155,8 @@ import AppCenterCrashes
 ```swift
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
+
+[!INCLUDE [apple-configure-appcenter](includes/apple-configure-appcenter.md)]
 
 ### 4.3 Replace the placeholder with your App Secret
 

@@ -417,9 +417,6 @@ Achieving the equivalent behavior with the `release-react` command would require
 appcenter codepush release-react -a <ownerName>/MyApp-iOS
 ```
 
-> [!NOTE]
-> We believe that the `release-react` command should be valuable for most React Native developers, so if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it!
-
 #### App name parameter
 
 It's the same parameter as the one described in the [above section](#app-name-parameter).
@@ -565,9 +562,6 @@ Achieving the equivalent behavior with the `release-cordova` command would requi
 ```shell
 appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 ```
-
-> [!NOTE]
-> We believe that the `release-cordova` command should be valuable for most Cordova developers, if you're finding that it isn't flexible enough or missing a key feature, don't hesitate to [let us know](mailto:codepushfeed@microsoft.com), so that we can improve it.
 
 #### App name parameter
 

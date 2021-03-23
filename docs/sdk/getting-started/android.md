@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: king-of-spades
 ms.author: kegr
-ms.date: 12/22/2020
+ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -30,6 +30,8 @@ dev_langs:
 > * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
+
+You can find information about data collected by App Center on [Data Collected by App Center SDKs](~/sdk/data-collected.md), [General Data Protection Regulation](~/gdpr/index.md), and [FAQ](~/gdpr/FAQ.md#app-store-privacy-report) pages.
 
 Let's get started with setting up App Center Android SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Distribute to you app, have a look at the [documentation for App Center Distribute](~/sdk/distribute/android.md).
 
@@ -66,6 +68,10 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > If the version of your Android Gradle plugin is lower than 3.0.0, then you need to replace the word **implementation** by **compile**.
+
+  > [!NOTE]
+  > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
+  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
@@ -111,6 +117,27 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 ```
 ```kotlin
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
+
+If you need to start App Center services separately, you should:
+
+1. Configure or start it with the App Secret.
+1. If the code can be called multiple times, check if the App Center is already configured.
+1. Start the required service(s) without the App Secret.
+
+```java
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics.class);
+    AppCenter.start(Crashes.class);
+}
+```
+```kotlin
+AppCenter.configure(application, "{Your App Secret}");
+if (AppCenter.isConfigured()) {
+    AppCenter.start(Analytics::class.java);
+    AppCenter.start(Crashes::class.java);
+}
 ```
 
 If you have more than one entry point to your application (for example, a deep link activity, a service or a broadcast receiver), call `start` in the application custom class or in each entry point. In the latter case, check if App Center is already configured before the `start` call:

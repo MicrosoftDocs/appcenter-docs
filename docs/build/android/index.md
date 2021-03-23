@@ -39,7 +39,7 @@ By default, a new build is triggered every time a developer pushes to a configur
 The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle (app level) file. Select which build variant should be built.
 
 > [!NOTE]
-> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one of your gradle declared Product Flavors. Detection of Flavor Dimensions (combinations of multiple product flavors) isn't supported at this time. [Feature Request - multiple flavor dimensions](https://github.com/microsoft/appcenter/issues/32)
+> App Center Build supports finding build variants as the combination of a Build Type (debug, release or custom defined) and one of your gradle declared Product Flavors. Detection of Flavor Dimensions (combinations of multiple product flavors) isn't supported at this time.
 
 ### 3.3. Build Android App Bundle (.aab)
 The Android App Bundle is a distribution format that's uploaded to the Play Store and used to generate optimized APKs for specific devices. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/).

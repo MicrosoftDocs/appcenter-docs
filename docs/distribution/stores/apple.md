@@ -33,7 +33,7 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 5. Sign in with your Apple developer account (a onetime activity) and click **Connect**.
 6. On successful sign in, if the Apple account is a member of multiple teams an option to select the team to associate the builds will be available. If the Apple account is a member of only a single team, then the selection is defaulted to the single one available.
 7. Now a list of apps for the team selected will be available for selection.
-8. Select to app to be upgraded.
+8. Select the app to be upgraded.
 9. Store connections for the selected app will be automatically set up
    * An App Store connection named **Production**.
    * A [TestFlight](https://developer.apple.com/testflight/) connection for internal testers named **App Store Connect Users**.

@@ -180,6 +180,5 @@ If you used the same email for both accounts, you can log into App Center using 
 ## Helpful Resources
 
 * [CodePush Documentation](~/distribution/codepush/index.md)
-* [App Center/CodePush Roadmap](~/general/roadmap.md)
 * [App Center](https://appcenter.ms)
 * [App Center Documentation](~/index.yml)
