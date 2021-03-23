@@ -2,7 +2,7 @@
 title: Get Started with tvOS
 description: Get started with tvOS
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/18/2021
 ms.topic: article

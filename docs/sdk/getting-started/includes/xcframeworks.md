@@ -2,7 +2,7 @@
 title: Shared docs for XCFrameworks
 description: Shared docs for XCFrameworks
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/04/2020
 ms.topic: include

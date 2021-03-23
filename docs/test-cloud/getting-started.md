@@ -2,7 +2,7 @@
 title: Getting Started with App Center Test
 description: How to start using the test service in App Center
 keywords: test
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/31/2020
 ms.topic: article

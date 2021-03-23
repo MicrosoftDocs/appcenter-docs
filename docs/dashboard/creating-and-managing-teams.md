@@ -2,7 +2,7 @@
 title: Creating and managing teams
 description: Using the dashboard to create and access teams in App Center.
 keywords: dashboard teams
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/11/2021
 ms.topic: article

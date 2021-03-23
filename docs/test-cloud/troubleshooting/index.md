@@ -2,7 +2,7 @@
 title: Troubleshoot App Center Test
 description: Troubleshooting App Center Test.
 keywords: appcenter test cloud, troubleshooting
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/04/2020
 ms.topic: article

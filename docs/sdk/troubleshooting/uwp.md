@@ -2,7 +2,7 @@
 title: UWP, WPF, and WinForms SDK Troubleshooting
 description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/25/2021
 ms.topic: article

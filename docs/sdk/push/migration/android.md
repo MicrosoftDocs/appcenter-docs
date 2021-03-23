@@ -2,7 +2,7 @@
 title: How to add Firebase SDK (Android)
 description: How to add Firebase SDK (Android)
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/26/2021
 ms.topic: article

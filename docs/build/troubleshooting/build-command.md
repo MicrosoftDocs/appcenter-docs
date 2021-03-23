@@ -1,7 +1,7 @@
 ---
 title: How to find your build command in App Center
 description: Comparing and debugging build commands
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/09/2020
 ms.topic: article 

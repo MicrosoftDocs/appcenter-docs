@@ -2,7 +2,7 @@
 title: Distribute a build via App Center
 description: Distribute a completed build to users
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/03/2021
 ms.topic: article

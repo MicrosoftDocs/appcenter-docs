@@ -2,7 +2,7 @@
 title: App Center Crashes for iOS
 description: App Center Crashes for iOS
 keywords: sdk, crash
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/22/2020
 ms.topic: article

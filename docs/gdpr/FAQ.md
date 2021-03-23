@@ -2,7 +2,7 @@
 title: App Center GDPR Frequently Asked Questions
 description: Answer frequently asked customer questions
 keywords: app center, gdpr, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/26/2021
 ms.topic: article

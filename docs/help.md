@@ -1,7 +1,7 @@
 ---
 title: Help and Feedback
 description: What to do when you can't find what you need in the docs
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/09/2020
 ms.topic: article

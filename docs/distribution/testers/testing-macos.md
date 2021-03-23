@@ -2,7 +2,7 @@
 title: Testing macOS Apps
 description: How to test macOS Apps in App Center
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/05/2018
 ms.topic: article

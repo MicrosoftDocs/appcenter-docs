@@ -2,7 +2,7 @@
 title: App Center Push Frequently Asked Questions
 description: Help using the Push features of App Center
 keywords: app center, push, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article

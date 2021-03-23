@@ -2,7 +2,7 @@
 title: App Center Analytics
 description: Help using the Analytics feature on App Center
 keywords: app center, analytics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 8/12/2019
 ms.topic: article

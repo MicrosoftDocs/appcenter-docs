@@ -1,6 +1,6 @@
 ---
 title: Uploading symbols through the UI
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.topic: include
 ---

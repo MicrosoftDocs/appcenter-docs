@@ -2,7 +2,7 @@
 title: Connecting Repositories Using the GitHub App
 description: How to use the App Center GitHub App
 keywords: build, ios, android, github
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/10/2019
 ms.topic: article

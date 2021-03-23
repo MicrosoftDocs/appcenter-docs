@@ -2,7 +2,7 @@
 title: Run UI Tests using App Center REST API
 description: Steps to upload the package (ipa/apk) via REST API and queue the UI Tests
 keywords: appcenter, test, rest, api
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/24/2020
 ms.topic: article

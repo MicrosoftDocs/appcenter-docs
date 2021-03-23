@@ -2,7 +2,7 @@
 title: Configuring Azure Active Directory Conditional Access
 description: Use Azure Active Directory Conditional Access with App Center
 keywords: dashboard Azure organizations "conditional access"
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/23/2019
 ms.topic: article

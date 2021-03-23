@@ -2,7 +2,7 @@
 title: Understanding Build Execution Time
 description: Comparing local build times to App Center
 keywords: build, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/31/2020
 ms.topic: article

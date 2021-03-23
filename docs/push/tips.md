@@ -2,7 +2,7 @@
 title: Tips and Tricks
 description: Tips and Tricks for using the App Center Push Service
 keywords: app center, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article

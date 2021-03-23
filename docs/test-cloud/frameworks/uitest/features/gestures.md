@@ -2,7 +2,7 @@
 title: Working with gestures
 description: Simulate the gestures users would make when using a mobile app.
 keywords: uitest test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article

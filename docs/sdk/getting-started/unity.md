@@ -2,7 +2,7 @@
 title: Get Started with Unity
 description: Get started with Unity
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/04/2020
 ms.topic: article

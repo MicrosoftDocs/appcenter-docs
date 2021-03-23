@@ -2,7 +2,7 @@
 title: Tapping or typing works for some iOS devices but fails for others
 description: iOS apps must run in native resolution to avoid tests failing because of screen scaling differences
 keywords: Xamarin.UITest, Android, iOS, troubleshooting invalid tests, running tests
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/24/2020
 ms.topic: article

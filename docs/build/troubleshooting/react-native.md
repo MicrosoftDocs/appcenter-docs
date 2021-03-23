@@ -2,7 +2,7 @@
 title: App Center Build Code React Native Troubleshooting
 description: Troubleshooting issues with React Native in Build
 keywords: build, troubleshooting
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article

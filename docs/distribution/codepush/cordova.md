@@ -2,7 +2,7 @@
 title: Using the Cordova SDK with CodePush
 description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/14/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Limitations
 description: Limitations with the Diagnostic Service in App Center
 keywords: diagnostic, crashes
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/19/2019
 ms.topic: article

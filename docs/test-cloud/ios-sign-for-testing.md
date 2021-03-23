@@ -2,7 +2,7 @@
 title: Signing iOS Apps for Automated Testing
 description: What iOS Provisioning Profiles work in App Center Test and locally?
 keywords: appcenter, test, stall
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/10/2020
 ms.topic: article

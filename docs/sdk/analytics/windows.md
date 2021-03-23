@@ -2,7 +2,7 @@
 title: App Center Analytics for Windows
 description: App Center Analytics for Windows
 keywords: analytics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/23/2019
 ms.topic: article

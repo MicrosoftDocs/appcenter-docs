@@ -3,7 +3,7 @@
 title: Using Azure DevOps for UI Testing
 description: How to get started with UI Testing in Azure DevOps (VSTS)
 keywords: test, VSTS, Azure DevOps, Azure Pipelines, espresso, appium, xamarin.uitest, xcuitest
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/29/2020
 ms.topic: article

@@ -1,7 +1,7 @@
 ---
 title: Failed Builds
 description: How to find and interpret errors in App Center Build
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/09/2020
 ms.topic: article 

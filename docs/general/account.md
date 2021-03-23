@@ -2,7 +2,7 @@
 title: Accounts in App Center
 description: Information about creating accounts.
 keywords: accounts, sign-in, sign-up, authentication, auth
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/16/2019
 ms.topic: article

@@ -2,7 +2,7 @@
 title: How to migrate to a newer version of App Center Push (React Native iOS)
 description: How to migrate to a newer version of App Center Push (React Native iOS)
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/07/2019
 ms.topic: article

@@ -2,7 +2,7 @@
 title: App Center Connections to allow list
 description: URLs to allow list
 keywords: allowlist, appcenter, networking
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/07/2020
 ms.topic: article

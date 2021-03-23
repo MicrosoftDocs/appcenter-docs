@@ -1,7 +1,7 @@
 ---
 title: Migration
 description: App Center migration guide
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/20/2020
 ms.topic: article

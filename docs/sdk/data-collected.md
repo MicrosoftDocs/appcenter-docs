@@ -2,7 +2,7 @@
 title: Data Collected by App Center SDKs
 description: The required and optional data sent to App Center by the SDK.
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/21/2019
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Automating Xamarin.Forms Date & Time Pickers with Xamarin.UITest
 description: How to automate Xamarin.Forms Date Pickers & Time Pickers
 keywords: uitest test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/01/2020
 ms.topic: article

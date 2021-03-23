@@ -2,7 +2,7 @@
 title: Publish an iOS package to the App Store (Production)
 description: Learn how to release to App Store from App Center
 keywords: distribute, stores, fastlane, app store
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/10/2020
 ms.topic: article

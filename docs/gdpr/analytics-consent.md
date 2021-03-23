@@ -2,7 +2,7 @@
 title: Handling User Consent for Analytics
 description: How to handle user consent with Analytics
 keywords: GDPR, DSR, Privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/06/2019 
 ms.topic: article 

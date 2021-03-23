@@ -1,6 +1,6 @@
 ---
 title: Generating a Breakpad Symbols Upload Payload
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.topic: include
 ---

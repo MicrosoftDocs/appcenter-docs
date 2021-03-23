@@ -2,7 +2,7 @@
 title: Building Xamarin apps for Android
 description: How to set up a build system for Xamarin.Android apps
 keywords: android
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/17/2020
 ms.topic: article

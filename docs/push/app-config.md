@@ -2,7 +2,7 @@
 title: Configuring an App for Push
 description: Configuring your app to use the App Center Push service
 keywords: app center, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article

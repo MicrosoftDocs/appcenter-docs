@@ -2,7 +2,7 @@
 title: Features of App Center Errors
 description: Feature set for errors in App Center
 keywords: app center, errors, exceptions, handled
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/02/2018
 ms.topic: article

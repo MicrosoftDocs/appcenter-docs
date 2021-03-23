@@ -2,7 +2,7 @@
 title: Other UWP APIs
 description: Other APIs in the App Center SDK for UWP
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/23/2020
 ms.topic: article

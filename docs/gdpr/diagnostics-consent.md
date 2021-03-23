@@ -2,7 +2,7 @@
 title: Handling User Consent for Diagnostics
 description: How to handle user consent with crashes and errors
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/16/2019
 ms.topic: article

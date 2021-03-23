@@ -2,7 +2,7 @@
 title: Working with categorized tests
 description: Working with categorized tests in App Center
 keywords: uitest test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/01/2020
 ms.topic: article

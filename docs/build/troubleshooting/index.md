@@ -2,7 +2,7 @@
 title: App Center Build Troubleshooting 
 description: Resources for troubleshooting issues in App Center Build
 keywords: build, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/31/2020
 ms.topic: article

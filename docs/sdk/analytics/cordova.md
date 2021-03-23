@@ -2,7 +2,7 @@
 title: App Center Analytics for Apache Cordova
 description: App Center Analytics for Apache Cordova
 keywords: sdk, analytics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/14/2019
 ms.topic: article

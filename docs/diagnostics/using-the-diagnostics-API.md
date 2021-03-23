@@ -2,7 +2,7 @@
 title: Using the Diagnostics API
 description: help using the Diagnostics API in App Center
 keywords: crashes, errors, API
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 09/03/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: How to add Firebase SDK (Android React Native)
 description: Contains instructions for how to configure your project to use Firebase Cloud Messaging (Android React Native)
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/28/2018
 ms.topic: article

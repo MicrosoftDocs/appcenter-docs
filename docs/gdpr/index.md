@@ -2,7 +2,7 @@
 title: General Data Protection Regulation
 description: How your GDPR Data Subject Rights are covered by App Center. 
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/21/2019 
 ms.topic: article 

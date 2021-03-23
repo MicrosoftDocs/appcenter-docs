@@ -2,7 +2,7 @@
 title: Getting Started for Testers
 description: Guide to get started as an App Center tester
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr 
 ms.date: 11/05/2018
 ms.topic: article

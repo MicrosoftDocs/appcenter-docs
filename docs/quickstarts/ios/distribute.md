@@ -2,7 +2,7 @@
 title: iOS Distribute Sample Tutorials
 description: Tutorial to distribute a sample iOS app to a group in App Center.
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/27/2017
 ms.topic: article

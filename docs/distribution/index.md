@@ -2,7 +2,7 @@
 title: Distribute Your Apps with App Center
 description: "How to distribute your Android, iOS, macOS, and UWP app builds to your end users in App Center."
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/01/2019
 ms.topic: article

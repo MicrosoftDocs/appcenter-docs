@@ -2,7 +2,7 @@
 title: Dashboard Frequently Asked Questions
 description: Frequently asked questions about the App Center dashboard
 keywords: dashboard faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/13/2019
 ms.topic: article

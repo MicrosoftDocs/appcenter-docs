@@ -4,7 +4,7 @@
 title: Test| Sample App Tutorials
 description: Tutorial to test the sample ios app with App Center.
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article

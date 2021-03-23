@@ -1,7 +1,7 @@
 ---
 title: Push Migration Guide
 description: App Center Push migration guide
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 04/30/2020
 ms.topic: article

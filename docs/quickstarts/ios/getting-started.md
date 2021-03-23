@@ -2,7 +2,7 @@
 title: iOS Getting Started
 description: Tutorial to onboard an iOS application in App Center
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/20/2019
 ms.topic: article

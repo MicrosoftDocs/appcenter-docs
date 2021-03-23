@@ -2,7 +2,7 @@
 title: App Center Build
 description: Building apps with App Center
 keywords: build
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/07/2019
 ms.topic: article

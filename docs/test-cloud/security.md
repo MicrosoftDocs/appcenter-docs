@@ -2,7 +2,7 @@
 title: App Center Test Security
 description: Security information relating to devices used in App Center Test
 keywords: test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/31/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: iOS Analytics Sample App Tutorials
 description: Tutorial to help user set up analytics in iOS, track custom events and check logflow.
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/26/2017
 ms.topic: article

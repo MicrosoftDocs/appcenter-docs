@@ -2,7 +2,7 @@
 title: Other macOS APIs
 description: Other APIs in the App Center SDK for macOS
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/19/2020
 ms.topic: article

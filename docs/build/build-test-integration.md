@@ -2,7 +2,7 @@
 title: Testing Builds on Real Devices
 description: Instructions for how to launch your most recent build on a physical device to make sure it works
 keywords: test, build, ios, android
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.reviewer: elamalani
 ms.date: 11/08/2019

@@ -2,7 +2,7 @@
 title: Stalled Devices in Test Runs
 description: Possible causes and getting assistance
 keywords: appcenter, test, stall
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/28/2020
 ms.topic: article

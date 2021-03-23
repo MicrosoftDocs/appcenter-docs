@@ -2,7 +2,7 @@
 title: Build results for UWP apps
 description: Build results explained in detail
 keywords: build, windows
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/31/2020
 ms.topic: article

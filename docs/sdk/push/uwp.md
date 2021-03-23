@@ -2,7 +2,7 @@
 title: App Center Push for Universal Windows Platform
 description: Using Push in App Center
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/30/2019
 ms.topic: article

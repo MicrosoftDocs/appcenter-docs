@@ -2,7 +2,7 @@
 title: Preparing Espresso Tests for Upload
 description: How to upload Espresso tests to App Center Test Cloud
 keywords: test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/31/2020
 ms.topic: article

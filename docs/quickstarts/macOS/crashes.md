@@ -4,7 +4,7 @@
 title: Crashes in macOS Swift apps
 description: Tutorial on viewing crashes from a sample macOS app in App Center
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/15/2017
 ms.topic: article

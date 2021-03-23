@@ -2,7 +2,7 @@
 title: Wrong platform tests are executed in App Center
 description: Sometimes the App Center Test report shows results for both platforms
 keywords: Xamarin.UITest, Android, iOS, troubleshooting invalid tests, running tests
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/28/2020
 ms.topic: article

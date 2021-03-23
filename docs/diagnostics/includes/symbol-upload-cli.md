@@ -1,6 +1,6 @@
 ---
 title: Uploading symbols through the CLI
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.topic: include
 ---

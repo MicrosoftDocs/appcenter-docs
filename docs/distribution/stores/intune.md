@@ -2,7 +2,7 @@
 title: Publish applications to Intune Company Portal
 description: Simplify distribution of line-of-business mobile applications to the Company Portal on Intune
 keywords: distribution store
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 04/08/2020
 ms.topic: article

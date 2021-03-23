@@ -2,7 +2,7 @@
 title: Get Started with React Native
 description: Get Started with React Native
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/26/2021
 ms.topic: article

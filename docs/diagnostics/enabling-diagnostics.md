@@ -2,7 +2,7 @@
 title: Enabling Diagnostics in an App
 description: Learn how to add support for App Center Diagnostics to an app
 keywords: crashes, diagnostics, errors, SDK
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/22/2019
 ms.topic: article

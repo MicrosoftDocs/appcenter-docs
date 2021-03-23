@@ -2,7 +2,7 @@
 title: Get Started with Apache Cordova
 description: Get Started (Cordova)
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/10/2020
 ms.topic: article

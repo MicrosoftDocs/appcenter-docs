@@ -2,7 +2,7 @@
 title: View Crashes Sent From Android App in App Center
 description: Tutorial on viewing crashes from a sample Android app in App Center
 keywords: app center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/28/2017
 ms.topic: article

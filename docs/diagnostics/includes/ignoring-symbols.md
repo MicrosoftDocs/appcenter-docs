@@ -1,6 +1,6 @@
 ---
 title: Ignoring symbols
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.topic: include
 ---

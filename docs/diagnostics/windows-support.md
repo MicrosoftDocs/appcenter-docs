@@ -2,7 +2,7 @@
 title: Windows Support
 description: An overview of App Center's Windows support
 keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/16/2020
 ms.topic: article

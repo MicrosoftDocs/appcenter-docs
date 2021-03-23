@@ -2,7 +2,7 @@
 title: Testing Android Apps 
 description: Guide on testing 
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/17/2021
 ms.topic: article

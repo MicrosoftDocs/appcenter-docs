@@ -2,7 +2,7 @@
 title: Branches and Build configurations
 description: How to configure your branch
 keywords: build, branches, build configuration, build definition
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/28/2019
 ms.topic: article

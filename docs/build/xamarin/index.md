@@ -2,7 +2,7 @@
 title: App Center Build for Xamarin
 description: How to use App Center Build for Xamarin
 keywords: build, xamarin
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/11/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Managing your Apple ID and certificates
 description: Read how to securely store your Apple ID and iOS signing certificate in App Center.
 keywords: Secret storage, Apple ID, certicates
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/11/2019
 ms.topic: article

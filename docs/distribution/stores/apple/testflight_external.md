@@ -2,7 +2,7 @@
 title: Publish an iOS package to TestFlight (External Testers)
 description: Learn how to release to external testers in TestFlight from App Center
 keywords: distribute, stores, testflight, fastlane
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/10/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Android screenshots
 description: Troubleshooting App Center Test Reports show blank or scrambled screenshots on Android
 keywords: test cloud, android, screenshots
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 04/08/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Upload crashes via API
 description: Post a crash report, for example, if you don't want to use our SDK or develop for a custom platform.
 keywords: crashes, diagnostics, errors, attachments, upload, api
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/10/2020
 ms.topic: article

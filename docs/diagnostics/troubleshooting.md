@@ -2,7 +2,7 @@
 title: Troubleshooting
 description: Help troubleshooting Diagnostics in App Center
 keywords: crashes, errors, troubleshooting, diagnostics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/31/2020
 ms.topic: article

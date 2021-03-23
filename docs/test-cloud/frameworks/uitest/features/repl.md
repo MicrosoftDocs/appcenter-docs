@@ -2,7 +2,7 @@
 title: Working with the REPL
 description: Common tasks when writing and running Xamarin.UITest.
 keywords: uitest test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/10/2020
 ms.topic: article

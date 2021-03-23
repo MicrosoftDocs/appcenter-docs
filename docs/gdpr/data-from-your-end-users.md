@@ -2,7 +2,7 @@
 title: Data from Your Users 
 description: App Center help on GDPR compliance
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/31/2018 
 ms.topic: article 

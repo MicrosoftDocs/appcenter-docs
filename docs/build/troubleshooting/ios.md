@@ -2,7 +2,7 @@
 title: iOS Build Troubleshooting
 description: Troubleshooting iOS app builds in App Center
 keywords: build, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/08/2020
 ms.topic: article

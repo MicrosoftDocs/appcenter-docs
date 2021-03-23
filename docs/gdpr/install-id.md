@@ -2,7 +2,7 @@
 title: Application Install ID 
 description: How to find an install ID 
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/31/2018 
 ms.topic: article 

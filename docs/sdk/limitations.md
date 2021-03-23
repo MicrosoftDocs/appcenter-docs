@@ -2,7 +2,7 @@
 title: SDK Limitations & Known Issues
 description: Limitations and known issues with the App Center SDK
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/16/2019
 ms.topic: article

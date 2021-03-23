@@ -2,7 +2,7 @@
 title: App Center SDK Documentation
 description: Using the App Center SDK
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 11/10/2020
 ms.topic: article

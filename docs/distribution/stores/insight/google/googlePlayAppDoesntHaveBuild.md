@@ -2,7 +2,7 @@
 title: Connecting to Google Play fails because the app isn't published yet
 description: How to publish to enable the connection
 keywords: google, google play store, store, insight
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 09/06/2019
 ms.topic: reference

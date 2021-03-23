@@ -2,7 +2,7 @@
 title: App Center Changelog
 description: History of updates to the product
 keywords: update,history
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/31/2019
 ms.topic: article

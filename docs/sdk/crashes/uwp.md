@@ -2,7 +2,7 @@
 title: App Center Crashes for UWP
 description: App Center Crashes for UWP
 keywords: sdk, crash
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 03/05/2020
 ms.topic: article

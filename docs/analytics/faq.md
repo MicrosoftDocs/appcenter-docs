@@ -2,7 +2,7 @@
 title: App Center Analytics Frequently Asked Questions
 description: Help using the Analytics features of App Center
 keywords: app center, analytics, faq
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/14/2020
 ms.topic: article

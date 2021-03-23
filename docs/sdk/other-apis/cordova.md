@@ -2,7 +2,7 @@
 title: Other Apache Cordova APIs
 description: Other APIs in the App Center SDK for Apache Cordova
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/08/2020
 ms.topic: article

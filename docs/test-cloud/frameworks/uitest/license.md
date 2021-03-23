@@ -2,7 +2,7 @@
 title: Xamarin.UITest End User License Agreement (EULA)
 description: Xamarin.UITest EULA
 keywords: test cloud
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/31/2020
 ms.topic: article

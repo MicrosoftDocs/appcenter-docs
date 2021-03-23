@@ -2,7 +2,7 @@
 title: App Center Crashes for Android
 description:  App Center Crashes for Android
 keywords: sdk, crash
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/08/2019
 ms.topic: article

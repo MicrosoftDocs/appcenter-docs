@@ -2,7 +2,7 @@
 title: Get Started with Android
 description: Get started (Android)
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/26/2021
 ms.topic: article

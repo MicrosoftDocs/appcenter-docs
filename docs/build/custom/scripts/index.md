@@ -2,7 +2,7 @@
 title: Build Scripts
 description: Details on how to write build scripts to enhance the build process
 keywords: build, pre, post, custom, scripts
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 09/01/2020
 ms.topic: article

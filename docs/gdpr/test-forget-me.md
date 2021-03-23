@@ -2,7 +2,7 @@
 title: Deleting Test Data
 description: How to delete personal information from Test
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/26/2018
 ms.topic: article 

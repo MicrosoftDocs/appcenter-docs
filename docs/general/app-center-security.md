@@ -2,7 +2,7 @@
 title: Visual Studio App Center Security and Compliance
 description: Describes the security standards and compliance mechanisms followed by Visual Studio App Center
 keywords: security Azure "App Center"
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/17/2020
 ms.topic: article

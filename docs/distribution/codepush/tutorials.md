@@ -2,7 +2,7 @@
 title: Tutorials
 description: "Tutorials to help you get started with using CodePush"
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/12/2019
 ms.topic: article

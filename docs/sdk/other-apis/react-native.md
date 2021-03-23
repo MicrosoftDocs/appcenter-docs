@@ -2,7 +2,7 @@
 title: Other React Native APIs
 description: Other APIs in the App Center SDK for React Native
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/06/2020
 ms.topic: article

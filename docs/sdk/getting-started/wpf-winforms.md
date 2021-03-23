@@ -2,7 +2,7 @@
 title: Get Started with WPF/WinForms
 description: Get started (WPF/Winforms)
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/18/2021
 ms.topic: article

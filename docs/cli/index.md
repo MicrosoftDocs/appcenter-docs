@@ -2,7 +2,7 @@
 title: App Center Command-Line Interface (CLI)
 description: How to use the CLI to access App Center features
 keywords: command-line, app center, visual studio app center, CLI, command-line interface
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 09/10/2020
 ms.topic: article

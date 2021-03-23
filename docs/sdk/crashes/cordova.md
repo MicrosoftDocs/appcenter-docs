@@ -2,7 +2,7 @@
 title: App Center Crashes for Apache Cordova
 description: App Center Crashes for Apache Cordova
 keywords: sdk, crash
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/12/2021
 ms.topic: article

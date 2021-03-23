@@ -2,7 +2,7 @@
 title: Shared docs for Apple SDKs
 description: Shared docs for Apple SDKs
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/18/2021
 ms.topic: include

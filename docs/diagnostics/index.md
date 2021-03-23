@@ -2,7 +2,7 @@
 title: App Center Diagnostics
 description: Help using the Diagnostic service on App Center
 keywords: app center, crashes, errors, diagnostics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/16/2019
 ms.topic: article

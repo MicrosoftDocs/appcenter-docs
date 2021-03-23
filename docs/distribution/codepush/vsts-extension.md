@@ -2,7 +2,7 @@
 title: Azure DevOps Extension
 description: "Setting up and using the CodePush Azure DevOps extension"
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/14/2019
 ms.topic: article

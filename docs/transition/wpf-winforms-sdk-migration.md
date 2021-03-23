@@ -1,7 +1,7 @@
 ---
 title: HockeySDK for WPF/Winforms Migration
 description: Migrate from the HockeySDK to App Center SDK for WPF/Winforms
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/09/2019
 ms.topic: article

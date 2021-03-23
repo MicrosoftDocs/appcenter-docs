@@ -1,7 +1,7 @@
 ---
 title: Distribution FAQ
 description: Frequently asked questions about Distribution service
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/18/2019
 ms.topic: article

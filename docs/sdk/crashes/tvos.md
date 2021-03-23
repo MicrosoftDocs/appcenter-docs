@@ -2,7 +2,7 @@
 title: App Center Crashes for tvOS
 description: App Center Crashes for tvOS
 keywords: sdk, crash
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/22/2020
 ms.topic: article

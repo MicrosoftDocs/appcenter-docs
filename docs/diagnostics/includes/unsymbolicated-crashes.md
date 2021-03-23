@@ -1,7 +1,7 @@
 ---
 title: Unsymbolicaed crashes
 description: Help understanding behavior for unsymbolicated crashes in App Center
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/16/2019
 ms.topic: article

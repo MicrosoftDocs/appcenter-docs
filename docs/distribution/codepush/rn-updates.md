@@ -2,7 +2,7 @@
 title: Releasing Updates
 description: Distributing updates (React Native SDK & CodePush)
 keywords: distribution
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/12/2019
 ms.topic: article

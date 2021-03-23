@@ -2,7 +2,7 @@
 title: Upload crashes via UI
 description: Upload a crash report without using our SDK, or if developing for a custom platform.
 keywords: crashes, diagnostics, errors, upload
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 09/25/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Google GCM to FCM Migration
 description: How App Center Push addresses Google's GCM to FCM migration
 keywords: push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/28/2020
 ms.topic: article

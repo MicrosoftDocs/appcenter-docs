@@ -2,7 +2,7 @@
 title: App Center Analytics for Xamarin
 description: App Center Analytics for Xamarin
 keywords: analytics
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/14/2019
 ms.topic: article

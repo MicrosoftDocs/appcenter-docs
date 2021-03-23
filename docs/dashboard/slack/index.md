@@ -4,7 +4,7 @@
 title: App Center Slack App Documentation
 description: how to use App Center Slack App
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, slack app, slackbot, slack bot, documentation, integration, slack
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/07/2018
 ms.topic: article

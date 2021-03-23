@@ -2,7 +2,7 @@
 title: App Center Push for Xamarin.iOS Apps
 description: Integrating App Center Push into Xamarin.iOS applications
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 07/22/2019
 ms.topic: article

@@ -2,7 +2,7 @@
 title: App Center Push
 description: An introduction to the App Center Push service
 keywords: app center,push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/03/2020
 ms.topic: article

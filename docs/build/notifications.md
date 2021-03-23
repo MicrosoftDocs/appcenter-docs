@@ -2,7 +2,7 @@
 title: App Center Build Notifications
 description: details about App Center notifications triggered by build outcomes.
 keywords: build, notifications
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/11/2020
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Using AppDataMode to manage app data between tests
 description: Describes the behavior of the AppDataMode method
 keywords: Xamarin.UITest, AppDataMode, running tests
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 06/24/2020
 ms.topic: article

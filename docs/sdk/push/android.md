@@ -2,7 +2,7 @@
 title: App Center Push for Android
 description: Using Push in App Center (Android)
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/26/2021
 ms.topic: article

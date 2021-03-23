@@ -2,7 +2,7 @@
 title: App Center Push for Cordova iOS
 description: Using Push in App Center (iOS Cordova)
 keywords: sdk, push
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 08/09/2019
 ms.topic: article

@@ -2,7 +2,7 @@
 title: Xamarin SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/17/2020
 ms.topic: article

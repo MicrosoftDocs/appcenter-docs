@@ -2,7 +2,7 @@
 title: Deleting User Errors Data 
 description: How to manage and remove End-User errors data  
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/31/2018 
 ms.topic: article 

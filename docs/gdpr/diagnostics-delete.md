@@ -2,7 +2,7 @@
 title: Deleting diagnostics data
 description: How to delete personal information from user diagnostics
 keywords: GDPR, DSR, privacy, EU
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 12/09/2019
 ms.topic: article

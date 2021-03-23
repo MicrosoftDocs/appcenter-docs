@@ -2,7 +2,7 @@
 title: Custom Dependency Handling
 description: How to custom-handle dependencies in App Center Build
 keywords: build, pre, post, custom, scripts
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 10/22/2020
 ms.topic: article

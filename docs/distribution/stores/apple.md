@@ -2,7 +2,7 @@
 title: Publish to App Store Connect
 description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 05/04/2020
 ms.topic: article

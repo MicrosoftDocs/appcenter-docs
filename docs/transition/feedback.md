@@ -1,7 +1,7 @@
 ---
 title: HockeyApp Feedback
 description: Information on HockeyApp Feedback for your transition
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 02/18/2020
 ms.topic: article

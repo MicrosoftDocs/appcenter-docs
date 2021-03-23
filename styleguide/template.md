@@ -12,7 +12,7 @@ The full metadata block, with a bunch of annotations, is shown below:
 title: This Article's Title
 description: A good, solid description of this article. The content kept here is what the Microsoft Docs system returns with search results, so this had better be a complete description of the purpose and content for this document file
 keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, however, this, might, not, be, used, for, anything, much, anymore, but, still, good, to, have, if, you, want
-author: king-of-spades (maintainer Github user name)
+author: lucen-ms (maintainer Github user name)
 ms.author: kegr (maintainer Microsoft Alias)
 ms.date: 02/26/2018 (Expected publish date, in **US format: mm/dd/yyyy**)
 ms.topic: article (one only of the following: article, hub-page, reference)

@@ -2,7 +2,7 @@
 title: Get Started with UWP
 description: Get Started with UWP
 keywords: sdk
-author: king-of-spades
+author: lucen-ms
 ms.author: kegr
 ms.date: 01/18/2021
 ms.topic: article
