@@ -18,8 +18,10 @@ This guide provides instructions for preparing XCUITest tests for upload to App 
 * Xcode >= 9.4.1
 * iOS >= 9.0
 
+> [!NOTE]
+> Xcode 12 and iOS 14 are available now!
+
 ## Test service limitations
-- Xcode 12 / iOS 14 support isn't available yet.
 - Only the uploaded app can be tested, not interactions via apps or the rest of the system.
 
 ## Build For Testing
