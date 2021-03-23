@@ -3,7 +3,7 @@ title: App Center Analytics for iOS
 description: App Center Analytics for iOS
 keywords: analytics
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: f5270e0d-6012-4717-9ce5-a7097e8f323e

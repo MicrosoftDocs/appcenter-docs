@@ -3,7 +3,7 @@ title: App Center Push for Xamarin.Forms Apps
 description: Integrating App Center Push into Xamarin.Forms applications
 keywords: sdk, push
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/22/2019
 ms.topic: article
 ms.assetid: e3384f0b-fafd-4345-b9bb-4e683391bf74

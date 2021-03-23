@@ -3,7 +3,7 @@ title: How to stop collecting data
 description: How to stop collecting data
 keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/31/2018 
 ms.topic: article 
 ms.assetid: facd442a-14ae-41a6-958e-d32617d1ab22

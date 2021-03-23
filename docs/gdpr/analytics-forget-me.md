@@ -3,7 +3,7 @@ title: Forgetting Analytics Data for Users
 description: How to handle a "forget me" request from one of your users
 keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/31/2018 
 ms.topic: article 
 ms.assetid: C2086120-083B-466E-AE78-7C64B9DE356E

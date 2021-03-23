@@ -3,7 +3,7 @@ title: Working with backdoors
 description: Backdoors are methods that can be invoked during a test run to do some special action.
 keywords: uitest test cloud
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: BFFC9137-6E6B-4190-AF79-E96B574E3B4B

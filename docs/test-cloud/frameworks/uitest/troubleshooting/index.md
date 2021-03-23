@@ -3,7 +3,7 @@ title: Xamarin.UITest test-cloud.exe Upload Errors
 description: How to fix "Cannot find test-cloud.exe" and "UITest.dll and the tools are incompatible."
 keywords: test-cloud.exe, UITest.dll, Xamarin.UITest, upload
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/28/2020
 ms.topic: article
 ms.assetid: d732a3cf-88b8-4adc-b4a7-bab3a2c3a6b4

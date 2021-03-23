@@ -3,7 +3,7 @@ title: Other Android APIs
 description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292

@@ -3,7 +3,7 @@ title: Get Started with React Native
 description: Get Started with React Native
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 02/26/2021
 ms.topic: article
 ms.assetid: 8c185dee-ae25-4582-bd7c-14163e6fe392

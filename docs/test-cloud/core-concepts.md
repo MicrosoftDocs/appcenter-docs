@@ -3,7 +3,7 @@ title: App Center Test Core Concepts
 description: Glossary of terms used in App Center Test
 keywords: Test
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 09/25/2020
 ms.topic: article
 ms.assetid: 5ed07ad2-ed36-4812-adbb-fc1cbf7931df

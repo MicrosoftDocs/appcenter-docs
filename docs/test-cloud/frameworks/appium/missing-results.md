@@ -3,7 +3,7 @@ title: Why doesn't my Appium test show test results?
 description: Test file names that don't follow the Surefire naming pattern won't be executed.
 keywords: appcenter, test, stall
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/24/2020
 ms.topic: article
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 

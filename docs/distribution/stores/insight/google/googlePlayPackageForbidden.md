@@ -3,7 +3,7 @@ title: App not accessible from Google Play
 description: Insight documentation about how to make your app accessible for App Center
 keywords: google, google play store, store, insight
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: c5799bd0-0792-4b7a-8088-aeedaf053964

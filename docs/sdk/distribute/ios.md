@@ -3,7 +3,7 @@ title: App Center Distribute for iOS
 description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556

@@ -3,7 +3,7 @@ title: Testing macOS Apps
 description: How to test macOS Apps in App Center
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/05/2018
 ms.topic: article
 ms.assetid: a71c9c40-e15f-4826-913a-133917f66ba1

@@ -3,7 +3,7 @@ title: App Center Analytics for Unity
 description: App Center Analytics for Unity
 keywords: unity
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 02/14/2019
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701

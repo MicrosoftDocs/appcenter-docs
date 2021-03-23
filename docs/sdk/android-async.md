@@ -3,7 +3,7 @@ title: App Center Asynchronous APIs
 description: Usage of asynchronous APIs in the Android SDK
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/11/2017
 ms.topic: article
 ms.assetid: 610b8797-6884-4dd4-bad3-7c05f39b3922

@@ -3,7 +3,7 @@ title: Updates on App Center Diagnostics
 description: Upcoming features
 keywords: crashes, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/30/2018
 ms.topic: article
 ms.assetid: 513252EA-C802-4606-B733-FC0916E64EC5

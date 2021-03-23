@@ -3,7 +3,7 @@ title: How to Use Events for Handled Errors
 description: Using events for error handling
 keywords: app center, analytics, exceptions
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/22/2017
 ms.topic: article
 ms.assetid: 8F9AE70D-9153-4EFE-8173-BA1749F4BB0D

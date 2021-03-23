@@ -3,7 +3,7 @@ title: App Center Build
 description: Building apps with App Center
 keywords: build
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/07/2019
 ms.topic: article
 ms.assetid: 3ebe875a-e8e0-4b76-bba1-277047a321b7

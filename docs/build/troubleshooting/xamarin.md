@@ -3,7 +3,7 @@ title: App Center Build FAQs – Xamarin
 description: Troubleshooting guides for Xamarin apps
 keywords: build, faq
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 7365bb27-d7c1-4fe1-91b4-346359c705ea

@@ -3,7 +3,7 @@ title: Get Started with Unity
 description: Get started with Unity
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/04/2020
 ms.topic: article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb

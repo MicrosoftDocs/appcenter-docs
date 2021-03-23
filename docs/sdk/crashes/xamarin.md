@@ -3,7 +3,7 @@ title: App Center Crashes for Xamarin
 description: App Center Crashes for Xamarin
 keywords: sdk, crash
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/11/2019
 ms.topic: article
 ms.assetid: 582bf961-0e4d-4fe0-9731-0a57fd1c222b

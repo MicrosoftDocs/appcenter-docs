@@ -3,7 +3,7 @@ title: macOS Build Sample Tutorials
 description: Tutorial to build sample macOS app in App Center.
 keywords: app center
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/15/2017
 ms.topic: article
 ms.service: vs-appcenter

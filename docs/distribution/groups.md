@@ -3,7 +3,7 @@ title: Manage App Center Distribution Groups
 description: Distribute mobile apps to groups of users
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 02/11/2021
 ms.topic: article
 ms.assetid: 65c820ac-e2ec-4ab1-9d2e-bbc2ddac2640

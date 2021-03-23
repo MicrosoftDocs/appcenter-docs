@@ -3,7 +3,7 @@ title: Configure a React Native iOS build in App Center
 description: How to set up a build for React Native iOS apps
 keywords: build, ios
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/26/2020
 ms.topic: article
 ms.assetid: 29111bf4-52a2-41e0-9aa3-d40f728b443a

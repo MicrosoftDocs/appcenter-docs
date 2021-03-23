@@ -3,7 +3,7 @@ title: Preparing Calabash Tests for Upload
 description: How to upload Calabash tests to App Center Test
 keywords: test 
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/31/2020
 ms.topic: article
 ms.assetid: c3f85df0-50a2-4466-baa0-39bb7218c8e3

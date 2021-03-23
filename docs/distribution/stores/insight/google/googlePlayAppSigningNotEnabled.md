@@ -3,7 +3,7 @@ title: Publishing AAB fails because app signing isn't enabled
 description: What to do when uploading an Android App Bundle fails because Google Play App Signing isn't enabled.
 keywords: google, google play store, store, insight
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 09/06/2019
 ms.topic: reference
 ms.assetid: 97807d59-8e0d-4581-a15a-13de6407ebe9

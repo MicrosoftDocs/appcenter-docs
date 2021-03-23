@@ -3,7 +3,7 @@ title: Espresso App and Test Signing for App Center Test
 description: How to sign your Espresso app APK and test APK for App Center Test
 keywords: test cloud
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/16/2020
 ms.topic: article
 ms.assetid: 40d4bbba-e280-4ee0-8d3b-7b73719a0cfc

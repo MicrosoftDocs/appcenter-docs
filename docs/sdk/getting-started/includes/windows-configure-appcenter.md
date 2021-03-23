@@ -3,7 +3,7 @@ title: Shared docs for .Net SDKs
 description: Shared docs for .Net SDKs
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/18/2021
 ms.topic: include
 ms.assetid: a05d996a-5980-11eb-ae93-0242ac130002

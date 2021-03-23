@@ -3,7 +3,7 @@ title: Test Report Steps are Out-of-Sync
 description: Understanding discrepancies in test step order
 keywords: test cloud, steps, skipped
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/03/2020
 ms.topic: article
 ms.assetid: 0b5ef2ec-0962-47ca-9279-f149f5bca569

@@ -3,7 +3,7 @@ title: App Center Push for React Native Android
 description: Using Push in App Center (Android React Native)
 keywords: sdk, push
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 08/22/2019
 ms.topic: article
 ms.assetid: 656B7FAD-2210-467A-B82F-EF9538DD2D00

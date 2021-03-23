@@ -4,7 +4,7 @@ title: CLI exit codes
 description: Troubleshooting App Center Test
 keywords: test, troubleshooting
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 02/07/2019
 ms.topic: article
 ms.service: vs-appcenter

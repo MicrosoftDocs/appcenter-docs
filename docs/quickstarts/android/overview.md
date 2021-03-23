@@ -3,7 +3,7 @@ title: Android Overview
 description: Landing page to navigate through Android tutorials.
 keywords: app center
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter

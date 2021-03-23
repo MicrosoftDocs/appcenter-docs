@@ -3,7 +3,7 @@ title: Shared docs for XCFrameworks
 description: Shared docs for XCFrameworks
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/04/2020
 ms.topic: include
 ms.assetid: a646eee8-aed8-4bcb-8d06-686beb8d1b5d

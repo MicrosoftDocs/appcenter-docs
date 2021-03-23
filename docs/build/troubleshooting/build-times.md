@@ -3,7 +3,7 @@ title: Understanding Build Execution Time
 description: Comparing local build times to App Center
 keywords: build, faq
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/31/2020
 ms.topic: article
 ms.assetid: bcb76094-34c6-48ae-a24d-60c14a261518

@@ -3,7 +3,7 @@ title: Understanding the App Center Overview Page
 description: Help using the Overview Page on App Center
 keywords: app center, analytics
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/29/2019
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5

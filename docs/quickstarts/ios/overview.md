@@ -3,7 +3,7 @@ title: iOS Overview
 description: Landing page to navigate through iOS tutorials.
 keywords: app center
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/20/2019
 ms.topic: article
 ms.service: vs-appcenter

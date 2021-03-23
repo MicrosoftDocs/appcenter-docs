@@ -3,7 +3,7 @@ title: Deleting Push Data
 description: How to delete personal information from Push
 keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/01/2018 
 ms.topic: article 
 ms.assetid: 80B1FEF8-8521-4CF7-A782-530D89C68A0F

@@ -3,7 +3,7 @@ title: iOS Symbolication
 description: Help understanding symbolication for iOS and macOS diagnostics in App Center
 keywords: crashes, errors, iOS, macOS, symbols, symbolication
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/17/2019
 ms.topic: article
 ms.assetid: 64fe5d88-d981-42bf-8ca9-8f273aa7e2ea

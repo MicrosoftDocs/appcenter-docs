@@ -1,7 +1,7 @@
 ---
 title: Uploading symbols through the CLI
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.topic: include
 ---
 

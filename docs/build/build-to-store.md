@@ -3,7 +3,7 @@ title: Distributing a build to the store
 description: How to distribute your app to the store
 keywords: build, ios, android, store, distribute
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/31/2020
 ms.topic: article
 ms.assetid: 2684ff69-d7e8-4215-abd5-fe830bf75ead

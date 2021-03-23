@@ -3,7 +3,7 @@ title: tvOS SDK Troubleshooting
 description: Troubleshooting the App Center SDK for tvOS
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: aaedb72a-3fb1-4c5c-b53b-4e3bf189656d

@@ -3,7 +3,7 @@ title: Supported Test Frameworks
 description: List of test frameworks supported by App Center
 keywords: test cloud
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/29/2020
 ms.topic: article
 ms.assetid: 20291348-5cf7-421d-b7d9-7d518551ec57

@@ -3,7 +3,7 @@ title: Connecting Organizations to Azure Active Directory
 description: Connect an Azure Active Directory tenant to App Center
 keywords: dashboard Azure organizations
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/17/2019
 ms.topic: article
 ms.assetid: 3f3253c6-e79b-4bc3-a613-9bb31c28d6e2

@@ -3,7 +3,7 @@ title: Publish to App Store Connect
 description: Simplify distribution of mobile applications to the App Store
 keywords: distribution store
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/04/2020
 ms.topic: article
 ms.service: vs-appcenter

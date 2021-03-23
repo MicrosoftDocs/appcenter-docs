@@ -3,7 +3,7 @@ title: Shared docs for Apple SDKs
 description: Shared docs for Apple SDKs
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/18/2021
 ms.topic: include
 ms.assetid: 1cef8428-597e-11eb-ae93-0242ac130002

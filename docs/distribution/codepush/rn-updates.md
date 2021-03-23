@@ -3,7 +3,7 @@ title: Releasing Updates
 description: Distributing updates (React Native SDK & CodePush)
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/12/2019
 ms.topic: article
 ms.assetid: C689FC7D-BAF0-4653-8281-56348C44D75B

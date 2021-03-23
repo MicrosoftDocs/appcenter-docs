@@ -3,7 +3,7 @@ title: HockeySDK Migration
 description: Migrate from the HockeySDK to App Center SDK
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 08/20/2019
 ms.topic: article
 ms.assetid: d3b41120-f93d-471b-abaa-0913603b2399

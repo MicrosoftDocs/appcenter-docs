@@ -3,7 +3,7 @@ title: App Center Analytics for React Native
 description: App Center Analytics for React Native
 keywords: analytics
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/08/2019
 ms.topic: article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb

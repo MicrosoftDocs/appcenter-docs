@@ -3,7 +3,7 @@ title: React Native Node.js versions selection
 description: How to specify Node.js version for React Native app
 keywords: build, react-native, nodejs
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 09/08/2020
 ms.topic: article
 ms.assetid: 14082d66-a0ff-45e6-938d-259f64c35337

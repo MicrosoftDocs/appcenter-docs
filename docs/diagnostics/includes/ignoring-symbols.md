@@ -1,7 +1,7 @@
 ---
 title: Ignoring symbols
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.topic: include
 ---
 

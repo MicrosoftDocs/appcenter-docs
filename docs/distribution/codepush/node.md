@@ -3,7 +3,7 @@ title: CodePush Management SDK
 description: "Learn how to utilize the Management SDK"
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/23/2019
 ms.topic: article
 ms.assetid: 5A294968-C232-41B4-BAD3-EF23981C91F2

@@ -3,7 +3,7 @@ title: Shared docs for Apple Swift Package Manager
 description: Shared docs for Apple Swift Package Manager
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/04/2021
 ms.topic: include
 ms.assetid: 12b31177-2d25-4fda-a193-136e84049f90

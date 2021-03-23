@@ -3,7 +3,7 @@ title: How to add Firebase SDK dependencies (Android Cordova)
 description: How to add Firebase SDK dependencies for App Center Push (Android Cordova)
 keywords: sdk, push
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/06/2018
 ms.topic: article
 ms.assetid: 15f48cc1-6e0b-472a-a007-03a941471884

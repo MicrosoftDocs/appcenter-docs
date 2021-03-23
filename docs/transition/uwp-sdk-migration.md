@@ -2,7 +2,7 @@
 title: HockeySDK for UWP Migration
 description: Migrate from the HockeySDK to App Center SDK for UWP
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 08/06/2019
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41

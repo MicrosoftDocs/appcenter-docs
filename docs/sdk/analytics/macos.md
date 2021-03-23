@@ -3,7 +3,7 @@ title: App Center Analytics for macOS
 description: App Center Analytics for macOS
 keywords: analytics
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/22/2020
 ms.topic: article
 ms.assetid: bec43c2c-55d5-11e7-907b-a6006ad3dba0

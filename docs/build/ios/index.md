@@ -3,7 +3,7 @@ title: Configure an Objective-C or Swift iOS build
 description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 7/16/2020
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa

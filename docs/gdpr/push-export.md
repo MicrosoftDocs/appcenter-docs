@@ -3,7 +3,7 @@ title: Export Push Data
 description: How to export personal information from Push to your users
 keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 05/31/2018 
 ms.topic: article 
 ms.assetid: 9ECEFC64-8C9E-4035-9261-CEDA5D6D4191

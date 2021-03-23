@@ -3,7 +3,7 @@ title: Getting Started for Testers
 description: Guide to get started as an App Center tester
 keywords: distribution
 author: lucen-ms
-ms.author: kegr 
+ms.author: lucen 
 ms.date: 11/05/2018
 ms.topic: article
 ms.assetid: 691fe32c-2b42-47a9-9722-ee4204f86268

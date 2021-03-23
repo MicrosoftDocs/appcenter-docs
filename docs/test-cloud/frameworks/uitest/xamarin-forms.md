@@ -5,7 +5,7 @@ ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.service: vs-appcenter
 ms.custom: test
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/04/2021
 ---
 

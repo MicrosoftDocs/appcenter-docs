@@ -3,7 +3,7 @@ title: Use CodePush to update your app live
 description: Fix bugs and add content quickly
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 09/10/2020
 ms.topic: article
 ms.assetid: F19F4122-B9F0-42CC-85B8-E3C344AE5419

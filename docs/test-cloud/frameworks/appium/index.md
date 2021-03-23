@@ -3,7 +3,7 @@ title: Preparing Appium Tests for Upload
 description: How to upload Appium tests to App Center Test
 keywords: app center, test cloud, test
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/30/2020
 ms.topic: article
 ms.assetid: 898eec94-dfbb-4b10-a72b-b86d3bcf7ff7

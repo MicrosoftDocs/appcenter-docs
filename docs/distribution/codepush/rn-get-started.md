@@ -3,7 +3,7 @@ title: Get Started with the React Native Client SDK
 description: Getting started with the React Native SDK & CodePush
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/21/2020
 ms.topic: article
 ms.assetid: EE233A46-0D14-4E01-970B-37C025F1A390

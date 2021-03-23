@@ -3,7 +3,7 @@ title: Shared docs for Windows SDK
 description:  Shared docs for Windows SDK
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/19/2020
 ms.topic: include
 ms.assetid: d0615d68-2a73-11eb-adc1-0242ac120002

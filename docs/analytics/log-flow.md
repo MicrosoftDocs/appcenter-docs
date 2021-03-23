@@ -3,7 +3,7 @@ title: Understanding the App Center Log Flow Page
 description: Help using the Log Flow Page on App Center
 keywords: app center, analytics
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 04/25/2018
 ms.topic: article
 ms.assetid: be4ee0a0-cd06-486a-bef1-22b6ab5dc896

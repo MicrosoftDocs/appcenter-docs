@@ -3,7 +3,7 @@ title: Sleep time during testing for devices in App Center Test
 description: Time limits for Android & iOS devices to remain active
 keywords: appcenter, test, sleep, device, timeout
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/27/2020
 ms.topic: article
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 

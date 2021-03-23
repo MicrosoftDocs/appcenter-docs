@@ -2,7 +2,7 @@
 title: Unsymbolicaed crashes
 description: Help understanding behavior for unsymbolicated crashes in App Center
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/16/2019
 ms.topic: article
 ms.assetid: 984345b3-5a2b-4d01-bdad-d696ee17d721

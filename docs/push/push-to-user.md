@@ -3,7 +3,7 @@ title: Push to User
 description: Instructions on how to send push notifications to users.
 keywords: app center, push, user
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 02/28/2020
 ms.topic: article
 ms.assetid: df3187de-0295-475e-9be2-4f46034cdcbe

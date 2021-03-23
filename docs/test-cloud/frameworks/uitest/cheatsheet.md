@@ -3,7 +3,7 @@ title: Xamarin.UITest cheat sheet
 description: This document is a cheat sheet that condenses some  UITest information for quick reference.
 keywords: uitest test cloud
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/30/2019
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04

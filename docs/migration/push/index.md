@@ -2,7 +2,7 @@
 title: Push Migration Guide
 description: App Center Push migration guide
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 04/30/2020
 ms.topic: article
 ms.assetid: FDA09DCF-92A4-423C-B18D-FB0A776DF39C

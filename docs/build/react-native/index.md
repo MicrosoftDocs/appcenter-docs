@@ -3,7 +3,7 @@ title: App Center Build for React Native
 description: How to use App Center Build for React Native
 keywords: build, react-native
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 10/09/2020
 ms.topic: article
 ms.assetid: dd0e800f-8571-446c-b2a9-da89b3e35b29

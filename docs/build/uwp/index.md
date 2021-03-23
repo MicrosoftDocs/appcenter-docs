@@ -3,7 +3,7 @@ title: Configure a C# UWP app in App Center
 description: How to set up a build for UWP C#
 keywords: build, windows
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 07/31/2020
 ms.topic: article
 ms.assetid: c70ea80b-9f31-4015-9b9a-c352d305e11f

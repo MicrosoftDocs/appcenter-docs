@@ -3,7 +3,7 @@ title: Dashboard Frequently Asked Questions
 description: Frequently asked questions about the App Center dashboard
 keywords: dashboard faq
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/13/2019
 ms.topic: article
 ms.assetid: 0E94BEBC-F61E-4CAB-8CDF-CC191860D59F

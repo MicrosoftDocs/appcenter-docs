@@ -2,7 +2,7 @@
 title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/30/2020
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea

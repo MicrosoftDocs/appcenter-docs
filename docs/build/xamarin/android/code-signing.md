@@ -3,7 +3,7 @@ title: Xamarin.Android Code Signing Setup in App Center
 description: How to set up code signing for Xamarin.Android apps
 keywords: android
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/28/2018
 ms.topic: article
 ms.assetid: 88173334-ab35-439a-98ec-a9bef49da42c

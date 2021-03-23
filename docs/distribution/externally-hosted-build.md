@@ -3,7 +3,7 @@ title: Distribute a release with an externally hosted build
 description: Host the binary of a release outside of App Center
 keywords: distribution external build release
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 11/11/2019
 ms.topic: article
 ms.service: vs-appcenter

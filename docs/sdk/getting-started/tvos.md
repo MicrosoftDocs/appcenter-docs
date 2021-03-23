@@ -3,7 +3,7 @@ title: Get Started with tvOS
 description: Get started with tvOS
 keywords: sdk
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 01/18/2021
 ms.topic: article
 ms.assetid: 679af2f0-553c-11e7-b114-b2f933d5fe66

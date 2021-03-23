@@ -3,7 +3,7 @@ title: Working with files
 description: How to include files in Xamarin.UITest test runs in App Center
 keywords: test cloud
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 06/08/2020
 ms.topic: article
 ms.assetid: 5d989ba4-6356-4bd3-9db4-b4fd7ae5bf69
