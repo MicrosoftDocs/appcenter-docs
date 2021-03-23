@@ -9,7 +9,6 @@ ms.topic: article
 ms.assetid: 0d7cfd0a-c317-11e7-abc4-cec278b6b50a
 ms.service: vs-appcenter
 ms.custom: build
-ms.reviewer: nirajpur
 ---
 
 # Build Environment variables

@@ -4,7 +4,6 @@ description: How to migrate from CodePush to App Center
 keywords: distribution
 author: lucen-ms
 ms.author: kegr
-ms.reviewer: kegr
 ms.date: 10/11/2018
 ms.topic: article
 ms.assetid: 94769F28-24C6-4A14-84F9-9A8D82AE1D13

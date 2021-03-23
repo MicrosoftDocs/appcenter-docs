@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: App Center Slack App Documentation
 description: how to use App Center Slack App
 keywords: app center, appcenter, visual studio app center, visual studio appcenter, slack app, slackbot, slack bot, documentation, integration, slack
@@ -10,12 +8,6 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: d019ce2d-24b6-4a07-a9a2-e3484fcbb005
-
-
-# optional metadata
-
-#ms.devlang: dotnet
-#ms.reviewer: piyushjo
 ---
 
 # App Center Slack App

@@ -9,7 +9,6 @@ ms.topic: article
 ms.assetid: 3603ae8a-8adc-49df-9eee-f078008691af
 ms.service: vs-appcenter
 ms.custom: build
-ms.reviewer: nirajpur
 ---
 
 # Build scripts
