@@ -3,7 +3,7 @@ title: Enable In-app Updates
 description: Easily stay up to date on the latest build with in-app update notifications.
 keywords: distribution
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 03/08/2021
 ms.topic: article
 ms.service: vs-appcenter

@@ -3,7 +3,7 @@ title: App Center Distribute for Xamarin
 description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: lucen-ms
-ms.author: kegr
+ms.author: lucen
 ms.date: 12/14/2020
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
