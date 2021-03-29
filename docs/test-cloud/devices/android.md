@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 3/4/2021
+ms.date: 3/25/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -304,8 +304,10 @@ Samsung Galaxy Tab S4 | 8.1.0
 Samsung Galaxy Tab S4 | 9
 Samsung Galaxy Tab S5e | 10
 Samsung Galaxy Tab S6 | 10
+Samsung Galaxy Tab S6 | 11
 Samsung Galaxy Tab S6 | 9
 Samsung Galaxy Tab S6 Lite | 10
+Samsung Galaxy Tab S6 Lite | 11
 Samsung Galaxy Tab S7 | 10
 Samsung Galaxy Tab S7 | 11
 Samsung Galaxy Tab S7 Plus | 10
@@ -316,6 +318,7 @@ Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4 | 9
 Samsung Galaxy Xcover 4s | 10
 Samsung Galaxy Xcover 4s | 9
+Samsung Google Nexus 10 | 5.1.1
 Sony Xperia 1 | 10
 Sony Xperia 1 | 11
 Sony Xperia 1 | 9
@@ -339,8 +342,11 @@ Sony Xperia XZ2 Compact | 10
 Sony Xperia XZ2 Compact | 8.0.0
 Sony Xperia XZ3 | 10
 Sony Xperia XZ3 | 9
+Sony Xperia Z2 | 6.0.1
+Sony Xperia Z2 Tablet | 6.0.1
 Sony Xperia Z3 | 5.0.2
 Sony Xperia Z3 Compact | 5.0.2
+Sony Xperia Z3 Compact | 6.0.1
 Sony Xperia Z3+ | 5.0.2
 Sony Xperia Z5 | 5.1.1
 Sony Xperia Z5 | 7.1.1
