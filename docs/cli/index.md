@@ -4,7 +4,7 @@ description: How to use the CLI to access App Center features
 keywords: command-line, app center, visual studio app center, CLI, command-line interface
 author: lucen-ms
 ms.author: lucen
-ms.date: 09/10/2020
+ms.date: 30/03/2020
 ms.topic: article
 ms.assetid: f98b1b59-ee20-4ed0-beb9-ec8fd4596ad1
 ms.service: vs-appcenter
@@ -18,7 +18,7 @@ To get more information on CLI installation and currently supported commands, re
 
 ## Getting Started
 ### Pre-requisites
-App Center CLI requires Node.js version 8 or better.
+App Center CLI requires Node.js version 12 or higher.
 
 ### Installation
 Open a terminal/command prompt, and run `npm install -g appcenter-cli`.
