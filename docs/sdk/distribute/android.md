@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/08/2021
+ms.date: 03/31/2021
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -244,6 +244,11 @@ public class MyDistributeListener implements DistributeListener {
         // Return true if you're using your own dialog, false otherwise
         return true;
     }
+    
+    @Override
+    public void onNoReleaseAvailable(Activity activity) {
+        Toast.makeText(activity, activity.getString(R.string.no_updates_available), Toast.LENGTH_LONG).show();
+    }
 }
 ```
 ```kotlin
@@ -292,6 +297,10 @@ class MyDistributeListener : DistributeListener {
         // Return true if you're using your own dialog, false otherwise
         return true
     }
+
+    override fun onNoReleaseAvailable(activity: Activity) {
+        Toast.makeText(activity, activity.getString(R.string.no_updates_available), Toast.LENGTH_LONG).show()
+    }
 }
 ```
 
@@ -308,20 +317,7 @@ This behavior is needed to cover the following scenarios:
 
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
 
-### 3. Execute code if no updates are found
-
-In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `onNoReleaseAvailable` from `DistributeListener` interface callback is invoked. This allows you to execute custom code in such scenarios.
-
-Here is an example which shows how to display toast message when no updates are found:
-
-```java
-public class MyDistributeListener implements DistributeListener {
-    @Override
-    public void onNoReleaseAvailable(Activity activity) {
-        Toast.makeText(activity, activity.getString(R.string.no_updates_available), Toast.LENGTH_LONG).show();
-    }
-}
-```
+In cases when the SDK checks for updates and doesn't find any updates available newer than the one currently used, a `onNoReleaseAvailable` from `DistributeListener` interface callback is invoked. This allows you to execute custom code in such scenarios. The example above shows how to display toast message when no updates are found.
 
 ## Enable or disable App Center Distribute at runtime
 
