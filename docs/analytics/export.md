@@ -251,6 +251,22 @@ By default, a new export configuration will back-fill two last days of data for 
 
 By default, a new export configuration exports Analytics data only (events, sessions, and so on) Diagnostics-related data [can be exported](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
+### Auto-disable mechanism
+
+If App Center receives some type of failures from Azure for your export configuration, the export configuration will be disabled automatically to protect the entire export pipeline.
+
+For example:
+
+- Application Insights instrumentation key is invalid.
+- Blob resource can't be authenticated or the remote name can't be resolved.
+
+So far, there's no notification when it happens. However, you can use one of the following APIs to check the status regularly if needed.
+
+```HTTP
+GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations
+GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations​/{export_configuration_id}
+```
+
 ## Pricing
 
 To set up Export, you'll need to create an Azure subscription. Exporting the data has an associated cost that will depend on the Azure service you're exporting to. Find the details on pricing for each service at:
