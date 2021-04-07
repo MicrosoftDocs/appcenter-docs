@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/12/2020
+ms.date: 04/07/2021
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
@@ -253,19 +253,13 @@ By default, a new export configuration exports Analytics data only (events, sess
 
 ### Auto-disable mechanism
 
-If App Center receives some type of failures from Azure for your export configuration, the export configuration will be disabled automatically to protect the entire export pipeline.
-
-For example:
+App Center may automatically disable bad export configuration to prevent any possible delay in the entire export pipeline. For example, App Center handles below failures from Azure.
 
 - Application Insights instrumentation key is invalid.
 - Blob resource can't be authenticated or the remote name can't be resolved.
 
-So far, there's no notification when it happens. However, you can use one of the following APIs to check the status regularly if needed.
-
-```HTTP
-GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations
-GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations​/{export_configuration_id}
-```
+> [!NOTE]
+> Data going to Application Insights stays 48 hours and 30 days for Blob Storage. If the export is re-enabled within that time, data will flow with the backup. Any data past the time frame is lost.
 
 ## Pricing
 
