@@ -260,6 +260,13 @@ App Center may automatically disable bad export configuration to prevent any pos
 
 > [!NOTE]
 > Data going to Application Insights stays 48 hours and 30 days for Blob Storage. If the export is re-enabled within that time, data will flow with the backup. Any data past the time frame is lost.
+>
+> You can use one of the following APIs to check the status in order to take restoration action.
+>
+>```http
+> GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations
+> GET /v0.1​/apps​/{owner_name}​/{app_name}​/export_configurations​/{export_configuration_id}
+>```
 
 ## Pricing
 
