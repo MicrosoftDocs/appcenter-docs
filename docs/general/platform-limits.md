@@ -18,7 +18,7 @@ The following limits are in effect for App Center usage.
 > [!NOTE]
 > These limits are our default limits. Contact App Center Support (you can use the ? icon on any App Center page) for questions about limits.
 
-- Maximum number of members in an organization: 2,000 members
+- Maximum number of members in an organization: 5,000 members
 - Maximum number of members in a team: 2,000 members
 - Maximum number of members in a distribution group: 30,000 members
 - Maximum number of distribution groups for each app: 100 groups
