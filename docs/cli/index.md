@@ -4,7 +4,7 @@ description: How to use the CLI to access App Center features
 keywords: command-line, app center, visual studio app center, CLI, command-line interface
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/30/2020
+ms.date: 04/21/2021
 ms.topic: article
 ms.assetid: f98b1b59-ee20-4ed0-beb9-ec8fd4596ad1
 ms.service: vs-appcenter
@@ -52,3 +52,38 @@ For more details on a list of CLI commands, refer to [App Center CLI GitHub repo
 **A note about using the `--app` parameter:**
 
 Because of restrictions in how app name parsing is done, application names must not begin with hyphens or other ambiguous characters that may confuse GNU style parsers. You can read more about this in the associated [CLI issue](https://github.com/Microsoft/appcenter-cli/issues/287). 
+
+### Using a proxy
+
+You can use CLI through a proxy. For that, you would need to set up `npm config` and specify environment variable with proxy address.
+Note that proxy addresses should be specified with protocols (e.g. `http://`).
+
+**NPM Configuration**
+
+To set up proxy uasge in npm you either need to run commands:
+
+```bash
+npm config set proxy http://username:password@host:port
+npm config set https-proxy http://username:password@host:port
+```
+
+or append folowwing lines to ~/.npmrc file directly:
+
+```
+proxy=http://username:password@host:port
+https-proxy=http://username:password@host:port
+```
+
+**Environment variables**
+
+One way to set up environment variables is to run command:
+
+Bash:
+```bash
+export HTTP_PROXY="http://host:port"
+```
+
+PowerShell:
+```powershell
+$Env:HTTP_PROXY="http://host:port"
+```
