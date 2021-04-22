@@ -159,7 +159,7 @@ Query for XPath("//h1") gave 1 results.
 ```
 
 ## Invoking JavaScript
-It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
+It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of a string, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
 
 ### InvokeJS on Android
 Generally speaking Android requires that the JavaScript `returns` the value; otherwise the query will return `null`:
