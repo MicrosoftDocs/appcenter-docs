@@ -60,7 +60,7 @@ Note that proxy addresses should be specified with protocols (e.g. `http://`).
 
 **NPM Configuration**
 
-To set up proxy uasge in npm you either need to run commands:
+To set up proxy usage in npm you either need to run commands:
 
 ```bash
 npm config set proxy http://username:password@host:port
