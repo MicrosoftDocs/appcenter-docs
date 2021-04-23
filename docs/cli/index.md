@@ -67,7 +67,7 @@ npm config set proxy http://username:password@host:port
 npm config set https-proxy http://username:password@host:port
 ```
 
-or append folowwing lines to ~/.npmrc file directly:
+or append following lines to ~/.npmrc file directly:
 
 ```
 proxy=http://username:password@host:port
