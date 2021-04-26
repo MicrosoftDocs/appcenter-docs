@@ -60,23 +60,16 @@ Note that proxy addresses should be specified with protocols (for example `http:
 
 **NPM Configuration**
 
-To set up proxy usage in npm you either need to run commands:
+To set up proxy usage in npm you need to run commands:
 
 ```bash
 npm config set proxy http://username:password@host:port
 npm config set https-proxy http://username:password@host:port
 ```
 
-or append following lines to ~/.npmrc file directly:
+**Environment variable**
 
-```
-proxy=http://username:password@host:port
-https-proxy=http://username:password@host:port
-```
-
-**Environment variables**
-
-One way to set up environment variables is to run command:
+To set up environment variable run command:
 
 Bash:
 ```bash
