@@ -110,6 +110,7 @@ app.Query(c=>c.Marked("MyButton"))
 The shorter form `app.Query("MyButton")` also works.
 
 ### Adding a UITest project to an existing solution
+#### "NOTE: This template is only available on Visual Studio 2017, recommend reviewing template project from that IDE. Visual Studio 2019 does not have this template installed"
 # [Visual Studio](#tab/windows)
 Visual Studio has a template to help add a Xamarin.UITest project to an existing Xamarin.Forms solution:
 
