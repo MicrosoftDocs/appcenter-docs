@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 26/04/2021
+ms.date: 04/26/2021
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.tgt_pltfrm: xamarin

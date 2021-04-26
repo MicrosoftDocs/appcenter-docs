@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 26/04/2021
+ms.date: 04/26/2021
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.tgt_pltfrm: apple

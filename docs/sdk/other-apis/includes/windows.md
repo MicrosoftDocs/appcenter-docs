@@ -4,7 +4,7 @@ description:  Shared docs for Windows SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 26/04/2021
+ms.date: 04/26/2021
 ms.topic: include
 ms.assetid: d0615d68-2a73-11eb-adc1-0242ac120002
 ms.tgt_pltfrm: windows

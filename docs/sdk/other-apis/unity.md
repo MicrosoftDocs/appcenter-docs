@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 26/04/2021
+ms.date: 04/26/2021
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.tgt_pltfrm: unity
