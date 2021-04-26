@@ -56,7 +56,7 @@ Because of restrictions in how app name parsing is done, application names must 
 ### Using a proxy
 
 You can use CLI through a proxy. For that, you would need to set up `npm config` and specify environment variable with proxy address.
-Note that proxy addresses should be specified with protocols (e.g. `http://`).
+Note that proxy addresses should be specified with protocols (for example `http://`).
 
 **NPM Configuration**
 
