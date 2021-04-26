@@ -4,7 +4,7 @@ description:  Shared docs for Windows SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/19/2020
+ms.date: 26/04/2021
 ms.topic: include
 ms.assetid: d0615d68-2a73-11eb-adc1-0242ac120002
 ms.tgt_pltfrm: windows
@@ -65,6 +65,26 @@ Enable or disable the services at the runtime with following code:
 
 ```csharp
 Analytics.SetEnabledAsync(false);
+```
+
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = false;
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = true;
+```
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed;
 ```
 
 ## Check if App Center is enabled

@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/08/2020
+ms.date: 26/04/2021
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.tgt_pltfrm: xamarin
@@ -78,6 +78,26 @@ The state is persisted in the device's storage across application launches.
 
 > [!NOTE]
 > This method must only be used after `AppCenter` has been started.
+
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = false;
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = true;
+```
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed;
+```
 
 ## Change state of service in runtime
 
