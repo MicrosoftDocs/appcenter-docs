@@ -29,7 +29,7 @@ The only part of App Center that runs outside of the United States is App Center
 Content delivery networks (CDN) are used to serve some content and app releases from App Center. CDN points-of-presence are located around the world, but all source data is in the United States.
 
 > [!NOTE]
-> Due to country specific policies and laws, we cannot guarantee that App Center works in all countries. For some users in China region, Analytics and Diagnostics SDK data may not make it to our servers based in the United States. 
+> Due to country specific policies and laws, we cannot guarantee that App Center works in all countries. For some users in China region, Analytics and Diagnostics SDK data may experience significant delay or not make it to our servers based in the United States. 
 
 
 ## Data security
