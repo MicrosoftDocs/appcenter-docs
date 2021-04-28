@@ -13,7 +13,7 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 # Sparkle Updates
 
-Sparkle is a software update framework for [macOS](http://sparkle-project.org) and [Windows](https://winsparkle.org/) apps.
+Sparkle is a software update framework for [macOS](http://sparkle-project.org) and Windows ([WinSparkle](https://winsparkle.org), [NetSparkleUpdater](https://github.com/NetSparkleUpdater/NetSparkle)) apps.
 
 ## Setup for distribution
 
