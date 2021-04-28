@@ -41,7 +41,7 @@ To sign your iOS builds, upload a provisioning profile (`.mobileprovision`) and 
 
 ## Finding provisioning profiles 
 ### Option 1 - Getting a provisioning profile (.mobileprovision) from Apple Developer Center
-1. On the **Certificates, IDs & Profiles** page, click on **Provisioning Profiles**.
+1. On the **Certificates, IDs & Profiles** page, click on **Profiles**.
 2. Pick the provisioning profile for signing your app in App Center and download it. Make sure to select the right type of profile (development or distribution).
    ![Download provisioning profile](images/apple-developer-download-provisioning-profile.png)
 3. After saving the provisioning profile locally (in a `.mobileprovision` file), you can upload it to App Center when [configuring a branch](~/build/ios/index.md).

@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 3/25/2021
+ms.date: 4/26/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -64,6 +64,7 @@ HTC 10 | 6.0.1
 HTC 10 | 8.0.0
 HTC Nexus 9 | 5.0.1
 HTC Nexus 9 | 7.1.1
+HTC One (Dual Sim) | 5.0.2
 HTC One (M8) | 5.0.1
 HTC One A9 | 6.0.1
 HTC One M9 | 5.0.2
@@ -84,10 +85,15 @@ Huawei Nexus 6P | 8.0.0
 Huawei Nexus 6P | 8.1.0
 Huawei P Smart (2019) | 9
 Huawei P10 | 7.0
+Huawei P20 Pro | 10
 Huawei P20 Pro | 8.1.0
 Huawei P20 Pro | 9
 Huawei P30 Pro | 10
 Huawei P30 Pro | 9
+Karbonn Sparkle V | 6.0.1
+LG G2 | 5.0.2
+LG G3 (US Carrier) | 5.0
+LG G3 s | 5.0.2
 LG G4 | 5.1
 LG G4 | 6.0
 LG G5 | 6.0.1
@@ -178,6 +184,8 @@ OnePlus 7T Pro | 11
 OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
+OnePlus 9 | 11
+OnePlus 9 Pro | 11
 OnePlus Nord | 10
 OnePlus Nord | 11
 OnePlus Nord N10 | 10
@@ -188,6 +196,7 @@ Samsung Galaxy A40 | 9
 Samsung Galaxy A5 (2017) | 8.0.0
 Samsung Galaxy A5 | 5.0.2
 Samsung Galaxy A50 | 10
+Samsung Galaxy A50 | 11
 Samsung Galaxy A50 | 9
 Samsung Galaxy A51 | 10
 Samsung Galaxy A51 | 11
@@ -199,6 +208,7 @@ Samsung Galaxy A7 (2018) | 9
 Samsung Galaxy A7 | 5.0.2
 Samsung Galaxy A7 | 6.0.1
 Samsung Galaxy A70 | 10
+Samsung Galaxy A70 | 11
 Samsung Galaxy A8 | 7.1.1
 Samsung Galaxy A8 | 8.0.0
 Samsung Galaxy A8 | 9
