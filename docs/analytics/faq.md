@@ -52,3 +52,12 @@ The App Center backend will only accept logs that are no more than 25 days in th
 
 ## How granular is the response for Analytics API `start` and `end` parameters?
 [Analytics API](https://openapi.appcenter.ms/#/analytics/) returns counters by day. In other words, the time portion of the input is ignored and only the day component is taken into account when the result is processed.
+
+## why the UserId's value is 'None' in Analytics events, sessions and other analytics data?
+User ID can only be applied to Diagnostics (crashes, errors) for now.
+
+The workaround is to add the userId in Properties as shown below.
+`Map<String, String> properties = new HashMap<>();
+properties.put("UserId", "your user Id");
+Analytics.trackEvent("EventName", properties);`
+
