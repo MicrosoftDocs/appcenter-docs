@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/22/2020
+ms.date: 04/29/2021
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -421,10 +421,6 @@ appcenter codepush release-react -a <ownerName>/MyApp-iOS
 
 It's the same parameter as the one described in the [above section](#app-name-parameter).
 
-#### Platform parameter
-
-This parameter specifies which platform the current update is targeting, and can be either `android`, `ios` or `windows` (case-insensitive). This value is only used for properly bundling the app's update contents and isn't sent to the server.
-
 #### Deployment name parameter
 
 It's the same parameter as the one described in the [above section](#deployment-name-parameter).
@@ -566,10 +562,6 @@ appcenter codepush release-cordova -a <ownerName>/MyApp-iOS
 #### App name parameter
 
 It's the same parameter as the one described in the [above section](#app-name-parameter).
-
-#### Platform parameter
-
-This parameter specifies which platform the current update is targeting, and can be either `iOS` or `Android`.
 
 #### Deployment name parameter
 
