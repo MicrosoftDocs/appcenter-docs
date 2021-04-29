@@ -4,7 +4,7 @@ description: Help using the Analytics features of App Center
 keywords: app center, analytics, faq
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/14/2020
+ms.date: 04/29/2021
 ms.topic: article
 ms.assetid: bca077bb-4cd9-4b79-bb93-01077680f58e
 ms.service: vs-appcenter
