@@ -19,7 +19,7 @@ Navigating through any new tool can be overwhelming as a tester. There are many 
 
 App Center is a continuous integration, delivery, and testing solution for Android, iOS, macOS, and Windows apps. App Center enables developers to ship apps faster and with more confidence by automating the development life cycle.
 
-App Center offers many different services, but the most relevant for testing is our Distribution service. App Center allows developers to release application binaries to you, a tester, via download link, the App Center install portal, or our native app (android only).  
+App Center offers many different services, but the most relevant for testing is our Distribution service. App Center allows developers to release application binaries to you, a tester, via download link, or the App Center install portal.  
 
 This document assumes that you're attempting to get started as a tester, and have been invited to test an App Center app.
 
