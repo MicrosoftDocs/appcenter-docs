@@ -15,6 +15,9 @@ ms.custom: distribute
 
 After getting invited to test an Android Application in App Center you'll receive an email notifying you of your pending invitation. The following sections outline the steps you need to take to get started testing this app.
 
+> [!NOTE]
+> Visual Studio App Center is no longer available in the Google Play store. Unfortunately, Google Play store considers the in-app update code as malicious behavior even if it isn’t used at runtime. There are no current plans to bring the app back to the Google Play store. The same set of functionality is still available via he App Center install portal. 
+
 ## Device configuration
 
 > [!Warning]
