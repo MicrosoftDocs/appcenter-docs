@@ -57,6 +57,8 @@ The App Center backend will only accept logs that are no more than 25 days in th
 User ID can only be applied to Diagnostics (crashes, errors) for now.
 
 The workaround is to add the userId in Properties as shown below.
-`Map<String, String> properties = new HashMap<>();
+```Java
+Map<String, String> properties = new HashMap<>();
 properties.put("UserId", "your user Id");
-Analytics.trackEvent("EventName", properties);`
+Analytics.trackEvent("EventName", properties);
+```
