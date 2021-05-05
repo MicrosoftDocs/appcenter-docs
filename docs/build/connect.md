@@ -42,7 +42,7 @@ If you connected to a repository service with the wrong account, you must open y
 ### Bitbucket
 To connect to another Bitbucket account, first revoke the OAuth token. Go to [https://bitbucket.org/account/](https://bitbucket.org/account/) > Access Management (App authorizations) > Revoke App Center token. Then, sign out from Bitbucket. In App Center's **Build** tab, reconnect to Bitbucket and go through the OAuth flow again. 
 
-![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-OAuth-token-4.29.2020.Png "Remove Bitbucket token")
+![Remove Bitbucket Oauth Token](~/build/images/remove-bitbucket-OAuth-token-4.29.2021.png "Remove Bitbucket token")
 
 ### GitHub
 If you logged in into App Center with a GitHub account, you can only build apps from repositories under that GitHub account.
