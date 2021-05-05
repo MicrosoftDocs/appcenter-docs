@@ -81,6 +81,9 @@ In this case, the App Center SDK continues to collect data but it will be sent o
 AppCenter.IsNetworkRequestsAllowed = true;
 ```
 
+>[!NOTE]
+> This value is retained between starts.
+
 At any time, you can check whether sending data in the App Center SDK is allowed or not.
 
 ```csharp

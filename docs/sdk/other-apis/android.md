@@ -119,6 +119,9 @@ AppCenter.setNetworkRequestsAllowed(true);
 AppCenter.setNetworkRequestsAllowed(true)
 ```
 
+>[!NOTE]
+> This value is retained between starts.
+
 At any time, you can check whether sending data in the App Center SDK is allowed or not.
 
 ```java
@@ -127,6 +130,9 @@ AppCenter.isNetworkRequestsAllowed();
 ```kotlin
 AppCenter.isNetworkRequestsAllowed()
 ```
+
+>[!NOTE]
+> This method will return true by default until App Center is fully configured.
 
 ## Change state of service in runtime
 
