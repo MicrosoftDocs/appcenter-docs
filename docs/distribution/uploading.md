@@ -122,7 +122,7 @@ Upload a new release using these sequential API calls:
     - **iOS** uses the general type `application/octet-stream`
 
     The final command should look something like this:
-    ```shell
+    ```sh
     FILE_SIZE_BYTES=$(wc -c "ExampleApp.apk" | awk '{print $1}')
     APP_TYPE='application/vnd.android.package-archive' # iOS uses `application/octet-stream` instead.
     
@@ -202,7 +202,7 @@ Upload a new release using these sequential API calls:
     $DISTRIBUTE_URL
     ```
         
-##### Distribute Release      
+##### Distribute Release
 Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
 - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers][POSTtesters]
 - [POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups][POSTgroups]
