@@ -132,7 +132,7 @@ AppCenter.isNetworkRequestsAllowed()
 ```
 
 >[!NOTE]
-> This method will return true by default until App Center is fully configured.
+> This method before the start of App Center returns the last value set or true if the value wasn't changed before App Center start.
 
 ## Change state of service in runtime
 

@@ -104,7 +104,7 @@ AppCenter.IsNetworkRequestsAllowed;
 ```
 
 >[!NOTE]
-> For Android apps this method will return true by default until App Center is fully configured.
+> In Android apps this method before the start of App Center returns the last value set or true if the value wasn't changed before App Center start.
 
 ## Check if App Center is enabled
 
