@@ -104,7 +104,8 @@ AppCenter.IsNetworkRequestsAllowed;
 ```
 
 >[!NOTE]
-> In Android apps this method before the start of App Center returns the last value set or true if the value wasn't changed before App Center start.
+> The value saved in SharedPreferences is ignored until `AppCenter` is started on Android platform.
+> It will return the last value set using `AppCenter.IsNetworkRequestsAllowed = allowed` or `true` if the value wasn't changed before AppCenter start.
 
 ## Check if App Center is enabled
 

@@ -110,7 +110,8 @@ await AppCenter.isNetworkRequestsAllowed();
 ```
 
 >[!NOTE]
-> [Android] This method before the start of App Center returns the last value set or true if the value wasn't changed before App Center start.
+> The value saved in SharedPreferences is ignored until `AppCenter` is started on Android platform.
+> It will return the last value set using `setNetworkRequestsAllowed` or `true` if the value wasn't changed before AppCenter start.
 
 ## Change state of service in runtime
 
