@@ -132,7 +132,7 @@ AppCenter.isNetworkRequestsAllowed()
 ```
 
 >[!NOTE]
-> The value saved in SharedPreferences is ignored until `AppCenter` is started.
+> The value saved previously in `SharedPreferences` is ignored until `AppCenter` is started.
 > It will return the last value set using `setNetworkRequestsAllowed` or `true` if the value wasn't changed before AppCenter start.
 
 ## Change state of service in runtime
