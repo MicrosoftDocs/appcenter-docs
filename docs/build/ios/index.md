@@ -4,7 +4,7 @@ description: How to set up a build for iOS apps created with Xcode
 keywords: build, ios
 author: lucen-ms
 ms.author: lucen
-ms.date: 7/16/2020
+ms.date: 04/29/2021
 ms.topic: article
 ms.assetid: 9e32f306-5be6-40e2-846c-1742d6b083aa
 ms.service: vs-appcenter
@@ -48,6 +48,9 @@ By default, a new build is triggered every time a developer pushes to a configur
 
 ### 3.4. Increment build number
 When enabled, the `CFBundleVersion` in the `Info.plist` of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
+
+> [!NOTE]
+> To make the Increment build number work, please name the `.plist file` as `*Info.plist` such as `Production-Info.plist`.
 
 ### 3.5. Tests
 If the selected scheme has a test action with a test target selected, you can configure the tests to run as part of each build. App Center can currently run XCTest unit tests.
