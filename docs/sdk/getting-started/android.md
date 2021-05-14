@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/26/2021
+ms.date: 05/13/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -87,22 +87,31 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
   a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
 
-  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  b. Open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
   ```text
-  android:fullBackupContent="@xml/appcenter_backup_rule"
+  android:dataExtractionRules="@xml/appcenter_backup_rule"
   ```
 
   c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
   ```xml
-  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-      <exclude domain="sharedpref" path="AppCenter.xml"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-  </full-backup-content>
+  <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
+      <cloud-backup>
+          <exclude domain="sharedpref" path="AppCenter.xml"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+      </cloud-backup>
+      <device-transfer>
+          <exclude domain="sharedpref" path="AppCenter.xml"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+      </device-transfer>
+  </data-extraction-rules>
   ```
 
 ## 4. Start the SDK

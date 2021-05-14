@@ -4,7 +4,7 @@ description: Get started with Unity
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/04/2020
+ms.date: 05/13/2021
 ms.topic: article
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.tgt_pltfrm: unity
@@ -86,25 +86,34 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
 
   a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
 
-  b. Open the project's **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  b. Open the project's **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
 > [!NOTE]
 > If you don't already have your own **AndroidManifest.xml** file, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created one at the time of build.
 
   ```text
-  android:fullBackupContent="@xml/appcenter_backup_rule"
+  android:dataExtractionRules="@xml/appcenter_backup_rule"
   ```
 
   c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
   ```xml
-  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-      <exclude domain="sharedpref" path="AppCenter.xml"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-  </full-backup-content>
+  <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
+      <cloud-backup>
+          <exclude domain="sharedpref" path="AppCenter.xml"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+      </cloud-backup>
+      <device-transfer>
+          <exclude domain="sharedpref" path="AppCenter.xml"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+      </device-transfer>
+  </data-extraction-rules>
   ```
 
 ## 4. Enable the SDK

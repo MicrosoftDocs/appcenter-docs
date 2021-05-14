@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 01/26/2021
+ms.date: 05/13/2021
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -203,22 +203,31 @@ if (AppCenter.Configured)
 
 1. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
 
-2. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
 ```console
-android:fullBackupContent="@xml/appcenter_backup_rule"
+android:dataExtractionRules="@xml/appcenter_backup_rule"
 ```
 
 3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
 ```xml
-    <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+<data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
+    <cloud-backup>
         <exclude domain="sharedpref" path="AppCenter.xml"/>
         <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
         <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
         <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
         <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-    </full-backup-content>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="AppCenter.xml"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+        <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+    </device-transfer>
+</data-extraction-rules>
 ```
 
 ### 4.3 Replace the placeholder with your App Secret
