@@ -75,7 +75,7 @@ You can add binary and text attachments to a crash report. The SDK will send the
 }
 ```
 ```swift
-func attachments(with crashes: Crashes, for errorReport: ErrorReport) -> [ErrorAttachmentLog] {
+func attachments(with crashes: Crashes, for errorReport: ErrorReport) -> [ErrorAttachmentLog]? {
   let attachment1 = ErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")
   let attachment2 = ErrorAttachmentLog.attachment(withBinary: "Fake image".data(using: String.Encoding.utf8), filename: nil, contentType: "image/jpeg")
   return [attachment1!, attachment2!]
