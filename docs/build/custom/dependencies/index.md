@@ -26,7 +26,7 @@ However, there are scenarios where custom handling of those dependencies might b
 There's several options available for restoring your dependencies:
 
 - Default Automatic restoration - Typical for NuGet packages and similar workflows.
-- Customized Automatic restoration - Including files like NuGet.config in your project that modify the normal automatic process.
+- Customized Automatic restoration - Including files like NuGet.Config in your project that modify the normal automatic process.
 - Restoration in a [Post-Clone script](~/build/custom/scripts/index.md#post-clone) - Allows full control of the restoration process. 
 - Including packages in the repository itself - Guarantees the packages are available, but can considerably increase the size of the repository. 
 
