@@ -16,12 +16,12 @@ This document provides instructions for preparing Espresso tests for upload to T
 
 ## 1. Changes to the build system
 
-Add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the **build.gradle** in your project root directory:
+Add the Maven Central repository. Make sure you have a `mavenCentral()` entry in the **build.gradle** in your project root directory:
 
 ```gradle
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 }
 ```
@@ -29,7 +29,7 @@ allprojects {
 Add the following dependency in your app module's **build.gradle** file:
 
 ```gradle
-androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.4')
+androidTestImplementation('com.microsoft.appcenter:espresso-test-extension:1.5')
 ```
 
 This code adds the Test [Espresso Extensions](https://github.com/Microsoft/AppCenter-Test-Espresso-Extensions) as a dependency to your project, which ensures that the `ReportHelper` is available at compile time. The `ReportHelper` enables the `label` feature. See Step 3 for more detail on the `label` feature. 
