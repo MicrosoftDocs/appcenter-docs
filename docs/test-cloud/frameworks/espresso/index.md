@@ -16,12 +16,12 @@ This document provides instructions for preparing Espresso tests for upload to T
 
 ## 1. Changes to the build system
 
-Add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the **build.gradle** in your project root directory:
+Add the Maven Central repository. Make sure you have a `mavenCentral()` entry in the **build.gradle** in your project root directory:
 
 ```gradle
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 }
 ```

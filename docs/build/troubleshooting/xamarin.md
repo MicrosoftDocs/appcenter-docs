@@ -100,7 +100,7 @@ For `.csproj` files, it shouldn't be lower than four directories deep including 
 For `.sln` files, it shouldn't be lower than two directories deep including the repository root.
 
 ## How do I restore a private NuGet feed?
-If the **NuGet.config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely using [environment variables](~/build/custom/scripts/index.md).
+If the **NuGet.Config** file is checked-in into the repository and sitting next to the **.sln** or at the root level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely using [environment variables](~/build/custom/scripts/index.md).
 
 For Mac build machines:
 

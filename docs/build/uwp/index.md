@@ -51,7 +51,7 @@ Simulator builds can only be ran on simulators and can't be installed on the dev
 Uploading your own certificate is optional. In case you don't provide one, App Center will automatically generate a temporary certificate and sign the build for you. This certificate is unique for each build.
 
 ### 3.7. NuGet restore
-If the **NuGet.config** file is checked into the repository, and sitting next to the **.sln** or at the level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
+If the **NuGet.Config** file is checked into the repository, and sitting next to the **.sln** or at the level of your repository, App Center restores your private NuGet feeds when they're added as shown in the example below. Credentials can be added safely by using [environment variables](~/build/custom/scripts/index.md):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
