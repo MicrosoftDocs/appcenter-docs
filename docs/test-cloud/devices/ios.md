@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 5/25/2021
+ms.date: 6/15/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -18,6 +18,7 @@ ms.custom: test
 
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
+
 
 
 
@@ -46,7 +47,7 @@ Apple iPad 9.7" (2018) | 12.2
 Apple iPad 9.7" (2018) | 14.0.1
 Apple iPad 9.7" (2018) | 14.1
 Apple iPad Air | 12.3.1
-Apple iPad Air | 12.5.3
+Apple iPad Air | 12.5.4
 Apple iPad Air (2019) | 12.2
 Apple iPad Air (2019) | 12.3.1
 Apple iPad Air (2019) | 12.4.1
@@ -75,7 +76,7 @@ Apple iPad Mini 2 (Retina) | 10.2.1
 Apple iPad Mini 2 (Retina) | 10.3.3
 Apple iPad Mini 2 (Retina) | 12.1.3
 Apple iPad Mini 2 (Retina) | 12.4.6
-Apple iPad Mini 2 (Retina) | 12.5.3
+Apple iPad Mini 2 (Retina) | 12.5.4
 Apple iPad Mini 2 (Retina) | 9.0.2
 Apple iPad Mini 2 (Retina) | 9.1
 Apple iPad Mini 2 (Retina) | 9.2
@@ -143,6 +144,7 @@ Apple iPad Pro 11" (2020) | 13.6.1
 Apple iPad Pro 11" (2020) | 13.7
 Apple iPad Pro 11" (2020) | 14.2
 Apple iPad Pro 11" (2020) | 14.6
+Apple iPad Pro 11" (2021) | 14.6
 Apple iPad Pro 12.9" (2017) | 11.0.3
 Apple iPad Pro 12.9" (2017) | 11.1.2
 Apple iPad Pro 12.9" (2017) | 11.2.6
@@ -238,7 +240,7 @@ Apple iPhone 12 Pro Max | 14.5.1
 Apple iPhone 12 Pro Max | 14.6
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
-Apple iPhone 5S | 12.5.3
+Apple iPhone 5S | 12.5.4
 Apple iPhone 5S | 9.0.2
 Apple iPhone 5S | 9.1
 Apple iPhone 5S | 9.2
@@ -248,7 +250,7 @@ Apple iPhone 6 | 9.1
 Apple iPhone 6 | 9.2
 Apple iPhone 6 | 9.3.5
 Apple iPhone 6 Plus | 10.0.2
-Apple iPhone 6 Plus | 12.5.3
+Apple iPhone 6 Plus | 12.5.4
 Apple iPhone 6 Plus | 9.0.2
 Apple iPhone 6 Plus | 9.1
 Apple iPhone 6 Plus | 9.2
