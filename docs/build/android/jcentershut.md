@@ -2,9 +2,9 @@
 title: If Build fails at getting JCenter Bintray resources
 description: How to deal with JCenter shutdown
 keywords: android
-author: 
-ms.author: 
-ms.date: 14/06/2021
+author: milenkomarkovic
+ms.author: v-mimarkovic
+ms.date: 06/16/2021
 ms.topic: article
 ms.assetid: 
 ms.service: vs-appcenter
@@ -13,9 +13,9 @@ ms.tgt_pltfrm: android
 ---
 
 # Gradle build after JCenter shutdown
-If you are  building Android applications and you still use JCenter and  Bintray resources, it is likely that you are having problem because of JCenter Bintray being shut down.
-Because of the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (JCenter Bintray resources were not available).
-Following lines(from Build Logs) illustrate this problem:
+If you're  building Android applications and you still use JCenter and  Bintray resources, it's likely you're having problem because of JCenter Bintray being shut down.
+Because of the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (JCenter Bintray resources weren't available).
+Following lines (from Build Logs) illustrate this problem:
 
 > ```
 > Resolved com.android.tools.build:gradle:3.5.4 in :classpath 
@@ -37,10 +37,10 @@ Android developers should port their libraries to Maven Central with precaution 
 These posts tell you what you need to know and do to avoid disruptions to your build pipelines.
 
 Official JFrog link that announced JCenter shutdown and provides further guidelines.
-[Jcenter Shutdown](https://blog.gradle.org/jcenter-shutdown)
+[JCenter Shutdown](https://blog.gradle.org/jcenter-shutdown)
 
 Official JFrog Bintray Migration Guide
-[Jfrog Bintray Migration Guide](https://www.jfrog.com/confluence/display/BT/JFrog+Bintray+Migration+Guide)
+[JFrog Bintray Migration Guide](https://www.jfrog.com/confluence/display/BT/JFrog+Bintray+Migration+Guide)
 
-Unofficial Sonatype guide for publishers
-[What publishers need to know about migrating from Jcenter Bintray to the central repository](https://blog.sonatype.com/what-publishers-need-to-know-about-migrating-from-jcenter-/-bintray-to-the-central-repository)
+Unofficial guide for publishers
+[What publishers need to know about migrating from JCenter Bintray to the central repository](https://blog.sonatype.com/what-publishers-need-to-know-about-migrating-from-jcenter-/-bintray-to-the-central-repository)
