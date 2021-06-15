@@ -13,9 +13,9 @@ ms.tgt_pltfrm: android
 ---
 
 # Gradle build after JCenter shutdown
-If you are  building Android applications and you still use JCenter and  Bintray resources , it is very likely that you are having problem because of JCenter Bintray being shutdown.
-Due to the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (could not get JCenter Bintray resources).
-Following lines( from Build Logs) illustrate this problem:
+If you are  building Android applications and you still use JCenter and  Bintray resources, it is likely that you are having problem because of JCenter Bintray being shut down.
+Because of the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (JCenter Bintray resources were not available).
+Following lines(from Build Logs) illustrate this problem:
 
 > ```
 > Resolved com.android.tools.build:gradle:3.5.4 in :classpath 
@@ -32,9 +32,9 @@ Following lines( from Build Logs) illustrate this problem:
 > ```
 >
 
-This is caused by the fact that JFrog has shutdown JCenter (part of Bintray) on May 1, 2021. The JCenter was important part of Android development because a major fraction of Android artifacts were hosted on this site. 
+This problem is caused by the fact that JFrog has shutdown JCenter (part of Bintray) on May 1, 2021. The JCenter was important part of Android development because a major fraction of Android artifacts were hosted on this site. 
 Android developers should port their libraries to Maven Central with precaution that some old libraries are no longer maintained. 
-These posts tells you what you need to know and do to avoid disruptions to your build pipelines.
+These posts tell you what you need to know and do to avoid disruptions to your build pipelines.
 
 Official JFrog link that announced JCenter shutdown and provides further guidelines.
 [Jcenter Shutdown](https://blog.gradle.org/jcenter-shutdown)
