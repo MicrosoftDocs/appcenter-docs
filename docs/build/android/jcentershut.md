@@ -13,7 +13,7 @@ ms.tgt_pltfrm: android
 ---
 
 # Gradle build after JCenter shutdown
-If you're  building Android applications and you still use JCenter and  Bintray resources, it's likely you're having problem because of JCenter Bintray being shut down.
+If you use JCenter and Bintray resources in your AppCenter Android builds and your builds fail on Gradle Task failure (JCenter Bintray resources are not available), it's because JCenter Bintray is being shut down.
 Because of the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (JCenter Bintray resources weren't available).
 Following lines (from Build Logs) illustrate this problem:
 
@@ -36,11 +36,6 @@ This problem is caused by the fact that JFrog has shutdown JCenter (part of Bint
 Android developers should port their libraries to Maven Central with precaution that some old libraries are no longer maintained. 
 These posts tell you what you need to know and do to avoid disruptions to your build pipelines.
 
-Official JFrog link that announced JCenter shutdown and provides further guidelines.
-[JCenter Shutdown](https://blog.gradle.org/jcenter-shutdown)
-
-Official JFrog Bintray Migration Guide
-[JFrog Bintray Migration Guide](https://www.jfrog.com/confluence/display/BT/JFrog+Bintray+Migration+Guide)
-
-Unofficial guide for publishers
-[What publishers need to know about migrating from JCenter Bintray to the central repository](https://blog.sonatype.com/what-publishers-need-to-know-about-migrating-from-jcenter-/-bintray-to-the-central-repository)
+- [JCenter Shutdown announcement](https://blog.gradle.org/jcenter-shutdown)
+- [JFrog Bintray Migration Guide](https://www.jfrog.com/confluence/display/BT/JFrog+Bintray+Migration+Guide)
+- [What publishers need to know about migrating from JCenter Bintray to the central repository](https://blog.sonatype.com/what-publishers-need-to-know-about-migrating-from-jcenter-/-bintray-to-the-central-repository)
