@@ -13,7 +13,7 @@ ms.tgt_pltfrm: android
 ---
 
 # Gradle build after JCenter shutdown
-If you use JCenter and Bintray resources in your AppCenter Android builds and your builds fail on Gradle Task failure (JCenter Bintray resources are not available), it's because JCenter Bintray is being shut down.
+If you use JCenter and Bintray resources in your AppCenter Android builds and your builds fail on Gradle Task failure (JCenter Bintray resources aren't available), it's because JCenter Bintray is being shut down.
 Because of the shutdown (brownout sessions), some of the AppCenter builds were failing, and build logs pointed to Gradle Task failure (JCenter Bintray resources weren't available).
 Following lines (from Build Logs) illustrate this problem:
 
