@@ -132,6 +132,8 @@ This section shows you how to use App Center's [OpenAPI page](https://openapi.ap
 ## Revoking an API Token
 In the event that an API token is leaked, you should revoke it immediately to prevent unauthorized access to your App Center account.
 
+Additionally, in the event of a member of your organization having its corporate e-mail deactivated. The token will automatically be unrecognizable. That would only happen if the member was the one who created that token. You should create a new one.
+
 ### Revoking a User API token
 1. Navigate to [https://appcenter.ms](https://appcenter.ms).
 2. On the top-right corner of the App Center portal, click your account avatar, then select **Account Settings**.
