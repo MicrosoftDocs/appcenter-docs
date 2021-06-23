@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/14/2020
+ms.date: 05/19/2021
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -160,8 +160,8 @@ App Center SDK checks urls redirecting to the application to avoid sideloading, 
 
 Google Play considers the in-app update code as malicious behavior even if it isn’t used at runtime. Failure to not remove the in-app update code can lead to noncompliance and removal of the app from Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap.
 
-1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** project. Make sure that the project build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
-2. Open **Xamarin.Android** project's `.csproj` in any text editor and move distribute reference into the conditional item group:
+1. Add a new build configuration named `GooglePlay` for your **Xamarin.Android** and shared projects. Make sure that the projects build configuration is correctly mapped to the appropriate solution configuration. See [Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-create-and-edit-configurations) or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations) instructions for more details.
+2. Open **Xamarin.Android** and shared projects' `.csproj` in any text editor and move distribute reference into the conditional item group:
 
     ```xml
     <ItemGroup Condition=" '$(Configuration)' != 'GooglePlay' ">
