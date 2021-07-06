@@ -4,7 +4,7 @@ description: "How to use to the Cordova SDK with CodePush"
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/14/2020
+ms.date: 07/06/2021
 ms.topic: article
 ms.assetid: 591025F9-C7DA-400E-8CCA-DF39514B3DD0
 ms.service: vs-appcenter
@@ -59,12 +59,12 @@ With the CodePush plugin installed, configure your app to use it via the followi
         <preference name="CodePushDeploymentKey" value="YOUR-IOS-DEPLOYMENT-KEY" />
     </platform>
 ```
-    As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
+As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
 
    > [!IMPORTANT]
    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.
 
-    Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). To enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
+Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). To enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
 ```xml
     <platform name="android">
         ...
@@ -75,8 +75,8 @@ With the CodePush plugin installed, configure your app to use it via the followi
         <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
     </platform>
 ```
-    You can use the same private/public key pair for each platform. 
- 
+You can use the same private/public key pair for each platform.
+
 2. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
 ```xml
     <access origin="https://codepush.appcenter.ms" />
@@ -94,7 +94,7 @@ With the CodePush plugin installed, configure your app to use it via the followi
     cordova plugin ls    
 ```
 
-    If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, run the following command to add it:
+If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, run the following command to add it:
 ```shell
     cordova plugin add cordova-plugin-whitelist
 ```
