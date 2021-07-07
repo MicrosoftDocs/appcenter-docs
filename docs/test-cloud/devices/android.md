@@ -22,6 +22,7 @@ ms.custom: test
 
 Model | OS
 -- | --
+Amazon Fire HD 10 (9th Gen) | 9
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
 Essential Phone | 10
