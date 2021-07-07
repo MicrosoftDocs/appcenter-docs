@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 5/4/2021
+ms.date: 7/7/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -22,6 +22,7 @@ ms.custom: test
 
 Model | OS
 -- | --
+Amazon Fire HD 10 (9th Gen) | 9
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
 Essential Phone | 10
@@ -79,6 +80,7 @@ Huawei Honor View 10 | 8.0.0
 Huawei Mate 10 Pro | 8.0.0
 Huawei Mate 20 Pro | 10
 Huawei Mate 20 Pro | 9
+Huawei MediaPad M5 10 | 8.0.0
 Huawei Nexus 6P | 6.0.1
 Huawei Nexus 6P | 7.0
 Huawei Nexus 6P | 7.1.2
@@ -92,6 +94,7 @@ Huawei P20 Pro | 9
 Huawei P30 Pro | 10
 Huawei P30 Pro | 9
 Karbonn Sparkle V | 6.0.1
+LG G Pad X II | 6.0.1
 LG G2 | 5.0.2
 LG G3 (US Carrier) | 5.0
 LG G3 s | 5.0.2
@@ -306,9 +309,12 @@ Samsung Galaxy Tab A (2019) | 9
 Samsung Galaxy Tab A | 7.0
 Samsung Galaxy Tab A | 8.1.0
 Samsung Galaxy Tab A7 (2020) | 10
+Samsung Galaxy Tab A7 (2020) | 11
 Samsung Galaxy Tab Active 2 | 8.1.0
 Samsung Galaxy Tab Active 2 | 9
 Samsung Galaxy Tab Active 3 | 10
+Samsung Galaxy Tab Active 3 | 11
+Samsung Galaxy Tab Active Pro | 11
 Samsung Galaxy Tab S2 8.0 | 7.0
 Samsung Galaxy Tab S3 | 7.0
 Samsung Galaxy Tab S3 | 9
@@ -316,6 +322,7 @@ Samsung Galaxy Tab S4 | 10
 Samsung Galaxy Tab S4 | 8.1.0
 Samsung Galaxy Tab S4 | 9
 Samsung Galaxy Tab S5e | 10
+Samsung Galaxy Tab S5e | 11
 Samsung Galaxy Tab S6 | 10
 Samsung Galaxy Tab S6 | 11
 Samsung Galaxy Tab S6 | 9
