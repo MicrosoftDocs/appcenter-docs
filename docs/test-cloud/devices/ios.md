@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 6/15/2021
+ms.date: 7/7/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -341,6 +341,7 @@ Apple iPhone 7 Plus | 14.0.1
 Apple iPhone 7 Plus | 14.1
 Apple iPhone 7 Plus | 14.2
 Apple iPhone 7 Plus | 14.5.1
+Apple iPhone 7 Plus | 14.6
 Apple iPhone 8 | 11.0.3
 Apple iPhone 8 | 11.1.2
 Apple iPhone 8 | 11.2.6
