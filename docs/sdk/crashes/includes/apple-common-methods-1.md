@@ -157,12 +157,12 @@ For track exceptions you can use `trackException` method:
 
 ```objc
 @try {
-  // Throw error.
+  // Throw exceptions.
 } @catch (NSException *exception) {
 
   // Init exceptions.
-  MSACException *customException1 = [MSACException initWithType:@"Custom exception" exceptionMessage:"Track custom exception.", stackTrace:exception.callStackSymbols];
-  MSACException *customException2 = [MSACException initWithException:exception];
+  MSACExceptionModel *customException1 = [MSACExceptionModel initWithType:@"Custom exception" exceptionMessage:"Track custom exception.", stackTrace:exception.callStackSymbols];
+  MSACExceptionModel *customException2 = [MSACExceptionModel initWithException:exception];
 
   // Track exceptions.
   [MSACCrashes trackException:customException1 withProperties:properties attachments:nil];
