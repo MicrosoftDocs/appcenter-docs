@@ -4,7 +4,7 @@ description:  Shared docs for Apple Crashes SDK
 keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/22/2020
+ms.date: 07/09/2021
 ms.topic: include
 ms.assetid: c94f633d-7e90-40f9-aeb7-c97043d6ada4
 ms.custom: sdk
@@ -108,5 +108,76 @@ Implement the `crashes:shouldProcessErrorReport:`-method in the class that adopt
 ```swift
 func crashes(_ crashes: Crashes, shouldProcess errorReport: ErrorReport) -> Bool {
   return true; // return true if the crash report should be processed, otherwise false.
+}
+```
+
+## Handled Errors
+
+App Center also allows you to track errors by using handled exceptions via `trackError` method. An app can optionally attach properties or/and attachments to a handled error report to provide further context.
+
+```objc
+@try {
+  // Throw error.
+  } @catch (NSError *error) {
+
+  // Init attachments.
+  NSArray<MSACErrorAttachmentLog *> attachments =
+  @[ MSACErrorAttachmentLog attachmentWithText:@"Hello world!" filename:@"hello.txt"] ]
+
+  // Init properties.
+  NSDictionary *properties = @{ "Category" :  "Music", "Wifi" : "On" };
+
+  // Track errors.
+  [MSACCrashes trackError:error withProperties:properties attachments:attachments];
+  [MSACCrashes trackError:error withProperties:properties attachments:nil];
+  [MSACCrashes trackError:error withProperties:nil attachments:attachments];
+  [MSACCrashes trackError:error withProperties:nil attachments:nil];
+}
+```
+```swift
+do {
+  // Throw error.
+} catch {
+
+  // Init attachments.
+  let attachments = [ErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")]
+
+  // Init properties.
+  let properties:Dictionary<String, String>? = ["Category" :  "Music", "Wifi" : "On"]
+
+  // Track errors.
+  Crashes.trackError(error, withProperties: properties, attachments: attachments)
+  Crashes.trackError(error, withProperties: properties, attachments: nil)
+  Crashes.trackError(error, withProperties: nil, attachments: attachments)
+  Crashes.trackError(error, withProperties: nil, attachments: nil)
+}
+```
+
+For track exceptions you can use `trackException` method:
+
+```objc
+@try {
+  // Throw error.
+} @catch (NSException *exception) {
+
+  // Init exceptions.
+  MSACException *customException1 = [MSACException initWithType:@"Custom exception" exceptionMessage:"Track custom exception.", stackTrace:exception.callStackSymbols];
+  MSACException *customException2 = [MSACException initWithException:exception];
+
+  // Track exceptions.
+  [MSACCrashes trackException:customException1 withProperties:properties attachments:nil];
+  [MSACCrashes trackException:customException2 withProperties:properties attachments:nil];
+}
+```
+```swift
+do {
+  // Throw exception.
+} catch {
+
+  // Init exception.
+  let exception = ExceptionModel(type: "Custom exception", exceptionMessage: "Track custom exception.", stackTrace: Thread.callStackSymbols)
+
+  // Track exception.
+  Crashes.trackException(exception, withProperties: properties, attachments: nil)
 }
 ```
