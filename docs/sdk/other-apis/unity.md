@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/08/2020
+ms.date: 04/26/2021
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.tgt_pltfrm: unity
@@ -79,6 +79,33 @@ You can enable or disable the service at the runtime with following code:
 ```csharp
 Analytics.SetEnabledAsync(true);
 ```
+
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = false;
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = true;
+```
+
+>[!NOTE]
+> This value is retained between starts.
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed;
+```
+
+>[!NOTE]
+> The value saved previously in `SharedPreferences` is ignored until `AppCenter` is started on Android platform.
+> It will return the last value set using `AppCenter.IsNetworkRequestsAllowed = allowed` or `true` if the value wasn't changed before AppCenter start.
 
 ## Check if App Center is enabled
 
