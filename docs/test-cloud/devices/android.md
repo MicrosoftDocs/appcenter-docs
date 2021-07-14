@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 7/7/2021
+ms.date: 7/14/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -94,7 +94,6 @@ Huawei P20 Pro | 9
 Huawei P30 Pro | 10
 Huawei P30 Pro | 9
 Karbonn Sparkle V | 6.0.1
-LG G Pad X II | 6.0.1
 LG G2 | 5.0.2
 LG G3 (US Carrier) | 5.0
 LG G3 s | 5.0.2
@@ -194,6 +193,7 @@ OnePlus 9 | 11
 OnePlus 9 Pro | 11
 OnePlus Nord | 10
 OnePlus Nord | 11
+OnePlus Nord CE | 11
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
 Samsung Galaxy A3 | 5.0.2
@@ -347,6 +347,7 @@ Sony Xperia 10 | 10
 Sony Xperia 10 | 9
 Sony Xperia 10 II | 10
 Sony Xperia 10 II | 11
+Sony Xperia 10 III | 11
 Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10
