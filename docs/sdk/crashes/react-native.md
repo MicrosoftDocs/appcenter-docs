@@ -4,7 +4,7 @@ description: App Center Crashes for React Native
 keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/11/2019
+ms.date: 07/09/2021
 ms.topic: article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.custom: sdk
@@ -251,6 +251,35 @@ Crashes.setListener({
 > 
 > [!NOTE]
 > The size limit is currently 1.4 MB on Android and 7 MB on iOS. Attempting to send a larger attachment will trigger an error.
+
+## Handled Errors
+
+App Center also allows you to track errors by using handled exceptions via `trackError` method. An app can optionally attach properties or/and attachments to a handled error report to provide further context.
+
+```javascript
+try {
+    // Throw error.
+} catch (error) {
+
+    // Prepare properties.
+    const properties = { 'Category' : 'Music', "Wifi" : "On" };
+
+    // Prepare attachments.
+    const attachments = await AttachmentsProvider.getErrorAttachments();
+
+    // Create an exception model from error.
+    const exceptionModel1 = ExceptionModel.createFromError(error);
+
+    // ..or generate with your own error data.
+    const exceptionModel2 = ExceptionModel.createFromTypeAndMessage("Custom error type", "Some error message");
+
+    // Track error with custom data.
+    Crashes.trackError(exceptionModel1, properties, attachments);
+    Crashes.trackError(exceptionModel1, properties, nil);
+    Crashes.trackError(exceptionModel2, nil, attachments);
+    Crashes.trackError(exceptionModel2, nil, nil);
+}
+```
 
 ## Breakpad
 
