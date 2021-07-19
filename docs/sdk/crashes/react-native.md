@@ -262,7 +262,7 @@ try {
 } catch (error) {
 
     // Prepare properties.
-    const properties = { 'Category' : 'Music', "Wifi" : "On" };
+    const properties = { 'Category' : 'Music', 'Wifi' : 'On' };
 
     // Prepare attachments.
     const attachments = await AttachmentsProvider.getErrorAttachments();
@@ -271,7 +271,7 @@ try {
     const exceptionModel1 = ExceptionModel.createFromError(error);
 
     // ..or generate with your own error data.
-    const exceptionModel2 = ExceptionModel.createFromTypeAndMessage("Custom error type", "Some error message");
+    const exceptionModel2 = ExceptionModel.createFromTypeAndMessage("type", "message", "stacktrace");
 
     // Track error with custom data.
     Crashes.trackError(exceptionModel1, properties, attachments);

@@ -118,14 +118,13 @@ App Center also allows you to track errors by using handled exceptions via `trac
 ```objc
 @try {
   // Throw error.
-  } @catch (NSError *error) {
+} @catch (NSError *error) {
 
   // Init attachments.
-  NSArray<MSACErrorAttachmentLog *> attachments =
-  @[ MSACErrorAttachmentLog attachmentWithText:@"Hello world!" filename:@"hello.txt"] ]
+  NSArray<MSACErrorAttachmentLog *> attachments = @[ MSACErrorAttachmentLog attachmentWithText:@"Hello world!" filename:@"hello.txt"] ]
 
   // Init properties.
-  NSDictionary *properties = @{ "Category" :  "Music", "Wifi" : "On" };
+  NSDictionary *properties = @{ "Category" : "Music", "Wifi" : "On" };
 
   // Track errors.
   [MSACCrashes trackError:error withProperties:properties attachments:attachments];
@@ -143,7 +142,7 @@ do {
   let attachments = [ErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")]
 
   // Init properties.
-  let properties:Dictionary<String, String>? = ["Category" :  "Music", "Wifi" : "On"]
+  let properties:Dictionary<String, String> = ["Category" : "Music", "Wifi" : "On"]
 
   // Track errors.
   Crashes.trackError(error, withProperties: properties, attachments: attachments)
