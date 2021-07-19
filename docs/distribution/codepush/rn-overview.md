@@ -84,11 +84,11 @@ We'll update this list as new core components are released, which support refere
 ```
 
 ## Store Guideline Compliance
-While Google Play and internally distributed apps (for example Enterprise, Fabric, HockeyApp) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
+While Google Play and internally distributed apps (for example Enterprise, Fabric, App Center) have no limitations over how to publish updates using CodePush, the iOS App Store and its corresponding guidelines have more precise rules you should be aware of before integrating the solution within your application.
 
-[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed over-the-air updates of JavaScript and assets -  and in its latest version (20170605) [downloadable here](https://developer.apple.com/terms/) this ruling is even broader:
+[Apple's Developer Program License Agreement](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), under paragraph **3.3.2**, fully allowed over-the-air updates of JavaScript and assets -  and in its latest version (20210607) [downloadable here](https://developer.apple.com/support/terms/) this ruling is even broader:
 
-> Interpreted code may be downloaded to an Application but only so long as such code: (a) doesn't change the primary purpose of the Application by providing features or functionality that's inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) doesn't bypass signing, sandbox, or other security features of the OS.
+> Interpreted code may be downloaded to an Application but only so long as such code: (a) does not change the primary purpose of the Application by providing features or functionality that are inconsistent with the intended and advertised purpose of the Application as submitted to the App Store, (b) doesn't create a store or storefront for other code or applications, and (c) does not bypass signing, sandbox, or other security features of the OS.
 
 CodePush allows you to follow these rules in full compliance so long as the update you push doesn't significantly deviate your product from its original App Store approved intent.
 
@@ -109,7 +109,7 @@ The React Native community has graciously created some awesome open-source apps 
 
 Additionally, if you're looking to get started with React Native + CodePush, and are looking for an awesome starter kit, you should check out the following:
 
-- [Native Starter Pro](https://strapmobile.com/native-starter-pro/)
+- [Native Starter Pro](https://market.nativebase.io/view/native-starter-pro)
 - [Pepperoni](http://getpepperoni.com/)
 
   > [!NOTE]
@@ -119,7 +119,7 @@ Additionally, if you're looking to get started with React Native + CodePush, and
 
 In addition to using the CodePush CLI to "manually" release updates, we believe that it's important to create a repeatable and sustainable solution for continuously delivering updates to your app. That way, it's simple enough for you or your team to create and maintain the rhythm of agile deployments. To assist with setting up a CodePush-based CD pipeline, refer to the following integrations with various CI servers:
 
-- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [HockeyApp](https://marketplace.visualstudio.com/items?itemName=ms.hockeyapp) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.
+- [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [App Center](https://marketplace.visualstudio.com/items?itemName=MsAppCenter.app-center-distribute-v3) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)
 
 Additionally, if you want more details of what a complete mobile CI/CD workflow  can look like, which includes CodePush, check out this [excellent article](https://zeemee.engineering/zeemee-engineering-and-the-quest-for-the-holy-mobile-dev-grail-1310be4953d1#.zfwaxtbco) by the [ZeeMee engineering team](https://zeemee.engineering).
