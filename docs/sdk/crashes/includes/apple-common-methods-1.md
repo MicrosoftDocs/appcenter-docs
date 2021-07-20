@@ -145,10 +145,10 @@ do {
   let properties:Dictionary<String, String> = ["Category" : "Music", "Wifi" : "On"]
 
   // Track errors.
-  Crashes.trackError(error, withProperties: properties, attachments: attachments)
-  Crashes.trackError(error, withProperties: properties, attachments: nil)
-  Crashes.trackError(error, withProperties: nil, attachments: attachments)
-  Crashes.trackError(error, withProperties: nil, attachments: nil)
+  Crashes.trackError(error, properties: properties, attachments: attachments)
+  Crashes.trackError(error, properties: properties, attachments: nil)
+  Crashes.trackError(error, properties: nil, attachments: attachments)
+  Crashes.trackError(error, properties: nil, attachments: nil)
 }
 ```
 
@@ -174,9 +174,9 @@ do {
 } catch {
 
   // Init exception.
-  let exception = ExceptionModel(type: "Custom exception", exceptionMessage: "Track custom exception.", stackTrace: Thread.callStackSymbols)
+  let exception = ExceptionModel(withType: "Custom exception", exceptionMessage: "Track custom exception.", stackTrace: Thread.callStackSymbols)
 
   // Track exception.
-  Crashes.trackException(exception, withProperties: properties, attachments: nil)
+  Crashes.trackException(exception, properties: properties, attachments: nil)
 }
 ```
