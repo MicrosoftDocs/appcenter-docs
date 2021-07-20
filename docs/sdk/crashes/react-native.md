@@ -265,7 +265,8 @@ try {
     const properties = { 'Category' : 'Music', 'Wifi' : 'On' };
 
     // Prepare attachments.
-    const attachments = await AttachmentsProvider.getErrorAttachments();
+    const textAttachment = ErrorAttachmentLog.attachmentWithText('Hello text attachment!', 'hello.txt');
+    const attachments = [textAttachment];
 
     // Create an exception model from error.
     const exceptionModel1 = ExceptionModel.createFromError(error);
