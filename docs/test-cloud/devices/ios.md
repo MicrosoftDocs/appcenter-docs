@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 7/7/2021
+ms.date: 7/20/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -18,8 +18,6 @@ ms.custom: test
 
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
-
-
 
 
 Model | OS
@@ -224,20 +222,24 @@ Apple iPhone 12 | 14.2.1
 Apple iPhone 12 | 14.4.2
 Apple iPhone 12 | 14.5.1
 Apple iPhone 12 | 14.6
+Apple iPhone 12 | 14.7
 Apple iPhone 12 Mini | 14.2.1
 Apple iPhone 12 Mini | 14.4.2
 Apple iPhone 12 Mini | 14.5.1
 Apple iPhone 12 Mini | 14.6
+Apple iPhone 12 Mini | 14.7
 Apple iPhone 12 Pro | 14.1
 Apple iPhone 12 Pro | 14.3
 Apple iPhone 12 Pro | 14.4.2
 Apple iPhone 12 Pro | 14.5.1
 Apple iPhone 12 Pro | 14.6
+Apple iPhone 12 Pro | 14.7
 Apple iPhone 12 Pro Max | 14.2.1
 Apple iPhone 12 Pro Max | 14.3
 Apple iPhone 12 Pro Max | 14.4.2
 Apple iPhone 12 Pro Max | 14.5.1
 Apple iPhone 12 Pro Max | 14.6
+Apple iPhone 12 Pro Max | 14.7
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
 Apple iPhone 5S | 12.5.4
@@ -291,6 +293,7 @@ Apple iPhone 6s Plus | 13.2.3
 Apple iPhone 6s Plus | 14.0.1
 Apple iPhone 6s Plus | 14.1
 Apple iPhone 6s Plus | 14.2
+Apple iPhone 6s Plus | 14.7
 Apple iPhone 6s Plus | 9.0.2
 Apple iPhone 6s Plus | 9.1
 Apple iPhone 6s Plus | 9.2
@@ -362,6 +365,7 @@ Apple iPhone 8 | 14.0.1
 Apple iPhone 8 | 14.1
 Apple iPhone 8 | 14.3
 Apple iPhone 8 | 14.5.1
+Apple iPhone 8 | 14.7
 Apple iPhone 8 Plus | 11.0.3
 Apple iPhone 8 Plus | 11.1.2
 Apple iPhone 8 Plus | 11.2.6
@@ -407,6 +411,7 @@ Apple iPhone SE | 14.2
 Apple iPhone SE | 14.3
 Apple iPhone SE | 14.5.1
 Apple iPhone SE | 14.6
+Apple iPhone SE | 14.7
 Apple iPhone SE (2020) | 13.4.1
 Apple iPhone SE (2020) | 13.5.1
 Apple iPhone SE (2020) | 13.6.1
@@ -467,6 +472,7 @@ Apple iPhone XS Max | 13.5.1
 Apple iPhone XS Max | 13.6.1
 Apple iPhone XS Max | 13.7
 Apple iPhone XS Max | 14.2
+Apple iPhone XS Max | 14.7
 Apple iPod touch 5th Gen | 9.0.2
 Apple iPod touch 5th Gen | 9.3.5
 Apple iPod touch 6th Gen | 10.0.2
