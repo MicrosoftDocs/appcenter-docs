@@ -1,5 +1,5 @@
 ---
-title: UWP, WPF, and WinForms SDK Troubleshooting
+title: UWP, WinUI, WPF, and WinForms SDK Troubleshooting
 description: Troubleshooting the App Center SDK for UWP
 keywords: sdk
 author: lucen-ms
@@ -10,7 +10,7 @@ ms.assetid: 77daff4a-81f7-480d-8582-ea4159c4bd40
 ms.tgt_pltfrm: uwp
 ---
 
-# UWP, WPF, and WinForms SDK Troubleshooting
+# UWP, WinUI, WPF, and WinForms SDK Troubleshooting
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

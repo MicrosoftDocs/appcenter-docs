@@ -4,7 +4,7 @@ description: App Center Analytics for Windows
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/23/2019
+ms.date: 07/29/2021
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.custom: sdk
@@ -26,9 +26,9 @@ ms.tgt_pltfrm: windows
 
 App Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the App Center portal for you to analyze the data.
 
-Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) or [UWP Getting Started](~/sdk/getting-started/uwp.md) section (based on your platform) if you haven't set up the SDK in your application yet.
+Follow the [WPF/WinForms Getting Started](~/sdk/getting-started/wpf-winforms.md) or [UWP/WinUI Getting Started](~/sdk/getting-started/uwp.md) section (based on your platform) if you haven't set up the SDK in your application yet.
 
-The instructions in this page work for UWP (including Xamarin.Forms), WPF, and WinForms.
+The instructions in this page work for UWP (including Xamarin.Forms and WinUI), WPF, and WinForms.
 
 ## Session and device information
 
