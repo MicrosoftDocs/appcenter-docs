@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 7/14/2021
+ms.date: 8/3/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -56,7 +56,9 @@ Google Pixel 4 | 11
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
 Google Pixel 4a | 11
+Google Pixel 4a | 12
 Google Pixel 5 | 11
+Google Pixel 5 | 12
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
