@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/17/2020
+ms.date: 08/16/2021
 ms.topic: article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
@@ -74,6 +74,14 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 ## Distribute and in-app updates are blocking my automated UI tests
 
 If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
+
+## Google Play reject the application after adding DistributePlay
+
+Google Play rejecting apps that use the `Distribute` module because it contains in-app update implementation. To avoid this situation in App Center SDK exist `DistributePlay` module which contains stubs for the main module. It replaces the main assemble to assemble with stubs API without additional changes in the code from the customer side.
+If after replacing `Distribute` module to `DistributePlay` you still receive rejecting message please check the next things:
+- Make sure that you replace `Distribute` to `DistributePlay` in all your releases for all your publishing groups in Google Play Console;
+- If you use `Xamarin.Forms` please make sure that you add the `DistributePlay` module to both shared and `Xamarin.Android` projects;
+- After building your apk file should not contain the `Microsoft.AppCenter.Distribute.Android.Bindings.dll` assembly. See [guideline](https://developer.android.com/studio/build/apk-analyzer) about analyzing your build with APK Analyzer.
 
 ## Messages in the console that indicate that the database couldn't be opened on iOS
 
