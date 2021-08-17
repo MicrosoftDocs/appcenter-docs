@@ -77,7 +77,7 @@ If you're running automated UI tests, enabled in-app updates will block your aut
 
 ## Google Play reject the application after adding DistributePlay
 
-Google Play rejecting apps that use the `Distribute` module because it contains in-app update implementation. To avoid this situation, App Center SDK has `DistributePlay` module which contains stubs for the main module. It replaces the main assemble with stubbed assemble which imitates the `Distribute` API without additional changes in the code from the customer side. The `DistributePlay` doesn't have any in-app update related code.
+Google Play rejecting apps that use the `Distribute` module because it contains in-app update implementation. To avoid this situation, App Center SDK has `DistributePlay` module which contains stubs for the main module. It replaces the main assemble with stubbed assemble which imitates the `Distribute` API. No additional changes are required on the client application. The `DistributePlay` doesn't have any in-app update related code.
 If after replacing `Distribute` module with `DistributePlay` your app still gets rejected, please follow the steps below to verify that the `Distribute` module was replaced correctly:
 - Make sure that you replaced `Distribute` with `DistributePlay` in all your releases for all your publishing groups in Google Play Console;
 - If you use `Xamarin.Forms` please make sure that you add the `DistributePlay` module to both shared and `Xamarin.Android` projects;
