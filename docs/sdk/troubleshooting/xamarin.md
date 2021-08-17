@@ -75,12 +75,12 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
 If you're running automated UI tests, enabled in-app updates will block your automated UI tests as they'll try to authenticate against the App Center backend. We recommend to not enable App Center Distribute for your UI tests. 
 
-## Google Play reject the application after adding DistributePlay
+## Google Play rejects the application after adding DistributePlay
 
-Google Play rejecting apps that use the `Distribute` module because it contains in-app update implementation. To avoid this situation, App Center SDK has `DistributePlay` module which contains stubs for the main module. It replaces the main assemble with stubbed assemble which imitates the `Distribute` API. No additional changes are required on the client application. The `DistributePlay` doesn't have any in-app update related code.
+Google Play rejects apps that use the `Distribute` module because it contains in-app update implementation. To avoid this situation, App Center SDK has `DistributePlay` module, which contains stubs for the main module. It replaces the main assemble with stubbed assemble, which imitates the `Distribute` API. No additional changes are required in the client application. The `DistributePlay` doesn't have any in-app update related code.
 If after replacing `Distribute` module with `DistributePlay` your app still gets rejected, please follow the steps below to verify that the `Distribute` module was replaced correctly:
-- Make sure that you replaced `Distribute` with `DistributePlay` in all your releases for all your publishing groups in Google Play Console;
-- If you use `Xamarin.Forms` please make sure that you add the `DistributePlay` module to both shared and `Xamarin.Android` projects;
+- Make sure that you replaced `Distribute` with `DistributePlay` in all your releases for all your publishing groups in Google Play Console.
+- If you use `Xamarin.Forms` please make sure that you add the `DistributePlay` module to both shared and `Xamarin.Android` projects.
 - Verify that your output file does not contain the `Microsoft.AppCenter.Distribute.Android.Bindings.dll` assembly. You can use the [APK Analyzer](https://developer.android.com/studio/build/apk-analyzer) to check it.
 
 ## Messages in the console that indicate that the database couldn't be opened on iOS
