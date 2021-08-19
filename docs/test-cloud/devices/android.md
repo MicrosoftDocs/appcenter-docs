@@ -102,8 +102,8 @@ Huawei P30 Pro | 10
 Huawei P30 Pro | 9
 Karbonn Sparkle V | 6.0.1
 LG G2 | 5.0.2
-LG G3 (US Carrier) | 5.0
-LG G3 s | 5.0.2
+LG G3 | 5.0
+LG G3s | 5.0.2
 LG G4 | 5.1
 LG G4 | 6.0
 LG G5 | 6.0.1
