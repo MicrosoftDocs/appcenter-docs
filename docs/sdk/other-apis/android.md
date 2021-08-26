@@ -257,6 +257,9 @@ By default in-app updates work for apps installed from the defined list of store
     Distribute.addStores(stores);
 ```
 
+> [!NOTE]
+> Don't add stores like Google Play to avoid any restrictions.
+
 ### Unsuccessful API calls
 
 There are many reasons the callback may fail.
