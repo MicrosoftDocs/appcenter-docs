@@ -248,7 +248,7 @@ If you don't set the max storage size, the SDK uses a default max size of 10 MB.
 
 ## Add distribution stores
 
-By default in-app updates work for apps installed from the defined list of stores. If you want to distribute your application via stores that are not included in the defined list of stores by default, then you can add them using the API below: 
+By default in-app updates work for apps installed from the defined list of stores. If you want to distribute your application via stores that are not included in the defined list of stores by default, then you can add them using the API below before App Center start:
 
 ```java
     Set<String> stores = new HashSet<String>();
