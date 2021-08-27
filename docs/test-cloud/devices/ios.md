@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 8/23/2021
+ms.date: 8/27/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -22,7 +22,6 @@ ms.custom: test
 
 Model | OS
 -- | --
-
 Apple iPad 7th Gen | 13.1.3
 Apple iPad 7th Gen | 13.2.3
 Apple iPad 7th Gen | 13.3.1
