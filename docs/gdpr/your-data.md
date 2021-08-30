@@ -88,7 +88,7 @@ Some of App Center's services may take a while to execute an export. For long ru
 To cancel your export request, use the cancellation endpoint:
 
 ```TEXT
-https://appcenter.ms/api/v0.1/user/dsr/delete/<your receipt token>/cancel
+https://appcenter.ms/api/v0.1/user/dsr/export/<your receipt token>/cancel
 ```
 
 A raw request in Postman or Fiddler to make a cancellation request will look like this:
