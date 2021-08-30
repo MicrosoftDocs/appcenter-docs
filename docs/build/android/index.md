@@ -24,7 +24,7 @@ To build your first Android app, follow these steps:
 > For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
 > [!WARNING]
-> Due to the recent shutdown of JCenter, certain apps may experience Gradle Task failures when building with App Center. Please view the migration guide provided by Gradle. As a workaround, all instances of `jcenter()` can be removed from the `build.gradle` file, and replaced with `jcenter { url "http://jcenter.bintray.com/"}`. Read more about the JCenter Shutdown [here](https://docs.microsoft.com/appcenter/build/android/jcentershut).
+> Due to the recent shutdown of JCenter, certain apps may experience Gradle Task failures when building with App Center. Please view the migration guide provided by Gradle. As a workaround, all instances of `jcenter()` can be removed from the `build.gradle` file, and replaced with `jcenter { url "http://jcenter.bintray.com/"}`. Read more about the JCenter Shutdown [here](~/build/android/jcentershut).
 
 ## 1. Linking your repository
 You must connect to your repository service account if you haven't already. Once your account is connected, select the repository where your Android project is located. To set up a build for a repository, you need admin and pull permission for it.
