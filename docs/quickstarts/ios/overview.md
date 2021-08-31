@@ -4,7 +4,7 @@ description: Landing page to navigate through iOS tutorials.
 keywords: app center
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/20/2019
+ms.date: 08/10/2021
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
@@ -26,5 +26,3 @@ Begin with the **Getting Started** tutorial. After you've completed that, you ca
 | [Distribute](distribute.md)           | Distribute to a group of users |
 | [Crash](crashes.md)                   | Monitor application crashes    |
 | [Analytics](analytics.md)             | View user analytics            |
-| [Push](push.md)                       | Send users push notifications  |
-

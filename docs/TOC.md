@@ -28,7 +28,6 @@
 ### [Distribute](quickstarts/ios/distribute.md)
 ### [Crashes](quickstarts/ios/crashes.md)
 ### [Analytics](quickstarts/ios/analytics.md)
-### [Push](quickstarts/ios/push.md)
 ## [Android](quickstarts/android/overview.md)
 ### [Getting Started](quickstarts/android/getting-started.md)
 ### [Build](quickstarts/android/build.md)
@@ -36,14 +35,12 @@
 ### [Distribute](quickstarts/android/distribute.md)
 ### [Crashes](quickstarts/android/crashes.md)
 ### [Analytics](quickstarts/android/analytics.md)
-### [Push](quickstarts/android/push.md)
 ## [macOS](quickstarts/macos/overview.md)
 ### [Getting Started](quickstarts/macos/getting-started.md)
 ### [Build](quickstarts/macos/build.md)
 ### [Distribute](quickstarts/macos/distribute.md)
 ### [Crashes](quickstarts/macos/crashes.md)
 ### [Analytics](quickstarts/macos/analytics.md)
-### [Push](quickstarts/macos/push.md)
 
 
 

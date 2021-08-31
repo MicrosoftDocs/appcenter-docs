@@ -4,7 +4,7 @@ description: Tutorial to onboard an iOS application in App Center
 keywords: app center
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/20/2019
+ms.date: 08/10/2021
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
@@ -80,11 +80,7 @@ In order for the sample app to send information to App Center, the app secret mu
 
 *Code signing is optional, but recommended.*
 
-Code signing assures users that the app is from a trustworthy developer, and hasn't been altered by someone else. In App Center, it's needed to distribute the app to users and send push notifications. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
-
-When creating a new App ID for this sample app, be sure to check the **Push Notifications** service under the **App Services** section.
-
-  ![Push App Service](images/AppID_push_ios.png)
+Code signing assures users that the app is from a trustworthy developer, and hasn't been altered by someone else. In App Center, it's needed to distribute the app to users. Learn more from the [Apple Developer Documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
 1. Open `.xcworkspace` from the sample app's folder.
 
