@@ -20,8 +20,8 @@ ms.custom: test
 > This guide is updated manually shortly after new beta devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
 Available Devices and OS versions
-We strive to provide support for beta devices right when the first public beta versions are released. The betas are availible after thorough internal testing which is why there can be delay between beta release and when it will be availible in App Center.
-Take advantage of the Test service now available for your Launch Tests and your automated UI test suite on physical devices running:  
+We strive to provide support for beta devices when the public beta versions are released. The betas are only availible after thorough internal testing phase, which means there can be delay between beta release and when it will be availible in App Center.
+Take advantage of the Test service now available for your Launch Tests and your automated UI test suite on physical devices:  
 
 Model | OS
 -- | --
