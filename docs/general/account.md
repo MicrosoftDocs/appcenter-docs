@@ -47,9 +47,9 @@ Example of the error message:
 
 This error indicates that the email address you are using is already registered in App Center, and the expected authentication method does not match to what you are using.
 
-Starting from June 2021, App Center only binds each account with a single identity provider. What this means is we store the association created during account registration in the system during account lifetime.
+Starting from June 2021, App Center binds each account only with a single identity provider. The association is created in the system during account registration and cannot be changed.
 
-Suppose you used GitHub as the identity provider during your account registration. After your first login attempt, the system fixes GitHub as the only valid authentication method for the email address. Even if the same email address is used in other identity providers such as Facebook or Google, the system will reject the login attempt using other identity providers with the error message above.
+Suppose you used GitHub as the identity provider during your account registration. After your first successful login attempt, the system secures GitHub as the only valid authentication method for the email address. Even if the same email address is used in other identity providers such as Facebook or Google, the system will reject any login attempt using other identity provider with the error message above.
 
 #### How can I solve the issue?
 
