@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# App Center Test Android Devices
+# App Center Test Beta Devices
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
