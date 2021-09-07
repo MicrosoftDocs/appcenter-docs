@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/26/2021
+ms.date: 08/26/2021
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android
@@ -245,6 +245,20 @@ If you don't set the max storage size, the SDK uses a default max size of 10 MB.
 
 > [!NOTE]
 > The logs older than 25 days will be discarded.
+
+## Add distribution stores
+
+By default in-app updates work for apps installed from the defined list of stores. If you want to distribute your application via stores that are not included in the predefined list of stores, then you can add the needed package installer using the API below before App Center start:
+
+```java
+    Set<String> stores = new HashSet<String>();
+    stores.add("com.store1.packageinstaller");
+    stores.add("com.store2.packageinstaller");
+    Distribute.addStores(stores);
+```
+
+> [!NOTE]
+> Don't add stores like Google Play to avoid any restrictions.
 
 ### Unsuccessful API calls
 
