@@ -248,17 +248,7 @@ If you don't set the max storage size, the SDK uses a default max size of 10 MB.
 
 ## Add distribution stores
 
-By default in-app updates work for apps installed from the defined list of stores below:
-
-Stores                              | Stores
-------------------------------------|-------------------------------------
-adb                                 | pc
-com.android.packageinstaller        | com.google.android.apps.nbu.files
-com.google.android.packageinstaller | org.mozilla.firefox
-com.android.managedprovisioning     | com.android.chrome
-com.miui.packageinstaller           | com.samsung.android.packageinstaller
- 
-If you want to distribute your application via stores that are not included in the defined list of stores by default, then you can add them using the API below before App Center start:
+By default in-app updates work for apps installed from the defined list of stores. If you want to distribute your application via stores that are not included in the defined list of stores by default, then you can add them using the API below before App Center start:
 
 ```java
     Set<String> stores = new HashSet<String>();
