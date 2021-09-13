@@ -9,8 +9,6 @@ dev_langs:
  - kotlin
 ---
 
-## Asynchronous APIs in the Android SDK
-
 Asynchronous APIs return a `AppCenterFuture` object instead of returning the result directly.
 
 You can either call `get()` on the future object to synchronously wait for the result or provide a callback like this, filling in the respective return types when calling the API:
