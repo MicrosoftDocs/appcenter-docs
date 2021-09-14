@@ -35,7 +35,6 @@ Our linking script supports only the standard way of linking pods, so to resolve
     ```ruby
     pod 'AppCenter/Analytics', '~> 1.14.0'
     pod 'AppCenter/Crashes', '~> 1.14.0'
-    pod 'AppCenter/Push', '~> 1.14.0'
     pod 'AppCenterReactNativeShared', '~> 1.13.0'
     ```
 
@@ -45,7 +44,6 @@ Our linking script supports only the standard way of linking pods, so to resolve
     pod 'appcenter', path: '../node_modules/appcenter/ios'
     pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
     pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
-    pod 'appcenter-push', path: '../node_modules/appcenter-push/ios'
     ```
 
 1. Run `pod install` from `iOS` folder.
@@ -58,7 +56,6 @@ Our linking script supports only the standard way of linking pods, so to resolve
     #import <AppCenterReactNative/AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
-    #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
     ```
 
     After:
@@ -67,7 +64,6 @@ Our linking script supports only the standard way of linking pods, so to resolve
     #import "AppCenterReactNative.h"
     #import "AppCenterReactNativeAnalytics.h"
     #import "AppCenterReactNativeCrashes.h"
-    #import "AppCenterReactNativePush.h"
     ```
 
 1. Remove AppCenter dependencies from the project (right-click the dependency > Remove dependency).
@@ -75,17 +71,14 @@ Our linking script supports only the standard way of linking pods, so to resolve
         * `AppCenterReactNative.xcodeproj`
         * `AppCenterReactNativeAnalytics.xcodeproj`
         * `AppCenterReactNativeCrashes.xcodeproj`
-        * `AppCenterReactNativePush.xcodeproj`
     * Open your project settings and under **General** tab in the **Linked Frameworks and Libraries** section remove new items referencing target libraries removed on the previous step:
         * `libAppCenterReactNative.a`
         * `libAppCenterReactNativeAnalytics.a`
         * `libAppCenterReactNativeCrashes.a`
-        * `libAppCenterReactNativePush.a`
     * Modify **Header Search Paths** to remove headers from the AppCenter React Native plugins projects. Open your project settings and under **Build Settings** tab in the **Header Search Paths** section remove the following locations for header files:
         * `$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative`
         * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
         * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
-        * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
 ## React Native link command unrecognized
 
@@ -104,9 +97,6 @@ In this case, run `npm install` and try `react-native link` again.
 The likely cause is the conflict between [major](https://semver.org/) package versions because of a [breaking change](https://github.com/microsoft/appcenter-sdk-apple/releases/tag/4.0.0) in our Apple SDK.
 
 1. Make sure that all `appcenter` packages use the same major version. Update them with `npm install` or `yarn` if needed.
-
-> [!NOTE]
-> If you are still using **appcenter-push** then you should use appcenter version 3 packages because App Center Push [has been retired](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
 
 1. Go to **ios** folder of your project and remove **Podfile.lock** and the **Pods** folder.
 1. Run `pod install --repo-update` in your **ios** folder.
@@ -181,9 +171,9 @@ react-native upgrade 0.60.0
 
 If you've already integrated our SDK into your application and want to upgrade to a newer version of the SDK, follow the following steps to upgrade:
 
-1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes appcenter-push` to uninstall old App Center packages.
+1. `npm uninstall --save appcenter appcenter-analytics appcenter-crashes` to uninstall old App Center packages.
 
-2. `npm install --save-exact appcenter appcenter-analytics appcenter-crashes appcenter-push` to install latest App Center packages.
+2. `npm install --save-exact appcenter appcenter-analytics appcenter-crashes` to install latest App Center packages.
 
 3. `pod repo update` to make sure your CocoaPods spec repo is up to date.
 
@@ -196,7 +186,6 @@ If you've already integrated our SDK into your application and want to upgrade t
 > [!] Unable to satisfy the following requirements:
 >
 > - `AppCenter/Core (= 1.0.0)` required by `Podfile.lock`
-> - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Push (1.0.0)`
 > - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Crashes (1.0.0)`
 > - `AppCenter/Core (= 1.0.0)` required by `AppCenter/Analytics (1.0.0)`
 > - `AppCenter/Core (= 1.0.1)` required by `AppCenterReactNativeShared (1.0.1)`

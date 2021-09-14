@@ -159,7 +159,6 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
     >    "<rootDir>/node_modules/appcenter/test/AppCenterMock.js",
     >    "<rootDir>/node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
     >    "<rootDir>/node_modules/appcenter-crashes/test/AppCenterCrashesMock.js",
-    >    "<rootDir>/node_modules/appcenter-push/test/AppCenterPushMock.js"
     > ]
     >```
 
@@ -207,7 +206,6 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
      * `/node_modules/appcenter/ios`
      * `/node_modules/appcenter-analytics/ios`
      * `/node_modules/appcenter-crashes/ios`
-     * `/node_modules/appcenter-push/ios`
 
    * Drag and drop `.xcodeproj` files from the Finder into Xcode's Project Navigator. Typically under **Libraries** group.
 
@@ -216,7 +214,6 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `libAppCenterReactNative.a`
    * `libAppCenterReactNativeAnalytics.a`
    * `libAppCenterReactNativeCrashes.a`
-   * `libAppCenterReactNativePush.a`
 
 10. Modify **Header Search Paths** to find headers from the AppCenter React Native plugins projects. 
    Open your project settings and under **Build Settings** tab in the **Header Search Paths** section add new locations for header files:
@@ -224,7 +221,6 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative`
    * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
    * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
-   * `$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush`
 
 11. Modify the app's AppDelegate.m file to include code for starting SDK:
     * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
@@ -233,7 +229,6 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     #import <AppCenterReactNative/AppCenterReactNative.h>
     #import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
-    #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
     ```
 
     * Add these lines to the `didFinishLaunchingWithOptions` method
@@ -242,7 +237,6 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
-    [AppCenterReactNativePush register];
     ```
 
 12. Create new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the XCode project (right-click the app in XCode and click **Add files to <App Name>...**).

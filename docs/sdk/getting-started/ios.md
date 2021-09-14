@@ -205,5 +205,3 @@ Great, you're all set to visualize Analytics and Crashes data on the portal that
 Look at the [App Center Analytics docs](~/sdk/analytics/ios.md) and [App Center Crashes docs](~/sdk/crashes/ios.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/ios.md).
-
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/ios.md).

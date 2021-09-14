@@ -30,7 +30,7 @@ dev_langs:
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center macOS SDK in your app to use App Center Analytics and App Center Crashes. To add App Center Push to your app, have a look at the [documentation for App Center Push](~/sdk/push/macos.md).
+Let's get started with setting up App Center macOS SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 The following requirements must be met to use App Center SDK:
@@ -195,13 +195,8 @@ Xcode 9 enables the App Sandbox by default but the capabilities for outgoing con
 
 Select your project in the project navigator, select the **Capabilities** tab and if your app is using the sandbox, enable outgoing connections.
 
-> [!NOTE]
-> If your app has App Center Push enabled, incoming (Server) connections has to be set as well.
-
 ---
 
 Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 
 Look at the [App Center Analytics docs](~/sdk/analytics/macos.md) and [App Center Crashes docs](~/sdk/crashes/macos.md) to learn how to customize and use advanced features of each service.
-
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/macos.md).

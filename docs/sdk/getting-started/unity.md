@@ -135,5 +135,3 @@ Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) d
 Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) and [App Center Crashes](~/sdk/crashes/unity.md) to learn how to use more advanced functionality with both services.
 
 To learn how to get started with in-app updates, read the documentation for [App Center Distribute](~/sdk/distribute/unity.md).
-
-To learn how to get started with Push, read the documentation for [App Center Push for Android](~/sdk/push/unity-android.md), [App Center Push for iOS](~/sdk/push/unity-ios.md), and [App Center Push for Windows](~/sdk/push/unity-windows.md).
