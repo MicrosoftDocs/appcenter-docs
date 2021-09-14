@@ -47,7 +47,7 @@ When building your app using the App Center Build service, the corresponding deb
   
 **5. Do you want to manage all things related to your App in one central place?**
  
-App Center brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services and engage with users using the Push service. 
+App Center brings together multiple services commonly used by mobile developers into an integrated cloud solution. Developers use App Center to Build, Test, and Distribute applications. Once the app's deployed, developers monitor the status and usage of the app using the Analytics and Diagnostics services.
 
 > [!NOTE]
 > If you feel we're missing something critical from App Center Build or need help, you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback. 
