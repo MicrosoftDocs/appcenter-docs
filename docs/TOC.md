@@ -346,7 +346,6 @@
 #### [Cordova](transition/cordova-sdk-migration.md)
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ### [Feedback](transition/feedback.md)
-## [Push](migration/push/index.md)
 
 # Reference
 ## [App Center API tokens and documentation](api-docs/index.md)
