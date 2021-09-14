@@ -328,9 +328,6 @@
 #### [Delete](gdpr/diagnostics-delete.md)
 #### [Export](gdpr/diagnostics-export.md)
 #### [Consent](gdpr/diagnostics-consent.md)
-### Push
-#### [Delete](gdpr/push-forget-me.md)
-#### [Export](gdpr/push-export.md)
 ### Test
 #### [Delete](gdpr/test-forget-me.md)
 #### [Export](gdpr/test-export.md)
