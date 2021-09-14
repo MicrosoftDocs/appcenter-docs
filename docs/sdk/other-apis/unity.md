@@ -157,3 +157,7 @@ To do this, add **AppCenterBehaviorAdvanced** to the game object and check the *
 
 > [!TIP]
 > If you generate the settings at build time, another way is to go to **Player Settings** > **Other Settings** > **Scripting Define Symbols** and paste `APPCENTER_DONT_USE_NATIVE_STARTER`. 
+
+## Asynchronous APIs in the Unity SDK
+
+[!INCLUDE [Unity Async APIs](includes/unity-async.md)]

@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/14/2020
+ms.date: 09/13/2021
 ms.topic: article
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
@@ -78,7 +78,7 @@ pod 'AppCenter/Distribute'
 
 #### Integration by copying the binaries into your project
 
-If you wish to manually integrate the module, follow this [documentation link](~/sdk/distribute/ios-manual-integration.md).
+[!INCLUDE [ios manual integration](../distribute/includes/ios-manual-integration.md)]
 
 ### 2. Start App Center Distribute
 

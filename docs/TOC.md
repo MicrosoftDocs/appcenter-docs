@@ -282,6 +282,8 @@
 ### [iOS](sdk/getting-started/ios.md)
 ### [macOS](sdk/getting-started/macos.md)
 ### [tvOS](sdk/getting-started/tvos.md)
+### [iOS Extensions](sdk/getting-started/ios-extensions.md)
+### [macOS Extensions](sdk/getting-started/macos-extensions.md)
 ### [React Native](sdk/getting-started/react-native.md)
 ### [Unity](sdk/getting-started/unity.md)
 ### [UWP](sdk/getting-started/uwp.md)

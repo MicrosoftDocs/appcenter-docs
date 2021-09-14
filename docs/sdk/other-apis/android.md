@@ -270,3 +270,7 @@ There are many reasons the callback may fail.
 * The API has been called after `AppCenter.start(...)`.
 
 You can check warnings and errors in the console using the `AppCenter` log tag to troubleshoot configuration issues.
+
+## Asynchronous APIs in the Android SDK
+
+[!INCLUDE [[Android Async APIs](includes/android-async.md)]
