@@ -22,7 +22,7 @@ We want to give you an idea of some of the principles that we follow to keep App
 
 ## Data residency and sovereignty
 
-App Center operates almost entirely in the United States. All data and processing for Apps, Users, Organizations, Build, Distribution, Analytics, Diagnostics, and Push occurs in the United States. There's no option available for hosting this customer data in any other country.
+App Center operates almost entirely in the United States. All data and processing for Apps, Users, Organizations, Build, Distribution, Analytics and Diagnostics occurs in the United States. There's no option available for hosting this customer data in any other country.
 
 The only part of App Center that runs outside of the United States is App Center Test. App Center Test devices are located in Denmark. Data generated using App Center Test is held in Denmark and in the United States.
 
