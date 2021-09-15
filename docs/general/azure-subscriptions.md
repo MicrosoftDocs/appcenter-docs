@@ -51,17 +51,17 @@ If you already set as an "Owner" of an Azure subscription, you can connect it to
 
 ## App Center app access to subscription
 
-After connecting to azure account there is being granted automatically to App Center to access user’s subscription on their behalf. No explicit permission is required from the user.
+After connecting to an azure account there is being granted automatically to App Center to access user’s subscription on their behalf. No explicit permission is required from the user.
 
 App Center is added as a **contributor** to the subscription.
 Contributor access is used to create a storage account when the export functionality is used.
 For accessing the Storage Account and Resource groups below roles can be used.
 
 1. Storage Account Contributor Role: this cannot have access to certificates.
-2. Classic Storage Account Contributor Role: This is similar to storage account contributor but for classic storage accounts. We can also create our own role with required permissions.
+2. Classic Storage Account Contributor Role: This is similar to storage account contributor but for classic storage accounts. We can also create our own role with the required permissions.
 
-**Contributor** role lets App Center create and manage resources of all types. App Center create billable resources that might be required for paid App Center features to work.
-All of the operations that App Center might do to create those resources are auditable like any other operation in Azure. Contributor is the lowest level of role that we can use to have the rights we need to manage those resources.
+**Contributor** role lets App Center creates and manage resources of all types. App Center create billable resources that might be required for paid App Center features to work.
+All of the operations that App Center might do to create those resources are auditable like any other operation in Azure. Contributor is the lowest level of the role that we can use to have the rights we need to manage those resources.
 App Center does not request any information from your Azure subscription that we don't specifically need.
 App Center doesn't have permissions to provide access to resources.
 
