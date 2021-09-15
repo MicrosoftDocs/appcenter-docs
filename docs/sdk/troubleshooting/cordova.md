@@ -100,13 +100,12 @@ If you see the following error message during `cordova build android`, chances a
 FAILURE: Build failed with an exception.
 
 * Where:
-Script '.../cordova/platforms/android/cordova-plugin-appcenter-push/testpush-AppCenterPush.gradle' line: 3
+Script '.../cordova/platforms/android/cordova-plugin-appcenter-analytics/testanalytics-AppCenterAnalitycs.gradle' line: 3
 
 * What went wrong:
 A problem occurred evaluating script.
 > Could not find method google() for arguments [] on repository container.
 ```
-<!-- Should be provided other example that doesn't use Push service -->
 
 Update `cordova-android` to at least `6.4.0`. You can run `cordova platform update android` to update the platform to the latest version or `cordova platform add android@6.4.0` to use the exact version.
 
