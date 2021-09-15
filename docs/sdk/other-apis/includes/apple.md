@@ -163,7 +163,7 @@ AppCenter.sdkVersion
 ## Use custom properties
 
 App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/send-notification.md#audiences). 
-<!-- Should be provided other example that don't use Push service -->
+<!-- Should be provided other example that doesn't use Push service -->
 
 You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
 
