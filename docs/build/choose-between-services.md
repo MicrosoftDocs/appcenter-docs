@@ -20,7 +20,7 @@ If you answer “Yes” to these questions, App Center is a good choice for you.
 
 **1. Do you want to configure quick builds for your app, skip configuring build servers locally, avoid complicated configurations and code that builds on a coworker's machine but not yours?**
 
-To [get started](./index),
+To [get started](./index.md),
 
 1. Log into App Center at [https://appcenter.ms](https://appcenter.ms).
 2. Select the application project you want to build.
@@ -30,20 +30,20 @@ To [get started](./index),
   
 **2. Is your app fairly simple, without many customizations, and is the build straightforward?**
 
-In App Center, if your app follows the usual standard layout on the respective platform and doesn't rely on many external build steps, App Center finds the app automatically in your repository and builds it right away. We take care of creating the steps/tasks that builds the app on [Cloud Build Machines](./software). 
+In App Center, if your app follows the usual standard layout on the respective platform and doesn't rely on many external build steps, App Center finds the app automatically in your repository and builds it right away. We take care of creating the steps/tasks that builds the app on [Cloud Build Machines](./software.md). 
 
 All we need to know is the app you want us to build, from the repositories hosted on Azure Repos, Bitbucket, or GitHub.
  
 > [!TIP]
-> We still offer you a way to do some customizations during build, using [Build Scripts!](./custom/scripts/index) 
+> We still offer you a way to do some customizations during build, using [Build Scripts!](./custom/scripts/index.md) 
 
 **3. Do you want a true/continuous Build, Test, and Distribute flow from a Single Service?**
  
-App Center lets you not only build the app, but can also execute [launch tests](./build-test-integration) and distribute to Alpha/Beta Testers and [App Stores](./build-to-store) as part of the build. 
+App Center lets you not only build the app, but can also execute [launch tests](./build-test-integration.md) and distribute to Alpha/Beta Testers and [App Stores](./build-to-store.md) as part of the build. 
  
 **4. Do you use the [App Center Diagnostics](../diagnostics/index.md) SDK in your app (especially for iOS apps?)**
  
-When building your app using the App Center Build service, the corresponding debug symbol files (`dSYM` and source map `.zip` files, for iOS apps) will already be forwarded to the App Center Diagnostics service, so you don't need to manually obtain the symbol files and upload them to the diagnostics service as detailed in the [App Center Diagnostics documentation](../diagnostics/ios-symbolication#uploading-symbols). 
+When building your app using the App Center Build service, the corresponding debug symbol files (`dSYM` and source map `.zip` files, for iOS apps) will already be forwarded to the App Center Diagnostics service, so you don't need to manually obtain the symbol files and upload them to the diagnostics service as detailed in the [App Center Diagnostics documentation](../diagnostics/ios-symbolication.md#uploading-symbols). 
   
 **5. Do you want to manage all things related to your App in one central place?**
  
@@ -57,7 +57,7 @@ App Center brings together multiple services commonly used by mobile developers 
 If you answer “Yes” to these questions, Azure Pipelines may be the best tool for you. 
 
 **1. Did you want to Build other apps (Web apps, for instance)?**
-You should stick to Azure Pipelines. App Center only supports the OS/Platforms and services as mentioned in our [Platform Service Matrix page](../general/platform-service-matrix)
+You should stick to Azure Pipelines. App Center only supports the OS/Platforms and services as mentioned in our [Platform Service Matrix page](../general/platform-service-matrix.md)
 
 **2. Are you ready to [create your own Build Pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
   
@@ -80,4 +80,4 @@ Billing isn't shared between Azure Pipelines and App Center. The pipelines you p
 Your team might also be used to Azure Pipelines, and want to continue using the service for builds. In this case, Azure Pipelines might be better for you.   
 
 > [!TIP]
-> If you still want to use App Center Features as part of Build, you can use [Distribute](../distribution/vsts-deploy) and [Test](../test-cloud/vsts-plugin) tasks created for Azure Pipelines!
+> If you still want to use App Center Features as part of Build, you can use [Distribute](../distribution/vsts-deploy.md) and [Test](../test-cloud/vsts-plugin.md) tasks created for Azure Pipelines!
