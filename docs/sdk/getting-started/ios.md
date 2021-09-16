@@ -143,7 +143,7 @@ The instructions below are slightly different depending on what lifecycle you're
 If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
-Open the project's **AppDelegate** file (for UI Kit AppDelegate lifecycle) or **<ProjectName>App.swift** file (for Swift UI App lifecycle) and add the following import statements:
+Open the project's **AppDelegate** file (for UI Kit AppDelegate lifecycle) or **\<ProjectName>App.swift** file (for Swift UI App lifecycle) and add the following import statements:
 ```objc
 @import AppCenter;
 @import AppCenterAnalytics;
