@@ -51,7 +51,7 @@ If you are already set as an "Owner" of an Azure subscription, you can connect i
 
 ## App Center permissions for the subscription
 
-App center is added as a contributor to the subscription. The Contributor role lets App Center create and manage resources of all types. It doesn’t allow us to provide access to resources.
+App center is added as a contributor to the subscription. The Contributor role lets App Center create and manage resources of all types. It doesn’t allow App Center to provide access to resources.
 
 The Contributor access is used to create billable resources, storage account when the export functionality is used, etc.
 
