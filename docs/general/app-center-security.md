@@ -82,7 +82,7 @@ With that said, we're subject to multiple internal Microsoft, Azure, and Cloud &
 
 ## GDPR
 
-App Center fully supports GDPR. We have [extensive documentation](https://docs.microsoft.com/appcenter/gdpr/) to explain how data is handled and how you can submit data subject requests.
+App Center fully supports GDPR. We have [extensive documentation](../gdpr/index) to explain how data is handled and how you can submit data subject requests.
 
 ## Security reporting
 
