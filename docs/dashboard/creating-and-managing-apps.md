@@ -34,7 +34,7 @@ All apps that belong to you can be found in **My Apps**. When looking for apps o
 
 ## App secrets
 
-App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds or send push notifications). If your code is open source, we recommend you inject the secret at build or in a similar way.
+App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds). If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## App roles
 

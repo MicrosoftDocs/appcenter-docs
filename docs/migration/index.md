@@ -16,7 +16,3 @@ It provides a unified suite of services for the continuous integration of buildi
 
 ## [HockeyApp](~/transition/index.md)
 HockeyApp has been retired and all apps have been migrated to App Center.
-
-## [App Center Push](~/migration/push/index.md)
-
-App Center Push has been retired, and you must remove the App Center Push SDK from your apps and move to [Notification Hubs](https://docs.microsoft.com/azure/notification-hubs/). Learn more about [App Center's mobile backend retirement](https://devblogs.microsoft.com/appcenter/app-center-mbaas-retirement/).
