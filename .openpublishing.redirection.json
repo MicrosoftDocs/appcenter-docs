@@ -329,14 +329,6 @@
             "redirect_url": "/appcenter/analytics"
         },
         {
-            "source_path": "docs/push/audiences.md",
-            "redirect_url": "/appcenter/push/send-notification"
-        },
-        {
-            "source_path": "docs/push/pushapi.md",
-            "redirect_url": "/appcenter/push/rest-api"
-        },
-        {
             "source_path": "docs/sdk/advanced-apis/android.md",
             "redirect_url": "/appcenter/sdk/other-apis/android"
         },

@@ -71,7 +71,7 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
-  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
+  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
@@ -192,5 +192,3 @@ You're all set to visualize Analytics and Crashes data on the portal that the SD
 Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md) and [App Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/android.md).
-
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/android.md).

@@ -152,28 +152,6 @@ conceptualContent:
           - text: Troubleshooting
             url: ~/diagnostics/troubleshooting.md
             itemType: reference
-      # Card
-      - title: Push
-        summary: Engage user base by sending targeted messages to specific users at exactly the right time.
-        links:
-          - text: Introduction to Push
-            url: ~/push/index.md
-            itemType: overview
-          - text: Configuring the Push service
-            url: ~/push/service-config.md
-            itemType: how-to-guide
-          - text: Configuring an App for Push
-            url: ~/push/app-config.md
-            itemType: how-to-guide
-          - text: Sending Push Notifications
-            url: ~/push/send-notification.md
-            itemType: how-to-guide
-          - text: Troubleshooting
-            url: ~/push/troubleshooting.md
-            itemType: reference
-          - text: Frequently Asked Questions
-            url: ~/push/faq.md
-            itemType: reference
 
 tools:
   title: Get Started with the SDK
@@ -231,8 +209,6 @@ additionalContent:
               url: ~/sdk/crashes/android.md
             - text: Distribute
               url: ~/sdk/distribute/android.md
-            - text: Push
-              url: ~/sdk/push/android.md
             - text: Other APIs
               url: ~/sdk/other-apis/android.md
             - text: Troubleshooting
@@ -271,8 +247,6 @@ additionalContent:
               url: ~/gdpr/analytics-forget-me.md
             - text: Diagnostics
               url: ~/gdpr/diagnostics-delete.md
-            - text: Push
-              url: ~/gdpr/push-forget-me.md
             - text: Test
               url: ~/gdpr/test-forget-me.md
         # Card

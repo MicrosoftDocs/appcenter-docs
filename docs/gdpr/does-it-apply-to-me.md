@@ -106,15 +106,3 @@ catch (Exception exception)
     Crashes.TrackError(exception, properties);
 }
 ```
-
-### Scenario 5: Push - I added personal information in Push
-#### Custom Properties used to define your audience
-If you're using Custom Properties in App Center Analytics, every device registered for push notifications is associated to a number of custom properties. Other device-related information is associated as well like language, country, and so on. More about custom properties and how to use it in Push can be found here.
-
-#### Audience definition and description
-This is only used if you're using an audience to send push notifications. If you're pushing directly to Install IDs, you don’t have to worry about this issue.
-
-This scenario is the rare case where you may have personal information in an audience name, or description in the portal, or via API.
-
-#### Push Notification: message details, or the campaign description
-This data is stored for every Push Notification you make, whether you're using Audiences or device IDs. The data includes the Push Notification title, body, and any custom data you've added to your Push Notification.
