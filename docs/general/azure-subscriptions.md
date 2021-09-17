@@ -4,7 +4,7 @@ description: Information about App Center Azure Subscription integration.
 keywords: pricing,billing,subscription
 author: lucen-ms
 ms.author: lucen
-ms.date: 09/16/2021
+ms.date: 09/17/2021
 ms.topic: article
 ms.assetid: E1803020-0E6C-42EF-A4D3-FBCB15D7B220
 ms.service: vs-appcenter
@@ -51,9 +51,8 @@ If you are already set as an "Owner" of an Azure subscription, you can connect i
 
 ## App Center permissions for the subscription
 
-App center is added as a contributor to the subscription. The Contributor role lets App Center create and manage resources of all types. It doesn’t allow App Center to provide access to resources.
-
-The Contributor access is used to create billable resources, storage account when the export functionality is used, etc.
+In your subscription, you may find App Center is added as a **contributor**. This doesn't mean App Center has direct access to your resources. Instead, this permission lets App Center create and manage resources on your behalf in order to use our services.
+For example, export functionality requires permission to create billable resources such as storage account.
 
 ## Remove an existing Azure Subscription
 
