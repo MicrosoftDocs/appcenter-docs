@@ -34,6 +34,9 @@ The instructions in this page work for UWP (including Xamarin.Forms and WinUI), 
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc.
 
+> [!NOTE]
+> On WinUI apps, the amount of sessions may be lower than on UWP apps due to specifics of its lifecycle.
+
 ### Country Code
 
 Country code isn't automatically reported by the SDK. If you want to report it manually, you can follow the instructions for your platform below.
