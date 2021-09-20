@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/29/2021
+ms.date: 11/10/2020
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -33,6 +33,10 @@ App Center Crashes will automatically generate a crash log every time your app c
 
 The App Center SDK will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the update. Once they chose to update, the SDK starts to update your application. This feature WON'T work if your app is deployed to the app store.
 
+### App Center Push
+
+App Center Push enables you to send push notifications to users of your app from the App Center portal.
+
 ## Get started
 
 * [App Center SDK for Android](getting-started/android.md)
@@ -59,6 +63,7 @@ Service          | Android OS Version | API Level
 Analytics        | 5.0 and later      | 21 and later
 Crashes          | 5.0 and later      | 21 and later
 Distribute       | 5.0 and later      | 21 and later
+Push             | 5.0 and later      | 21 and later
 
 ### iOS
 
@@ -67,6 +72,7 @@ Service          | iOS Version     | Xcode
 Analytics        | 9.0 or later    | 11 and later
 Crashes          | 9.0 or later    | 11 and later
 Distribute       | 9.0 or later    | 11 and later
+Push             | 9.0 or later    | 11 and later
 
 ### Unity
 
@@ -75,6 +81,7 @@ Service    |  Unity version  | iOS Version  | Android Version            | UWP W
 Analytics  | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.16299 or later
 Crashes    | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
 Distribute | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not available
+Push       | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| 10.0.16299 or later
 
 ### Windows UWP
 
@@ -83,14 +90,7 @@ Service          | Windows Version    | Visual Studio
 Analytics        | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
 Crashes          | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
 Distribute       | not available      | not available
-
-### Windows WinUI in Desktop
-
-Service          | Windows Version    | Visual Studio
------------------|--------------------|----------------------------------------
-Analytics        | 10 build 17763     | Visual Studio 2019 Update 16.9 or later
-Crashes          | 10 build 17763     | Visual Studio 2019 Update 16.9 or later
-Distribute       | not available      | not available
+Push             | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
 
 ### WPF and WinForms
 
@@ -99,6 +99,7 @@ Service          | .NET Framework | .NET Core     | Windows Version | Visual Stu
 Analytics        | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
 Crashes          | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
 Distribute       | not available  | not available | not available   | not available
+Push             | not available  | not available | not available   | not available
 
 .NET Core is supported only when the WPF/WinForms application runs on Windows.
 
@@ -109,6 +110,7 @@ Service    |  RN version   | iOS Version              | Android Version
 Analytics  | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
 Crashes    | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
 Distribute | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
+Push       | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or later
 
 ### macOS
 
@@ -116,6 +118,7 @@ Service          | macOS Version   | Xcode
 -----------------|-----------------|--------------
 Analytics        | 10.9 or later   | 11 or later
 Crashes          | 10.9 or later   | 11 or later
+Push             | 10.9 or later   | 11 or later
 
 ### tvOS
 
@@ -131,6 +134,7 @@ Service    |  AC CLI version      | iOS Version     | Android Version
 Analytics  | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
 Crashes    | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
 Distribute | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
+Push       | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
 
 ## Source Code and Release Notes
 
