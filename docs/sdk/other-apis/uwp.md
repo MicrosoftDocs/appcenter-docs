@@ -1,16 +1,16 @@
 ---
-title: Other UWP APIs
-description: Other APIs in the App Center SDK for UWP
+title: Other UWP and WinUI APIs
+description: Other APIs in the App Center SDK for UWP and WinUI
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/23/2020
+ms.date: 07/29/2021
 ms.topic: article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.tgt_pltfrm: uwp
 ---
 
-# Other UWP APIs
+# Other UWP and WinUI APIs
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
