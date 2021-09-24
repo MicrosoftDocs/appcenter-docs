@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 9/22/2021
+ms.date: 9/24/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -516,3 +516,16 @@ Apple iPod touch 7th Gen | 13.5.1
 Apple iPod touch 7th Gen | 14.0.1
 Apple iPod touch 7th Gen | 14.1
 Apple iPod touch 7th Gen | 14.2
+
+Will be deprecated and reused as iOS 15 | on October 5, 2021
+-- | --
+Apple iPhone 8 | 11.0.3
+Apple iPhone 8 | 12.0.1
+Apple iPhone 8 | 12.1.4
+Apple iPhone 11 Pro Max | 14.2
+Apple iPhone SE (2020) | 14.0.1
+Apple iPhone SE (2020) | 14.2
+Apple iPhone SE (2020) | 14.5.1
+Apple iPad Pro 11" (2018) | 12.2
+Apple iPad Pro 11" (2018) | 13.2.3
+Apple iPad Pro 11" (2018) | 13.3.1
