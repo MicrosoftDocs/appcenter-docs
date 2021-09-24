@@ -42,7 +42,7 @@ For UWP project:
 For WinUI project:
 * Your project is set up in Visual Studio 2019 Update 16.9 or later.
 * You're targeting devices running Windows 10 build 17763 or later.
-* Your project references WinUI 3 [0.8.0](https://docs.microsoft.com/ru-ru/windows/apps/windows-app-sdk/stable-channel#version-080) or later.
+* Your project references WinUI 3 [0.8.0](https://docs.microsoft.com/windows/apps/windows-app-sdk/stable-channel#version-080) or later.
 
 > [!NOTE]
 > If you want to use Xamarin.Forms for UWP, follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
