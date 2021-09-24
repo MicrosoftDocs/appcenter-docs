@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/21/2020
+ms.date: 07/09/2021
 ms.topic: article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -72,7 +72,7 @@ To view events before a crash, select a crash group, a specific device report, a
 You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
 
 > [!NOTE]
-> This feature is only supported for Android, Xamarin, Unity, UWP, WinForms, and WPF Errors today.
+> This feature is only supported for Android, iOS, Xamarin, React Native, Unity, UWP, WinForms and WPF Errors today.
 
 ### Export Diagnostics Data
 
