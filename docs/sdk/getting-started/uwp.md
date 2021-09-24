@@ -1,16 +1,16 @@
 ---
-title: Get Started with UWP
-description: Get Started with UWP
+title: Get Started with UWP/WinUI
+description: Get Started with UWP/WinUI
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 01/18/2021
+ms.date: 07/29/2021
 ms.topic: article
 ms.assetid: e66eeedb-5395-46ce-9526-9e22319a94d4
 ms.tgt_pltfrm: uwp
 ---
 
-# Get Started with UWP
+# Get Started with UWP/WinUI
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
@@ -27,16 +27,22 @@ ms.tgt_pltfrm: uwp
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 
-Let's get started with setting up App Center UWP SDK in your app to use App Center Analytics and App Center Crashes.
+Let's get started with setting up App Center SDK in your app to use App Center Analytics and App Center Crashes.
 
 ## 1. Prerequisites
 
 Before you begin, make sure that the following prerequisites are met:
 
+For UWP project:
 * Your project is set up in Visual Studio 2017 Update 15.9 or later.
 * You're targeting devices running Windows 10 build 16299 or later.
 * Your project references Universal Windows Platform [6.2.8](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.2.8) or later (this package is typically referenced implicitly).
 * NuGet 4.3 or later.
+
+For WinUI project:
+* Your project is set up in Visual Studio 2019 Update 16.9 or later.
+* You're targeting devices running Windows 10 build 17763 or later.
+* Your project references WinUI 3 [0.8.0](https://docs.microsoft.com/windows/apps/windows-app-sdk/stable-channel#version-080) or later.
 
 > [!NOTE]
 > If you want to use Xamarin.Forms for UWP, follow the Xamarin [Getting started](~/sdk/getting-started/xamarin.md) documentation instead of this one.
