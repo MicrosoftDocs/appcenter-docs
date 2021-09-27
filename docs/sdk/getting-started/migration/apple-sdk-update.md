@@ -4,7 +4,7 @@ description: How to migrate to App Center SDK 4.0.0 and higher
 keywords: sdk, apple
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/22/2020
+ms.date: 09/27/2021
 ms.topic: article
 ms.assetid: 408cdcba-07bb-11eb-adc1-0242ac120002
 ms.tgt_pltfrm: apple
@@ -109,7 +109,6 @@ The following tables show the APIs that have been renamed.
 | MSAppCenter.setLogUrl("{Log Url}")                                      | AppCenter.logUrl = "{Log Url}"                                             |
 | MSAppCenter.setLogLevel(.verbose)                                       | AppCenter.logLevel = .verbose                                              |
 | MSAppCenter.setLogHandler(logHandler)                                   | AppCenter.logHandler = logHandler                                          |
-| MSAppCenter.setCustomProperties(props)                                  | AppCenter.customProperties = props                                         |
 | MSAppCenter.SetUserId("{User Id}")                                      | AppCenter.userId = "{User Id}"                                             |
 | MSAppCenter.setCountryCode("{Country Code}")                            | AppCenter.countryCode = "{Country Code}"                                   |
 | MSAppCenter.setAppSecret("{App Secret}")                                | AppCenter.appSecret = "{App Secret}"                                       |
