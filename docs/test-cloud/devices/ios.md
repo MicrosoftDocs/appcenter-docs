@@ -252,6 +252,10 @@ Apple iPhone 12 Pro Max | 14.5.1
 Apple iPhone 12 Pro Max | 14.6
 Apple iPhone 12 Pro Max | 14.7.1
 Apple iPhone 12 Pro Max | 15.0
+Apple iPhone 13 | 15.0
+Apple iPhone 13 Mini | 15.0
+Apple iPhone 13 Pro | 15.0
+Apple iPhone 13 Pro Max | 15.0
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
 Apple iPhone 5S | 12.5.4
