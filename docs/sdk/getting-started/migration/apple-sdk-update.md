@@ -57,7 +57,6 @@ The following tables show the APIs that have been renamed.
 |  MSLogLevelWarning                   | MSACLogLevelWarning                            | .warning                               |
 |  MSLogLevelInfo                      | MSACLogLevelInfo                               | .info                                  |
 |  MSLogLevelAssert                    | MSACLogLevelAssert                             | .assert                                |
-|  MSCustomProperties                  | MSACCustomProperties                           | CustomProperties                       |
 |  MSLogHandler                        | MSACLogHandler                                 | LogHandler                             |
 |  MSLogMessageProvider                | MSACLogMessageProvider                         | LogMessageProvider                     |
 
