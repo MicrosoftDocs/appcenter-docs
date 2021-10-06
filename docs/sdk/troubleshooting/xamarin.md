@@ -55,7 +55,7 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
 1. Make sure you've integrated the SDK modules correctly.
 2. Make sure correct App Secret is included along with the `Start()` method call. You can copy the exact `Start()` code by opening the app in the portal and navigating to Getting Started page.
-3. Restart the app after a crash. App Center Crashes will forward the crash log only after it's restarted. Also, on Xamarin.iOS, the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
+3. Restart the app after a crash. App Center Crashes will forward the crash log only after it's restarted. Also, on Xamarin.iOS and Xamarin.macOS the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
 4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
    ```csharp

@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 01/26/2021
+ms.date: 10/06/2021
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -42,7 +42,8 @@ The App Center SDK for Xamarin supports the following platforms:
 
 * Xamarin.Android
 * Xamarin.iOS
-* Xamarin.Forms (iOS, Android, UWP and Windows Desktop applications)
+* Xamarin.macOS
+* Xamarin.Forms (iOS, macOS Android, UWP and Windows Desktop applications)
 
 ### 1.1 About Xamarin.Android
 
@@ -52,13 +53,17 @@ Choose this option if you target only Android platform. You need to create one a
 
 Choose this option if you target only iOS platform. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-### 1.3 About Xamarin.Forms (iOS, Android, UWP and Windows Desktop)
+### 1.2 About Xamarin.macOS
 
-Choose this option if you want to create a cross platform app for iOS, Android, UWP and Windows Desktop devices. You need to create 4 apps in App Center – one for each OS.
+Choose this option if you target only macOS platform. You need to create one app in the App Center portal with **macOS** as the OS and **Xamarin** as the platform.
 
-You need to select **Xamarin** as the platform for Android and iOS applications (UWP doesn't have a Xamarin option).
+### 1.3 About Xamarin.Forms (iOS, macOS, Android, UWP and Windows Desktop)
 
-For the **Windows Desktop** applications you have to configure your project for compatibility with the **Xamarin** platform. 
+Choose this option if you want to create a cross platform app for iOS, Android, UWP and Windows Desktop devices. You need to create 5 apps in App Center – one for each OS.
+
+You need to select **Xamarin** as the platform for Android, iOS and macOS applications (UWP doesn't have a Xamarin option).
+
+For the **Windows Desktop** and **macOS** applications you have to configure your project for compatibility with the **Xamarin.Forms** platform. 
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret
 
@@ -118,7 +123,7 @@ To use App Center, you must opt in to the module(s) that you want to use. By def
 
 Add the appropriate namespaces before you get started with using our APIs.
 
-* **Xamarin.iOS** - Open the project's `AppDelegate.cs` and add the following lines below the existing `using` statements
+* **Xamarin.iOS** and * **Xamarin.macOS**  - Open the project's `AppDelegate.cs` and add the following lines below the existing `using` statements
 * **Xamarin.Android** - Open the project's `MainActivity.cs` and add the following lines below the existing `using` statements
 * **Xamarin.Forms** - Open the project's `App.xaml.cs` and add the following lines below the existing `using` statements
 
@@ -144,7 +149,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 > [!NOTE]
 > If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
 
-#### 4.2.2 Xamarin.iOS
+#### 4.2.2 Xamarin.iOS and Xamarin.macOS
 
 > [!NOTE]
 > It isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
@@ -166,7 +171,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the App Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open the project's **App.xaml.cs** file (or your class that inherits from `Xamarin.Forms.Application`) in your shared or portable project and add the method below in the `OnStart()` method.
 
 ```csharp
-AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics), typeof(Crashes));
+AppCenter.Start("ios={Your App Secret};macos={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 If you need to start App Center services separately, you should:
@@ -176,7 +181,7 @@ If you need to start App Center services separately, you should:
 1. Start the required service(s) without the App Secret.
 
 ```csharp
-AppCenter.Configure("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}");
+AppCenter.Configure("ios={Your App Secret};macos={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}");
 if (AppCenter.Configured)
 {
     AppCenter.Start(typeof(Analytics));
@@ -235,7 +240,7 @@ Unless you explicitly specify each module as parameters in the start method, you
 
 For example - If you want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
 
-#### 4.3.1 Xamarin.Android and Xamarin.iOS
+#### 4.3.1 Xamarin Native
 
 ```csharp
 AppCenter.Start("{Your App Secret}", typeof(Analytics));
@@ -244,7 +249,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics));
 #### 4.3.2 Xamarin.Forms
 
 ```csharp
-AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics));
+AppCenter.Start("ios={Your App Secret};macos={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics));
 ```
 
 ---
