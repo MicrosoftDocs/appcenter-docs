@@ -84,15 +84,15 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
 > [!NOTE]
 > If you already have a custom file with backup rule, switch to the third step.
 
-  a. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
+  1. Create **appcenter_backup_rule.xml** file in the **Assets/Plugins/Android/res/xml** folder.
 
-  b.1 For Android 11 (API level 30) or lower open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  2.1 For Android 11 (API level 30) or lower open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
   ```text
   android:fullBackupContent="@xml/appcenter_backup_rule"
   ```
 
-  b.2 For Android 12 (API level 31) or higher open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  2.2 For Android 12 (API level 31) or higher open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
   
   ```text
   android:dataExtractionRules="@xml/appcenter_backup_rule"
@@ -101,7 +101,7 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
 > [!NOTE]
 > If you don't already have your own **AndroidManifest.xml** file, create it in the **Assets/Plugins/Android** folder. This manifest will be merged with the default Unity-created one at the time of build.
 
-  c.1 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 11 (API level 30) or lower:
+  3.1 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 11 (API level 30) or lower:
 
   ```xml
   <full-backup-content xmlns:tools="http://schemas.android.com/tools">
@@ -112,7 +112,7 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
    </full-backup-content>
   ```
-  c.2 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 12 (API level 31) or higher:
+  3.2 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 12 (API level 31) or higher:
 
   ```xml
   <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
