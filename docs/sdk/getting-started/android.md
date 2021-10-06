@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/13/2021
+ms.date: 10/06/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -87,13 +87,30 @@ Now that you've integrated the SDK in your application, it's time to start the S
 
   a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
 
-  b. Open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+  b.1 For Android 11 (API level 30) or lower open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+  ```text
+  android:fullBackupContent="@xml/appcenter_backup_rule"
+  ```
+
+  b.2 For Android 12 (API level 31) or higher open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
   ```text
   android:dataExtractionRules="@xml/appcenter_backup_rule"
   ```
 
-  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+  c.1 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 11 (API level 30) or lower:
+
+  ```xml
+  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
+       <exclude domain="sharedpref" path="AppCenter.xml"/>
+       <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+       <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+       <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+       <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+   </full-backup-content>
+  ```
+  c.2 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 12 (API level 31) or higher:
 
   ```xml
   <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
