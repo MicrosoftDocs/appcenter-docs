@@ -36,7 +36,7 @@ You can also export data to Azure General Purpose v2 Storage Blob. General-purpo
 
 Azure Blob Storage is a service for storing large amounts of unstructured object data, such as text or binary data, available worldwide via HTTP or HTTPS. You can use Blob Storage to expose data publicly, or to store data privately.
 
-The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, *https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data*) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored in the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
+The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, `https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data`) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored in the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
 The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnostics data](https://docs.microsoft.com/appcenter/gdpr/diagnostics-export)
 
