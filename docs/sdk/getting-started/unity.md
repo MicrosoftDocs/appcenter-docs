@@ -76,7 +76,38 @@ As an alternative, each of the individual Unity packages can be downloaded and i
 
 Open your Unity project, then double-click the package you downloaded. A pop-up window should appear in your Unity project containing a list of files. Select **Import**, and the SDK will be added to your project. Repeat this step for each package you downloaded and plan to use in your project.
 
-### 3.3 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
+## 4. Enable the SDK
+
+### 4.1 Create an empty Game Object
+
+App Center works as a component that you attach to a game object in the scene that your game launches into. Navigate to this scene and add an empty game object. Give it a descriptive name, such as "App Center".
+
+### 4.2 Attach the App Center script
+
+In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
+
+> [!NOTE]
+> You don't need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
+
+### 4.3 Configure App Center settings
+
+Click on this new "App Center" object and add your app secrets to the corresponding fields in the **Inspector** window. Make sure to also check the "Use {service}" boxes for each App Center service you intend to use
+
+![App Center script configuration](images/unity_configuration.png "App Center configuration")
+
+> [!NOTE]
+> If your project doesn't support one of the three platforms listed in the settings, leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
+
+---
+Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK will automatically collect.
+
+Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) and [App Center Crashes](~/sdk/crashes/unity.md) to learn how to use more advanced functionality with both services.
+
+To learn how to get started with in-app updates, read the documentation for [App Center Distribute](~/sdk/distribute/unity.md).
+
+To learn how to get started with Push, read the documentation for [App Center Push for Android](~/sdk/push/unity-android.md), [App Center Push for iOS](~/sdk/push/unity-ios.md), and [App Center Push for Windows](~/sdk/push/unity-windows.md).
+
+## 5. If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled.
@@ -132,34 +163,4 @@ Open your Unity project, then double-click the package you downloaded. A pop-up 
       </device-transfer>
   </data-extraction-rules>
   ```
-
-## 4. Enable the SDK
-
-### 4.1 Create an empty Game Object
-
-App Center works as a component that you attach to a game object in the scene that your game launches into. Navigate to this scene and add an empty game object. Give it a descriptive name, such as "App Center".
-
-### 4.2 Attach the App Center script
-
-In the **Project** window, navigate to the "AppCenter" folder that was added to your project. Locate the script, named *AppCenterBehavior*, and drag it onto your newly created game object in the **Hierarchy** window.
-
-> [!NOTE]
-> You don't need to add App Center to every scene in which you wish to use it. Adding it to the first loaded scene is enough.
-
-### 4.3 Configure App Center settings
-
-Click on this new "App Center" object and add your app secrets to the corresponding fields in the **Inspector** window. Make sure to also check the "Use {service}" boxes for each App Center service you intend to use
-
-![App Center script configuration](images/unity_configuration.png "App Center configuration")
-
-> [!NOTE]
-> If your project doesn't support one of the three platforms listed in the settings, leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
-
----
-Great, you're all set to visualize Analytics and Diagnostics (Crash and Error) data in the portal that the SDK will automatically collect.
-
-Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) and [App Center Crashes](~/sdk/crashes/unity.md) to learn how to use more advanced functionality with both services.
-
-To learn how to get started with in-app updates, read the documentation for [App Center Distribute](~/sdk/distribute/unity.md).
-
-To learn how to get started with Push, read the documentation for [App Center Push for Android](~/sdk/push/unity-android.md), [App Center Push for iOS](~/sdk/push/unity-ios.md), and [App Center Push for Windows](~/sdk/push/unity-windows.md).
+  

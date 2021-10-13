@@ -193,7 +193,44 @@ if (AppCenter.Configured)
 > [!NOTE]
 > The notes from both the previous sections about iOS and Android apply to Xamarin.Forms as well. If those remarks apply to your application, you might need to initialize AppCenter in different places per platform.
 
-##### 4.2.4 If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+### 4.3 Replace the placeholder with your App Secret
+
+Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
+
+The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
+
+The example above shows how to use the `Start()` method and include both App Center Analytics and App Center Crashes.
+
+If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
+
+Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+
+For example - If you want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
+
+#### 4.3.1 Xamarin.Android and Xamarin.iOS
+
+```csharp
+AppCenter.Start("{Your App Secret}", typeof(Analytics));
+```
+
+#### 4.3.2 Xamarin.Forms
+
+```csharp
+AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics));
+```
+
+---
+
+Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+
+Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md) and [App Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
+
+To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
+
+> [!NOTE]
+> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** and **Windows Desktop** platforms and are doing nothing when running on your **UWP** and **Windows Desktop** applications. In particular UWP and Windows Desktop doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on UWP and Windows Desktop application.
+
+## 5. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
@@ -246,40 +283,3 @@ android:dataExtractionRules="@xml/appcenter_backup_rule"
     </device-transfer>
 </data-extraction-rules>
 ```
-
-### 4.3 Replace the placeholder with your App Secret
-
-Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
-
-The Getting Started page contains the above code sample with your App Secret in it, you can copy-paste the whole sample.
-
-The example above shows how to use the `Start()` method and include both App Center Analytics and App Center Crashes.
-
-If you don't want to use one of the two services, remove the corresponding parameter from the method call above.
-
-Unless you explicitly specify each module as parameters in the start method, you can't use that App Center service. In addition, the `start()` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
-
-For example - If you want to onboard to App Center Analytics, you should modify the `Start()` call as follows:
-
-#### 4.3.1 Xamarin.Android and Xamarin.iOS
-
-```csharp
-AppCenter.Start("{Your App Secret}", typeof(Analytics));
-```
-
-#### 4.3.2 Xamarin.Forms
-
-```csharp
-AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret};windowsdesktop={Your App Secret}", typeof(Analytics));
-```
-
----
-
-Great, you're all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
-
-Look at the documentation for [App Center Analytics](~/sdk/analytics/xamarin.md) and [App Center Crashes](~/sdk/crashes/xamarin.md) to learn how to customize and use more advanced functionalities of both services.
-
-To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/xamarin.md).
-
-> [!NOTE]
-> Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** and **Windows Desktop** platforms and are doing nothing when running on your **UWP** and **Windows Desktop** applications. In particular UWP and Windows Desktop doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on UWP and Windows Desktop application.
