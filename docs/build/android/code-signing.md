@@ -4,7 +4,7 @@ description: How to set up code signing for Android apps
 keywords: android
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/10/2019
+ms.date: 13/10/2021
 ms.topic: article
 ms.assetid: 656b4c96-d2b8-456a-9cd8-b7cbc827cdf0
 ms.service: vs-appcenter
