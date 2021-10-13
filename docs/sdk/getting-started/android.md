@@ -165,11 +165,7 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md)
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/android.md).
 
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/android.md).
-
 ## 5. Backup rules (Android only)
-
-If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
@@ -177,48 +173,57 @@ If you use auto-backup to avoid getting incorrect information about devices, fol
 > [!NOTE]
 > If you already have a custom file with backup rule, switch to the third step.
 
-  1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
-  2.1 For Android 11 (API level 30) or lower open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+### 5.1. For Android 11 (API level 30) or lower.
 
-  ```text
-  android:fullBackupContent="@xml/appcenter_backup_rule"
-  ```
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
 
-  2.2 For Android 12 (API level 31) or higher open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
-  ```text
-  android:dataExtractionRules="@xml/appcenter_backup_rule"
-  ```
+```text
+android:fullBackupContent="@xml/appcenter_backup_rule"
+```
 
-  3.1 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 11 (API level 30) or lower:
+3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
-  ```xml
-  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-       <exclude domain="sharedpref" path="AppCenter.xml"/>
-       <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-       <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-       <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-       <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-   </full-backup-content>
-  ```
-  3.2 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 12 (API level 31) or higher:
+```xml
+<full-backup-content xmlns:tools="http://schemas.android.com/tools">
+      <exclude domain="sharedpref" path="AppCenter.xml"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+  </full-backup-content>
+```
 
-  ```xml
-  <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
-      <cloud-backup>
-          <exclude domain="sharedpref" path="AppCenter.xml"/>
-          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-      </cloud-backup>
-      <device-transfer>
-          <exclude domain="sharedpref" path="AppCenter.xml"/>
-          <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-          <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-          <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-          <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-      </device-transfer>
-  </data-extraction-rules>
-  ```
+### 5.2. For Android 12 (API level 31) or higher.
+
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+```text
+android:dataExtractionRules="@xml/appcenter_backup_rule"
+```
+
+3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
+
+```xml
+<data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
+    <cloud-backup>
+        <exclude domain="sharedpref" path="AppCenter.xml"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+        <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="AppCenter.xml"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
+        <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
+        <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
+        <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
+    </device-transfer>
+</data-extraction-rules>
+```

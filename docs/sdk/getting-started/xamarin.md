@@ -232,29 +232,25 @@ To learn how to get started with in-app updates, read the documentation of [App 
 
 ## 5. Backup rules (Android only)
 
-If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
-
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
 
 > [!NOTE]
 > If you already have a custom file with backup rules, switch to the third step.
 
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+
+### 5.1. For Android 11 (API level 30) or lower.
+
 1. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
 
-2.1 For Android 11 (API level 30) or lower open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
 
 ```text
 android:fullBackupContent="@xml/appcenter_backup_rule"
 ```
 
-2.2 For Android 12 (API level 31) or higher open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
-
-```text
-android:dataExtractionRules="@xml/appcenter_backup_rule"
-```
-
-3.1 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 11 (API level 30) or lower:
+3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
 ```xml
 <full-backup-content xmlns:tools="http://schemas.android.com/tools">
@@ -265,7 +261,18 @@ android:dataExtractionRules="@xml/appcenter_backup_rule"
     <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
 </full-backup-content>
 ```
-3.2 Add the following backup rules to the **appcenter_backup_rule.xml** file for Android 12 (API level 31) or higher:
+
+### 5.2. For Android 12 (API level 31) or higher.
+
+1. Create **appcenter_backup_rule.xml** file in the **Resources/xml** folder.
+
+2. Open the project’s **AndroidManifest.xml** file. Add the `android:dataExtractionRules` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
+
+```text
+android:dataExtractionRules="@xml/appcenter_backup_rule"
+```
+
+3. Add the following backup rules to the **appcenter_backup_rule.xml** file:
 
 ```xml
 <data-extraction-rules xmlns:tools="http://schemas.android.com/tools">
