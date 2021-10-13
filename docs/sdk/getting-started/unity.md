@@ -105,9 +105,9 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/unity.md) a
 
 To learn how to get started with in-app updates, read the documentation for [App Center Distribute](~/sdk/distribute/unity.md).
 
-To learn how to get started with Push, read the documentation for [App Center Push for Android](~/sdk/push/unity-android.md), [App Center Push for iOS](~/sdk/push/unity-ios.md), and [App Center Push for Windows](~/sdk/push/unity-windows.md).
+## 5. Backup rules (Android only)
 
-## 5. If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
+If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled.

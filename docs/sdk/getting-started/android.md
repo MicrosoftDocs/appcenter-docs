@@ -167,7 +167,9 @@ To learn how to get started with in-app updates, read the documentation of [App 
 
 To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/android.md).
 
-## 5. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+## 5. Backup rules (Android only)
+
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 

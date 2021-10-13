@@ -230,7 +230,9 @@ To learn how to get started with in-app updates, read the documentation of [App 
 > [!NOTE]
 > Using the portable APIs from Xamarin Forms, you'll see APIs from all modules, however not all those APIs are supported on the **UWP** and **Windows Desktop** platforms and are doing nothing when running on your **UWP** and **Windows Desktop** applications. In particular UWP and Windows Desktop doesn't support the following module: **Distribute**. Any method with a return type would return either `null` (for objects), `0` (for numbers), or `false` (for booleans) on UWP and Windows Desktop application.
 
-## 5. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+## 5. Backup rules (Android only)
+
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
 
 > [!NOTE]
 > Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
