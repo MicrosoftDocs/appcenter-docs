@@ -6,7 +6,7 @@ author: lucen-ms
 ms.author: lucen
 ms.topic: article
 ms.service: vs-appcenter
-ms.date: 05/20/2019
+ms.date: 08/10/2021
 ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
 ---
 
@@ -52,7 +52,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## Sign the Android Package Kit (APK)
 *Code signing is optional, but recommended.*
-To run tests, distribute the app to users, and send push notifications, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
+To run tests and distribute the app to users, the APK must be digitally signed with a certificate. After creating an App ID for the sample app, follow the steps below to manually sign the APK. To learn what a digital certificate is, or for signing options other than the one outlined below, refer to the [Android Developer Documentation](https://developer.android.com/studio/publish/app-signing.html#sign-auto).
 
 1. Open Android Studio and click **Open an existing Android Studio project**.
 2. Navigate to the forked sample app repository location on your machine and upload it to Android Studio.

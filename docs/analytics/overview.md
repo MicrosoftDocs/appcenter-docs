@@ -4,7 +4,7 @@ description: Help using the Overview Page on App Center
 keywords: app center, analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/29/2019
+ms.date: 08/22/2021
 ms.topic: article
 ms.assetid: d6fea3a0-7a48-4c37-a972-7a803705faf5
 ms.service: vs-appcenter
@@ -50,12 +50,12 @@ Analytics will offer you the following information:
 
 The Devices panel gives information about the users' devices:
 
-- Device model distribution: Shows the count and percentage of the top most used device models. 
+- Device model distribution: Shows the count and percentage of the top most used device models.
 - OS distribution: Shows the relative percentage of the top most used OS versions.
 
 ## Countries and Languages
 
-The Countries and Languages panel display information about devices geographical location and language settings in the device.
+The Countries and Languages panel displays information about devices geographical location and language settings in the device.
 
 The country is determined by the carrier country and requires the device to have a SIM card. If you're using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
 
@@ -68,4 +68,4 @@ The language is the one defined at the OS level by the user.
 
 ## Active Users per Version
 
-This chart shows how many users are using a given version. It will show the distribution for the top 20 app version.
+The Active Users per Version panel shows how many users are using a given version. It will show the latest 20 versions only.

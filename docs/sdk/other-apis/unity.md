@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Unity
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/08/2020
+ms.date: 04/26/2021
 ms.topic: article
 ms.assetid: 666da224-d8fe-484b-b945-c2d018c53daa
 ms.tgt_pltfrm: unity
@@ -80,6 +80,33 @@ You can enable or disable the service at the runtime with following code:
 Analytics.SetEnabledAsync(true);
 ```
 
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = false;
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed = true;
+```
+
+>[!NOTE]
+> This value is retained between starts.
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```csharp
+AppCenter.IsNetworkRequestsAllowed;
+```
+
+>[!NOTE]
+> The value saved previously in `SharedPreferences` is ignored until `AppCenter` is started on Android platform.
+> It will return the last value set using `AppCenter.IsNetworkRequestsAllowed = allowed` or `true` if the value wasn't changed before AppCenter start.
+
 ## Check if App Center is enabled
 
 You can also check if App Center is enabled or not.
@@ -95,14 +122,6 @@ You can get the version of App Center SDK that you're currently using.
 ```csharp
 AppCenter.SdkVersion;
 ```
-
-## Use custom properties
-
-App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to those segments by [creating targeted audiences](~/push/send-notification.md#audiences).
-
-> [!NOTE]
-> Only devices that have Push successfully registered are matched in audiences. Make sure to refer to the relevant getting started documentation depending on the platform you're targeting.
-> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `SetCustomProperties()` method. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool`, and `DateTime`.
 
@@ -130,3 +149,7 @@ To do this, add **AppCenterBehaviorAdvanced** to the game object and check the *
 
 > [!TIP]
 > If you generate the settings at build time, another way is to go to **Player Settings** > **Other Settings** > **Scripting Define Symbols** and paste `APPCENTER_DONT_USE_NATIVE_STARTER`. 
+
+## Asynchronous APIs in the Unity SDK
+
+[!INCLUDE [Unity Async APIs](includes/unity-async.md)]

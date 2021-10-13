@@ -4,7 +4,7 @@ description: Information about App Center Azure Subscription integration.
 keywords: pricing,billing,subscription
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/05/2019
+ms.date: 09/17/2021
 ms.topic: article
 ms.assetid: E1803020-0E6C-42EF-A4D3-FBCB15D7B220
 ms.service: vs-appcenter
@@ -39,7 +39,7 @@ If you don't have an existing Azure subscription, the following steps will guide
 
 ## Connecting to an existing Azure subscription
 
-If you already set as an "Owner" of an Azure subscription, you can connect it to your organization/personal account in App Center.
+If you are already set as an "Owner" of an Azure subscription, you can connect it to your organization/personal account in App Center.
 
 > [!WARNING]
 > Once you add an Azure subscription to an organization, any organization admin can use it to change billing settings within the same org. Organization admins can make these changes to your Azure subscription without having an "Owner" role assigned to them.
@@ -48,6 +48,11 @@ If you already set as an "Owner" of an Azure subscription, you can connect it to
 2. Enter your email to sign in to Azure. Sign in with a Microsoft account.
 3. After signing-in, select your subscription from the list of subscriptions.
 4. You'll be redirected to the billing page and you can continue your checkout process.
+
+## App Center permissions for the subscription
+
+In your subscription, you may find App Center is added as a **contributor**. This doesn't mean App Center has direct access to your resources. Instead, this permission lets App Center create and manage resources on your behalf in order to use our services.
+For example, export functionality requires permission to create billable resources such as storage account.
 
 ## Remove an existing Azure Subscription
 

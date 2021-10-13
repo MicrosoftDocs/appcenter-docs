@@ -16,12 +16,12 @@ This document provides instructions for preparing Espresso tests for upload to T
 
 ## 1. Changes to the build system
 
-Add the JCenter Maven repository. Make sure you have a `jcenter()` entry in the **build.gradle** in your project root directory:
+Add the Maven Central repository. Make sure you have a `mavenCentral()` entry in the **build.gradle** in your project root directory:
 
 ```gradle
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
     }
 }
 ```
@@ -78,6 +78,6 @@ To build the project and test apk files, run each of the following commands.
 ```
 
 > [!NOTE]
-> You system `path` variable must include access to your machine's Java installation.
+> Your system `path` variable must include access to your machine's Java installation.
 
 Once a test suite has been instrumented with the Test Cloud extensions, [upload it to Test Cloud](~/test-cloud/starting-a-test-run.md).

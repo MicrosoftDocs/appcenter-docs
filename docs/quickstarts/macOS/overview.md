@@ -4,7 +4,7 @@ description: Landing page to navigate through macOS tutorials.
 keywords: app center
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/15/2017
+ms.date: 08/10/2021
 ms.topic: article
 ms.service: vs-appcenter
 ms.assetid: a58e7386-11f5-427d-9afc-4534295344f9
@@ -28,5 +28,3 @@ Begin with the **Getting Started** tutorial. After you've completed that, you ca
 | [Distribute](distribute.md)           | Distribute to a group of users |
 | [Crash](crashes.md)                   | Monitor application crashes    |
 | [Analytics](analytics.md)             | View user analytics            |
-| [Push](push.md)                       | Send users push notifications  |
-

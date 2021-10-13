@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/06/2020
+ms.date: 05/13/2021
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.tgt_pltfrm: react-native
@@ -86,6 +86,33 @@ await AppCenter.setEnabled(true);
 
 The state is persisted in the device's storage across application launches.
 
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```javascript
+await AppCenter.setNetworkRequestsAllowed(false);
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```javascript
+await AppCenter.setNetworkRequestsAllowed(true);
+```
+
+>[!NOTE]
+> This value is retained between starts.
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```javascript
+await AppCenter.isNetworkRequestsAllowed();
+```
+
+>[!NOTE]
+> The value saved in SharedPreferences is ignored until `AppCenter` is started on Android platform.
+> It will return the last value set using `setNetworkRequestsAllowed` or `true` if the value wasn't changed before AppCenter start.
+
 ## Change state of service in runtime
 
 You can enable or disable the service at the runtime with following code:
@@ -109,14 +136,6 @@ You can get the version of App Center SDK that you're currently using.
 ```javascript
 AppCenter.getSdkVersion();
 ```
-
-## Use custom properties
-
-App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/send-notification.md#audiences).
-
-> [!NOTE]
-> Only devices that have [Push](../push/react-native-ios.md) successfully registered are matched in audiences.
-> As a consequence, the iOS simulator can't be used to test audience matching.
 
 You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Javascript types: `string`, `number`, `boolean` and `Date`. 
 

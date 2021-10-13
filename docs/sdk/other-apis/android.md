@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/08/2020
+ms.date: 08/26/2021
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android
@@ -99,6 +99,42 @@ The state is persisted in the device's storage across application launches.
 > [!NOTE]
 > This method must only be used after `AppCenter` has been started.
 
+## Disallow network requests
+
+In the App Center SDK, network requests are allowed by default. If you want to send data that the App Center SDK collects by the user concern you can disallow automatic sending data.
+
+```java
+AppCenter.setNetworkRequestsAllowed(false);
+```
+```kotlin
+AppCenter.setNetworkRequestsAllowed(false)
+```
+
+In this case, the App Center SDK continues to collect data but it will be sent only when the network requests will be allowed.
+
+```java
+AppCenter.setNetworkRequestsAllowed(true);
+```
+```kotlin
+AppCenter.setNetworkRequestsAllowed(true)
+```
+
+>[!NOTE]
+> This value is retained between starts.
+
+At any time, you can check whether sending data in the App Center SDK is allowed or not.
+
+```java
+AppCenter.isNetworkRequestsAllowed();
+```
+```kotlin
+AppCenter.isNetworkRequestsAllowed()
+```
+
+>[!NOTE]
+> The value saved previously in `SharedPreferences` is ignored until `AppCenter` is started.
+> It will return the last value set using `setNetworkRequestsAllowed` or `true` if the value wasn't changed before AppCenter start.
+
 ## Change state of service in runtime
 
 Enable or disable the services at the runtime with following code:
@@ -139,13 +175,6 @@ AppCenter.getSdkVersion();
 ```kotlin
 AppCenter.getSdkVersion()
 ```
-
-## Use custom properties
-
-App Center allows you to define custom properties as key value pairs in your app. You may use custom properties for various purposes. For instance, you can use custom properties to segment your users, and then send push notifications to a specific [audience](~/push/send-notification.md#audiences).
-
-> [!NOTE]
-> Only devices that have [Push](../push/android.md) successfully registered are matched in audiences.
 
 Set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
 
@@ -210,6 +239,20 @@ If you don't set the max storage size, the SDK uses a default max size of 10 MB.
 > [!NOTE]
 > The logs older than 25 days will be discarded.
 
+## Add distribution stores
+
+By default in-app updates work for apps installed from the defined list of stores. If you want to distribute your application via stores that are not included in the predefined list of stores, then you can add the needed package installer using the API below before App Center start:
+
+```java
+    Set<String> stores = new HashSet<String>();
+    stores.add("com.store1.packageinstaller");
+    stores.add("com.store2.packageinstaller");
+    Distribute.addStores(stores);
+```
+
+> [!NOTE]
+> Don't add stores like Google Play to avoid any restrictions.
+
 ### Unsuccessful API calls
 
 There are many reasons the callback may fail.
@@ -220,3 +263,7 @@ There are many reasons the callback may fail.
 * The API has been called after `AppCenter.start(...)`.
 
 You can check warnings and errors in the console using the `AppCenter` log tag to troubleshoot configuration issues.
+
+## Asynchronous APIs in the Android SDK
+
+[!INCLUDE [[Android Async APIs](includes/android-async.md)]

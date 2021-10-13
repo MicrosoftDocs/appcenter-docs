@@ -88,16 +88,10 @@ To add support for **App Center Crashes** to your project, execute the following
 cordova plugin add cordova-plugin-appcenter-crashes
 ```
 
-To add support for **App Center Push** to your project, execute the following command:
-
-```shell 
-cordova plugin add cordova-plugin-appcenter-push
-```
-
 To add plugins for all of the App Center capabilities to your project with one command, execute the following command:
 
 ```shell 
-cordova plugin add cordova-plugin-appcenter-analytics cordova-plugin-appcenter-crashes cordova-plugin-appcenter-push
+cordova plugin add cordova-plugin-appcenter-analytics cordova-plugin-appcenter-crashes
 ```
 
 > [!NOTE]

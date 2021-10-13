@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 5/4/2021
+ms.date: 10/6/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -22,6 +22,7 @@ ms.custom: test
 
 Model | OS
 -- | --
+Amazon Fire HD 10 (9th Gen) | 9
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
 Essential Phone | 10
@@ -40,22 +41,30 @@ Google Pixel 2 XL | 8.1.0
 Google Pixel 2 XL | 9
 Google Pixel 3 | 10
 Google Pixel 3 | 11
+Google Pixel 3 | 12 Beta 5
 Google Pixel 3 | 9
 Google Pixel 3 XL | 10
 Google Pixel 3 XL | 11
+Google Pixel 3 XL | 12 Beta 5
 Google Pixel 3 XL | 9
 Google Pixel 3a | 10
 Google Pixel 3a | 11
+Google Pixel 3a | 12 Beta 5
 Google Pixel 3a | 9
 Google Pixel 3a XL | 10
 Google Pixel 3a XL | 11
+Google Pixel 3a XL | 12 Beta 5
 Google Pixel 3a XL | 9
 Google Pixel 4 | 10
 Google Pixel 4 | 11
+Google Pixel 4 | 12 Beta 5
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
+Google Pixel 4 XL | 12 Beta 5
 Google Pixel 4a | 11
+Google Pixel 4a | 12 Beta 5
 Google Pixel 5 | 11
+Google Pixel 5 | 12 Beta 5
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
@@ -79,6 +88,7 @@ Huawei Honor View 10 | 8.0.0
 Huawei Mate 10 Pro | 8.0.0
 Huawei Mate 20 Pro | 10
 Huawei Mate 20 Pro | 9
+Huawei MediaPad M5 10 | 8.0.0
 Huawei Nexus 6P | 6.0.1
 Huawei Nexus 6P | 7.0
 Huawei Nexus 6P | 7.1.2
@@ -171,8 +181,10 @@ OnePlus 3T | 9
 OnePlus 5T | 10
 OnePlus 5T | 9
 OnePlus 6 | 10
+OnePlus 6 | 11
 OnePlus 6 | 9
 OnePlus 6T | 10
+OnePlus 6T | 11
 OnePlus 6T | 9
 OnePlus 7 | 10
 OnePlus 7 | 11
@@ -188,9 +200,13 @@ OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
 OnePlus 9 | 11
+OnePlus 9 | 12 Beta 1
 OnePlus 9 Pro | 11
+OnePlus 9 Pro | 12 Beta 1
 OnePlus Nord | 10
 OnePlus Nord | 11
+OnePlus Nord 2 | 11
+OnePlus Nord CE | 11
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
 Samsung Galaxy A3 | 5.0.2
@@ -306,9 +322,12 @@ Samsung Galaxy Tab A (2019) | 9
 Samsung Galaxy Tab A | 7.0
 Samsung Galaxy Tab A | 8.1.0
 Samsung Galaxy Tab A7 (2020) | 10
+Samsung Galaxy Tab A7 (2020) | 11
 Samsung Galaxy Tab Active 2 | 8.1.0
 Samsung Galaxy Tab Active 2 | 9
 Samsung Galaxy Tab Active 3 | 10
+Samsung Galaxy Tab Active 3 | 11
+Samsung Galaxy Tab Active Pro | 11
 Samsung Galaxy Tab S2 8.0 | 7.0
 Samsung Galaxy Tab S3 | 7.0
 Samsung Galaxy Tab S3 | 9
@@ -316,6 +335,7 @@ Samsung Galaxy Tab S4 | 10
 Samsung Galaxy Tab S4 | 8.1.0
 Samsung Galaxy Tab S4 | 9
 Samsung Galaxy Tab S5e | 10
+Samsung Galaxy Tab S5e | 11
 Samsung Galaxy Tab S6 | 10
 Samsung Galaxy Tab S6 | 11
 Samsung Galaxy Tab S6 | 9
@@ -340,6 +360,7 @@ Sony Xperia 10 | 10
 Sony Xperia 10 | 9
 Sony Xperia 10 II | 10
 Sony Xperia 10 II | 11
+Sony Xperia 10 III | 11
 Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10

@@ -1,21 +1,14 @@
 ---
-title: App Center Distribute for iOS (Without Cocoapods)
-description: Using in-app updates in App Center Distribute (Without Cocoapods)
-keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 06/02/2020
-ms.topic: article
-ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57566
-ms.custom: sdk
+ms.date: 09/13/2021
+ms.topic: include
 ms.tgt_pltfrm: ios
 ---
 
-# App Center Distribute – iOS In-app updates Without Cocoapods
-
 If you don't want to use Cocoapods, you can integrate the modules by copying the binaries into your project. Follow the steps below:
 
-[!INCLUDE [xcframework support](../getting-started/includes/xcframeworks.md)]
+[!INCLUDE [xcframework support](../../getting-started/includes/xcframeworks.md)]
 
 1. Download the [App Center SDK](https://github.com/Microsoft/AppCenter-SDK-Apple/releases) frameworks provided as a zip file.
 

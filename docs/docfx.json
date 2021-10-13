@@ -72,7 +72,6 @@
         "gdpr/**/**.md":"vs-appcenter",
         "general/**/**.md":"vs-appcenter",
         "migration/**/**.md":"vs-appcenter",
-        "push/**/**.md":"vs-appcenter",
         "test-cloud/**/**.md":"vs-appcenter",
         "transition/**/**.md": "vs-appcenter",
         "sdk/**/**.md":"vs-appcenter-sdk"
@@ -91,7 +90,6 @@
         "gdpr/**/**.md":"app-center-general",
         "general/**/**.md":"app-center-general",
         "migration/**/**.md":"app-center-general",
-        "push/**/**.md":"app-center-push",
         "test-cloud/**/**.md":"app-center-test",
         "transition/**/**.md": "app-center-transition",
         "sdk/analytics/**/**.md":"app-center-analytics",
@@ -101,7 +99,6 @@
         "sdk/distribute/**/**.md": "app-center-distribute",
         "sdk/getting-started/**/**.md":"app-center-general",
         "sdk/other-apis/**/**.md":"app-center-general",
-        "sdk/push/**/**.md":"app-center-push",
         "sdk/troubleshooting/**/**.md":"app-center-general"
       }
     },

@@ -40,7 +40,7 @@ With Flow + Azure Boards, users can fill out an online form to submit their feed
 
 - Supports: iOS and Android apps
 - Live in-app communication with your users
-- In-app notifications and push notifications
+- In-app notifications
 
 ### Instabug
 

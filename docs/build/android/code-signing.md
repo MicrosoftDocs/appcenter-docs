@@ -35,6 +35,14 @@ App Center supports three different ways of setting up code signing for Android 
 
 Then, depending on your scenario, use the most suitable of the three options in the sections below. The first option involves checking in credentials to your repository, while the other two use App Center to handle your credentials instead.
 
+> [!NOTE]
+> Usage of Android Gradle Plugin version 4.1.x is not fully supported. In order to use this version, you must add the next option setting in the  `gradle.properties` file:
+>
+> ```
+>  android.useNewApkCreator = false
+> ```
+>
+
 ## A. Storing everything in the Gradle configuration
 You can specify the signing details in the `build.gradle` [(app level)](https://developer.android.com/studio/build) file. The signing details, along with all credentials and the keystore information, will be visible in the repository. First, add all the items you need to your code and check them in to your repository. Then in the build configuration in App Center, enable **My Gradle settings are entirely set to handle signing automatically**.
 

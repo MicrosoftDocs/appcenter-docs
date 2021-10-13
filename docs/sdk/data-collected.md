@@ -151,8 +151,3 @@ App Center SDKs send data to App Center services. The data sent varies by the SD
 ## Distribute
 *	**Token** 
         This GUID is sent to the distribution service to check for a new version of the application. The GUID is only sent if the application was installed using App Center.
-
-## Push
-*	**Token**
-        This GUID is sent to the service to identify the device for push services.
- 
