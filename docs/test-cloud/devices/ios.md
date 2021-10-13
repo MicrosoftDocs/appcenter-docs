@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 10/7/2021
+ms.date: 10/13/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -55,7 +55,7 @@ Apple iPad Air (2019) | 13.3.1
 Apple iPad Air (2019) | 13.4.1
 Apple iPad Air (2019) | 14.5.1
 Apple iPad Air (2019) | 14.7.1
-Apple iPad Air (2019) | 15.0.1
+Apple iPad Air (2019) | 15.0.2
 Apple iPad Air (2020) | 14.2
 Apple iPad Air | 9.0.2
 Apple iPad Air | 9.1
@@ -171,7 +171,7 @@ Apple iPad Pro 12.9" (2020) | 13.4.1
 Apple iPad Pro 12.9" (2020) | 13.5.1
 Apple iPad Pro 12.9" (2020) | 13.6.1
 Apple iPad Pro 12.9" (2020) | 13.7
-Apple iPad Pro 12.9" (2020) | 15.0.1
+Apple iPad Pro 12.9" (2020) | 15.0.2
 Apple iPad Pro 9.7" | 10.0.2
 Apple iPad Pro 9.7" | 10.1.1
 Apple iPad Pro 9.7" | 10.2.1
@@ -195,7 +195,7 @@ Apple iPhone 11 | 14.1
 Apple iPhone 11 | 14.2
 Apple iPhone 11 | 14.4.2
 Apple iPhone 11 | 14.8
-Apple iPhone 11 | 15.0.1
+Apple iPhone 11 | 15.0.2
 Apple iPhone 11 Pro | 13.0
 Apple iPhone 11 Pro | 13.1.3
 Apple iPhone 11 Pro | 13.2.3
@@ -210,7 +210,7 @@ Apple iPhone 11 Pro | 14.2
 Apple iPhone 11 Pro | 14.3
 Apple iPhone 11 Pro | 14.4.2
 Apple iPhone 11 Pro | 14.6
-Apple iPhone 11 Pro | 15.0.1
+Apple iPhone 11 Pro | 15.0.2
 Apple iPhone 11 Pro Max | 13.0
 Apple iPhone 11 Pro Max | 13.1.3
 Apple iPhone 11 Pro Max | 13.2.3
@@ -220,7 +220,7 @@ Apple iPhone 11 Pro Max | 13.5.1
 Apple iPhone 11 Pro Max | 13.6.1
 Apple iPhone 11 Pro Max | 13.7
 Apple iPhone 11 Pro Max | 14.5.1
-Apple iPhone 11 Pro Max | 15.0.1
+Apple iPhone 11 Pro Max | 15.0.2
 Apple iPhone 11 Pro Max | 15.1 beta 3
 Apple iPhone 12 | 14.1
 Apple iPhone 12 | 14.2.1
@@ -228,7 +228,7 @@ Apple iPhone 12 | 14.4.2
 Apple iPhone 12 | 14.5.1
 Apple iPhone 12 | 14.6
 Apple iPhone 12 | 14.7.1
-Apple iPhone 12 | 15.0.1
+Apple iPhone 12 | 15.0.2
 Apple iPhone 12 Mini | 14.2.1
 Apple iPhone 12 Mini | 14.4.2
 Apple iPhone 12 Mini | 14.5.1
@@ -241,19 +241,25 @@ Apple iPhone 12 Pro | 14.5.1
 Apple iPhone 12 Pro | 14.6
 Apple iPhone 12 Pro | 14.7.1
 Apple iPhone 12 Pro | 14.8
-Apple iPhone 12 Pro | 15.0.1
+Apple iPhone 12 Pro | 15.0.2
 Apple iPhone 12 Pro Max | 14.2.1
 Apple iPhone 12 Pro Max | 14.3
 Apple iPhone 12 Pro Max | 14.4.2
 Apple iPhone 12 Pro Max | 14.5.1
 Apple iPhone 12 Pro Max | 14.6
 Apple iPhone 12 Pro Max | 14.7.1
-Apple iPhone 12 Pro Max | 15.0.1
+Apple iPhone 12 Pro Max | 15.0.2
 Apple iPhone 12 Pro Max | 15.1 beta 3
-Apple iPhone 13 | 15.0.1
-Apple iPhone 13 Mini | 15.0.1
-Apple iPhone 13 Pro | 15.0.1
-Apple iPhone 13 Pro Max | 15.0.1
+Apple iPhone 13 | 15.0.2
+Apple iPhone 13 Mini | 15.0.2
+Apple iPhone 13 Pro | 15.0.2
+Apple iPhone 13 Pro Max | 15.0.2
+Apple iPhone 12 Pro Max | 15.0.2
+Apple iPhone 12 Pro Max | 15.1 beta 3
+Apple iPhone 13 | 15.0.2
+Apple iPhone 13 Mini | 15.0.2
+Apple iPhone 13 Pro | 15.0.2
+Apple iPhone 13 Pro Max | 15.0.2
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
 Apple iPhone 5S | 12.5.5
@@ -333,7 +339,7 @@ Apple iPhone 7 | 14.1
 Apple iPhone 7 | 14.3
 Apple iPhone 7 | 14.4.2
 Apple iPhone 7 | 14.6
-Apple iPhone 7 | 15.0.1
+Apple iPhone 7 | 15.0.2
 Apple iPhone 7 Plus | 10.0.3
 Apple iPhone 7 Plus | 10.1.1
 Apple iPhone 7 Plus | 10.2.1
@@ -486,7 +492,7 @@ Apple iPhone XS Max | 13.6.1
 Apple iPhone XS Max | 13.7
 Apple iPhone XS Max | 14.2
 Apple iPhone XS Max | 14.7.1
-Apple iPhone XS Max | 15.0.1
+Apple iPhone XS Max | 15.0.2
 Apple iPod touch 5th Gen | 9.0.2
 Apple iPod touch 5th Gen | 9.3.5
 Apple iPod touch 6th Gen | 10.0.2
@@ -516,16 +522,3 @@ Apple iPod touch 7th Gen | 13.5.1
 Apple iPod touch 7th Gen | 14.0.1
 Apple iPod touch 7th Gen | 14.1
 Apple iPod touch 7th Gen | 14.2
-
-Deprecated and reused as iOS 15 | on October 5, 2021
--- | --
-Apple iPhone 8 | 11.0.3
-Apple iPhone 8 | 12.0.1
-Apple iPhone 8 | 12.1.4
-Apple iPhone 11 Pro Max | 14.2
-Apple iPhone SE (2020) | 14.0.1
-Apple iPhone SE (2020) | 14.2
-Apple iPhone SE (2020) | 14.5.1
-Apple iPad Pro 11" (2018) | 12.2
-Apple iPad Pro 11" (2018) | 13.2.3
-Apple iPad Pro 11" (2018) | 13.3.1
