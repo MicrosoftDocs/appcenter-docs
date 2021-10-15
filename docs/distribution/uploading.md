@@ -252,7 +252,7 @@ You can find links to specific releases to public destinations on the releases t
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
-[groups]: https://docs.microsoft.com/appcenter/distribution/groups
+[groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md
 [sdk]: https://docs.microsoft.com/appcenter/sdk/
 [app-center-home]: https://appcenter.ms/apps
