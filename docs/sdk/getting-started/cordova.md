@@ -26,6 +26,9 @@ ms.tgt_pltfrm: cordova
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
+> [!NOTE] 
+> Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
+
 The App Center SDK uses a modular architecture so you can easily use one, several, or all of the App Center services in your Apache Cordova application.
 
 In this article, you'll learn how to add the App Center SDK to your Apache Cordova applications, then configure App Center Analytics and App Center Crashes capabilities in an application.

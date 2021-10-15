@@ -14,6 +14,9 @@ ms.custom: distribute
 # Cordova Client SDK
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
+> [!NOTE] 
+> Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
+
 ## How does it work?
 A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code or image assets requires you to recompile and redistribute the entire binary. This process includes review time for the store(s) you're publishing to.
 
