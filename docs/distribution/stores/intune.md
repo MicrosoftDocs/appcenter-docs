@@ -51,6 +51,10 @@ For any issues, you can always open a support ticket. Select the help menu (?) i
 
 
 ## Publishing through the CLI
+
+> [!WARNING]
+> You need App Center CLI 2.7 or newer to use this feature.
+
 Using the CLI is an easy way to integrate the App Center's store connection as part of your CI/CD setup like Jenkins or Go CI.
 
 Before you can use the CLI, you'll need to establish a connection to a destination, that is, Google Play, App Store, or Intune in the App Center. And compile a binary for your destination.

@@ -73,6 +73,10 @@ If your Apple account has two-factor authentication enabled, App Store Connect r
 6. Save by clicking **Update**.
 
 ## Publishing through the CLI
+
+> [!WARNING]
+> You need App Center CLI 2.7 or newer to use this feature.
+
 Use the CLI as an easy way to integrate the App Center's store connection as part of your CI/CD setup, for example, Jenkins or Go CI.
 
 You'll need to establish a connection to the App Store before you can use the CLI and compile a compatible binary. 

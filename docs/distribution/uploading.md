@@ -18,7 +18,7 @@ On this page you can learn how to generate the binary for release, and how to up
 
 You can also use Azure DevOps or Jenkins: 
 - Azure DevOps uses the [App Center Distribute Task (version 3+)](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
-- [Jenkins Plugin](https://github.com/jenkinsci/appcenter-plugin/releases).
+- [Jenkins Plugin (version 0.11.0+)](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
@@ -73,6 +73,9 @@ When releasing an iOS app, you can [automatically provision your testers' device
 Review the release. If your app uses the [Distribute SDK][sdk], then you can configure App Center to make the release mandatory. When App Center distributes a release, it sends an email notification of the new version to all testers set in the destinations. You can choose not to notify testers in the review tab. Finally, choose **Distribute** to release the file to your testers.
 
 ### Distributing using the App Center command-line interface
+
+> [!WARNING]
+> You need App Center CLI 2.7 or newer to use this feature.
 
 Distribute your release using the `appcenter distribute release` command in the [App Center CLI][appcenter-cli]. The following example command distributes a file called `~/releases/my_app-23.ipa` to the group `Beta testers` of the app `My-App` owned by `David`.
 
@@ -192,9 +195,9 @@ Upload a new release using these sequential API calls:
      ```
         
 7. Finally, release the build. The endpoint to call is [PATCH
-/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]   
+/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateReleaseUpload]   
     ```sh
-    DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$RELEASE_ID"
+    DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/releases/$RELEASE_ID"
         
     curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
     --data '{"destinations": [{ "name": "'"$DISTRIBUTION_GROUP"'"}] }' \    
@@ -249,7 +252,7 @@ You can find links to specific releases to public destinations on the releases t
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
-[groups]: https://docs.microsoft.com/appcenter/distribution/groups
+[groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md
 [sdk]: https://docs.microsoft.com/appcenter/sdk/
 [app-center-home]: https://appcenter.ms/apps
