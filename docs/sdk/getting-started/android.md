@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/26/2021
+ms.date: 10/13/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -76,34 +76,6 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 2. Make sure to trigger a Gradle sync in Android Studio.
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of App Center.
-
-3. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
-
-> [!NOTE]
-> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
-
-> [!NOTE]
-> If you already have a custom file with backup rule, switch to the third step.
-
-  a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
-
-  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
-
-  ```text
-  android:fullBackupContent="@xml/appcenter_backup_rule"
-  ```
-
-  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
-
-  ```xml
-  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-      <exclude domain="sharedpref" path="AppCenter.xml"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-  </full-backup-content>
-  ```
 
 ## 4. Start the SDK
 
@@ -192,3 +164,25 @@ You're all set to visualize Analytics and Crashes data on the portal that the SD
 Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md) and [App Center Crashes](~/sdk/crashes/android.md) to learn how to customize and use more advanced functionalities of both services.
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/android.md).
+
+## 5. Backup rules (Android only)
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+
+### 5.1. For Android 11 (API level 30) or lower.
+
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+[!INCLUDE [android backup rules](includes/android-backup-rules-android.md)]
+
+### 5.2. For Android 12 (API level 31) or higher.
+
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+[!INCLUDE [android backup rules](includes/android-backup-rules-android-12.md)]
