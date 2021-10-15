@@ -74,6 +74,9 @@ Review the release. If your app uses the [Distribute SDK][sdk], then you can con
 
 ### Distributing using the App Center command-line interface
 
+> [!WARNING]
+> App Center CLI prior to 2.6 is deprecated, to be able to use this feature, please update to the newer version (latest version recommended).
+
 Distribute your release using the `appcenter distribute release` command in the [App Center CLI][appcenter-cli]. The following example command distributes a file called `~/releases/my_app-23.ipa` to the group `Beta testers` of the app `My-App` owned by `David`.
 
 ```shell
