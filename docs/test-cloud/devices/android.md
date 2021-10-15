@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 9/22/2021
+ms.date: 10/6/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -200,7 +200,9 @@ OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
 OnePlus 9 | 11
+OnePlus 9 | 12 Beta 1
 OnePlus 9 Pro | 11
+OnePlus 9 Pro | 12 Beta 1
 OnePlus Nord | 10
 OnePlus Nord | 11
 OnePlus Nord 2 | 11

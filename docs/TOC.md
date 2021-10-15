@@ -195,7 +195,7 @@
 ### [Using the CodePush UI](distribution/codepush/using-ui.md)
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
-### [Cordova Client SDK](distribution/codepush/Cordova.md)
+### [Cordova Client SDK [Retiring]](distribution/codepush/Cordova.md)
 ### React Native Client SDK
 #### [Overview](distribution/codepush/rn-overview.md)
 #### [Get Started with the React Native Client SDK](distribution/codepush/rn-get-started.md)
@@ -218,7 +218,7 @@
 ## Enabling Diagnostics
 ### [Introduction](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
-### [Apache Cordova](sdk/crashes/cordova.md)
+### [Apache Cordova [Retiring]](sdk/crashes/cordova.md)
 ### [iOS](sdk/crashes/ios.md)
 ### [tvOS](sdk/crashes/tvos.md)
 ### [macOS](sdk/crashes/macos.md)
@@ -254,7 +254,7 @@
 ## [Data Collected By App Center](sdk/data-collected.md)
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
-### [Cordova](sdk/getting-started/cordova.md)
+### [Cordova [Retiring]](sdk/getting-started/cordova.md)
 ### [iOS](sdk/getting-started/ios.md)
 ### [macOS](sdk/getting-started/macos.md)
 ### [tvOS](sdk/getting-started/tvos.md)
@@ -267,7 +267,7 @@
 ### [Xamarin](sdk/getting-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
-### [Cordova](sdk/analytics/cordova.md)
+### [Cordova [Retiring]](sdk/analytics/cordova.md)
 ### [iOS](sdk/analytics/ios.md)
 ### [macOS](sdk/analytics/macos.md)
 ### [tvOS](sdk/analytics/tvos.md)
@@ -277,7 +277,7 @@
 ### [Xamarin](sdk/analytics/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
-### [Cordova](sdk/crashes/cordova.md)
+### [Cordova [Retiring]](sdk/crashes/cordova.md)
 ### [iOS](sdk/crashes/ios.md)
 ### [macOS](sdk/crashes/macos.md)
 ### [tvOS](sdk/crashes/tvos.md)
@@ -300,7 +300,7 @@
 ### [React Native](sdk/other-apis/react-native.md)
 ### [Unity](sdk/other-apis/unity.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
-### [Cordova](sdk/other-apis/cordova.md)
+### [Cordova [Retiring]](sdk/other-apis/cordova.md)
 ### [WPF/WinForms](sdk/other-apis/wpf-winforms.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
