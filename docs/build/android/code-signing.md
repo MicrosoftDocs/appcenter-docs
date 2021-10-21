@@ -38,7 +38,7 @@ Then, depending on your scenario, use the most suitable of the three options in 
 As of Android 11, it's mandatory to use the APK signer (if you use API level 30) as it will set some extra schemes "APK Signature Scheme v2 now required". App Center now (since Dec 17, 2020) signs Android applications using APK signer internally, instead of JAR signer which was used previously. As part of the feature to enable APK signer in App Center, Android signing task V3 was implemented, and requirements for new Signing task were to change how keystore file is saved - to store the keystore file in an AzDO secure file ([Android signing build and release task - Azure Pipelines | Microsoft Docs](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/android-signing#arguments)).
 
 > [!WARNING]
-> Any build configurations that had their keystore files uploaded prior to Dec 17, 2020. still use the old signing method (jarsigner). To use the new signing flow, users just have to **re-upload their keystore files**, and **save** their branch configuration.
+> Any build configurations that had their keystore files uploaded prior to Dec 17, 2020 still use the old signing method (jarsigner). To use the new signing flow, users just have to **re-upload their keystore files** and **save** their branch configuration.
 
 > [!NOTE]
 > Usage of Android Gradle Plugin version 4.1.x is not fully supported. In order to use this version, you must add the next option setting in the  `gradle.properties` file:
