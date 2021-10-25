@@ -34,7 +34,7 @@ For Android, you must produce a signed app bundle or APK file. For full details 
 Android Studio places built app bundles in *project-name*/*module-name*/build/outputs/bundle/ and APKs in *project-name*/*module-name*/build/outputs/apk/.
 
 > [!NOTE]
-> You can only distribute Android app bundles to the Google Play Store, not to groups or individual testers.
+> When Android Application Bundle (AAB) is used, App Center generates a universal APK, signs it with a generated signing key, and distributes it to a device.
 
 ### iOS
 For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
@@ -234,6 +234,9 @@ Once you've released successfully, your testers can access the release through e
 
 You can find links to specific releases on the release page for private destinations.
 ![Install button](~/distribution/images/installButton.png)
+
+> [!NOTE]
+> For Android Application Bundles (AAB), you can download the AAB itself by pressing 'Download'. If you need to install an application on a test device, please use the install portal (https://install.appcenter.ms), which will generate a universal APK for a device ('Arrow' button next to the 'Download').
 
 You can find links to specific releases to public destinations on the releases tab in public groups.
 ![Public deep link](~/distribution/images/publicDeepLink.png)
