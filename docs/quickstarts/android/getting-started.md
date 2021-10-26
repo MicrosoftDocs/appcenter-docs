@@ -35,10 +35,11 @@ In this tutorial, you'll learn to set up a sample Android app with App Center.
 ## Replace the App Secret
 In order for the sample app to send information to App Center, the app secret must be changed to match the one provided for your specific App Center project.
 
-1. Navigate to **Settings** in App Center.
-2. Copy the **App Secret** at the top of the page.
-3. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**
-4. In the project's **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the App Center portal.*
+1. Navigate to your app page in App Center by clicking it in the **Apps** list.
+2. Go to the settings of your app by clicking **Settings** in the left sidebar.
+3. Click the **three dots** in the upper right corner to open the context menu and then within it, click **Copy app secret**.
+4. Go into the **sampleapp_android** repository and navigate into **MainActivity.java**
+5. In the project's **MainActivity.java**, locate the following. *Note: You can also find the code snippet with your specific app secret on the Getting Started page in the App Center portal.*
 
 ```java
 @Override
