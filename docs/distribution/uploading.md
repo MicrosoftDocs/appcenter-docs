@@ -34,7 +34,7 @@ For Android, you must produce a signed app bundle or APK file. For full details 
 Android Studio places built app bundles in *project-name*/*module-name*/build/outputs/bundle/ and APKs in *project-name*/*module-name*/build/outputs/apk/.
 
 > [!NOTE]
-> When you distribute Android Application Bundle (AAB), App Center generates a universal APK, signs with a generated signing key, and distributes it to a device.
+> When you distribute Android Application Bundle (AAB), App Center generates a universal APK, signs it with a generated signing key, and distributes it to a device.
 
 ### iOS
 For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
