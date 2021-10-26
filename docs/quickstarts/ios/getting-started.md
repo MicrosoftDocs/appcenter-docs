@@ -66,9 +66,11 @@ In this tutorial, you'll learn how to set up a sample Swift app with App Center 
 
 In order for the sample app to send information to App Center, the app secret must be changed in Xcode.
 
-1. Navigate to the **Settings** page in App Center.
+1. Navigate to your app page in App Center by clicking it in the **Apps** list.
 
-2. Copy the **App Secret** at the top.
+2. Go to the settings of your app by clicking **Settings** in the left sidebar.
+
+3. Click the **three dots** in the upper right corner to open the context menu and then within it, click **Copy app secret**.
 
 3. Open the `.xcworkspace` from the sample app folder.
 
