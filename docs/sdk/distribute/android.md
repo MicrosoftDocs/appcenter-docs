@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/31/2021
+ms.date: 11/08/2021
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -75,6 +75,8 @@ import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.distribute.Distribute
 ```
+
+[!INCLUDE [android distribute permissions](includes/android-10-package-installer-restrictions.md)]
 
 ## Prepare your Google Play build
 

@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Unity)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/14/2020
+ms.date: 11/08/2021
 ms.topic: article
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
@@ -37,6 +37,8 @@ App Center Distribution enables your users/testers to install new versions of an
 The App Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 Follow the [Unity getting started](~/sdk/getting-started/unity.md) docs if you haven't set up and started the SDK in your application, yet. Make sure to import the App Center Distribute package. Its name should be in the format `AppCenterDistribute-v{version}.unitypackage`.
+
+[!INCLUDE [android distribute permissions](includes/android-10-package-installer-restrictions.md)]
 
 ## Remove in-app updates for Google Play builds
 
