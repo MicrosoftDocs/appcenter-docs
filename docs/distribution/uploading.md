@@ -102,7 +102,6 @@ Upload a new release using these sequential API calls:
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         API_TOKEN="Example-Token"
-        RELEASE_FILE_LOCATION="ExamplePath-App-Location"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
     ```
@@ -198,7 +197,7 @@ Upload a new release using these sequential API calls:
      ```
         
 7. Finally, release the build. The endpoint to call is [PATCH
-/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][https://openapi.appcenter.ms/#/distribute/releases_update]   
+/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}](https://openapi.appcenter.ms/#/distribute/releases_update)  
     ```sh
     DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/releases/$RELEASE_ID"
         
