@@ -66,15 +66,17 @@ In this tutorial, you'll learn how to set up a sample Swift app with App Center 
 
 In order for the sample app to send information to App Center, the app secret must be changed in Xcode.
 
-1. Navigate to the **Settings** page in App Center.
+1. Navigate to your app page in App Center by clicking it in the **Apps** list.
 
-2. Copy the **App Secret** at the top.
+2. Go to the settings of your app by clicking **Settings** in the left sidebar.
 
-3. Open the `.xcworkspace` from the sample app folder.
+3. Click the **three dots** in the upper right corner to open the context menu and then within it, click **Copy app secret**.
 
-4. In **AppDelegate.swift**, edit the `didFinishLaunchingWithOptions` delegate method and paste your App Secret at the placeholder.
+4. Open the `.xcworkspace` from the sample app folder.
 
-5. **Add, commit, and push changes to your forked repository.** It can be done from the terminal, or a tool of your choice.
+5. In **AppDelegate.swift**, edit the `didFinishLaunchingWithOptions` delegate method and paste your App Secret at the placeholder.
+
+6. **Add, commit, and push changes to your forked repository.** It can be done from the terminal, or a tool of your choice.
 
 ## Code sign the project
 
