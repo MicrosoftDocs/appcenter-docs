@@ -101,6 +101,7 @@ Upload a new release using these sequential API calls:
     ```sh
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
+        API_TOKEN="Example-Token"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
     ```
@@ -108,7 +109,7 @@ Upload a new release using these sequential API calls:
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
    ```json
         {
-            "id": "{RELEASES_ID}",
+            "id": "{ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
             "upload_domain": "https://file.appcenter.ms",
             "token": "{TOKEN}",
@@ -126,7 +127,8 @@ Upload a new release using these sequential API calls:
 
     The final command should look something like this:
     ```sh
-    FILE_SIZE_BYTES=$(wc -c "ExampleApp.apk" | awk '{print $1}')
+    FILE_NAME="ExampleApp.apk"
+    FILE_SIZE_BYTES=$(wc -c $RELEASE_FILE_LOCATION | awk '{print $1}')
     APP_TYPE='application/vnd.android.package-archive' # iOS uses `application/octet-stream` instead.
     
     METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
@@ -147,9 +149,9 @@ Upload a new release using these sequential API calls:
     }
     ```
 
-3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
+3. Using the `chunk_size` value which cannot be customized, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
     ```sh
-    split -b $CHUNK_SIZE $APP_PACKAGE temp/split
+    split -b $CHUNK_SIZE $RELEASE_FILE_LOCATION temp/split
     ```
 
     This command generates sequential files in the `temp` directory named `splitaa`, `splitab`, and so on. Each file is split within the `chunk_size` limit. 
@@ -176,14 +178,14 @@ Upload a new release using these sequential API calls:
         
     COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
     curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
-    --data '{"upload_status": "uploadFinished","id": "$ID"}' \
+    --data '{"upload_status": "uploadFinished","id": "$UPLOAD_ID"}' \
     -X PATCH \
     $COMMIT_URL
     ```
 
 6. Once uploaded, there is a short delay before the upload is marked as finished. Poll for this status to get the `$RELEASE_ID` for the next step:
      ```sh
-     RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$ID"
+     RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
      POLL_RESULT=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL)
      RELEASE_ID=$(echo $POLL_RESULT | jq -r '.release_distinct_id')
 
@@ -195,7 +197,7 @@ Upload a new release using these sequential API calls:
      ```
         
 7. Finally, release the build. The endpoint to call is [PATCH
-/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}][PATCH_updateReleaseUpload]   
+/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}](https://openapi.appcenter.ms/#/distribute/releases_update)  
     ```sh
     DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/releases/$RELEASE_ID"
         
