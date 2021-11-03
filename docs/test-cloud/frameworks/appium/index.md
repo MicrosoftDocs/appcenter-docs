@@ -24,7 +24,7 @@ Note the following limitations for Appium support:
 * No support for iOS 9.2.1 or prior. No support for deprecated UIAutomation iOS driver.
 * No support for [JUnit @Category attribute](http://maven.apache.org/surefire/maven-surefire-plugin/examples/junit.html). (Can use [Include/Exclude](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html) instead)
 * Maven version must be at least 3.3.9.
-* Current Appium version is 1.22.0. It regulary updates with new releases.
+* Current Appium version is 1.22.0. It is regulary updated with new releases.
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
 * Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
 
