@@ -60,7 +60,7 @@ If you're unable to run the tests using command line locally, tests will also no
 
 ## 1. Changes to the build system
 
-### Step 1 - Add repository and dependency
+### Step 1 - Add dependency
 
 You'll need to add a dependency for the Appium test extensions:
 
