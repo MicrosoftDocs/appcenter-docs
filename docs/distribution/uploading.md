@@ -27,7 +27,6 @@ The following sections explain how to create the files for all app types App Cen
 
 > [!NOTE]
 > If you are going to upload archive (.zip, .ipa and others) then your app’s total uncompressed size must be less than 4GB.
-> For now we don't support 64bit compression for archives.
 
 ### Android
 For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
