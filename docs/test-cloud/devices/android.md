@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 10/6/2021
+ms.date: 11/9/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -41,30 +41,31 @@ Google Pixel 2 XL | 8.1.0
 Google Pixel 2 XL | 9
 Google Pixel 3 | 10
 Google Pixel 3 | 11
-Google Pixel 3 | 12 Beta 5
+Google Pixel 3 | 12
 Google Pixel 3 | 9
 Google Pixel 3 XL | 10
 Google Pixel 3 XL | 11
-Google Pixel 3 XL | 12 Beta 5
+Google Pixel 3 XL | 12 
 Google Pixel 3 XL | 9
 Google Pixel 3a | 10
 Google Pixel 3a | 11
-Google Pixel 3a | 12 Beta 5
+Google Pixel 3a | 12
 Google Pixel 3a | 9
 Google Pixel 3a XL | 10
 Google Pixel 3a XL | 11
-Google Pixel 3a XL | 12 Beta 5
+Google Pixel 3a XL | 12 
 Google Pixel 3a XL | 9
 Google Pixel 4 | 10
 Google Pixel 4 | 11
-Google Pixel 4 | 12 Beta 5
+Google Pixel 4 | 12
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
-Google Pixel 4 XL | 12 Beta 5
+Google Pixel 4 XL | 12 
 Google Pixel 4a | 11
-Google Pixel 4a | 12 Beta 5
+Google Pixel 4a | 12 
 Google Pixel 5 | 11
-Google Pixel 5 | 12 Beta 5
+Google Pixel 5 | 12 
+Google Pixel 6 | 12 
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
