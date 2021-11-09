@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/03/2021
+ms.date: 09/11/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -24,6 +24,9 @@ You can also use Azure DevOps or Jenkins:
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
 
 The following sections explain how to create the files for all app types App Center supports for distribution.
+
+> [!NOTE]
+> If you are going to upload archive (.zip, .ipa and others) then your app’s total uncompressed size must be less than 4GB.
 
 ### Android
 For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
