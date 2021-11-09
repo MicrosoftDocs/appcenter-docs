@@ -4,7 +4,7 @@ description: Get started (Android)
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/26/2021
+ms.date: 10/13/2021
 ms.topic: article
 ms.assetid: ef67ec59-c868-49e7-99e8-42b0399bde92
 ms.tgt_pltfrm: android
@@ -71,39 +71,11 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   > [!NOTE]
   > Due to [termination of jCenter support](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) all our assemblies were moved to the Maven Central repository. Please follow [this guide](../troubleshooting/android.md) about migration from jCenter to Maven Central.
-  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules. For the Push module you can follow the [Push Migration Guide](~/migration/push/index.md).
+  > Please note that Maven Central doesn't contain deprecated modules. Make sure that your project doesn't have dependencies of deprecated App Center SDK modules.
 
 2. Make sure to trigger a Gradle sync in Android Studio.
 
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of App Center.
-
-3. If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
-
-> [!NOTE]
-> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
-
-> [!NOTE]
-> If you already have a custom file with backup rule, switch to the third step.
-
-  a. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
-
-  b. Open the project’s **AndroidManifest.xml** file. Add the `android:fullBackupContent` attribute to the `<application>` element. It should point to the **appcenter_backup_rule.xml** resource file.
-
-  ```text
-  android:fullBackupContent="@xml/appcenter_backup_rule"
-  ```
-
-  c. Add the following backup rules to the **appcenter_backup_rule.xml** file:
-
-  ```xml
-  <full-backup-content xmlns:tools="http://schemas.android.com/tools">
-      <exclude domain="sharedpref" path="AppCenter.xml"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence"/>
-      <exclude domain="database" path="com.microsoft.appcenter.persistence-journal"/>
-      <exclude domain="file" path="error" tools:ignore="FullBackupContent"/>
-      <exclude domain="file" path="appcenter" tools:ignore="FullBackupContent"/>
-  </full-backup-content>
-  ```
 
 ## 4. Start the SDK
 
@@ -193,4 +165,24 @@ Look at the documentation for [App Center Analytics](~/sdk/analytics/android.md)
 
 To learn how to get started with in-app updates, read the documentation of [App Center Distribute](~/sdk/distribute/android.md).
 
-To learn how to get started with Push, read the documentation of [App Center Push](~/sdk/push/android.md).
+## 5. Backup rules (Android only)
+
+> [!NOTE]
+> Apps that target Android 6.0 (API level 23) or higher have Auto Backup automatically enabled. 
+
+> [!NOTE]
+> If you already have a custom file with backup rule, switch to the third step.
+
+If you use auto-backup to avoid getting incorrect information about devices, follow the next steps:
+
+### 5.1. For Android 11 (API level 30) or lower.
+
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+[!INCLUDE [android backup rules](includes/android-backup-rules-android.md)]
+
+### 5.2. For Android 12 (API level 31) or higher.
+
+1. Create **appcenter_backup_rule.xml** file in the **res/xml** folder.
+
+[!INCLUDE [android backup rules](includes/android-backup-rules-android-12.md)]

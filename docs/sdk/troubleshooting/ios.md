@@ -119,7 +119,6 @@ The numbers below can vary and depend on your build settings, so consider them a
 |  App Center Analytics   |       120 KB      |       377 KB      |
 |    App Center Crash     |       239 KB      |       705 KB      |
 |  App Center Distribute  |       163 KB      |       528 KB      |
-|     App Center Push     |       115 KB      |       377 KB      |
 | All App Center modules  |       314 KB      |       930 KB      |
 
 ## Protect the App Center secret value

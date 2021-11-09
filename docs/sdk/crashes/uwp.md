@@ -1,17 +1,17 @@
 ---
-title: App Center Crashes for UWP
-description: App Center Crashes for UWP
+title: App Center Crashes for UWP/WinUI
+description: App Center Crashes for UWP/WinUI
 keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/05/2020
+ms.date: 07/29/2021
 ms.topic: article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.custom: sdk
 ms.tgt_pltfrm: UWP
 ---
 
-# App Center Crashes (UWP)
+# App Center Crashes (UWP/WinUI)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
@@ -31,7 +31,7 @@ The App Center SDK collects only crashes caused by unhandled .NET exceptions. It
 Follow the [Getting Started](~/sdk/getting-started/uwp.md) section if you haven't set up the SDK in your application yet.
 
 > [!NOTE]
-> Currently we don't support detection of low memory warnings on the UWP platform.
+> Currently we don't support detection of low memory warnings on the UWP/WinUI platform.
 
 ## Adding the crashes module
 
