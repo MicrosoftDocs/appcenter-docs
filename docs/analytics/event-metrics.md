@@ -27,7 +27,6 @@ To track custom events in your app, use our `trackEvent` API from the App Center
 You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period or app version.
 
 ## Events Page
-
 The Events Page provides a table with an overview of the events happening in your app. This table can be sorted by count in both descending and ascending order. You can also look for an event in the table by its name. For each event, the following information is provided:
 
 - **Count**: Number of times that an event has been triggered.
@@ -36,11 +35,16 @@ The Events Page provides a table with an overview of the events happening in you
 - **User change**: Change of the number of users in absolute value and percentage, compared to the previous selected time period.
 - **Count per user**: Average number of times that an event is triggered per user.
 
-## Detailed event view
+## Event Detail View
+Select an event within the events table to reveal more detailed information:
 
-By clicking on an event in the events table, you can see more detailed information on the event. This includes the metrics from the Events table per day for the selected time period. Also, you'll see distribution of counts for your event properties.
+- **Users**: Total number of users that have triggered the event. LAST (n) DAYS is a trend calculation.
+- **Count**: Total number of times the event has been triggered.
+- **Count per user**: Average number of times the event is triggered per user.
+- **Count per session**: Average number of times that the event is triggered per session.
 
-Remove individual events from this page by clicking the settings option on top right of the page. This action can't be undone.
+### Delete Event History
+Remove individual events from the Event Details view by clicking the settings option on top right of the page and selecting "Delete event history". This action cannot be undone.
 
 ## Events Properties
 

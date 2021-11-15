@@ -24,6 +24,9 @@ ms.tgt_pltfrm: react-native
 > * [tvOS](tvos.md)
 > * [Cordova](cordova.md)
 
+> [!NOTE] 
+> Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
+
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash.
 
 Follow the [Getting Started](~/sdk/getting-started/cordova.md) section if you haven't set up the SDK in your application yet.

@@ -62,7 +62,7 @@ App Center has bug tracker integration for the crashes service. Users can be qui
   > [!NOTE]
   > A new work item will be created for new error groups with symbols provided. If no symbols are found for the new error group, the bug tracker integration won't create a new work item.
 
-## <a name="changeState"/></a> Changing the state of a crash group in App Center
+## <a name="changeState"></a> Changing the state of a crash group in App Center
 1. Navigate to [https://appcenter.ms/apps](https://appcenter.ms/apps), and select the specific app that has a bug tracker integration.
 
 2. In your app, select **Diagnostics**, **Crashes**, and click on the crash group that has a connected bug for it.

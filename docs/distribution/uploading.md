@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/03/2021
+ms.date: 09/11/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -18,12 +18,15 @@ On this page you can learn how to generate the binary for release, and how to up
 
 You can also use Azure DevOps or Jenkins: 
 - Azure DevOps uses the [App Center Distribute Task (version 3+)](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
-- [Jenkins Plugin](https://github.com/jenkinsci/appcenter-plugin/releases).
+- [Jenkins Plugin (version 0.11.0+)](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
 First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
 
 The following sections explain how to create the files for all app types App Center supports for distribution.
+
+> [!NOTE]
+> If you are going to upload archive (.zip, .ipa and others) then your app’s total uncompressed size must be less than 4GB.
 
 ### Android
 For Android, you must produce a signed app bundle or APK file. For full details of this process, see the official [Google documentation on preparing an app for release][google-prepare-for-release].
@@ -34,7 +37,7 @@ For Android, you must produce a signed app bundle or APK file. For full details 
 Android Studio places built app bundles in *project-name*/*module-name*/build/outputs/bundle/ and APKs in *project-name*/*module-name*/build/outputs/apk/.
 
 > [!NOTE]
-> You can only distribute Android app bundles to the Google Play Store, not to groups or individual testers.
+> When you distribute Android Application Bundle (AAB), App Center generates a universal APK, signs it with a generated signing key, and distributes it to a device.
 
 ### iOS
 For iOS, you must produce an IPA package for your application. For full details of this process, see the official [Apple documentation][apple-ipa].
@@ -74,6 +77,9 @@ Review the release. If your app uses the [Distribute SDK][sdk], then you can con
 
 ### Distributing using the App Center command-line interface
 
+> [!WARNING]
+> You need App Center CLI 2.7 or newer to use this feature.
+
 Distribute your release using the `appcenter distribute release` command in the [App Center CLI][appcenter-cli]. The following example command distributes a file called `~/releases/my_app-23.ipa` to the group `Beta testers` of the app `My-App` owned by `David`.
 
 ```shell
@@ -98,6 +104,7 @@ Upload a new release using these sequential API calls:
     ```sh
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
+        API_TOKEN="Example-Token"
         
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
     ```
@@ -105,7 +112,7 @@ Upload a new release using these sequential API calls:
    The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
    ```json
         {
-            "id": "{RELEASES_ID}",
+            "id": "{ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
             "upload_domain": "https://file.appcenter.ms",
             "token": "{TOKEN}",
@@ -123,7 +130,8 @@ Upload a new release using these sequential API calls:
 
     The final command should look something like this:
     ```sh
-    FILE_SIZE_BYTES=$(wc -c "ExampleApp.apk" | awk '{print $1}')
+    FILE_NAME="ExampleApp.apk"
+    FILE_SIZE_BYTES=$(wc -c $RELEASE_FILE_LOCATION | awk '{print $1}')
     APP_TYPE='application/vnd.android.package-archive' # iOS uses `application/octet-stream` instead.
     
     METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
@@ -144,9 +152,9 @@ Upload a new release using these sequential API calls:
     }
     ```
 
-3. Using the `chunk_size` value, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
+3. Using the `chunk_size` value which cannot be customized, you can split your app upload into sequential chunks for upload to Distribute. For example, you can use the `split` utility like so:
     ```sh
-    split -b $CHUNK_SIZE $APP_PACKAGE temp/split
+    split -b $CHUNK_SIZE $RELEASE_FILE_LOCATION temp/split
     ```
 
     This command generates sequential files in the `temp` directory named `splitaa`, `splitab`, and so on. Each file is split within the `chunk_size` limit. 
@@ -173,14 +181,14 @@ Upload a new release using these sequential API calls:
         
     COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
     curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
-    --data '{"upload_status": "uploadFinished","id": "$ID"}' \
+    --data '{"upload_status": "uploadFinished","id": "$UPLOAD_ID"}' \
     -X PATCH \
     $COMMIT_URL
     ```
 
 6. Once uploaded, there is a short delay before the upload is marked as finished. Poll for this status to get the `$RELEASE_ID` for the next step:
      ```sh
-     RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$ID"
+     RELEASE_STATUS_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
      POLL_RESULT=$(curl -s -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" $RELEASE_STATUS_URL)
      RELEASE_ID=$(echo $POLL_RESULT | jq -r '.release_distinct_id')
 
@@ -192,9 +200,9 @@ Upload a new release using these sequential API calls:
      ```
         
 7. Finally, release the build. The endpoint to call is [PATCH
-/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}][PATCH_updateReleaseUpload]   
+/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}](https://openapi.appcenter.ms/#/distribute/releases_update)  
     ```sh
-    DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$RELEASE_ID"
+    DISTRIBUTE_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/releases/$RELEASE_ID"
         
     curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
     --data '{"destinations": [{ "name": "'"$DISTRIBUTION_GROUP"'"}] }' \    
@@ -232,6 +240,9 @@ Once you've released successfully, your testers can access the release through e
 You can find links to specific releases on the release page for private destinations.
 ![Install button](~/distribution/images/installButton.png)
 
+> [!NOTE]
+> Android Application Bundles (AAB) are available for download on the release page by clicking the download button. If you need an installable APK file format, please use the install portal (https://install.appcenter.ms) on your device. You can find the link underneath the generated QR code next to the download button.
+
 You can find links to specific releases to public destinations on the releases tab in public groups.
 ![Public deep link](~/distribution/images/publicDeepLink.png)
 
@@ -249,7 +260,7 @@ You can find links to specific releases to public destinations on the releases t
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
 [uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
-[groups]: https://docs.microsoft.com/appcenter/distribution/groups
+[groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md
 [sdk]: https://docs.microsoft.com/appcenter/sdk/
 [app-center-home]: https://appcenter.ms/apps
