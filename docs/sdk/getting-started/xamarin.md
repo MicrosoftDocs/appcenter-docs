@@ -42,7 +42,7 @@ The App Center SDK for Xamarin supports the following platforms:
 
 * Xamarin.Android
 * Xamarin.iOS
-* Xamarin.macOS
+* Xamarin.Mac
 * Xamarin.Forms (iOS, macOS Android, UWP and Windows Desktop applications)
 
 ### 1.1 About Xamarin.Android
@@ -53,7 +53,7 @@ Choose this option if you target only Android platform. You need to create one a
 
 Choose this option if you target only iOS platform. You need to create one app in the App Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-### 1.2 About Xamarin.macOS
+### 1.2 About Xamarin.Mac
 
 Choose this option if you target only macOS platform. You need to create one app in the App Center portal with **macOS** as the OS and **Xamarin** as the platform.
 
@@ -61,7 +61,7 @@ Choose this option if you target only macOS platform. You need to create one app
 
 Choose this option if you want to create a cross platform app for iOS, Android, UWP and Windows Desktop devices. You need to create 5 apps in App Center – one for each OS.
 
-You need to select **Xamarin** as the platform for Android, iOS and macOS applications (UWP doesn't have a Xamarin option).
+You need to select **Xamarin** as the platform for Android, iOS and macOS applications (UWP and Desktop applications doesn't have a Xamarin option).
 
 For the **Windows Desktop** and **macOS** applications you have to configure your project for compatibility with the **Xamarin.Forms** platform. 
 
@@ -123,7 +123,7 @@ To use App Center, you must opt in to the module(s) that you want to use. By def
 
 Add the appropriate namespaces before you get started with using our APIs.
 
-* **Xamarin.iOS** and * **Xamarin.macOS**  - Open the project's `AppDelegate.cs` and add the following lines below the existing `using` statements
+* **Xamarin.iOS** and * **Xamarin.Mac**  - Open the project's `AppDelegate.cs` and add the following lines below the existing `using` statements
 * **Xamarin.Android** - Open the project's `MainActivity.cs` and add the following lines below the existing `using` statements
 * **Xamarin.Forms** - Open the project's `App.xaml.cs` and add the following lines below the existing `using` statements
 
@@ -149,7 +149,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 > [!NOTE]
 > If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
 
-#### 4.2.2 Xamarin.iOS and Xamarin.macOS
+#### 4.2.2 Xamarin.iOS and Xamarin.Mac
 
 > [!NOTE]
 > It isn't possible to have more than one active crash reporting SDK in your app. Disable the other SDKs' crash reporting functionality to make sure App Center can catch the crashes.
