@@ -4,7 +4,7 @@ description: App Center Analytics for Windows
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/29/2021
+ms.date: 11/16/2021
 ms.topic: article
 ms.assetid: 7835dedf-b170-416b-8a89-0a2a18f6196b
 ms.custom: sdk
@@ -159,6 +159,20 @@ You can also check if App Center Analytics is enabled or not.
 
 ```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
+```
+
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```csharp
+Analytics.EnableManualSessionTracker();
+```
+
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
 ```
 
 ## Local storage size

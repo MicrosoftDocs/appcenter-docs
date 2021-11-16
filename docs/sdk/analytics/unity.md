@@ -4,7 +4,7 @@ description: App Center Analytics for Unity
 keywords: unity
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/14/2019
+ms.date: 11/16/2021
 ms.topic: article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.custom: sdk
@@ -117,6 +117,20 @@ Analytics.Resume();
 ```
 
 [!INCLUDE [unity see async](../includes/unity-see-async.md)]
+
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Select `Enable Manual Session Tracker` check on the **AppCenterBehavior** or call the following method before the SDK start:
+
+```csharp
+Analytics.EnableManualSessionTracker();
+```
+
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
+```
 
 ## Local storage size
 

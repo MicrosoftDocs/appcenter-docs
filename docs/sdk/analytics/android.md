@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 06/19/2020
+ms.date: 11/16/2021
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter-sdk
@@ -150,6 +150,26 @@ Analytics.isEnabled()
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.
+
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```java
+Analytics.enableManualSessionTracker();
+```
+```kotlin
+Analytics.enableManualSessionTracker()
+```
+
+- Then you can use the `startSession` API after the `AppCenter.start`:
+
+```java
+Analytics.startSession();
+```
+```kotlin
+Analytics.startSession()
+```
 
 ## Local storage size
 

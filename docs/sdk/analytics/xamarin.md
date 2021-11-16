@@ -4,7 +4,7 @@ description: App Center Analytics for Xamarin
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/14/2019
+ms.date: 11/16/2021
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.custom: sdk
@@ -82,6 +82,20 @@ bool isEnabled = await Analytics.IsEnabledAsync();
 
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.
+
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```csharp
+Analytics.EnableManualSessionTracker();
+```
+
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
+```
 
 ## Local storage size
 
