@@ -27,7 +27,7 @@ Adding your device consists of the following steps:
 
     ![Adding a Device](images/I-add-device.png)
 
-2. Click the **Add new device** button within the App Center install portal. App Center will display a dialog asking to show you a configuration profile.
+2. Click the **Add new device** button within the App Center install portal. App Center will display a dialog asking to show you a configuration profile. If you are not seeing **Add new device** option then go to https://install.appcenter.ms/register-device on your mobile device.
 
     ![Config Profile](images/i-profile.png)
 
