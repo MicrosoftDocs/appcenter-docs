@@ -16,12 +16,15 @@ The steps to prepare an app and its test suite for upload vary depending on the 
 
 Note the following limitations for Appium support:
 
-* No support for TestNG.
-* No support for Android 4.2 or prior.
-* No support for automating browsers or WebView context.
+> [!NOTE]
+> WebView context, Chrome Web Driver and Chrome browser testing with `browserName` capability are supported!
+
+* No support for TestNG (only JUnit tests are supported).
+* No support for Android 4.2 or prior. No support for deprecated UIAutomator driver.
+* No support for iOS 9.2.1 or prior. No support for deprecated UIAutomation iOS driver.
 * No support for [JUnit @Category attribute](http://maven.apache.org/surefire/maven-surefire-plugin/examples/junit.html). (Can use [Include/Exclude](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html) instead)
 * Maven version must be at least 3.3.9.
-* Support for Appium version 1.18.0 only. This appium version requires the appium java client to be at least 6.1.0
+* Current Appium version is 1.22.0. It is regulary updated with new releases.
 * JUnit 4.9 - 4.12 is supported; we don't support JUnit 5.
 * Tests must target precisely one app. (`MobileCapabilityType.FULL_RESET` is supported)
 
@@ -57,26 +60,15 @@ If you're unable to run the tests using command line locally, tests will also no
 
 ## 1. Changes to the build system
 
-### Step 1 - Add repository and dependency
+### Step 1 - Add dependency
 
-You'll need to add the JCenter repository to your `pom.xml` file:
-
-```xml
-<repositories>
-    <repository>
-      <id>jcenter</id>
-      <url>https://jcenter.bintray.com/</url>
-    </repository>
-</repositories>
-```
-
-Then add a dependency for the Appium test extensions:
+You'll need to add a dependency for the Appium test extensions:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.appcenter</groupId>
     <artifactId>appium-test-extension</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 </dependency>
 ```
 
