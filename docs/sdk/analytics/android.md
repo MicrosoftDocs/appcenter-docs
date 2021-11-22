@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 06/19/2020
+ms.date: 11/22/2021
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter-sdk
@@ -157,26 +157,26 @@ By default, the SDK stores all the event logs up to 10 MB. Developers can use an
 
 ## No internet access
 
-When there's no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 3 seconds (by default).
+When there's no network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK starts discarding old logs to make room for the new logs. Once network connectivity returns, the SDK sends logs in the batch of 50 or after every 6 seconds (by default).
 
 > [!NOTE]
 > The logs older than 25 days won't be accepted by the backend.
 
 ## Batching event logs
 
-The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds (by default). There can be a maximum of three batches sent in parallel.
+The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 6 seconds (by default). There can be a maximum of three batches sent in parallel.
 The transmission interval can be changed:
 
 ```java
 // Change transmission interval to 10 minutes.
-Analytics.setTransmissionInterval(600);
+Analytics.setTransmissionInterval(10000);
 ```
 ```kotlin
 // Change transmission interval to 10 minutes.
-Analytics.setTransmissionInterval(600)
+Analytics.setTransmissionInterval(10000)
 ```
 
-The transmission interval value must be between 3 seconds and 86400 seconds (one day) and this method must be called before the service is started.
+The transmission interval value must be between 6 seconds and 86400 seconds (one day) and this method must be called before the service is started.
 
 ## Retry and back-off logic
 
