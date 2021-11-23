@@ -135,7 +135,7 @@ If the build experiences similar symptoms as described [in this GitHub issue](ht
 <MtouchArch>ARM64</MtouchArch>
 ```
 
-## Build failed with error: target "__IsProjectRestoreSupported" does not exist in the project.
+## Build failed with error: target "_IsProjectRestoreSupported" does not exist in the project.
 
 You may experience build issues if you have UWP project in the solution where during the restore its errors were silently ignored in the old version of NuGet. 
 Removing or fixing such UWP project in the solution may resolve the issue. Plese see the details [in this GitHub issue](https://github.com/mono/mono/issues/21180).
