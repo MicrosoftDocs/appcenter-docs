@@ -120,12 +120,7 @@ Analytics.Resume();
 
 [!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
 
-- Select `Enable Manual Session Tracker` check on the **AppCenterBehavior** or call the following method before the SDK start:
-
-```csharp
-Analytics.EnableManualSessionTracker();
-```
-
+- Uncheck the **Enable Manual Session Tracker** checkbox under **Analytics** section on the game object with **AppCenterBehavior** attached.
 - Then you can use the `StartSession` API after the `AppCenter.Start`:
 
 ```csharp
