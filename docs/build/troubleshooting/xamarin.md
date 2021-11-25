@@ -64,7 +64,7 @@ warning MSB3245: Could not resolve this reference. Could not locate the assembly
 error CS0246: The type or namespace name 'TYPE_OR_NAMESPACE_NAME' could not be found (are you missing a using directive or an assembly reference?)
 ```
 
-To resolve this issue, you can use [pre-build script](https://docs.microsoft.com/appcenter/build/custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following commands, which restores all packages for each solution in your repository:
+To resolve this issue, you can use [pre-build script](../custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following commands, which restores all packages for each solution in your repository:
 
 ```bash
 #!/bin/bash
