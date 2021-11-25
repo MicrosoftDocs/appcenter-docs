@@ -99,11 +99,11 @@ await Analytics.setEnabled(true);
 
 To configure SDK for tracking session manually you have to use the native Analytics `enableManualSessionTracker` APIs:
 
-- In iOS, call `[MSACAnalytics enableManualSessionTracker];` before any call to `[AppCenterReactNative register];` in the `AppDelegate.m` project file. Add `@import AppCenterAnalytics` if missing in that file.
+- In iOS, call `[MSACAnalytics enableManualSessionTracker];` before `[AppCenterReactNative register];` in the app's `didFinishLaunchingWithOptions` delegate method in `AppDelegate.m`. Add `@import AppCenterAnalytics` if missing in that file.
 
 - In Android, call `Analytics.enableManualSessionTracker();` before `SoLoader.init` in `onCreate` method in `MainApplication.java`. Add import `com.microsoft.appcenter.analytics.Analytics` if missing in that file.
 
-Then you can use the `startSession` API in the React Native project:
+Then you can use the `startSession` API in the your React Native project:
 
 ```javascript
 Analytics.startSession();
