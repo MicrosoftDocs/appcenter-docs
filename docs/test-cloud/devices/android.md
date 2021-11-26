@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 11/9/2021
+ms.date: 11/26/2021
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -45,7 +45,7 @@ Google Pixel 3 | 12
 Google Pixel 3 | 9
 Google Pixel 3 XL | 10
 Google Pixel 3 XL | 11
-Google Pixel 3 XL | 12 
+Google Pixel 3 XL | 12
 Google Pixel 3 XL | 9
 Google Pixel 3a | 10
 Google Pixel 3a | 11
@@ -53,19 +53,20 @@ Google Pixel 3a | 12
 Google Pixel 3a | 9
 Google Pixel 3a XL | 10
 Google Pixel 3a XL | 11
-Google Pixel 3a XL | 12 
+Google Pixel 3a XL | 12
 Google Pixel 3a XL | 9
 Google Pixel 4 | 10
 Google Pixel 4 | 11
 Google Pixel 4 | 12
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
-Google Pixel 4 XL | 12 
+Google Pixel 4 XL | 12
 Google Pixel 4a | 11
-Google Pixel 4a | 12 
+Google Pixel 4a | 12
 Google Pixel 5 | 11
-Google Pixel 5 | 12 
-Google Pixel 6 | 12 
+Google Pixel 5 | 12
+Google Pixel 6 | 12
+Google Pixel 6 Pro | 12
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
@@ -201,9 +202,9 @@ OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
 OnePlus 9 | 11
-OnePlus 9 | 12 Beta 1
+OnePlus 9 | 12 beta 1
 OnePlus 9 Pro | 11
-OnePlus 9 Pro | 12 Beta 1
+OnePlus 9 Pro | 12 beta 1
 OnePlus Nord | 10
 OnePlus Nord | 11
 OnePlus Nord 2 | 11
@@ -220,6 +221,7 @@ Samsung Galaxy A50 | 11
 Samsung Galaxy A50 | 9
 Samsung Galaxy A51 | 10
 Samsung Galaxy A51 | 11
+Samsung Galaxy A52s | 11
 Samsung Galaxy A6+ | 10
 Samsung Galaxy A6+ | 8.0.0
 Samsung Galaxy A7 (2018) | 10
@@ -286,8 +288,11 @@ Samsung Galaxy S20 Plus | 11
 Samsung Galaxy S20 Ultra | 10
 Samsung Galaxy S20 Ultra | 11
 Samsung Galaxy S21 | 11
+Samsung Galaxy S21 | 12
 Samsung Galaxy S21 Plus | 11
+Samsung Galaxy S21 Plus | 12
 Samsung Galaxy S21 Ultra | 11
+Samsung Galaxy S21 Ultra | 12
 Samsung Galaxy S4 | 5.0.1
 Samsung Galaxy S4 Active | 5.0.1
 Samsung Galaxy S5 | 5.0
@@ -353,6 +358,7 @@ Samsung Galaxy Xcover 4 | 7.0
 Samsung Galaxy Xcover 4 | 9
 Samsung Galaxy Xcover 4s | 10
 Samsung Galaxy Xcover 4s | 9
+Samsung Galaxy Z Flip3 | 11
 Samsung Google Nexus 10 | 5.1.1
 Sony Xperia 1 | 10
 Sony Xperia 1 | 11
