@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 26/11/2021
+ms.date: 11/26/2021
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
