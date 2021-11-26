@@ -64,7 +64,7 @@ warning MSB3245: Could not resolve this reference. Could not locate the assembly
 error CS0246: The type or namespace name 'TYPE_OR_NAMESPACE_NAME' could not be found (are you missing a using directive or an assembly reference?)
 ```
 
-To resolve this issue, you can use [pre-build script](https://docs.microsoft.com/appcenter/build/custom/scripts/#pre-build) `appcenter-pre-build.sh` with the following commands, which restores all packages for each solution in your repository:
+To resolve this issue, you can use [pre-build script](~/build/custom/scripts/index.md#pre-build) `appcenter-pre-build.sh` with the following commands, which restores all packages for each solution in your repository:
 
 ```bash
 #!/bin/bash
@@ -134,3 +134,8 @@ If the build experiences similar symptoms as described [in this GitHub issue](ht
 ```xml
 <MtouchArch>ARM64</MtouchArch>
 ```
+
+## Build failed with error: target "_IsProjectRestoreSupported" does not exist in the project.
+
+You may experience build issues if you have UWP project in the solution where during the restore its errors were silently ignored in the old version of NuGet. 
+Removing or fixing such UWP project in the solution may resolve the issue. Plese see the details [in this GitHub issue](https://github.com/mono/mono/issues/21180).
