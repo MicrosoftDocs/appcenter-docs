@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 09/11/2021
+ms.date: 11/30/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
