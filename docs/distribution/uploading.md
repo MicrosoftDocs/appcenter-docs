@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 09/11/2021
+ms.date: 12/02/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -94,22 +94,22 @@ A sample implementation can be seen here: https://github.com/microsoft/appcenter
 #### Prerequisites
 - The App package to upload and distribute.
 - [Obtain an API token][api-token-docs]. An API Token is used for authentication for all App Center API calls.
-- The Distribution Group Name (optional, if missing or invalid the upload will still complete) 
+- The Distribution Group Name (optional, if missing or invalid the upload will still complete)
 - Identify the `{owner_name}` and `{app_name}` for the app that you wish to distribute a release for. These identifiers are used in the URL for the API calls. For an app owned by a user, the URL in App Center might look like: <https://appcenter.ms/users/Example-User/apps/Example-App>. Here, the `{owner_name}` is `Example-User` and the `{app_name}` is `Example-App`. For an app owned by an org, the URL might be <https://appcenter.ms/orgs/Example-Org/apps/Example-App> and the `{owner_name}` would be `Example-Org`.
- 
+
 ##### Upload New Release
 Upload a new release using these sequential API calls:
-1. Create an upload resource and get an `upload_url` (good for 24 hours):
+1. Create a new release upload:
     The endpoint to call is [POST /v0.1/apps/{owner_name}/{app_name}/uploads/releases][POST_releaseUpload]
     ```sh
         OWNER_NAME="Example-Org"
         APP_NAME="Example-App"
         API_TOKEN="Example-Token"
-        
+
         curl -X POST "https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases" -H  "accept: application/json" -H  "X-API-Token: $API_TOKEN" -H  "Content-Type: application/json"
     ```
-        
-   The result will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
+
+   The response will look something like this, with `{VARIABLE_NAME}` replacing data unique to each use:
    ```json
         {
             "id": "{ID}",
@@ -119,7 +119,7 @@ Upload a new release using these sequential API calls:
             "url_encoded_token": "{URL_ENCODED_TOKEN}"
         }
     ```
-        
+
 2. Copy the parameters from the response in the previous step, as most of them are used in the next step, including the `package_asset_id`, `upload_domain` & `url_encoded_token`. 
 
     Determine the size of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
@@ -262,7 +262,7 @@ You can find links to specific releases to public destinations on the releases t
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
 [groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md
-[sdk]: https://docs.microsoft.com/appcenter/sdk/
+[sdk]: ~/sdk/index.md
 [app-center-home]: https://appcenter.ms/apps
 [apple-register-single-device]: https://help.apple.com/developer-account/#/dev40df0d9fa
 [apple-register-multiple-devices]: https://help.apple.com/developer-account/#/devebd34abb1
