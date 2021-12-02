@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/01/2021
+ms.date: 12/02/2021
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -262,7 +262,7 @@ You can find links to specific releases to public destinations on the releases t
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
 [groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md
-[sdk]: https://docs.microsoft.com/appcenter/sdk/
+[sdk]: ~/sdk/index.md
 [app-center-home]: https://appcenter.ms/apps
 [apple-register-single-device]: https://help.apple.com/developer-account/#/dev40df0d9fa
 [apple-register-multiple-devices]: https://help.apple.com/developer-account/#/devebd34abb1
