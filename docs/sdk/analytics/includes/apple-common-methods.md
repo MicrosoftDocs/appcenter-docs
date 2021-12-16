@@ -201,7 +201,7 @@ Analytics.enabled
 - Call the following method before the SDK start:
 
 ```objc
-[Analytics enableManualSessionTracker];
+[MSACAnalytics enableManualSessionTracker];
 ```
 ```swift
 Analytics.enableManualSessionTracker()
@@ -210,7 +210,7 @@ Analytics.enableManualSessionTracker()
 - Then you can use the `startSession` API after the `AppCenter.start`:
 
 ```objc
-[Analytics startSession];
+[MSACAnalytics startSession];
 ```
 ```swift
 Analytics.startSession()
