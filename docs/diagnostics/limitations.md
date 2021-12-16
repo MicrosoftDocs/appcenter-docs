@@ -16,7 +16,8 @@ ms.custom: analytics
 ## Crashes
 
 - Android React Native source maps aren't supported.
-- App Center only accepts up to 60 crashes per minute per unique app. We won't ingest or process any crashes that exceed this limit. 
+- App Center only accepts up to 60 crashes per minute per unique app. We won't ingest or process any crashes that exceed this limit.
+- App Center only stores uploaded symbols for 180 days 
 
 
 ## Handled Errors
