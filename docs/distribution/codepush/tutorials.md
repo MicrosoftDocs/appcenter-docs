@@ -149,9 +149,6 @@ codePush.sync({ updateDialog: true }, onSyncStatusChange, onDownloadProgress, on
 
 ## Automate your deployments with Azure DevOps
 
-> [!NOTE]
-> This article contains references to the term *master*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
-
 Continuous Integration (CI) and Continuous Deployment (CD) are key practices of DevOps. It requires the team to have a mindset to merge all working copies of developers’ code with a shared repository, producing a new build upon code commit. In turn this provides them with the opportunity to use the CI output, deploy it to one or more environments, and ultimately serve the end users via app updates.
 
 This tutorial covers how to use Azure DevOps (formerly known as Visual Studio Team Services (VSTS)) and CodePush to create a CD environment to automate app updates from an existing CI environment. Even though a "proper" CI build not only compiles the code, but ideally runs code analysis, unit (and sometimes even integration) tests and even could package the code, those CI details won’t be discussed but instead go over the basics of CI integration as well as details of how to set up the CD environment.
@@ -280,7 +277,7 @@ For React Native projects do the following steps:
     ![Configuring empty build definition](images/tutorials11.png)
 
 > [!NOTE]
-> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` (or `main`) branch.
+> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the default branch.
 
 #### Configure the build task
 
@@ -327,7 +324,7 @@ Pressing `OK` on the "Queue build" dialog starts the build process:
 ![Build running](images/tutorials14.png)
 
 > [!NOTE]
-> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` (or `main`) branch.
+> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the default branch.
 
 ### 5. Configure the CD environment
 
