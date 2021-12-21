@@ -38,7 +38,7 @@ Azure Blob Storage is a service for storing large amounts of unstructured object
 
 The data is exported every minute and a new subfolder is created each time. The data is stored the *year/month/day/hour/minute* format (for example, `https://<blob-storage-account>.blob.core.windows.net/archive/2017/12/09/04/03/logs.v1.data`) by default when the `blob_path_format_kind` is set to `WithoutAppId`.  When the `config` property is set to `WithAppId`, the data is stored in the *appId/year/month/day/hour/minute* format, which prefixes the default path with the appID. The data will take up to 5 minutes to be shown in Azure Blob Storage.
 
-The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnostics data](~/gdpr/diagnostics-export)
+The data is divided in "Analytics" data (sessions, events), "Crashes", "Errors" and "Attachments". [Learn more about exporting diagnostics data](~/gdpr/diagnostics-export.md)
 
 ![Data visualization in Azure Blob Storage](~/analytics/images/subfolders.png)
 
@@ -249,7 +249,7 @@ By default, a new export configuration will back-fill two last days of data for 
 
 ### Choosing what kind of data to export
 
-By default, a new export configuration exports Analytics data only (events, sessions, and so on) Diagnostics-related data [can be exported](~/gdpr/diagnostics-export) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
+By default, a new export configuration exports Analytics data only (events, sessions, and so on) Diagnostics-related data [can be exported](~/gdpr/diagnostics-export.md) by setting `Entities` property (`export_entity` model) to a combination of `errors`, `crashes`, and `attachments`. The property also allows excluding Analytics data from being exported by adding `no_logs` value to the `Entities` array.
 
 ### Auto-disable mechanism
 
