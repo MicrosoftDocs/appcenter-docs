@@ -272,12 +272,12 @@ For React Native projects do the following steps:
 
     ![Selecting empty build definition](images/tutorials10.png)
 
-3. Make sure that the repo settings are correct (it should be the master or main branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
+3. Make sure that the repo settings are correct (it should be the default or main branch on the VSTSCDSample repo). Check the `Continuous integration` checkbox and ensure that the Default agent queue is set to Hosted and click `Create`.
 
     ![Configuring empty build definition](images/tutorials11.png)
 
 > [!NOTE]
-> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the `master` (or `main`) branch.
+> The `Continuous Integration` trigger tells Azure DevOps to kick-off an instance of this build each time code is pushed to the default branch.
 
 #### Configure the build task
 
@@ -324,7 +324,7 @@ Pressing `OK` on the "Queue build" dialog starts the build process:
 ![Build running](images/tutorials14.png)
 
 > [!NOTE]
-> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the `master` (or `main`) branch.
+> The previously set `Continuous Integration` trigger ensures new builds are automatically queued every time code is pushed to the default branch.
 
 ### 5. Configure the CD environment
 
@@ -414,11 +414,11 @@ Create the described release definition by following these steps:
 
 If you had both `Staging` and `Production` users, you could test the full release environment as configured. Since that's not the case for this tutorial, you can focus on testing the `Staging` environment.
 
-To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the master branch to kick off a build and eventually a release.
+To test the automated workflow, you'll need to deploy a "release" version of the test app and push a change to the default branch to kick off a build and eventually a release.
 
 You can create a "release" version of the app by generating a signed APK and installing the release build created with it. Instructions can be found on the [React Native docs](https://facebook.github.io/react-native/docs/signed-apk-android.html#content).
 
-Deploy the app per the instructions linked above, do a small code change and commit the change to master.
+Deploy the app per the instructions linked above, do a small code change and commit the change to the default branch.
 
 Azure DevOps allows you to edit the source code on the CODE hub:
 

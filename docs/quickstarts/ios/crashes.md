@@ -20,7 +20,7 @@ To symbolicate crashes in iOS, App Center needs you to upload a **symbol file to
 
 If you already completed the [Build tutorial](build.md) and built the sample app:
 1. Navigate to the **Build** service in the portal.
-2. Select the **master** branch.
+2. Select the main branch.
 3. Click on the latest successful build.
 4. Click **Download** > **Download symbols** at the top.
 
