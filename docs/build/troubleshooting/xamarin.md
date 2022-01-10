@@ -69,7 +69,6 @@ To resolve this issue, you can use [pre-build script](~/build/custom/scripts/ind
 ```bash
 #!/bin/bash
 find $APPCENTER_SOURCE_DIRECTORY -name '*.sln' -print0 | xargs -0 -n1 nuget restore -DisableParallelProcessing
-CODE_SECTION
 ```
 
 ## I want to run unit tests for my Xamarin application
