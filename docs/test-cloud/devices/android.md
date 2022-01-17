@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 11/26/2021
+ms.date: 1/13/2022
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -202,15 +202,17 @@ OnePlus 8 | 10
 OnePlus 8 Pro | 10
 OnePlus 8T | 11
 OnePlus 9 | 11
-OnePlus 9 | 12 beta 1
+OnePlus 9 | 12
 OnePlus 9 Pro | 11
-OnePlus 9 Pro | 12 beta 1
+OnePlus 9 Pro | 12
 OnePlus Nord | 10
 OnePlus Nord | 11
 OnePlus Nord 2 | 11
 OnePlus Nord CE | 11
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
+Samsung Galaxy A12 | 11
+Samsung Galaxy A21s | 11
 Samsung Galaxy A3 | 5.0.2
 Samsung Galaxy A40 | 10
 Samsung Galaxy A40 | 9
@@ -270,6 +272,7 @@ Samsung Galaxy Note 9 | 8.1.0
 Samsung Galaxy Note 9 | 9
 Samsung Galaxy S10 | 10
 Samsung Galaxy S10 | 11
+Samsung Galaxy S10 | 12
 Samsung Galaxy S10 | 9
 Samsung Galaxy S10 Lite | 10
 Samsung Galaxy S10 Lite | 11
@@ -278,6 +281,7 @@ Samsung Galaxy S10 Plus | 11
 Samsung Galaxy S10 Plus | 9
 Samsung Galaxy S10e | 10
 Samsung Galaxy S10e | 11
+Samsung Galaxy S10e | 12
 Samsung Galaxy S10e | 9
 Samsung Galaxy S20 | 10
 Samsung Galaxy S20 | 11
@@ -285,8 +289,10 @@ Samsung Galaxy S20 FE | 10
 Samsung Galaxy S20 FE | 11
 Samsung Galaxy S20 Plus | 10
 Samsung Galaxy S20 Plus | 11
+Samsung Galaxy S20 Plus | 12
 Samsung Galaxy S20 Ultra | 10
 Samsung Galaxy S20 Ultra | 11
+Samsung Galaxy S20 Ultra | 12
 Samsung Galaxy S21 | 11
 Samsung Galaxy S21 | 12
 Samsung Galaxy S21 Plus | 11
@@ -349,8 +355,10 @@ Samsung Galaxy Tab S6 Lite | 10
 Samsung Galaxy Tab S6 Lite | 11
 Samsung Galaxy Tab S7 | 10
 Samsung Galaxy Tab S7 | 11
+Samsung Galaxy Tab S7 | 12
 Samsung Galaxy Tab S7 Plus | 10
 Samsung Galaxy Tab S7 Plus | 11
+Samsung Galaxy Tab S7 Plus | 12
 Samsung Galaxy XCover 5 | 11
 Samsung Galaxy XCover Pro | 10
 Samsung Galaxy XCover Pro | 11
@@ -396,6 +404,5 @@ Sony Xperia Z5 Compact | 5.1.1
 Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
-Xiaomi Mi A3 | 10
 Xiaomi Mi A3 | 11
 Xiaomi Mi A3 | 9

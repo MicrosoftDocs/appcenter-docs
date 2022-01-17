@@ -4,7 +4,7 @@ description: App Center Analytics for Xamarin
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/14/2019
+ms.date: 11/26/2021
 ms.topic: article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.custom: sdk
@@ -31,6 +31,18 @@ Follow the [Get started](~/sdk/getting-started/xamarin.md) section if you haven'
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
+
+### Country Code
+
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices won't report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `SetCountryCode:` method in the SDK:
+
+```csharp
+AppCenter.SetCountryCode("en");
+```
+
+> [!NOTE]
+> For country code to be displayed on Analytics sessions, `AppCenter.SetCountryCode` must be called prior to calling
+> `AppCenter.Start`.
 
 ## Custom events
 
