@@ -104,6 +104,13 @@
     },
     "template": [],
     "dest": "vs-mobile-center-docs",
-    "markdownEngineName": "markdig"
+    "markdownEngineName": "markdig",
+    "rules": {
+      "sensitive-language-wl": {
+        "exclude": [
+          "distribution/codepush/cordova.md"
+        ]
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@ ms.custom: distribute
 
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
-> [!NOTE] 
+> [!NOTE]
 > Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
 
 ## How does it work?
@@ -32,6 +32,7 @@ To ensure that your end users always have a functioning version of your app, the
 ## Supported Cordova Platforms
 
 Cordova 5.0.0+ is fully supported, along with the following associated platforms:
+
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - Including CrossWalk!
 * iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (To use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
 
@@ -92,7 +93,7 @@ Beginning from version **1.10.0** you can sign your update bundles (for more inf
 
 You can use the same private/public key pair for each platform.
 
-2. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
+1. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
 
 ```xml
     <access origin="https://codepush.appcenter.ms" />
@@ -100,13 +101,13 @@ You can use the same private/public key pair for each platform.
     <access origin="https://codepushupdates.azureedge.net" />
 ```
 
-3. To ensure that your app can access the CodePush server on [CSP](https://developer.mozilla.org/docs/Web/Security/CSP/Introducing_Content_Security_Policy)-compliant platforms, add `https://codepush.appcenter.ms` to the `Content-Security-Policy` `meta` tag in your `index.html` file:
+1. To ensure that your app can access the CodePush server on [CSP](https://developer.mozilla.org/docs/Web/Security/CSP/Introducing_Content_Security_Policy)-compliant platforms, add `https://codepush.appcenter.ms` to the `Content-Security-Policy` `meta` tag in your `index.html` file:
 
 ```xml
     <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.appcenter.ms 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
 ```
 
-4. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, run the following command:
+1. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, run the following command:
 
 ```shell
     cordova plugin ls    
@@ -125,7 +126,7 @@ You're now ready to use the plugin in the application code. See the sample appli
 With the CodePush plugin installed and configured, the only thing left is to add the necessary code to your app to control the following policies:
 
 1. When (and how often) to check for an update? (e.g. app start, in response to clicking a button in a settings page, periodically at some fixed interval)
-2. When an update is available, how to present it to the end user?
+1. When an update is available, how to present it to the end user?
 The simplest way to do this is to run the following in your app's `deviceready` event handler:
 
 ```javascript
