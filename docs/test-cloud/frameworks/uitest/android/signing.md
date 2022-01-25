@@ -41,10 +41,10 @@ Example addition to your CLI [`appcenter` test run command](~/test-cloud/startin
 
 All four of these command-line options must be specified to use this approach:
 
-- **--store-password <arg>** - Password to the keystore. Corresponds to the `-storepass` argument in jarsigner.
-- **--key-alias <arg>** - Alias to the key in the keystore. Corresponds to the `-alias` argument in jarsigner.
-- **--key-password <arg>** - Password to the matching private key in the keystore. Corresponds to the `-keypass` argument in jarsigner.
-- **--store-path <arg>** - Path to the keystore file.
+- `--store-password <arg>` - Password to the keystore. Corresponds to the `-storepass` argument in jarsigner.
+- `--key-alias <arg>` - Alias to the key in the keystore. Corresponds to the `-alias` argument in jarsigner.
+- `--key-password <arg>` - Password to the matching private key in the keystore. Corresponds to the `-keypass` argument in jarsigner.
+- `--store-path <arg>` - Path to the keystore file.
     
 ## Signing Info File
 Instead of using Xamarin.UITest to specify an Android Keystore, you can create and specify a signing info file. This has the same effect but doesn't use your Keystore and passwords in the command line. This process requires creating the signing info file.

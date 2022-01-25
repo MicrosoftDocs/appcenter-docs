@@ -23,7 +23,7 @@ Only signed builds can be deployed and installed to devices, ensure your existin
 Once you're done with the signing task, add the build task **App Center Distribute**. This task uploads your signed build to App Center so that you can distribute it to your beta testers.
 
 > [!WARNING]
-> You need App Center Distibute Task version 3 or newer to use this feature.
+> You need App Center Distribute Task version 3 or newer to use this feature.
 
 When configuring the App Center Distribute task, you'll need your App Center API key. To obtain this key, open a browser, and navigate to the [App Center dashboard](https://appcenter.ms), then open your Account Settings.
 

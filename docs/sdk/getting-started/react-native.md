@@ -74,7 +74,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 
-2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName>...**).
+2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName\>...**).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -167,7 +167,7 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
 
 2. Edit the project's `android/app/src/main/assets/appcenter-config.json` and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret.
 
-3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret. If **AppCenter-Config.plist** already exists but not part of your Xcode project, you must add it to the Xcode project manually (right-click the app in XCode and click **Add files to \<App Name>...**).
+3. Edit the project's `ios/{YourAppName}/AppCenter-Config.plist` file, and replace the `YOUR_APP_SECRET` placeholder value with your App Center project's application secret. If **AppCenter-Config.plist** already exists but not part of your Xcode project, you must add it to the Xcode project manually (right-click the app in XCode and click **Add files to \<App Name\>...**).
 
 ### 3.3 [iOS only] Integrate the SDK manually for React Native without react-native link or CocoaPods
 
@@ -239,7 +239,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     ```
 
-12. Create new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the XCode project (right-click the app in XCode and click **Add files to \<App Name>...**).
+12. Create new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the XCode project (right-click the app in XCode and click **Add files to \<App Name\>...**).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>

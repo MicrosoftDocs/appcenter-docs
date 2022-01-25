@@ -32,7 +32,8 @@ First, follow the [getting started tutorial](getting-started.md) to set up the s
 4. Choose **sampleapp-macos-swift**.
 
 ## Configure the build
-1. Choose the **master** branch.
+
+1. Choose the main branch.
 
 2. Click **Configure build**. The Build configuration panel will show up.
 
