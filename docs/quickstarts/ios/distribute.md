@@ -27,7 +27,7 @@ If you already completed the [Build tutorial](build.md) and built the sample app
 
 2. Click **Choose branch and build** at the bottom of the page.
 
-3. Choose the **master** branch.  
+3. Choose the main branch.  
 
 4. Click on the latest successful and signed build. If there isn't a build, then you haven't signed your builds. The [Build tutorial](build.md) has steps to do so.
 

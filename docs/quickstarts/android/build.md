@@ -26,7 +26,8 @@ ms.assetid: faef539f-3bbe-43b5-af8c-7f48a14340ed
 4. Choose **sampleapp-android**.
 
 ## Configure the build
-1. Choose the **master** branch.
+
+1. Choose the main branch.
 
 2. Click **Configure build**. The Build configuration panel will show up.
 

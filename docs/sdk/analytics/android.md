@@ -4,7 +4,7 @@ description: App Center Analytics for Android
 keywords: analytics
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/16/2021
+ms.date: 11/26/2021
 ms.topic: article
 ms.assetid: 5392ac23-465d-464d-a533-262a94cf15c3
 ms.service: vs-appcenter-sdk
@@ -35,6 +35,21 @@ Follow the [SDK Getting started](~/sdk/getting-started/android.md) section if yo
 ## Session and device information
 
 Once you add App Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
+
+### Country Code
+
+The SDK automatically reports a user's country code if the device has a mobile data modem and a SIM card installed. WiFi-only devices won't report a country code by default. To set the country code of those users, you must retrieve your user's location yourself and use the `setCountryCode:` method in the SDK:
+
+```java
+AppCenter.setCountryCode("en");
+```
+```kotlin
+AppCenter.setCountryCode("en")
+```
+
+> [!NOTE]
+> For country code to be displayed on Analytics sessions, `AppCenter.setCountryCode` must be called prior to calling
+> `AppCenter.start`.
 
 ## Custom events
 

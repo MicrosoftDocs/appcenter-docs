@@ -12,22 +12,25 @@ ms.custom: distribute
 ---
 
 # Cordova Client SDK
+
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
 > [!NOTE] 
 > Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
 
 ## How does it work?
+
 A Cordova app is composed of HTML, CSS and JavaScript files and any accompanying images, which are bundled together by the Cordova CLI and distributed as part of a platform-specific binary (i.e. an .ipa or .apk file). Once the app is released, updating either the code or image assets requires you to recompile and redistribute the entire binary. This process includes review time for the store(s) you're publishing to.
 
 The CodePush plugin helps get product improvements in front of your end users instantly, by keeping your code and images synchronized with updates you release to the CodePush server. This way, your app gets the benefits of an offline mobile experience, as well as the "web-like" agility of side-loading updates as soon as they're available. It's a win-win!
 
 To ensure that your end users always have a functioning version of your app, the CodePush plugin maintains a copy of the previous update, so that in the event that you accidentally push an update that includes a crash, it can automatically roll back. This way, you can rest assured that your newfound release agility won't result in users becoming blocked before you have a chance to roll back on the server. It's a win-win-win!
 
-> [!NOTE] 
+> [!NOTE]
 > Any product changes that touch native code (e.g. upgrading Cordova versions, adding a new plugin) can't be distributed via CodePush, and so, must be updated via the appropriate store(s).
 
 ## Supported Cordova Platforms
+
 Cordova 5.0.0+ is fully supported, along with the following associated platforms:
 * Android ([cordova-android](https://github.com/apache/cordova-android) 4.0.0+) - Including CrossWalk!
 * iOS ([cordova-ios](https://github.com/apache/cordova-ios) 3.9.0+) - (To use CodePush along with the [`cordova-plugin-wkwebview-engine`](https://github.com/apache/cordova-plugin-wkwebview-engine) plugin, you need to install `v1.5.1-beta+`, which includes full support for apps using either WebView.)
@@ -45,7 +48,11 @@ If you're running an older Android or iOS platform than is mentioned above, and 
     cordova platform update ios
 ```
 
-## Getting Started
+## Getting started
+
+> [!NOTE]
+> This article contains references to the term *whitelist*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
+
 Once you've followed the general-purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start CodePush-ifying your Cordova app by running the following command from within your app's root directory:
 
 ```shell
@@ -53,7 +60,9 @@ cordova plugin add cordova-plugin-code-push@latest
 ```
 
 With the CodePush plugin installed, configure your app to use it via the following steps:
+
 1. Add your deployment keys to the **config.xml** file, making sure to include the right key for each Cordova platform:
+
 ```xml
     <platform name="android">
         <preference name="CodePushDeploymentKey" value="YOUR-ANDROID-DEPLOYMENT-KEY" />
@@ -62,12 +71,14 @@ With the CodePush plugin installed, configure your app to use it via the followi
         <preference name="CodePushDeploymentKey" value="YOUR-IOS-DEPLOYMENT-KEY" />
     </platform>
 ```
+
 As a reminder, these keys are generated for you when you created your CodePush app via the CLI. If you need to retrieve them, you can run `appcenter codepush deployment list -a <ownerName>/<appName> --displayKeys`, and grab the key for the specific deployment you want to use (e.g. `Staging`, `Production`).
 
    > [!IMPORTANT]
    > We [recommend](./cli.md#app-management) creating a separate CodePush app for iOS and Android, which is why the above sample declares separate keys for Android and iOS. If you're only developing for a single platform, then you only need to specify the deployment key for either Android or iOS, so you don't need to add the additional `<platform>` element as illustrated above.
 
 Beginning from version **1.10.0** you can sign your update bundles (for more information about code signing refer to relevant documentation [section](cli.md#code-signing)). To enable code signing for a Cordova application you should set up a public key to verify the bundle's signature by providing following a `preference` setting in `config.xml`:
+
 ```xml
     <platform name="android">
         ...
@@ -78,9 +89,11 @@ Beginning from version **1.10.0** you can sign your update bundles (for more inf
         <preference name="CodePushPublicKey" value="YOUR-PUBLIC-KEY" />
     </platform>
 ```
+
 You can use the same private/public key pair for each platform.
 
 2. If you're using an `<access origin="*" />` element in your **config.xml** file, then your app is already allowed to communicate with the CodePush servers and you can safely skip this step. Otherwise, add the following additional `<access />` elements:
+
 ```xml
     <access origin="https://codepush.appcenter.ms" />
     <access origin="https://codepush.blob.core.windows.net" />
@@ -88,16 +101,19 @@ You can use the same private/public key pair for each platform.
 ```
 
 3. To ensure that your app can access the CodePush server on [CSP](https://developer.mozilla.org/docs/Web/Security/CSP/Introducing_Content_Security_Policy)-compliant platforms, add `https://codepush.appcenter.ms` to the `Content-Security-Policy` `meta` tag in your `index.html` file:
+
 ```xml
     <meta http-equiv="Content-Security-Policy" content="default-src https://codepush.appcenter.ms 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
 ```
 
 4. Finally, double-check that you already have the [`cordova-plugin-whitelist`](https://github.com/apache/cordova-plugin-whitelist) plugin installed (most apps will). To check this, run the following command:
+
 ```shell
     cordova plugin ls    
 ```
 
 If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise, run the following command to add it:
+
 ```shell
     cordova plugin add cordova-plugin-whitelist
 ```
@@ -105,10 +121,13 @@ If `cordova-plugin-whitelist` is in the list, then you're good to go. Otherwise,
 You're now ready to use the plugin in the application code. See the sample applications for examples and the API documentation for more details.
 
 ## Plugin Usage
+
 With the CodePush plugin installed and configured, the only thing left is to add the necessary code to your app to control the following policies:
+
 1. When (and how often) to check for an update? (e.g. app start, in response to clicking a button in a settings page, periodically at some fixed interval)
 2. When an update is available, how to present it to the end user?
 The simplest way to do this is to run the following in your app's `deviceready` event handler:
+
 ```javascript
 codePush.sync();
 ```
