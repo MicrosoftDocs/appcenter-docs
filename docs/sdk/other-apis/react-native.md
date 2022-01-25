@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for React Native
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/13/2021
+ms.date: 09/27/2021
 ms.topic: article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.tgt_pltfrm: react-native
@@ -135,27 +135,4 @@ You can get the version of App Center SDK that you're currently using.
  
 ```javascript
 AppCenter.getSdkVersion();
-```
-
-You can set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Javascript types: `string`, `number`, `boolean` and `Date`. 
-
-```javascript
-import AppCenter, {CustomProperties} from 'appcenter';
-
-const properties = new CustomProperties();
-properties.set('color', 'blue').set('score', 10);
-AppCenter.setCustomProperties(properties);
-```
-
-> [!NOTE]
-> If you set the same custom property more than once, previous values will be overwritten by the last one.
-
-You may remove any custom property by calling the `clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
-
-```javascript
-import AppCenter, {CustomProperties} from 'appcenter';
-
-const properties = new CustomProperties();
-properties.clear('score');
-AppCenter.setCustomProperties(properties);
 ```
