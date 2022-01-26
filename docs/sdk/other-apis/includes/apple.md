@@ -4,7 +4,7 @@ description:  Shared docs for Apple SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/26/2021
+ms.date: 09/27/2021
 ms.topic: include
 ms.assetid: 032f5f12-1b77-4df4-9a06-da004e6ab0e8
 ms.tgt_pltfrm: apple
@@ -158,37 +158,6 @@ You can get the version of App Center SDK that you're currently using.
 ```
 ```swift
 AppCenter.sdkVersion
-```
-
-You can set custom properties by calling the `setCustomProperties` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following types: `NSString`, `NSNumber`, `BOOL` and `NSDate`.
-
-```objc
-MSACCustomProperties *customProperties = [MSACCustomProperties new];
-[customProperties setString:@"blue" forKey:@"color"];
-[customProperties setNumber:@(10) forKey:@"score"];
-[MSACAppCenter setCustomProperties:customProperties];
-```
-```swift
-var customProperties = CustomProperties()
-customProperties.setString("blue", forKey: "color")
-customProperties.setNumber(10, forKey: "score")
-AppCenter.customProperties = customProperties
-```
-
-> [!NOTE]
-> If you set the same custom property more than once, previous values will be overwritten by the last one.
-
-You may remove any custom property by calling the `clearPropertyForKey` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
-
-```objc
-MSACCustomProperties *customProperties = [MSACCustomProperties new];
-[customProperties clearPropertyForKey:@"score"];
-[MSACAppCenter setCustomProperties:customProperties];
-```
-```swift
-var customProperties = CustomProperties()
-customProperties.clearProperty(forKey: "score")
-AppCenter.customProperties = customProperties
 ```
 
 ## Storage size
