@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Xamarin)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 05/19/2021
+ms.date: 11/08/2021
 ms.topic: article
 ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
@@ -60,6 +60,8 @@ Install-Package Microsoft.AppCenter.Distribute
 
 > [!NOTE]
 > If you use the App Center SDK in a portable project (such as **Xamarin.Forms**), you must install the packages in each of the projects: the portable, Android, and iOS ones. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio for Mac](#visual-studio-for-mac) or [Visual Studio for Windows](#visual-studio-for-windows) sections.
+
+[!INCLUDE [android distribute permissions](includes/android-10-package-installer-restrictions.md)]
 
 ### 2. Start App Center Distribute
 

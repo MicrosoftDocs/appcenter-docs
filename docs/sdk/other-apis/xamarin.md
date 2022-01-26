@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/26/2021
+ms.date: 09/27/2021
 ms.topic: article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.tgt_pltfrm: xamarin
@@ -134,23 +134,4 @@ You can get the version of App Center SDK that you're currently using.
 
 ```csharp
 AppCenter.SdkVersion;
-```
-
-You can set custom properties by calling the `SetCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following C# types: `string`, `int`, `long`, `double`, `float`, `decimal`, `bool` and `DateTime`.
-
-```csharp
-CustomProperties properties = new CustomProperties();
-properties.Set("color", "blue").Set("score", 10).Set("now", DateTime.UtcNow);
-AppCenter.SetCustomProperties(properties);
-```
-
-> [!NOTE]
-> If you set the same custom property more than once, previous values will be overwritten by the last one.
-
-You may remove any custom property by calling the `Clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
-
-```csharp
-CustomProperties properties = new CustomProperties();
-properties.Clear("score");
-AppCenter.SetCustomProperties(properties);
 ```

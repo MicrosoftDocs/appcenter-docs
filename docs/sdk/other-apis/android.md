@@ -4,7 +4,7 @@ description: Other APIs in the App Center SDK for Android
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/26/2021
+ms.date: 09/27/2021
 ms.topic: article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android
@@ -174,35 +174,6 @@ AppCenter.getSdkVersion();
 ```
 ```kotlin
 AppCenter.getSdkVersion()
-```
-
-Set custom properties by calling the `setCustomProperties()` API. A valid key for custom property should match regular expression pattern `^[a-zA-Z][a-zA-Z0-9]*$`. A custom property's value may be one of the following Java types: `String`, `Number`, `boolean` and `Date`. 
-
-```java
-CustomProperties properties = new CustomProperties();
-properties.set("color", "blue").set("score", 10);
-AppCenter.setCustomProperties(properties);
-```
-```kotlin
-val properties = CustomProperties()
-properties.set("color", "blue").set("score", 10)
-AppCenter.setCustomProperties(properties)
-```
-
-> [!NOTE]
-> If you set the same custom property more than once, previous values will be overwritten by the last one.
-
-You may remove any custom property by calling the `clear()` API. This only removes the value of the property for a device. It won't remove the property name from App Center portal.
-
-```java
-CustomProperties properties = new CustomProperties();
-properties.clear("score");
-AppCenter.setCustomProperties(properties);
-```
-```kotlin
-val properties = CustomProperties()
-properties.clear("score")
-AppCenter.setCustomProperties(properties)
 ```
 
 ## Storage size
