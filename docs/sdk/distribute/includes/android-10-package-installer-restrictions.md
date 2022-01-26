@@ -7,7 +7,7 @@ ms.tgt_pltfrm: android
 ---
 
 > [!NOTE]
-> On Android 10 or higher has restrictions on launch activity from the background. Please see article about [restrictions on starting activities from the background](https://developer.android.com/guide/components/activities/background-starts).
+> Android 10 or higher has restrictions on launch activity from the background. Please see article about [restrictions on starting activities from the background](https://developer.android.com/guide/components/activities/background-starts).
 
 > [!NOTE]
 > Apps running on Android 10 (Go edition) cannot receive the **SYSTEM_ALERT_WINDOW** permission. Please see article about [SYSTEM_ALERT_WINDOW on Go devices](https://developer.android.com/about/versions/10/behavior-changes-all#sysalert-go).
