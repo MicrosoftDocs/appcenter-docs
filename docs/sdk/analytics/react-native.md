@@ -95,6 +95,20 @@ This means that for any information to be sent to App Center (even basic session
 await Analytics.setEnabled(true);
 ```
 
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+To configure SDK for tracking session manually you have to use the native Analytics `enableManualSessionTracker` APIs:
+
+- In iOS, call `[MSACAnalytics enableManualSessionTracker];` before `[AppCenterReactNative register];` in the app's `didFinishLaunchingWithOptions` delegate method in `AppDelegate.m`. Add `@import AppCenterAnalytics` if missing in that file.
+
+- In Android, call `Analytics.enableManualSessionTracker();` before `SoLoader.init` in `onCreate` method in `MainApplication.java`. Add import `com.microsoft.appcenter.analytics.Analytics` if missing in that file.
+
+Then you can use the `startSession` API in the your React Native project:
+
+```javascript
+Analytics.startSession();
+```
+
 ## Local storage size
 
 By default, the SDK stores up to 10MB of logs in the storage.

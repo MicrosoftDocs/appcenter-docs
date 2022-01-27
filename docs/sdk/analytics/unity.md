@@ -118,6 +118,15 @@ Analytics.Resume();
 
 [!INCLUDE [unity see async](../includes/unity-see-async.md)]
 
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Uncheck the **Enable Manual Session Tracker** checkbox under **Analytics** section on the game object with **AppCenterBehavior** attached.
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
+```
+
 ## Local storage size
 
 By default, the SDK stores up to 10MB of logs in the storage.

@@ -166,6 +166,26 @@ Analytics.isEnabled()
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.
 
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```java
+Analytics.enableManualSessionTracker();
+```
+```kotlin
+Analytics.enableManualSessionTracker()
+```
+
+- Then you can use the `startSession` API after the `AppCenter.start`:
+
+```java
+Analytics.startSession();
+```
+```kotlin
+Analytics.startSession()
+```
+
 ## Local storage size
 
 By default, the SDK stores all the event logs up to 10 MB. Developers can use an API to increase the [storage size](../other-apis/android.md#storage-size) and the SDK will keep storing logs until the storage is full.
