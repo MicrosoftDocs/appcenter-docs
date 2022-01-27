@@ -196,6 +196,26 @@ Analytics.enabled
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `NO` or `false` before start.
 
+[!INCLUDE [manual session tracker](manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```objc
+[MSACAnalytics enableManualSessionTracker];
+```
+```swift
+Analytics.enableManualSessionTracker()
+```
+
+- Then you can use the `startSession` API after the `AppCenter.start`:
+
+```objc
+[MSACAnalytics startSession];
+```
+```swift
+Analytics.startSession()
+```
+
 ## Local storage size
 
 By default, the SDK stores all logs up to 10 MB. Developers can use an API to increase the [storage size](../../other-apis/ios.md#storage-size) and the SDK will keep storing logs until the storage is full.

@@ -161,6 +161,20 @@ You can also check if App Center Analytics is enabled or not.
 bool isEnabled = await Analytics.IsEnabledAsync();
 ```
 
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```csharp
+Analytics.EnableManualSessionTracker();
+```
+
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
+```
+
 ## Local storage size
 
 By default, the SDK stores all the event logs up to 10 MB. Developers can use an API to increase the [storage size](../other-apis/wpf-winforms.md#storage-size) and the SDK will keep storing logs until the storage is full.

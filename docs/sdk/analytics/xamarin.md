@@ -95,6 +95,20 @@ bool isEnabled = await Analytics.IsEnabledAsync();
 > [!NOTE]
 > This method must only be used after `Analytics` has been started, it will always return `false` before start.
 
+[!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
+
+- Call the following method before the SDK start:
+
+```csharp
+Analytics.EnableManualSessionTracker();
+```
+
+- Then you can use the `StartSession` API after the `AppCenter.Start`:
+
+```csharp
+Analytics.StartSession();
+```
+
 ## Local storage size
 
 By default, the SDK stores up to 10MB of logs in the storage.
