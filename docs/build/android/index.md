@@ -23,6 +23,9 @@ To build your first Android app, follow these steps:
 > [!NOTE]
 > For the app to run on a real device, the build needs to be code signed with a valid certificate.
 
+> [!NOTE]
+> App Center tracks the project by searching the gradle(and gradlew) directory files on the Android project, please do not ignore those files(on the project .gitignore) as App Center Build service will not find it.
+
 > [!WARNING]
 > Due to the recent shutdown of JCenter, certain apps may experience Gradle Task failures when building with App Center. Please view the migration guide provided by Gradle. As a workaround, all instances of `jcenter()` can be removed from the `build.gradle` file, and replaced with `jcenter { url "http://jcenter.bintray.com/"}`. Read more about the JCenter Shutdown [here](~/build/android/jcentershut.md).
 
