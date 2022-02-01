@@ -4,7 +4,7 @@ description: How to use to the React Native SDK with CodePush API
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/19/2020
+ms.date: 02/01/2022
 ms.topic: article
 ms.assetid: D9F7F421-B00F-49EE-ADC1-280776098ADA
 ms.service: vs-appcenter
