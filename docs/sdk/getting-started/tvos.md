@@ -156,6 +156,8 @@ Insert the following line in the app's `didFinishLaunchingWithOptions` delegate 
 AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 [!INCLUDE [apple-configure-appcenter](includes/apple-configure-appcenter.md)]
 
 ### 4.3 Replace the placeholder with your App Secret

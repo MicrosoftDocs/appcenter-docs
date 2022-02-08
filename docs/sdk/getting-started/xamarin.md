@@ -189,6 +189,8 @@ if (AppCenter.Configured)
 }
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 > [!IMPORTANT]
 > The curly braces show where to place the actual app secrets, don't put curly braces in the `Start` call.
 > 

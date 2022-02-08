@@ -95,6 +95,8 @@ Click on this new "App Center" object and add your app secrets to the correspond
 
 ![App Center script configuration](images/unity_configuration.png "App Center configuration")
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 > [!NOTE]
 > If your project doesn't support one of the three platforms listed in the settings, leave the app secret field as-is; it will have no effect. If your project supports platforms that App Center doesn't support, the APIs and configuration will have no effect for those platforms.
 
