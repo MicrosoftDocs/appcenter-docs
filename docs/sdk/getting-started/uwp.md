@@ -110,6 +110,8 @@ Add the following call to your application's **constructor**:
 AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 [!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
 ### 5.3 Replace the placeholder with your App Secret

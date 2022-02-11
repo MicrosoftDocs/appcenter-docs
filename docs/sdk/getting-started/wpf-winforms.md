@@ -113,6 +113,8 @@ public partial class App : Application
 }
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 [!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
 #### WinForms
@@ -133,6 +135,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 [!INCLUDE [windows-configure-appcenter](includes/windows-configure-appcenter.md)]
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
 
 ### 5.2 Replace the placeholder with your App Secret
 

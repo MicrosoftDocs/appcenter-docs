@@ -91,6 +91,8 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 If you need to start App Center services separately, you should:
 
 1. Configure or start it with the App Secret.
