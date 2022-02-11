@@ -867,4 +867,4 @@ puayMcrx2unhKQyDYjUvD8GxHyquA+p52KDke2TkKfDxfzv0WOE1
 
 ### Releasing signed update
 
-To release signed update, you should use `--privateKeyPath` (or `-k`) option for `release` or `release-react` command.
+To release a signed update, you should use the `--private-key-path` (or `-k`) option for the `release` or `release-react` command.
