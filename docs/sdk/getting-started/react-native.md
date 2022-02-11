@@ -343,6 +343,8 @@ Integration steps without the `react-native link` command.
         "app_secret": "APP_SECRET_VALUE"
     }
     ```
+    
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
 
 ### 3.5 If you use auto-backup to avoid getting incorrect information about device, follow the next steps:
 

@@ -178,6 +178,8 @@ If you have a Catalyst application, you can pass app secrets for both iOS and ma
 AppCenter.start(withAppSecret:"ios={Your iOS App Secret};macos={Your macOS App Secret}", services: [Analytics.self, Crashes.self])
 ```
 
+[!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
+
 [!INCLUDE [apple-configure-appcenter](includes/apple-configure-appcenter.md)]
 
 ### 4.3 Replace the placeholder with your App Secret
