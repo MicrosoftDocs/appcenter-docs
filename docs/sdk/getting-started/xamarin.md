@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/13/2021
+ms.date: 02/17/2022
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -56,6 +56,10 @@ Choose this option if you target only iOS platform. You need to create one app i
 ### 1.2 About Xamarin.Mac
 
 Choose this option if you target only macOS platform. You need to create one app in the App Center portal with **macOS** as the OS and **Xamarin** as the platform.
+
+> [!WARNING]
+> There is a known issue that prevents an app from being uploaded to the App Store.
+> Follow the progress on [github](https://github.com/microsoft/appcenter-sdk-dotnet/issues/1620).
 
 ### 1.3 About Xamarin.Forms (iOS, macOS, Android, UWP and Windows Desktop)
 
