@@ -23,3 +23,7 @@ To transfer an app to an organization, you must be the current owner of the app,
 **How can I add the same group of people to multiple apps?**
 
 [Create a team](~/dashboard/creating-and-managing-teams.md) inside an organization which allows you to quickly add groups of Collaborators to apps.
+
+**I've got an invitation to my email, but I'm not able to accept it. What sohuld I do?**
+
+First thing to check is the email you're using to log in to your appcenter.ms account. Go to your [Profile Settings](https://appcenter.ms/settings/profile) to find out. If this address is not same as in the invitation, you're not able to accept this invitation. Please, ask for new invitation and provide correct email address.
