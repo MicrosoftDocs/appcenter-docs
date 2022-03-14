@@ -39,7 +39,6 @@ If you have [App Center Test](https://docs.microsoft.com/en-us/appcenter/build/b
 3. Go to the Build section, choose your branch, and click export
 ![Click Export](images/export-ado-click.png)
 4. Click 'Download' and choose 'Download JSON'
-![Download JSON](images/export-ado-download-json.png)
 
 ### Change the Project ID in JSON file
 Get your Azure DevOps project's ID
@@ -73,8 +72,6 @@ If you have App Center Distribute or App Center Test integrated into your Build 
 3. Go to the Build section, choose your branch, and click export
 ![Click Export](images/export-ado-click.png)
 4. Click 'Download' and choose 'Download YAML'
-
-![Download JSON](images/export-ado-download-yaml.png)
 
 ### Configure your repository to work with Azure Pipelines
 1. Commit downloaded `azure-pipelines.yml` file to your application's repository
