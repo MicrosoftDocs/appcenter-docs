@@ -32,8 +32,6 @@ If you have [App Center Test](https://docs.microsoft.com/en-us/appcenter/build/b
 3. Search for 'Visual Studio App Center' -> Next
 4. [Create API token](https://docs.microsoft.com/en-us/appcenter/api-docs/), give connection a name and Save
 
-ADD REPO CONNECTION STEP
-
 ## Export using JSON file
 ### Export JSON file from the App Center Build page. 
 1. Navigate to the [App Center portal](appcenter.ms)
@@ -51,6 +49,7 @@ https://dev.azure.com/{organization}/_apis/projects?api-version=6.0
 ```
 ![Project ID](images/export-ado-api.png)
 2. Paste your project ID into `project` parameter in JSON file
+
 ![Edit JSON](images/export-ado-edit-json.png)
 
 ### Create Azure Pipeline
@@ -74,6 +73,7 @@ If you have App Center Distribute or App Center Test integrated into your Build 
 3. Go to the Build section, choose your branch, and click export
 ![Click Export](images/export-ado-click.png)
 4. Click 'Download' and choose 'Download YAML'
+
 ![Download JSON](images/export-ado-download-yaml.png)
 
 ### Configure your repository to work with Azure Pipelines
