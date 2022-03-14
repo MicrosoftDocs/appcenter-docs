@@ -11,7 +11,7 @@ ms.custom: build
 ms.assetid: 808F6809-E2B0-4D45-A674-DFE4B5652A94
 ---
 
-# Exporti App Center Build configuration to Azure Pipelines
+# Export App Center Build configuration to Azure Pipelines
 
 ## Overview
 With App Center, you can export all of your App Center Build configurations to Azure Pipelines using the Build export feature. You can download JSON or YAML file and import it into Azure Pipelines.
