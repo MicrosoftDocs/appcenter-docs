@@ -800,7 +800,7 @@ If you're planning to use this feature, do the following steps:
    * updated CodePush plugin supporting Code Signing
    * configure your code-push sdk to use your public key (refer relevant React Native SDK ([iOS](rn-get-started.md#code-signing-setup-ios),  [Android](rn-get-started.md#code-signing-setup-android)) or [Cordova SDK](cordova.md#getting-started) sections for details)
 
-2. Produce a new CodePush update that targets the new binary version and specifies a `--privateKeyPath` (or `-k`) parameter value
+2. Produce a new CodePush update that targets the new binary version and specifies a `--private-key-path` (or `-k`) parameter value
 
 Refer to our compatibility tables to identify if code-signing feature is supported within your SDK/CLI:
 
@@ -867,4 +867,4 @@ puayMcrx2unhKQyDYjUvD8GxHyquA+p52KDke2TkKfDxfzv0WOE1
 
 ### Releasing signed update
 
-To release signed update, you should use `--privateKeyPath` (or `-k`) option for `release` or `release-react` command.
+To release signed update, you should use `--private-key-path` (or `-k`) option for `release` or `release-react` command.
