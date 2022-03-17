@@ -22,8 +22,14 @@ You will need an Azure DevOps project where you will import a Build configuratio
 * [Create Azure DevOps organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization)
 * [Create Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project)
 
-## TODO (Optional) Upload a 'secret' file
-Add secret files
+## TODO (Optional) Upload signing files
+If you use code signing in your App Center Build configurations you will need to upload respective files to the Azure Pipelines using [Secure file](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/secure-files) feature
+>[!TIP]
+> To make sure that you don't need to modify exported YAML/JSON configration, please use the same file names as you have in App Center Build
+
+### iOS/macOS
+### Android
+### Windows (UWP)
 
 ## (Optional) Add Service Connection for App Center Tasks
 If you have [App Center Test](https://docs.microsoft.com/en-us/appcenter/build/build-test-integration) or [App Center Distribute](https://docs.microsoft.com/en-us/appcenter/build/build-to-store) integrated into your Build configuration, you will need to create a [Service Connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints) in your Azure DevOps project
@@ -88,6 +94,7 @@ If you have App Center Distribute or App Center Test integrated into your Build 
 ![Permit](images/export-ado-permit.png)
 
 
+# TODOS
 iOS
 Provisioning profile (if signing is used)
 Android
