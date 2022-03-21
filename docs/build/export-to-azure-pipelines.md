@@ -22,14 +22,27 @@ You will need an Azure DevOps project where you will import a Build configuratio
 * [Create Azure DevOps organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization)
 * [Create Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project)
 
-## TODO (Optional) Upload signing files
+## (Optional) Upload signing files
 If you use code signing in your App Center Build configurations you will need to upload respective files to the Azure Pipelines using [Secure file](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/secure-files) feature
 >[!TIP]
 > To make sure that you don't need to modify exported YAML/JSON configration, please use the same file names as you have in App Center Build
 
 ### iOS/macOS
+Once you upload certificates and provisioning profiles, please modify the respective variables in JSON/YAML file.
+```yaml
+P12Filename: your_certificate_name
+MobileProvisioningFileName: your_provisioning_file_name
+```
 ### Android
+Once you upload keystore file, please modify the respective variables in JSON/YAML file
+```yaml
+keystoreFilename: your_keystore_file_name
+```
 ### Windows (UWP)
+Once you upload a certificate, please modify the respective variables i JSON/YAML file
+```yaml
+packageCertificateFilename: you_certificate_name
+```
 
 ## (Optional) Add Service Connection for App Center Tasks
 If you have [App Center Test](https://docs.microsoft.com/en-us/appcenter/build/build-test-integration) or [App Center Distribute](https://docs.microsoft.com/en-us/appcenter/build/build-to-store) integrated into your Build configuration, you will need to create a [Service Connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints) in your Azure DevOps project
@@ -92,10 +105,3 @@ If you have App Center Distribute or App Center Test integrated into your Build 
 1. Open the current running job, you will see a message regarding permissions
 2. Click on the running job and `Permit` access to the service connection
 ![Permit](images/export-ado-permit.png)
-
-
-# TODOS
-iOS
-Provisioning profile (if signing is used)
-Android
-UWP
