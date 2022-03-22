@@ -22,29 +22,6 @@ You will need an Azure DevOps project where you will import a Build configuratio
 * [Create Azure DevOps organization](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization)
 * [Create Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project)
 
-### iOS/macOS
-Once you upload certificates and provisioning profiles, please modify the respective variables in JSON/YAML file.
-```yaml
-...
-P12Filename: your_certificate_name
-MobileProvisioningFileName: your_provisioning_file_name
-...
-```
-### Android
-Once you upload keystore file, please modify the respective variables in JSON/YAML file
-```yaml
-...
-keystoreFilename: your_keystore_file_name
-...
-```
-### Windows (UWP)
-Once you upload a certificate, please modify the respective variables i JSON/YAML file
-```yaml
-...
-packageCertificateFilename: you_certificate_name
-...
-```
-
 ## (Optional) Add Service Connection for App Center Tasks
 If you have [App Center Test](https://docs.microsoft.com/en-us/appcenter/build/build-test-integration) or [App Center Distribute](https://docs.microsoft.com/en-us/appcenter/build/build-to-store) integrated into your Build configuration, you will need to create a [Service Connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints) in your Azure DevOps project
 1. Navigate to Azure DevOps Project Settings -> Pipelines -> Service connections
