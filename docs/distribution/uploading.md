@@ -4,7 +4,7 @@ description: Distribute a completed build to users
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/02/2021
+ms.date: 03/22/2022
 ms.topic: article
 ms.assetid: 41c4b085-c6a1-4f82-9b70-9bc36a3b0422
 ms.service: vs-appcenter
@@ -143,7 +143,7 @@ Upload a new release using these sequential API calls:
    ```json
     {
         "error":false,
-        "id":"{UPLOAD_ID}",
+        "id":"{PACKAGE_ASSET_ID}",
         "chunk_size":4194304,
         "resume_restart":false,
         "chunk_list":[1,2,3,4,5],
@@ -179,9 +179,9 @@ Upload a new release using these sequential API calls:
     FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
     curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
         
-    COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$UPLOAD_ID"
+    COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$ID"
     curl -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" \
-    --data '{"upload_status": "uploadFinished","id": "$UPLOAD_ID"}' \
+    --data '{"upload_status": "uploadFinished","id": "$ID"}' \
     -X PATCH \
     $COMMIT_URL
     ```
