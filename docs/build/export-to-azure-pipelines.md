@@ -25,7 +25,7 @@ You'll need an Azure DevOps project where you'll import a Build configuration. Y
 * [Create Azure DevOps project](https://docs.microsoft.com/azure/devops/organizations/projects/create-project)
 
 ## (Optional) Add Service Connection for App Center Tasks
-If you have [App Center Test](https://docs.microsoft.com/appcenter/build/build-test-integration) or [App Center Distribute](https://docs.microsoft.com/appcenter/build/build-to-store) integrated into your Build configuration, you'll need to create a [Service Connection](https://docs.microsoft.com/azure/devops/pipelines/library/service-endpoints) in your Azure DevOps project
+If you have App Center Test or App Center Distribute integrated into your Build configuration, you'll need to create a Service Connection in your Azure DevOps project
 1. Navigate to Azure DevOps Project Settings -> Pipelines -> Service connections
 2. Select 'New Service connection'
 3. Search for 'Visual Studio App Center' -> Next
