@@ -16,7 +16,7 @@ ms.assetid: 808F6809-E2B0-4D45-A674-DFE4B5652A94
 ## Overview
 With App Center, you can export all of your App Center Build configurations to Azure Pipelines using the Build export feature. You can download JSON or YAML file and import it into Azure Pipelines.
 
-While direct migration of App Center Build configurations to Azure Pipelines is the easiest option, it might not be well optimized for your particular application. Please consider building Azure Pipelines from scratch for a more optimized experience ([Android](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/android), [Xcode](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xcode), [Xamarin](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin))
+While direct migration of App Center Build configurations to Azure Pipelines is the easiest option, it might not be well optimized for your particular application. Please consider building Azure Pipelines from scratch for a more optimized experience ([Android](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/android), [Xcode](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xcode), [Xamarin](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin))
 
 ## Prerequisites
 You will need an Azure DevOps project where you will import a Build configuration. You can create a new project or use an existing one.
