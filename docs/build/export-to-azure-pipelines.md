@@ -17,7 +17,7 @@ ms.assetid: 808F6809-E2B0-4D45-A674-DFE4B5652A94
 With App Center, you can export all of your App Center Build configurations to Azure Pipelines using the Build export feature. You can download JSON or YAML file and import it into Azure Pipelines.
 
 ## Prerequisites
-You will need an Azure DevOps project where you will import a Build configuration. You can create new project or use an existing one.
+You will need an Azure DevOps project where you will import a Build configuration. You can create a new project or use an existing one.
 * [Create Azure DevOps account](https://docs.microsoft.com/azure/devops/user-guide/sign-up-invite-teammates)
 * [Create Azure DevOps organization](https://docs.microsoft.com/azure/devops/organizations/accounts/create-organization)
 * [Create Azure DevOps project](https://docs.microsoft.com/azure/devops/organizations/projects/create-project)
@@ -27,9 +27,9 @@ If you have [App Center Test](https://docs.microsoft.com/appcenter/build/build-t
 1. Navigate to Azure DevOps Project Settings -> Pipelines -> Service connections
 2. Click 'New Service connection'
 3. Search for 'Visual Studio App Center' -> Next
-4. [Create API token](https://docs.microsoft.com/appcenter/api-docs/), give connection a name and Save
+4. [Create API token](https://docs.microsoft.com/appcenter/api-docs/), give the connection a name and Save it
 
-## Export using JSON file
+## Export using the JSON file
 ### Export JSON file from the App Center Build page. 
 1. Navigate to the [App Center portal](https://appcenter.ms)
 2. Choose your application
@@ -44,7 +44,7 @@ Get your Azure DevOps project's ID
 https://dev.azure.com/{organization}/_apis/projects?api-version=6.0
 ```
 ![Project ID](images/export-ado-api.png)
-2. Paste your project ID into `project` parameter in JSON file
+2. Paste your project ID into the `project` parameter in the JSON file
 
 ![Edit JSON](images/export-ado-edit-json.png)
 
@@ -56,7 +56,7 @@ https://dev.azure.com/{organization}/_apis/projects?api-version=6.0
 4. In `Get Sources` section add a [connection](https://docs.microsoft.com/azure/devops/pipelines/repos) to your application's repository
 
 ### (Optional) Upload signing files and update passwords
-If you use code signing in your App Center Build configurations you will need to upload respective files to the Azure Pipelines using [Secure file](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files) feature. Additionaly, you need to update password [variables](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch#set-variables-in-pipeline) stored in pipelines
+If you use code signing in your App Center Build configurations you will need to upload respective files to the Azure Pipelines using [Secure file](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files) feature. Additionally, you need to update password [variables](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch#set-variables-in-pipeline) stored in pipelines
 
 #### Android
 1. Upload a keystore file to your Azure DevOps project
@@ -74,10 +74,10 @@ If you use code signing in your App Center Build configurations you will need to
 If you have App Center Distribute or App Center Test integrated into your Build pipeline, you will need to modify the respective tasks in Azure Pipelines.
 1. Navigate to Azure DevOps -> Pipelines
 2. Select your imported pipelines and click Edit
-3. Find App Center tasks and choose previouse created service connection in  `App Center service connection' parameter
+3. Find App Center tasks and choose previously created service connection in  `App Center service connection' parameter
 ![Service Connection](images/export-ado-service-connection.png)
 
-## Export using YAML file
+## Export using the YAML file
 ### Export YAML file from the App Center Build page. 
 1. Navigate to the [App Center portal](https://appcenter.ms)
 2. Choose your application
@@ -91,7 +91,7 @@ If you have App Center Distribute or App Center Test integrated into your Build 
 3. Choose where your code is located
 4. Review your pipeline and click `Run`
 
-More information regarding YAML pipeline creation process can be found [here](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-yaml-syntax).
+More information regarding the YAML pipeline creation process can be found [here](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-yaml-syntax).
 
 ### (Optional) Upload signing files and update passwords
 If you use code signing in your App Center Build configurations you will need to upload respective files to the Azure Pipelines using [Secure file](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files) feature. Additionaly, you need to update password [variables](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch#set-variables-in-pipeline) stored in pipelines
@@ -99,7 +99,7 @@ If you use code signing in your App Center Build configurations you will need to
 #### Android
 1. Upload a keystore file to your Azure DevOps project
 2. Create `keystorePassword`, `keyAlias`, `keyPassword`, and `keystoreFilename` [secret variables](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops#consume-a-secure-file-in-a-pipeline) in Azure Pipelines
-3. Update YAML file with the created secret variables
+3. Update the YAML file with the created secret variables
 ```YAML
 ...
   keystorePassword: $(keystorePassword)
@@ -112,7 +112,7 @@ If you use code signing in your App Center Build configurations you will need to
 #### iOS/macOS
 1. Upload provisioning profiles and certificates to your Azure DevOps project 
 2. Create `P12Password`, `P12Filename`, and `MobileProvisionFilename` [secret variables](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops#consume-a-secure-file-in-a-pipeline) in Azure Pipelines
-3. Update YAML file with the created secret variables
+3. Update the YAML file with the created secret variables
 ```YAML
 ...
   P12Password: $(P12Password)
@@ -124,7 +124,7 @@ If you use code signing in your App Center Build configurations you will need to
 #### Windows (UWP)
 1. Please upload a cerificate to your Azure DevOps project
 2. Create `packageCertificatePassword`, `packageCertificateFileName`, and `packageCertificateBase64String` [secret variables](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops#consume-a-secure-file-in-a-pipeline) in Azure Pipelines
-3. Update YAML file with the created secret variables
+3. Update the YAML file with the created secret variables
 ```YAML
 ...
   packageCertificatePassword: $(packageCertificatePassword)
@@ -134,7 +134,7 @@ If you use code signing in your App Center Build configurations you will need to
 ```
 
 ### (Optional) Authorize newly created pipeline to use App Center service connection
-If you have App Center Distribute or App Center Test integrated into your Build pipeline, you will need to authorize pipelines to use service connection created previously.
-1. Open the current running job, you will see a message regarding permissions
+If you have App Center Distribute or App Center Test integrated into your Build pipeline, you will need to authorize pipelines to use the service connection created previously.
+1. Open the currently running job, you will see a message regarding permissions
 2. Click on the running job and `Permit` access to the service connection
 ![Permit](images/export-ado-permit.png)
