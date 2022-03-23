@@ -25,7 +25,7 @@ You'll need an Azure DevOps project where you'll import a Build configuration. Y
 * [Create Azure DevOps project](https://docs.microsoft.com/azure/devops/organizations/projects/create-project)
 
 ## (Optional) Add Service Connection for App Center Tasks
-If you have App Center Test or App Center Distribute integrated into your Build configuration, you'll need to create a Service Connection in your Azure DevOps project
+If you have App Center Test or App Center Distribute integrated into your Build configuration, you'll need to create a Service Connection
 1. Navigate to Azure DevOps Project Settings -> Pipelines -> Service connections
 2. Select 'New Service connection'
 3. Search for 'Visual Studio App Center' -> Next
@@ -73,7 +73,7 @@ If you use code signing in your App Center Build configurations, you'll need to 
 2. Update `packageCertificatePassword`, `packageCertificateFileName`, and `packageCertificateBase64String`
 
 ### (Optional) Add Service Connection to App Center related tasks
-If you have App Center Distribute or App Center Test integrated into your Build pipeline, you'll need to modify the respective tasks in Azure Pipelines.
+If you have App Center Distribute or App Center Test integrated, you'll need to modify the respective tasks
 1. Navigate to Azure DevOps -> Pipelines
 2. Select your imported pipelines and select Edit
 3. Find App Center tasks and choose previously created service connection in  `App Center service connection' parameter
@@ -136,7 +136,7 @@ If you use code signing in your App Center Build configurations, you'll need to 
 ```
 
 ### (Optional) Authorize newly created pipeline to use App Center service connection
-If you have App Center Distribute or App Center Test integrated into your Build pipeline, you'll need to authorize pipelines to use the service connection created previously.
+If you have App Center Distribute or Test integrated, you'll need to authorize pipelines to use the service connection.
 1. Open the currently running job, you'll see a message regarding permissions
 2. Select on the running job and `Permit` access to the service connection
 ![Permit](images/export-ado-permit.png)
