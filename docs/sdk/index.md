@@ -44,7 +44,6 @@ The App Center SDK will let your users install a new version of the app when you
 * [App Center SDK for WPF/WinForms](getting-started/wpf-winforms.md)
 * [App Center SDK for macOS](getting-started/macos.md)
 * [App Center SDK for tvOS](getting-started/tvos.md)
-* [App Center SDK for Apache Cordova](getting-started/cordova.md)
 
 ## Requirements
 
@@ -115,14 +114,6 @@ Service          | tvOS Version    | Xcode
 -----------------|-----------------|--------------
 Analytics        | 11.0 or later   | 11 and later
 Crashes          | 11.0 or later   | 11 and later
-
-### Apache Cordova
-
-Service    |  AC CLI version      | iOS Version     | Android Version
------------|----------------------|-----------------|----------------
-Analytics  | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
-Crashes    | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
-Distribute | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
 
 ## Source Code and Release Notes
 
