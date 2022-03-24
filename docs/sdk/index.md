@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/10/2020
+ms.date: 03/24/2022
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -132,4 +132,4 @@ The App Center SDKs are open-source and available publicly on GitHub:
 * [App Center SDK for iOS and macOS code](https://github.com/Microsoft/AppCenter-SDK-Apple) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Apple/releases)
 * [App Center SDK for React Native code](https://github.com/Microsoft/AppCenter-SDK-React-Native) and [release notes](https://github.com/Microsoft/AppCenter-SDK-React-Native/releases)
 * [App Center SDK for Windows and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
-* [App Center SDK for Apache Cordova code](https://github.com/Microsoft/appcenter-sdk-cordova) and [release notes](https://github.com/Microsoft/appcenter-sdk-cordova/releases)
+* [App Center SDK for Unity code](https://github.com/microsoft/appcenter-sdk-unity) and [release notes](https://github.com/microsoft/appcenter-sdk-unity/releases)
