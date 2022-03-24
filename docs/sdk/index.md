@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/10/2020
+ms.date: 03/24/2022
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -44,7 +44,6 @@ The App Center SDK will let your users install a new version of the app when you
 * [App Center SDK for WPF/WinForms](getting-started/wpf-winforms.md)
 * [App Center SDK for macOS](getting-started/macos.md)
 * [App Center SDK for tvOS](getting-started/tvos.md)
-* [App Center SDK for Apache Cordova](getting-started/cordova.md)
 
 ## Requirements
 
@@ -116,14 +115,6 @@ Service          | tvOS Version    | Xcode
 Analytics        | 11.0 or later   | 11 and later
 Crashes          | 11.0 or later   | 11 and later
 
-### Apache Cordova
-
-Service    |  AC CLI version      | iOS Version     | Android Version
------------|----------------------|-----------------|----------------
-Analytics  | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
-Crashes    | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
-Distribute | 6.4.0 and later      | 4.3.0 and later | 5.0.0 and later
-
 ## Source Code and Release Notes
 
 The App Center SDKs are open-source and available publicly on GitHub:
@@ -132,4 +123,4 @@ The App Center SDKs are open-source and available publicly on GitHub:
 * [App Center SDK for iOS and macOS code](https://github.com/Microsoft/AppCenter-SDK-Apple) and [release notes](https://github.com/Microsoft/AppCenter-SDK-Apple/releases)
 * [App Center SDK for React Native code](https://github.com/Microsoft/AppCenter-SDK-React-Native) and [release notes](https://github.com/Microsoft/AppCenter-SDK-React-Native/releases)
 * [App Center SDK for Windows and Xamarin code](https://github.com/Microsoft/AppCenter-SDK-DotNet) and [release notes](https://github.com/Microsoft/AppCenter-SDK-DotNet/releases)
-* [App Center SDK for Apache Cordova code](https://github.com/Microsoft/appcenter-sdk-cordova) and [release notes](https://github.com/Microsoft/appcenter-sdk-cordova/releases)
+* [App Center SDK for Unity code](https://github.com/microsoft/appcenter-sdk-unity) and [release notes](https://github.com/microsoft/appcenter-sdk-unity/releases)
