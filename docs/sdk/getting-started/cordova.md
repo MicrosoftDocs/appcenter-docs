@@ -27,7 +27,7 @@ ms.tgt_pltfrm: cordova
 > * [Cordova](cordova.md)
 
 > [!NOTE] 
-> Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
+> Support for Cordova Apps has ended in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
 
 The App Center SDK uses a modular architecture so you can easily use one, several, or all of the App Center services in your Apache Cordova application.
 
