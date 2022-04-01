@@ -25,7 +25,7 @@ ms.tgt_pltfrm: cordova
 > * [Cordova](cordova.md)
 
 > [!NOTE] 
-> Support for Cordova Apps is ending in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
+> Support for Cordova Apps has ended in April 2022. Find more information in the [App Center blog](https://devblogs.microsoft.com/appcenter/announcing-apache-cordova-retirement/).
 
 ## Adjust the log level
 You can control the number of log messages that show up from App Center in the console. To adjust logging, open the project's **config.xml** file; for each of your Apache Cordova project's target `platform` elements (only Android and iOS today), add a child `preference` element in the following format:
