@@ -196,7 +196,7 @@
 ### [Using the CodePush UI](distribution/codepush/using-ui.md)
 ### [Management CLI](distribution/codepush/CLI.md)
 ### [Management SDK](distribution/codepush/node.md)
-### [Cordova Client SDK [Retiring]](distribution/codepush/Cordova.md)
+### [Cordova Client SDK [Retired]](distribution/codepush/Cordova.md)
 ### React Native Client SDK
 #### [Overview](distribution/codepush/rn-overview.md)
 #### [Get Started with the React Native Client SDK](distribution/codepush/rn-get-started.md)
@@ -219,7 +219,7 @@
 ## Enabling Diagnostics
 ### [Introduction](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
-### [Apache Cordova [Retiring]](sdk/crashes/cordova.md)
+### [Apache Cordova [Retired]](sdk/crashes/cordova.md)
 ### [iOS](sdk/crashes/ios.md)
 ### [tvOS](sdk/crashes/tvos.md)
 ### [macOS](sdk/crashes/macos.md)
@@ -255,7 +255,7 @@
 ## [Data Collected By App Center](sdk/data-collected.md)
 ## Getting Started
 ### [Android](sdk/getting-started/android.md)
-### [Cordova [Retiring]](sdk/getting-started/cordova.md)
+### [Cordova [Retired]](sdk/getting-started/cordova.md)
 ### [iOS](sdk/getting-started/ios.md)
 ### [macOS](sdk/getting-started/macos.md)
 ### [tvOS](sdk/getting-started/tvos.md)
@@ -268,7 +268,7 @@
 ### [Xamarin](sdk/getting-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
-### [Cordova [Retiring]](sdk/analytics/cordova.md)
+### [Cordova [Retired]](sdk/analytics/cordova.md)
 ### [iOS](sdk/analytics/ios.md)
 ### [macOS](sdk/analytics/macos.md)
 ### [tvOS](sdk/analytics/tvos.md)
@@ -278,7 +278,7 @@
 ### [Xamarin](sdk/analytics/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
-### [Cordova [Retiring]](sdk/crashes/cordova.md)
+### [Cordova [Retired]](sdk/crashes/cordova.md)
 ### [iOS](sdk/crashes/ios.md)
 ### [macOS](sdk/crashes/macos.md)
 ### [tvOS](sdk/crashes/tvos.md)
@@ -301,7 +301,7 @@
 ### [React Native](sdk/other-apis/react-native.md)
 ### [Unity](sdk/other-apis/unity.md)
 ### [Xamarin](sdk/other-apis/xamarin.md)
-### [Cordova [Retiring]](sdk/other-apis/cordova.md)
+### [Cordova [Retired]](sdk/other-apis/cordova.md)
 ### [WPF/WinForms](sdk/other-apis/wpf-winforms.md)
 ## Troubleshooting
 ### [Android](sdk/troubleshooting/android.md)
@@ -309,7 +309,7 @@
 ### [macOS](sdk/troubleshooting/macos.md)
 ### [tvOS](sdk/troubleshooting/tvos.md)
 ### [React Native](sdk/troubleshooting/react-native.md)
-### [Cordova](sdk/troubleshooting/cordova.md)
+### [Cordova [Retired]](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
 ### [UWP, WPF, and WinForms](sdk/troubleshooting/uwp.md)
 ### [Xamarin](sdk/troubleshooting/xamarin.md)
@@ -346,7 +346,7 @@
 #### [Android](transition/android-sdk-migration.md)
 #### [UWP](transition/uwp-sdk-migration.md)
 #### [Xamarin](transition/xamarin-sdk-migration.md)
-#### [Cordova](transition/cordova-sdk-migration.md)
+#### [Cordova [Retired]](transition/cordova-sdk-migration.md)
 #### [WPF/Winforms](transition/wpf-winforms-sdk-migration.md)
 ### [Feedback](transition/feedback.md)
 
