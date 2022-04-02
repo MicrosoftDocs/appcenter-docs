@@ -4,7 +4,7 @@ description: How to upload XCUITests to App Center Test
 keywords: test cloud
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/04/2020
+ms.date: 04/01/2022
 ms.topic: article
 ms.assetid: 64de4cef-207e-48fb-a1f7-c3f04d69a1bb
 ms.service: vs-appcenter
@@ -15,11 +15,8 @@ ms.custom: test
 This guide provides instructions for preparing XCUITest tests for upload to App Center Test.
 
 ## Test service Requirements
-* Xcode >= 9.4.1
-* iOS >= 9.0
-
-> [!NOTE]
-> Xcode 12 and iOS 14 are available now!
+* Xcode 9.4.1 - 12
+* iOS 9.0 - 14
 
 ## Test service limitations
 - Only the uploaded app can be tested, not interactions via apps or the rest of the system.
