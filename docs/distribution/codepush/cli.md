@@ -4,7 +4,7 @@ description: "How to use and set up the App Center CLI to release CodePush updat
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/29/2021
+ms.date: 04/02/2022
 ms.topic: article
 ms.assetid: 25A63776-28D6-4993-A597-C05443F7129F
 ms.service: vs-appcenter
@@ -96,9 +96,9 @@ appcenter apps create -d MyApp-iOS -o iOS -p Cordova
 
 > [!NOTE]
 > Using the same app for Android and iOS may cause installation exceptions because the CodePush update package produced for iOS will have different content from the update produced for Android.
-> 
+
 > [!TIP]
-> One important new functionality in the App Center CLI is the ability to set an app as the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting an app as the current app you no don't have to use the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list` when the current app is set. You can check which app is set as your account's current app using `appcenter apps get-current`. Setting current app makes typing most CLI commands shorter.
+> An important new feature of the App Center CLI is the ability to set the **current app** using `appcenter apps set-current <ownerName>/<appName>`. By setting the current app, you can omit the `-a` flag in other CLI commands. For example, the command `appcenter codepush deployment list -a <ownerName>/<appName>` can be shortened to `appcenter codepush deployment list`. You can check the current app using `appcenter apps get-current`.
 
 With the original CodePush, apps automatically had two deployments (`Staging` and `Production`). In App Center, you must create them yourself using the following commands:
 
