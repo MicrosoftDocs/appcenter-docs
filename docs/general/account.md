@@ -67,4 +67,4 @@ Unfortunately, we do not support changing associated identity provider. The only
 
 #### Contact support
 
-If you still have problems with log in, open a support ticket in the App Center portal. We would be more than happy to assist with your issue.
+If you still have problems with logging in with your desired account or methods, we recommend trying one of the other sign-in options or a separate account. Once signed-in, if you still prefer using another account or multiple accounts, you can open a support ticket in the App Center portal. We would be more than happy to assist with your issue.
