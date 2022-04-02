@@ -4,7 +4,7 @@ description: How to upload Espresso tests to App Center Test Cloud
 keywords: test cloud
 author: lucen-ms
 ms.author: lucen
-ms.date: 01/31/2020
+ms.date: 04/01/2022
 ms.topic: article
 ms.assetid: 3864334f-d938-4ac9-9e82-640c3f839eae
 ms.service: vs-appcenter
@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Preparing Espresso Tests for Upload
-This document provides instructions for preparing Espresso tests for upload to Test. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
+This document provides instructions for preparing Espresso tests for upload to Test. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/espresso).
 
 ## 1. Changes to the build system
 
