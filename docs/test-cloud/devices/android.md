@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 1/13/2022
+ms.date: 4/6/2022
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -211,9 +211,16 @@ OnePlus Nord 2 | 11
 OnePlus Nord CE | 11
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
+Samsung Galaxy A01 | 11
+Samsung Galaxy A10 | 11
+Samsung Galaxy A10s | 11
+Samsung Galaxy A11 | 11
 Samsung Galaxy A12 | 11
+Samsung Galaxy A20 | 11
+Samsung Galaxy A20s | 11
 Samsung Galaxy A21s | 11
 Samsung Galaxy A3 | 5.0.2
+Samsung Galaxy A31 | 11
 Samsung Galaxy A40 | 10
 Samsung Galaxy A40 | 9
 Samsung Galaxy A5 (2017) | 8.0.0
@@ -224,6 +231,7 @@ Samsung Galaxy A50 | 9
 Samsung Galaxy A51 | 10
 Samsung Galaxy A51 | 11
 Samsung Galaxy A52s | 11
+Samsung Galaxy A52s | 12
 Samsung Galaxy A6+ | 10
 Samsung Galaxy A6+ | 8.0.0
 Samsung Galaxy A7 (2018) | 10
@@ -243,6 +251,7 @@ Samsung Galaxy J6 | 8.0.0
 Samsung Galaxy J7 (2017) | 7.0
 Samsung Galaxy J7 (2017) | 8.1.0
 Samsung Galaxy J7 (2017) | 9
+Samsung Galaxy J7 Prime | 8.1.0
 Samsung Galaxy M10 | 8.1.0
 Samsung Galaxy M10 | 9
 Samsung Galaxy M20 | 10
@@ -251,16 +260,21 @@ Samsung Galaxy M30 | 10
 Samsung Galaxy M30 | 9
 Samsung Galaxy Note 10 | 10
 Samsung Galaxy Note 10 | 11
+Samsung Galaxy Note 10 | 12
 Samsung Galaxy Note 10 | 9
 Samsung Galaxy Note 10 Lite | 10
 Samsung Galaxy Note 10 Lite | 11
+Samsung Galaxy Note 10 Lite | 12
 Samsung Galaxy Note 10+ | 10
 Samsung Galaxy Note 10+ | 11
+Samsung Galaxy Note 10+ | 12
 Samsung Galaxy Note 10+ | 9
 Samsung Galaxy Note 20 | 10
 Samsung Galaxy Note 20 | 11
+Samsung Galaxy Note 20 | 12
 Samsung Galaxy Note 20 Ultra | 10
 Samsung Galaxy Note 20 Ultra | 11
+Samsung Galaxy Note 20 Ultra | 12
 Samsung Galaxy Note 4 | 5.1.1
 Samsung Galaxy Note 5 | 5.1.1
 Samsung Galaxy Note 5 | 7.0
@@ -276,8 +290,10 @@ Samsung Galaxy S10 | 12
 Samsung Galaxy S10 | 9
 Samsung Galaxy S10 Lite | 10
 Samsung Galaxy S10 Lite | 11
+Samsung Galaxy S10 Lite | 12
 Samsung Galaxy S10 Plus | 10
 Samsung Galaxy S10 Plus | 11
+Samsung Galaxy S10 Plus | 12
 Samsung Galaxy S10 Plus | 9
 Samsung Galaxy S10e | 10
 Samsung Galaxy S10e | 11
@@ -285,8 +301,10 @@ Samsung Galaxy S10e | 12
 Samsung Galaxy S10e | 9
 Samsung Galaxy S20 | 10
 Samsung Galaxy S20 | 11
+Samsung Galaxy S20 | 12
 Samsung Galaxy S20 FE | 10
 Samsung Galaxy S20 FE | 11
+Samsung Galaxy S20 FE | 12
 Samsung Galaxy S20 Plus | 10
 Samsung Galaxy S20 Plus | 11
 Samsung Galaxy S20 Plus | 12
@@ -299,6 +317,9 @@ Samsung Galaxy S21 Plus | 11
 Samsung Galaxy S21 Plus | 12
 Samsung Galaxy S21 Ultra | 11
 Samsung Galaxy S21 Ultra | 12
+Samsung Galaxy S22 | 12
+Samsung Galaxy S22 Plus | 12
+Samsung Galaxy S22 Ultra | 12
 Samsung Galaxy S4 | 5.0.1
 Samsung Galaxy S4 Active | 5.0.1
 Samsung Galaxy S5 | 5.0
@@ -333,6 +354,7 @@ Samsung Galaxy Tab A (2019) | 10
 Samsung Galaxy Tab A (2019) | 9
 Samsung Galaxy Tab A | 7.0
 Samsung Galaxy Tab A | 8.1.0
+Samsung Galaxy Tab A 8.0 (2015) | 6.0.1
 Samsung Galaxy Tab A7 (2020) | 10
 Samsung Galaxy Tab A7 (2020) | 11
 Samsung Galaxy Tab Active 2 | 8.1.0
@@ -356,6 +378,7 @@ Samsung Galaxy Tab S6 Lite | 11
 Samsung Galaxy Tab S7 | 10
 Samsung Galaxy Tab S7 | 11
 Samsung Galaxy Tab S7 | 12
+Samsung Galaxy Tab S7 FE | 11
 Samsung Galaxy Tab S7 Plus | 10
 Samsung Galaxy Tab S7 Plus | 11
 Samsung Galaxy Tab S7 Plus | 12
@@ -404,5 +427,6 @@ Sony Xperia Z5 Compact | 5.1.1
 Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
-Xiaomi Mi A3 | 11
 Xiaomi Mi A3 | 9
+Xiaomi Redmi 9 | 11
+Xiaomi Redmi Note 8 | 11
