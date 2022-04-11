@@ -104,7 +104,7 @@ The App Center fields are mapped into Application Insights format. Here is the e
 | name                            | Name of the custom event or type of data               |
 | customDimensions                | This includes several fields shown in the table below  |
 | session_Id                      | Uniquely session identifier                            |
-| user_Id                         | Uniquely user identifier                               |
+| user_Id                         | Installation identifier                               |
 | application_Version             | Version of the application                             |
 | client_Type, client_Model       | Device Model                                           |
 | client_OS                       | OS type and version                                    |
