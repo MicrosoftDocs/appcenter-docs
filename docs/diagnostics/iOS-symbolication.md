@@ -70,7 +70,7 @@ App Center crash reporting doesn't completely support the symbolication of crash
 
 ### Disable bitcode for your app
 
-1. Open your project settings by clicking on the top-level element in the Project Navigator
+1. In Xcode, open your project settings by clicking on the top-level element in the Project Navigator
 2. Go to the Build Settings page
 3. Search for `bitcode`
 4. In the result, change the value from Yes to **No**
