@@ -203,11 +203,11 @@ The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 
 The transmission interval can be changed:
 
 ```java
-// Change transmission interval to 10 minutes.
+// Change transmission interval to 10 seconds.
 Analytics.setTransmissionInterval(10000);
 ```
 ```kotlin
-// Change transmission interval to 10 minutes.
+// Change transmission interval to 10 seconds.
 Analytics.setTransmissionInterval(10000)
 ```
 
