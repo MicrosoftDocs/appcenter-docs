@@ -233,11 +233,11 @@ The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 
 The transmission interval can be changed:
 
 ```objc
-// Change transmission interval to 10 minutes.
+// Change transmission interval to 10 seconds.
 [MSACAnalytics setTransmissionInterval:10000];
 ```
 ```swift
-// Change transmission interval to 10 minutes.
+// Change transmission interval to 10 seconds.
 Analytics.transmissionInterval = 10000
 ```
 
