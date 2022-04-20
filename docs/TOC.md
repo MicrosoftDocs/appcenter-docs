@@ -169,12 +169,12 @@
 ### [iOS privacy alerts](test-cloud/troubleshooting/ios-privacy-alerts.md)
 ### [iOS incorrect coordinates](test-cloud/troubleshooting/incorrect-ios-coordinates.md)
 ### [CLI exit codes](test-cloud/troubleshooting/cli-exit-codes.md)
-### [Database changes during tests](test-cloud/troubleshooting/database-changes.md)
-### [Device idling](test-cloud/troubleshooting/sleep.md)
+### [Concurrent database changes](test-cloud/troubleshooting/database-changes.md)
+### [Device sleep](test-cloud/troubleshooting/sleep.md)
 ### [Device log analysis](test-cloud/troubleshooting/device-logs.md)
 ### [Stalled devices](test-cloud/troubleshooting/stalls.md)
-### [Test Report steps out-of-sync](test-cloud/troubleshooting/steps-desync.md)
-### [Time limits](test-cloud/troubleshooting/time-outs.md)
+### [Test report steps out of sync](test-cloud/troubleshooting/steps-desync.md)
+### [Test time limits](test-cloud/troubleshooting/time-outs.md)
 ### [Web & server connection issues](test-cloud/troubleshooting/server-connection.md)
 
 # Distribute

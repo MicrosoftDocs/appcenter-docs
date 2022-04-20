@@ -29,7 +29,7 @@ The time limit for an individual test is 30 minutes. When a test reaches that ti
 test exceeded 1800000ms
 ```
 
-### Troubleshooting timed-out individual tests
+### Troubleshoot timed-out individual tests
 
 App Center Test generates and displays a test report for timed-out individual tests, unless there are other issues. You can use the test report and related log files to help understand why the test exceeded the time limits. For more information, see [Test reports](../test-reports.md).
 
@@ -49,7 +49,7 @@ If all devices exceed the test suite time limit, App Center Test doesn't produce
 Test execution timed out.
 ```
 
-### Troubleshooting timed-out test suites
+### Troubleshoot timed-out test suites
 
 Timed-out test suites could be caused by an issue with test code or because the test suite is too large to complete within the time limit. Because a timed-out test suite doesn't produce a test report, it's hard to determine the timeout cause. Try running fewer tests per test suite, so you can get a test report and log files to see what's happening.
 

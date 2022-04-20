@@ -16,7 +16,7 @@ A `Stalled Error` is an error that prevents App Center Test from completing test
 
 When App Center Test detects a stalled error, operations staff attempt to make corrections and get the stalled run to complete normally. This manual intervention takes some time, and includes long term corrections to try to prevent the issue from recurring.
 
-Devices that stall don't count against your available device concurrency or testing time. Device stalls don't interfere with any other devices or prevent other test runs from completing.
+Devices that stall don't count against your available device concurrency or testing time. Device stalls don't interfere with any other devices, or prevent other test runs from completing.
 
 To get support for device stalls, in the upper right-hand corner of App Center, select Help (**?**), and then select **Contact support** to file a support request.
 

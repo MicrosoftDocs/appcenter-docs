@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 
 ---
 
-# Handle conflicting database changes during tests in App Center Test
+# Handle concurrent database changes during tests in App Center Test
 
 Test scripts often change external data and test against the changes. The process usually includes setting the data back to the known or initial state that the tests were written against. This process might use a test database with credentials for the test user.
 
@@ -22,7 +22,7 @@ To avoid conflicting database changes, you can use the following approaches, in 
 1. Mock the data in your tests.
 1. Create multiple test users with unique credentials, so concurrent devices sign in as different users. Use a device index to get a unique identifier for each device within a test run, and use the identifier to look up user credentials. This approach works only for multiple devices within the same test run, not across multiple concurrent test runs.
 
-   App Center Test test scripts in Calabash, Appium, and Xamarin.UITest can access the `XTC_DEVICE_INDEX` [environment variable](../environment-variables.md). The variable is a string with range `0` to `N-1`, where `N` is the number of devices the test runs on. You can use this variable to look up credentials when running a test in parallel on multiple devices. The variable is available only to the test script, not to the application under test.
+   App Center Test test scripts in Calabash, Appium, and Xamarin.UITest can access the `XTC_DEVICE_INDEX` [environment variable](../environment-variables.md). The variable is a string with range `0` to `N-1`, where `N` is the number of devices the test runs on. You can use this variable to look up credentials when you run a test in parallel on multiple devices. The variable is available only to the test script, not to the application under test.
 
 1. Create an external web service that tests can access at run time to get a unique set of credentials. This solution is the most complex, but is also the most general.
 
