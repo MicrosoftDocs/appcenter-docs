@@ -15,7 +15,6 @@ ms.tgt_pltfrm: react-native
 # Node.js selection
 
 ## Major versions of Node.js
-Any major Node.js version can be specified in the app's branch configuration.
 The following versions are available for use in App Center Build: 6.X, 8.x, 10.x, 12.x, 14.x, 16.X.
 See Also: [App Center Cloud Build Machines](~/build/software.md)
 
