@@ -241,13 +241,6 @@
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
 ### [Xamarin](sdk/crashes/xamarin.md)
-## Includes
-### [Generating a Breakpad Symbols Upload Payload](diagnostics/includes/generate-breakpad-symbols-payload.md)
-### [Ignoring symbols](diagnostics/includes/ignoring-symbols.md)
-### [Uploading symbols through the API](diagnostics/includes/symbol-upload-api.md)
-### [Uploading symbols through the CLI](diagnostics/includes/symbol-upload-cli.md)
-### [Uploading symbols through the UI](diagnostics/includes/symbol-upload-ui.md)
-### [Unsymbolicated crashes in App Center](diagnostics/includes/unsymbolicated-crashes.md)
 ## [Features](diagnostics/features.md)
 ## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
