@@ -228,7 +228,6 @@
 
 # Diagnostics
 ## [Introduction](diagnostics/index.md)
-## [Upcoming features](diagnostics/pre-merge.md)
 ## Enabling Diagnostics
 ### [Introduction](diagnostics/enabling-diagnostics.md)
 ### [Android](sdk/crashes/android.md)
