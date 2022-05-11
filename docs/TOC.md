@@ -64,6 +64,7 @@
 ### Android
 #### [Configure a build](build/android/index.md)
 #### [Code Signing](build/android/code-signing.md)
+### [JCenter shutdown](build/android/jcentershut.md)
 ### iOS
 #### [Configure a build](build/ios/index.md)
 #### [Code Signing](build/ios/code-signing.md)
@@ -100,6 +101,7 @@
 ## [Exporting Build configurations to Azure Pipelines (Preview)](build/export-to-azure-pipelines.md)
 ## Troubleshooting
 ### [General](build/troubleshooting/index.md)
+### [Build Execution Time](build/troubleshooting/build-times.md)
 ### [Repository Connections](build/troubleshooting/code-repos.md)
 ### [Failed Builds](build/troubleshooting/build-failed.md)
 ### [Comparing Build Commands](build/troubleshooting/build-command.md)
@@ -182,10 +184,20 @@
 ## [Release a build](distribution/uploading.md)
 ## [Device registration](distribution/auto-provisioning.md)
 ## [Manage Distribution Groups](distribution/groups.md)
+## [Hosting a release outside of App Center](distribution/externally-hosted-build.md)
+## [Distribute FAQ](distribution/faq.md)
 ## Stores
 ### [Introduction](distribution/stores/index.md)
 ### [Apple App Store](distribution/stores/apple.md)
+#### [Release to App Store](distribution/stores/apple/app_store.md)
+#### [Release to external testers in TestFlight](distribution/stores/apple/testflight_external.md)
+#### [Release to internal testers in TestFlight](distribution/stores/apple/testflight_internal.md)
 ### [Google Play Store](distribution/stores/googleplay.md)
+#### [Creating an app package in Google Play Console TSG](distribution/stores/insight/google/googlePlayAppDoesntExist.md)
+#### [How to publish to enable the connection](distribution/stores/insight/google/googlePlayAppDoesntHaveBuild.md)
+#### [Android App Bundle fails because Google Play App Signing](distribution/stores/insight/google/googlePlayAppSigningNotEnabled.md)
+#### [No permission to publish to Google Play](distribution/stores/insight/google/googlePlayInsufficientPermissions.md)
+#### [App not accessible from Google Play](distribution/stores/insight/google/googlePlayPackageForbidden.md)
 ### [Microsoft Intune](distribution/stores/intune.md)
 ## [Install a build](distribution/installation.md)
 ## [In-App Updates](distribution/inappupdates.md)
