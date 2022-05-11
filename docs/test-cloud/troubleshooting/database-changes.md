@@ -4,12 +4,12 @@ description: Avoid problems caused when multiple devices make concurrent changes
 keywords: appcenter, test, database
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/20/2022
+ms.date: 05/11/2022
 ms.topic: troubleshooting
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 
 ---
 
-# Handle concurrent database changes during tests in App Center Test
+# Concurrent test database changes
 
 Test scripts often change external data and test against the changes. The process usually includes setting the data back to the known or initial state that the tests were written against. This process might use a test database with credentials for the test user.
 

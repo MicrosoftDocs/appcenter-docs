@@ -1,10 +1,10 @@
 ---
-title: Time limits
-description: Diagnosing timeouts in App Center Test
+title: Test time limits and timeouts
+description: Diagnose the reasons for timeouts in App Center Test individual tests and test suites.
 keywords: test cloud, time out, limits
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/19/2022
+ms.date: 05/11/2022
 ms.topic: troubleshooting
 ms.assetid: fcbd21e6-fc3c-4de1-8789-62be066d4ae6
 ms.service: vs-appcenter

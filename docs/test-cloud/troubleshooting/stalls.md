@@ -1,18 +1,18 @@
 ---
-title: Stalled device during a test run
+title: Stalled device during test runs
 description: Learn about stalled device errors caused by App Center Test infrastructure issues, and how to get help for stalled device test runs.
 keywords: appcenter, test, stall
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/20/2022
+ms.date: 05/11/2022
 ms.topic: troubleshooting
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 
 ms.service: vs-appcenter
 ---
 
-# Stalled device during a test run in App Center Test
+# Stalled device during test runs
 
-A `Stalled Error` is an error that prevents App Center Test from completing tests on one or more devices. Usually, this error is caused by an App Center Test infrastructure problem, not by a problem in your app or device.
+A `Stalled Error` is an error that prevents App Center Test from completing tests on one or more devices. Usually, this error is caused by an App Center Test infrastructure problem, not by a problem in your app.
 
 When App Center Test detects a stalled error, operations staff attempt to make corrections and get the stalled run to complete normally. This manual intervention takes some time, and includes long term corrections to try to prevent the issue from recurring.
 

@@ -4,14 +4,14 @@ description: Understand what causes test step order discrepancies in test report
 keywords: test cloud, steps, skipped
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/20/2022
+ms.date: 05/11/2022
 ms.topic: troubleshooting
 ms.assetid: 0b5ef2ec-0962-47ca-9279-f149f5bca569
 ms.service: vs-appcenter
 ms.custom: test
 ---
 
-# Test report steps are out of sync in App Center Test
+# Test report steps are out of sync
 
 App Center Test creates test reports that synchronize each test and test step across devices used. To organize the reports, Test relies on the filenames and order of the screenshots it takes.
 
