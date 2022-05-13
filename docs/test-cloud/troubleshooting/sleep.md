@@ -1,28 +1,22 @@
 ---
-title: Sleep time during testing for devices in App Center Test
-description: Time limits for Android & iOS devices to remain active
+title: Device sleep during testing
+description: Learn about device sleep time limits. See how to overcome these limits so Android and iOS devices can stay active during testing.
 keywords: appcenter, test, sleep, device, timeout
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/27/2020
-ms.topic: article
+ms.date: 05/11/2022
+ms.topic: troubleshooting
 ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4 
+ms.service: vs-appcenter
 ---
 
-# Sleep time during testing for devices in App Center Test
-In App Center Test, devices will automatically sleep if they don't receive a UI interaction every so often. Long pauses between UI interactions can sometimes cause test failures. 
+# Device sleep during testing
 
-The limits are as follows:
+In App Center Test, devices automatically sleep if they don't receive a user interaction periodically. Long pauses between user interactions can cause test failures when devices go to sleep.
 
-- Android - 10 minutes
-- iOS - 5 minutes
+Android devices sleep after no interaction for 10 minutes. iOS devices sleep after no interaction for 5 minutes. App Center Test uses these limits because they're usually the maximum sleep limits available on each platform, without having devices stay on indefinitely. Indefinite operations can cause other problems in the device cloud.
 
-These limits are used because they're generally the maximum sleep limits available on each platform without leaving devices on indefinitely. 
+If your testing scenario requires delays that exceed the device sleep time limits, try the following options:
 
-Indefinite operation this way could cause other problems in our device cloud.
-
-## Alternative Approaches
-If your testing scenario requires delays near to or exceeding the above limits, then there are a couple general options:
-
-- You can add one or more UI gestures during the wait to prevent the device from sleeping. 
-- You could mock or simulate the wait, rather than waiting for the full execution to complete normally. 
+- Add one or more user interaction gestures during the wait to prevent the device from sleeping.
+- Mock or simulate the wait, instead of waiting for it to complete normally.
