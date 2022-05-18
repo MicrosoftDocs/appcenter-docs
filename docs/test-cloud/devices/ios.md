@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 4/6/2022
+ms.date: 5/18/2022
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -110,7 +110,6 @@ Apple iPad Pro | 10.2.1
 Apple iPad Pro | 12.2
 Apple iPad Pro | 9.1
 Apple iPad Pro | 9.2
-Apple iPad Pro | 9.3.5
 Apple iPad Pro 10.5" | 11.0.3
 Apple iPad Pro 10.5" | 11.1.2
 Apple iPad Pro 10.5" | 11.2.6
@@ -157,11 +156,10 @@ Apple iPad Pro 12.9" (2018) | 14.1
 Apple iPad Pro 12.9" (2018) | 14.4.2
 Apple iPad Pro 12.9" (2018) | 14.5.1
 Apple iPad Pro 12.9" (2018) | 15.2.1
-Apple iPad Pro 12.9" (2020) | 13.4.1
-Apple iPad Pro 12.9" (2020) | 13.5.1
 Apple iPad Pro 12.9" (2020) | 13.6.1
 Apple iPad Pro 12.9" (2020) | 13.7
 Apple iPad Pro 12.9" (2020) | 15.0.2
+Apple iPad Pro 12.9" (2020) | 15.5
 Apple iPad Pro 9.7" | 10.0.2
 Apple iPad Pro 9.7" | 10.1.1
 Apple iPad Pro 9.7" | 10.2.1
@@ -194,6 +192,7 @@ Apple iPhone 11 Pro | 14.4.2
 Apple iPhone 11 Pro | 14.6
 Apple iPhone 11 Pro | 15.0.2
 Apple iPhone 11 Pro | 15.2.1
+Apple iPhone 11 Pro | 15.5
 Apple iPhone 11 Pro Max | 13.0
 Apple iPhone 11 Pro Max | 13.1.3
 Apple iPhone 11 Pro Max | 13.3.1
@@ -230,13 +229,14 @@ Apple iPhone 12 Pro Max | 14.6
 Apple iPhone 12 Pro Max | 14.7.1
 Apple iPhone 12 Pro Max | 15.0.2
 Apple iPhone 12 Pro Max | 15.1.1
+Apple iPhone 12 Pro Max | 15.5
 Apple iPhone 13 | 15.0.2
 Apple iPhone 13 | 15.2.1
 Apple iPhone 13 | 15.4.1
 Apple iPhone 13 Mini | 15.0.2
 Apple iPhone 13 Pro | 15.0.2
 Apple iPhone 13 Pro | 15.3.1
-Apple iPhone 13 Pro | 15.5 beta 1
+Apple iPhone 13 Pro | 15.5
 Apple iPhone 13 Pro Max | 15.0.2
 Apple iPhone 13 Pro Max | 15.3.1
 Apple iPhone 5S | 12.0.1
@@ -305,6 +305,7 @@ Apple iPhone 8 | 13.5.1
 Apple iPhone 8 | 14.3
 Apple iPhone 8 | 14.7.1
 Apple iPhone 8 | 15.1
+Apple iPhone 8 | 15.5
 Apple iPhone 8 Plus | 11.0.3
 Apple iPhone 8 Plus | 11.3.1
 Apple iPhone 8 Plus | 11.4.1
