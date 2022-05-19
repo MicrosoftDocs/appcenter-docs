@@ -76,11 +76,11 @@ Install-Package Microsoft.AppCenter.Crashes
 > [!NOTE]
 > If you use the App Center SDK in a portable project, you must install the packages in each of the projects: the portable, and the project that's running the WPF/WinForms app. To do that, you should open each sub-project and follow the corresponding steps described in [Visual Studio](#visual-studio) section.
 
-## 5. Start the SDK
+## 4. Start the SDK
 
 To use App Center, opt in to the module(s) you want to use. By default no modules are started and you must explicitly call each of them when starting the SDK.
 
-### 5.1 Add the `Start()` method
+### 4.1 Add the `Start()` method
 
 #### WPF 
 
@@ -137,7 +137,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 
 [!INCLUDE [app secret warning](../includes/app-secret-warning.md)]
 
-### 5.2 Replace the placeholder with your App Secret
+### 4.2 Replace the placeholder with your App Secret
 
 Make sure to replace `{Your App Secret}` text with the actual value for your application. The App Secret can be found on the **Getting Started** page or **Settings** page on the App Center portal.
 
