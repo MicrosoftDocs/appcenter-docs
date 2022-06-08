@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/03/2020
+ms.date: 08/06/2022
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
@@ -99,7 +99,7 @@ However, App Center is distributed as a statically linked shared library that's 
 
 Apple recommends optimizing the app launch to take not more than 400 ms in a [WWDC session](https://developer.apple.com/videos/play/wwdc2016/406/). They specifically recommend static shared libraries over dynamic shared ones to achieve this goal. Distributing the App Center SDK for iOS as a statically linked shared library follows Apple's recommendation to provide the best performance and a minimal impact to the app that includes the SDK.
 
-To learn more about statically linked shared libraries vs. dynamic linked shared libraries, we recommend Apple's [general documentation on the topic](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html). To learn more about the performance impact of dynamic linked shared libraries, read Eric Horacek's [blog post](https://blog.automatic.com/how-we-cut-our-ios-apps-launch-time-in-half-with-this-one-cool-trick-7aca2011e2ea).
+To learn more about statically linked shared libraries vs. dynamic linked shared libraries, we recommend Apple's [general documentation on the topic](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html).
 
 ## Why are the SDK binaries so large? I'm concerned about my app's size
 

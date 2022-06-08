@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 02/17/2022
+ms.date: 08/06/2022
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
@@ -151,7 +151,7 @@ AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 
 > [!NOTE]
-> If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
+> If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead.
 
 #### 4.2.2 Xamarin.iOS and Xamarin.Mac
 
