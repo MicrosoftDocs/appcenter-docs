@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for iOS
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/06/2022
+ms.date: 06/08/2022
 ms.topic: article
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
