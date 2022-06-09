@@ -310,7 +310,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `Screenshot(String)` | Takes a screenshot of the application in its current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
 | `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |
 
-For more information on the [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/) interface, see the [API documentation](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Docs/) for [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
+For more information on the [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/) interface, see the [API documentation](https://docs.microsoft.com/dotnet/api/xamarin.uitest) for [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
 
 As an example of how to use these methods, consider the following test for the screenshot that was displayed above. This test will enter a 17-digit number for a credit card into a text field and then tap a button on the screen. It will then inspect the screen for an error message informing the user that the number is too long to be a valid credit card number:
 
