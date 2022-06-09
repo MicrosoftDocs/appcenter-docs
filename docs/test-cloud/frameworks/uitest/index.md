@@ -4,7 +4,7 @@ description: Overview of Xamarin.UITest
 keywords: uitest test cloud
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/07/2020
+ms.date: 06/09/2022
 ms.topic: article
 ms.assetid: 4350040e-0217-4482-9412-e24ef6ffc9b2
 ms.service: vs-appcenter
