@@ -3,7 +3,7 @@ title: HockeySDK for Xamarin Migration
 description: Migrate from the HockeySDK to App Center Xamarin SDK
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/30/2020
+ms.date: 06/13/2022
 ms.topic: article
 ms.assetid: 7d805e37-cc78-4930-af3f-b0d9b57dceea
 ms.service: vs-appcenter
@@ -123,7 +123,7 @@ After (App Center):
     ```
 
     > [!NOTE]
-    > If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead. If this remark applies to your application and you don't already have the callback, look at [this Application.OnCreate code sample](https://forums.xamarin.com/discussion/comment/7243/#Comment_7243).
+    > If your application has background services or multiple entry points like a broadcast receiver, exported activities or content providers, it's recommended to start `AppCenter` in the `Application.OnCreate` callback instead.
 
     **Xamarin.iOS**:
     
@@ -172,7 +172,7 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [SharedHockeyManager.LogLevel (iOS) or HockeyLog.LogLevel (Android)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#3-3-control-output-to-the-console-or-logcat) | [AppCenter.LogLevel](~/sdk/other-apis/xamarin.md#adjust-the-log-level)
+Adjust the log level | `SharedHockeyManager.LogLevel` (iOS) or `HockeyLog.LogLevel` (Android) | [AppCenter.LogLevel](~/sdk/other-apis/xamarin.md#adjust-the-log-level)
 Identify installations | iOS only | [AppCenter.GetInstallIdAsync](~/sdk/other-apis/xamarin.md#identify-installations)
 Identify users | Crash only | [AppCenter.SetUserId](~/sdk/other-apis/xamarin.md#identify-users)
 
@@ -181,8 +181,8 @@ Identify users | Crash only | [AppCenter.SetUserId](~/sdk/other-apis/xamarin.md#
 Feature | HockeyApp | App Center
 ------- | --------- | ---
 Automatically track sessions | Yes, can be disabled only on Android | [Documentation (can't be disabled)](~/sdk/analytics/xamarin.md#session-and-device-information)
-Custom events with properties | [HockeyApp.MetricsManager.TrackEvent](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-5-add-custom-events) | [Analytics.TrackEvent](~/sdk/analytics/xamarin.md#custom-events)
-Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or [SharedHockeyManager.DisableMetricsManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#for-ios_1) | [Analytics.SetEnabledAsync](~/sdk/analytics/xamarin.md#enable-or-disable-app-center-analytics-at-runtime)
+Custom events with properties | `HockeyApp.MetricsManager.TrackEvent` | [Analytics.TrackEvent](~/sdk/analytics/xamarin.md#custom-events)
+Disable service at runtime | `MetricsManager.DisableUserMetrics` (Android) or `SharedHockeyManager.DisableMetricsManager` (iOS) | [Analytics.SetEnabledAsync](~/sdk/analytics/xamarin.md#enable-or-disable-app-center-analytics-at-runtime)
 
 ### Crashes
 
@@ -204,8 +204,8 @@ If the app is using a private distribution group, once the app is installed and 
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.VerifyLogin (Android) or Authenticator.AuthenticateInstallation (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-8-add-authentication) | [Distribute.UpdateTrack](~/sdk/distribute/xamarin.md#use-private-distribution-group)
-Disable service at runtime | [UpdateManager.Unregister (Android) or SharedHockeyManager.DisableUpdateManager (iOS)](https://support.hockeyapp.net/kb/client-integration-cross-platform/how-to-integrate-hockeyapp-with-xamarin#2-6-add-update-distribution) | [Distribute.SetEnabledAsync](~/sdk/distribute/xamarin.md#enable-or-disable-app-center-distribute-at-runtime)
+Restricted in-app updates | `LoginManager.VerifyLogin` (Android) or `Authenticator.AuthenticateInstallation` (iOS) | [Distribute.UpdateTrack](~/sdk/distribute/xamarin.md#use-private-distribution-group)
+Disable service at runtime | `UpdateManager.Unregister` (Android) or `SharedHockeyManager.DisableUpdateManager` (iOS) | [Distribute.SetEnabledAsync](~/sdk/distribute/xamarin.md#enable-or-disable-app-center-distribute-at-runtime)
 Customize the update dialog | Yes | [Distribute.ReleaseAvailable](~/sdk/distribute/xamarin.md#customize-or-localize-the-in-app-update-dialog)
 
 ### Feedback Service

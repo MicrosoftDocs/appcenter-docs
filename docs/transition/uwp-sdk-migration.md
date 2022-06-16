@@ -3,7 +3,7 @@ title: HockeySDK for UWP Migration
 description: Migrate from the HockeySDK to App Center SDK for UWP
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/06/2019
+ms.date: 06/13/2022
 ms.topic: article
 ms.assetid: f64881e5-b999-4f13-93a5-5caa6eb6ac41
 ms.service: vs-appcenter
@@ -95,21 +95,21 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [Enabling Diagnostics Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#4-1-enable-diagnostics-) | [AppCenter.LogLevel](~/sdk/other-apis/uwp.md#adjust-the-log-level)
+Adjust the log level | Yes | [AppCenter.LogLevel](~/sdk/other-apis/uwp.md#adjust-the-log-level)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically track sessions | [User Tracking Documentation](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-3-user-tracking) | [Session and Device Information](~/sdk/analytics/windows.md#session-and-device-information)
-Custom events with properties | [HockeyClient.TrackEvent](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-6-event-tracking) | [Analytics.TrackEvent](~/sdk/analytics/windows.md#custom-events)
+Automatically track sessions | Yes | [Session and Device Information](~/sdk/analytics/windows.md#session-and-device-information)
+Custom events with properties | `HockeyClient.TrackEvent` | [Analytics.TrackEvent](~/sdk/analytics/windows.md#custom-events)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Crash Reporting (enabled by default)](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/hockeyapp-for-applications-on-windows#3-1-crash-reporting) | [Crash Reporting](~/sdk/crashes/uwp.md)
-Attach additional meta data | [Attaching Metadata](https://support.hockeyapp.net/kb/client-integration-windows-and-windows-phone/how-to-instrument-applications-on-windows-for-crash-reporting#2-2-collectors-api) | Not supported
+Automatically send crashes | Enabled by default | [Crash Reporting](~/sdk/crashes/uwp.md)
+Attach additional meta data | Yes | Not supported
 Track handled exceptions | `HockeyClient.Current.TrackException` | Not supported
 
 ### Distribution
