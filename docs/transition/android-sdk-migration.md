@@ -3,7 +3,7 @@ title: HockeySDK for Android Migration
 description: Migrate from the HockeySDK to App Center Android SDK
 author: lucen-ms
 ms.author: lucen
-ms.date: 12/22/2020
+ms.date: 06/08/2022
 ms.topic: article
 ms.assetid: bfce1840-20b2-4589-a726-d6aacd645d91
 ms.service: vs-appcenter
@@ -106,26 +106,26 @@ After (App Center):
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Adjust the log level | [HockeyLog.setLogLevel](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-8-control-output-to-logcat) | [AppCenter.setLogLevel](~/sdk/other-apis/android.md#adjust-the-log-level)
+Adjust the log level | `HockeyLog.setLogLevel` | [AppCenter.setLogLevel](~/sdk/other-apis/android.md#adjust-the-log-level)
 Identify installations | Internal only | [AppCenter.getInstallId](~/sdk/other-apis/android.md#identify-installations)
-Identify users | [Documentation (crashes only)](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-getuserid)| [AppCenter.setUserId](~/sdk/other-apis/android.md#identify-users)
+Identify users | Crashes only | [AppCenter.setUserId](~/sdk/other-apis/android.md#identify-users)
 
 ### Analytics
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
 Automatically track sessions | Yes, can be disabled by `MetricsManager.setSessionTrackingDisabled` | [Documentation (can't be disabled)](~/sdk/analytics/android.md#session-and-device-information)
-Custom events with properties | [MetricsManager.trackEvent](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-5-add-user-metrics) | [Analytics.trackEvent](~/sdk/analytics/android.md#custom-events)
+Custom events with properties | `MetricsManager.trackEvent` | [Analytics.trackEvent](~/sdk/analytics/android.md#custom-events)
 Disable service at runtime | `MetricsManager.disableUserMetrics` and `MetricsManager.enableUserMetrics` | [Analytics.setEnabled](~/sdk/analytics/android.md#enable-or-disable-app-center-analytics-at-runtime)
 
 ### Crashes
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Automatically send crashes | [Documentation (disabled by default)](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-1-auto-send-crash-reports) | [Documentation (enabled by default)](~/sdk/crashes/android.md#should-the-crash-be-processed)
-Attach additional meta data | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-2-2-attach-additional-meta-data) | [Documentation (can be attached from listener)](~/sdk/crashes/android.md#add-attachments-to-a-crash-report)
+Automatically send crashes | Disabled by default | [Documentation (enabled by default)](~/sdk/crashes/android.md#should-the-crash-be-processed)
+Attach additional meta data | Yes | [Documentation (can be attached from listener)](~/sdk/crashes/android.md#add-attachments-to-a-crash-report)
 Customize user dialog | Yes | [Documentation (not provided by default)](~/sdk/crashes/android.md#ask-for-the-users-consent-to-send-a-crash-log)
-Get info about the sending status | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/customization-options-for-android#method-oncrashessent) | [Documentation](~/sdk/crashes/android.md#get-information-about-the-sending-status-for-a-crash-log)
+Get info about the sending status | Yes | [Documentation](~/sdk/crashes/android.md#get-information-about-the-sending-status-for-a-crash-log)
 Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getLastSessionCrashReport](~/sdk/crashes/android.md#get-more-information-about-a-previous-crash)
 
 ### Distribute
@@ -136,9 +136,9 @@ Info about a previous crash | `CrashManager.getLastCrashDetails` | [Crashes.getL
 
 Feature | HockeyApp | App Center
 ------- | --------- | ---
-Restricted in-app updates | [LoginManager.verifyLogin](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-5-authentication) | [Distribute.setUpdateTrack](~/sdk/distribute/android.md#use-private-distribution-group)
-Disable service at runtime | [UpdateManager.unregister](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#2-6-add-update-distribution) | [Distribute.setEnabled](~/sdk/distribute/android.md#enable-or-disable-app-center-distribute-at-runtime)
-Customize the update dialog | [Documentation](https://support.hockeyapp.net/kb/client-integration-android/hockeyapp-for-android-sdk#4-3-1-providing-your-own-user-interface-for-the-update-process) | [Documentation](~/sdk/distribute/android.md#customize-or-localize-the-in-app-update-dialog)
+Restricted in-app updates | `LoginManager.verifyLogin` | [Distribute.setUpdateTrack](~/sdk/distribute/android.md#use-private-distribution-group)
+Disable service at runtime | `UpdateManager.unregister` | [Distribute.setEnabled](~/sdk/distribute/android.md#enable-or-disable-app-center-distribute-at-runtime)
+Customize the update dialog | Yes | [Documentation](~/sdk/distribute/android.md#customize-or-localize-the-in-app-update-dialog)
 
 ### Feedback Service
 The feedback service won't be supported in App Center. See [HockeyApp feedback](feedback.md).
