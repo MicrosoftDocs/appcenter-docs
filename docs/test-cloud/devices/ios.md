@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 5/18/2022
+ms.date: 6/20/2022
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -65,6 +65,7 @@ Apple iPad Air 2 | 10.2.1
 Apple iPad Air 2 | 14.2
 Apple iPad Air 2 | 14.3
 Apple iPad Air 2 | 14.4.2
+Apple iPad Air 2 | 15.6 beta 3
 Apple iPad Air 2 | 9.0.2
 Apple iPad Air 2 | 9.1
 Apple iPad Mini 2 (Retina) | 10.0.2
@@ -131,10 +132,9 @@ Apple iPad Pro 11" (2018) | 14.7.1
 Apple iPad Pro 11" (2018) | 15.1
 Apple iPad Pro 11" (2020) | 13.4.1
 Apple iPad Pro 11" (2020) | 13.5.1
-Apple iPad Pro 11" (2020) | 13.6.1
 Apple iPad Pro 11" (2020) | 13.7
-Apple iPad Pro 11" (2020) | 14.2
 Apple iPad Pro 11" (2020) | 14.6
+Apple iPad Pro 11" (2020) | 15.6 beta 3
 Apple iPad Pro 11" (2021) | 14.6
 Apple iPad Pro 12.9" (2017) | 11.0.3
 Apple iPad Pro 12.9" (2017) | 11.1.2
@@ -156,6 +156,7 @@ Apple iPad Pro 12.9" (2018) | 14.1
 Apple iPad Pro 12.9" (2018) | 14.4.2
 Apple iPad Pro 12.9" (2018) | 14.5.1
 Apple iPad Pro 12.9" (2018) | 15.2.1
+Apple iPad Pro 12.9" (2018) | 16.0 beta
 Apple iPad Pro 12.9" (2020) | 13.6.1
 Apple iPad Pro 12.9" (2020) | 13.7
 Apple iPad Pro 12.9" (2020) | 15.0.2
@@ -214,6 +215,7 @@ Apple iPhone 12 Mini | 14.4.2
 Apple iPhone 12 Mini | 14.6
 Apple iPhone 12 Mini | 14.7.1
 Apple iPhone 12 Mini | 15.2.1
+Apple iPhone 12 Mini | 15.6 beta 3
 Apple iPhone 12 Pro | 14.4.2
 Apple iPhone 12 Pro | 14.5.1
 Apple iPhone 12 Pro | 14.6
@@ -239,6 +241,7 @@ Apple iPhone 13 Pro | 15.3.1
 Apple iPhone 13 Pro | 15.5
 Apple iPhone 13 Pro Max | 15.0.2
 Apple iPhone 13 Pro Max | 15.3.1
+Apple iPhone 13 Pro Max | 15.6 beta 3
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
 Apple iPhone 5S | 12.5.5
@@ -262,7 +265,6 @@ Apple iPhone 6s | 14.1
 Apple iPhone 6s Plus | 11.3.1
 Apple iPhone 6s Plus | 12.0.1
 Apple iPhone 6s Plus | 12.4.1
-Apple iPhone 6s Plus | 13.1.3
 Apple iPhone 6s Plus | 14.2
 Apple iPhone 6s Plus | 14.7.1
 Apple iPhone 6s Plus | 14.8.1
@@ -279,6 +281,7 @@ Apple iPhone 7 | 14.0.1
 Apple iPhone 7 | 14.4.2
 Apple iPhone 7 | 14.6
 Apple iPhone 7 | 15.0.2
+Apple iPhone 7 | 15.6 beta 3
 Apple iPhone 7 Plus | 10.0.3
 Apple iPhone 7 Plus | 10.2.1
 Apple iPhone 7 Plus | 11.2.6
@@ -318,6 +321,7 @@ Apple iPhone 8 Plus | 14.4.2
 Apple iPhone 8 Plus | 14.6
 Apple iPhone 8 Plus | 14.8.1
 Apple iPhone 8 Plus | 15.4.1
+Apple iPhone 8 Plus | 16.0 beta
 Apple iPhone SE | 10.1.1
 Apple iPhone SE | 11.0.3
 Apple iPhone SE | 11.3.1
@@ -375,7 +379,6 @@ Apple iPhone XS | 15.4.1
 Apple iPhone XS Max | 12.1.4
 Apple iPhone XS Max | 12.2
 Apple iPhone XS Max | 12.4.1
-Apple iPhone XS Max | 13.0
 Apple iPhone XS Max | 13.2.3
 Apple iPhone XS Max | 13.4.1
 Apple iPhone XS Max | 13.5.1
@@ -383,6 +386,7 @@ Apple iPhone XS Max | 13.7
 Apple iPhone XS Max | 14.2
 Apple iPhone XS Max | 14.7.1
 Apple iPhone XS Max | 15.0.2
+Apple iPhone XS Max | 15.6 beta 3
 Apple iPod touch 5th Gen | 9.0.2
 Apple iPod touch 6th Gen | 11.1.2
 Apple iPod touch 6th Gen | 12.0.1
