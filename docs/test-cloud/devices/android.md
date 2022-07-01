@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 4/6/2022
+ms.date: 6/20/2022
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -58,13 +58,17 @@ Google Pixel 3a XL | 9
 Google Pixel 4 | 10
 Google Pixel 4 | 11
 Google Pixel 4 | 12
+Google Pixel 4 | 13 beta
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
 Google Pixel 4 XL | 12
+Google Pixel 4 XL | 13 beta
 Google Pixel 4a | 11
 Google Pixel 4a | 12
+Google Pixel 4a | 13 beta
 Google Pixel 5 | 11
 Google Pixel 5 | 12
+Google Pixel 5 | 13 beta
 Google Pixel 6 | 12
 Google Pixel 6 Pro | 12
 Google Pixel C | 8.1.0
@@ -102,8 +106,6 @@ Huawei P20 Pro | 10
 Huawei P20 Pro | 8.1.0
 Huawei P20 Pro | 9
 Huawei P30 Pro | 10
-Huawei P30 Pro | 9
-Karbonn Sparkle V | 6.0.1
 LG G2 | 5.0.2
 LG G3 (US Carrier) | 5.0
 LG G3 s | 5.0.2
@@ -147,7 +149,6 @@ Motorola Moto G8 Plus | 10
 Motorola Moto G8 Plus | 9
 Motorola Moto G9 Play | 10
 Motorola Moto G9 Plus | 10
-Motorola Moto X | 5.1
 Motorola Moto X4 | 8.0.0
 Motorola Moto Z2 Force | 8.0.0
 Motorola Moto Z2 Force | 9
@@ -169,13 +170,13 @@ Motorola One Zoom | 9
 Nokia 7 Plus | 10
 Nokia 7 Plus | 9
 Nokia 7.1 | 10
-Nokia 7.1 | 9
 Nokia 7.2 | 10
 Nokia 7.2 | 9
 Nokia 8 Sirocco | 10
 Nokia 8 Sirocco | 9
 Nokia 8.1 | 10
 Nokia 8.1 | 11
+OnePlus 10 Pro | 12
 OnePlus 2 | 5.1.1
 OnePlus 2 | 6.0.1
 OnePlus 3T | 7.0
@@ -199,7 +200,9 @@ OnePlus 7T | 11
 OnePlus 7T Pro | 10
 OnePlus 7T Pro | 11
 OnePlus 8 | 10
+OnePlus 8 | 12
 OnePlus 8 Pro | 10
+OnePlus 8 Pro | 12
 OnePlus 8T | 11
 OnePlus 9 | 11
 OnePlus 9 | 12
@@ -208,6 +211,8 @@ OnePlus 9 Pro | 12
 OnePlus Nord | 10
 OnePlus Nord | 11
 OnePlus Nord 2 | 11
+OnePlus Nord 2 | 12
+OnePlus Nord 2T | 12
 OnePlus Nord CE | 11
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
@@ -245,7 +250,6 @@ Samsung Galaxy A8 | 7.1.1
 Samsung Galaxy A8 | 8.0.0
 Samsung Galaxy A8 | 9
 Samsung Galaxy A9 (2018) | 10
-Samsung Galaxy A9 (2018) | 8.0.0
 Samsung Galaxy J6 | 10
 Samsung Galaxy J6 | 8.0.0
 Samsung Galaxy J7 (2017) | 7.0
@@ -427,6 +431,7 @@ Sony Xperia Z5 Compact | 5.1.1
 Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
-Xiaomi Mi A3 | 9
 Xiaomi Redmi 9 | 11
 Xiaomi Redmi Note 8 | 11
+Xiaomi Redmi Note 8 Pro | 11
+Xiaomi Redmi Note 9 | 11
