@@ -114,14 +114,6 @@ You can learn more about notification in our [App Center dashboard documentation
 
 You can integrate third-party bug tracker tools with App Center to stay informed and better manage your crashes. Read the [bug tracker documentation](~/dashboard/bugtracker/index.md) to learn how to get started.
 
-## Set Data Retention
-
-You can set your diagnostics data retention to 28 or 90 days via our APIs, as listed in the [App Center API documentation](https://openapi.appcenter.ms/#/errors/errors_putRetentionSettings), or in the app settings page. If you change your retention setting from 90 to 28 days, any existing diagnostics data older than 28 days will be removed and any new data will only be stored for 28 days.
-
-If you change your settings from 28 to 90 days, older diagnostics data won't be backfilled. If you want to store your data for more than 90 days, export your raw data to Azure Blob Storage. Read the [export diagnostics data section](~/diagnostics/features.md#export-diagnostics-data) to get started.
-
-![Data retention setting in the app settings page](~/diagnostics/images/app-settings-retention.png)
-
 ## Upload reports to App Center
 
 The documentation to [upload crashes via API](~/diagnostics/upload-crashes.md) has moved.
