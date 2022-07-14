@@ -24,7 +24,7 @@ To track custom events in your app, use our `trackEvent` API from the App Center
 
 ## General information
 
-You can filter the events page by **time range** (the last 7, 30, 60, or 90 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period or app version.
+You can filter the events page by **time range** (the last 1, 7 or 28 days), and for the selected **app version**. These filters allow you to drill down into your events data to the selected time period or app version.
 
 ## Events Page
 The Events Page provides a table with an overview of the events happening in your app. This table can be sorted by count in both descending and ascending order. You can also look for an event in the table by its name. For each event, the following information is provided:
