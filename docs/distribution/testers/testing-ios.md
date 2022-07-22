@@ -4,7 +4,7 @@ description: How to test iOS Apps in App Center
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/14/2021
+ms.date: 07/21/2022
 ms.topic: article
 ms.assetid: a4101ef9-3272-49fc-96e5-a8b9ac5a15d6
 ms.service: vs-appcenter
@@ -31,7 +31,7 @@ Adding your device consists of the following steps:
 
     ![Config Profile](images/i-profile.png)
 
-3. In the phone's **Settings**, select **General**, **Profile & Device Management**, then **Install profile**, and enable **Allow**. This profile is a necessary part of adding your device.
+3. In the phone's **Settings**, select **General**, **VPN & Device Management**, then **Install profile**, and enable **Allow**. This profile is a necessary part of adding your device.
 
     ![Config Profile View](images/i-configview.png)
 
