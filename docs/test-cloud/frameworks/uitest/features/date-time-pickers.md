@@ -2,9 +2,9 @@
 title: Automating Xamarin.Forms Date & Time Pickers with Xamarin.UITest
 description: How to automate Xamarin.Forms Date Pickers & Time Pickers
 keywords: uitest test cloud
-author: lucen-ms
-ms.author: lucen
-ms.date: 05/01/2020
+author: thewulf7
+ms.author: evutkin
+ms.date: 25/07/2022
 ms.topic: article
 ms.assetid: EBA22D3B-EB39-400E-8881-B78D621301D4
 ms.service: vs-appcenter
@@ -28,13 +28,18 @@ public void SetDatePicker(DateTime date)
     {
         //Invoke the native method selectRow() 
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Month, "inComponent", 0, "animated", true)); // brings month in scope
-        app.Tap(month); // actually selects month
+        var rect = app.Query(x => x.Class("UIPickerTableView").Index(0).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);  // nudging control to trigger the label to update
 
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Day, "inComponent", 1, "animated", true));
-        app.Tap(day);
+        rect = app.Query(x => x.Class("UIPickerTableView").Index(3).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);  
 
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Year, "inComponent", 2, "animated", true));
-        app.Tap(year);
+        rect = app.Query(x => x.Class("UIPickerTableView").Index(6).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);
+        
+        app.Tap(c => c.Text("Done"));
     } else // Android
     {
         app.Query(x => x.Class("DatePicker").Invoke("updateDate", date.Year, date.Month, date.Day));
@@ -65,7 +70,18 @@ public void SetTimePicker(int hour, int minute, bool am)
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", time.Hour, "inComponent", 0, "animated", true)); //if time.Hour == 0, than hour is '1'. if time.Hour == 11, than hour is '12'
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", time.Minute, "inComponent", 1, "animated", true)); //if time.Minute == 0, than minutes is '1'. if time.Minute == 59, than minutes is '59'
         app.Query(x => x.Class("UIPickerView").Invoke("selectRow", ampm, "inComponent", 2, "animated", true)); //0 == AM and 1 == PM
-
+        
+        // nudging each control very slightly to trigger the label to update
+        var rect = app.Query(x => x.Class("UIPickerTableView").Index(0).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);
+        
+        rect = app.Query(x => x.Class("UIPickerTableView").Index(3).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);
+        
+        rect = app.Query(x => x.Class("UIPickerTableView").Index(6).Child()).First().Rect; 
+        app.DragCoordinates(rect.CenterX, rect.CenterY, rect.CenterX, rect.CenterY + 20);
+        
+        app.Tap(c => c.Text("Done"));
     } else // Android
     {
         // switch to Text entry for time
