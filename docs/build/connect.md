@@ -4,7 +4,7 @@ description: How to connect/reconnect to a repository to start building your app
 keywords: android
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/29/2021
+ms.date: 02/08/2022
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -16,6 +16,9 @@ App Center supports connections to the following code repository services: [Bitb
 
 > [!NOTE]
 > Except self-hosted GitLab Instances, App Center doesn't support connections to self-hosted or on-prem versions of the above repository services.
+
+> [!WARNING]
+> Bitbucket imposes [API call rate limits](https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/) for both unauthenticated and [authenticated requests](https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/#Authenticated-Request-limits).
 
 ## Connecting to a source repository
 To build an app, connect to your repository account by selecting the service from the **Build** tab in your app. Sign in using the code repository service account credentials if you aren't already signed in. Authorizing App Center is required to complete the connection.
