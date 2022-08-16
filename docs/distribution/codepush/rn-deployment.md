@@ -4,7 +4,7 @@ description: Distribution with React Native SDK and CodePush
 keywords: distribution
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/14/2020
+ms.date: 08/03/2022
 ms.topic: article
 ms.assetid: 43EB5F45-7A20-4BE9-8DBE-8F0D2CCC2B4E
 ms.service: vs-appcenter
@@ -274,5 +274,8 @@ appcenter codepush deployment add -a <ownerName>/<appName> test-variant-one
 // #2) Target any new releases at that custom deployment
 appcenter codepush release-react -a <ownerName>/<appName> -d test-variant-one
 ```
+> [!NOTE]
+> Characters "/" and ":" are not supported in the deployment name.
+
 > [!NOTE]
 > The total user count that's reported in your deployment's "Install Metrics" will take into account users that have "switched" from one deployment to another. For example, if your **Production** deployment currently reports having 1 total user, but you dynamically switch that user to **Staging**, then the **Production** deployment would report 0 total users, while **Staging** would report 1 (the user that switched). This behavior allows you to accurately track your release adoption, even in the event of using a runtime-based deployment redirection solution.
