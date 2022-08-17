@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 6/20/2022
+ms.date: 8/17/2022
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -18,7 +18,6 @@ ms.custom: test
 
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
-
 
 Model | OS
 -- | --
@@ -58,19 +57,21 @@ Google Pixel 3a XL | 9
 Google Pixel 4 | 10
 Google Pixel 4 | 11
 Google Pixel 4 | 12
-Google Pixel 4 | 13 beta
+Google Pixel 4 | 13
 Google Pixel 4 XL | 10
 Google Pixel 4 XL | 11
 Google Pixel 4 XL | 12
-Google Pixel 4 XL | 13 beta
+Google Pixel 4 XL | 13
 Google Pixel 4a | 11
 Google Pixel 4a | 12
-Google Pixel 4a | 13 beta
+Google Pixel 4a | 13
 Google Pixel 5 | 11
 Google Pixel 5 | 12
-Google Pixel 5 | 13 beta
+Google Pixel 5 | 13
 Google Pixel 6 | 12
+Google Pixel 6 | 13
 Google Pixel 6 Pro | 12
+Google Pixel 6 Pro | 13
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
@@ -149,6 +150,7 @@ Motorola Moto G8 Plus | 10
 Motorola Moto G8 Plus | 9
 Motorola Moto G9 Play | 10
 Motorola Moto G9 Plus | 10
+Motorola Moto X | 5.1
 Motorola Moto X4 | 8.0.0
 Motorola Moto Z2 Force | 8.0.0
 Motorola Moto Z2 Force | 9
@@ -170,6 +172,7 @@ Motorola One Zoom | 9
 Nokia 7 Plus | 10
 Nokia 7 Plus | 9
 Nokia 7.1 | 10
+Nokia 7.1 | 9
 Nokia 7.2 | 10
 Nokia 7.2 | 9
 Nokia 8 Sirocco | 10
@@ -177,6 +180,7 @@ Nokia 8 Sirocco | 9
 Nokia 8.1 | 10
 Nokia 8.1 | 11
 OnePlus 10 Pro | 12
+OnePlus 10 Pro | 13 beta
 OnePlus 2 | 5.1.1
 OnePlus 2 | 6.0.1
 OnePlus 3T | 7.0
@@ -191,14 +195,18 @@ OnePlus 6T | 11
 OnePlus 6T | 9
 OnePlus 7 | 10
 OnePlus 7 | 11
+OnePlus 7 | 12 beta
 OnePlus 7 | 9
 OnePlus 7 Pro | 10
 OnePlus 7 Pro | 11
+OnePlus 7 Pro | 12 beta
 OnePlus 7 Pro | 9
 OnePlus 7T | 10
 OnePlus 7T | 11
+OnePlus 7T | 12 beta
 OnePlus 7T Pro | 10
 OnePlus 7T Pro | 11
+OnePlus 7T Pro | 12 beta
 OnePlus 8 | 10
 OnePlus 8 | 12
 OnePlus 8 Pro | 10
@@ -214,6 +222,7 @@ OnePlus Nord 2 | 11
 OnePlus Nord 2 | 12
 OnePlus Nord 2T | 12
 OnePlus Nord CE | 11
+OnePlus Nord CE | 12
 OnePlus Nord N10 | 10
 OnePlus Nord N100 | 10
 Samsung Galaxy A01 | 11
@@ -398,11 +407,13 @@ Samsung Google Nexus 10 | 5.1.1
 Sony Xperia 1 | 10
 Sony Xperia 1 | 11
 Sony Xperia 1 | 9
+Sony Xperia 1 IV | 12
 Sony Xperia 10 | 10
 Sony Xperia 10 | 9
 Sony Xperia 10 II | 10
 Sony Xperia 10 II | 11
 Sony Xperia 10 III | 11
+Sony Xperia 10 IV | 12
 Sony Xperia 10 Plus | 10
 Sony Xperia 10 Plus | 9
 Sony Xperia 5 | 10
@@ -432,6 +443,9 @@ Xiaomi Mi A1 | 9
 Xiaomi Mi A2 | 10
 Xiaomi Mi A2 | 9
 Xiaomi Redmi 9 | 11
+Xiaomi Redmi 9A | 10
+Xiaomi Redmi 9C | 10
+Xiaomi Redmi Note 7 | 10
 Xiaomi Redmi Note 8 | 11
 Xiaomi Redmi Note 8 Pro | 11
 Xiaomi Redmi Note 9 | 11
