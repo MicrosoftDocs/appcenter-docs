@@ -88,7 +88,7 @@ Also there's a way to [specify](~/build/react-native/nodejs.md) a custom version
 ### **December 11, 2018**
 
 - **Added build support for Xamarin.iOS 12.2**:
-  Build your Xamarin apps with [Xamarin.iOS 12.2](https://docs.microsoft.com/xamarin/ios/release-notes/12/12.2)
+  Build your Xamarin apps with [Xamarin.iOS 12.2](/xamarin/ios/release-notes/12/12.2)
   - Xamarin.iOS 12.2.1.11
 
 ### **November 30, 2018**
@@ -199,7 +199,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
 ### **September 13, 2018**
 
 - **Intune app protection policies**
-  Publish [managed iOS line-of-business apps](https://docs.microsoft.com/intune/app-protection-policy) to the Intune store
+  Publish [managed iOS line-of-business apps](/intune/app-protection-policy) to the Intune store
 
 ### **September 11, 2018**
 

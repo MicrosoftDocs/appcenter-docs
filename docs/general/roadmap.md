@@ -18,4 +18,4 @@ To more actively engage with our customers, we've moved our public roadmap to th
 - See someone else’s feature or comment that looks interesting? Give it a Thumbs Up or a +1 so we know you agree. Be sure to search the existing issues first before adding a new one to help us avoid duplicates.
 
 ## Product Technical Support
-The GitHub repository isn't where you'll get [product support](https://docs.microsoft.com/appcenter/help). When you have issues, problems, or questions about how App Center works, you can contact support. In the App Center portal, in the upper-right hand corner, open **? (Help) > Contact support**. Our support team is there to answer your questions and help you solve your problems.
+The GitHub repository isn't where you'll get [product support](/appcenter/help). When you have issues, problems, or questions about how App Center works, you can contact support. In the App Center portal, in the upper-right hand corner, open **? (Help) > Contact support**. Our support team is there to answer your questions and help you solve your problems.
