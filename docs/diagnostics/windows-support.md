@@ -48,7 +48,7 @@ UWP crash reports show the stack trace for the thread that caused the crash. Whe
 To get the memory addresses translated, you need to upload a `.appxsym` file to App Center, which contains all information required for symbolication.
 
 #### Generate the symbols locally
-To obtain an `.appxsym` file, you must create an app bundle as described [here](https://docs.microsoft.com/windows/msix/package/packaging-uwp-apps). Once you've created the bundle, you'll find the symbols file as an `.appxsym` file inside the app bundle folder.
+To obtain an `.appxsym` file, you must create an app bundle as described [here](/windows/msix/package/packaging-uwp-apps). Once you've created the bundle, you'll find the symbols file as an `.appxsym` file inside the app bundle folder.
 
 #### Symbols for applications built in App Center Build
 The App Center Build and Distribution services can automatically generate a valid symbol file and upload to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files to App Center.

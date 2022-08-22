@@ -12,7 +12,7 @@ ms.custom: distribute
 ---
 
 # Migration Guide
-Visual Studio App Center is the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](https://docs.microsoft.com/appcenter).
+Visual Studio App Center is the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.
 
@@ -39,7 +39,7 @@ The back-end migration of CodePush was completed on June 2, 2017. If any of your
 
 ![Import](./images/mg-portal-2.png)
 
-We don't currently support Cordova apps in the portal. You can still use the App Center CLI, and we're working on supporting additional platforms. App Center's mission is to provide quality support for as many platforms as possible. Periodically check out the [App Center blog](https://blogs.msdn.microsoft.com/vsappcenter/) for news or updates, and our [product roadmap](https://docs.microsoft.com/appcenter/general/roadmap).
+We don't currently support Cordova apps in the portal. You can still use the App Center CLI, and we're working on supporting additional platforms. App Center's mission is to provide quality support for as many platforms as possible. Periodically check out the [App Center blog](https://blogs.msdn.microsoft.com/vsappcenter/) for news or updates, and our [product roadmap](/appcenter/general/roadmap).
 
 If you imported a React Native app, or are starting a new React Native app, you should see an app overview panel that lets you manage your app and shows how to add other App Center SDKs. Your App Center app secret is what allows your app to send information to App Center, it isn't the same as your CodePush deployment keys. CodePush deployment keys can be checked by opening the terminal and running:
 
