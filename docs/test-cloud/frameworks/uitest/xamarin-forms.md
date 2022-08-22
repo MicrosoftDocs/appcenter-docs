@@ -88,7 +88,7 @@ Unlike iOS, Android projects don't need any special startup code.
 
 ## Writing UITests
 
-For information about writing UITests, see [UITest documentation](~/test-cloud/frameworks/uitest/index.md). The steps below are a summary, specifically describing how the [Xamarin.Forms demo **UsingUITest**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usinguitest/) is built.
+For information about writing UITests, see [UITest documentation](~/test-cloud/frameworks/uitest/index.md). The steps below are a summary, specifically describing how the [Xamarin.Forms demo **UsingUITest**](/samples/xamarin/xamarin-forms-samples/usinguitest/) is built.
 
 ### Use AutomationId in the Xamarin.Forms UI
 
@@ -190,5 +190,5 @@ For information about how to submit tests to App Center Test, see [Submitting UI
 
 ## Related links
 
-- [UITestSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usinguitest/)
+- [UITestSample](/samples/xamarin/xamarin-forms-samples/usinguitest/)
 - [NUnit](http://www.nunit.org)

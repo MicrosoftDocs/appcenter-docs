@@ -90,7 +90,7 @@ IApp app = ConfigureApp
 
 The relative path example tells `AppBundle` to go up three directories from the Xamarin.UITest assembly, and then navigate down the project tree of the iOS application project to find the app bundle.
 
-`ConfigureApp` does have other methods to help configure `IApp`. See the [iOSAppConfigurator](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.iOSAppConfigurator/) class for more details. Some of the more interesting methods are described in the following table:
+`ConfigureApp` does have other methods to help configure `IApp`. See the [iOSAppConfigurator](/dotnet/api/Xamarin.UITest.Configuration.iOSAppConfigurator/) class for more details. Some of the more interesting methods are described in the following table:
 
 
 | Method | Description |
@@ -142,7 +142,7 @@ IApp app = ConfigureApp.Android.ApkFile("/path/to/android.apk")
 ```
 
 ## Interacting with the User Interface
-To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](https://msdn.microsoft.com/library/bb549151(v=vs.110).aspx) delegate for locating the view. This delegate uses [`AppQuery`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery/) that's at the core of how Xamarin.UITest locates views.
+To interact with views, many `IApp` methods take a [`Func<AppQuery, AppQuery>`](https://msdn.microsoft.com/library/bb549151(v=vs.110).aspx) delegate for locating the view. This delegate uses [`AppQuery`](/dotnet/api/Xamarin.UITest.Queries.AppQuery/) that's at the core of how Xamarin.UITest locates views.
 
 `AppQuery` is a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) for building the queries to locate views. Of the methods that `AppQuery` provides, the `Marked` method is one of the simplest and most flexible. This method uses a heuristic to try to locate views and will be discussed in more detail in the following section. For now, it's important to understand that `IApp` has many methods for interacting with an application. These methods use a `Func<AppQuery, AppQuery>` to obtain a reference to the view to interact with. Some of the more interesting methods provided by `AppQuery` are listed below:
 
@@ -239,7 +239,7 @@ app.Tap(c=>c.Marked("ValidateButton"))
 As commands are being entered, they're remembered by the REPL in a buffer. The REPL provides a `copy` command that will copy the contents of this buffer to the clipboard. This allows us to prototype a test. We can copy the work done in the REPL to the clipboard with `copy`, and then paste those commands inside a `[Test]`.
 
 ## Using Marked To Locate Views
-The [AppQuery.Marked](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
+The [AppQuery.Marked](/dotnet/api/Xamarin.UITest.Queries.AppQuery.Marked) method is a convenient and powerful way to query for views on screen. It works by inspecting the view hierarchy for a view on the screen, trying to match the properties on the view with to the provided string. `Marked` works differently depending on the operating system.
 
 ### Finding iOS Views with Marked
 iOS views will be located using one of the following attributes:
@@ -310,7 +310,7 @@ The next table lists some (but not all) of the methods provided by `IApp` that c
 | `Screenshot(String)` | Takes a screenshot of the application in its current state and saves it to disk. It returns a `FileInfo` object with information about the screenshot taken. |
 | `Flash` | This method will cause the selected view to "flash" or "flicker" on the screen. |
 
-For more information on the [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/) interface, see the [API documentation](https://docs.microsoft.com/dotnet/api/xamarin.uitest) for [`IApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
+For more information on the [`IApp`](/dotnet/api/Xamarin.UITest.IApp/) interface, see the [API documentation](/dotnet/api/xamarin.uitest) for [`IApp`](/dotnet/api/Xamarin.UITest.IApp/), [`AndroidApp`](/dotnet/api/Xamarin.UITest.Android.AndroidApp/), and [`iOSApp`](/dotnet/api/Xamarin.UITest.iOS.iOSApp/).
 
 As an example of how to use these methods, consider the following test for the screenshot that was displayed above. This test will enter a 17-digit number for a credit card into a text field and then tap a button on the screen. It will then inspect the screen for an error message informing the user that the number is too long to be a valid credit card number:
 
