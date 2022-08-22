@@ -60,7 +60,7 @@ Proper .NET Core version will be selected automatically based on Mono version us
 | 6.12 | 3.1.401 |
 
 ### 3.4. Build Android App Bundle (.aab)
-The Android App Bundle is a distribution format that is used to generate optimized APKs for specific devices. It can be uploaded to the Play Store. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/), and the [Xamarin.Android 9.4 release notes](https://docs.microsoft.com/xamarin/android/release-notes/9/9.4#initial-support-for-android-app-bundle-publishing-format), which can also help you decide if you want to build a bundle along with your regular `.apk.`
+The Android App Bundle is a distribution format that is used to generate optimized APKs for specific devices. It can be uploaded to the Play Store. You can find out more about the Android App Bundle in the [official Android documentation](https://developer.android.com/guide/app-bundle/), and the [Xamarin.Android 9.4 release notes](/xamarin/android/release-notes/9/9.4#initial-support-for-android-app-bundle-publishing-format), which can also help you decide if you want to build a bundle along with your regular `.apk.`
 
 Toggle on the option for Android App Bundle to produce an `.aab` and an `.apk`. If the `.csproj` file contains `aab` in the `AndroidPackageFormat` property, this option will automatically be toggled on. Building an `.aab` is supported for Xamarin.Android 9.4 and higher.
 
@@ -96,7 +96,7 @@ If the `NuGet.config` file is checked-in into the repository and sitting next to
 </configuration>
 ```
 
-If you have complex configurations and need more information, refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, refer to [Configuring NuGet behavior](/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.9. Distribute the build
 You can configure each successful build from a branch to be distributed to a previously created distribution group or a store destination. You can add a new distribution group or [configure a store connection](~/distribution/stores/index.md) from within the Distribute service. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
@@ -131,6 +131,6 @@ The build step logs (located in the `build/` directory of the archive) are helpf
 The `.apk` file is an Android application packaged file that stores the Android app. If the build has been correctly signed, the `.apk` file can be installed on a real device and deployed to the Play Store. If the build hasn't been signed, the app can run on an emulator or be used for other purposes.
 
 ## Supported versions and requirements
-App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
+App Center supports Portable Class Library (PCL) and [.NET Standard](/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard.
 
 App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever they're available. If you're using a Component that can't be replaced, contact us. See [help and feedback](../../../help.md).

@@ -73,7 +73,7 @@ If the **NuGet.Config** file is checked into the repository, and sitting next to
 </configuration>
 ```
 
-If you have complex configurations and need more information, refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, refer to [Configuring NuGet behavior](/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.8. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.
@@ -81,4 +81,4 @@ You can configure each successful build from a branch to be distributed to a pre
 Once you save the configuration, a new build will be kicked off automatically.
 
 ### 4. Supported versions and requirements
-The minimum [Windows 10 Build](https://docs.microsoft.com/windows/uwp/updates-and-versions/choose-a-uwp-version) supported to build UWP apps is 16299. Our build machines are running Visual Studio 2019.
+The minimum [Windows 10 Build](/windows/uwp/updates-and-versions/choose-a-uwp-version) supported to build UWP apps is 16299. Our build machines are running Visual Studio 2019.

@@ -31,8 +31,8 @@ Issues that occur in local builds, or using specific framework features, usually
 | [iOS (Native)](~/build/ios/index.md) | [iOS Guide](~/build/troubleshooting/ios.md) | [Apple Developer Docs](https://developer.apple.com/documentation/) |
 | [macOS](~/build/macos/index.md) | see General Guides | [Apple Developer Docs](https://developer.apple.com/documentation/) |
 | [React Native](~/build/react-native/index.md) | [React Native Guide](~/build/troubleshooting/react-native.md) | [React Native Docs](https://reactnative.dev/docs/getting-started) |
-| [UWP](~/build/uwp/index.md) | see General Guides | [UWP Docs](https://docs.microsoft.com/windows/uwp/) |
-| [Xamarin](~/build/xamarin/index.md) | [Xamarin Guide](~/build/troubleshooting/xamarin.md) | [Xamarin Docs](https://docs.microsoft.com/xamarin/) |
+| [UWP](~/build/uwp/index.md) | see General Guides | [UWP Docs](/windows/uwp/) |
+| [Xamarin](~/build/xamarin/index.md) | [Xamarin Guide](~/build/troubleshooting/xamarin.md) | [Xamarin Docs](/xamarin/) |
 
 ## Contacting App Center Support
 Open the help menu in the upper-right corner of the App Center portal: **https://www.appcenter.ms > ? > Contact support**. Use the message field to explain your issue or question. Support is provided in English only and during business hours.
