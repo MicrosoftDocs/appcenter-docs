@@ -4,7 +4,7 @@ description: Explain Export feature
 keywords: app center, analytics, export
 author: lucen-ms
 ms.author: lucen
-ms.date: 04/07/2021
+ms.date: 08/30/2022
 ms.topic: article
 ms.assetid: E050E454-8352-4ED3-AEEC-1526653422DD
 ms.service: vs-appcenter
