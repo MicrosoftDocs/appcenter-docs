@@ -48,7 +48,7 @@ Disconnect the repository account, and reconnect to the correct one:
 ## When connecting an Azure DevOps repository, I see "No Projects Found"
 It's possible when you first attempt to connect App Center to Azure DevOps (formerly VSTS) that it gets authorized under the wrong organization. Determine [which Azure DevOps accounts are for an organization](https://app.vsaex.visualstudio.com/me) and ensure yours is listed. When you attempt to complete the authentication flow in Azure DevOps, verify the message reads **App requests the following permissions from email@example.com (org)**.
 
-Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](https://docs.microsoft.com/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
+Another possibility is that OAuth is disabled under Security Policies settings. Follow [this guidance](/azure/devops/organizations/accounts/change-application-access-policies) to enable it.
 
 ## Are Git submodules supported?
 For repositories hosted on GitHub and Azure DevOps, Git submodules over HTTPS are supported using the same authentication as the parent repository. 
@@ -68,10 +68,10 @@ try the following steps:
 * Re-enable the Webhooks
 * Commit a change to the affected repository/branch and try a new build
 
-Contact [App Center support](https://docs.microsoft.com/appcenter/general/support-center.md#contact-us) if the issue persists.
+Contact [App Center support](/appcenter/general/support-center.md#contact-us) if the issue persists.
 
 ## What can I do if I'm using Team Foundation Version Control (TFVC)?
-App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](https://docs.microsoft.com/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](https://docs.microsoft.com/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
+App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
 
 ## Is my source code secure?
 App Center uses virtual machines to build your code. There's a clean virtual machine provisioned especially for your build, which gets discarded once the build finishes. The files uploaded for code signing and the password for the certificate are also stored securely on our servers.

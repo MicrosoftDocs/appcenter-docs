@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Learning Resources
 ## Microsoft Docs
-[Introduction to App Center](https://docs.microsoft.com/learn/modules/intro-to-app-center/)
+[Introduction to App Center](/learn/modules/intro-to-app-center/)
 Characterize the types of services offered by App Center. Describe the use of App Center to build, distribute, test, and analyze usage of apps.
 
 In this module, you'll:

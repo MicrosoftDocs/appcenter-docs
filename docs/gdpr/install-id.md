@@ -20,9 +20,9 @@ For each App Center SDK installed inside your app, we automatically create a uni
 The easiest way to associate install IDs with users is via a login mechanism. In this pattern, the developer associates a login identity with an install ID on authentication. Since a new installation of the app SDK will result in an entirely new install ID, a robust design will include the possibility of many install IDs mapping to a single identity. For now, you must create an implementation yourself, while the App Center team looks at our designs and gauges customer interest in such a feature.
 
 Here is how to retrieve an install ID for....
-* [UWP](https://docs.microsoft.com/appcenter/sdk/other-apis/uwp#identify-installations)
-* [Xamarin](https://docs.microsoft.com/appcenter/sdk/other-apis/xamarin#identify-installations)
-* [Android](https://docs.microsoft.com/appcenter/sdk/other-apis/android#identify-installations)
-* [iOS](https://docs.microsoft.com/appcenter/sdk/other-apis/ios#identify-installations)
-* [macOS](https://docs.microsoft.com/appcenter/sdk/other-apis/macos#identify-installations)
-* [React Native](https://docs.microsoft.com/appcenter/sdk/other-apis/react-native#identify-installations)
+* [UWP](/appcenter/sdk/other-apis/uwp#identify-installations)
+* [Xamarin](/appcenter/sdk/other-apis/xamarin#identify-installations)
+* [Android](/appcenter/sdk/other-apis/android#identify-installations)
+* [iOS](/appcenter/sdk/other-apis/ios#identify-installations)
+* [macOS](/appcenter/sdk/other-apis/macos#identify-installations)
+* [React Native](/appcenter/sdk/other-apis/react-native#identify-installations)

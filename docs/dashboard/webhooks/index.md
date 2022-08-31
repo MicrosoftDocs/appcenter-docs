@@ -34,7 +34,7 @@ App Center's webhooks allow users to send automatic notifications to connected a
   > For Distribute, the webhook will be triggered when you when a new version is released to a distribution group. If you checked **do not notify testers** in the **Review** step of creating a new release, the webhook won't fire.
   > For Diagnostics, the webhook will be triggered for new error groups with symbols provided. If no symbols are found for the new error group, the webhook won't fire.
 
-App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](https://docs.microsoft.com/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
+App Center will send an HTTP POST payload to the webhook's specified URL. Webhooks are configured at the app level under the **Settings** page of your specified app. Users must have manager or developer permissions in the app to create and configure the webhooks. We currently only support webhooks for [Slack](https://slack.com) and [Microsoft Teams](https://products.office.com/microsoft-teams/group-chat-software). To post to other platforms, you may write an [Azure function](/azure/azure-functions/) that translates the way we `POST` to fit the requirements of the platform.
 
 ## Getting Started
 
@@ -51,7 +51,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
    - Webhook name
    - Webhook URL
 
-     You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](https://docs.microsoft.com/microsoftteams/office-365-custom-connectors#develop-custom-connectors) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)).
+     You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](/microsoftteams/office-365-custom-connectors#develop-custom-connectors) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)).
 
      Select the **dropdown** for Build status notifications and the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts.
 
@@ -143,4 +143,4 @@ You can also inspect the payload by using [RequestBin](https://requestbin.com/).
 
 ## Custom webhook support
 
-To post to other platforms, you can write an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api) that translates the way we `POST` to fit the requirements of the platform. To do that, create an [Azure function](https://docs.microsoft.com/azure/azure-functions/functions-create-serverless-api), paste the URL under the **Webhook URL** field in [step 4](#step4), and App Center will post the [webhook payload](#example-webhook-payload) to that endpoint. You may then modify the payload to the platform's requirements.
+To post to other platforms, you can write an [Azure function](/azure/azure-functions/functions-create-serverless-api) that translates the way we `POST` to fit the requirements of the platform. To do that, create an [Azure function](/azure/azure-functions/functions-create-serverless-api), paste the URL under the **Webhook URL** field in [step 4](#step4), and App Center will post the [webhook payload](#example-webhook-payload) to that endpoint. You may then modify the payload to the platform's requirements.

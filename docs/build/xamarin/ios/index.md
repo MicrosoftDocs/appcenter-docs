@@ -15,7 +15,7 @@ ms.tgt_pltfrm: xamarin-ios
 # Building Xamarin apps for iOS
 > [!NOTE] 
 > Supported versions and requirements
-App Center supports Portable Class Library (PCL) and [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
+App Center supports Portable Class Library (PCL) and [.NET Standard](/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 
 App Center doesn't support Components from the Xamarin Component Store and we advise using NuGet packages whenever available. If you're using a Component that can't be replaced, contact us. See [help and feedback](../../../help.md).
 
 To start building your first Xamarin iOS app, you'll need to:
@@ -81,9 +81,9 @@ Simulator builds can only be ran on simulators and can't be installed on the dev
 When enabled, the `CFBundleVersion` in the Info.plist of your app automatically increments for each build. The change happens pre-build and won't be committed to your repository.
 
 ### 3.8. Code signing
-A successful device build will produce an IPA file. To install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision`) and a valid certificate (`.p12`)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin documentation](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
+A successful device build will produce an IPA file. To install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (`.mobileprovision`) and a valid certificate (`.p12`)](~/build/ios/code-signing.md#finding-provisioning-profiles), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin documentation](/xamarin/ios/get-started/installation/device-provisioning/).
 
-Apps with [app or watchOS extensions](https://docs.microsoft.com/xamarin/ios/platform/extensions) require an additional provisioning profile per extension to be signed.
+Apps with [app or watchOS extensions](/xamarin/ios/platform/extensions) require an additional provisioning profile per extension to be signed.
 
 > [!NOTE]
 > There's an [existing issue](https://github.com/xamarin/xamarin-macios/issues/5878) when running `nuget restore` in projects containing Xamarin watchOS apps.
@@ -132,7 +132,7 @@ If the **NuGet.config** file is checked-in for the repository and sitting next t
 </configuration>
 ```
 
-If you have complex configurations and need more information, refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, refer to [Configuring NuGet behavior](/nuget/consume-packages/configuring-nuget-behavior).
 
 ### 3.11. Distribute to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There's always a default distribution group called "Collaborators" that includes all the users who have access to the app.

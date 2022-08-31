@@ -182,7 +182,7 @@ By default, no release attributes are modified by the patch operation, so to upd
 
 ### CodePush - Promote
 
-Allows you to promote a previously released update from one deployment to another (e.g. **Staging** -> **Production**), and enables the use of [Azure DevOps Release Management](https://docs.microsoft.com/vsts/build-release/concepts/definitions/release/what-is-release-management) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`appcenter codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
+Allows you to promote a previously released update from one deployment to another (e.g. **Staging** -> **Production**), and enables the use of [Azure DevOps Release Management](/vsts/build-release/concepts/definitions/release/what-is-release-management) for easily handling multiple app environments from your CI environment. This task behaves equivalently to the [`appcenter codepush promote`](./cli.md#promoting-updates) command in the management CLI, and includes the following options:
 
 1. **Authentication Method** - Specifies how you want to authenticate with the CodePush server. The available options are:
 

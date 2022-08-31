@@ -28,7 +28,7 @@ Support is provided in English only and during business hours. You can expect an
 Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support). 
 
 ## Feedback on the documentation
-The comments feature on our documentation is intended for docs suggestions or questions. Every documentation page (except the [App Center docs landing page](https://docs.microsoft.com/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
+The comments feature on our documentation is intended for docs suggestions or questions. Every documentation page (except the [App Center docs landing page](/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
 
 ![App Center docs feedback options](images/app-center-feedback-options.png)
 
@@ -52,4 +52,4 @@ If you have ideas on how to make the docs better, you can make the changes yours
 3. Submit a pull request (PR)
 4. We'll review your changes and get back to you
 
-For more information on contributing to the App Center docs, read the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/).
+For more information on contributing to the App Center docs, read the [Microsoft Docs contributor guide overview](/contribute/).

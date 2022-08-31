@@ -15,7 +15,7 @@ ms.tgt_pltfrm: xamarin
 # Configuration mappings
 Xamarin Solutions can be configured to build certain projects and ignore others using custom build configurations. These configurations can minimize possible errors and reduce the build time for your code. 
 
-This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin)
+This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](/azure/devops/pipelines/ecosystems/xamarin)
 
 ## Modifying Solution Configuration Mappings
 Where to change the **Configuration Mapping** depends on the IDE you use. 
@@ -29,7 +29,7 @@ Where to change the **Configuration Mapping** depends on the IDE you use.
 
 3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. The **Deploy** option has no effect when building in App Center. 
 
-You can read more about configuration mappings in the [Visual Studio official documentation](https://docs.microsoft.com/visualstudio/extensibility/internals/configuration-options-overview).
+You can read more about configuration mappings in the [Visual Studio official documentation](/visualstudio/extensibility/internals/configuration-options-overview).
 
 ### [Visual Studio for Mac](#tab/vsmac/)
 1. Double-click on your solution in the **Solution Explorer**
@@ -40,7 +40,7 @@ You can read more about configuration mappings in the [Visual Studio official do
 
 3. Choose the active solution configuration, platform, respective project configurations, and **Build/Deploy** options. Unlike in Windows, there's no **Deploy** option.
 
-There's additional information in the [Visual Studio for Mac configuration guide](https://docs.microsoft.com/visualstudio/mac/create-and-edit-configurations#creating-a-solution-build-configuration).
+There's additional information in the [Visual Studio for Mac configuration guide](/visualstudio/mac/create-and-edit-configurations#creating-a-solution-build-configuration).
 
 ## Project Configurations
 Some project options can be set differently for each project configuration. When you switch between different configurations, you may see different outputs at build time. For example, when you use a *Debug* configuration, by default the output will include debugging symbols. Debugging symbols increase file sizes and shouldn't be used for publishing in stores.
