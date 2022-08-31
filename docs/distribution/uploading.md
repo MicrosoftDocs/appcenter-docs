@@ -17,7 +17,7 @@ Upload your application binary package to App Center to distribute it. App Cente
 On this page you can learn how to generate the binary for release, and how to upload and release it to groups using the portal, the command-line interface (CLI), and the application programming interface (API). 
 
 You can also use Azure DevOps or Jenkins: 
-- Azure DevOps uses the [App Center Distribute Task (version 3+)](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
+- Azure DevOps uses the [App Center Distribute Task (version 3+)](/azure/devops/pipelines/tasks/deploy/app-center-distribute) 
 - [Jenkins Plugin (version 0.11.0+)](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
@@ -258,7 +258,7 @@ You can find links to specific releases to public destinations on the releases t
 [POSTstores]: https://openapi.appcenter.ms/#/distribute/releases_addStore
 [PATCH_updateReleaseUpload]: https://openapi.appcenter.ms/#/distribute/releases_updateReleaseUploadStatus
 [PATCH_updateRelease]: https://openapi.appcenter.ms/#/distribute/releases_update
-[uwp-package]: https://docs.microsoft.com/windows/uwp/packaging/
+[uwp-package]: /windows/uwp/packaging/
 [apple-macos]: https://help.apple.com/xcode/mac/current/#/dev295cc0fae
 [groups]: ./groups.md
 [auto-provisioning]: ./auto-provisioning.md

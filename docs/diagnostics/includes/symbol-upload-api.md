@@ -16,7 +16,7 @@ curl -X POST 'https://api.appcenter.ms/v0.1/apps/{owner_name}/{app_name}/symbol_
     -d '{JSON BODY}'
 ```
 
-2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your file on disk.  This call uploads the file to our backend storage accounts. Learn more about [PUT Blob request headers ](https://docs.microsoft.com/rest/api/storageservices/put-blob#request-headers-all-blob-types).
+2. Using the `upload_url` property returned from the first step, make a `PUT` request with the header: `"x-ms-blob-type: BlockBlob"` and supply the location of your file on disk.  This call uploads the file to our backend storage accounts. Learn more about [PUT Blob request headers ](/rest/api/storageservices/put-blob#request-headers-all-blob-types).
 
 ```shell
 curl -X PUT '{upload_url}' \

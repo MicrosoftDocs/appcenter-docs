@@ -32,7 +32,7 @@ The App Center Build and Distribution service can automatically generate a valid
 6. You should see a folder named `dSYMs` that contains your dSYM bundle.
 7. Create a zip file of the dSYM bundle.
 
-If you're using Visual Studio instead of Xcode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
+If you're using Visual Studio instead of Xcode, see [Where can I find the dSYM file to symbolicate iOS crash logs?](/xamarin/ios/troubleshooting/questions/symbolicate-ios-crash) to find the dSYM file.
 
 ## Uploading symbols
 
