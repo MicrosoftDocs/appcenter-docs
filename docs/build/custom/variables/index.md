@@ -78,7 +78,7 @@ In the [build scripts](~/build/custom/scripts/index.md), you can access the vari
 
 ## NuGet.Config for Xamarin or UWP
 
-If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.Config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.Config` file, read the [reference documentation](https://docs.microsoft.com/nuget/schema/nuget-config-file#packagesourcecredentials).
+If you're building a Xamarin or UWP app, you might want to connect to a private NuGet feed, which requires authentication. In the `NuGet.Config` file, you can consume the variables you've defined. For more details about the usage of credentials in your `NuGet.Config` file, read the [reference documentation](/nuget/schema/nuget-config-file#packagesourcecredentials).
 
 ```xml
 <packageSourceCredentials>
