@@ -40,7 +40,7 @@ All network traffic in App Center, whether over the internet, or within an Azure
 
 ### Encryption at rest
 
-All data held by App Center is [encrypted at rest](https://docs.microsoft.com/azure/security/fundamentals/encryption-overview). We use the encryption features provided by the Microsoft Azure data storage products that we use to build App Center. These include [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-service-encryption), [Azure SQL](https://docs.microsoft.com/azure/azure-sql/database/security-overview#information-protection-and-encryption), and [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest).
+All data held by App Center is [encrypted at rest](/azure/security/fundamentals/encryption-overview). We use the encryption features provided by the Microsoft Azure data storage products that we use to build App Center. These include [Azure Storage](/azure/storage/common/storage-service-encryption), [Azure SQL](/azure/azure-sql/database/security-overview#information-protection-and-encryption), and [Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
 
 ### Encryption keys
 
@@ -62,11 +62,11 @@ In general, App Center follows the [Microsoft Security Development Lifecycle](ht
 
 ## Access to production systems
 
-From time to time, Microsoft employees need access to customer data stored within App Center. All employees who have access to customer data must pass a background check, which verifies previous employment and criminal convictions. In addition, we permit access to production systems only when there's a live site incident or other approved maintenance activity. All personnel requiring access to production App Center systems are required to use a [Secure Access Workstation](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations), using just-in-time (JIT) elevation. All JIT elevation requests must be approved by another team member, and are logged and audited.
+From time to time, Microsoft employees need access to customer data stored within App Center. All employees who have access to customer data must pass a background check, which verifies previous employment and criminal convictions. In addition, we permit access to production systems only when there's a live site incident or other approved maintenance activity. All personnel requiring access to production App Center systems are required to use a [Secure Access Workstation](/windows-server/identity/securing-privileged-access/privileged-access-workstations), using just-in-time (JIT) elevation. All JIT elevation requests must be approved by another team member, and are logged and audited.
 
 Data in App Center is classified to distinguish between customer data (what you upload to App Center), organizational data (information used when signing up for or administering your organization), and Microsoft data (information required for or collected through the operation of the service). Based on the classification we control usage scenarios, access restrictions, and retention requirements.
 
-All logins use [Azure Active Directory multi-factor authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) (MFA / 2FA).
+All logins use [Azure Active Directory multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) (MFA / 2FA).
 
 ## Business Continuity and Disaster Recovery (BCDR)
 
@@ -95,5 +95,5 @@ App Center works with the [Microsoft Security Response Center](https://www.micro
 - [Microsoft Privacy Dashboard](https://account.microsoft.com/privacy)
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - [Microsoft privacy response center](https://aka.ms/userprivacysite)
-- [Microsoft's GDPR commitments to customers of our generally available enterprise software products](https://docs.microsoft.com/legal/gdpr)
-- [Azure Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure)
+- [Microsoft's GDPR commitments to customers of our generally available enterprise software products](/legal/gdpr)
+- [Azure Data Subject Requests for the GDPR](/microsoft-365/compliance/gdpr-dsr-azure)

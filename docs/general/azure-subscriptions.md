@@ -74,7 +74,7 @@ If you need to remove an Azure subscription from your organization/personal acco
 
 - Can I use an Azure Subscription with spending limits?
 
-    No, before you can select your subscription you need to turn off spending limits permanently. Follow this document to [Understand Azure spending limit and how to remove it](https://docs.microsoft.com/azure/billing/billing-spending-limit).
+    No, before you can select your subscription you need to turn off spending limits permanently. Follow this document to [Understand Azure spending limit and how to remove it](/azure/billing/billing-spending-limit).
 
 - How often will I see charges from App Center on my Azure bill?
 
