@@ -125,7 +125,7 @@ For Mac build machines:
 
 For Windows build machines, refer to [UWP C#](~/build/uwp/index.md).
 
-If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+If you have complex configurations and need more information, you can refer to [Configuring NuGet behavior](/nuget/consume-packages/configuring-nuget-behavior).
 
 ## Builds stuck at _CompileToNative_
 If the build experiences similar symptoms as described [in this GitHub issue](https://github.com/xamarin/xamarin-macios/issues/6818), try to build only for ARM64 by adding the following argument, as suggested in the issue:

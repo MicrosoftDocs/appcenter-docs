@@ -32,7 +32,7 @@ To get started using the Build service, you first must connect to a source contr
 
 App Center doesn't support Team Foundation Version Control (TFVC).
 
-If you're having trouble with your builds, check the [troubleshooting guide](https://docs.microsoft.com/appcenter/build/troubleshooting/) or you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback.
+If you're having trouble with your builds, check the [troubleshooting guide](/appcenter/build/troubleshooting/) or you can always reach out and let us know by opening a support ticket. Select the help menu (?) in the upper right corner of App Center portal, then choose 'Contact support'. Our dedicated support team will respond to your questions and feedback.
 
 
 > [!NOTE]
