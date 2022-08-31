@@ -59,7 +59,7 @@ If you answer “Yes” to these questions, Azure Pipelines may be the best tool
 **1. Did you want to Build other apps (Web apps, for instance)?**
 You should stick to Azure Pipelines. App Center only supports the OS/Platforms and services as mentioned in our [Platform Service Matrix page](../general/platform-service-matrix.md)
 
-**2. Are you ready to [create your own Build Pipeline](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
+**2. Are you ready to [create your own Build Pipeline](/azure/devops/pipelines/get-started/pipelines-get-started), create/use existing [tasks](https://github.com/Microsoft/azure-pipelines-tasks) specific to your Mobile app/Platform/Framework?**
   
 Azure Pipelines will work out best for you if your app is:
 - Fairly complex 

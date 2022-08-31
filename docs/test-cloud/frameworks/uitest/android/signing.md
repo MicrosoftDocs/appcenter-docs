@@ -24,7 +24,7 @@ When running locally with Xamarin.UITest to specify an Android Keystore, use the
 
 > ConfigureApp.Android.Keystore(path, spass, kpass, alias).StartApp();
 
-[AndroidAppConfigurator.KeyStore](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore)
+[AndroidAppConfigurator.KeyStore](/dotnet/api/Xamarin.UITest.Configuration.AndroidAppConfigurator.KeyStore)
 
 > public AndroidAppConfigurator KeyStore (String path, String storePassword, String keyPassword, String keyAlias)
 

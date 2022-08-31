@@ -28,7 +28,7 @@ From there you can download build files, such as logs and app binaries.
 
 ## Backup using the App Center API
 General References:
-- [App Center API Guide](https://docs.microsoft.com/appcenter/api-docs/)
+- [App Center API Guide](/appcenter/api-docs/)
 - [Swagger API methods for Build](https://openapi.appcenter.ms/#/build)
 
 You can download logs & build artifacts using this API call: https://openapi.appcenter.ms/#/build/builds_getDownloadUri. The call works as long as the build data exists and your API credentials have permission to access that data.
@@ -37,7 +37,7 @@ The API can also be used to record the current branch configuration settings, us
 
 ## Backup using the App Center CLI
 General References:
-- [CLI Documentation](https://docs.microsoft.com/appcenter/cli/)
+- [CLI Documentation](/appcenter/cli/)
 - [CLI Public Repository](https://github.com/microsoft/appcenter-cli)
 
 You can use this command to back up your build data from the CLI:

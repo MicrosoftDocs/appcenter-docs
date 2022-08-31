@@ -13,7 +13,7 @@ ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
 # App Center Email Notifications
 ## Overview
 
-Many developers want to be automatically notified when key events happen in their apps, and not have to continually log in to a portal for information. Email and [webhooks](https://docs.microsoft.com/appcenter/dashboard/webhooks/) are important notification methods for that.
+Many developers want to be automatically notified when key events happen in their apps, and not have to continually log in to a portal for information. Email and [webhooks](/appcenter/dashboard/webhooks/) are important notification methods for that.
 
 ### Events
 

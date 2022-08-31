@@ -26,13 +26,13 @@ Usually this problem is because of uncommitted files, different tooling, or unre
 ### Files with modified filenames or locations are ignored
 Builds might ignore a key file that was recently moved or renamed. Try selecting **Save** or **Save & Build** in the build configuration. Either option reindexes your repository tree and updates the build definition.
 
-Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](https://docs.microsoft.com/nuget/reference/nuget-config-file).
+Known causes are moving or renaming [build scripts](~/build/custom/scripts/index.md) & [nuget.config files](/nuget/reference/nuget-config-file).
 
 ## Comparing different builds in App Center
 ### Tracking changes in your build settings
 You can record your branch configuration by calling this API method: https://openapi.appcenter.ms/#/build/branchConfigurations_get
 
-The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](https://docs.microsoft.com/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
+The API doesn't directly allow recording past configurations. However, you can run this command with a [custom build script](/appcenter/build/custom/scripts/) so that your builds automatically record the current configuration when they execute. 
 
 #### Tracking changes in App Center Cloud Build Machines
 Like your build settings, you can check the current tooling by reviewing this document: [Cloud Build Machines](~/build/software.md). 

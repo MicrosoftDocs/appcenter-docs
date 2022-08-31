@@ -12,30 +12,30 @@ ms.custom: test
 ---
 
 # Working with WebViews
-Xamarin.UITest provides APIs for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use webviews to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](https://docs.microsoft.com/dotnet/api/UIKit.UIWebView/) or [WKWebView](https://docs.microsoft.com/dotnet/api/WebKit.WKWebView/). UIWebView is older and compatible with all versions of iOS, while WKWebView is for iOS 8 and higher.
+Xamarin.UITest provides APIs for locating and interaction with views in native mobile applications. However, some mobile apps are hybrid apps that use webviews to display HTML to the user. Android provides the `android.webkit.WebView`, while iOS applications may use either [UIWebView](/dotnet/api/UIKit.UIWebView/) or [WKWebView](/dotnet/api/WebKit.WKWebView/). UIWebView is older and compatible with all versions of iOS, while WKWebView is for iOS 8 and higher.
   
 Interacting with webviews is a bit more involved as UITest must first obtain a reference to the webview, and then to the DOM elements it contains.
 
 ## WebView APIs in UITest
 There are two APIs to obtain a reference to a webview control in UITest:
  
-* **[AppQuery.WebView](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/)**  is used for `UIWebView` controls.
-* **[AppQuery.Class](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/)** is used for `WKWebView` controls.
+* **[AppQuery.WebView](/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/)**  is used for `UIWebView` controls.
+* **[AppQuery.Class](/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/)** is used for `WKWebView` controls.
 
 Each of these will be discussed in more detail below. 
 
 ## Locating the `UIWebView` control with AppQuery.WebView
-UITest provides the [AppQuery.WebView](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/) method to obtain a reference to a `UIWebView` control.  The following snippet is an example:
+UITest provides the [AppQuery.WebView](/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView/) method to obtain a reference to a `UIWebView` control.  The following snippet is an example:
 
 ```text
 >>> app.Query(c=>c.WebView())       
 ```
 
-If there's only one webview on the screen, then `WebView` will default to that one webview. If there are multiple webviews on the screen, the [`WebView(Int32)`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_) can be used to isolate one by passing a zero-based index.
+If there's only one webview on the screen, then `WebView` will default to that one webview. If there are multiple webviews on the screen, the [`WebView(Int32)`](/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_) can be used to isolate one by passing a zero-based index.
 
 
 ## Locating the `WKWebView` control
-UITest provides the [AppQuery.Class](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/) method to obtain a reference to a `WKWebView` control.  The following snippet is an example:
+UITest provides the [AppQuery.Class](/dotnet/api/Xamarin.UITest.Queries.AppQuery.Class/) method to obtain a reference to a `WKWebView` control.  The following snippet is an example:
 
 ```text
 >>> app.Query(c=>c.Class("WKWebView"))
@@ -50,9 +50,9 @@ Once the webview has been isolated, there are two main APIs for interacting with
 The XPath API, while more powerful is also more complicated to use. In general, preference should be given to the CSS API, and the XPath API used when necessary.
 
 ### CSS
-It's possible to match HTML elements using the [AppQuery.Css](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.Css#Xamarin_UITest_Queries_AppQuery_Css_System_String_) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.
+It's possible to match HTML elements using the [AppQuery.Css](/dotnet/api/Xamarin.UITest.Queries.AppQuery.Css#Xamarin_UITest_Queries_AppQuery_Css_System_String_) method. This method takes a CSS selector and will return an array of all HTML elements that match. Functionally, this API is the same on Android and iOS.
 
-For example, the following Android activity contains an [`android.webkit.WebView`](https://docs.microsoft.com/dotnet/api/Android.Webkit.WebView/):
+For example, the following Android activity contains an [`android.webkit.WebView`](/dotnet/api/Android.Webkit.WebView/):
 
 [ ![WebView on an Android device](./images/webviews-android-01-sml.png)](./images/webviews-android-01.png#lightbox)
 
@@ -87,7 +87,7 @@ Query for Css("H1") gave 1 results.
 ]
 ```
 
-If there's more than one webview on a given screen, then UITest will automatically default to the first webview. If there are multiple webviews, then it's necessary to explicitly identify the webview using [`IApp.WebView(Int32)`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_). For example, if a screen had two webviews and we want to find all the H1 elements in the second webview:
+If there's more than one webview on a given screen, then UITest will automatically default to the first webview. If there are multiple webviews, then it's necessary to explicitly identify the webview using [`IApp.WebView(Int32)`](/dotnet/api/Xamarin.UITest.Queries.AppQuery.WebView#Xamarin_UITest_Queries_AppQuery_WebView_System_Int32_). For example, if a screen had two webviews and we want to find all the H1 elements in the second webview:
 
 ```text
 >>> app.Query(c=>c.WebView(1).Css("H1"))                                                                                
@@ -125,7 +125,7 @@ If more than one HTML element matches the CSS query, the `Index` method can be u
 ```
 
 ### XPath
-XPath is a powerful API for searching the DOM, but can be a bit more difficult to use compared to the CSS API. UITest can locate DOM elements by an XPath selector passed to the [AppQuery.XPath](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.XPath#Xamarin_UITest_Queries_AppQuery_XPath_System_String_) method. This API is the same on Android and iOS.
+XPath is a powerful API for searching the DOM, but can be a bit more difficult to use compared to the CSS API. UITest can locate DOM elements by an XPath selector passed to the [AppQuery.XPath](/dotnet/api/Xamarin.UITest.Queries.AppQuery.XPath#Xamarin_UITest_Queries_AppQuery_XPath_System_String_) method. This API is the same on Android and iOS.
 
 The following snippet is an example of how to match the H1 DOM element from the previous section using XPath:
 
@@ -159,7 +159,7 @@ Query for XPath("//h1") gave 1 results.
 ```
 
 ## Invoking JavaScript
-It's also possible to locate webviews using the [`AppQuery.InvokeJS`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of a string, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
+It's also possible to locate webviews using the [`AppQuery.InvokeJS`](/dotnet/api/Xamarin.UITest.Queries.AppQuery.InvokeJS#Xamarin_UITest_Queries_AppQuery_InvokeJS_System_String_) method. This method takes a query in the form of a string, and invokes JavaScript on the view elements matched by the query. If view elements other than WebViews are found, the execution will halt and an Exception will be thrown.
 
 ### InvokeJS on Android
 Generally speaking Android requires that the JavaScript `returns` the value; otherwise the query will return `null`:
@@ -247,7 +247,7 @@ Scrolling down to Css("#firstname")
 ```
 
 ### Entering Text
-Entering text into an HTML input element is accomplished by providing text and an `AppWebQuery` using [`AppQuery.EnterText`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp.EnterText#Xamarin_UITest_IApp_EnterText_System_Func_Xamarin_UITest_Queries_AppQuery_Xamarin_UITest_Queries_AppQuery__System_String_) API . Given the following screenshot of a webview in an Android application:
+Entering text into an HTML input element is accomplished by providing text and an `AppWebQuery` using [`AppQuery.EnterText`](/dotnet/api/Xamarin.UITest.IApp.EnterText#Xamarin_UITest_IApp_EnterText_System_Func_Xamarin_UITest_Queries_AppQuery_Xamarin_UITest_Queries_AppQuery__System_String_) API . Given the following screenshot of a webview in an Android application:
 
 
 [ ![Screenshot showing the WebView used in the following example](./images/webviews-android-03-sml.png)](./images/webviews-android-03.png#lightbox)

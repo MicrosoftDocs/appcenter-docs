@@ -15,7 +15,7 @@ ms.custom: test
 
 *Backdoors* are methods that are included in a Xamarin.iOS or Xamarin.Android app, and are invoked during a test run to do some special action like configuring a testing state on a device. For example, a backdoor may be used to seed a database with some test data, so that all tests in a test fixture can use it consistently.
 
-The [`IApp.Invoke`](https://docs.microsoft.com/dotnet/api/Xamarin.UITest.IApp.Invoke#Xamarin_UITest_IApp_Invoke_System_String_System_Object_) allows a test to call a backdoor method in an app. 
+The [`IApp.Invoke`](/dotnet/api/Xamarin.UITest.IApp.Invoke#Xamarin_UITest_IApp_Invoke_System_String_System_Object_) allows a test to call a backdoor method in an app. 
 
 How to use `Invoke` and implement a backdoor method in an application is 
 different between iOS and Android.
@@ -25,7 +25,7 @@ different between iOS and Android.
 On Android, `IApp.Invoke` can be used to invoke a method in the Xamarin.Android application according to the following rules:
 
 * The method must be `public`.
-* The backdoor method must be adorned with the [`Java.Interop.Export`](https://docs.microsoft.com/dotnet/api/Java.Interop.ExportAttribute) attribute that exposes the name of the backdoor method.
+* The backdoor method must be adorned with the [`Java.Interop.Export`](/dotnet/api/Java.Interop.ExportAttribute) attribute that exposes the name of the backdoor method.
 * The method may return one of `string`, `Java.Lang.String`, or `void`.
 * The method may accept a parameter, which may be a `string`, `int`, or `bool`. 
 * If the method accepts a parameter, it must be provided to `IApp.Invoke`.    
@@ -77,7 +77,7 @@ public class InvokeExampleTestFixture()
 On iOS, `IApp.Invoke` can call a C# method on the project's **AppDelegate** according to the following rules:
 
 * The method must be `public`.
-* The method must be adorned with the  [`ExportAttribute`](https://docs.microsoft.com/dotnet/api/Foundation.ExportAttribute) and the name of the exposed C# method identified. The exposed name must append a `:` (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
+* The method must be adorned with the  [`ExportAttribute`](/dotnet/api/Foundation.ExportAttribute) and the name of the exposed C# method identified. The exposed name must append a `:` (colon) to the name. `IApp.Invoke` must use the iOS form of the method name.
 * The method must take a parameter of `NSString`.
 * The method must return `NSString` or void.
 

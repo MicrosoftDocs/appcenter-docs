@@ -29,7 +29,7 @@ You can inspect the service principal using [Microsoft Graph Explorer](https://d
 
 ![App Center: GET servicePrinciples query](./images/add-aad-tenant-3.png)
 
-You can also retrieve the service principal using [Get-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/az.resources/get-azadserviceprincipal).
+You can also retrieve the service principal using [Get-AzADServicePrincipal](/powershell/module/az.resources/get-azadserviceprincipal).
 
 ```PowerShell
 Get-AzADServicePrincipal -DisplayName 'App Center'
@@ -93,7 +93,7 @@ Here is a service principal created to connect App Center to a sample Azure AD t
 ```
 
 ## Deleting your App Center account
-When you delete your App Center account, the service principal remains in your Azure Active Directory tenant. To remove it, you can run [Remove-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/az.resources/remove-azadserviceprincipal).
+When you delete your App Center account, the service principal remains in your Azure Active Directory tenant. To remove it, you can run [Remove-AzADServicePrincipal](/powershell/module/az.resources/remove-azadserviceprincipal).
 
 ```PowerShell
 Remove-AzADServicePrincipal -ServicePrincipalName 'App Center'

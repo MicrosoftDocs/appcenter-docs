@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Export
 
-App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview).
+App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights (Azure Monitor)](/azure/azure-monitor/app/app-insights-overview).
 By exporting the data, you benefit from:
 
 - Unlimited data retention
@@ -29,8 +29,8 @@ App Center continuously exports Analytics data to Blob Storage from the moment y
 
 You can also export data to Azure General Purpose v2 Storage Blob. General-purpose v2 storage accounts support the latest Azure Storage features and incorporate all of the functionality of general-purpose v1 and Blob storage accounts. 
 
-[Learn more about General Purpose v2 Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview)
-[Learn more about Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)
+[Learn more about General Purpose v2 Storage](/azure/storage/common/storage-account-overview)
+[Learn more about Application Insights](/azure/azure-monitor/app/app-insights-overview)
 
 ## Azure Blob Storage
 
@@ -89,11 +89,11 @@ The contents of the blob file is a JSON array of client device logs, that looks 
 
 Application Insights is an application performance management (APM) service that offers querying, segmentation, filtering, and usage analytics capabilities over your App Center event data. By adding the App Center SDK to your app and exporting the data into an App Center app-type Application Insights resource, you'll get access to the following features:
 
-- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics). Use a powerful query language to analyze your raw event data and create visualizations. You can export the results of your queries into _Power BI_ or _Excel_.
-- [Users, Sessions, and Events](https://docs.microsoft.com/azure/application-insights/app-insights-usage-segmentation). Learn how many people are using each page and feature of your app, then segment by country, browser, or other properties to understand why.
-- [Funnels](https://docs.microsoft.com/azure/application-insights/usage-funnels) and [User flows](https://docs.microsoft.com/azure/application-insights/app-insights-usage-flows). Understand how users navigate through your app. Identify bottlenecks. Discover ways to increase conversion rates and eliminate pain points.
-- [Retention](https://docs.microsoft.com/azure/application-insights/app-insights-usage-retention). Discover how many users return to use your app. Find out where and why they drop out.
-- [Workbooks](https://docs.microsoft.com/azure/application-insights/app-insights-usage-workbooks). Create interactive workbooks that combine usage analysis visualizations, Application Insights Analytics queries, and text to share insights on your team.
+- [Application Insights Analytics](/azure/application-insights/app-insights-analytics). Use a powerful query language to analyze your raw event data and create visualizations. You can export the results of your queries into _Power BI_ or _Excel_.
+- [Users, Sessions, and Events](/azure/application-insights/app-insights-usage-segmentation). Learn how many people are using each page and feature of your app, then segment by country, browser, or other properties to understand why.
+- [Funnels](/azure/application-insights/usage-funnels) and [User flows](/azure/application-insights/app-insights-usage-flows). Understand how users navigate through your app. Identify bottlenecks. Discover ways to increase conversion rates and eliminate pain points.
+- [Retention](/azure/application-insights/app-insights-usage-retention). Discover how many users return to use your app. Find out where and why they drop out.
+- [Workbooks](/azure/application-insights/app-insights-usage-workbooks). Create interactive workbooks that combine usage analysis visualizations, Application Insights Analytics queries, and text to share insights on your team.
 
 The App Center fields are mapped into Application Insights format. Here is the equivalence between the mapped fields:
 
@@ -149,8 +149,8 @@ customEvents
 
 More information about Application Insights and App Center:
 
-* Learn about [Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) in general
-* Learn about [Integration with App Center](https://docs.microsoft.com/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
+* Learn about [Application Insights](/azure/application-insights/app-insights-overview) in general
+* Learn about [Integration with App Center](/azure/application-insights/app-insights-mobile-center-quickstart) on AI blog
 * Learn about [Better Decisions Through Better Analytics](https://blogs.msdn.microsoft.com/vsappcenter/better-decisions-through-better-analytics-visual-studio-app-center-with-azure-application-insights/) on App Center blog
 
 ## Prerequisites
@@ -224,7 +224,7 @@ Custom Export enables users to customize their export configuration in [Azure](h
 
 ![Add the instrumentation key in App Center](~/analytics/images/instrumentationkey.png)
 
-For more info on export, refer to the [Application Insights quickstart guide](https://docs.microsoft.com/azure/azure-monitor/learn/mobile-center-quickstart).
+For more info on export, refer to the [Application Insights quickstart guide](/azure/azure-monitor/learn/mobile-center-quickstart).
 
 ### Exporting multiple apps to the same storage account
 

@@ -190,7 +190,7 @@ It's possible to execute native methods on underlying views with the `AppQuery.I
 app.Query(e => e.Id("userName").Invoke("setGravity", 1)); //center text
 ```
 
-The `Invoke` uses Java `TextView.setGravity` method and not the C# [TextView.Gravity](https://docs.microsoft.com/dotnet/api/Android.Widget.TextView.Gravity) property.
+The `Invoke` uses Java `TextView.setGravity` method and not the C# [TextView.Gravity](/dotnet/api/Android.Widget.TextView.Gravity) property.
 
 ### Handling Android permissions
 ```csharp
