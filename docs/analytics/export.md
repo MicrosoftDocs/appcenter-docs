@@ -104,7 +104,7 @@ The App Center fields are mapped into Application Insights format. Here is the e
 | name                            | Name of the custom event or type of data               |
 | customDimensions                | This includes several fields shown in the table below  |
 | session_Id                      | Uniquely session identifier                            |
-| user_Id                         | Uniquely user identifier                               |
+| user_Id                         | Installation identifier                               |
 | application_Version             | Version of the application                             |
 | client_Type, client_Model       | Device Model                                           |
 | client_OS                       | OS type and version                                    |
@@ -182,7 +182,7 @@ Once you've added your Azure subscription to the user or org account, you need t
 1. On the App Center portal, choose the App.
 2. Go to the **App Settings**.
 3. Click on **Export** and select the **New Export** option.
-4. Select blog storage or Application Insights based on your app needs.
+4. Select blob storage or Application Insights based on your app needs.
 5. Select the type of configuration you want (standard vs custom).
 
 App Center offers two ways to export your data: *standard export* and *custom export*. Standard export allows you to export the data with a one-click experience, using the Azure subscription linked to the app. Custom export will provide you with more flexibility and the configurations will be customized in Azure.
