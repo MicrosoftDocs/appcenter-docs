@@ -25,7 +25,7 @@ You can see the data App Center collects by [turning on verbose logging](/appcen
 For HockeyApp and App Center SxS users, the data that HockeyApp collects can be found at [https://hockeyapp.net/blog/2016/05/09/user-metrics-and-privacy.html](https://hockeyapp.net/blog/2016/05/09/user-metrics-and-privacy.html).
 
 ### How to submit GDPR DSR (Data Subject Right) Delete and Export requests for App Center
-App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request at [https://docs.microsoft.com/appcenter/gdpr/your-data](/appcenter/gdpr/your-data). 
+App Center customers can exercise their rights as data subjects by submitting DSR requests using GDPR-specific API methods. You can find more information on how to submit a DSR Delete and Export request in [GDPR](/appcenter/gdpr/your-data).
 
 ### App Store privacy report
 Here you can find answers to questions for the App Store privacy report. Please notice, that we do not filter the information you send us in the logs and custom exception messages. So if you are sending some personal data or user ids in analytic events, you should mention it in a privacy report. The answers below only apply to data that App Center collects itself, provided that you do not send us analytics events or custom exceptions.
@@ -41,5 +41,3 @@ The data collected by App Center is not linked with a user and does not contain 
 
 #### Tracking
 App Center only collects information about the country of use of the device based on cellular data (for all platforms except Windows). This information is stored without reference to the user and is only used to display usage statistics in different regions. For Windows, App Center does not collect any geo location tracking by default.
-
-
