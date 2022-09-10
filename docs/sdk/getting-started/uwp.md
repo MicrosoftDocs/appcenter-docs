@@ -127,3 +127,4 @@ Unless you explicitly specify each service as parameters in the start method, yo
 Great, you're all set to visualize Analytics on the portal that the SDK collects automatically.
 
 Look at the documentation for [App Center Analytics](~/sdk/analytics/windows.md) and [App Center Crashes](~/sdk/crashes/wpf-winforms.md) to learn how to customize and use more advanced functionalities of both services.
+.
