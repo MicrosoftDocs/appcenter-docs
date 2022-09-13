@@ -22,7 +22,7 @@ If your App Center organization isn't already connected to an Azure Active Direc
 
 ## Setting up Conditional Access
 > [!NOTE]
-> This is an abbreviated guide to setting up Conditional Access. Full documentation is available at [https://docs.microsoft.com/azure/active-directory/conditional-access/overview](/azure/active-directory/conditional-access/overview).
+> This is an abbreviated guide to setting up Conditional Access. Full documentation is available in [What is Conditional Access?](/azure/active-directory/conditional-access/overview).
 
 In the [Azure portal](https://portal.azure.com), open your Active Directory tenant, then open the **Security** settings, and click on **Conditional Access**.
 
