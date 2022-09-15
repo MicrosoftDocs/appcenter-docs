@@ -1,7 +1,7 @@
 # Contributing
 Thanks for your interest in contributing to the App Center documentation!
 
-This guide covers some general topics around contributing and refers out to the docs.microsoft.com contributors guide for more detailed explanations.
+This guide covers some general topics around contributing and refers out to the Microsoft Docs contributor guide for more detailed explanations.
 
 ## Internal Contributor Quick Guide
 Requirements:
@@ -74,5 +74,3 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     Remember, before signing off any PR, it’s your responsibility to ensure it's had a technical review.
 
 On a certain cadence, we push all commits from the master branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
-
-
