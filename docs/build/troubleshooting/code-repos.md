@@ -68,7 +68,7 @@ try the following steps:
 * Re-enable the Webhooks
 * Commit a change to the affected repository/branch and try a new build
 
-Contact [App Center support](/appcenter/general/support-center.md#contact-us) if the issue persists.
+Contact [App Center support](/appcenter/general/support-center#contact-us) if the issue persists.
 
 ## What can I do if I'm using Team Foundation Version Control (TFVC)?
 App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](/vsts/git/import-from-tfvc), or you can use Visual Studio Team Services for continuous integration, and take advantage of the [Hosted macOS Preview](/vsts/build-release/apps/mobile/xcode-ios?tabs=vsts) agents and build tasks for App Center Distribution and Test.
