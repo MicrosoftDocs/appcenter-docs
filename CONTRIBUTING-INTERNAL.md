@@ -23,10 +23,10 @@ If you're stuck on any of these steps or have an especially urgent update to pub
 Use the feedback tool at the bottom of any article to submit bugs and suggestions.
 
 ### Quick edit in GitHub
-Follow the guidance for [quick edits to existing documents](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
+Follow the guidance for [quick edits to existing documents](https://learn.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
 
 ### Larger edits
-Review the guidance for [pull requests](https://docs.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) in the contributors guide.
+Review the guidance for [pull requests](https://learn.microsoft.com/contribute/how-to-write-workflows-major#pull-request-processing) in the contributors guide.
 
 1. Before you begin, make sure that your local master branch is up to date with the remote by using `git pull --rebase`.  
 2. Create a `branch` for your changes in the format `alias-functions` (e.g. `amburns-update-page`).
@@ -73,4 +73,4 @@ Review the guidance for [pull requests](https://docs.microsoft.com/contribute/ho
     
     Remember, before signing off any PR, it’s your responsibility to ensure it's had a technical review.
 
-On a certain cadence, we push all commits from the master branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
+On a certain cadence, we push all commits from the master branch into the live site and then you can see your contribution at the [App Center docs site](https://learn.microsoft.com/appcenter/).
