@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to the App Center documentation!
 
-In this topic, you'll see the basic process for adding or updating content in the [App Center documentation site](https://docs.microsoft.com/appcenter).
+In this topic, you'll see the basic process for adding or updating content in the [App Center documentation site](https://learn.microsoft.com/appcenter).
 
 In this topic, we'll cover:
 
@@ -17,7 +17,7 @@ Use the feedback tool at the bottom of any article to submit bugs and suggestion
 
 ### Quick edit in GitHub
 
-Follow the guidance for [quick edits to existing documents](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
+Follow the guidance for [quick edits to existing documents](https://learn.microsoft.com/contribute/#quick-edits-to-existing-documents) in the contributors guide.
 
 ### Larger edits
 
@@ -56,7 +56,7 @@ The App Center team will review your PR and let you know if the change looks goo
 
 The maintainers will merge your PR into the live branch once feedback has been applied and your change looks good.
 
-On a certain cadence, we push all commits from live branch into the live site and then you can see your contribution at the [App Center docs site](https://docs.microsoft.com/appcenter/).
+On a certain cadence, we push all commits from live branch into the live site and then you can see your contribution at the [App Center docs site](https://learn.microsoft.com/appcenter/).
 
 ## DOs and DON'Ts
 
