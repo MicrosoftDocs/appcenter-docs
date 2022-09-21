@@ -10,7 +10,7 @@ The full metadata block, with a bunch of annotations, is shown below:
 ```
 ---
 title: This Article's Title
-description: A good, solid description of this article. The content kept here is what the Microsoft Docs system returns with search results, so this had better be a complete description of the purpose and content for this document file
+description: A good, solid description of this article. The content kept here is what Microsoft Learn returns with search results, so this had better be a complete description of the purpose and content for this document file
 keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, however, this, might, not, be, used, for, anything, much, anymore, but, still, good, to, have, if, you, want
 author: lucen-ms (maintainer Github user name)
 ms.author: lucen (maintainer Microsoft Alias)
