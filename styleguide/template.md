@@ -7,10 +7,10 @@ When creating a Markdown file, you should copy this template to a new file, fill
 ## Metadata
 The full metadata block, with a bunch of annotations, is shown below:
 
-```
+```yaml
 ---
 title: This Article's Title
-description: A good, solid description of this article. The content kept here is what the Microsoft Docs system returns with search results, so this had better be a complete description of the purpose and content for this document file
+description: A good, solid description of this article. The content kept here is what Microsoft Learn returns with search results, so this had better be a complete description of the purpose and content for this document file
 keywords: a, comma, separated, list, of keywords, to, use, for, this, doc, however, this, might, not, be, used, for, anything, much, anymore, but, still, good, to, have, if, you, want
 author: lucen-ms (maintainer Github user name)
 ms.author: lucen (maintainer Microsoft Alias)
@@ -233,7 +233,7 @@ Use three backticks (\`\`\`) + a language ID to apply language-specific color co
 
 ##### C&#9839;
 
-```c#
+```csharp
 using System;
 namespace HelloWorld
 {
@@ -326,7 +326,7 @@ docs.microsoft provides a few additional extensions to GitHub Flavored Markdown.
 
 ### Alerts
 
-It's important to use the following alert styles so they render with the proper style in the documentation site. However, the rendering engine on GitHub doesn't diferentiate them.
+It's important to use the following alert styles so they render with the proper style in the documentation site. However, the rendering engine on GitHub doesn't differentiate them.
 
 #### Note
 

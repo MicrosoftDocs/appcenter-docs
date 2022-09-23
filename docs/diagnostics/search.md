@@ -62,5 +62,5 @@ For crash and error groups:
 
 - Only symbolicated crashes are searchable; you must upload the symbols to search for them.
 - The maximum number of matching reports we display is 100.
-- Search results show the last 30 days of data, whatever the retention settings.
+- Search results show the last 28 days of data, whatever the retention settings.
 - The report or group ID is only searchable via the search box, not the query builder. The group ID is the 10 digit string after `crashes/errors` in the URL of the crash or error group.  The crash and error report ID is the last 32 character string in the URL of the specific crash or error report. For example, your URL might look something like: `appcenter.ms/orgs/appcenter/apps/test-app/crashes/errors/3132303808u/reports/2518291138564839999-00000000-0000-0000-0000-000000000000/threads`. The group ID is `3132303808` and crash ID is `00000000-0000-0000-0000-000000000000`.
