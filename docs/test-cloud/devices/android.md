@@ -21,6 +21,8 @@ ms.custom: test
 
 Model | OS
 -- | --
+Model | OS
+-- | --
 Amazon Fire HD 10 (9th Gen) | 9
 Asus Google Nexus 7 (2013) | 5.1.1
 Asus Zenfone 6 | 11
@@ -72,6 +74,8 @@ Google Pixel 6 | 12
 Google Pixel 6 | 13
 Google Pixel 6 Pro | 12
 Google Pixel 6 Pro | 13
+Google Pixel 6a | 12
+Google Pixel 6a | 13
 Google Pixel C | 8.1.0
 Google Pixel XL | 10
 Google Pixel XL | 7.1.2
@@ -104,7 +108,6 @@ Huawei Nexus 6P | 8.1.0
 Huawei P Smart (2019) | 9
 Huawei P10 | 7.0
 Huawei P20 Pro | 10
-Huawei P20 Pro | 8.1.0
 Huawei P20 Pro | 9
 Huawei P30 Pro | 10
 LG G2 | 5.0.2
@@ -150,7 +153,6 @@ Motorola Moto G8 Plus | 10
 Motorola Moto G8 Plus | 9
 Motorola Moto G9 Play | 10
 Motorola Moto G9 Plus | 10
-Motorola Moto X | 5.1
 Motorola Moto X4 | 8.0.0
 Motorola Moto Z2 Force | 8.0.0
 Motorola Moto Z2 Force | 9
@@ -171,8 +173,6 @@ Motorola One Zoom | 10
 Motorola One Zoom | 9
 Nokia 7 Plus | 10
 Nokia 7 Plus | 9
-Nokia 7.1 | 10
-Nokia 7.1 | 9
 Nokia 7.2 | 10
 Nokia 7.2 | 9
 Nokia 8 Sirocco | 10
@@ -180,7 +180,6 @@ Nokia 8 Sirocco | 9
 Nokia 8.1 | 10
 Nokia 8.1 | 11
 OnePlus 10 Pro | 12
-OnePlus 10 Pro | 13 beta
 OnePlus 2 | 5.1.1
 OnePlus 2 | 6.0.1
 OnePlus 3T | 7.0
@@ -395,6 +394,9 @@ Samsung Galaxy Tab S7 FE | 11
 Samsung Galaxy Tab S7 Plus | 10
 Samsung Galaxy Tab S7 Plus | 11
 Samsung Galaxy Tab S7 Plus | 12
+Samsung Galaxy Tab S8 | 12
+Samsung Galaxy Tab S8 Plus | 12
+Samsung Galaxy Tab S8 Ultra | 12
 Samsung Galaxy XCover 5 | 11
 Samsung Galaxy XCover Pro | 10
 Samsung Galaxy XCover Pro | 11
