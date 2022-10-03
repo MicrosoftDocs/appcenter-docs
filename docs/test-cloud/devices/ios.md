@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 9/26/2022
+ms.date: 10/3/2022
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -155,6 +155,8 @@ Apple iPhone 13 Pro Max | 15.0.2
 Apple iPhone 13 Pro Max | 15.3.1
 Apple iPhone 13 Pro Max | 15.6.1
 Apple iPhone 14 | 16.0.2
+Apple iPhone 14 Pro | 16.0.2
+Apple iPhone 14 Pro Max | 16.0.2
 Apple iPhone 5S | 12.0.1
 Apple iPhone 5S | 12.4.6
 Apple iPhone 5S | 12.5.6
