@@ -18,7 +18,7 @@ App Center takes security seriously. As a first-party Microsoft Azure service, w
 We want to give you an idea of some of the principles that we follow to keep App Center secure. Although it isn't meant to be an exhaustive list of security concepts, it's shaped by a number of requests from customers for similar information.
 
 > [!IMPORTANT]
-> This documentation is meant to share information about our security stance. Nothing in this documentation implies or should be taken to mean that App Center  will never have a security issue. Nothing in this documentation supercedes any information in [Microsoft's Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products). If you become aware of a potential security issue with App Center, contact the [Microsoft Security Response Center](https://www.microsoft.com/msrc) immediately.
+> This documentation is meant to share information about our security stance. Nothing in this documentation implies or should be taken to mean that App Center  will never have a security issue. Nothing in this documentation supersedes any information in [Microsoft's Online Service Terms](https://www.microsoft.com/licensing/product-licensing/products). If you become aware of a potential security issue with App Center, contact the [Microsoft Security Response Center](https://www.microsoft.com/msrc) immediately.
 
 ## Data residency and sovereignty
 
@@ -29,8 +29,7 @@ The only part of App Center that runs outside of the United States is App Center
 Content delivery networks (CDN) are used to serve some content and app releases from App Center. CDN points-of-presence are located around the world, but all source data is in the United States.
 
 > [!NOTE]
-> Due to country specific policies and laws, we cannot guarantee that App Center works in all countries. For some users in China region, Analytics and Diagnostics SDK data may experience significant delay or not make it to our servers based in the United States. 
-
+> Due to country specific policies and laws, we cannot guarantee that App Center works in all countries. For some users in China region, Analytics and Diagnostics SDK data may experience significant delay or not make it to our servers based in the United States.
 
 ## Data security
 
@@ -40,7 +39,7 @@ All network traffic in App Center, whether over the internet, or within an Azure
 
 ### Encryption at rest
 
-All data held by App Center is [encrypted at rest](/azure/security/fundamentals/encryption-overview). We use the encryption features provided by the Microsoft Azure data storage products that we use to build App Center. These include [Azure Storage](/azure/storage/common/storage-service-encryption), [Azure SQL](/azure/azure-sql/database/security-overview#information-protection-and-encryption), and [Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
+All data held by App Center is [encrypted at rest](/azure/security/fundamentals/encryption-overview). We use the encryption features provided by the Microsoft Azure data storage products that we use to build App Center. These include [Azure Storage](/azure/storage/common/storage-service-encryption), [Azure SQL](/azure/azure-sql/database/security-overview#information-protection-and-encryption), and [Azure Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
 
 ### Encryption keys
 
