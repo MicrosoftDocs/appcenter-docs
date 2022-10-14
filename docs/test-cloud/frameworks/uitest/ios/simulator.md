@@ -2,9 +2,9 @@
 title: Local testing with iOS Simulators
 description: This guide will discuss how to identify and select an iOS simulator to use for running Xamarin.UITests locally.
 keywords: uitest test cloud
-author: lucen-ms
-ms.author: lucen
-ms.date: 06/08/2020
+author: priskorn
+ms.author: miprisk
+ms.date: 10/14/2022
 ms.topic: article
 ms.assetid: 6E970422-40FB-4E2C-ACAD-07A5E47B3378
 ms.service: vs-appcenter
@@ -31,10 +31,10 @@ IApp app = ConfigureApp.iOS.AppBundle("/path/to/iosapp.app")
 ## Identifying Available Simulators
 There are two ways to list the simulators and their device identifiers:
 
-1. The first way to identify available simulators is to start up Terminal and type `xcrun instruments -s devices`. The following output will display a list of known devices:
+1. The first way to identify available simulators is to start up Terminal and type `xcrun xctrace list devices`. The following output will display a list of known devices:
 
    ```bash
-   $ xcrun instruments -s devices
+   $ xcrun xctrace list devices
    Known Devices:
    bushmaster [5A4B28A1-392A-59FB-81C5-137E881D61E9]
    Resizable iPad (8.1 Simulator) [B3BF8A06-2938-4B74-BF87-16C223F8690C]
