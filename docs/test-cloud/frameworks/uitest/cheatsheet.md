@@ -121,7 +121,7 @@ The Xamarin Test Cloud Agent uses non-public Apple APIs, which causes apps to be
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
 
 ```bash
-$ xcrun instruments -s devices
+$ xcrun xctrace list devices
 Known Devices:
 bushmaster [5A4B28A1-392A-59FB-81C5-137E881D61E9]
 Resizable iPad (8.1 Simulator) [B3BF8A06-2938-4B74-BF87-16C223F8690C]
