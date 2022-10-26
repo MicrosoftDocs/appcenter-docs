@@ -4,7 +4,7 @@ description: Android devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 8/17/2022
+ms.date: 10/26/2022
 ms.topic: article
 ms.assetid: dd4a808b-08d1-4ff2-9082-5aedbe8f0849
 ms.service: vs-appcenter
@@ -19,8 +19,6 @@ ms.custom: test
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
-Model | OS
--- | --
 Model | OS
 -- | --
 Amazon Fire HD 10 (9th Gen) | 9
@@ -83,12 +81,8 @@ Google Pixel XL | 8.0.0
 Google Pixel XL | 9
 HTC 10 | 6.0.1
 HTC 10 | 8.0.0
-HTC Nexus 9 | 5.0.1
 HTC Nexus 9 | 7.1.1
-HTC One (Dual Sim) | 5.0.2
-HTC One (M8) | 5.0.1
 HTC One A9 | 6.0.1
-HTC One M9 | 5.0.2
 HTC One M9 | 7.0
 HTC U Ultra | 7.0
 HTC U Ultra | 8.0.0
@@ -108,11 +102,7 @@ Huawei Nexus 6P | 8.1.0
 Huawei P Smart (2019) | 9
 Huawei P10 | 7.0
 Huawei P20 Pro | 10
-Huawei P20 Pro | 9
 Huawei P30 Pro | 10
-LG G2 | 5.0.2
-LG G3 (US Carrier) | 5.0
-LG G3 s | 5.0.2
 LG G4 | 5.1
 LG G4 | 6.0
 LG G5 | 6.0.1
@@ -122,7 +112,6 @@ LG G7 ThinQ | 10
 LG G7 ThinQ | 8.0.0
 LG G7 ThinQ | 9
 LG G8s ThinQ | 10
-LG Nexus 4 | 5.0.1
 LG Nexus 4 | 5.1.1
 LG Nexus 5 | 5.0.1
 LG Nexus 5 | 5.1.1
@@ -136,7 +125,6 @@ LG V30 | 7.1.2
 LG V30 | 9
 LG V40 ThinQ | 9
 Meizu m2 note | 5.1
-Motorola Moto G 2nd gen | 5.0.2
 Motorola Moto G 3rd gen | 5.1.1
 Motorola Moto G 4th gen | 6.0.1
 Motorola Moto G5S Plus | 7.1.1
@@ -158,7 +146,6 @@ Motorola Moto Z2 Force | 8.0.0
 Motorola Moto Z2 Force | 9
 Motorola Moto Z3 Play | 8.1.0
 Motorola Moto Z3 Play | 9
-Motorola Nexus 6 | 5.0.1
 Motorola Nexus 6 | 5.1
 Motorola Nexus 6 | 6.0.1
 Motorola Nexus 6 | 7.1.1
@@ -180,6 +167,7 @@ Nokia 8 Sirocco | 9
 Nokia 8.1 | 10
 Nokia 8.1 | 11
 OnePlus 10 Pro | 12
+OnePlus 10 Pro | 13
 OnePlus 2 | 5.1.1
 OnePlus 2 | 6.0.1
 OnePlus 3T | 7.0
@@ -234,7 +222,6 @@ Samsung Galaxy A20s | 11
 Samsung Galaxy A21s | 11
 Samsung Galaxy A3 | 5.0.2
 Samsung Galaxy A31 | 11
-Samsung Galaxy A40 | 10
 Samsung Galaxy A40 | 9
 Samsung Galaxy A5 (2017) | 8.0.0
 Samsung Galaxy A5 | 5.0.2
@@ -250,7 +237,6 @@ Samsung Galaxy A6+ | 8.0.0
 Samsung Galaxy A7 (2018) | 10
 Samsung Galaxy A7 (2018) | 8.0.0
 Samsung Galaxy A7 (2018) | 9
-Samsung Galaxy A7 | 5.0.2
 Samsung Galaxy A7 | 6.0.1
 Samsung Galaxy A70 | 10
 Samsung Galaxy A70 | 11
@@ -333,14 +319,12 @@ Samsung Galaxy S22 | 12
 Samsung Galaxy S22 Plus | 12
 Samsung Galaxy S22 Ultra | 12
 Samsung Galaxy S4 | 5.0.1
-Samsung Galaxy S4 Active | 5.0.1
 Samsung Galaxy S5 | 5.0
 Samsung Galaxy S5 | 6.0.1
 Samsung Galaxy S5 Active | 5.0
 Samsung Galaxy S5 Neo | 5.1.1
 Samsung Galaxy S5 Neo | 6.0.1
 Samsung Galaxy S6 | 5.1.1
-Samsung Galaxy S6 Edge | 5.0.2
 Samsung Galaxy S6 Edge | 7.0
 Samsung Galaxy S6 Edge Plus | 5.1.1
 Samsung Galaxy S6 Edge Plus | 7.0
@@ -434,8 +418,6 @@ Sony Xperia XZ3 | 10
 Sony Xperia XZ3 | 9
 Sony Xperia Z2 | 6.0.1
 Sony Xperia Z2 Tablet | 6.0.1
-Sony Xperia Z3 | 5.0.2
-Sony Xperia Z3 Compact | 5.0.2
 Sony Xperia Z3 Compact | 6.0.1
 Sony Xperia Z3+ | 5.0.2
 Sony Xperia Z5 | 5.1.1
