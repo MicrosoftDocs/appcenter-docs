@@ -2,9 +2,9 @@
 title: Xamarin.UITest cheat sheet
 description: This document is a cheat sheet that condenses some  UITest information for quick reference.
 keywords: uitest test cloud
-author: lucen-ms
-ms.author: lucen
-ms.date: 03/30/2019
+author: priskorn
+ms.author: miprisk
+ms.date: 10/14/2022
 ms.topic: article
 ms.assetid: 0060471D-5F3B-4C13-A9BA-FD6F8E3BCB04
 ms.service: vs-appcenter
@@ -121,7 +121,7 @@ The Xamarin Test Cloud Agent uses non-public Apple APIs, which causes apps to be
 You can determine the UUID for the iOS simulators on a computer, use the `instruments` command as shown below:
 
 ```bash
-$ xcrun instruments -s devices
+$ xcrun xctrace list devices
 Known Devices:
 bushmaster [5A4B28A1-392A-59FB-81C5-137E881D61E9]
 Resizable iPad (8.1 Simulator) [B3BF8A06-2938-4B74-BF87-16C223F8690C]
