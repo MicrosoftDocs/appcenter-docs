@@ -29,7 +29,7 @@ If you have App Center Test or App Center Distribute integrated into your Build 
 1. Navigate to Azure DevOps Project Settings -> Pipelines -> Service connections
 2. Select 'New Service connection'
 3. Search for 'Visual Studio App Center' -> Next
-4. [Create API token](/docs/api-docs/index.md), give the connection a name and Save it
+4. [Create API token](/../api-docs/index.md), give the connection a name and Save it
 
 ## Export using the JSON file
 ### Export JSON file from the App Center Build page. 
