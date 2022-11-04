@@ -135,7 +135,7 @@ Visual Studio has a template to help add a Xamarin.UITest project to an existing
 # [Visual Studio for Mac](#tab/macos)
 It is possible to add a new Xamarin.UITest project to an existing solution manually:
 
-1. Start by adding a new project by selecting the solution, and clicking **File > Add New Project**. In the **New Project** dialog, select **Cross-platform > Tests > Xamarin Test Cloud > UI Test App**:
+1. Start by adding a new project. Right click on the solution **Add > New Project**. In the **New Project** dialog, select **Multiplatform > Tests > App Center Test > UI Test App**:
 
     ![Choose a Template](images/get-started-xamarin-forms-02-new-uitest-project-xs.png "Choose a Template")
 
@@ -145,7 +145,7 @@ It is possible to add a new Xamarin.UITest project to an existing solution manua
 
     The new project also has two classes in it. **AppInitializer** contains code to help initialize and setup tests. The other class, **Tests**, contains boilerplate code to help start the UITests.
 
-1. Select **View > Pads > Unit Tests** to display the Unit Test pad. Expand **UsingUITest > UsingUITest.UITests > Test Apps**:
+1. Select **View > Tests** to display the Unit Test pad. Expand **UsingUITest > UsingUITest.UITests > Test Apps**:
 
     ![Unit Test Pad](images/get-started-xamarin-forms-04-unit-test-pad-xs.png "Unit Test Pad")
 
