@@ -22,7 +22,7 @@ dev_langs:
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 
 ## What Android permissions are required?
 Depending on the services you use, the following permissions are required:

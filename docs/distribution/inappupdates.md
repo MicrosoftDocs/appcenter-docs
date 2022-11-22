@@ -13,7 +13,7 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 # In-App Updates
 
-Enable your testers to easily stay up to date with the latest releases. Integrate the App Center SDK (and the Distribution Module) for [iOS][ios-sdk], [Android][android-sdk], or [Xamarin][xamarin-sdk] to automatically enable in-app notification for new releases. Once completed, all [future releases][uploading] through App Center will trigger an in-app notification for each tester allowing a quick upgrade to the latest version.
+Enable your testers to easily stay up to date with the latest releases. Integrate the App Center SDK (and the Distribution Module) for [iOS][ios-sdk], [Android][android-sdk], or [Xamarin/MAUI][xamarin-sdk] to automatically enable in-app notification for new releases. Once completed, all [future releases][uploading] through App Center will trigger an in-app notification for each tester allowing a quick upgrade to the latest version.
 
 > [!IMPORTANT]
 > At this time, there are some limitations to In-App Updates:
@@ -31,7 +31,7 @@ To enable public in-app updates, create a [public distribution group][public-dg]
 
 If the application is installed from Google Play or other stores instead of App Center, checking for new versions will be disabled.
 
-Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#prepare-your-google-play-build), [Xamarin](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
+Google can consider in-app update code as malicious behavior even if it isn't used at runtime. We recommend you to strip this code from your application before submitting it to Google Play. To make it easier, we provide the version of App Center Distribute SDK with stubbed APIs, so the only change for you is a dependency swap. You can find the detailed instructions on [Android](~/sdk/distribute/android.md#prepare-your-google-play-build), [Xamarin/MAUI](~/sdk/distribute/xamarin.md#remove-in-app-updates-for-google-play-builds), or [Unity](~/sdk/distribute/unity.md#remove-in-app-updates-for-google-play-builds) pages.
 
 ### iOS
 

@@ -21,7 +21,7 @@ ms.tgt_pltfrm: xamarin
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 
 ## Collecting verbose logs
 

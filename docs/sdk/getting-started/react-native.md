@@ -16,7 +16,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)

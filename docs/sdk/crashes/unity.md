@@ -15,7 +15,7 @@ ms.tgt_pltfrm: unity
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [React Native](react-native.md)

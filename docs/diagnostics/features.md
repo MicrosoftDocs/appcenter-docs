@@ -38,7 +38,7 @@ If a crash is caused by a failed call to a URL (such as "Error calling azure.com
 
 ### User Identification
 
-App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users), and [Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
+App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [Apache Cordova](~/sdk/other-apis/cordova.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users), and [Xamarin/MAUI](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
 
@@ -47,9 +47,9 @@ After attaching a user ID, you can use App Center's search feature to search for
 
 In the App Center Diagnostics UI, you can view and download binary and text attachments of your crash and error reports.
 
-You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [UWP](~/sdk/crashes/uwp.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report), and [Xamarin](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
+You can learn how to add attachments to your crash reports by reading the SDK Crashes documentation for your [Android](~/sdk/crashes/android.md#add-attachments-to-a-crash-report), [iOS](~/sdk/crashes/ios.md#add-attachments-to-a-crash-report), [macOS](~/sdk/crashes/macos.md#add-attachments-to-a-crash-report), [React Native](~/sdk/crashes/react-native.md#add-attachments-to-a-crash-report), [UWP](~/sdk/crashes/uwp.md#add-attachments-to-a-crash-report), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#add-attachments-to-a-crash-report), and [Xamarin/MAUI](~/sdk/crashes/xamarin.md#add-attachments-to-a-crash-report) apps.
 
-Attachments for handled errors are only supported for Android, Unity, UWP, WPF, WinForms, and Xamarin platforms. Learn how to add attachments to your error reports in the SDK documentation for your [Android](~/sdk/crashes/android.md#handled-errors), [Unity](~/sdk/crashes/unity.md#add-attachments-to-a-crash-or-an-unhandled-exception-report), [UWP](~/sdk/crashes/uwp.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [Xamarin](~/sdk/crashes/xamarin.md#handled-errors) apps.
+Attachments for handled errors are only supported for Android, Unity, UWP, WPF, WinForms, and Xamarin platforms. Learn how to add attachments to your error reports in the SDK documentation for your [Android](~/sdk/crashes/android.md#handled-errors), [Unity](~/sdk/crashes/unity.md#add-attachments-to-a-crash-or-an-unhandled-exception-report), [UWP](~/sdk/crashes/uwp.md#handled-errors), [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors), and [Xamarin/MAUI](~/sdk/crashes/xamarin.md#handled-errors) apps.
 
 To view and download the attachments, select a crash or error group, a specific device report and then click on the attachments tab.
 
@@ -60,7 +60,7 @@ To view and download the attachments, select a crash or error group, a specific 
 
 Track events leading up to a crash to capture useful information about the state of your app.
 
-To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [macOS](~/sdk/analytics/macos.md), [React Native](~/sdk/analytics/react-native.md), [Windows](~/sdk/analytics/windows.md) and [Xamarin](~/sdk/analytics/xamarin.md).
+To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [macOS](~/sdk/analytics/macos.md), [React Native](~/sdk/analytics/react-native.md), [Windows](~/sdk/analytics/windows.md) and [Xamarin/MAUI](~/sdk/analytics/xamarin.md).
 
 To view events before a crash, select a crash group, a specific device report, and then click on the events tab.
 
@@ -69,7 +69,7 @@ To view events before a crash, select a crash group, a specific device report, a
 
 ### Key Value Pairs
 
-You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
+You can tailor error reports sent to App Center to include additional context for the error by passing a dictionary of string values (as key/value pairs) to the `TrackError` method. These properties are optional. To set key value pairs, take a look at our [Android](~/sdk/crashes/android.md#handled-errors), [Xamarin/MAUI](~/sdk/crashes/xamarin.md#handled-errors), [Unity](~/sdk/crashes/unity.md#handled-exceptions-in-unity), [UWP](~/sdk/crashes/uwp.md#handled-errors), and [WPF/WinForms](~/sdk/crashes/wpf-winforms.md#handled-errors) documentation.
 
 > [!NOTE]
 > This feature is only supported for Android, iOS, Xamarin, React Native, Unity, UWP, WinForms and WPF Errors today.

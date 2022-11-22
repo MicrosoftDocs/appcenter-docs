@@ -19,7 +19,7 @@ App Center Analytics will help you understand more about your app users and thei
 
 | Scenario | Description |
 |--|--|
-| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin](~/sdk/getting-started/xamarin.md). | Simple steps to integrate the SDK, which provides you out-of-the-box insights about your users.|
+| One-line integration for [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin/MAUI](~/sdk/getting-started/xamarin.md). | Simple steps to integrate the SDK, which provides you out-of-the-box insights about your users.|
 | [Overview](~/analytics/overview.md) | Key metrics about your users and their app usage.|
 | [Custom Events](~/analytics/event-metrics.md)| Understand the actions that your users take in your app.|
 | [Log Flow](~/analytics/log-flow.md)| See incoming logs in real time to check whether your SDK is properly integrated.|
@@ -28,7 +28,7 @@ App Center Analytics will help you understand more about your app users and thei
 ## Integrate the Analytics SDK to get started
 
 To get started with Analytics, integrate the App Center SDK. By doing this, you'll get out-of-the-box insights about your users.
-To get started with our SDK, follow the platform-specific documentation at [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin](~/sdk/getting-started/xamarin.md).
+To get started with our SDK, follow the platform-specific documentation at [Android](~/sdk/getting-started/android.md), [iOS](~/sdk/getting-started/ios.md), [macOS](~/sdk/getting-started/macos.md), [React Native](~/sdk/getting-started/react-native.md), [tvOS](~/sdk/getting-started/tvos.md), [UWP](~/sdk/getting-started/uwp.md), [WPF/WinForms](~/sdk/getting-started/wpf-winforms.md), and [Xamarin/MAUI](~/sdk/getting-started/xamarin.md).
 
 ## General information
 
@@ -36,7 +36,7 @@ Check out our [Frequently Asked Questions](~/analytics/faq.md) for general quest
 
 ## Custom Events
 
-Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [tvOS](~/sdk/analytics/tvos.md).
+Learn more about the interaction of your users with your app by tracking [Custom Events](~/analytics/event-metrics.md) in your app. To do this, follow our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin/MAUI](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [tvOS](~/sdk/analytics/tvos.md).
 
 ## Export
 

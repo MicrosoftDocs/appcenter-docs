@@ -10,14 +10,14 @@ ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin
 ---
 
-# Get Started with Xamarin
+# Get Started with Xamarin and MAUI
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)

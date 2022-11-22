@@ -18,7 +18,7 @@ dev_langs:
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Unity](unity.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 

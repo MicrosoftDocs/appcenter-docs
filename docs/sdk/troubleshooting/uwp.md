@@ -21,7 +21,7 @@ ms.tgt_pltfrm: uwp
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 
 ## Analytics data doesn't show up in the portal
 

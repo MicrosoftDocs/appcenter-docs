@@ -19,7 +19,7 @@ ms.tgt_pltfrm: unity
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
 > * [Unity](unity.md)
-> * [Xamarin](xamarin.md)
+> * [Xamarin/MAUI](xamarin.md)
 > * [MacOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Cordova](Cordova.md)
