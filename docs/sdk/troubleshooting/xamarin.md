@@ -1,5 +1,5 @@
 ---
-title: Xamarin SDK Troubleshooting
+title: MAUI/Xamarin SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
@@ -10,7 +10,7 @@ ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
 ---
 
-# Xamarin/MAUI SDK Troubleshooting
+# MAUI and Xamarin SDK Troubleshooting
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -21,7 +21,7 @@ ms.tgt_pltfrm: xamarin
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## Collecting verbose logs
 

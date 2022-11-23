@@ -10,13 +10,13 @@ ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.tgt_pltfrm: xamarin
 ---
 
-# Other Xamarin APIs
+# Other MAUI and Xamarin APIs
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
@@ -49,7 +49,7 @@ System.Guid? installId = await AppCenter.GetInstallIdAsync();
 
 The App Center SDK supports setting a **user ID** that's used to augment crash reports. To use this capability:
 
-1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [App Center SDK Getting started guide](~/sdk/getting-started/xamarin.md).
+1. Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [Getting started guide](~/sdk/getting-started/xamarin.md).
 2. Set a `userID` in the SDK using the following code:
 
 ```csharp

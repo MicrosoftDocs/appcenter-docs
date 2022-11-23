@@ -20,7 +20,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## Analytics data doesn't show up in the portal
 

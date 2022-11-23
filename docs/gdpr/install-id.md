@@ -21,7 +21,7 @@ The easiest way to associate install IDs with users is via a login mechanism. In
 
 Here is how to retrieve an install ID for....
 * [UWP](/appcenter/sdk/other-apis/uwp#identify-installations)
-* [Xamarin/MAUI](/appcenter/sdk/other-apis/xamarin#identify-installations)
+* [MAUI/Xamarin](/appcenter/sdk/other-apis/xamarin#identify-installations)
 * [Android](/appcenter/sdk/other-apis/android#identify-installations)
 * [iOS](/appcenter/sdk/other-apis/ios#identify-installations)
 * [macOS](/appcenter/sdk/other-apis/macos#identify-installations)

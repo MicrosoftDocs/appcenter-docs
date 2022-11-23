@@ -26,7 +26,7 @@ You can read more about how to ask for the user's consent to send Analytics data
 - [Android](/appcenter/sdk/analytics/android#enable-or-disable-app-center-analytics-at-runtime)
 - [iOS](/appcenter/sdk/analytics/ios#enable-or-disable-app-center-analytics-at-runtime)
 
-- [Xamarin/MAUI](/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
+- [MAUI/Xamarin](/appcenter/sdk/analytics/xamarin#enable-or-disable-app-center-analytics-at-runtime)
 
 - [React Native](/appcenter/sdk/analytics/react-native#enable-or-disable-app-center-analytics-at-runtime)
 

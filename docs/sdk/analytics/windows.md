@@ -18,7 +18,7 @@ ms.tgt_pltfrm: windows
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)

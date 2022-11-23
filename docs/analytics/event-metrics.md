@@ -20,7 +20,7 @@ Tracking events in your app allows you to answer questions like:
 - What's the most liked content?
 - What type of files do my users send?
 
-To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [Xamarin/MAUI](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [Unity](~/sdk/analytics/unity.md).
+To track custom events in your app, use our `trackEvent` API from the App Center Analytics SDK. More information on how to define custom events using our SDK can be found in [App Center SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [React Native](~/sdk/analytics/react-native.md), [MAUI/Xamarin](~/sdk/analytics/xamarin.md), [Windows](~/sdk/analytics/windows.md), [macOS](~/sdk/analytics/macos.md), and [Unity](~/sdk/analytics/unity.md).
 
 ## General information
 

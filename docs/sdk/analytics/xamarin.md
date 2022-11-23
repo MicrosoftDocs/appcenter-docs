@@ -11,14 +11,14 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Analytics (Xamarin)
+# App Center Analytics (MAUI and Xamarin)
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)

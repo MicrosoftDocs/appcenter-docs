@@ -10,13 +10,13 @@ ms.assetid: 1cdf6bf0-2ab8-4b23-81ec-709482559129
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Distribute – Xamarin In-app updates
+# App Center Distribute – MAUI andXamarin In-app updates
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Unity](unity.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 App Center Distribute will let your users install a new version of the app when you distribute it via App Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
 
@@ -65,55 +65,7 @@ Install-Package Microsoft.AppCenter.Distribute
 
 ### 2. Start App Center Distribute
 
-To use App Center, you must opt in to the module(s) that you want to use. By default, no modules are started and you must explicitly call each of them when starting the SDK.
-
-#### 2.1 Add App Center Distribute imports
-
-Add the App Center Distribute imports before you get started with using Distribute module:
-
-* **Xamarin.iOS** - Open the project's `AppDelegate.cs` file and add the following lines below the existing `using` statements
-* **Xamarin.Android** - Open the project's `MainActivity.cs` file and add the following lines below the existing `using` statements
-* **Xamarin.Forms** - Open the project's `App.xaml.cs` file and add the following lines below the existing `using` statements
-
-```csharp
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Distribute;
-```
-
-#### 2.2 Add the `Start()` method
-
-Add `Distribute` to your `Start()` method to start App Center Distribute service.
-
-##### Xamarin.iOS
-
-Open the project's `AppDelegate.cs` file and add the `Start()` call inside the `FinishedLaunching()` method
-
-```csharp
-Distribute.DontCheckForUpdatesInDebug();
-AppCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
-```
-
-##### Xamarin.Android
-
-Open the project's **MainActivity.cs** file and add the `Start()` method call inside the `OnCreate()` method:
-
-```csharp
-AppCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
-```
-
-To enable in-app updates for debug builds on Android, call the following method before `AppCenter.Start`:
-
-```csharp
-Distribute.SetEnabledForDebuggableBuild(true);
-```
-
-##### Xamarin.Forms
-
-To create a Xamarin.Forms app targeting both Android and iOS platforms, create two apps in the App Center portal - one for each platform. Creating two apps will give you two App secrets - one for Android and another one for iOS. Open the project's `App.xaml.cs` (or your class that inherits from `Xamarin.Forms.Application`) in the shared or portable project and add the `Start()` call inside the `OnStart()` override method.
-
-```csharp
-AppCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute));
-```
+Configure the App Center SDK by calling `AppCenter.Start(...)` as described in the [Getting started guide](~/sdk/getting-started/xamarin.md).
 
 For your iOS application, open the `AppDelegate.cs` and add the following line **before** the call to `LoadApplication`:
 
@@ -240,7 +192,7 @@ Distribute.ReleaseAvailable = OnReleaseAvailable;
 AppCenter.Start(...);
 ```
 
-Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
+Here is an example of the callback implementation that replaces the SDK dialog with a custom one:
 
 ```csharp
 bool OnReleaseAvailable(ReleaseDetails releaseDetails)

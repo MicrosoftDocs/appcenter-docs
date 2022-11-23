@@ -11,11 +11,11 @@ ms.custom: sdk
 ms.tgt_pltfrm: xamarin
 ---
 
-# App Center Crashes (Xamarin)
+# App Center Crashes (MAUI and Xamarin)
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Xamarin/MAUI](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [React Native](react-native.md)
@@ -31,7 +31,7 @@ Follow the [Getting Started](~/sdk/getting-started/xamarin.md) section if you ha
 Also, crash logs on iOS require Symbolication, check out the [App Center Diagnostics documentation](~/diagnostics/iOS-symbolication.md) that explains how to provide symbols for your app.
 
 > [!NOTE]
-> On Xamarin.iOS and Xamarin.Mac the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS and macOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
+> On iOS and Mac the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS and macOS app. On Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
 
 ## Generate a test crash
 
