@@ -4,7 +4,7 @@ description: Get Started with Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 06/08/2022
+ms.date: 11/24/2022
 ms.topic: article
 ms.assetid: 466c0195-c2c7-491b-83dc-2ec03dd9ab18
 ms.tgt_pltfrm: xamarin

@@ -4,7 +4,7 @@ description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/16/2021
+ms.date: 11/24/2022
 ms.topic: article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
