@@ -38,7 +38,7 @@ Before you begin, make sure that the following prerequisites are met:
 * You're targeting devices running iOS 11.0 or later or Android 5.0 (API level 21) or later.
 * You're not using any other SDK that provides Crash Reporting functionality.
 
-Supporting platforms:
+Supported platforms:
 
 * MAUI iOS
 * MAUI Android
