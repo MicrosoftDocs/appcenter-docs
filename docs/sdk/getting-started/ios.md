@@ -37,8 +37,8 @@ Let's get started with setting up App Center iOS SDK in your app to use App Cent
 
 ## 1. Prerequisites
 The following requirements must be met to use App Center SDK:
-* Your iOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
-* You're targeting devices running on iOS 9.0 or later.
+* Your iOS project is set up in Xcode 13 or later on macOS version 10.14.4 or later.
+* You're targeting devices running on ios 11.0 or later.
 * You're not using any other library that provides Crash Reporting functionality (only for App Center Crashes).
 * If you are using **CocoaPods** to integrate App Center, you need CocoaPods version 1.10 or later.
 
@@ -139,7 +139,7 @@ Now that you've integrated the frameworks in your application, it's time to star
 ## 4. Start the SDK
 To use App Center, opt in to the module(s) that you want to use. By default, no modules are started and you must call each one when starting the SDK.
 
-The instructions below are slightly different depending on what lifecycle you're using. Starting from Xcode 12 you can select one of two lifecycles: "Swift UI App" (selected by default in Xcode 12) and "UI Kit AppDelegate". If you're using Xcode 11 or lower, then you're using UI Kit AppDelegate lifecycle.
+The instructions below are slightly different depending on what lifecycle you're using. Starting from Xcode 12 you can select one of two lifecycles: "Swift UI App" (selected by default in Xcode 12) and "UI Kit AppDelegate".
 If you're developing for an extension, refer to the [Extension getting started page](./ios-extensions.md).
 
 ### 4.1 Add the import statements
