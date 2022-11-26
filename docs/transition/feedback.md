@@ -44,7 +44,7 @@ With Flow + Azure Boards, users can fill out an online form to submit their feed
 
 ### Instabug
 
-[Instabug](https://instabug.com/in-app-chat) has a user feedback tool.  It helps you directly communicate with users who experienced a specific crash in your app.  It also provides information about the device and app version where the issue occurred.
+[Instabug](https://instabug.com) has a user feedback tool.  It helps you directly communicate with users who experienced a specific crash in your app.  It also provides information about the device and app version where the issue occurred.
 
 - Supports: iOS and Android apps
 - In-app feedback

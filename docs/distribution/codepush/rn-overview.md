@@ -102,7 +102,7 @@ This isn't necessarily the case for `updateDialog`, since it won't force the use
 
 The React Native community has graciously created some awesome open-source apps that can serve as examples for developers that are getting started. The following list is of OSS React Native apps that are also using CodePush, and can be used to see how others are using the service:
 
-- [F8 App](https://github.com/fbsamples/f8app) - The official conference app for [F8 2016](https://www.fbf8.com/).
+- [F8 App](https://github.com/fbsamples/f8app) - The official conference app for F8 2016.
 - [Feline for Product Hunt](https://github.com/arjunkomath/Feline-for-Product-Hunt) - An Android client for Product Hunt.
 - [GeoEncoding](https://github.com/LynxITDigital/GeoEncoding) - An app by Lynx IT Digital, which demonstrates how to use numerous React Native components and modules.
 - [Math Facts](https://github.com/Khan/math-facts) - An app by Khan Academy to help memorize math facts more easily.
@@ -121,8 +121,6 @@ In addition to using the CodePush CLI to "manually" release updates, we believe 
 
 - [Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.code-push) - Azure DevOps (formerly known as VSTS) also has extensions for publishing to [App Center](https://marketplace.visualstudio.com/items?itemName=MsAppCenter.app-center-distribute-v3) and the [Google Play](https://github.com/Microsoft/google-play-vsts-extension) store, so it provides a pretty great mobile CD solution in general.
 - [Travis CI](https://github.com/mondora/code-push-travis-cli)
-
-Additionally, if you want more details of what a complete mobile CI/CD workflow  can look like, which includes CodePush, check out this [excellent article](https://zeemee.engineering/zeemee-engineering-and-the-quest-for-the-holy-mobile-dev-grail-1310be4953d1#.zfwaxtbco) by the [ZeeMee engineering team](https://zeemee.engineering).
 
 ## TypeScript Consumption
 
