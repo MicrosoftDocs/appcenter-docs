@@ -71,7 +71,7 @@ try the following steps:
 Contact [App Center support](/appcenter/general/support-center#contact-us) if the issue persists.
 
 ## What can I do if I'm using Team Foundation Version Control (TFVC)?
-App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](/azure/devops/repos/git/import-from-TFVC), or you can use Azure DevOps for continuous integration, and take advantage of the [Hosted macOS](/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml) agents and build tasks for App Center Distribution and Test.
+App Center Build only supports Git repositories. For projects using a TFVC repository, you can [convert them to Git](/azure/devops/repos/git/import-from-TFVC), or you can use Azure DevOps for continuous integration, and take advantage of the [Hosted macOS](/azure/devops/pipelines/agents/hosted) agents and build tasks for App Center Distribution and Test.
 
 ## Is my source code secure?
 App Center uses virtual machines to build your code. There's a clean virtual machine provisioned especially for your build, which gets discarded once the build finishes. The files uploaded for code signing and the password for the certificate are also stored securely on our servers.
