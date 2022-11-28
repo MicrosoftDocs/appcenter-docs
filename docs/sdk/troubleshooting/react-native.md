@@ -21,7 +21,7 @@ ms.tgt_pltfrm: react-native
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## 'React/RCTDefines.h' file not found
 This error appears when RN core libraries aren't referenced correctly, which can be caused by different kinds of integrating or linking issues. It often happens when you have your dependencies linked using relative path in a podfile, rather than statically in a project.

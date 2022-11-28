@@ -17,7 +17,7 @@ ms.tgt_pltfrm: unity
 > * [Android](android.md)
 > * [iOS](ios.md)
 > * [Unity](unity.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 App Center Distribution enables your users/testers to install new versions of an app once you distribute it via App Center. Once enabled, the SDK presents an update dialog to users to either download or postpone installation of the latest update. Once they choose to update, the SDK will start to update your application.
 

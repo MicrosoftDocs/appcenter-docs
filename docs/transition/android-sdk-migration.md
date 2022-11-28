@@ -27,7 +27,7 @@ implementation 'net.hockeyapp.android:HockeySDK:...'
 After:
 
 ```groovy
-def appCenterSdkVersion = '4.1.0'
+def appCenterSdkVersion = '5.0.0'
 implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
 implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"

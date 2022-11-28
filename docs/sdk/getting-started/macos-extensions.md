@@ -19,7 +19,7 @@ dev_langs:
 > * [iOS](ios.md)
 > * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
@@ -38,8 +38,8 @@ Let's get started with setting up App Center macOS SDK in your app extension to 
 
 The following requirements must be met to use App Center SDK:
 
-* Your macOS project is set up in Xcode 11 or later on macOS version 10.14.4 or later.
-* You're targeting devices running on macOS 10.9 or later.
+* Your macOS project is set up in Xcode 13 or later on macOS version 10.14.4 or later.
+* You're targeting devices running on macOS 10.13 or later.
 * You're not using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret

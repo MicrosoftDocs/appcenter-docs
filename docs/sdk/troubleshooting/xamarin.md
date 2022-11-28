@@ -1,16 +1,16 @@
 ---
-title: Xamarin SDK Troubleshooting
+title: MAUI/Xamarin SDK Troubleshooting
 description: Troubleshooting the App Center SDK for Xamarin
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 08/16/2021
+ms.date: 11/24/2022
 ms.topic: article
 ms.assetid: 74801c55-8394-4f86-b7e1-8a8b4cbf4b37
 ms.tgt_pltfrm: xamarin
 ---
 
-# Xamarin SDK Troubleshooting
+# MAUI and Xamarin SDK Troubleshooting
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
@@ -21,11 +21,11 @@ ms.tgt_pltfrm: xamarin
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## Collecting verbose logs
 
-To get instructions on how to adjust the log level to `VERBOSE`, refer to [Xamarin Other APIs](../other-apis/xamarin.md#adjust-the-log-level) section.  
+To get instructions on how to adjust the log level to `VERBOSE`, refer to [Other APIs](../other-apis/xamarin.md#adjust-the-log-level) section.  
 You can find the verbose logs in the **Debug** > **Windows** > **Output** window.
 
 ## Issues during setup
@@ -54,9 +54,9 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 ## Crashes don't show up in the portal
 
 1. Make sure you've integrated the SDK modules correctly.
-2. Make sure correct App Secret is included along with the `Start()` method call. You can copy the exact `Start()` code by opening the app in the portal and navigating to Getting Started page.
-3. Restart the app after a crash. App Center Crashes will forward the crash log only after it's restarted. Also, on Xamarin.iOS and Xamarin.Mac the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
-4. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
+1. Make sure correct App Secret is included along with the `Start()` method call. You can copy the exact `Start()` code by opening the app in the portal and navigating to Getting Started page.
+1. Restart the app after a crash. App Center Crashes will forward the crash log only after it's restarted. Also, on Xamarin.iOS and Xamarin.Mac the SDK won't save any crash log if you attached a debugger. Make sure the debugger isn't attached when you crash the iOS app. On Xamarin.Android, you can crash while having debugger attached but you need to continue execution after breaking into the unhandled exception.
+1. If you want to see the logs that get sent to the backend, change the log level to **Verbose** in your application and the SDK will print logs in the console. Call the API below before you start the SDK.
 
    ```csharp
    AppCenter.LogLevel = LogLevel.Verbose;
@@ -64,12 +64,11 @@ You can find the verbose logs in the **Debug** > **Windows** > **Output** window
 
    Check the logs say "App Center SDK configured successfully" (in Info log level), then check if you see HTTPS request logs.
 
-5. Don't use any other library that provides Crash Reporting functionality, such as Xamarin Insights or HockeyApp. You can only have one crash reporting SDK integrated.
-6. If you use Hockey App in Android, make sure it's initialized after App Center.
-7. Make sure your device is online.
-8. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
-9. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
-10. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it's been sent.
+1. Don't use any other library that provides Crash Reporting functionality, such as Xamarin Insights or HockeyApp. You can only have one crash reporting SDK integrated.
+1. Make sure your device is online.
+1. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
+1. If you want to check if the SDK detected the crash on the next app start, you can call the API to check whether the app crashed in the last session and shows an alert. Or you can extend the crash callback to see if it was successfully sent to the server.
+1. To check if App Center backend received the crash, go to the Log flow section in the Analytics service. Your crashes should appear there, once it's been sent.
 
 ## Distribute and in-app updates are blocking my automated UI tests
 
@@ -86,12 +85,6 @@ If after replacing `Distribute` module with `DistributePlay` your app still gets
 ## Messages in the console that indicate that the database couldn't be opened on iOS
 
 App Center uses SQLite to persist logs before they're sent to the backend. If you're bundling your application with your own SQLite library instead of using the one provided by the OS, you might see errors like this in the console `[AppCenter] ERROR: -[MSACDBStorage executeSelectionQuery:]/147 Failed to open database` and won't see any analytics or crash information in the backend. Update the SDK to version 0.16.0 or later.
-
-## App Center SDK Behavior in Unit Tests
-
-The SDK package uses `.NETStandard 1.0` binaries for shared Xamarin project. When implementing tests you must use `.NETStandard 1.0` as the target framework, or else your tests might have unexpected behavior. 
-
-If your project targets `.NET Core` or frameworks higher than `.NETStandard 2.0` then in this case in tests will be used Windows Desktop binaries instead, so to avoid any issues you can mock the App Center SDK.
 
 ## Protect the App Center secret value
 

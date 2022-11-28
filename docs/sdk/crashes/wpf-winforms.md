@@ -15,7 +15,7 @@ ms.tgt_pltfrm: windows
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [React Native](react-native.md)

@@ -21,7 +21,7 @@ ms.tgt_pltfrm: uwp
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## Analytics data doesn't show up in the portal
 
@@ -34,7 +34,7 @@ ms.tgt_pltfrm: uwp
    AppCenter.LogLevel = LogLevel.Verbose;
    ```
 
-5. Make sure your device is online and see whether you can access https://in.appcenter.ms/ in a browser. It should load as a **blank page**. If instead you get a connection error, you should check whether that domain has been blocked/filtered on your network.
+5. Make sure your device is online.
 6. At times, logs might take few minutes to surface in the portal. Wait for some time if that’s the case.
 7. To check if App Center backend received your data, go to the Log flow section in Analytics service. Your events should appear once it's been sent.
 

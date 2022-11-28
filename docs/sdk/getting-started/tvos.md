@@ -19,7 +19,7 @@ dev_langs:
 > * [iOS](ios.md)
 > * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
@@ -36,7 +36,7 @@ Let's get started with setting up App Center tvOS SDK in your app to use App Cen
 
 The following requirements must be met to use App Center SDK:
 
-* Your tvOS is set up in Xcode 11 or later on tvOS version 11 or later.
+* Your tvOS is set up in Xcode 13 or later on tvOS version 11 or later.
 * You aren't using any other library that provides Crash Reporting functionality.
 
 ## 2. Create your app in the App Center Portal to obtain the App Secret

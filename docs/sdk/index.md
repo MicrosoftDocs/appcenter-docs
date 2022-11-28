@@ -103,10 +103,10 @@ Distribute | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or la
 
 ### macOS
 
-Service          | macOS Version   | Xcode
------------------|-----------------|--------------
-Analytics        | 10.9 or later   | 11 or later
-Crashes          | 10.9 or later   | 11 or later
+Service          | macOS Version  | Xcode
+-----------------|----------------|--------------
+Analytics        | 10.13 or later | 11 or later
+Crashes          | 10.13 or later | 11 or later
 
 ### tvOS
 

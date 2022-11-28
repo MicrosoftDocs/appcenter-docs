@@ -19,7 +19,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
@@ -31,13 +31,13 @@ Follow the [Getting started section](~/sdk/getting-started/react-native.md) if y
 
 ## Session and device information
 
-Once you add App Center Analytics to your app and the SDK is started, it automatically tracks sessions and device properties like OS Version, model, etc. You don’t need to write any additional code.
+Once you add App Center Analytics to your app and the SDK is started, it automatically tracks sessions and device properties like OS Version, model, etc.
 
 ## Custom events
 
 Track your own custom events with **up to 20 properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Once you've started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```javascript
 // import App Center Analytics at the top of the file.
@@ -89,7 +89,7 @@ If you wish to collect analytics information for your app users but want to get 
 1. Open the project's `ios/YourAppName/AppDelegate.m` file and replace `[AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];` with `[AppCenterReactNativeAnalytics registerWithInitiallyEnabled:false];`.
 2. Open the project's `android/app/src/main/res/values/strings.xml` file and replace `<string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>` with `<string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ENABLE_IN_JS</string>`.
 
-This means that for any information to be sent to App Center (even basic session information), you must first enable App Center Analytics inside the app by adding the following line to their code.
+This means that for any information to be sent to App Center (even basic session information), you must first enable App Center Analytics by adding the following line of code:
 
 ```javascript
 await Analytics.setEnabled(true);
@@ -97,13 +97,13 @@ await Analytics.setEnabled(true);
 
 [!INCLUDE [manual session tracker](includes/manuall-session-tracker.md)]
 
-To configure SDK for tracking session manually you have to use the native Analytics `enableManualSessionTracker` APIs:
+To configure SDK for tracking session manually, you have to use the native Analytics `enableManualSessionTracker` APIs:
 
 - In iOS, call `[MSACAnalytics enableManualSessionTracker];` before `[AppCenterReactNative register];` in the app's `didFinishLaunchingWithOptions` delegate method in `AppDelegate.m`. Add `@import AppCenterAnalytics` if missing in that file.
 
 - In Android, call `Analytics.enableManualSessionTracker();` before `SoLoader.init` in `onCreate` method in `MainApplication.java`. Add import `com.microsoft.appcenter.analytics.Analytics` if missing in that file.
 
-Then you can use the `startSession` API in the your React Native project:
+Then you can use the `startSession` API in your React Native project:
 
 ```javascript
 Analytics.startSession();
@@ -111,23 +111,23 @@ Analytics.startSession();
 
 ## Local storage size
 
-By default, the SDK stores up to 10MB of logs in the storage.
+By default, the SDK stores up to 10 MB of logs in the storage.
 
 ## No internet access
 
-When there isn't any network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 6 seconds.
+When there isn't any network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 6 seconds.
 
 ## Batching event logs
 
-The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 6 seconds. There can be a maximum of 3 batches sent in parallel.
+The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 6 seconds. There can be a maximum of three batches sent in parallel.
 
 ## Retry and back-off logic
 
 App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
 * 3 tries maximum per request.
 * Each request has its own retry state machine.
-* All the transmission channels are disabled (until next app process) after 1 request exhausts all its retries.
+* All the transmission channels are disabled (until next app process) after one request exhausts all its retries.
 
 Back-off logic
-* 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
+* 50% randomization, first retry between 5s and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.
