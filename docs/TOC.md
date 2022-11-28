@@ -239,7 +239,7 @@
 ### [Unity](sdk/crashes/unity.md)
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
-### [Xamarin](sdk/crashes/xamarin.md)
+### [MAUI/Xamarin](sdk/crashes/xamarin.md)
 ## [Features](diagnostics/features.md)
 ## [Search](diagnostics/search.md)
 ## [Using the Diagnostics UI](diagnostics/using-the-diagnostics-UI.md)
@@ -277,7 +277,7 @@
 ### [Unity](sdk/getting-started/unity.md)
 ### [UWP](sdk/getting-started/uwp.md)
 ### [WPF/WinForms](sdk/getting-started/wpf-winforms.md)
-### [Xamarin](sdk/getting-started/xamarin.md)
+### [MAUI/Xamarin](sdk/getting-started/xamarin.md)
 ## Analytics
 ### [Android](sdk/analytics/android.md)
 ### [Cordova [Retired]](sdk/analytics/cordova.md)
@@ -287,7 +287,7 @@
 ### [React Native](sdk/analytics/react-native.md)
 ### [Unity](sdk/analytics/unity.md)
 ### [Windows](sdk/analytics/windows.md)
-### [Xamarin](sdk/analytics/xamarin.md)
+### [MAUI/Xamarin](sdk/analytics/xamarin.md)
 ## Crashes
 ### [Android](sdk/crashes/android.md)
 ### [Cordova [Retired]](sdk/crashes/cordova.md)
@@ -298,12 +298,12 @@
 ### [Unity](sdk/crashes/unity.md)
 ### [UWP](sdk/crashes/uwp.md)
 ### [WPF/WinForms](sdk/crashes/wpf-winforms.md)
-### [Xamarin](sdk/crashes/xamarin.md)
+### [MAUI/Xamarin](sdk/crashes/xamarin.md)
 ## Distribute
 ### [Android](sdk/distribute/android.md)
 ### [iOS](sdk/distribute/ios.md)
 ### [Unity](sdk/distribute/unity.md)
-### [Xamarin](sdk/distribute/xamarin.md)
+### [MAUI/Xamarin](sdk/distribute/xamarin.md)
 ## Other APIs
 ### [Android](sdk/other-apis/android.md)
 ### [iOS](sdk/other-apis/ios.md)
@@ -312,7 +312,7 @@
 ### [UWP](sdk/other-apis/uwp.md)
 ### [React Native](sdk/other-apis/react-native.md)
 ### [Unity](sdk/other-apis/unity.md)
-### [Xamarin](sdk/other-apis/xamarin.md)
+### [MAUI/Xamarin](sdk/other-apis/xamarin.md)
 ### [Cordova [Retired]](sdk/other-apis/cordova.md)
 ### [WPF/WinForms](sdk/other-apis/wpf-winforms.md)
 ## Troubleshooting
@@ -324,7 +324,7 @@
 ### [Cordova [Retired]](sdk/troubleshooting/cordova.md)
 ### [Unity](sdk/troubleshooting/unity.md)
 ### [UWP, WPF, and WinForms](sdk/troubleshooting/uwp.md)
-### [Xamarin](sdk/troubleshooting/xamarin.md)
+### [MAUI/Xamarin](sdk/troubleshooting/xamarin.md)
 ## [Limitations](sdk/limitations.md)
 
 # GDPR

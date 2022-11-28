@@ -17,7 +17,7 @@ ms.tgt_pltfrm: react-native
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
@@ -32,13 +32,13 @@ Follow the [Get Started](~/sdk/getting-started/cordova.md) section if you haven'
 
 ## Session and device information
 
-Once you add App Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to write any additional code.
+Once you add App Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc.
 
 ## Custom events
 
 You can track your own custom events with **up to 20 properties** to understand the interaction between your users and the app.
 
-Once you have started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
+Once you've started the SDK, use the `trackEvent` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there's a maximum limit of 256 characters per event name and 125 characters per event property name and event property value.
 
 ```js
 var success = function() {
@@ -143,23 +143,23 @@ AppCenter.Analytics.setEnabled(true, success, error);
 
 ## Local storage size
 
-By default, the SDK stores up to 10MB of logs in the storage.
+By default, the SDK stores up to 10 MB of logs in the storage.
 
 ## No internet access
 
-When there isn't any network connectivity, the SDK saves up to 10MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
+When there isn't any network connectivity, the SDK saves up to 10 MB of logs in the local storage. Once the storage is full, the SDK will start discarding old logs to make room for the new logs. Once the device gets internet access back, the SDK will send logs in the batch of 50 or after every 3 seconds.
 
 ## Batching event logs
 
-The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds. There can be a maximum of 3 batches sent in parallel.
+The App Center SDK uploads logs in a batch of 50 and if the SDK doesn't have 50 logs to send, it will still send logs after 3 seconds. There can be a maximum of three batches sent in parallel.
 
 ## Retry and back-off logic
 
 App Center SDK supports back-off retries on recoverable network errors. Below is the retry logic:
 * 3 tries maximum per request.
 * Each request has its own retry state machine.
-* All the transmission channels are disabled (until next app process) after 1 request exhausts all its retries.
+* All the transmission channels are disabled (until next app process) after one request exhausts all its retries.
 
 Back-off logic
-* 50% randomization, 1st retry between 5 and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
+* 50% randomization, first retry between 5s and 10s, second retry between 2.5 and 5 minutes, last try between 10 and 20 minutes.
 * If network switches from off to on (or from wi-fi to mobile), retry states are reset and requests are retried immediately.

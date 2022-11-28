@@ -23,7 +23,7 @@ dev_langs:
 > * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 
 ## Issues during setup
 

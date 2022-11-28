@@ -20,7 +20,7 @@ dev_langs:
 > * [iOS](ios.md)
 > * [iOS Extensions](ios-extensions.md)
 > * [React Native](react-native.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [UWP](uwp.md)
 > * [WPF/WinForms](wpf-winforms.md)
 > * [Unity](unity.md)
@@ -60,7 +60,7 @@ Once you've created an app, you can obtain its App Secret on the **Getting Start
 
   ```groovy
   dependencies {
-      def appCenterSdkVersion = '4.1.0'
+      def appCenterSdkVersion = '5.0.0'
       implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
       implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
   }

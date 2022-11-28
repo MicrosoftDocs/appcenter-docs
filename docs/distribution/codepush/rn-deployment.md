@@ -168,7 +168,7 @@ And that's it! Now when you run or build your app, your debug builds will automa
 
 If you want to install both debug and release builds simultaneously on the same device (highly recommended!), then you need to ensure that your debug build has a unique identity and icon from your release build. Otherwise, neither the OS, or you, can differentiate between the two. You can configure unique identities by doing the following steps:
 
-1. In your **build.gradle** file, specify the [`applicationIdSuffix`](https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html#com.android.build.gradle.internal.dsl.BuildType:applicationIdSuffix) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
+1. In your **build.gradle** file, specify the [`applicationIdSuffix`](https://developer.android.com/studio/build/build-variants#change-app-id) field for your debug build type, which gives your debug build a unique identity for the OS (like `com.foo` vs. `com.foo.debug`).
 
     ```groovy
     buildTypes {

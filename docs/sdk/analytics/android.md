@@ -22,7 +22,7 @@ dev_langs:
 > * [iOS](ios.md)
 > * [React Native](react-native.md)
 > * [Windows](windows.md)
-> * [Xamarin](xamarin.md)
+> * [MAUI/Xamarin](xamarin.md)
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
