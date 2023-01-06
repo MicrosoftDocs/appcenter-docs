@@ -4,7 +4,7 @@ description: This guide will discuss how to identify and select an iOS simulator
 keywords: uitest test cloud
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/17/2018
+ms.date: 01/06/2023
 ms.topic: article
 ms.assetid: E72E94A6-479F-4D65-9394-C6310F670DD9
 ms.service: vs-appcenter
@@ -49,3 +49,13 @@ app.WaitForNoElement(c=>c.Class("TextView").Text("Uploading data..."),
     "Upload is taking too long",
     new TimeSpan(0,0,90,0));
 ```
+
+Both `WaitForElement` and `WaitForNoElement` have two additional parameters:
+
+* `retryFrequency` - The time in milliseconds to wait before retrying the failed query call.
+
+**Default**: 250
+
+* `postTimeout` - The time in milliseconds to wait after the element has been found.
+
+**Default**: 150
