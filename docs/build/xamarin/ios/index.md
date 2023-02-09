@@ -54,22 +54,34 @@ Select the configuration you want to build with. The configurations are automati
 ### 3.3. Mono version
 App Center allows using different Mono environments bundled with respective Xamarin.iOS SDK for your build to maintain backward compatibility while releasing a support for new features. The default Mono for a new branch configuration will be the latest stable one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries. When you choose a different Mono version, you'll see the Xamarin.iOS SDK version that's bundled with it. To track Xamarin SDK version updates, you can read posts in the [Xamarin release blog](https://releases.xamarin.com/).
 
-#### 3.3.1. .NET Core version
-Proper .NET Core version will be selected automatically based on Mono version used for build and can't be overwritten. You can view the mapping of Mono to the .NET Core used by our services in the table below:
+#### 3.3.1. .NET version
+Proper .NET version will be selected automatically based on Xamarin.iOS version used for build and can't be overwritten. You can view the mapping of Xamarin.iOS to the .NET used by our services in the table below:
 
-| Mono | .NET Core |
-| ---- | --------- |
-| <= 5.18 | 2.2.105 |
-| 6.0 | 2.2.300 |
-| 6.4 | 3.0.100 |
-| 6.6 | 3.1.100 |
-| 6.8 | 3.1.200 |
-| 6.10 | 3.1.300 |
-| 6.12 | 3.1.401 |
+| Xamarin.iOS    | .NET    |
+| -------------- | ------- |
+| 13.20          | 3.1.401 |
+| 14.0           | 3.1.401 |
+| 14.2           | 3.1.401 |
+| 14.4           | 3.1.401 |
+| 14.6           | 5.0.100 |
+| 14.8           | 5.0.100 |
+| 14.10          | 5.0.100 |
+| 14.14          | 5.0.100 |
+| 14.16          | 5.0.100 |
+| 14.20          | 5.0.100 |
+| 15             | 5.0.100 |
+| 15.2           | 5.0.100 |
+| 15.4           | 5.0.100 |
+| 15.6           | 5.0.100 |
+| 15.8           | 5.0.100 |
+| 15.10          | 5.0.100 |
+| 15.12          | 5.0.100 |
+| 16.0           | 5.0.100 |
+| 16.0 (.NET 6)  | 6.0.405 |
 
 ### 3.4. Xcode Version
 
-Currently supported versions of Xamarin require Xcode 9.4.1 or higher
+Currently supported versions of Xamarin require Xcode 11.7 or higher
 
 ### 3.5. Build triggers
 By default, a new build is triggered every time a developer pushes to a configured branch. If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
