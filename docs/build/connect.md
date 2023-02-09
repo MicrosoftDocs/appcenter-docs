@@ -26,7 +26,7 @@ To build an app, connect to your repository account by selecting the service fro
 Available repositories will populate in App Center after a successful connection. Select a repository and a branch where your app lives and set up your first build.
 
 > [!TIP]
-> You may need to unblock `build.appcenter.ms` to allow the build agent to connect to your repo. Possible [Azure IP addresses](/azure/devops/pipelines/agents/hosted?tabs=yaml#networking).
+> You may need to unblock `build.appcenter.ms` and `build2.appcenter.ms` to allow the build agent to connect to your repo. Possible [Azure IP addresses](/azure/devops/pipelines/agents/hosted?tabs=yaml#networking).
 
 ### Connecting to Self-Hosted GitLab Instances
 > [!WARNING]

@@ -22,3 +22,6 @@ Some App Center services might need additional items on your allow list:
 
 - [Build allow list info](~/build/connect.md#connecting-to-a-source-repository)
 - [Test allow list info](~/test-cloud/troubleshooting/server-connection.md)
+
+## IP Allowlist
+We do not currently provide a list of IP addresses or ranges that you need to allowlist to connect to App Center, since these IP addresses are subject to change. If you do require IP addresses, you can use a DNS service to translate the domain names into the corresponding IP addresses.
