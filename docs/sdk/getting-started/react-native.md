@@ -70,7 +70,11 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 ### 3.1 Integrate the SDK automatically for React Native 0.60
 
+Using App Center SDK with React Native can be done in two ways: Configuring the `AppCenter-Config.plist` for iOS and **appcenter-config.json** for Android or by calling the native start functions that accept the appSecret as an argument, just like the Android and iOS documentation suggests. 
+
 #### 3.1.1 Integrate React Native iOS
+
+##### 3.1.1.1 Configuring `AppCenter-Config.plist` 
 
 1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 
@@ -104,8 +108,32 @@ The App Center SDK uses a modular approach, where you just add the modules for A
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     ```
+   
+##### 3.1.1.2 Using Native Start Function
 
+1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
+
+2. Modify the app's **AppDelegate.m** file to include code for starting SDK:
+
+   * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
+
+     ```objc
+     #import <AppCenter/MSACAppCenter.h>
+     #import <AppCenterReactNative.h>
+     #import <AppCenterReactNativeAnalytics.h>
+     #import <AppCenterReactNativeCrashes.h>
+      ```
+   * Add these lines to the `didFinishLaunchingWithOptions` method
+   
+    ```objc
+    [MSACAppCenter configureWithAppSecret:{Your App Secret}];
+    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+    ```
+   
 #### 3.1.2 Integrate React Native Android
+
+##### 3.1.2.1 Configuring **appcenter-config.json**
 
 1. Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
@@ -122,6 +150,24 @@ Note: If the folder named assets doesn't exist, it should be created under "proj
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
     ```
+   
+##### 3.1.2.2 Using Native Start Function
+
+1. Add the following line inside your app's main activity class' onCreate-callback to use App Center Analytics and App Center Crashes for java or kotlin correspondingly: 
+
+```java
+AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
+```
+```kotlin
+AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
+```
+
+2. Modify the app's **res/values/strings.xml** to include the following lines:
+
+ ```xml
+ <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+ <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+ ```
 
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
