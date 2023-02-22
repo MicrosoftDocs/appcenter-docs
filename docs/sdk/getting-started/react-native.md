@@ -118,7 +118,7 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
 
      ```objc
-     #import <AppCenter/MSACAppCenter.h>
+     #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
      #import <AppCenterReactNative.h>
      #import <AppCenterReactNativeAnalytics.h>
      #import <AppCenterReactNativeCrashes.h>
@@ -126,7 +126,8 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
    * Add these lines to the `didFinishLaunchingWithOptions` method
    
     ```objc
-    [MSACAppCenter configureWithAppSecret:{Your App Secret}];
+    [AppCenterReactNativeShared setAppSecret:"{Your App Secret}"];
+    [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     ```
