@@ -28,7 +28,7 @@ Represents the number of unique app installations that launched the app in the l
 
 - 1 calendar day for the "daily"
 - 7 calendar days for the "weekly"
-- 30 calendar days for the "monthly"
+- 28 calendar days for the "monthly"
 
 A new day starts at 12am UTC.
 
