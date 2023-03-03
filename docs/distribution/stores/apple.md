@@ -26,7 +26,7 @@ For more information, review the [Apple App Distribution Guide](https://help.app
 
 ## Set up the connection between App Center and App Store Connect
 > [!NOTE]
-> You can connect to App Store Connect using either your Apple credentials or an [App Store Connect API key](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). We recommend using the Connect API Key for improved stability and to set access levels for the keys in the Apple Developer Portal. We recommend using the Connect API Key for improved stability and to set access levels for the keys in the Apple Developer Portal. Additionally, you will no longer have to renew your connection every 30 days as you would with credentials, 2FA, and App Specific Passwords.  
+> You can connect to App Store Connect using either your Apple credentials or an [App Store Connect API key](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). We recommend using the Connect API Key for improved stability and to set access levels for the keys in the Apple Developer Portal. Additionally, you will no longer have to renew your connection every 30 days as you would with credentials, 2FA, and App Specific Passwords.  
 
 1. Select **Stores** under Distribution.
 2. In the middle of the page, click on the **Connect to Store** button.
