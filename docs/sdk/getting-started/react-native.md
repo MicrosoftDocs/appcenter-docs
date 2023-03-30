@@ -70,7 +70,7 @@ The App Center SDK uses a modular approach, where you just add the modules for A
 
 ### 3.1 Integrate the SDK automatically for React Native 0.60
 
-Using App Center SDK with React Native can be done in two ways: Configuring the `AppCenter-Config.plist` for iOS and **appcenter-config.json** for Android or by calling the native start functions that accept the appSecret as an argument, just like the Android and iOS documentation suggests. 
+Using App Center SDK with React Native can be done in two ways: Configuring the `AppCenter-Config.plist` for iOS and **appcenter-config.json** for Android or by calling the native start functions that accept the appSecret as an argument. 
 
 #### 3.1.1 Integrate React Native iOS
 
@@ -91,9 +91,9 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
     </plist>
     ```
 
-3. Modify the app's **AppDelegate.m** file to include code for starting SDK:
+3. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
 
-    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
+    * Add the following imports:
 
     ```objc
     #import <AppCenterReactNative.h>
@@ -101,7 +101,7 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
     #import <AppCenterReactNativeCrashes.h>
     ```
 
-    * Add these lines to the `didFinishLaunchingWithOptions` method
+    * Add these lines to the `application:didFinishLaunchingWithOptions:` method
 
     ```objc
     [AppCenterReactNative register];
@@ -113,9 +113,9 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
 
 1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 
-2. Modify the app's **AppDelegate.m** file to include code for starting SDK:
+2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
 
-   * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
+   * Add the following imports:
 
      ```objc
      #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
@@ -123,10 +123,11 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
      #import <AppCenterReactNativeAnalytics.h>
      #import <AppCenterReactNativeCrashes.h>
       ```
-   * Add these lines to the `didFinishLaunchingWithOptions` method
+   * Add these lines to the `application:didFinishLaunchingWithOptions:` method
    
     ```objc
-    [AppCenterReactNativeShared setAppSecret:"{Your App Secret}"];
+    [AppCenterReactNativeShared setStartAutomatically:YES];
+    [AppCenterReactNativeShared setAppSecret:@"{Your App Secret}"];
     [AppCenterReactNative register];
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
@@ -269,8 +270,8 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
    * `$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics`
    * `$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes`
 
-11. Modify the app's AppDelegate.m file to include code for starting SDK:
-    * Add these lines to import section *above* the `#if DEBUG` or `#ifdef FB_SONARKIT_ENABLED` declaration (if present):
+11. Modify the app's AppDelegate.m or AppDelegate.mm file to include code for starting SDK:
+    * Add the following imports:
 
     ```objc
     #import <AppCenterReactNative/AppCenterReactNative.h>
@@ -278,7 +279,7 @@ We **strongly** recommend integrating the SDK via CocoaPods as described above. 
     #import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
     ```
 
-    * Add these lines to the `didFinishLaunchingWithOptions` method
+    * Add these lines to the `application:didFinishLaunchingWithOptions:` method
 
     ```objc
     [AppCenterReactNative register];
