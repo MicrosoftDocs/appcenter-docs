@@ -79,6 +79,7 @@ Proper .NET version will be selected automatically based on Xamarin.iOS version 
 | 16.0           | 5.0.100 |
 | 16.0 (.NET 6)  | 6.0.405 |
 | 16.1           | 6.0.405 |
+| 16.2           | 6.0.405 |
 
 ### 3.4. Xcode Version
 
