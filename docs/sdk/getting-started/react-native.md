@@ -91,7 +91,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
     </plist>
     ```
 
-2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK
+2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK.
 
     * Add the following imports:
 
@@ -111,7 +111,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
    
 ##### 3.1.1.2 Setting AppSecret Option 2: Configuring in code
 
-Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK
+Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK.
 
    * Add the following imports:
 
@@ -148,7 +148,7 @@ Create a new file with the name **appcenter-config.json** in `android/app/src/ma
         "app_secret": "{APP_SECRET_VALUE}"
     }
     ```
-Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets"
+Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets".
    
 ##### 3.1.2.2 Setting AppSecret Option 2: Configuring in code
 
