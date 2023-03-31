@@ -91,7 +91,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
     </plist>
     ```
 
-2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
+2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK
 
     * Add the following imports:
 
@@ -101,7 +101,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
     #import <AppCenterReactNativeCrashes.h>
     ```
 
-    * Add these lines to the `application:didFinishLaunchingWithOptions:` method
+    * Add these lines to the `application:didFinishLaunchingWithOptions:` method:
 
     ```objc
     [AppCenterReactNative register];
@@ -111,7 +111,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
    
 ##### 3.1.1.2 Setting AppSecret Option 2: Configuring in code
 
-1. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
+Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK
 
    * Add the following imports:
 
@@ -121,7 +121,7 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
      #import <AppCenterReactNativeAnalytics.h>
      #import <AppCenterReactNativeCrashes.h>
       ```
-2. Add these lines to the `application:didFinishLaunchingWithOptions:` method
+   * Add these lines to the `application:didFinishLaunchingWithOptions:` method:
    
     ```objc
     [AppCenterReactNativeShared setStartAutomatically:YES];
