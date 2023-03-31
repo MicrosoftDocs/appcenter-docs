@@ -109,7 +109,7 @@ Create a new file with the name `AppCenter-Config.plist` with the following cont
     </plist>
     ```
    
-##### 3.1.1.2 Setting AppSecret Option 2: Using Native Start Function
+##### 3.1.1.2 Setting AppSecret Option 2: Configuring in code
 
 Add these lines to the `application:didFinishLaunchingWithOptions:` method
    
