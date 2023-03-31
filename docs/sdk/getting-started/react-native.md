@@ -74,7 +74,7 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
 
 #### 3.1.1 Integrate React Native iOS
 
-Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
+1. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
 
    * Add the following imports:
 
@@ -93,11 +93,10 @@ Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code fo
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     ```
+2. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 ##### 3.1.1.1 Setting AppSecret Option 1: Configuring `AppCenter-Config.plist` 
 
-1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
-
-2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName\>...**).
+Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName\>...**).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -112,8 +111,16 @@ Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code fo
    
 ##### 3.1.1.2 Setting AppSecret Option 2: Using Native Start Function
 
-Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
+Add these lines to the `application:didFinishLaunchingWithOptions:` method
    
+    ```objc
+    [AppCenterReactNativeShared setStartAutomatically:YES];
+    [AppCenterReactNativeShared setAppSecret:@"{Your App Secret}"];
+    [AppCenterReactNative register];
+    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+    ```
+
 #### 3.1.2 Integrate React Native Android
 
 Modify the app's **res/values/strings.xml** to include the following lines:
