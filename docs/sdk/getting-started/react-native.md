@@ -84,15 +84,7 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
      #import <AppCenterReactNativeAnalytics.h>
      #import <AppCenterReactNativeCrashes.h>
       ```
-   * Add these lines to the `application:didFinishLaunchingWithOptions:` method
-   
-    ```objc
-    [AppCenterReactNativeShared setStartAutomatically:YES];
-    [AppCenterReactNativeShared setAppSecret:@"{Your App Secret}"];
-    [AppCenterReactNative register];
-    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
-    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
-    ```
+
 2. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
 
 ##### 3.1.1.1 Setting AppSecret Option 1: Configuring `AppCenter-Config.plist` 
