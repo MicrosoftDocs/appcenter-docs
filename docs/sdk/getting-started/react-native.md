@@ -74,46 +74,7 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
 
 #### 3.1.1 Integrate React Native iOS
 
-##### 3.1.1.1 Configuring `AppCenter-Config.plist` 
-
-1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
-
-2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName\>...**).
-
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-        <dict>
-        <key>AppSecret</key>
-        <string>{APP_SECRET_VALUE}</string>
-        </dict>
-    </plist>
-    ```
-
-3. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
-
-    * Add the following imports:
-
-    ```objc
-    #import <AppCenterReactNative.h>
-    #import <AppCenterReactNativeAnalytics.h>
-    #import <AppCenterReactNativeCrashes.h>
-    ```
-
-    * Add these lines to the `application:didFinishLaunchingWithOptions:` method
-
-    ```objc
-    [AppCenterReactNative register];
-    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
-    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
-    ```
-   
-##### 3.1.1.2 Using Native Start Function
-
-1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
-
-2. Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
+Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK:
 
    * Add the following imports:
 
@@ -132,12 +93,38 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
     [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
     [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
     ```
+##### 3.1.1.1 Setting AppSecret Option 1: Configuring `AppCenter-Config.plist` 
+
+1. Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
+
+2. Create a new file with the name `AppCenter-Config.plist` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value. Don't forget to add this file to the Xcode project (right-click the app in Xcode and click **Add files to \<AppName\>...**).
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+        <dict>
+        <key>AppSecret</key>
+        <string>{APP_SECRET_VALUE}</string>
+        </dict>
+    </plist>
+    ```
+   
+##### 3.1.1.2 Setting AppSecret Option 2: Using Native Start Function
+
+Run `pod install --repo-update` from iOS directory to install CocoaPods dependencies.
    
 #### 3.1.2 Integrate React Native Android
 
-##### 3.1.2.1 Configuring **appcenter-config.json**
+Modify the app's **res/values/strings.xml** to include the following lines:
 
-1. Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
+    ```xml
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    ```
+##### 3.1.2.1 Setting AppSecret Option 1: Configuring **appcenter-config.json**
+
+Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
     ```json
     {
@@ -145,17 +132,10 @@ Using App Center SDK with React Native can be done in two ways: Configuring the 
     }
     ```
 Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets"
-
-2. Modify the app's **res/values/strings.xml** to include the following lines:
-
-    ```xml
-    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
-    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    ```
    
-##### 3.1.2.2 Using Native Start Function
+##### 3.1.2.2 Setting AppSecret Option 2: Configuring in code
 
-1. Add the following line inside your app's main activity class' onCreate-callback to use App Center Analytics and App Center Crashes for java or kotlin correspondingly: 
+Add the following line inside your app's main activity class' onCreate-callback to use App Center Analytics and App Center Crashes: 
 
 ```java
 AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
@@ -163,13 +143,6 @@ AppCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.
 ```kotlin
 AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes::class.java)
 ```
-
-2. Modify the app's **res/values/strings.xml** to include the following lines:
-
- ```xml
- <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
- <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
- ```
 
 ### 3.2 Integrate the SDK automatically for React Native lower than 0.60
 
