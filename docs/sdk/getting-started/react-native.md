@@ -113,42 +113,44 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
 
 Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK.
 
-    * Add the following imports:
+* Add the following imports:
 
-    ```objc
-    #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
-    #import <AppCenterReactNative.h>
-    #import <AppCenterReactNativeAnalytics.h>
-    #import <AppCenterReactNativeCrashes.h>
-    ```
+```objc
+#import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
+#import <AppCenterReactNative.h>
+#import <AppCenterReactNativeAnalytics.h>
+#import <AppCenterReactNativeCrashes.h>
+```
 
-    * Add these lines to the `application:didFinishLaunchingWithOptions:` method:
-   
-    ```objc
-    [AppCenterReactNativeShared setStartAutomatically:YES];
-    [AppCenterReactNativeShared setAppSecret:@"{Your App Secret}"];
-    [AppCenterReactNative register];
-    [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
-    [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
-    ```
+* Add these lines to the `application:didFinishLaunchingWithOptions:` method:
+
+```objc
+[AppCenterReactNativeShared setStartAutomatically:YES];
+[AppCenterReactNativeShared setAppSecret:@"{Your App Secret}"];
+[AppCenterReactNative register];
+[AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+[AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+```
 
 #### 3.1.2 Integrate React Native Android
 
 Modify the app's **res/values/strings.xml** to include the following lines:
 
-    ```xml
-    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
-    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    ```
+```xml
+<string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+<string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+```
+
 ##### 3.1.2.1 Setting AppSecret Option 1: Configuring **appcenter-config.json**
 
 Create a new file with the name **appcenter-config.json** in `android/app/src/main/assets/` with the following content and replace `{APP_SECRET_VALUE}` with your app secret value.
 
-    ```json
-    {
-        "app_secret": "{APP_SECRET_VALUE}"
-    }
-    ```
+```json
+{
+    "app_secret": "{APP_SECRET_VALUE}"
+}
+```
+
 Note: If the folder named assets doesn't exist, it should be created under "project_root/android/app/src/main/assets".
    
 ##### 3.1.2.2 Setting AppSecret Option 2: Configuring in code
