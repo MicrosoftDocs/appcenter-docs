@@ -113,15 +113,16 @@ Run `pod install --repo-update` from iOS directory to install CocoaPods dependen
 
 Modify the app's **AppDelegate.m** or **AppDelegate.mm** file to include code for starting SDK.
 
-   * Add the following imports:
+    * Add the following imports:
 
-     ```objc
-     #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
-     #import <AppCenterReactNative.h>
-     #import <AppCenterReactNativeAnalytics.h>
-     #import <AppCenterReactNativeCrashes.h>
-      ```
-   * Add these lines to the `application:didFinishLaunchingWithOptions:` method:
+    ```objc
+    #import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
+    #import <AppCenterReactNative.h>
+    #import <AppCenterReactNativeAnalytics.h>
+    #import <AppCenterReactNativeCrashes.h>
+    ```
+
+    * Add these lines to the `application:didFinishLaunchingWithOptions:` method:
    
     ```objc
     [AppCenterReactNativeShared setStartAutomatically:YES];
