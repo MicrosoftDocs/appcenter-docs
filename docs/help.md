@@ -27,7 +27,7 @@ Support is provided in English only and during business hours. You can expect an
 You also can get support by sending an email to [support@appcenter.ms](mailto:support@appcenter.ms).
 
 ## Microsoft Premier Support
-Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/enterprise/services/support). 
+Customers with a Microsoft Premier Support account can file a support request in the [Microsoft Premier Support Request Portal](https://support.microsoft.com/premier) (requires Microsoft account sign-in). If you're new to Microsoft Premier Support, you can learn about it in the [Microsoft Premier Support Center](https://www.microsoft.com/en-us/unifiedsupport/premier). 
 
 ## Feedback on the documentation
 The comments feature on our documentation is intended for docs suggestions or questions. Every documentation page (except the [App Center docs landing page](/appcenter/)) has a number of feedback features, which you can see highlighted in the following figure:
