@@ -121,6 +121,9 @@ If you're trying to distribute directly to users outside of App Center, you can 
 
 When signing in to Apple through App Center, we check the provisioning profile(s) included in your application against those in your developer account. If any profile used in a binary isn't found in your Apple developer account, App Center can't re-sign your application. To resolve this, ensure that your Apple developer account contains all of the provisioning profiles used in your application. You can check application profiles in the **General** tab of your Xcode project properties, or the **[iOS Bundle Signing](/xamarin/ios/deploy-test/app-distribution/ad-hoc-distribution#selecting-a-distribution-profile-in-a-xamarinios-project)** options in Visual Studio for Mac.
 
+> [!NOTE]
+> When attempting to auto-provision a binary via App Center, in some cases, provisioning profiles generated automatically by Xcode will result in the auto-provisioning to fail with the following error: **Profile named 'iOS Team ...' was not found in the account**. To resolve the issue, please create and use manually created provisioning profile.
+
 ### Team not found
 
 When signing in to Apple through App Center, the teams included in your applications are checked against those in your developer account. If any team used in the binary isn't found in your Apple developer account, App Center can't re-sign your application. To resolve this, ensure that your Apple developer account contains the team used in your application. You can check the applications team in the **General** tab of your Xcode project properties, or the **[iOS Bundle Signing](/xamarin/ios/deploy-test/app-distribution/ad-hoc-distribution#selecting-a-distribution-profile-in-a-xamarinios-project)** options in Visual Studio for Mac.
