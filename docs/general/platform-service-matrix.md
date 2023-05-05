@@ -31,6 +31,8 @@ The table below lists all the Operating System and Platforms and their supported
 | Xamarin - iOS          |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 | Xamarin - Android      |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
 | Xamarin - macOS        |  ❌   |  ❌  |     ✅       |   ✅       |    ✅     |
+| .NET MAUI - Android    |  ❌   |  ❌  |     ✅       |   ✅       |    ✅     |
+| .NET MAUI - iOS        |  ❌   |  ❌  |     ✅       |   ✅       |    ✅     |
 
-* - For UWP, HoloLens support hasn't been verified.
+\* - For UWP, HoloLens support hasn't been verified.
 † - In-app updates not supported for these platforms.
