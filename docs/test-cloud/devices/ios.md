@@ -4,7 +4,7 @@ description: iOS devices that you can run tests on in App Center
 keywords: test cloud
 author: priskorn
 ms.author: miprisk
-ms.date: 10/26/2022
+ms.date: 5/11/2023
 ms.topic: article
 ms.assetid: 2e357d23-316e-4f14-a8b8-4721e71c9748
 ms.service: vs-appcenter
@@ -19,9 +19,17 @@ ms.custom: test
 > [!NOTE]
 > This guide is updated manually shortly after new devices are available in Test. To check device availability instantly, you can go to the App Center Test beacon **Device Sets** section for one of your apps. For example: https://appcenter.ms/orgs/[ORG-NAME]/apps/[APP-NAME]/test/device-sets. Select **New Device Set** to query all available devices for the platform. 
 
+### Snapshots will be deprecated on May 25. 2023:
+- Apple iPhone 7 (11.2.6) 
+- Apple iPhone 7 Plus (11.2.6) 
+- Apple iPhone SE (11.0.3)
+- Apple iPhone 6 (10.0.2) 
+- Apple iPhone 6 (9.3.5)
 
-Model | OS
--- | --
+
+### Active snapshots
+
+
 Model | OS
 -- | --
 Apple iPad 7th Gen | 13.3.1
