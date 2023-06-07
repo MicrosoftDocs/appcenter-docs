@@ -310,7 +310,6 @@ To integrate CodePush into your Android project, do the following steps:
 
     ```gradle
     ...
-    apply from: "../../node_modules/react-native/react.gradle"
     apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
     ...
     ```
