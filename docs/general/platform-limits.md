@@ -33,3 +33,4 @@ The following limits are in effect for App Center usage.
 - Maximum number of apps created for each user/organization per day: 20 apps
 - Maximum number of builds queued via webhook for each app per hour: 20 builds queued
 - Maximum number of builds queued via API/portal for each app per hour: 20 builds queued
+- Maximum number of API requests per 5 minutes per IP: 500 requests
