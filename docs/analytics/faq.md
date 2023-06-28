@@ -27,8 +27,8 @@ A session is defined as the time from the app coming to foreground to the last e
 ## Why's my "OS Distribution" chart showing more devices than the number of installs?
 OS Distribution counts aren't snapshots. They're counts of devices that match the selected time period. For example, if users upgrade from one OS version to a newer version within the selected time period, they'll be counted in both OS versions. If a significant number of users upgrade within the time period, the overlap could cause noticeably more devices in the "OS Distribution" chart than the number of installs.
 
-## Why's the country information not showing? / The country information doesn't seem to be correct.
-The country is determined by the carrier country and requires that the device has a SIM. If you're using a tablet or a device with no SIM card, the country won't be reported. If you're using a simulator, the country information probably won't be accurate.
+## Why's the country/region information not showing? / The country/region information doesn't seem to be correct.
+The country/region is determined by the carrier country/region and requires that the device has a SIM. If you're using a tablet or a device with no SIM card, the country/region won't be reported. If you're using a simulator, the country/region information probably won't be accurate.
 
 ## What's the maximum number of distinct events that can be sent per app?
 For Analytics, the maximum number of distinct custom events that we'll track per day is 200. Counts will be reset daily at 12am UTC. However, there's no limit on the maximum number of events instances sent per device.

@@ -61,6 +61,6 @@ The Active Users per Version panel shows how many users are using a given versio
 
 The Countries and Languages panel displays information about devices geographical location and language settings in the device.
 
-The country is determined by the carrier country and requires the device to have a SIM card. If you're using a simulator or another device with no SIM card such as a tablet, the country will be "unknown" or inaccurate.
+The country/region is determined by the carrier country/region and requires the device to have a SIM card. If you're using a simulator or another device with no SIM card such as a tablet, the country/region will be "unknown" or inaccurate.
 
 The language is the one defined at the OS level by the user.

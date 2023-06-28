@@ -31,7 +31,7 @@ The new and improved diagnostics experience includes the following additions:
 - Ability to mark crash and error groups as open, closed, or ignored
 - Ability to download crash and error reports
 - Ability to attach, view, and download one binary and one text attachment to your crash reports
-- Crash and error report details per crash instance, including when the app launched, when it crashed, and what country and language the device used
+- Crash and error report details per crash instance, including when the app launched, when it crashed, and what country/region and language the device used
 
 You can learn more about each feature in the [App Center diagnostics documentation](~/diagnostics/features.md).
 
