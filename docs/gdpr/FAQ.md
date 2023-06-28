@@ -40,4 +40,4 @@ We use data for "Analytics" and "Other Purposes". "Other Purposes" means collect
 The data collected by App Center is not linked with a user and does not contain any personal information.
 
 #### Tracking
-App Center only collects information about the country of use of the device based on cellular data (for all platforms except Windows). This information is stored without reference to the user and is only used to display usage statistics in different regions. For Windows, App Center does not collect any geo location tracking by default.
+App Center only collects information about the country/region of use of the device based on cellular data (for all platforms except Windows). This information is stored without reference to the user and is only used to display usage statistics in different regions. For Windows, App Center does not collect any geo location tracking by default.
