@@ -72,9 +72,9 @@ Choose a name for the new Service Account, and click **Create**.
 
 ![Google Play: Choose Project -> Owner as role](~/distribution/images/image6.png)
 
-On **Assign Roles**, click **Next** which will default to **Owner** Role.
+On *Assign Roles*, select **Owner** Role and click **Continue**.
 
-On **Assign Users**, click **Next** or **Done**
+On *Assign Users*, click **Continue**
 
 > [!NOTE]
 > Some users can't download the .json file using Edge and Internet Explorer.
