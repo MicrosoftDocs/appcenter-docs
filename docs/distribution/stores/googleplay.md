@@ -72,12 +72,16 @@ Choose a name for the new Service Account, and click **Create**.
 
 ![Google Play: Choose Project -> Owner as role](~/distribution/images/image6.png)
 
-Click the **Select a role** in the drop-down menu. Select **Project**, then **Owner**. Navigate to the next step by clicking **Continue**.
+On **Assign Roles**, click **Next** which will default to **Owner** Role.
+
+On **Assign Users**, click **Next** or **Done**
 
 > [!NOTE]
 > Some users can't download the .json file using Edge and Internet Explorer.
 
-On the new page, click **+ Create Key (optional)** and a modal appears.
+On the service account details page for this newly created service account, click the **Keys* tab.
+
+Click **Add Key** -> **Create new key**
 
 ![Google Play: Click + Create Key to generate a JSON file](~/distribution/images/image7.png)
 
@@ -86,6 +90,8 @@ Select **JSON** and click **CREATE** and a file with the `.json` extension will 
 ![Google Play: Set key type as JSON](~/distribution/images/image8.png)
 
 Once you've created the service account on the Google Developers Console, click **Done**. The [API Access](https://play.google.com/apps/publish/#ApiAccessPlace) page automatically refreshes, and your service account will be listed.
+
+Access should also now be granted.  If not, on the service account details page, click the **Permissions** tab, select the checkbox next to the principal to grant this service account access, and click **Grant Access**
 
 ![Google Play: Service Account Created](~/distribution/images/image9.png)
 
