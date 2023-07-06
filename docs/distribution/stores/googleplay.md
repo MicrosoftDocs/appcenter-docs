@@ -46,7 +46,7 @@ To access the Google API, link your Google Play Console to a Google API project.
 
 ## Setting Up API Access Clients
 
-One of the added benefits of creating a [Google service account](https://developers.google.com/accounts/docs/OAuth2ServiceAccount) is access to the API from a build server without providing your personal user credentials, below is a step-by-step guide on how to set up Google service account:
+One of the added benefits of creating a [Google service account](https://console.cloud.google.com/iam-admin/serviceaccounts) is access to the API from a build server without providing your personal user credentials, below is a step-by-step guide on how to set up Google service account:
 
 Go to the [Google API Access page](https://play.google.com/apps/publish/#ApiAccessPlace) on the Google Play Console.
 
