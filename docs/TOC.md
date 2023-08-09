@@ -98,7 +98,7 @@
 ## [Test on a real device](build/build-test-integration.md)
 ## [Distribute builds to store](build/build-to-store.md)
 ## [App Center Build vs. Azure Pipelines](build/choose-between-services.md)
-## [Exporting Build configurations to Azure Pipelines (Preview)](build/export-to-azure-pipelines.md)
+## [Exporting Build configurations to Azure Pipelines](build/export-to-azure-pipelines.md)
 ## Troubleshooting
 ### [General](build/troubleshooting/index.md)
 ### [Build Execution Time](build/troubleshooting/build-times.md)
