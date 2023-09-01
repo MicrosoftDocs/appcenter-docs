@@ -4,7 +4,7 @@ description: Using the App Center SDK
 keywords: sdk
 author: lucen-ms
 ms.author: lucen
-ms.date: 03/24/2022
+ms.date: 08/31/2023
 ms.topic: article
 ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
@@ -63,9 +63,9 @@ Distribute       | 5.0 and later      | 21 and later
 
 Service          | iOS Version     | Xcode
 -----------------|-----------------|--------------
-Analytics        | 9.0 or later    | 11 and later
-Crashes          | 9.0 or later    | 11 and later
-Distribute       | 9.0 or later    | 11 and later
+Analytics        | 11.0 or later    | 13 and later
+Crashes          | 11.0 or later    | 13 and later
+Distribute       | 11.0 or later    | 13 and later
 
 ### Unity
 
@@ -79,16 +79,16 @@ Distribute | 2018.1 or later | 9.0 or later | 5.0 / API Level 21 or later| not a
 
 Service          | Windows Version    | Visual Studio
 -----------------|--------------------|----------------------------------------
-Analytics        | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
-Crashes          | 10 build 16299     | Visual Studio 2017 Update 15.9 or later
+Analytics        | Windows 10 version 1703 or higher     | Visual Studio 2019 or later
+Crashes          | Windows 10 version 1703 or higher     | Visual Studio 2019 or later
 Distribute       | not available      | not available
 
 ### WPF and WinForms
 
 Service          | .NET Framework | .NET Core     | Windows Version | Visual Studio
 -----------------|----------------|---------------|-----------------|----------------------------------------
-Analytics        | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
-Crashes          | 4.6.1 or later | 3.0 or later  | 10 build 10240  | Visual Studio 2017 Update 15.9 or later
+Analytics        | 4.6.2 or later | 3.1 or later  | Windows 10 version 1703 or higher  | Visual Studio 2019 or later
+Crashes          | 4.6.2 or later | 3.1 or later  | Windows 10 version 1703 or higher  | Visual Studio 2019 or later
 Distribute       | not available  | not available | not available   | not available
 
 .NET Core is supported only when the WPF/WinForms application runs on Windows.
@@ -105,15 +105,15 @@ Distribute | 0.34 or later | 9.0 or later & Cocoapods | 5.0 / API Level 21 or la
 
 Service          | macOS Version  | Xcode
 -----------------|----------------|--------------
-Analytics        | 10.13 or later | 11 or later
-Crashes          | 10.13 or later | 11 or later
+Analytics        | 10.13 or later | 13 or later
+Crashes          | 10.13 or later | 13 or later
 
 ### tvOS
 
 Service          | tvOS Version    | Xcode
 -----------------|-----------------|--------------
-Analytics        | 11.0 or later   | 11 and later
-Crashes          | 11.0 or later   | 11 and later
+Analytics        | 11.0 or later   | 13 and later
+Crashes          | 11.0 or later   | 13 and later
 
 ## Source Code and Release Notes
 
