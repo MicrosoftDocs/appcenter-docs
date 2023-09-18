@@ -29,6 +29,7 @@ The following limits are in effect for App Center usage.
 - Maximum number of API tokens for each organization: 10,000 API tokens
 - Maximum number of members for each app release: 2,000 members
 - Maximum number of apps configured per day: 5 apps
+- Maximum number of environment variables per configuration: 100 variables
 - Maximum number of apps created for each user/organization per hour: 10 apps
 - Maximum number of apps created for each user/organization per day: 20 apps
 - Maximum number of builds queued via webhook for each app per hour: 20 builds queued
