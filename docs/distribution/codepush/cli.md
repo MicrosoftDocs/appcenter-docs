@@ -115,7 +115,9 @@ If you decide that you don't like the name you gave to an app, you can rename it
 appcenter apps update -n <newName> -a <ownerName>/<appName>
 ```
 
-The app's name is only meant to be recognizable from the management side, so feel free to rename it as necessary. It won't actually impact the running app, since update queries are made via deployment keys.
+> [!WARNING]
+> Changing the app name may generate some unexpected issues on the branch configuration and builds for about 48 hours.
+
 
 If at some point you no longer need an app, you can remove it from the server using the following command:
 
