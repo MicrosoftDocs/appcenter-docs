@@ -160,20 +160,34 @@ import AppCenterCrashes
 Add initialization code into `didFinishLaunchingWithOptions` delegate method.
 
 #### Swift UI App lifecycle
-Create `init()` method into `struct` and add initialization code in it.
 
-Use this code into methods described before, to start SDK:
-```objc
-[MSACAppCenter start:@"{Your App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
-```
+Use AppDelegate class to Start SDK:
 ```swift
-AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, Crashes.self])
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+          AppCenter.start(withAppSecret: "{Your App Secret}", services:[
+            Crashes.self, Analytics.self, Distribute.self])
+        return true
+    }
+}
+```
+
+Then use `UIApplicationDelegateAdaptor` in `struct`:
+```swift
+@main
+struct YourAppName: App {
+
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
 ```
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
-```objc
-[MSACAppCenter start:@"ios={Your iOS App Secret};macos={Your macOS App Secret}" withServices:@[[MSACAnalytics class], [MSACCrashes class]]];
-```
 ```swift
 AppCenter.start(withAppSecret:"ios={Your iOS App Secret};macos={Your macOS App Secret}", services: [Analytics.self, Crashes.self])
 ```
