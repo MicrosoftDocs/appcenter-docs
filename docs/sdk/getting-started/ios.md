@@ -167,7 +167,7 @@ AppCenter.start(withAppSecret: "{Your App Secret}", services: [Analytics.self, C
 
 #### Swift UI App lifecycle
 
-Due to specific behaviour of AppCenter SDK with SwiftUI it's important to initialize AppCenter SDK before the UI is being loaded. One of the ways to do it - is to use AppDelegate class. AppDelegate could be in a separate file, but in below example it would be used in SwiftUI file:
+To make sure the App Center SDK works correctly with Swift UI, initialize it after the UI has loaded. The simplest way to achieve this is by using the UIApplicationDelegate:
 ```swift
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -193,7 +193,6 @@ struct YourAppName: App {
 }
 ```
 
-As another solution you can use `AppCenter.Start` inside `onAppear` event of the root view.
 
 If you have a Catalyst application, you can pass app secrets for both iOS and macOS at the same time:
 ```swift
