@@ -22,8 +22,8 @@ ms.custom: analytics
 
 ## Handled Errors
 
-- Errors are only available for Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
-- Attachments are only available for Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
+- Errors are available for iOS, Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
+- Attachments are available for iOS, Android, Xamarin, Unity, UWP, WPF and WinForms platforms.
 - You can define a maximum of 20 properties per error, anything beyond that limit will be rejected.
 - The maximum number of characters per error property key and error property value is 125 characters.
 - App Center only accepts up to 60 handled errors per minute per unique app. We won't ingest or process any errors that exceed this limit. 
