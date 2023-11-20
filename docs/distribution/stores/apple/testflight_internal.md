@@ -14,7 +14,7 @@ ms.service: vs-appcenter
 > [!TIP]
 > [Build your app according to Apples guidelines](https://developer.apple.com/app-store/submissions/)
 
-1. From the Stores home page, select “App Store Connect users”.
+1. From the Stores home page, select “App Store Connect users”. We only support internal group "App Store Connect Users"
 2. Click **Publish to TestFlight** in the upper-right corner.
 3. At the first step of the wizard, you must upload you .ipa file. After the file has been successfully uploaded, you'll see details, like icon and version. Click **Next**.
 4. Enter release notes. Only plain text is supported and release notes must be longer than 10 characters. Select **Next**.
