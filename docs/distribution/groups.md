@@ -72,6 +72,9 @@ When a new device is added, App Center ensures that all devices from the target 
 
 App Center uses your saved certificate and the regenerated provisioning profiles, to re-sign the current version of your app. This way it can be installed on any device in the release's distribution group, without needing a new version to be built. A download link to the newly signed release will be available through the [App Center Install portal](https://install.appcenter.ms).
 
+> [!NOTE]
+> All install.appcenter.ms URLs that contain files for downloading are publicly accessible.
+
 Read more about [what re-signing is](auto-provisioning.md#app-signing-re-signing-and-device-provisioning) and [privacy concerns when App Center stores your Apple ID and certificate](auto-provisioning.md#privacy-concerns-on-username-and-password).
 
 ## Adding Azure Active Directory (AAD) security groups to a Distribution Group
