@@ -60,6 +60,10 @@ App Center supports releasing Windows app packages of type `.appx`, `.appxbundle
 Archive your build for apps with a custom operating system in .zip format.
 
 ## Distributing the package
+
+> [!NOTE]
+> All install.appcenter.ms URLs that contain files for downloading are publicly accessible.
+
 To distribute a package with App Center, go to [App Center][app-center-home], go to your app, then go to **Distribute** > **Groups** and select **New release**. Follow the steps in the wizard.
 ![Distributing a new release](~/distribution/images/distribution_new-release-button.png)
 
