@@ -129,7 +129,8 @@ Upload a new release using these sequential API calls:
     Determine the size of your app package in bytes. It's recommended to use a command such as `wc -c ExampleApp.ipa` to get an accurate byte count.
 
     Set the `MIME Type` for the `content_type` based on your app:
-    - **Android** uses the vendor type `application/vnd.android.package-archive`
+    - **Android .apk** uses the vendor type `application/vnd.android.package-archive`
+    - **Android .aab** uses the vendor type `application/x-authorware-bin`
     - **iOS** uses the general type `application/octet-stream`
 
     The final command should look something like this:
