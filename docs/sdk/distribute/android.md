@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 11/08/2021
+ms.date: 12/11/2023
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
@@ -41,7 +41,7 @@ The App Center SDK is designed with a modular approach – a developer only need
 
     ```groovy
     dependencies {
-       def appCenterSdkVersion = '5.0.0'
+       def appCenterSdkVersion = '5.0.4'
        implementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     }
     ```
@@ -103,7 +103,7 @@ Google Play considers the in-app update code as malicious behavior even if it is
 
     ```groovy
     dependencies {
-        def appCenterSdkVersion = "3.3.0"
+        def appCenterSdkVersion = "5.0.4"
         appCenterImplementation "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
         googlePlayImplementation "com.microsoft.appcenter:appcenter-distribute-play:${appCenterSdkVersion}"
     }
