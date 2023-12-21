@@ -19,16 +19,14 @@ Each build runs on a separate, clean virtual machine (VM) no one else has access
 
 Builds for iOS and Android apps (including Xamarin and React Native platforms) are run on macOS VMs running the following configuration. (If the specification maps to both VMs, then the newer one is used):
 
-- [macOS 10.15 **Catalina**](https://github.com/actions/virtual-environments/blob/main/images/macos/macos-10.15-Readme.md)([Deprecating](https://devblogs.microsoft.com/appcenter/deprecating-macos-10-15-image-in-app-center-build/))
-  - **iOS** (Xcode >= 10.3)
-  - **Xamarin** (Mono >= 6.4)
-  - **Android Native**
-  - **React Native Android**
-- [macOS 11.6 **Big Sur**](https://github.com/actions/virtual-environments/blob/main/images/macos/macos-11-Readme.md)
+- [macOS 11.7 **Big Sur**](https://github.com/actions/runner-images/blob/main/images/macos/macos-11-Readme.md)
   - **iOS** (Xcode >= 11.7)
   - **Xamarin** (Mono >= 6.12.0)
-- [macOS 12.5 **Monterey**](https://github.com/actions/runner-images/blob/main/images/macos/macos-12-Readme.md)
+- [macOS 12.7 **Monterey**](https://github.com/actions/runner-images/blob/main/images/macos/macos-12-Readme.md)
   - **iOS** (Xcode >= 13.1)
+  - **Xamarin** (Mono >= 6.12.0)
+- [macOS 13.6 **Ventura**](https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md)
+  - **iOS** (Xcode >= 14.3)
   - **Xamarin** (Mono >= 6.12.0)
 
 Builds for UWP apps are run on [Hosted Windows Agents](https://www.visualstudio.com/docs/build/concepts/agents/hosted) using [Windows Server 2019 & Visual Studio 2019](https://github.com/actions/virtual-environments/blob/master/images/win/Windows2019-Readme.md).
