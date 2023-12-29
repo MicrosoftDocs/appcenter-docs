@@ -4,7 +4,7 @@ description: These are the size limits for various entities in App Center.
 keywords: limits distribution groups teams organizations releases
 author: lucen-ms
 ms.author: lucen
-ms.date: 4/20/2021
+ms.date: 12/29/2023
 ms.topic: article
 ms.assetid: e25d003b-f5eb-4fd7-b64b-a68c178adf5c
 ms.service: vs-appcenter
@@ -16,7 +16,7 @@ ms.custom: general
 The following limits are in effect for App Center usage.
 
 > [!NOTE]
-> These limits are our default limits. Contact App Center Support (you can use the ? icon on any App Center page) for questions about limits.
+> These limits are our default limits. To keep our services healthy, we might temporarily apply stricter limits. Contact App Center Support (you can use the ? icon on any App Center page) for questions about limits.
 
 - Maximum number of members in an organization: 5,000 members
 - Maximum number of members in a team: 2,000 members
@@ -35,3 +35,4 @@ The following limits are in effect for App Center usage.
 - Maximum number of builds queued via webhook for each app per hour: 20 builds queued
 - Maximum number of builds queued via API/portal for each app per hour: 20 builds queued
 - Maximum number of API requests per 5 minutes per IP: 500 requests
+- [CodePush limits](~/distribution/codepush/index.md)
