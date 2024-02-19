@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Preparing Appium Tests for Upload
-The steps to prepare an app and its test suite for upload vary depending on the test framework. This guide how to prepare Appium tests using Java with JUnit for upload to App Center. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/about-appium/intro/).
+The steps to prepare an app and its test suite for upload vary depending on the test framework. This guide how to prepare Appium tests using Java with JUnit for upload to App Center. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/latest/).
 
 Note the following limitations for Appium support:
 
