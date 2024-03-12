@@ -17,10 +17,10 @@ The following notes outline alternative solutions to migrate off App Center.  Ou
 
 ## Build
 
-We recommend migrating your <b>builds</b> from App Center to [Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/), leveraging the <u>[Export App Center Build feature](build/export-to-azure-pipelines)</u>.  
+We recommend migrating your <b>builds</b> from App Center to [Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/), leveraging the [<u>Export App Center Build feature</u>](./build/export-to-azure-pipelines).  
 
 ## Test
-For app device <b>testing</b>, we recommend <u>[BrowserStack App Automate](https://www.browserstack.com/microsoft-browserstack)</u>. BrowserStack provides access to 20,000+ real iOS and Android devices.  BrowserStack has developed the Device Testing CLI to support migrating from Microsoft App Center to BrowserStack App Automate.  
+For app device <b>testing</b>, we recommend [<u>BrowserStack App Automate</u>](https://www.browserstack.com/microsoft-browserstack). BrowserStack provides access to 20,000+ real iOS and Android devices.  BrowserStack has developed the Device Testing CLI to support migrating from Microsoft App Center to BrowserStack App Automate.  
 
 You can find the full guidance for migration to BrowserStack [here](https://www.browserstack.com/microsoft-browserstack).
 
@@ -28,7 +28,7 @@ You can find the full guidance for migration to BrowserStack [here](https://www.
 
 We recommend Apple’s [AppStore](https://www.apple.com/app-store/) for iOS app production releases and [Apple’s  TestFlight](https://developer.apple.com/testflight/) for iOS app test releases. For Android applications we recommend [Google Play](https://play.google.com/) for both production and test releases.  
 
-[Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/) tasks can be used for <b>distributing</b> to [AppStore/TestFlight](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.app-store) and <u>[Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play)</u>. 
+[Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/) tasks can be used for <b>distributing</b> to [AppStore/TestFlight](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.app-store) and [<u>Google Play</u>](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play). 
 
 
 ## CodePush
@@ -42,9 +42,9 @@ We recommend one of the Azure Native ISV services which provide rich capabilitie
 Click on each link below to see the documentation for Azure Native ISV service of your choice.
 
 <u>[Azure Native ISV Services:](/azure/partner-solutions/)</u>
-* <u>[Datadog](/azure/partner-solutions/datadog/overview)</u>
-* <u>[Dynatrace](/azure/partner-solutions/dynatrace/dynatrace-overview)</u>
-* <u>[New Relic](/azure/partner-solutions/new-relic/new-relic-overview)</u>
+* [<u>Datadog</u>](/azure/partner-solutions/datadog/overview)
+* [<u>Dynatrace</u>](/azure/partner-solutions/dynatrace/dynatrace-overview)
+* [<u>New Relic</u>](/azure/partner-solutions/new-relic/new-relic-overview)
 
 ## Get support
 If you have any questions please reach out to our support team from the App Center portal directly by clicking <b><i>? > Contact support</i></b> in the upper-right corner or send an email to support@appcenter.ms.
