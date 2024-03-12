@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Test time limits and timeouts
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 App Center Test enforces test duration limits per device for individual tests and for test suites. To prevent tests from running indefinitely, App Center Test stops a test or test suite that exceeds the time limit.
 

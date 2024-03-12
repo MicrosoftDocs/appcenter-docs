@@ -10,6 +10,7 @@ ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4
 ---
 
 # Concurrent test database changes
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 Test scripts often change external data and test against the changes. The process usually includes setting the data back to the known or initial state that the tests were written against. This process might use a test database with credentials for the test user.
 

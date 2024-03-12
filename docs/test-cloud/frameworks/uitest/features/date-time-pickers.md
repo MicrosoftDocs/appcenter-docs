@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Automating Xamarin.Forms DatePickers & TimePickers with Xamarin.UITest
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 Selecting values from these pickers can be tricky in UITest. This issue is because the DatePicker control is an OS construct outside of your app’s UI interface. 
 
 

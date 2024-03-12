@@ -10,6 +10,7 @@ ms.assetid: 6a75bdce-34cd-45ba-965f-bac42e5b0167
 ---
 
 # Using AppDataMode to manage app data between tests
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 
 AppDataMode has three options that manage how your app is managed between separate test methods.
 

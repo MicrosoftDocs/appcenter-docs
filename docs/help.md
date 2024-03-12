@@ -10,6 +10,8 @@ ms.service: vs-appcenter
 ---
 
 # Help and feedback
+[!INCLUDE [Retirement announcement for App Center](includes/retirement.md)]
+
 The docs you'll find here should explain everything you need to know about Visual Studio App Center. However, if you need additional help, we have a dedicated support team ready to answer your questions. This page provides instructions on how to connect with them.
 
 App Center and its product docs are both under development and we welcome your feedback along the way. If you have suggestions for how to make the product or docs better, we want to hear from you. Look in the **Providing feedback** section of this guide for information on how to give us your feedback.

@@ -11,6 +11,7 @@ ms.service: vs-appcenter
 ---
 
 # Stalled device during test runs
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 A `Stalled Error` is an error that prevents App Center Test from completing tests on one or more devices. Usually, this error is caused by an App Center Test infrastructure problem, not by a problem in your app.
 

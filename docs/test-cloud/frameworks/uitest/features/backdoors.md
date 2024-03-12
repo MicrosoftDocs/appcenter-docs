@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Working with backdoors
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 
 *Backdoors* are methods that are included in a Xamarin.iOS or Xamarin.Android app, and are invoked during a test run to do some special action like configuring a testing state on a device. For example, a backdoor may be used to seed a database with some test data, so that all tests in a test fixture can use it consistently.
 

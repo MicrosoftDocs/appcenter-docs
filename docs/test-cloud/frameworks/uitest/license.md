@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Xamarin.UITest End User License Agreement (EULA)
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
 
 **MICROSOFT SOFTWARE LICENSE TERMS**
 

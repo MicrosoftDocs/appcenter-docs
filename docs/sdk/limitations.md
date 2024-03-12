@@ -10,6 +10,7 @@ ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ---
 
 # SDK Limitations & Known Issues
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
 
 ## React Native
 

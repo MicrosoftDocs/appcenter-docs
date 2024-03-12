@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Supported Test Frameworks
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 App Center Test is a test automation service for native and hybrid mobile applications. The list below outlines the test frameworks currently supported.
 
