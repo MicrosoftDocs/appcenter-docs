@@ -12,6 +12,9 @@ ms.custom: insight, distribution store
 ---
 
 # Connecting to the Google Play Store fails because the app package name couldn't be found
+
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+
 When connecting to the Google Play Store, you may come across an error like this:
 
 > The app package name could not be found in your Google Play Console account. Sign in to your Google Play Console account and make sure your app is published.

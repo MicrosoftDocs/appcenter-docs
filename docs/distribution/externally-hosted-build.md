@@ -13,6 +13,8 @@ ms.assetid: e771432a-73bc-4150-bee7-f88097e7171e
 
 # Distributing releases with externally hosted builds
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 You can create a release for your app in App Center without uploading the build or binary file. You instead provide the link to the place where you're hosting the file. App Center won't download the file. Some functionality will be missing, but mostly everything behaves the same way.
 
 On this page you can read how to create releases with externally hosted builds, and what the requirements and limitations are.

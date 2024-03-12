@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # React Native Client SDK API Reference
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 The CodePush plugin is made up of two components:
 
 1. A JavaScript module, which can be imported/required, and allows the app to interact with the service during runtime (for example check for updates, inspect the metadata about the currently running app update).

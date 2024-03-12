@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Creating and managing teams
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 Any [collaborator](~/dashboard/creating-and-managing-apps.md) within an organization can create teams. Teams allow for better management of collaborators and app permissions.
 
 ## Creating teams

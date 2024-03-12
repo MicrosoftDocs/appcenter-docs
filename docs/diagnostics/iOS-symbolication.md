@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # iOS Symbolication
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 macOS, tvOS, and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses; not class names, methods, file names, or line numbers needed to understand the crashes.
 
 To get the memory addresses translated you need to upload a dSYM package to App Center, which contains all information required for symbolication. You can learn more about symbolication from Apple’s [official developer documentation](https://developer.apple.com/library/archive/technotes/tn2151/_index.html#//apple_ref/doc/uid/DTS40008184-CH1-SYMBOLICATION).

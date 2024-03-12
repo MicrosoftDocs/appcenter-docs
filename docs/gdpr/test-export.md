@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Export Test Data
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## Overview
 This document covers the scenario where an App Center Test customer has a client whose data is on the same account. If this client requests their data be exported, App Center Test has APIs to satisfy this request. All the APIs detailed are public and documented in [App Center Swagger](https://openapi.appcenter.ms/#/test). For more information about App Center GDPR, visit [GDPR: Managing Your Data](/appcenter/gdpr/your-data).
 

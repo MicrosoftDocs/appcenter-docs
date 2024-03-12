@@ -14,6 +14,9 @@ dev_langs:
 ---
 
 # Build - Sample Swift (macOS) App and Tutorials
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 In this tutorial, you'll learn to build a sample Swift app in App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.

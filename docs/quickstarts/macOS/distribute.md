@@ -14,6 +14,9 @@ dev_langs:
 ---
 
 # Distribute - Sample Swift (macOS) App and Tutorials
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 In this tutorial, you'll learn to distribute a sample Swift app to a group of users, who can install the app on their device.
 
 If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.

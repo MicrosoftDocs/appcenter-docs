@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Using the Diagnostics UI
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## General
 
 App Center’s Diagnostics service is designed for you to easily monitor your apps' health and get the information you need to fix issues. 
