@@ -41,7 +41,7 @@ We recommend one of the Azure Native ISV services which provide rich capabilitie
 
 Click on each link below to see the documentation for Azure Native ISV service of your choice.
 
-<u>[Azure Native ISV Services:](/azure/partner-solutions/)</u>
+[<u>Azure Native ISV Services:</u>](/azure/partner-solutions/)
 * [<u>Datadog</u>](/azure/partner-solutions/datadog/overview)
 * [<u>Dynatrace</u>](/azure/partner-solutions/dynatrace/dynatrace-overview)
 * [<u>New Relic</u>](/azure/partner-solutions/new-relic/new-relic-overview)
