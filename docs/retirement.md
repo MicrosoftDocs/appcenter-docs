@@ -17,7 +17,7 @@ The following notes outline alternative solutions to migrate off App Center.  Ou
 
 ## Build
 
-We recommend migrating your <b>builds</b> from App Center to [Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/), leveraging the [<u>Export App Center Build feature</u>](~/build/export-to-azure-pipelines).  
+We recommend migrating your <b>builds</b> from App Center to [Azure Pipelines](https://azure.microsoft.com/products/devops/pipelines/), leveraging the [<u>Export App Center Build feature</u>](~/build/export-to-azure-pipelines.md).  
 
 ## Test
 For app device <b>testing</b>, we recommend [<u>BrowserStack App Automate</u>](https://www.browserstack.com/microsoft-browserstack). BrowserStack provides access to 20,000+ real iOS and Android devices.  BrowserStack has developed the Device Testing CLI to support migrating from Microsoft App Center to BrowserStack App Automate.  
