@@ -12,6 +12,9 @@ ms.custom: distribute
 ---
 
 # Install a Build
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 Installing an application distributed by App Center begins with an email. If you have access to the application, you'll receive a notification email for each new version available. Click on the install link in the email to begin the process. You'll need to enter your credentials to log in. If it's your first time accessing App Center, you can [create a new account][signup]. Once logged in, you can review the app information, release notes, and click the `install` button to install it on your device.
 
 > [!NOTE]

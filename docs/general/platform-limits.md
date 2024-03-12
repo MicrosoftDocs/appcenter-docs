@@ -13,6 +13,8 @@ ms.custom: general
 
 # Platform limits for App Center
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 The following limits are in effect for App Center usage.
 
 > [!NOTE]

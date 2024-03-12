@@ -13,6 +13,9 @@ ms.tgt_pltfrm: xamarin-android
 ---
 
 # Building Xamarin apps for Android
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
 To start building your first Xamarin Android app, you must:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).

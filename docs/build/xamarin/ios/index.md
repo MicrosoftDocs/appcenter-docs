@@ -13,6 +13,9 @@ ms.tgt_pltfrm: xamarin-ios
 ---
 
 # Building Xamarin apps for iOS
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
 > [!NOTE] 
 > Supported versions and requirements
 App Center supports Portable Class Library (PCL) and [.NET Standard](/dotnet/standard/net-standard) projects. Refer to [Cloud Build Machines](~/build/software.md) for versions of .NET Standard. 

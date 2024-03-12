@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # App Center Test
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
 App Center Test (formerly Xamarin Test Cloud) is a test automation service for native and hybrid mobile apps. Tests written using [supported frameworks](/appcenter/test-cloud/preparing-for-upload/) can be run on hundreds of unique device models and operating systems that are hosted in our data center. Start test runs using the [App Center Command Line Interface](~/cli/index.md) or the public [REST API](https://openapi.appcenter.ms/#/test). App Center stores test results, including media assets, for viewing for up to six months.
 
 Test runs execute in a hosted fashion: upload the app binary and test files to execute tests in our data center. Generated assets, such as screenshots and device logs, are kept for test reports.

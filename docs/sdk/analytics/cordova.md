@@ -11,6 +11,7 @@ ms.custom: sdk
 ms.tgt_pltfrm: react-native
 ---
 # App Center Analytics (Apache Cordova)
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

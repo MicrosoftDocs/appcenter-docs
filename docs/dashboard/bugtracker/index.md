@@ -12,6 +12,8 @@ ms.assetid: f56710ac-9797-4e58-8bd4-9581553c28a1
 
 # App Center bug tracker integration
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 ## Overview
 App Center has bug tracker integration for the crashes service. Users can be quickly informed about critical App Center events within the tools that you use regularly in your day to day flow for a seamless experience. App Center supports bug trackers like Jira Cloud, Azure DevOps (formerly Visual Studio Team Services (VSTS)), and GitHub. Users need manager or developer permissions to create and configure the bug tracker.
 

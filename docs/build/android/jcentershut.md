@@ -13,6 +13,9 @@ ms.tgt_pltfrm: android
 ---
 
 # Gradle build after JCenter shutdown
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 If you use JCenter and Bintray resources in your AppCenter Android builds and your builds fail on Gradle Task failure (could not get resource error), it's because JCenter Bintray is being shut down.
 Following lines (from Build Logs) illustrate this problem:
 

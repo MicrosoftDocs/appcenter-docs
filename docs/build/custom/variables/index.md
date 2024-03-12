@@ -12,6 +12,10 @@ ms.custom: build
 ---
 
 # Build Environment variables
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
+
 Environment variables help manage your [build script tasks](~/build/custom/scripts/index.md). You can call pre-defined variables or create your own.
 
 ## Pre-Defined variables

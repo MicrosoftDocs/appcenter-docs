@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Enabling Diagnostics in an App
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## Diagnostics SDK
 
 To enable App Center’s diagnostics for your app, make sure you have the App Center SDK integrated for your app. Learn more about App Center’s SDKs and how to add it to your app projects in the [SDK documentation](~/sdk/index.md).

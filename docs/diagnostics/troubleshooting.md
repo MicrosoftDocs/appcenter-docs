@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Troubleshooting
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ### Why aren't crash reports visible after a few minutes?
 If your app crashes on startup, the SDK can't send any crash reports. This limitation applies to any third-party crash reporting service.
 

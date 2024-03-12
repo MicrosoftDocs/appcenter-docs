@@ -12,6 +12,9 @@ ms.custom: build
 ---
 
 # Distributing a build to the store
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 In this document, you'll learn how to distribute your build to a store. You can get your completed app to the store directly from App Center.
 
 ## Automatically distribute from your branch configuration

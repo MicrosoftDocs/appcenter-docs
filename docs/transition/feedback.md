@@ -10,6 +10,7 @@ ms.service: vs-appcenter
 ---
 
 # HockeyApp Feedback
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
 
 HockeyApp Feedback data wasn't migrated to App Center. In the following sections we’re laying out ways how you can replicate similar functionality in your app with other tools than HockeyApp.
 

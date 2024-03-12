@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Publish an iOS package to the App Store (Production)
 
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
 > [!TIP]
 > [Build your app according to Apple's guidelines](https://developer.apple.com/app-store/submissions/)
 

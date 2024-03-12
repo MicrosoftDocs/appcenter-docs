@@ -10,6 +10,7 @@ ms.assetid: 2abb4242-658c-4914-8ec0-d0c4967d3729
 ---
 
 # Run UI Tests using App Center REST API
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
 This example shows how to upload an app package, test binaries, and queue UI tests using our API. 
 
 ## Steps

@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Azure Subscriptions in App Center
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 While on the free tier, you don't need an Azure subscription. Once you decide to upgrade your plan, you'll be asked to connect an Azure subscription to your organization/personal account.
 
 With an Azure subscription, you can manage all billing and control the different costs of your team's usage.

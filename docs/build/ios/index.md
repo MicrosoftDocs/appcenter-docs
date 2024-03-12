@@ -13,6 +13,10 @@ ms.tgt_pltfrm: ios
 ---
 
 # Building Objective-C or Swift apps for iOS
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
+
 To build your first native iOS app, you must take the following actions:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps)

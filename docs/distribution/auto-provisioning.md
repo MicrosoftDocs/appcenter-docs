@@ -12,6 +12,8 @@ ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
 
 # Device registration and app re-signing
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 On this page you can read about the steps to take when distributing an iOS application to specific testers. Learn what device registration, provisioning, and app re-signing are. You can also learn how to use App Center functionality to make this process as painless as possible. Finally there are solutions to some common problems you may come across.
 
 ## App signing, re-signing, and device provisioning

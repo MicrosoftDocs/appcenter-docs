@@ -13,6 +13,8 @@ ms.custom: build
 
 # App Center Build
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 The App Center Build service helps you build Android, iOS, macOS, and UWP apps using a secure cloud infrastructure. Connect to your repo in App Center and start building your app in the cloud on every commit. With Build you can forget about configuring build servers locally, complicated configurations, and code that builds on a coworker's machine but not yours.
 
 With App Center's other services, you can further automate your workflow: 

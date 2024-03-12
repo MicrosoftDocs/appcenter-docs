@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Exporting Errors Data
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## Overview
 
 App Center provides the ability to export all your raw data into Azure Blob Storage using our [continuous export](~/analytics/export.md) feature from the moment you set up export and backfill data for the last 28 days.

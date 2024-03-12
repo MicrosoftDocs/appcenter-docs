@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # App Center Learning Resources
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## Microsoft Learn
 [Introduction to App Center](/training/modules/intro-to-app-center/)
 Characterize the types of services offered by App Center. Describe the use of App Center to build, distribute, test, and analyze usage of apps.

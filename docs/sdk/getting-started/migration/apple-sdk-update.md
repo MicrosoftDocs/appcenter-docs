@@ -14,6 +14,7 @@ dev_langs:
 ---
 
 # Migrate to App Center SDK 4.0.0 and higher
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
 
 To avoid a naming conflict with classes in Apple's private frameworks, SDK now uses `MSAC` prefix instead of `MS` which changes the SDK API.
 

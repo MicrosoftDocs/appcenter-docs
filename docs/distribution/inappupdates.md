@@ -13,6 +13,8 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 # In-App Updates
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 Enable your testers to easily stay up to date with the latest releases. Integrate the App Center SDK (and the Distribution Module) for [iOS][ios-sdk], [Android][android-sdk], or [MAUI/Xamarin][xamarin-sdk] to automatically enable in-app notification for new releases. Once completed, all [future releases][uploading] through App Center will trigger an in-app notification for each tester allowing a quick upgrade to the latest version.
 
 > [!IMPORTANT]

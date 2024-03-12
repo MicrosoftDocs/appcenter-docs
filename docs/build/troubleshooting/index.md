@@ -12,6 +12,9 @@ ms.custom: build
 ---
 
 # Build Troubleshooting
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 The guides in this section provide general troubleshooting tips for App Center Build.
 
 ## General Tips

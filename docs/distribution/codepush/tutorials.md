@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 ## Update experience configuration
 
 CodePush provides Cordova and React Native developers with multiple options to configure the end users update experience.

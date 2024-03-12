@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # App Center Test Android Devices
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 > [!div class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

@@ -11,6 +11,7 @@ ms.tgt_pltfrm: cordova
 ---
 
 # Get Started with Apache Cordova
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

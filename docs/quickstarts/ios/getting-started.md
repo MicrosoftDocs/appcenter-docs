@@ -12,6 +12,8 @@ ms.assetid: f2af4edd-7d50-4e2d-8dd2-04eea4b755eb
 
 # Getting Started - Sample Swift (iOS) App and Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 In this tutorial, you'll learn how to set up a sample Swift app with App Center for iOS. Both Objective-C and Swift are supported.
 
 ## Prerequisites

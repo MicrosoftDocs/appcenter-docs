@@ -11,6 +11,9 @@ ms.custom: build
 ---
 
 # How to find your build command in App Center
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 Sometimes it's useful to compare the exact build command executed across different builds. 
 
 To compare commands, it helps to know where to look in App Center's logs. What the commands look like and how to find them depends your app's framework. 
