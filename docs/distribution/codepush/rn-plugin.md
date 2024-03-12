@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # React Native Client SDK Plugin Usage
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 With the CodePush plugin downloaded and linked, and your app asking CodePush where to get the right JS bundle from, the only thing left is to add the necessary code to your app to control the following policies:
 
 1. When (and how often) to check for an update? (for example app start, in response to clicking a button in a settings page, periodically at some fixed interval)

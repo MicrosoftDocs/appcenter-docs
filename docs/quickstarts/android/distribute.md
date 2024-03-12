@@ -12,6 +12,9 @@ ms.assetid: 71de3de5-2def-462f-9177-228436ef336b
 ---
 
 # Distribute Installable Sample App to Users
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 ### Prerequisites
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.
 - Signed APK. Go to the [Android Developer Documentation](https://developer.android.com/studio/index.html) to learn about creating a new keystore and manually signing an APK.

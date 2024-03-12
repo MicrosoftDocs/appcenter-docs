@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Releasing Updates
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 Once your app is configured and distributed to your users, and you have made some JS or asset changes, it's time to release them. The recommended way to release them is using the `release-react` command in the CodePush CLI, which bundles your JavaScript files, asset files, and release the update to the CodePush server.
 
 > [!NOTE]

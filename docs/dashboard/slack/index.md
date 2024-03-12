@@ -12,6 +12,8 @@ ms.assetid: d019ce2d-24b6-4a07-a9a2-e3484fcbb005
 
 # App Center Slack App
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 > [!IMPORTANT]
 > We will retire App Center Slack App in the near future. Consider migrating off from Slack integration, and access App Center's services to your desired channel via [App Center Webhook](~/dashboard/webhooks/index.md) to optimize app development. Feel free to contact our support for any question.       
 

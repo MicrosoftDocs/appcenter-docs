@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Creating and managing organizations
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 We recommend creating an organization for any apps with multiple collaborators to better manage users and their permissions.
 
 ## Organization roles

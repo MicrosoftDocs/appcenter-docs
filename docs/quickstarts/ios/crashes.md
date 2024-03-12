@@ -11,6 +11,9 @@ ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 ---
 
 # Crashes - Sample Swift (iOS) App and Tutorials
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 In this tutorial, you'll learn to view crashes from a sample Swift app in App Center.
 
 If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.

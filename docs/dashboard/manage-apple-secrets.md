@@ -13,6 +13,9 @@ ms.custom: dashboard
 
 # Managing your Apple ID and certificates
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
+
 ## How does Secret storage work
 
 Your Apple ID and certificate are stored securely in an encrypted vault designed so that only App Center internal services are allowed to read the values. As with any other credentials, it isn't possible to download them from the Secret storage. However, the Apple ID owner can assign it to services in App Center.

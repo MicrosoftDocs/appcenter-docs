@@ -13,6 +13,8 @@ ms.custom: insight, distribution store
 
 # Publishing an Android App Bundle fails because app signing isn't enabled
 
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+
 When publishing an Android App Bundle .aab file, you may come across an error like this:
 
 > Google Play app signing is not enabled for this package. You must enroll into app signing by Google Play to upload an Android App Bundle.

@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # How to stop collecting data
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 This section describes how to stop collection of *all* data coming from apps configured with the App Center SDK either by application or by device.
 
 ## Stop collecting all SDK data for a specific app from the server

@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Deleting User Errors Data
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 Since Data Subject requests to be forgotten must be serviced within 30 days, App Center Errors retains raw data for 28 days. In the event that you wish to stop collecting all Errors data from a specific end-user, there are two ways to do so:
 
 ## Block incoming Errors data by install ID

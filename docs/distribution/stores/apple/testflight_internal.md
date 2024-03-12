@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Publish an iOS package to TestFlight (Internal Testers)
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
 > [!TIP]
 > [Build your app according to Apples guidelines](https://developer.apple.com/app-store/submissions/)
 

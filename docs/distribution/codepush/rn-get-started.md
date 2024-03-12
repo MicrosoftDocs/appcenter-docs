@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Get Started with the React Native Client SDK
 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 Once you've followed the general purpose ["getting started"](~/distribution/codepush/index.md) instructions for setting up your CodePush account, you can start integrating CodePush in your React Native app by running the following command from within your app's root directory:
 
 ```shell

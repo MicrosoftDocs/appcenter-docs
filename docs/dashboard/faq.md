@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Dashboard Frequently Asked Questions
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 **Where can I find my app secret?**
 
 To get your App Secret, go to your app's settings. At the top right hand corner, click on the **triple vertical dots** and select `Copy app secret` to get your App Secret.

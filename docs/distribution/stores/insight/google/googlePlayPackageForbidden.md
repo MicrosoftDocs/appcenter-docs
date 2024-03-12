@@ -13,6 +13,8 @@ ms.custom: insight, distribution store
 
 # Connecting to the Google Play Store fails because the app isn't accessible
 
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+
 When connecting to the Google Play Store, you may come across an error like this:
 
 > This app exists but is not accessible from your Google Play account. Sign in to your Google Play Console and make sure your app is published.

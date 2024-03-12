@@ -12,6 +12,9 @@ ms.custom: distribute
 ---
 
 # React Native Client SDK
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your React Native app(s).
 
 ## How does it work?

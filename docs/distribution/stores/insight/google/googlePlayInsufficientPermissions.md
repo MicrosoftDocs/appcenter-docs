@@ -13,6 +13,8 @@ ms.custom: insight, distribution store
 
 # Connecting to the Google Play Store fails because of permissions
 
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+
 When connecting to the Google Play Store, you may come across an error like this:
 
 > Your Google service account doesn't have permissions to publish the app to the Google Play Store.
