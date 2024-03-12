@@ -10,6 +10,7 @@ ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4
 ---
 
 # Why doesn't my Appium test show test results?
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
 The most common reason for Appium tests not executing is if test class filenames don't match the Surefire naming pattern. Appium tests are executed using the Surefire Maven plugin. This requirement is mentioned in our [prerequisites](~/test-cloud/frameworks/appium/index.md#prerequisites). If your test class file names don't follow the naming patterns used by Surefire, they won't be found or executed.
 
 If no tests were found to execute in your Appium upload, the App Center user interface will display `Something went wrong while running your tests` and show the test log file. Normally, after the Surefire step, you'd see something in the test log file like this:

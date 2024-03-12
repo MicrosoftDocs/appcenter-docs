@@ -11,6 +11,7 @@ ms.service: vs-appcenter
 ---
 
 # Device sleep during testing
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 
 In App Center Test, devices automatically sleep if they don't receive a user interaction periodically. Long pauses between user interactions can cause test failures when devices go to sleep.
 

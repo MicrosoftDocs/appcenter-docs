@@ -10,6 +10,7 @@ ms.service: vs-appcenter
 ---
 
 # Preparing Xamarin.Android Apps
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 This guide provides instructions for preparing Xamarin.UITests for upload to App Center Test. Select your platform to begin.
 
 > [!IMPORTANT]

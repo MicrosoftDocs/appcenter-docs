@@ -12,6 +12,7 @@ ms.tgt_pltfrm: UWP
 ---
 
 # App Center Crashes (UWP/WinUI)
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
 > [!div  class="op_single_selector"]
 > * [Android](android.md)
 > * [iOS](ios.md)

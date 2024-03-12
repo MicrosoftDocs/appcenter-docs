@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Working with gestures
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 Gestures are an important part of user interaction in a mobile app. Taps, swipes, and flicks allow users multiple ways to interact with an application in creative and intuitive ways. This guide discusses the APIs for Xamarin.UITest for Android and iOS. 
 
 UITest provides a large number of APIs to simulate gestures or physical interactions with the device. Some (but not all) of these APIs are listed below:

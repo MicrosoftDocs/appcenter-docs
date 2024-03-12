@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Working with categorized tests
+[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
 Xamarin.UITests can be grouped into categories by adding the [CategoryAttribute](http://www.nunit.org/index.php?p=category&r=2.6.4) from the NUnit framework. These categories provide some flexibility on what tests are run.
 
 For example, an application may have one set of tests that are specifically for tablets, and another set for phones. With categories, it's possible to run the tablet-specific tests separately from the phone tests.
