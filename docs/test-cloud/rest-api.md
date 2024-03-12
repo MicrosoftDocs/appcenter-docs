@@ -16,7 +16,7 @@ This example shows how to upload an app package, test binaries, and queue UI tes
 ## Steps
 1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID**, which you'll use later for the Response Header.
 
-**Sample Request** https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs 
+**Sample Request** `https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs` 
 ![Screenshot demonstrating API usage](images/test-runs-api.png)
 
 2. **Create file hashes** for each file you want to upload to App Center Test.

@@ -164,7 +164,7 @@ If your Continuous Delivery setup updates the IPA version before building and te
 ### Reinstallation
 On a shared device cloud, it's important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization. In App Center Test, the app is automatically uninstalled after the completion of your test run. 
 
-It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.
+It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.github.io/appium.io/docs/en/writing-running-appium/other/reset-strategies/) for details.
 
 ### Network Tasks
 Local network tasks are faster because the server is closer and more dedicated to the remote host.

@@ -194,7 +194,7 @@ AppCenter.start(application, "{Your App Secret}", Analytics::class.java, Crashes
     And then retry running `react-native link`.
 
     > [!NOTE]
-    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you're using [Jest test framework](https://facebook.github.io/jest/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
+    > App Center SDK doesn't set up mocks automatically for App Center modules during the linking process. If you're using [Jest test framework](https://jestjs.io/) in your application and experience errors caused by the App Center SDK while running tests with Jest, add the following to the jest section of package.json file (include only modules in use):
     
     > ```JSON
     > "setupFiles": [
