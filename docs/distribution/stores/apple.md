@@ -13,7 +13,7 @@ ms.assetid: 32d31a11-8c89-458b-9074-0da4a06384a1
 
 # App Store and TestFlight Distribution
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Publish iOS app upgrades to the App Store and TestFlight with Fastlane in App Center.
 

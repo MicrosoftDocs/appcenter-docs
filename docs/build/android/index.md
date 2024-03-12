@@ -14,7 +14,7 @@ ms.tgt_pltfrm: android
 
 # Building Java apps for Android
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 To build your first Android app, follow these steps:
 

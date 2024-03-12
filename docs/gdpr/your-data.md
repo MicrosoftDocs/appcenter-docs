@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # GDPR 
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center customers who wish to exercise their rights as data subjects may do so by submitting DSR (Data Subject Right) requests using GDPR specific API methods created for this purpose. 
 

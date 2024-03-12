@@ -12,7 +12,7 @@ ms.tgt_pltfrm: unity
 ---
 
 # App Center Distribute – Unity In-app updates
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

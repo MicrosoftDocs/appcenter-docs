@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Using the CodePush UI
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The CodePush service is designed to enable developers to manage their deployments and publish application updates using the [App Center CLI](~/distribution/codepush/cli.md). Developers publish content updates to a particular Deployment (typically staging) using the CLI, and users configured for that deployment get the updates. Developers can also promote updates from one deployment to another (from **Staging** to **Production** for example).
 

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Export Analytics Data
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Overview
 With App Center, you can export all of your raw Analytics data into Azure Blob Storage using the [continuous export](~/analytics/export.md) feature. You'll export all data from the moment you set up export and backfill data for the last 28 days.

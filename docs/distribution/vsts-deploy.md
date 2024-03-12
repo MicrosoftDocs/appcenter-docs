@@ -12,7 +12,7 @@ ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 
 # Deploy Azure DevOps Builds with App Center
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 You can deploy your apps from Azure DevOps to  App Center with the **Deploy with App Center** Task.
 

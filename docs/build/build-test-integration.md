@@ -13,7 +13,7 @@ ms.custom: build
 
 # Testing Builds on Real Devices
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this document, you'll learn how to integrate App Center Build and [App Center Test](~/test-cloud/index.md) to run your latest successful build on real devices. 
 

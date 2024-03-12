@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Handling User Consent for Diagnostics
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Ask for the User's Consent To Send Diagnostics logs
 

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Forgetting Analytics Data for Users
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Since Data Subject requests to be forgotten must be serviced within 30 days, App Center Analytics retains raw data for 28 days. In the event that you wish to stop collecting all Analytics data from a specific end-user, there are two ways to do so:
 

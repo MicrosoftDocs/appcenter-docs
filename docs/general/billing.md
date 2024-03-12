@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Billing
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 You can configure a billing plan for your App Center organization or user account. If you configure a plan for an organization, all apps under the organization will bill against the configured plan. For billing configured under your user account, all apps will bill against the user account plan.
 

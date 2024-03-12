@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # Node.js selection
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Major versions of Node.js
 The following versions are available for use in App Center Build: 6.X, 8.x, 10.x, 12.x, 14.x, 16.X.

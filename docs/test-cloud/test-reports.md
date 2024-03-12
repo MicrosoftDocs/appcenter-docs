@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Test reports
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 When your tests execute in App Center Test, we generate reports with a summary and detailed information for
 * the test run

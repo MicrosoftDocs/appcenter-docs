@@ -13,7 +13,7 @@ ms.custom: build
 
 # Custom Build Dependency Handling
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!NOTE] 
 > Issues you find with custom dependency handling are generally beyond the scope of App Center support, because it's infeasible to QA highly custom functionality.

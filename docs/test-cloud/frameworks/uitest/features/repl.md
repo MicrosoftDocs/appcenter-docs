@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Working with the REPL
-[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 An important tool in creating Xamarin.UITests is the *REPL* (*read-eval-print-loop*). The REPL is a console-like environment where you can dynamically experiment with UITest expressions. The REPL evaluates them, runs them live in the app, and logs detailed output. Expressions can be copied from the REPL tool and used directly in your UITest project.
 
 ## Starting the REPL

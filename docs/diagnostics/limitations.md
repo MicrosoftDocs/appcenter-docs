@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Limitations
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Crashes
 

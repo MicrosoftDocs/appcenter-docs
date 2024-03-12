@@ -13,7 +13,7 @@ ms.custom: build
 
 # React Native Troubleshooting
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## My React Native build fails with: 'FBSDKCoreKit/FBSDKCoreKit.h' file not found
 This error is usually because the Facebook SDK expects that it's installed in the user's home directory, which can be problematic for hosted builds. To work around this requirement, follow these steps:

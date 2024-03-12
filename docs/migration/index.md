@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Migrating Existing Services
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center is the future of HockeyApp and CodePush.
 

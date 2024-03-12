@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Test report steps are out of sync
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center Test creates test reports that synchronize each test and test step across devices used. To organize the reports, Test relies on the filenames and order of the screenshots it takes.
 

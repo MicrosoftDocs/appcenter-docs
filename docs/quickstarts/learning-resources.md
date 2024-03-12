@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Learning Resources
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Microsoft Learn
 [Introduction to App Center](/training/modules/intro-to-app-center/)

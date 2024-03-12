@@ -10,7 +10,7 @@ ms.assetid: 03c91b81-477c-43a5-9019-f99202776951
 ---
 
 # Analyzing Device Logs in App Center Test
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 When your tests run in App Center Test, output is captured to log files for each device in the run. You can examine these logs after the test run completes. 
 
 Device logs and stack traces contain output from the device and can be a great help in diagnosing application issues like your application:

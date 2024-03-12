@@ -12,7 +12,7 @@ ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 
 # App Center Webhooks
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Overview
 

@@ -11,7 +11,7 @@ ms.tgt_pltfrm: unity
 ---
 
 # Get Started with Unity
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

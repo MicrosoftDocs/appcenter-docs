@@ -13,7 +13,7 @@ ms.custom: build
 
 # Build scripts
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 
 > [!NOTE]

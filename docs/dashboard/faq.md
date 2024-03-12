@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Dashboard Frequently Asked Questions
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 **Where can I find my app secret?**
 

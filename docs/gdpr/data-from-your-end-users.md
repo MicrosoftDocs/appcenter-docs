@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Data From Your Users
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 This section and all its sub-documents will provide information and API pointers to help you, as an app developer using App Center, accommodate your customers as data subjects.
 

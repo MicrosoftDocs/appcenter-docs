@@ -14,7 +14,7 @@ ms.tgt_pltfrm: windows
 
 # Build results
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The build results give you rich information about the status of your build. You can download your successful build or only the symbols to use for crash reporting. If it fails, you can investigate the logs to solve build issues.
 

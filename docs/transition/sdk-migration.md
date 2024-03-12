@@ -12,7 +12,7 @@ ms.custom: sdk
 ---
 
 # Migrate from the HockeySDK to App Center SDK
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Once you've [moved your app to App Center](~/transition/moving/index.md) you're ready to integrate the App Center SDK. Follow this documentation to update your application to use the App Center SDK instead of the HockeySDK. The guides for each platform are listed below.
 

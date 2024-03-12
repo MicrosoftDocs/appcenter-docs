@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin-android
 
 # Building Xamarin apps for Android
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 To start building your first Xamarin Android app, you must:
 

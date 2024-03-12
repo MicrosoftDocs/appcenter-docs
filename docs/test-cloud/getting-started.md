@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Getting Started with App Center Test
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 These steps must be completed before a project can be used with App Center Test.
 
 ## 1. Create an App Center account

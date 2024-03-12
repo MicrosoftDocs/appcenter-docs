@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Support
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Documentation
 [Product Docs](~/index.yml)

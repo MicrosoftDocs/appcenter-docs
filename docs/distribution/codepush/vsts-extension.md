@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Azure DevOps Extension
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The Azure DevOps CodePush extension can reduce the effort needed to keep your dev/alpha/beta/etc. deployments up to date by pushing changes to the configured source control branches. Your automated build takes care of the rest, meaning there's no need to manually release, promote, or rollout from the App Center CLI.
 

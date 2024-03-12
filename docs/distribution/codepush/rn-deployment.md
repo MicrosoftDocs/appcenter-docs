@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Deployment
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Multi-Deployment Testing
 

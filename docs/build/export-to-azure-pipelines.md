@@ -13,7 +13,7 @@ ms.assetid: 808F6809-E2B0-4D45-A674-DFE4B5652A94
 
 # Export App Center Build configuration to Azure Pipelines
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Overview
 With App Center, you can export all of your App Center Build configurations to Azure Pipelines using the Build export feature. You can download JSON or YAML file and import it into Azure Pipelines.

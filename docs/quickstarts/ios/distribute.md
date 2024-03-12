@@ -12,7 +12,7 @@ ms.assetid: e4c351f6-0284-4747-a682-3e0773d3cfe1
 
 # Distribute - Sample Swift (iOS) App and Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this tutorial, you'll learn to distribute a sample Swift app to a group of users, who can install the app on their device.
 

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Choose the right service for app builds
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The choice on whether to use [Visual Studio App Center](https://visualstudio.microsoft.com/app-center/) or [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) requires some thought. There are some scenarios where one service might suit your needs better than the other.  
  

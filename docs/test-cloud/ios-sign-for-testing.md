@@ -10,7 +10,7 @@ ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4
 ---
 
 # Signing iOS apps for Automated Testing
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
    - **Local Tests** - Signing with a development profile is supported by most test frameworks. For XCUITest, the test runner must be signed with a development profile but the app can be signed with any type of profile.
 
    - **App Center Tests** - You may sign with any profile that allows us to re-sign your app with one of our development profiles. There's an important exception: we aren't able to re-sign builds created for the App Store, so we can't run tests with apps built for App Store distribution.

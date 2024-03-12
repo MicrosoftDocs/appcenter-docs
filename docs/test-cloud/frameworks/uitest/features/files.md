@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Working with files
-[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 Xamarin.UITest tests may use local files for various test data. When running these tests in App Center Test, these files aren't uploaded with your tests by default. This generally results in your tests failing in App Center Test if they depend on local files.
 
 The files must be included in your test upload for your tests to access during the test run. There are two approaches to including the files with your test upload: *embedded files* and *included files*.

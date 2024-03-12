@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Update experience configuration
 

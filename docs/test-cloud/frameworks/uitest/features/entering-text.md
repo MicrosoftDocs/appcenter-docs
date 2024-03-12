@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Working with text entry
-[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 A common task for a test is to enter text into views. Xamarin.UITest provides two APIs to address this need:
 

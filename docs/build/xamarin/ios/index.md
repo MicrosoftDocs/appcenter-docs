@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin-ios
 
 # Building Xamarin apps for iOS
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!NOTE] 
 > Supported versions and requirements

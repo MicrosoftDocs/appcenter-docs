@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Enabling Diagnostics in an App
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Diagnostics SDK
 

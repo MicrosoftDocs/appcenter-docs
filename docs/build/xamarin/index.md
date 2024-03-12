@@ -14,7 +14,7 @@ ms.tgt_pltfrm: xamarin
 
 # Xamarin Build
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 You can build Xamarin apps in App Center for iOS & Android.
 

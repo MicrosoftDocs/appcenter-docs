@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Accounts in App Center
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center supports several identity options for creating accounts. Customers can choose GitHub, Microsoft, Facebook, and Google based auth providers when signing up. This allows for more flexibility, but can be confusing for customers using a work email. This guide details some things to keep in mind in that case.
 

@@ -14,7 +14,7 @@ ms.tgt_pltfrm: windows
 
 # Building UWP C# apps for Windows
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 To start building your first UWP app, do these steps:
 

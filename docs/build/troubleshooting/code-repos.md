@@ -13,7 +13,7 @@ ms.custom: build
 
 # Code Repository Troubleshooting
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Repository isn't listed in the Connect to Repository step
 * **Only Git repositories are supported**. Other repository types like Mercurial, TFVC, and so on, won't show up in the repository list.

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Deleting diagnostics data
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Data Subject Requests (DSRs) to be forgotten must be serviced within 30 days. App Center Diagnostics retains raw data for 28 days by default.
 There are two possible starting points:

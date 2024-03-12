@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # iOS Symbolication
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 macOS, tvOS, and iOS crash reports show the stack traces for all running threads of your app at the time a crash occurred. The stack traces only contain memory addresses; not class names, methods, file names, or line numbers needed to understand the crashes.
 

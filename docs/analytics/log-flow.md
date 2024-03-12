@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Log Flow
  
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Log Flow will show you what's being received by the backend in real time. The main use cases for log flow are:
 

@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Manage App Center Distribution Groups
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Manage Distribution Groups
 Distribution Groups are used to control access to releases. A Distribution Group represents a set of users managed jointly and with common access to releases. For example, Distribution Groups include teams of users, like QA or External Beta Testers, or can represent stages or rings of releases, such as Staging.

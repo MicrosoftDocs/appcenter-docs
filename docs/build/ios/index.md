@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ios
 
 # Building Objective-C or Swift apps for iOS
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 
 To build your first native iOS app, you must take the following actions:

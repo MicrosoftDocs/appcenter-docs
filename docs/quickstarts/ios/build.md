@@ -12,7 +12,7 @@ ms.assetid: 3b78d40e-157f-415a-8680-ed889e95e517
 
 # Build - Sample Swift (iOS) App and Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this tutorial, you'll learn to build a sample Swift app in App Center.
 

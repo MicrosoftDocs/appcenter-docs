@@ -13,7 +13,7 @@ ms.custom: build
 
 # Understanding Build Execution Time
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 There are many reasons why build duration can be higher when using App Center Build:
 

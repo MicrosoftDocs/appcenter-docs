@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # Building React Native apps for Android
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center can build React Native apps using React Native version 0.34 or newer.
 

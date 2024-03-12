@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # React Native Client SDK API Reference
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The CodePush plugin is made up of two components:
 

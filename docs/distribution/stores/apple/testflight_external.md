@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Publish an iOS package to TestFlight (External Testers)
 
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 1. From the Stores home page, select the external group to distribute to.
 2. Select **Publish to Store** in the upper-right corner.

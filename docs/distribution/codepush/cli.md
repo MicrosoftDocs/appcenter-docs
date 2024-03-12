@@ -13,7 +13,7 @@ ms.custom: distribute
 
 # Releasing CodePush updates using the App Center CLI
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Installation
 * Install [Node.js](https://nodejs.org/)

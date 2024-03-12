@@ -14,7 +14,7 @@ ms.tgt_pltfrm: react-native
 
 # React Native Build
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 You can build React Native apps for both Android and iOS. To get started, use the following links:
 

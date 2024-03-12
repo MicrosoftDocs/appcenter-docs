@@ -13,7 +13,7 @@ ms.assetid: 04325eb2-4730-47e9-b159-bbf7994d18f8
 
 # Distribute apps directly to stores from App Center
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 - [Apple App Store](apple.md)
 - [Google Play Store](googleplay.md)

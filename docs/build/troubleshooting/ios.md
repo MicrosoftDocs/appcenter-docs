@@ -12,7 +12,7 @@ ms.custom: build
 ---
 # iOS Build Troubleshooting
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## No Xcode scheme is found
 Building an `xcworkspace` or an `xcproject` requires a shared Xcode scheme. Xcode schemes are saved locally so Xcode can access them. By default schemes aren't shared with others or included in source control.

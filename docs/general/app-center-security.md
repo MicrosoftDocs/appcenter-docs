@@ -13,7 +13,7 @@ ms.custom: general
 
 # Visual Studio App Center Security and Compliance
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center takes security seriously. As a first-party Microsoft Azure service, we're responsible for following all of Microsoft's internal requirements for operating in a secure and reliable way.
 

@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Windows Support
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center currently supports diagnostics for UWP, WPF, and WinForms applications. This section explains the new experience for UWP apps as part of the 2.5.0 SDK release. For more information on WPF and WinForms applications,
 see [diagnostics features](~/diagnostics/features.md) and [WPF/WinForms SDK](~/sdk/crashes/wpf-winforms.md).

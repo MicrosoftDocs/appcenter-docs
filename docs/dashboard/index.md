@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Overview
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 [Visual Studio App Center](https://appcenter.ms/) brings together multiple common services into a DevOps cloud solution. Developers use App Center to [Build](~/build/index.md), [Test](~/test-cloud/index.md), and [Distribute](~/distribution/index.md) applications. Once the app's deployed, developers monitor the status and usage of the app using the [Analytics](~/analytics/index.md) and [Diagnostics](~/diagnostics/index.md) services.
 

@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Test Troubleshooting
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 The documents in this section provide general troubleshooting tips for App Center Test. 
 
 ## General Tips

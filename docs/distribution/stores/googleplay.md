@@ -13,7 +13,7 @@ ms.assetid: 8c034e61-7fc5-4dea-9722-242a2d01ee1f
 
 # Publish to Google Play Store
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Publish an update to Google Play Store, including the Alpha and Beta tracks from App Center.
 

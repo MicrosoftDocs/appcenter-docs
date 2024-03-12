@@ -13,7 +13,7 @@ ms.custom: diagnostics
 
 # Symbolicating Unmanaged Code Crashes
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center Diagnostics supports symbolicating unmanaged C/C++ code crashes in your application.
 You can symbolicate unmanaged code crashes that originate in your [Android NDK code](~/diagnostics/Android-NDK.md), and unmanaged code crashes formatted as [Breakpad minidumps](~/diagnostics/unmanaged-code-crash-support.md#using-breakpad-with-app-center) uploaded through the [Upload Crashes API](~/diagnostics/upload-crashes.md#upload-a-crash-report).

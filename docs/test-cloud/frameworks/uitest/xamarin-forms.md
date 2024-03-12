@@ -10,7 +10,7 @@ ms.date: 01/04/2021
 ---
 
 # Get started with UITest and Xamarin.Forms
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 UITest can be used with Xamarin.Forms to write UI tests to run in the cloud on hundreds of devices.
 
 ## Overview

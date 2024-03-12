@@ -11,7 +11,7 @@ ms.assetid: 9b616aa1-079a-4bbc-abf5-6ffbdf53c0cf
 
 # App Center Supported Browsers
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!NOTE]
 > Unlisted browsers and versions might work, but aren't officially supported.

@@ -12,7 +12,7 @@ ms.assetid: faef539f-3bbe-43b5-af8c-7f48a14340ed
 
 # Build Sample Android App on App Center
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ### Prerequisites
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.

@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Exporting Errors Data
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Overview
 

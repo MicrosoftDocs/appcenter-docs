@@ -13,7 +13,7 @@ ms.assetid: 5c001eab-b3da-476e-ba84-2fa7eb6f500f
 
 # Analytics - Sample Swift (iOS) App and Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this tutorial, you'll learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 

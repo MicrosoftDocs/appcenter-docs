@@ -10,7 +10,7 @@ ms.assetid: 278e0ad2-1616-4a3c-907a-092b57c81e96
 ---
 
 # App Center SDK
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center is your continuous integration, delivery and learning solution for iOS, Android, Windows, and macOS apps.
 Get faster release cycles, higher-quality apps, and the insights to build what users want.

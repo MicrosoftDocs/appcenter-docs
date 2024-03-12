@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Espresso App and Test Signing for App Center Test
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 To execute Espresso tests in App Center Test, the app APK and the test APK must be signed the same way. They must both be signed using: 
 
 - the same V1 (Jar signature) OR 

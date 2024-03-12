@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Analytics FAQ
  
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Is the data sampled?
 The data isn't sampled. Analytics will use all the data that's sent, unless it's sent in the wrong format or some of the known limits are reached.

@@ -12,7 +12,7 @@ ms.assetid: b0d2bf02-d28f-48e9-889f-74a3aa5fac45
 
 # App Center Email Notifications
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Overview
 

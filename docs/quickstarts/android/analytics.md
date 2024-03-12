@@ -15,7 +15,7 @@ ms.assetid: 2eab2986-32ce-4cc5-aa49-ab60a72bf456
 
 # View Custom Events and Track User Analytics
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 

@@ -12,7 +12,7 @@ ms.assetid: 7d2aa750-c7d0-47cb-acc8-97892bc78cf2
 
 # Run Included Tests with App Center
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ### Prerequisite
 - Follow the [getting started tutorial](getting-started.md) to set up the sample app.

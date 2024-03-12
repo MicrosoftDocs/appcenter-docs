@@ -13,7 +13,7 @@ ms.custom: dashboard
 
 # Managing your Apple ID and certificates
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 
 ## How does Secret storage work

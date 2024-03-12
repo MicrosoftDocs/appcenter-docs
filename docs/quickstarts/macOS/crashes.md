@@ -17,7 +17,7 @@ dev_langs:
 
 # Crashes - Sample Swift (macOS) App and Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this tutorial, you'll learn to view crashes from a sample Swift app in App Center.
 

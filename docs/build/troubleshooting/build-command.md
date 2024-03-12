@@ -12,7 +12,7 @@ ms.custom: build
 
 # How to find your build command in App Center
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Sometimes it's useful to compare the exact build command executed across different builds. 
 

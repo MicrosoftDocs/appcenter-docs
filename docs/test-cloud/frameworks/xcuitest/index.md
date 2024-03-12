@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Preparing XCUITest Tests for Upload
-[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This guide provides instructions for preparing XCUITest tests for upload to App Center Test.
 
 ## Test service Requirements

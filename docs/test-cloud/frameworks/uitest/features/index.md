@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # Xamarin.UITest Features
-[!INCLUDE [Retirement announcement for App Center](../../../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 The documents in this section discuss various tasks for writing and running Xamarin.UITests.
 
 ## [Backdoors](backdoors.md)

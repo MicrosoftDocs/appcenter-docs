@@ -14,6 +14,6 @@ dev_langs:
 ---
 
 # Other tvOS APIs
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 [!INCLUDE [apple](includes/apple.md)]

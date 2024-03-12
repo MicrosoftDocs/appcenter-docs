@@ -12,7 +12,7 @@ ms.custom: gdpr
 ---
 # App Center GDPR Frequently Asked Questions
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 The following content is a list of frequently asked questions for GDPR. If you have additional questions that aren't answered here, contact us.  
 

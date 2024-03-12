@@ -13,7 +13,7 @@ ms.custom: errors
 
 # Errors
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center Errors allow you to handle the errors in your app and avoid potential issues in your app. This section examines how to catch and report the errors in your app. Learn more about best practices about when and how to use errors [in the official documentation for exceptions](/dotnet/csharp/programming-guide/exceptions/using-exceptions).
 

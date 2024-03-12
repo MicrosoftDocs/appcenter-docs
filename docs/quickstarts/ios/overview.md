@@ -12,7 +12,7 @@ ms.assetid: b3e063f7-4043-450b-b651-d8c707e9d8cc
 
 # Overview - Sample Swift (iOS) App and Tutorials
 
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 These quickstart tutorials will help you onboard to App Center for iOS. The [sample swift app](https://github.com/microsoft/appcenter-sampleapp-ios-swift/tree/master) has the App Center SDK already integrated, and links to its tutorials are below.
 

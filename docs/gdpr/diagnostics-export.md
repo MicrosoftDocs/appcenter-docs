@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # Exporting Diagnostics Data
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 This article walks you through how to export data per your user request. To export data, you have two options:
 

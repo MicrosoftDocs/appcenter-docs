@@ -12,7 +12,7 @@ ms.custom: errors
 ---
 # Errors Feature Set
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 In this page, you'll learn about the feature set available for Xamarin errors.
 

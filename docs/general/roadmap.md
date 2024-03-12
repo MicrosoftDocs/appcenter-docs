@@ -12,7 +12,7 @@ ms.service: vs-appcenter
 
 # App Center Product Roadmap
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 To more actively engage with our customers, we've moved our public roadmap to the [App Center GitHub repository](https://github.com/Microsoft/appcenter). Your comments on the Iteration Plan and Features create an open dialog between us and customers. This change also lets others see the feedback you share.
 

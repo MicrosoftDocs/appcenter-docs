@@ -13,7 +13,7 @@ ms.custom: analytics
 
 # Android NDK
 
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 Android NDK allows you to implement parts of your Android apps using C and C++. You can use the **Google Breakpad** client library for your Android apps to receive valid stack traces in native code. The stack traces may only contain memory addresses. They don’t show class names, methods, file names, and line numbers which are needed to read and understand the crashes. To get the memory addresses translated for your Android NDK app, you must upload application symbols for each build.
 

@@ -12,7 +12,7 @@ ms.custom: test
 ---
 
 # App Center Test Core Concepts
-[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 It is helpful to familiarize yourself with the core concepts that comprise the App Center Test experience.
 

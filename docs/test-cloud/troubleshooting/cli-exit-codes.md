@@ -12,7 +12,7 @@ ms.assetid: 6a1da1b3-66d8-4088-9544-76877a8b4410
 ---
 
 # CLI exit codes
-[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 ## Exit codes
 The App Center CLI tool returns an exit code that reflects whether App Center Test received the necessary information, or if it triggered an error. In this table, we list the exit codes with the corresponding explanation.
