@@ -12,6 +12,9 @@ ms.custom: cli
 ---
 
 # Command-Line Interface (CLI) Documentation
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 App Center command-line interface is a unified tool for running App Center services from the command-line. The CLI is a powerful tool for using App Center services and scripting a sequence of commands to execute. You can currently log in and view or configure all the apps that you have access to in App Center.
 
 To get more information on CLI installation and currently supported commands, refer to [App Center CLI GitHub repo](https://github.com/Microsoft/mobile-center-cli).

@@ -12,6 +12,9 @@ ms.custom: analytics
 ---
 
 # Overview Page
+ 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 
 The goal of the Overview page is to provide you with the key metrics about your app users. This includes their devices, location, activity, and engagement. This allows you to answer questions such as:
 

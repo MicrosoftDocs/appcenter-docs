@@ -13,6 +13,8 @@ ms.custom: api
 
 # App Center API Documentation
 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 ## App Center OpenAPI Specification (Swagger)
 App Center exposes a full set of API endpoints. You can explore the App Center API through the [App Center OpenAPI Specification](https://openapi.appcenter.ms).
 

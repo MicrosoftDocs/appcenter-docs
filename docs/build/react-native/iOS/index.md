@@ -13,6 +13,10 @@ ms.tgt_pltfrm: react-native
 ---
 
 # Configure a React Native iOS build in App Center
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
+
 App Center can build React Native apps written in React Native version 0.34 or newer.
 
 To build a React Native app for iOS:

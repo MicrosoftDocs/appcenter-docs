@@ -12,6 +12,9 @@ ms.assetid: 1EFB8DFD-76D5-4F8C-B73A-2CFBE3E3BD97
 ---
 
 # Managing source repository connections
+
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 App Center supports connections to the following code repository services: [Bitbucket](https://bitbucket.org/), [GitHub](https://github.com/), [Gitlab.com](https://gitlab.com), and [Azure DevOps (formerly VSTS)](https://visualstudio.microsoft.com/team-services/). Build apps in App Center by connecting to one of these providers. Please note that SSH connection is not supported.
 
 > [!NOTE]

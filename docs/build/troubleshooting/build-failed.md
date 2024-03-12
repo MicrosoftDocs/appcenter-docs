@@ -11,6 +11,9 @@ ms.custom: build
 ---
 
 # Failed builds
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 There are various reasons why your build could have failed that might be unique to your project. Usually an efficient way to diagnose build failures is comparing them to a working build. This process can minimize variables and identify relevant conditions for your scenario. 
 
 ## If building works locally but not in App Center

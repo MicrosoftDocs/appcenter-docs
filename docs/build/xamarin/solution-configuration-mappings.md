@@ -13,6 +13,9 @@ ms.tgt_pltfrm: xamarin
 ---
 
 # Configuration mappings
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 Xamarin Solutions can be configured to build certain projects and ignore others using custom build configurations. These configurations can minimize possible errors and reduce the build time for your code. 
 
 This guide explains how to configure custom builds in Visual Studio for Windows or macOS. To configure Xamarin projects in Azure DevOps, refer to the [Xamarin Azure DevOps guide](/azure/devops/pipelines/ecosystems/xamarin)

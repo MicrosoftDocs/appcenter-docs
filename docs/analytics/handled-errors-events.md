@@ -12,6 +12,9 @@ ms.custom: analytics
 ---
 
 # How to Use Events for Handled Errors
+ 
+[!INCLUDE [Retirement announcement for App Center](../includes/retirement.md)]
+
 > [!IMPORTANT]
 > Handled Errors aren't available yet as part of the Crashes service in App Center. One workaround is to use Custom Events. This isn't how "Handled Errors" are intended to be supported and it isn't the main purpose of Events either. However, this page contains advice on how to best use Events to report on handled errors.
 

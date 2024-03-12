@@ -12,6 +12,9 @@ ms.custom: build
 ---
 
 # Understanding Build Execution Time
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 There are many reasons why build duration can be higher when using App Center Build:
 
 * When running your build locally, many things are cached, including NuGet packages, pods, dependencies, and so on. In App Center, we always do a clean build, and also redownload dependencies not already included in your repository.

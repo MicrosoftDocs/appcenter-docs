@@ -13,6 +13,9 @@ ms.tgt_pltfrm: android
 ---
 
 # Android code signing setup in App Center
+ 
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 > [!TIP]
 > For Xamarin.Android users, the process is slightly different. See our [Xamarin.Android Code Signing guide](~/build/xamarin/android/code-signing.md) for details.
 

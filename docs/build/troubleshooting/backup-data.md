@@ -11,6 +11,9 @@ ms.custom: build
 ---
 
 # Backing up Build data
+
+[!INCLUDE [Retirement announcement for App Center](../../includes/retirement.md)]
+
 Build data in App Center is kept for 30 days after creation. However, it can also be deleted before 30 days have passed in two ways:
 
 - The configuration for the branch in App Center is deleted, which erases all data for that branch.

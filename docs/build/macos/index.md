@@ -13,6 +13,10 @@ ms.tgt_pltfrm: macos
 ---
 
 # Building Objective-C or Swift apps for macOS
+
+[!INCLUDE [Retirement announcement for App Center](../..includes/retirement.md)]
+
+
 To start building your first Mac app, do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).

@@ -13,6 +13,9 @@ ms.custom: build
 
 
 # Xamarin
+
+[!INCLUDE [Retirement announcement for App Center](../../../includes/retirement.md)]
+
 ## My Xamarin.iOS builds build from solution file (.sln) instead of project file (.csproj)
 
 When your Xamarin.iOS builds run from solution file (.sln), there are several things you might want to check. 
