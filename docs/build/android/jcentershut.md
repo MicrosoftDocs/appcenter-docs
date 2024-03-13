@@ -3,7 +3,7 @@ title: If Build fails at getting JCenter Bintray resources
 description: How to deal with JCenter shutdown
 keywords: android
 author: milenkomarkovic
-ms.author: v-gorad
+ms.author: v-gradojcic
 ms.date: 06/16/2021
 ms.topic: article
 ms.assetid: 

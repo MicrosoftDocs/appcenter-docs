@@ -23,7 +23,7 @@ In this module, you'll:
 - Describe how the App Center services can help create development processes to deliver quality mobile apps efficiently.
 
 ## LinkedIn
-[Continuous Integration and Delivery for iOS](https://www.linkedin.com/learning/app-center-continuous-integration-and-delivery-for-ios/code-more-manage-less?autoplay=false&trk=course_preview&upsellOrderOrigin=default_guest_learning).
+[Continuous Integration and Delivery for iOS](https://www.linkedin.com/learning/app-center-continuous-integration-and-delivery-for-ios?trk=course_title&upsellOrderOrigin=default_guest_learning).
 
 Think about the last time you released an app. How many sessions did your beta testers run? How often did your app crash? Where did users spend the most time? Visual Studio App Center automatically gathers this data for you and consolidates it into a single web-based dashboard. It also provides a complete continuous integration/continuous deployment (CI/CD) solution for your iOS and macOS applications. Connect your repository to App Center and it builds your apps on cloud-hosted agents, automatically runs unit and UI tests on real devices, and distributes them to beta testers and app stores. After deployment, App Center helps you monitor your apps with crash reports and advanced analytics. It even lets you send targeted push notifications to keep your customers engaged.
 

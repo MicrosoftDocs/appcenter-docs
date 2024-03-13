@@ -22,7 +22,8 @@ Publish an update to Google Play Store, including the Alpha and Beta tracks from
 * Google requires the first version of your Google Play application to be published to production through the Google console.
 * A Google Play Developer account. If you don't have one, you can sign up at the [Google developer account portal](https://play.google.com/apps/publish/signup).
 * Ensure that you have an API project and a Service account for App Center to create a Google Store connection and to access Google APIs on your behalf.
-* Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks.
+<!-- * Review [prerequisites for Beta and Alpha](https://developer.android.com/distribute/best-practices/launch/beta-tests.html) for more information on these tracks. -->
+* Review [Publish your app](https://developer.android.com/studio/publish/) for more information on these tracks.
 * Set up App signing by Google to publish Android App bundles `.aab` files.
 
 For more information, review [How to use the Google Play console](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
