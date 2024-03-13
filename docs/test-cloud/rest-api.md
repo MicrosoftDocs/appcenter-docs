@@ -43,7 +43,7 @@ $ shasum com.mobilecenter.sampleappxamarin.apk
 3. [Create a store for files](https://openapi.appcenter.ms/#/test/test_uploadHashesBatch) using POST and hashes value calculated from the previous step. 
 
 **Sample Request**
-https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0cc373-aa4a-455f-b083-4fc1afa87f2e/hashes/batch
+`https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0cc373-aa4a-455f-b083-4fc1afa87f2e/hashes/batch`
 
    - **file_type** - app-file for apk\ipa and test-file for test assemblies/test related files.
 
