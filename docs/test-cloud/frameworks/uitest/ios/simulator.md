@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Local testing with iOS Simulators
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 #### [Visual Studio](#tab/vswin/)
 It isn't possible to run local iOS tests on Windows. 
 

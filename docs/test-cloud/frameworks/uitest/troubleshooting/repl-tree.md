@@ -10,6 +10,7 @@ ms.assetid: 089742e5-1344-4730-8699-cd9ccab01062
 ---
 
 # REPL Tree command fails to give output and becomes unresponsive
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This problem most frequently occurs when using WebViews. Depending on the particular page being loaded by a WebView, there may be a large number of elements for the `Repl()` tool to attempt to query. Rarely it can occur on other types of views too.
 
 The general workaround for this scenario is to identify the main view or parent element you need more information on, and target that using AppQuery to list the details of the view's child elements. 

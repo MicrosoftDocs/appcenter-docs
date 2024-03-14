@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # App Center Test Security
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 Devices in App Center Test are part of a shared public cloud, meaning that many users will install their app and run their tests on the same physical devices. While App Center Test prohibits uploading personal data, measures are taken to ensure security across test runs by different users.
 
 - Any apps installed during a test run are uninstalled

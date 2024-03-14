@@ -15,6 +15,8 @@ dev_langs:
 
 # Overview - Sample Swift (macOS) App and Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 These quickstart tutorials will help you onboard to App Center for macOS. The [sample swift app](https://github.com/VSAppCenter/sampleapp-macos-swift) has the App Center SDK already integrated, and links to its tutorials are below.
 
 Begin with the **Getting Started** tutorial. After you've completed that, you can do the rest in the order below, or choose a specific tutorial to follow.

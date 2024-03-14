@@ -12,6 +12,9 @@ ms.custom: general
 ---
 
 # Connecting App Center Organizations to Azure Active Directory
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Connect your AAD tenant to App Center
 To connect your App Center organization to Azure Active Directory, click on your organization, click **Manage**, and then click **Azure**. On the Azure page, click **Connect** and sign in to Azure Active Directory if you're not already signed in.
 

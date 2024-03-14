@@ -12,6 +12,9 @@ ms.custom: insight, distribution store
 ---
 
 # Connecting to the Google Play Store fails because the app isn't published
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 When connecting to the Google Play Store, you may come across an error like this:
 
 > You must publish your app to the Production, Beta or Alpha track from the Google Play Console before you can connect the store.

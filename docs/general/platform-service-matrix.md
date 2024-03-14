@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # OS/Platform and Services Matrix
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 The table below lists all the Operating System and Platforms and their supported services in App Center:
 
 | OS/Platform            | Build | Test | Distribute | Diagnostics | Analytics |

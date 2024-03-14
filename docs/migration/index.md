@@ -10,6 +10,9 @@ ms.service: vs-appcenter
 ---
 
 # Migrating Existing Services
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 App Center is the future of HockeyApp and CodePush.
 
 It provides a unified suite of services for the continuous integration of building, testing, distributing to testers, monitoring for crashes, and tracking user analytics. Some of these capabilities are built from ground-up while the rest us existing services like HockeyApp (Distribute & Crashes services) and Xamarin Test Cloud (Test service) under the hood.

@@ -12,6 +12,9 @@ ms.custom: diagnostics
 ---
 
 # Upload crashes via UI
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 If you have a native crash report from an Apple device, you can upload it via the App Center portal. The following sections will explain how to retrieve crash reports from a device and upload it to App Center.
 
 ## Retrieve crash reports from Apple devices

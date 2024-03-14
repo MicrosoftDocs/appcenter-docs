@@ -11,6 +11,9 @@ ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 ---
 
 # App Center Webhooks
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Overview
 
 Webhooks are a simple way to notify third-party applications when a specified event has occurred. The main goal of webhooks is to communicate important information from App Center to users rather than having users come to the portal, or run API calls to be notified when certain events happen.

@@ -12,6 +12,8 @@ ms.custom: analytics
 ---
 
 # Export
+ 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights (Azure Monitor)](/azure/azure-monitor/app/app-insights-overview).
 By exporting the data, you benefit from:

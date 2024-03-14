@@ -12,6 +12,7 @@ ms.tgt_pltfrm: xamarin
 ---
 
 # App Center Analytics (MAUI and Xamarin)
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

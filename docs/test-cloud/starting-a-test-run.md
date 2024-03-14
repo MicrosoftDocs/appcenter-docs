@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Starting a test run
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 A test run is an execution of a test suite with an application binary. This section describes how to upload and start a test run in App Center Test. Before creating a test run, complete the steps at [Getting started with App Center Test](~/test-cloud/getting-started.md).
 

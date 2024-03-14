@@ -15,6 +15,8 @@ dev_langs:
 
 # Getting Started - Sample Swift (macOS) App and Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this tutorial, you'll learn how to set up a sample Swift app with App Center for macOS. Both Objective-C and Swift are supported.
 
 ## Prerequisites

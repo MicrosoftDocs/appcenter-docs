@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Publish an iOS package to TestFlight (External Testers)
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 1. From the Stores home page, select the external group to distribute to.
 2. Select **Publish to Store** in the upper-right corner.
 3. At the first step of the wizard, you need to upload your .ipa file. After the file has been successfully uploaded, you'll see details, like icon and version. Select **Next**.

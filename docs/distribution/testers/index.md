@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Getting started for testers
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Navigating through any new tool can be overwhelming as a tester. There are many different elements and hurdles for getting builds on your devices, which can ultimately make testing apps a frustrating experience. To help you, we  created a simple workflow in App Center for testers. In addition, we've created this guide to aid in any parts of testing in App Center that may seem unclear. We know that testing is an important part of the app development process, so we aim to ensure a smooth and successful experience.
 
 ## What's App Center?

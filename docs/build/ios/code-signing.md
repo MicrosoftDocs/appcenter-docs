@@ -13,6 +13,9 @@ ms.tgt_pltfrm: ios
 ---
 
 # Code signing for iOS
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 iOS apps must be signed to run on real devices. In App Center, this process requires uploading valid signing files generated using [Apple's code signing process](https://developer.apple.com/support/code-signing/). You must be able to successfully sign a valid app package locally before attempting to in App Center. 
 
 ## Signing files

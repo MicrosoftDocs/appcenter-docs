@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Working with Timeouts
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 > [!TIP]
 > By default, UITests waits up to 15 seconds for tests running locally, and one minute for tests running in App Center before throwing the `TimeoutException`. If you specify a different wait time, that will override the default, and apply to both local & App Center tests. 
 

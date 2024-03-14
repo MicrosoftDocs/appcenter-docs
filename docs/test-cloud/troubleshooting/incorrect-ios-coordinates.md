@@ -10,6 +10,7 @@ ms.assetid: 51d4168f-f76a-4532-b02c-c261af53ec60
 ---
 
 # Tapping or typing works for some iOS devices but fails for others
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 iOS apps must run in native resolution to avoid tests failing because of screen scaling differences.
 
 ## Symptoms
@@ -23,9 +24,9 @@ To fix this problem your app will need to run in native resolution. To do that, 
 ### Static Launch Screen Images
 It’s best to use an Xcode storyboard for your launch screen, but you can provide a set of static images if necessary. Create static images in different sizes for different devices, and be sure to include the status bar region.
 
-[Apple Human Interface Guidelines for Launch Screens](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
+[Apple Human Interface Guidelines for Launch Screens](https://developer.apple.com/design/human-interface-guidelines/icons)
 
 ### App Icon Sizes
 Every app must supply small icons for use on the Home screen and throughout the system once your app is installed, as well as a larger icon for display in the App Store.
 
-[Apple Human Interface Guidelines for Icons](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/)
+[Apple Human Interface Guidelines for Icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)

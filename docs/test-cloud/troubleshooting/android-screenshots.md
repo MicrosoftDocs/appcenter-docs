@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Android screenshots
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 If your App Center Test Reports consistently show blank or scrambled screenshots on Android, the typical cause is that your application has disabled screenshots. This Android setting is frequently used in applications that handle sensitive data like finance or medical information.
 
 This setting is controlled by the constant `FLAG_SECURE` in `WindowManager.LayoutParams` (`Android.Views.WindowManagerFlags.Secure` in Xamarin.Android):

@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Creating and managing apps
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Creating an app
 
 To create an app:

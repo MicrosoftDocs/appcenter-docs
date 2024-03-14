@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Application Install ID
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## What's an install ID?
 App Center doesn't directly collect personal information or user-generated content of your end users. We provide services accessed by the developer using our SDK or web site. The data transmitted to these services depends largely on the type of application you have built, and which of our services your app uses.
 

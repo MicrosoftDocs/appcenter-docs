@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Handling User Consent for Analytics
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Ask for the User's Consent To Send Analytics logs
 If you want to get your user's confirmation before sending any Analytics data to App Center, the App Center SDK exposes an API that you can use before sending any Analytics data to App Center.
 

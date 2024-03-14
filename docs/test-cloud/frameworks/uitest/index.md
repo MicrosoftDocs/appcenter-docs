@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Xamarin.UITest
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 *Xamarin.UITest* is a C# testing framework using [NUnit](http://www.nunit.org/) for UI Acceptance Tests on iOS and Android apps. It integrates tightly with Xamarin.iOS and Xamarin.Android projects, but it can also be used with native iOS and Android projects. Xamarin.UITest is the *Automation Library* that allows the NUnit tests to execute on Android and iOS devices. The tests interact with the user interface as a user would: entering text, tapping buttons, and gestures - such as swipes.
 
 Typically, each Xamarin.UITest is written as a method that's referred to as a `[Test]`. The class that contains the test is known as a `[TestFixture]`. The test fixture contains a single test or group of tests. The fixture is also responsible for setup to make the test run and cleanup that needs to be done when the test finishes. Each test should follow the *Arrange-Act-Assert* pattern:

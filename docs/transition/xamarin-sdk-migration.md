@@ -11,6 +11,7 @@ ms.tgt_pltfrm: xamarin
 ---
 
 # Migrate from the HockeySDK to App Center Xamarin SDK
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 [!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 

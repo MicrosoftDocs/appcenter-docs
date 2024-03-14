@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # URLs to allow list for App Center
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 If you're behind a firewall and want to connect to App Center, here are the URLs to allow list for App Center:
 
 - api.appcenter.ms

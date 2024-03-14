@@ -10,6 +10,7 @@ ms.assetid: afa02dbc-47ec-4256-b93c-0c286bb0483b
 ---
 
 # Unity SDK Troubleshooting
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 > [!div  class="op_single_selector"]
 > * [Android](android.md)

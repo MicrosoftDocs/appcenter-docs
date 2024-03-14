@@ -12,6 +12,9 @@ ms.custom: build
 ---
 
 # Connecting Repositories Using the GitHub App
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this document, you'll learn how to install the App Center GitHub app and use this integration in your development workflow.
 
 ## Installing the App Center GitHub App

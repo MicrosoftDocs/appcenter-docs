@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Search in Diagnostics
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this section, you'll learn about the ability to search Diagnostics data in App Center.
 
 ## How to use Search

@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Preparing Espresso Tests for Upload
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This document provides instructions for preparing Espresso tests for upload to Test. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/espresso).
 
 ## 1. Changes to the build system

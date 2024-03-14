@@ -11,7 +11,8 @@ ms.custom: sdk
 ---
 
 # Data Collected by App Center SDKs
- 
+ [!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 App Center SDKs send data to App Center services. The data sent varies by the SDK/service used, how an SDK is configured, and for the crash service, on the data handled by your application. The usage of some services requires that certain data be sent in order for the service to function. All data sent to App Center travels through a central ingestion service.
  
 ## Common data

@@ -12,6 +12,9 @@ ms.custom: distribute
 ---
 
 # Testing iOS Apps
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 After getting invited to test an iOS Application in App Center, you'll receive an email notifying you of your pending invitation. The following sections outline the steps you need to take to get started testing this app.
 
 ## Adding your Device

@@ -12,7 +12,8 @@ ms.custom: test
 ---
 
 # Preparing Appium Tests for Upload
-The steps to prepare an app and its test suite for upload vary depending on the test framework. This guide how to prepare Appium tests using Java with JUnit for upload to App Center. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/about-appium/intro/).
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+The steps to prepare an app and its test suite for upload vary depending on the test framework. This guide how to prepare Appium tests using Java with JUnit for upload to App Center. For guidance on authoring Appium tests, see the [Appium documentation](https://appium.io/docs/en/latest/).
 
 Note the following limitations for Appium support:
 
@@ -163,7 +164,7 @@ If your Continuous Delivery setup updates the IPA version before building and te
 ### Reinstallation
 On a shared device cloud, it's important for us to guarantee that devices are cleaned between each test. The next customer using the device may be someone from another organization. In App Center Test, the app is automatically uninstalled after the completion of your test run. 
 
-It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.io/docs/en/writing-running-appium/other/reset-strategies/index.html) for details.
+It's possible to omit `MobileCapabilityType.FULL_RESET` and set `MobileCapabilityType.NO_RESET` to `true` to speed up test execution. See [Reset Strategies](https://appium.github.io/appium.io/docs/en/writing-running-appium/other/reset-strategies/) for details.
 
 ### Network Tasks
 Local network tasks are faster because the server is closer and more dedicated to the remote host.

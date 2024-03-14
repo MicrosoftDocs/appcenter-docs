@@ -11,6 +11,7 @@ ms.tgt_pltfrm: unity
 ---
 
 # Migrate from the HockeySDK to App Center SDK for Unity
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 [!INCLUDE [sdk migration dropdown](includes/sdk-migration-dropdown.md)]
 

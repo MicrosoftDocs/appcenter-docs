@@ -11,6 +11,7 @@ ms.custom: test
 ---
 
 # Automate iOS native apps with Xamarin.UITest
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 To follow the guide, you need access to the app source code.
 
 ## Add an automation backend to your app

@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Diagnostics Features
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this section, you'll learn about the feature set available for the App Center’s Diagnostics service.
 
 ## Crash and Errors Analytics

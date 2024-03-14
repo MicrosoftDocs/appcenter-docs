@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # Does GDPR apply to me?
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Overview
 The goal of this guide is to help you determine whether and where you may have collected personal information about your end users using App Center. The document is divided by App Center service, mapped to scenarios.
 

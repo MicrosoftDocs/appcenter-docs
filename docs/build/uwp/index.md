@@ -13,6 +13,9 @@ ms.tgt_pltfrm: windows
 ---
 
 # Building UWP C# apps for Windows
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 To start building your first UWP app, do these steps:
 
 1. Connect to your repository service account (GitHub, Bitbucket, VSTS, Azure DevOps).
