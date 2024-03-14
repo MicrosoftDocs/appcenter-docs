@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Cordova Client SDK
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 This plugin provides client-side integration for the CodePush service, allowing you to easily add a dynamic update experience to your Cordova app(s).
 
 > [!NOTE]
@@ -628,14 +630,14 @@ Defines the possible statuses of the [sync](#codepushsync) operation. There are 
 * **INSTALLING_UPDATE**: An available update was downloaded and is about to be installed.
 
 ## PhoneGap Build
-This plugin is compatible with [PhoneGap Build](https://build.phonegap.com), and supports creating Android and iOS builds out-of-the-box. However, in order for CodePush to calculate the hash of your binary contents on Android, PhoneGap Build needs to use Gradle to build your app, which isn't its default behavior (it uses Ant). To resolve this, add the following element to the project's **config.xml** file, as a child of the `<platform name="android">` element:
+This plugin is compatible with PhoneGap Build, and supports creating Android and iOS builds out-of-the-box. However, in order for CodePush to calculate the hash of your binary contents on Android, PhoneGap Build needs to use Gradle to build your app, which isn't its default behavior (it uses Ant). To resolve this, add the following element to the project's **config.xml** file, as a child of the `<platform name="android">` element:
 ```xml
 <preference name="android-build-tool" value="gradle" />
 ```
 
 ## Example Apps
 The Cordova community has graciously created some awesome open source apps that can serve as examples for developers that are getting started. The following list is of OSS Cordova apps that are also using CodePush, and can be used to see how others are using the service:
-* [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](https://rangle.io) used for [PhoneGap Day Europe 2016](https://pgday.phonegap.com/eu2016/).
+* [PGDay CodePush Demo](https://github.com/rangle/pgdays-codepush-demo) - Demo app created by [Rangle.io](https://rangle.io) used for PhoneGap Day Europe 2016.
 
 > [!NOTE]
 > If you've developed a Cordova app using CodePush, that's open-source, let us know. We'd love to add it to this list!

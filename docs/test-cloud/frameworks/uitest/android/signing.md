@@ -10,6 +10,7 @@ ms.assetid: 5d0e7355-117d-40cb-a578-1de1aaf989d4
 ---
 
 # Xamarin.UITest and Signing Android Apps
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 When Xamarin.UITest executes tests with your Android APK, it uses a test server that runs in process with your app to execute the tests. Android won't allow that, unless the test server and your APK are signed with the same Android Keystore. Normally, Xamarin.UITest signs both your APK and the test server with the same debug Keystore and that works.
 
 But, some apps will only work if signed with a specific Android Keystore. Apps that use Google Maps are one example. Also, running locally, if you're connecting to an already installed app you may need to specify the Keystore so that the test server can be signed with the one that matches that APK.

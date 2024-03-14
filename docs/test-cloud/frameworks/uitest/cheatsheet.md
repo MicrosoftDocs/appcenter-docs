@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Xamarin.UITest cheat sheet
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This document is a cheat sheet that condenses some  UITest information for quick reference, it contains the following topics:
 
 * [Writing Tests](#writing-tests)

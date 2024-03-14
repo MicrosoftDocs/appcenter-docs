@@ -11,6 +11,8 @@ ms.service: vs-appcenter
 
 # Distribution FAQ
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 This document contains a list of frequently asked questions for Distribution in App Center. If you have questions that aren't answered here, [contact support](~/general/support-center.md).
 
 ## Frequently asked questions

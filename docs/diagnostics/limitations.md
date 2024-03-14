@@ -13,6 +13,8 @@ ms.custom: analytics
 
 # Limitations
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Crashes
 
 - Android React Native source maps aren't supported.

@@ -11,6 +11,9 @@ ms.assetid: 9e2c6890-26e9-4b8a-a4fb-f43c8e55c1fb
 ---
 
 # View Crashes Sent From Android App in App Center
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 If you haven't already, follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Crashing the sample app

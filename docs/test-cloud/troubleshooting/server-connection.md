@@ -10,6 +10,7 @@ ms.assetid: 2acf5e51-954f-4b38-aa09-bdcf5756e288
 ---
 
 # Web Service and Server connection troubleshooting
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 There are several common reasons why your app may have trouble communicating with a server or web service:
 
 - The endpoint the user is trying to connect to doesn't allow communication through the Test IP addresses. 

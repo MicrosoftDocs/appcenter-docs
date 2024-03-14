@@ -1,5 +1,6 @@
 # [App Center Overview](index.yml)
 
+# [App Center Retirement](retirement.md)
 # [Help & Feedback](help.md)
 
 # General

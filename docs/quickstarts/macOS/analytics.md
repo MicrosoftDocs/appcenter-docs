@@ -17,6 +17,8 @@ dev_langs:
 
 # Analytics - Sample Swift App (macOS) and Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this tutorial, you'll learn to view custom events and other user analytics in App Center. Code to track these events is included in the sample Swift app.
 
 If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample Swift app.

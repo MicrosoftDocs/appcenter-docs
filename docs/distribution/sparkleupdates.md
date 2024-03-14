@@ -13,6 +13,8 @@ ms.assetid: b5c07e60-985b-4941-a139-a203ea912d5a
 
 # Sparkle Updates
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Sparkle is a software update framework for [macOS](http://sparkle-project.org) and Windows ([WinSparkle](https://winsparkle.org), [NetSparkleUpdater](https://github.com/NetSparkleUpdater/NetSparkle)) apps.
 
 ## Setup for distribution

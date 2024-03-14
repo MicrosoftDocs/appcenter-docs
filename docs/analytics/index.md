@@ -11,7 +11,9 @@ ms.service: vs-appcenter
 ms.custom: analytics
 ---
 
-# Analytics
+# Analytics 
+ 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center Analytics will help you understand more about your app users and their behavior when using your app.
 

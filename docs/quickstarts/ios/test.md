@@ -12,6 +12,8 @@ ms.assetid: 6b151137-b1c3-41a7-bfbd-383c6f4c853c
 
 # Test - Sample Swift iOS App and Tutorials
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 XCUITests are included with the sample app. In this tutorial, you'll learn to run the UI tests using App Center.
 
 First, follow the [getting started tutorial](getting-started.md) to set up the sample app.

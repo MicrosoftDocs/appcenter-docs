@@ -13,6 +13,8 @@ ms.assetid: 392b1718-cdb2-4831-a20a-d7d6eccc0e96
 
 # Branches and build configurations
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 After you [connect your repository](~/build/connect.md), you can configure continuous integration for any of your repository's branches.
 In App Center Build, your branches are the origin of setting up a build. For every branch you can configure whether you want to build on every push, or only when you manually queue a build.
 

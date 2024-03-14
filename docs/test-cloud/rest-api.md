@@ -10,12 +10,13 @@ ms.assetid: 2abb4242-658c-4914-8ec0-d0c4967d3729
 ---
 
 # Run UI Tests using App Center REST API
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This example shows how to upload an app package, test binaries, and queue UI tests using our API. 
 
 ## Steps
 1. Use the [create test run POST method](https://openapi.appcenter.ms/#/test/test_createTestRun) to receive a **test run ID**, which you'll use later for the Response Header.
 
-**Sample Request** https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs 
+**Sample Request** `https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs` 
 ![Screenshot demonstrating API usage](images/test-runs-api.png)
 
 2. **Create file hashes** for each file you want to upload to App Center Test.
@@ -42,7 +43,7 @@ $ shasum com.mobilecenter.sampleappxamarin.apk
 3. [Create a store for files](https://openapi.appcenter.ms/#/test/test_uploadHashesBatch) using POST and hashes value calculated from the previous step. 
 
 **Sample Request**
-https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0cc373-aa4a-455f-b083-4fc1afa87f2e/hashes/batch
+`https://api.appcenter.ms/v0.1/apps/MSKASANI/DroidAppSampleXamarin/test_runs/fb0cc373-aa4a-455f-b083-4fc1afa87f2e/hashes/batch`
 
    - **file_type** - app-file for apk\ipa and test-file for test assemblies/test related files.
 

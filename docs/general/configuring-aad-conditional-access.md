@@ -12,6 +12,9 @@ ms.custom: general
 ---
 
 # Configuring Azure Active Directory Conditional Access
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Visual Studio App Center supports [Azure Active Directory Conditional Access](/azure/active-directory/conditional-access/overview). Azure Active Directory Conditional Access is an advanced feature of Azure AD that allows you to specify detailed policies that control who can access your resources. Using Conditional Access, you can protect your applications by limiting users' access based on things like groups, device type, location, and role.
 
 > [!IMPORTANT]

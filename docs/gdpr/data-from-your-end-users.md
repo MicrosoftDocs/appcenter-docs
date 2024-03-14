@@ -12,6 +12,8 @@ ms.service: vs-appcenter
 
 # Data From Your Users
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 This section and all its sub-documents will provide information and API pointers to help you, as an app developer using App Center, accommodate your customers as data subjects.
 
 The first step will be to determine whether you collect personal information about your users. For that purpose, check the section ['does it apply to me'](~/gdpr/does-it-apply-to-me.md). That section will detail the places where you might have sent such data to your app in App Center. You're invited to verify your code and processes to check whether this is the case or not.

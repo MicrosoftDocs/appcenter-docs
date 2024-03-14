@@ -12,6 +12,9 @@ ms.assetid: 7360e04f-01af-4c3f-ac0a-75c2dab979ba
 ---
 
 # Intune Company Portal Distribution
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Publish new and upgrade existing line-of-business (LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
 
 ## Prerequisites

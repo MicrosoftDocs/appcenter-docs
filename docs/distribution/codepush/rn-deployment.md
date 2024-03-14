@@ -13,6 +13,8 @@ ms.custom: distribute
 
 # Deployment
 
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 ## Multi-Deployment Testing
 
 In our [getting started](rn-get-started.md) docs, we illustrated how to configure the CodePush plugin using a specific deployment key. However, to effectively test your releases, it's critical that you use the `Staging` and `Production` deployments that we recommend making when you first create your CodePush app (or any custom deployments you may have created). This way, you never release an update to your end users that you haven't been able to validate yourself.

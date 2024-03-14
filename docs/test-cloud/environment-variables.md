@@ -12,6 +12,7 @@ ms.custom: test
 ---
 
 # Environment Variables in Test
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 When testing, it's often helpful to launch your application or test runner with custom environment variables set. For example, environment variables can be used to control the behavior of your application or provide tests with sign-in information.
 
 For most frameworks, useful environment variables are available within the test, application, or both. You can set additional environment variables via the App Center CLI.

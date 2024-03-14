@@ -12,6 +12,9 @@ ms.custom: distribute
 ---
 
 # Migration Guide
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Visual Studio App Center is the new home of CodePush. App Center is a development tool that includes a set of cloud services for building and managing mobile applications. App Center is the next generation of HockeyApp and Xamarin Test Cloud. Learn more about [App Center](/appcenter).
 
 The movement of CodePush into App Center is a step forward in improving the overall user experience and progression of CodePush.

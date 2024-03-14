@@ -11,6 +11,9 @@ ms.service: vs-appcenter
 ---
 
 # App Center Pricing
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 Visual Studio App Center offers both a generous free tier, and paid tier options billed through an Azure subscription. You can see the full breakdown of the pricing on the official [App Center Pricing](https://www.visualstudio.com/app-center/pricing) page.
 
 ## Free services

@@ -12,6 +12,10 @@ ms.custom: build
 ---
 
 # Build scripts
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
+
 > [!NOTE]
 > Build scripts allow you to customize your builds; but issues you find during that process are beyond the scope of App Center support. If one of your scripts is failing, the whole build will report a failure, even if the primary build up to that point were successful.
 

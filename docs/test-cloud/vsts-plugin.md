@@ -12,6 +12,7 @@ ms.assetid: 225497b6-6f5a-460a-b842-0d43756deaa9
 ---
 
 # Using Azure DevOps for UI Testing
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 This guide describes how to modify your existing Azure Pipelines build that creates an application binary (`.apk` or `.ipa` file) to add an App Center Test task that runs your test suite in App Center Test.
 
 Azure Pipelines is available as part of Azure DevOps Services. Azure Pipelines helps you implement a build, test, and deployment pipeline for any app. For more information about Azure DevOps Services or Azure Pipelines, see [Azure DevOps Documentation](/azure/devops/) or [Azure Pipelines](/azure/devops/pipelines/), respectively.

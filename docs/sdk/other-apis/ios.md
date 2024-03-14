@@ -14,5 +14,6 @@ dev_langs:
 ---
 
 # Other iOS APIs
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 [!INCLUDE [apple](includes/apple.md)]

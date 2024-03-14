@@ -11,6 +11,9 @@ ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
 ---
 
 # Getting Started by Creating Android App and Codesigning
+
+[!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
+
 In this tutorial, you'll learn to set up a sample Android app with App Center.
 
 ### Prerequisite Steps
