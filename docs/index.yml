@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 
 title: Visual Studio App Center documentation
-summary: Learn how to continuously build, test, release, and monitor apps for every platform.
+summary: Visual Studio App Center is scheduled for retirement on March 31, 2025.
 
 metadata:
   title: Visual Studio App Center
@@ -19,6 +19,10 @@ highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
     # Card
+    - title: Retirement
+      itemType: overview
+      url: ~/retirement.md
+    # Card
     - title: Dashboard overview
       itemType: get-started
       url: ~/dashboard/index.md
@@ -31,10 +35,6 @@ highlightedContent:
       itemType: how-to-guide
       url: ~/dashboard/creating-and-managing-organizations.md
     # Card
-    - title: HockeyApp Migration
-      itemType: how-to-guide
-      url: ~/transition/index.md
-      # Card
     - title: Service Status
       itemType: overview
       url: https://status.appcenter.ms/
