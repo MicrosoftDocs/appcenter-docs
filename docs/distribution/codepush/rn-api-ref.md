@@ -163,7 +163,7 @@ The `codePush` decorator accepts an "options" object that allows you to customiz
 
     The following list represents the available options and their defaults:
 
-  - **delayInHours** *(Number)* - Specifies the minimum time in hours that the app will wait after the latest rollback before attempting to reinstall the same rolled-back package. Defaults to `24`.
+  - **delayInHours** *(Number)* - Specifies the minimum time in hours that the app will wait after the latest rollback before attempting to reinstall the same rolled-back package. Cannot be less than `1`. Defaults to `24`.
 
   - **maxRetryAttempts** *(Number)* - Specifies the maximum number of retry attempts that the app can make before it stops trying. Cannot be less than `1`. Defaults to `1`.
 
