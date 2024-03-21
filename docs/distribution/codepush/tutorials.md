@@ -41,7 +41,7 @@ If an update is available, it will be silently downloaded, and installed the nex
 For example, to download and install an update immediately, developers can use the `installMode` parameter as follows:
 
 ```javascript
-codePush.sync({installMode: InstallMode.IMMEDIATE});
+codePush.sync({installMode: CodePush.InstallMode.IMMEDIATE});
 ```
 
 #### Recommendation
@@ -52,7 +52,7 @@ Depending on the complexity of the app, pushing an update immediately might be a
 // Download the update silently, but install on next
 // app resume and after 10 minutes of app inactivity
 // We recommend doing this call on app start (e.g. `componentDidMount` event on React Native or `deviceready` on Cordova)
-codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 60 * 10 });
+codePush.sync({ installMode: CodePush.InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 60 * 10 });
 ```
 
 > [!NOTE]
@@ -62,7 +62,7 @@ codePush.sync({ installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDurati
 > For Cordova, the first parameter that `codePush.sync()` expects is a `syncStatusCallback`, so to do the same thing, you should insert `null` as the first parameter to the call, i.e:
 
 ```javascript
-codePush.sync(null, { installMode: InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 60 * 10 });
+codePush.sync(null, { installMode: CodePush.InstallMode.ON_NEXT_RESUME, minimumBackgroundDuration: 60 * 10 });
 ```
 
 ### 2.  Active mode
