@@ -52,8 +52,7 @@
           "depot_name": "MSDN.vs-mobile-center-docs"
         }
       },
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/appcenter-docs",
+      "feedback_system": "Standard",
       "feedback_product_url": "https://docs.microsoft.com/appcenter/help#accessing-app-center-free-support",
       "uhfHeaderId": "MSDocsHeader-AppCenter"
     },
