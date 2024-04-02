@@ -142,3 +142,6 @@ If you have App Center Distribute or Test integrated, you'll need to authorize p
 1. Open the currently running job, you'll see a message regarding permissions
 2. Select on the running job and `Permit` access to the service connection
 ![Permit](images/export-ado-permit.png)
+
+### Windows(UWP)/ios/macos/android
+Appcenter-build-assets-latest.zip will be downloaded from the appcenter backend at https://appcenterbuildassets.azureedge.net/buildscripts/appcenter-build-assets-latest.zip by using the PowerShell step "Install build scripts" in the YML. Customers should host the script independently in any cloud and utilize it in the Azure Devops YML Pipeline as it will no longer be available after retirement!
