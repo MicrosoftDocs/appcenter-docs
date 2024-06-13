@@ -57,7 +57,7 @@ To obtain an `.appxsym` file, you must create an app bundle as described [here](
 The App Center Build and Distribution services can automatically generate a valid symbol file and upload to the Diagnostics service. If you use App Center to build and auto distribute your app to your end users, you don't need to manually obtain and upload the symbol files to App Center.
 
 #### Symbols for applications published to the Microsoft Store
-When you publish your application to the store, the .NET Native compilation happens on server side. So, you need to download the symbols from the [Partner Center](https://partner.microsoft.com/dashboard/windows/overview).
+When you publish your application to the store, the .NET Native compilation happens on server side. So, you need to download the symbols from the [Partner Center](https://partner.microsoft.com/dashboard/windows/overview). Please make sure two prerequisites. A) including references to Microsoft.NET.Native.Framework and Microsoft.NET.Native.Runtime in your app manifest.xml; and B) your packages contain System.Runtime.dll. These instruct the store generates the symbols for your download. 
 
 1. Locate your application in the list and click on it.
 2. Expand **Product management** menu from the left panel.
