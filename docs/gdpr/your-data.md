@@ -26,7 +26,7 @@ To call the delete API, you must first have an API token from Visual Studio App 
 https://appcenter.ms/api/v0.1/user/dsr/delete
 ```
 
-A raw request in Postman or Fiddler to submit a delete will look like this:
+A raw request in Fiddler to submit a delete will look like this:
 
 ```TEXT
 POST https://api.appcenter.ms/v0.1/user/dsr/delete HTTP/1.1
@@ -40,7 +40,7 @@ When you POST to the `delete` method, it returns a receipt token you'll pass as 
 https://appcenter.ms/api/v0.1/user/dsr/delete
 ```
 
-A raw request in Postman or Fiddler to check or validate execution will look like this:
+A raw request in Fiddler to check or validate execution will look like this:
 
 ```TEXT
 GET https://api.appcenter.ms/v0.1/user/dsr/delete/<your receipt token>  HTTP/1.1
@@ -53,7 +53,7 @@ To cancel your deletion request, use the cancellation endpoint:
 https://appcenter.ms/api/v0.1/user/dsr/delete/<your receipt token>/cancel
 ```
 
-A raw request in Postman or Fiddler to make a cancellation request will look like this:
+A raw request in Fiddler to make a cancellation request will look like this:
 
 ```TEXT
 POST https://api.appcenter.ms/v0.1/user/dsr/delete/<your receipt token>/cancel  HTTP/1.1
@@ -71,7 +71,7 @@ The personal information of yours we collect, we collect to maintain your abilit
 https://appcenter.ms/api/v0.1/user/dsr/export
 ```
 
-A raw request in Postman or Fiddler to request an export will look like this:
+A raw request in Fiddler to request an export will look like this:
 
 ```TEXT
 POST https://api.appcenter.ms/v0.1/user/dsr/export HTTP/1.1   
@@ -93,7 +93,7 @@ To cancel your export request, use the cancellation endpoint:
 https://appcenter.ms/api/v0.1/user/dsr/export/<your receipt token>/cancel
 ```
 
-A raw request in Postman or Fiddler to make a cancellation request will look like this:
+A raw request in Fiddler to make a cancellation request will look like this:
 
 ```TEXT
 POST https://api.appcenter.ms/v0.1/user/dsr/export/<your receipt token>/cancel  HTTP/1.1
