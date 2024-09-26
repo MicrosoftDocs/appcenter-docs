@@ -2,8 +2,8 @@
 title: Visual Studio App Center Retirement  
 description: Visual Studio App Center is scheduled for retirement
 author: fattoh-saidov
-ms.author: v-absaidov
-ms.date: 03/12/2024
+ms.author: lucen
+ms.date: 09/26/2024
 ms.topic: article
 # ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a
 ms.service: vs-appcenter
