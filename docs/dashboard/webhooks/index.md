@@ -110,7 +110,7 @@ Here are examples of the JSON webhook payload for:
   "affected_users":0,
   "crash_count":0,
   "sent_at":"2019-05-16T23:47:31.4881512Z",
-  "app_id":"48573473-f069-4715-8bab-9ae42cec48b2"
+  "app_id":"00001111-aaaa-2222-bbbb-3333cccc4444"
 }
 ```
 
@@ -138,7 +138,7 @@ Here are examples of the JSON webhook payload for:
   "distribution_group_id":"1a5a0605-4b9c-4de2-9a35-t569456df0cc",
   "installable":true,
   "sent_at":"2019-05-16T23:20:08.7799314Z",
-  "app_id":"f37c6194-9ac9-4504-be61-55re334r5649"
+  "app_id":"11112222-bbbb-3333-cccc-4444dddd5555"
 }
 ```
 
