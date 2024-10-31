@@ -78,4 +78,3 @@ Also, you need the private key for the certificate installed on your Mac - it is
 [xcode-provisioning-profile]: images/xcode11-provisioning-profiles.png
 [navigate-to-certificate-page]: images/apple-developer-download-certificate.png
 [download-certificate-from-apple-developer-portal]: images/apple-developer-download-certificate-cert-page.png
-[export-certificate]: images/ios-keychain-certificates-outlier-spaced.png

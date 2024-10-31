@@ -99,7 +99,7 @@ You can store an Apple distribution certificate and private key in a Private Inf
 1. Open the **Keychain Access** app on your Mac and select the **My Certificates** category on the left.
 2. Find the right distribution certificate and expand it to see the corresponding private key.
   a. If the private key isn't there, you must either create a new certificate or run these steps on the machine where you created the certificate.
-3. Select either the certificate or the private key or both. Then right-click on the selected item(s) to get the context menu and select the action that starts with **Export**. ![Export certificate from keychain](images/ios-keychain-certificates.png)
+3. Select either the certificate or the private key or both. Then right-click on the selected item(s) to get the context menu and select the action that starts with **Export**.
 4. Select a location on disk to save the file as a .p12. Choose a strong password for the file.
 
 ## How to remove certificates and Apple IDs from App Center
