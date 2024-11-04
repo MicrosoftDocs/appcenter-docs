@@ -49,7 +49,7 @@ The contents of the blob file is a JSON array of client device logs, that looks 
 ```JSON
 [
     {
-        "AppId": "046d56b8-ea26-4653-97ba-12b8f99c3ef5",
+        "AppId": "00001111-aaaa-2222-bbbb-3333cccc4444",
         "Timestamp": "2017-12-09T04:02:53.618Z",
         "InstallId": "e589a371-ea0c-4479-9a7b-9f834adec040",
         "MessageType": "EventLog",
@@ -57,7 +57,7 @@ The contents of the blob file is a JSON array of client device logs, that looks 
         "MessageId": "980e21a0-0cbb-48ac-8820-28acf4beb00d",
         "EventId": "ad980536-e743-48a9-ab7e-cb043602d2c9",
         "EventName": "log_out",
-        "CorrelationId": "83a2daa9-e5b4-4082-ba4a-ce34b95ab859",
+        "CorrelationId": "aaaa0000-bb11-2222-33cc-444444dddddd",
         "IsTestMessage": "False",
         "SdkVersion": "1.0",
         "Model": "PC",
