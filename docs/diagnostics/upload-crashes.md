@@ -203,7 +203,7 @@ curl -X POST \
         "type": "appleError",
         "timestamp": "2019-10-08T02:44:55.000Z",
         "appLaunchTimestamp": "2019-09-29T22:22:23.516Z",
-        "id": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+        "id": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
         "applicationPath": "iOS/salesforce",
         "osExceptionType": "CustomerIssue (TestIssue)",
         "osExceptionCode": "0",
@@ -221,7 +221,7 @@ curl -X POST \
           "model": "iPhone9,1",
           "locale": "en-US"
         },
-        "userId": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+        "userId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
         "fatal": true,
         "threads": [
          {
@@ -443,7 +443,7 @@ curl -X POST \
   [
     {
       "type": "managedError",
-      "id": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+      "id": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
       "userId": "TestID",
       "processId": 9448,
       "processName": "Contoso.UWP.Puppet.exe",
@@ -476,7 +476,7 @@ curl -X POST \
     },
     {
       "contentType": "application/octet-stream",
-      "errorId": "70D280D4-2343-400D-BE4C-301BB2B39ECA",
+      "errorId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
       "fileName": "minidump.dmp",
       "id": "7b975468-5656-40a5-8242-c1907b26fc31",
       "sid": "03693776-cdd4-46b8-bbda-12af457f1732",
