@@ -60,8 +60,6 @@ Your certificate can be found in your Keychain. Or, you can export it from Xcode
 
 ### (Optional) Download the provisioning profile
 The provisioning profiles can be found from the [Apple Developer Center](https://developer.apple.com/account/), under Certificates, IDs & Profiles. Make sure you've switched to the "macOS" section in the top-left corner. Once you've downloaded your provisioning profile, you can upload it to App Center in the build configuration.
-![Download provisioning profile](images/provisioning-profile-blurred.png)
 3. After saving the provisioning profile locally, you can upload it to App Center when [configuring a branch](~/build/macos/index.md).
 
 [xcode-certificate-export]: images/xcode-certificate-export.jpg
-[download-provisioning-profile]: images/provisioning-profile-blurred.png
