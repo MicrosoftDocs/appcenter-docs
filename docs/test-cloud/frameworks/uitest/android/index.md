@@ -1,13 +1,7 @@
----
-title: Preparing Xamarin.Android app for testing
-description: A step-by-step guide to configure Xamarin.UITest for Xamarin.Android apps
-author: lucen-ms
-ms.author: lucen
-ms.date: 10/08/2020
-ms.topic: article 
-ms.assetid: BA781EFD-92DB-44BA-8CA9-42567A5E5290 
-ms.service: vs-appcenter
----
+appcenter test run uitest --app "Apple-Store/Cloudflare" --devices 5e5c54a9 --app-path pathToFile.apk --test-series "main-dot-c" --locale "en_US" --build-dir pathToUITestBuildDir
+
+
+
 
 # Preparing Xamarin.Android Apps
 [!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
