@@ -4,7 +4,7 @@ description: Using in-app updates in App Center Distribute (Android)
 keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
-ms.date: 16/01/2025
+ms.date: 01/16/2025
 ms.topic: article
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
