@@ -2,9 +2,9 @@
 title: Export App Center Build configuration to Azure Pipelines
 description: How to export App Center Build configuration to Azure Pipelines 
 keywords: build
-author: akamenev
-ms.author: ankamene
-ms.date: 03/28/2022
+author: lucen
+ms.author: lucen
+ms.date: 03/20/2025
 ms.topic: article
 ms.service: vs-appcenter
 ms.custom: build
@@ -144,4 +144,4 @@ If you have App Center Distribute or Test integrated, you'll need to authorize p
 ![Permit](images/export-ado-permit.png)
 
 ### Windows(UWP)/ios/macos/android
-Appcenter-build-assets-latest.zip will be downloaded from the appcenter backend at https://appcenterbuildassets.azureedge.net/buildscripts/appcenter-build-assets-latest.zip by using the PowerShell step "Install build scripts" in the YML. Customers should host the script independently in any cloud and utilize it in the Azure Devops YML Pipeline as it will no longer be available after retirement!
+Appcenter-build-assets-latest.zip will be downloaded from the appcenter backend at https://appcenterbuildassets.azureedge.net/buildscripts/appcenter-build-assets-latest.zip by using the PowerShell step "Install build scripts" in the YML. Customers should host the script independently in any cloud or directly in Azure DevOps and utilize it in the Azure DevOps YML Pipeline as it will no longer be available after retirement!
