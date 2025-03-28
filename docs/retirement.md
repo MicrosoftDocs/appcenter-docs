@@ -14,13 +14,10 @@ ms.service: vs-appcenter
 ## Update (03/20/2025): Extension of Product Support for Analytics & Diagnostics
 We understand that migrations of this scale can be challenging, which is why we have carefully listened to customer feedback. Based on the substantial feedback we received, we have partnered with the Azure Monitor team to build mobile platform support for Analytics capabilities directly within the Azure Monitor product. This will allow customers to choose Azure Monitor as an alternative solution to App Center.
 
+We will also extend the product support for the App Center Analytics & Diagnostics feature until the end of June 2026. This extension will provide the Azure Monitor team additional time to finalize the implementation, and our customers will have more time to migrate to it once it is ready (the announcement will be made separately). Until then, customers will be able to use App Center Analytics & Diagnostics in the same way as before until June 30, 2026. The remaining App Center features will be retired as planned after March 31, 2025. 
+
 ## Visual Studio App Center Retirement
 Visual Studio App Center is scheduled for retirement on <u>March 31, 2025</u>. After that date, it will not be possible to sign in with your user account nor make API calls. App Center will continue to be supported until March 31, 2025, with critical bug fixes and technical support. 
-
-## Update (03/20/2025): Extension of Product Support for Analytics & Diagnostics
-We understand that migrations of this scale can be challenging, which is why we have carefully listened to customer feedback. Based on the substantial feedback we received, we have partnered with the Azure Monitor team to build mobile platform support for Analytics capabilities directly within the Azure Monitor product. This will allow customers to choose Azure Monitor as an alternative solution to App Center.
-
-We will also extend the product support for the App Center Analytics & Diagnostics feature until the end of June 2026. This extension will provide the Azure Monitor team additional time to finalize the implementation, and our customers will have more time to migrate to it once it is ready (the announcement will be made separately). Until then, customers will be able to use App Center Analytics & Diagnostics in the same way as before until June 30, 2026. The remaining App Center features will be retired as planned after March 31, 2025. 
 
 ## Alternative solutions 
 The following notes outline alternative solutions to migrate off App Center. Our support team is available to address any additional questions at [support@appcenter.ms](mailto:support@appcenter.ms).
