@@ -10,7 +10,7 @@ ms.service: vs-appcenter
 ---
 
 # Visual Studio App Center Retirement
-Visual Studio App Center is scheduled for retirement on <u>March 31, 2025</u>. After that date, it will not be possible to sign in with your user account nor make API calls. App Center will continue to be supported until March 31, 2025, with critical bug fixes and technical support. 
+Visual Studio App Center is scheduled for retirement on <u>March 31, 2025</u>. ~After that date, it will not be possible to sign in with your user account nor make API calls. App Center will continue to be supported until March 31, 2025, with critical bug fixes and technical support.~
 
 ## Update (03/20/2025): Extension of Product Support for Analytics & Diagnostics
 We understand that migrations of this scale can be challenging, which is why we have carefully listened to customer feedback. Based on the substantial feedback we received, we have partnered with the Azure Monitor team to build mobile platform support for Analytics capabilities directly within the Azure Monitor product. This will allow customers to choose Azure Monitor as an alternative solution to App Center.
