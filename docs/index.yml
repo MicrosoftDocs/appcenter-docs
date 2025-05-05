@@ -1,7 +1,6 @@
 ### YamlMime:Hub
 
 title: Visual Studio App Center documentation
-summary: ⚠️ Visual Studio App Center is scheduled for retirement on March 31, 2025.
 
 metadata:
   title: Visual Studio App Center
@@ -16,7 +15,7 @@ metadata:
 # highlightedContent section (optional)
 # Maximum of 8 items
 highlightedContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
     # Card
     - title: Retirement
@@ -52,106 +51,106 @@ highlightedContent:
       url: https://openapi.appcenter.ms/
 
 conceptualContent:
-    title: Services
-    items:
-      # Card
-      - title: Build
-        summary: Create an installable app package automatically with every push to your repository. 
-        links:
-          - text: Introduction
-            url: ~/build/index.md
-            itemType: overview
-          - text: Android
-            url: ~/build/android/index.md
-            itemType: how-to-guide
-          - text: iOS
-            url: ~/build/ios/index.md
-            itemType: how-to-guide
-          - text: macOS
-            url: ~/build/macos/index.md
-            itemType: how-to-guide
-          - text: React Native
-            url: ~/build/react-native/index.md
-            itemType: how-to-guide
-          - text: Windows (UWP)
-            url: ~/build/uwp/index.md
-            itemType: how-to-guide
-          - text: Xamarin
-            url: ~/build/xamarin/index.md
-            itemType: how-to-guide
-          - text: Troubleshooting
-            url: ~/build/troubleshooting/index.md
-            itemType: reference
-      # Card
-      - title: Test
-        summary: Run tests on more than 400 unique device configurations.
-        links:
-          - text: Introduction to App Center Test
-            url: ~/test-cloud/index.md
-            itemType: overview
-          - text: Core Concepts
-            url: ~/test-cloud/core-concepts.md
-            itemType: concept
-          - text: Get Started with App Center Test
-            url: ~/test-cloud/getting-started.md
-            itemType: get-started
-          - text: Start a test run
-            url: ~/test-cloud/starting-a-test-run.md
-            itemType: how-to-guide
-          - text: Troubleshooting
-            url: ~/test-cloud/troubleshooting/index.md
-            itemType: reference
-      # Card
-      - title: Distribute
-        summary: Quickly release Android, iOS, macOS, and UWP builds to end user devices.
-        links:
-          - text: Introduction to App Center Distribute
-            url: ~/distribution/index.md
-            itemType: overview
-          - text: Release a Build
-            url: ~/distribution/uploading.md
-            itemType: deploy
-          - text: iOS Device registration
-            url: ~/distribution/auto-provisioning.md
-            itemType: how-to-guide
-          - text: Manage Distribution Groups
-            url: ~/distribution/groups.md
-            itemType: how-to-guide
-          - text: Distribute to Store
-            url: ~/distribution/stores/index.md
-            itemType: deploy
-      # Card
-      - title: Analytics
-        summary: Get information about the number of users, the session duration, top devices and more.
-        links:
-          - text: Introduction to Analytics
-            url: ~/analytics/index.md
-            itemType: overview
-          - text: Analytics Overview Page
-            url: ~/analytics/overview.md
-            itemType: overview
-          - text: Events Metrics
-            url: ~/analytics/event-metrics.md
-            itemType: concept
-          - text: FAQ
-            url: ~/analytics/faq.md
-            itemType: reference
-      # Card
-      - title: Diagnostics
-        summary: Collect crash data from all devices.
-        links:
-          - text: Introduction to Diagnostics
-            url: ~/diagnostics/index.md
-            itemType: overview
-          - text: Enable Diagnostics in an App
-            url: ~/diagnostics/enabling-diagnostics.md
-            itemType: how-to-guide
-          - text: Diagnostics Features
-            url: ~/diagnostics/features.md
-            itemType: overview
-          - text: Troubleshooting
-            url: ~/diagnostics/troubleshooting.md
-            itemType: reference
+  title: Services
+  items:
+    # Card
+    - title: Build
+      summary: Create an installable app package automatically with every push to your repository.
+      links:
+        - text: Introduction
+          url: ~/build/index.md
+          itemType: overview
+        - text: Android
+          url: ~/build/android/index.md
+          itemType: how-to-guide
+        - text: iOS
+          url: ~/build/ios/index.md
+          itemType: how-to-guide
+        - text: macOS
+          url: ~/build/macos/index.md
+          itemType: how-to-guide
+        - text: React Native
+          url: ~/build/react-native/index.md
+          itemType: how-to-guide
+        - text: Windows (UWP)
+          url: ~/build/uwp/index.md
+          itemType: how-to-guide
+        - text: Xamarin
+          url: ~/build/xamarin/index.md
+          itemType: how-to-guide
+        - text: Troubleshooting
+          url: ~/build/troubleshooting/index.md
+          itemType: reference
+    # Card
+    - title: Test
+      summary: Run tests on more than 400 unique device configurations.
+      links:
+        - text: Introduction to App Center Test
+          url: ~/test-cloud/index.md
+          itemType: overview
+        - text: Core Concepts
+          url: ~/test-cloud/core-concepts.md
+          itemType: concept
+        - text: Get Started with App Center Test
+          url: ~/test-cloud/getting-started.md
+          itemType: get-started
+        - text: Start a test run
+          url: ~/test-cloud/starting-a-test-run.md
+          itemType: how-to-guide
+        - text: Troubleshooting
+          url: ~/test-cloud/troubleshooting/index.md
+          itemType: reference
+    # Card
+    - title: Distribute
+      summary: Quickly release Android, iOS, macOS, and UWP builds to end user devices.
+      links:
+        - text: Introduction to App Center Distribute
+          url: ~/distribution/index.md
+          itemType: overview
+        - text: Release a Build
+          url: ~/distribution/uploading.md
+          itemType: deploy
+        - text: iOS Device registration
+          url: ~/distribution/auto-provisioning.md
+          itemType: how-to-guide
+        - text: Manage Distribution Groups
+          url: ~/distribution/groups.md
+          itemType: how-to-guide
+        - text: Distribute to Store
+          url: ~/distribution/stores/index.md
+          itemType: deploy
+    # Card
+    - title: Analytics
+      summary: Get information about the number of users, the session duration, top devices and more.
+      links:
+        - text: Introduction to Analytics
+          url: ~/analytics/index.md
+          itemType: overview
+        - text: Analytics Overview Page
+          url: ~/analytics/overview.md
+          itemType: overview
+        - text: Events Metrics
+          url: ~/analytics/event-metrics.md
+          itemType: concept
+        - text: FAQ
+          url: ~/analytics/faq.md
+          itemType: reference
+    # Card
+    - title: Diagnostics
+      summary: Collect crash data from all devices.
+      links:
+        - text: Introduction to Diagnostics
+          url: ~/diagnostics/index.md
+          itemType: overview
+        - text: Enable Diagnostics in an App
+          url: ~/diagnostics/enabling-diagnostics.md
+          itemType: how-to-guide
+        - text: Diagnostics Features
+          url: ~/diagnostics/features.md
+          itemType: overview
+        - text: Troubleshooting
+          url: ~/diagnostics/troubleshooting.md
+          itemType: reference
 
 tools:
   title: Get Started with the SDK
@@ -167,7 +166,8 @@ tools:
     # Card
     - title: React Native
       imageSrc: ~/media/logo_react.svg
-      url: ~/sdk/getting-started/react-native.md
+      url:
+        ~/sdk/getting-started/react-native.md
         # Card
     - title: Windows
       imageSrc: /media/logos/logo_windows.svg
@@ -179,7 +179,8 @@ tools:
     # Card
     - title: macOS
       imageSrc: /media/logos/logo_macOS.svg
-      url: ~/sdk/getting-started/macos.md
+      url:
+        ~/sdk/getting-started/macos.md
         # Card
     - title: Cordova
       imageSrc: /media/logos/logo_cordova.svg
