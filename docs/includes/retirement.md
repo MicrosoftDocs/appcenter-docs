@@ -1,11 +1,10 @@
 ---
 title: include file
-ms.date: 03/12/2024
+ms.date: 05/05/2025
 ms.topic: include
-author: fattoh-saidov
+author: lucen
 ms.author: v-absaidov
 ---
+
 > [!IMPORTANT]
-> Visual Studio App Center is scheduled for retirement on March 31, 2025. While you can continue to use Visual Studio App Center until it is fully retired, there are several recommended alternatives that you may consider migrating to.
->  
-> [Learn more about support timelines and alternatives.](https://aka.ms/appcenter/retire)
+> Visual Studio App Center was retired on March 31, 2025, except for the Analytics and Diagnostics features, which will continue to be supported until June 30, 2026. [Learn more.](https://aka.ms/appcenter/retire)
