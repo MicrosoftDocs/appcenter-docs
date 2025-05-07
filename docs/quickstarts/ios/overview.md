@@ -23,8 +23,6 @@ Begin with the **Getting Started** tutorial. After you've completed that, you ca
 | Title                                 | Description                    |
 |:--------------------------------------|:-------------------------------|
 | [Getting Started](getting-started.md) | Set up the app                 |
-| [Build](build.md)                     | Build the app                  |
-| [Test](test.md)                       | Run automated UI tests         |
 | [Distribute](distribute.md)           | Distribute to a group of users |
 | [Crash](crashes.md)                   | Monitor application crashes    |
 | [Analytics](analytics.md)             | View user analytics            |

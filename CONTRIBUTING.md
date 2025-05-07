@@ -21,7 +21,7 @@ Follow the guidance for [quick edits to existing documents](https://learn.micros
 
 ### Larger edits
 
-**Step 1:** For larger contributions of new content, _open an issue_ describing the article you wish to write and how it relates to existing content. The content inside the **docs** folder is organized into sections that are organized by content area (e.g. **build** and **distribution**). Try to determine the correct folder for your new content. Get feedback on your proposal via the issue before starting to write.
+**Step 1:** For larger contributions of new content, _open an issue_ describing the article you wish to write and how it relates to existing content. The content inside the **docs** folder is organized into sections that are organized by content area. Try to determine the correct folder for your new content. Get feedback on your proposal via the issue before starting to write.
 
 **Step 2:** Fork the `MicrosoftDocs/appcenter-docs` repository.
 

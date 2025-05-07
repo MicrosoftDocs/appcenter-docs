@@ -114,5 +114,4 @@ Removing a collaborator from an organization will remove the user from all apps 
 ## Next steps
 
 * [Create a team in your organization](~/dashboard/creating-and-managing-teams.md)
-* [Connect to your repository (GitHub, Bitbucket, VSTS, or Azure DevOps)](~/build/index.md)
 * [Add App Center's SDK to your app](~/sdk/index.md)

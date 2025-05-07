@@ -21,10 +21,6 @@ ms.service: vs-appcenter
 
 ## Troubleshooting
 ### Services
-[Build](~/build/troubleshooting/index.md)
-
-[Test](~/test-cloud/troubleshooting/index.md)
-
 [Diagnostics](~/diagnostics/troubleshooting.md)
 
 [Analytics](~/analytics/faq.md)

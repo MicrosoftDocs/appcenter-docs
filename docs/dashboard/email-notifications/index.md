@@ -1,7 +1,7 @@
 ---
 title: App Center Email Notifications Documentation
 description: How to configure App Center email notifications
-keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, build status, build, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group, test, test run, test run completed, test run complete
+keywords: app center, appcenter, visual studio app center, visual studio appcenter, email, email notifications, crashes, crash, distribute, diagnostics, crash groups, crash group, new app version released, new crash group
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/19/2019
@@ -22,16 +22,6 @@ Many developers want to be automatically notified when key events happen in thei
 
 You can choose to have email notifications automatically sent for the following events:
 
-- **Build:**
-  - On build success:
-    - **Always**: when your app builds successfully
-    - **Only if previously failed**: when your app has successfully built after one or more failed builds
-    - **Never**: you won't receive notifications for build success
-  - On build failure:
-    - **Always**: when your app fails to build
-    - **Only if previously successful**: when your app has failed to build after one or more successful builds
-    - **Never**: you won't receive notifications for build failure    
-
 - **Crashes**: 
     - **Immediately**: when a new crash group is created
     - **Daily**: a summary of all your new crash groups for that day will be sent at approximately 0:00 UTC
@@ -48,7 +38,6 @@ You can choose to have email notifications automatically sent for the following 
   - Adding new devices to a release failed:
     - **Checked**: when adding new devices to a release failed
     - **Unchecked**: you won't receive notifications when adding new devices to a release fails
-- **Test:** when a test run completes
 
 ### Email notification preferences
 
@@ -86,19 +75,12 @@ App-level email notifications send information for the specific app to the user.
 
     ![How to configure email notifications at the app-level](media/configureEmailNotificationApp.png)
 
-4. In the row titled **Receive notifications**, click the **toggle button** to enable or disable email notifications for the app. Select the **dropdown** for Build, Crashes, Distribute and Test notifications to decide what events will trigger an email.
+4. In the row titled **Receive notifications**, click the **toggle button** to enable or disable email notifications for the app. Select the **dropdown** for Crashes adn Distribute notifications to decide what events will trigger an email.
 
 The default email notification settings at the app-level are:
   - **On** for receiving email notifications
-  - **Never** for Build
   - **Immediately** for Distribute new release
   - **Checked** for when Distribute fails to add new devices to a release
   - **Never** for Crashes
-  - **Never** for Test events
 
-You'll receive automatic email notifications when your selected events happen. For example, here is what a Build success email notification looks like:
-
-![Email notification for a successful build](media/emailSuccessfulBuild.png)
-
-> [!NOTE]
-> If your branch name contains alphanumeric characters other than `a-z`, `A-Z`, `0-9`, `-`, `+` and `/`, all email notifications will be successfully delivered. However, when you click on the **View Build** button in the email received, you might be directed to a non-existent page. This is because of the encodings for alphanumeric characters by some email services. We advise you to only use the supported characters in branch names. If this is a blocking issue for you, contact us via support.
+You'll receive automatic email notifications when your selected events happen.

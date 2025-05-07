@@ -23,6 +23,5 @@ ms.tgt_pltfrm: uwp
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
-> * [Cordova](cordova.md)
 
 [!INCLUDE [windows](includes/windows.md)]

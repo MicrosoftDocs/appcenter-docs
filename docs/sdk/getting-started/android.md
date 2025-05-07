@@ -28,7 +28,6 @@ dev_langs:
 > * [macOS](macos.md)
 > * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
-> * [Cordova](cordova.md)
 
 The App Center SDK uses a modular architecture so you can use any or all of the services.
 

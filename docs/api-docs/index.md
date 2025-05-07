@@ -65,7 +65,7 @@ Each App Center account may create up to 5000 API tokens.
 
    **Full Access:** A full access User API token has all the permissions that you have for the current account / organization. For example, if you don't have manager or developer permissions for an app, the user can't run a test, even though you're using a full access User API token.
 
-   **Read-Only:** A read-only User API token has Viewer access permission for the current account / organization. For example, with a read-only User API token, you can read data from crashes, analytics, and get basic app information. Read-only User API tokens can't change app settings, trigger a build, create an export configuration, etc.
+   **Read-Only:** A read-only User API token has Viewer access permission for the current account / organization. For example, with a read-only User API token, you can read data from crashes, analytics, and get basic app information. Read-only User API tokens can't change app settings, create an export configuration, etc.
 
 7. At the bottom of the panel, click **Add new API token**.
 8. A pop-up will open with your User API token. **Copy and store it in a secure location** for later use. For security reasons, you can't see or generate the same token again after you click the **Close** button.

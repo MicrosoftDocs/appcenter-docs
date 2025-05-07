@@ -82,7 +82,7 @@ The team creator or any org admin can change the app permission of the team. Onl
   
 ### Permission levels 
 - **Manager** - invite members and access settings 
-- **Developer** - manage services (e.g. create builds, run tests) 
+- **Developer** - manage services
 - **Viewer** - view and download app data 
 
 > [!NOTE]

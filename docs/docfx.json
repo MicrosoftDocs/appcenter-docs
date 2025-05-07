@@ -61,7 +61,6 @@
         "analytics/**/**.md":"vs-appcenter",
         "api-docs/**/**.md":"vs-appcenter",
         "auth/**/**.md":"vs-appcenter",
-        "build/**/**.md":"vs-appcenter",
         "cli/**/**.md":"vs-appcenter",
         "dashboard/**/**.md":"vs-appcenter",
         "data/**/**.md":"vs-appcenter",
@@ -71,7 +70,6 @@
         "gdpr/**/**.md":"vs-appcenter",
         "general/**/**.md":"vs-appcenter",
         "migration/**/**.md":"vs-appcenter",
-        "test-cloud/**/**.md":"vs-appcenter",
         "transition/**/**.md": "vs-appcenter",
         "sdk/**/**.md":"vs-appcenter-sdk"
       },
@@ -79,7 +77,6 @@
         "analytics/**/**.md":"app-center-analytics",
         "api-docs/**/**.md":"app-center-general",
         "auth/**/**.md":"app-center-auth",
-        "build/**/**.md":"app-center-build",
         "cli/**/**.md":"app-center-general",
         "dashboard/**/**.md":"app-center-general",
         "data/**/**.md":"app-center-data",
@@ -89,7 +86,6 @@
         "gdpr/**/**.md":"app-center-general",
         "general/**/**.md":"app-center-general",
         "migration/**/**.md":"app-center-general",
-        "test-cloud/**/**.md":"app-center-test",
         "transition/**/**.md": "app-center-transition",
         "sdk/analytics/**/**.md":"app-center-analytics",
         "sdk/auth/**/**.md":"app-center-auth",
@@ -103,13 +99,6 @@
     },
     "template": [],
     "dest": "vs-mobile-center-docs",
-    "markdownEngineName": "markdig",
-    "rules": {
-      "sensitive-language-wl": {
-        "exclude": [
-          "distribution/codepush/cordova.md"
-        ]
-      }
-    }
+    "markdownEngineName": "markdig"
   }
 }

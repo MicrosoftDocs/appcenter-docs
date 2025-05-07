@@ -20,7 +20,6 @@ dev_langs:
 > * [macOS](macos.md)
 > * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
-> * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
 > * [MAUI/Xamarin](xamarin.md)

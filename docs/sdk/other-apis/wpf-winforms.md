@@ -23,7 +23,6 @@ ms.tgt_pltfrm: wpf-winforms
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
-> * [Cordova](cordova.md)
 
 [!INCLUDE [windows](includes/windows.md)]
 
