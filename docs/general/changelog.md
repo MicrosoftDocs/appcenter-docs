@@ -31,11 +31,11 @@ This document lists new features as they're added to [Visual Studio App Center](
 - **Node.js switching support**
     - Node.js version can be specified in the app's branch configuration.  
 The following versions are available for use in App Center Build: 6, 8, 10, 12.  
-Also there's a way to [specify](~/build/react-native/nodejs.md) a custom version of Node.js.
+Also there's a way to specify a custom version of Node.js.
 
 ### **May 20, 2019**
 - **Build support for Xcode 10.2.1**
-    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our [docs](~/build/react-native/iOS/index.md#32-xcode-version).
+    - Now React Native developers can select legacy or modern Xcode build system for their iOS branch configuration. See our docs.
 
 ### **April 26, 2019**
 - **Build support for Xcode 10.2.1**
@@ -433,7 +433,7 @@ Notify 3rd party applications and Azure DevOps (formerly known as VSTS) when eve
 ### **August, 23 2017**
 
 - **Advanced build customization options**:
-  You can now [configure](~/build/custom/scripts/index.md) your build to run custom scripts at pre-defined stages of the build process.
+  You can now configure your build to run custom scripts at pre-defined stages of the build process.
 
 - **Use popular command line tools straight from your build**:
   The build VMs come now with Fastlane and the App Center CLI pre-installed, so you can take the customization of your builds even a step further.
@@ -587,7 +587,7 @@ We also updated our build machines to support the latest Xcode, Android, ProGuar
 ### **Dec 15, 2016**
 
 * **Build support for Xamarin Android apps.**
-  You can now set up builds for building Xamarin Android apps by going to the [Build](~/build/android/index.md) section.
+  You can now set up builds for building Xamarin Android apps by going to the Build section.
 * **Username made editable now!**
   You can now edit your user name from the use settings page.
 * **CLI version 0.3.0:**
@@ -602,7 +602,7 @@ We also updated our build machines to support the latest Xcode, Android, ProGuar
   Find "Events" under the Analytics section to get detailed data about your events and their properties.
   Read the [doc](~/analytics/event-metrics.md) and check out how to start learning from these events.
 * **Build Support for Native Android Apps.**
-  You can now set up builds for building native Android apps by going to the [Build](~/build/android/index.md) section.
+  You can now set up builds for building native Android apps by going to the Build section.
 
 ### **Dec 1, 2016**
 
