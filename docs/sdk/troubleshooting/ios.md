@@ -93,8 +93,6 @@ If in-app updates are enabled, they'll block your automated UI tests. The update
 
 The primary design goals for the App Center SDK are to have a minimal impact on the app using App Center, and to have a modular SDK. This would result in the SDK being distributed as several dynamic linked shared libraries.
 
-Historically, iOS didn't support dynamic linked shared libraries, but was added in iOS 8, as explained in this [blog post by Landon Fuller](http://landonf.bikemonkey.org/code/ios/Radar_15800975_iOS_Frameworks.20140112.html). 
-
 However, App Center is distributed as a statically linked shared library that's wrapped in a "fat" fake framework. This means that the SDK is linked at **compile time** and not at launch time for better performance. Loading multiple dynamic linked shared libraries takes time. 
 
 Apple recommends optimizing the app launch to take not more than 400 ms in a [WWDC session](https://developer.apple.com/videos/play/wwdc2016/406/). They specifically recommend static shared libraries over dynamic shared ones to achieve this goal. Distributing the App Center SDK for iOS as a statically linked shared library follows Apple's recommendation to provide the best performance and a minimal impact to the app that includes the SDK.

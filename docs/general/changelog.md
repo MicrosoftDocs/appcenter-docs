@@ -199,7 +199,7 @@ Diagnostics is becoming Generally Available soon. This means that Diagnostics wi
 ### **September 13, 2018**
 
 - **Intune app protection policies**
-  Publish [managed iOS line-of-business apps](/intune/app-protection-policy) to the Intune store
+  Publish managed iOS line-of-business apps to the Intune store
 
 ### **September 11, 2018**
 
