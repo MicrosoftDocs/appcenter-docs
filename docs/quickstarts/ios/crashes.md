@@ -19,13 +19,7 @@ In this tutorial, you'll learn to view crashes from a sample Swift app in App Ce
 If you haven't already, first follow the [getting started tutorial](getting-started.md) to set up the sample app.
 
 ## Get the symbols
-To symbolicate crashes in iOS, App Center needs you to upload a **symbol file to App Center**. You can download symbols from a build in App Center, or skip this section and use your own.
-
-If you already completed the [Build tutorial](build.md) and built the sample app:
-1. Navigate to the **Build** service in the portal.
-2. Select the main branch.
-3. Click on the latest successful build.
-4. Click **Download** > **Download symbols** at the top.
+To symbolicate crashes in iOS, App Center needs you to upload a **symbol file to App Center**.
 
 ## Upload symbols
 1. Navigate to the **Crashes** service and go to the **Symbols** page.

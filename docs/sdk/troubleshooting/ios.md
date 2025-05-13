@@ -21,7 +21,6 @@ dev_langs:
 > * [macOS](macos.md)
 > * [tvOS](tvOS.md)
 > * [React Native](react-native.md)
-> * [Cordova](cordova.md)
 > * [Unity](unity.md)
 > * [Windows](uwp.md)
 > * [MAUI/Xamarin](xamarin.md)
@@ -93,8 +92,6 @@ If in-app updates are enabled, they'll block your automated UI tests. The update
 ## Why the SDK is distributed as a "static library"
 
 The primary design goals for the App Center SDK are to have a minimal impact on the app using App Center, and to have a modular SDK. This would result in the SDK being distributed as several dynamic linked shared libraries.
-
-Historically, iOS didn't support dynamic linked shared libraries, but was added in iOS 8, as explained in this [blog post by Landon Fuller](http://landonf.bikemonkey.org/code/ios/Radar_15800975_iOS_Frameworks.20140112.html). 
 
 However, App Center is distributed as a statically linked shared library that's wrapped in a "fat" fake framework. This means that the SDK is linked at **compile time** and not at launch time for better performance. Loading multiple dynamic linked shared libraries takes time. 
 

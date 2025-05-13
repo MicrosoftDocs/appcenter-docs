@@ -16,7 +16,7 @@ ms.service: vs-appcenter
 
 ## Microsoft Learn
 [Introduction to App Center](/training/modules/intro-to-app-center/)
-Characterize the types of services offered by App Center. Describe the use of App Center to build, distribute, test, and analyze usage of apps.
+Characterize the types of services offered by App Center. Describe the use of App Center to distribute, and analyze usage of apps.
 
 In this module, you'll:
 - Evaluate whether App Center is appropriate to help improve mobile development processes.

@@ -1,7 +1,7 @@
 ---
 title: Azure Subscriptions in App Center
 description: Information about App Center Azure Subscription integration.
-keywords: pricing,billing,subscription
+keywords: subscription
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/17/2021

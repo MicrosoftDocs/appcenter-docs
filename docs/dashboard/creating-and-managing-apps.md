@@ -36,14 +36,14 @@ All apps that belong to you can be found in **My Apps**. When looking for apps o
 
 ## App secrets
 
-App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs (like trigger builds). If your code is open source, we recommend you inject the secret at build or in a similar way.
+App secret is like an API key for your app, it allows events and telemetry to be sent to App Center backend. It doesn't provide any access to your account. It can't be used to invoke App Center REST APIs. If your code is open source, we recommend you inject the secret at build or in a similar way.
 
 ## App roles
 
 On each app there are three roles:
 
 * **Managers** can manage app settings, collaborators, and integrations.
-* **Developers** can manage app services (e.g. create builds, run tests).
+* **Developers** can manage app services.
 * **Viewers** can view and download all data but can't make changes.
 
 For every app you create, whether owned by you or your organization, you're automatically assigned as Manager for the app. Additionally, all organization Admins are assigned as managers for all apps within the organization. Collaborators and Members can be assigned any of the three roles listed above for each app. Learn more about [managing organization roles](~/dashboard/creating-and-managing-organizations.md).
@@ -106,5 +106,4 @@ Follow these steps to delete any of your apps:
 ## Next steps
 
 * [Create an organization](~/dashboard/creating-and-managing-organizations.md)
-* [Connect to your repository (GitHub, Bitbucket, VSTS, Azure DevOps)](~/build/index.md)
 * [Add App Center's SDK to your app](~/sdk/index.md)

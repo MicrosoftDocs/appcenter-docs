@@ -23,7 +23,6 @@ ms.tgt_pltfrm: unity
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [Cordova](cordova.md)
 
 App Center Crashes automatically generates a crash log every time your app crashes, with a log to device storage. When a user starts the app again, the SDK sends the crash report to App Center. Collecting crashes works for both beta and live apps, that is, crashes submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 

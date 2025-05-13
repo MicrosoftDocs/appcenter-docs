@@ -4,7 +4,7 @@ title: Visual Studio App Center documentation
 
 metadata:
   title: Visual Studio App Center
-  description: Learn how to continuously build, test, release, and monitor apps for every platform.
+  description: Learn how to continuously monitor apps for every platform.
   services: service
   ms.service: vs-appcenter
   ms.topic: hub-page
@@ -38,13 +38,6 @@ highlightedContent:
       itemType: overview
       url: https://status.appcenter.ms/
     # Card
-    - title: Pricing
-      itemType: overview
-      url: ~/general/pricing.md
-    # Card
-    - title: Roadmap
-      itemType: overview
-      url: ~/general/roadmap.md
     # Card
     - title: API Swagger
       itemType: reference
@@ -53,53 +46,6 @@ highlightedContent:
 conceptualContent:
   title: Services
   items:
-    # Card
-    - title: Build
-      summary: Create an installable app package automatically with every push to your repository.
-      links:
-        - text: Introduction
-          url: ~/build/index.md
-          itemType: overview
-        - text: Android
-          url: ~/build/android/index.md
-          itemType: how-to-guide
-        - text: iOS
-          url: ~/build/ios/index.md
-          itemType: how-to-guide
-        - text: macOS
-          url: ~/build/macos/index.md
-          itemType: how-to-guide
-        - text: React Native
-          url: ~/build/react-native/index.md
-          itemType: how-to-guide
-        - text: Windows (UWP)
-          url: ~/build/uwp/index.md
-          itemType: how-to-guide
-        - text: Xamarin
-          url: ~/build/xamarin/index.md
-          itemType: how-to-guide
-        - text: Troubleshooting
-          url: ~/build/troubleshooting/index.md
-          itemType: reference
-    # Card
-    - title: Test
-      summary: Run tests on more than 400 unique device configurations.
-      links:
-        - text: Introduction to App Center Test
-          url: ~/test-cloud/index.md
-          itemType: overview
-        - text: Core Concepts
-          url: ~/test-cloud/core-concepts.md
-          itemType: concept
-        - text: Get Started with App Center Test
-          url: ~/test-cloud/getting-started.md
-          itemType: get-started
-        - text: Start a test run
-          url: ~/test-cloud/starting-a-test-run.md
-          itemType: how-to-guide
-        - text: Troubleshooting
-          url: ~/test-cloud/troubleshooting/index.md
-          itemType: reference
     # Card
     - title: Distribute
       summary: Quickly release Android, iOS, macOS, and UWP builds to end user devices.
@@ -181,10 +127,6 @@ tools:
       imageSrc: /media/logos/logo_macOS.svg
       url:
         ~/sdk/getting-started/macos.md
-        # Card
-    - title: Cordova
-      imageSrc: /media/logos/logo_cordova.svg
-      url: ~/sdk/getting-started/cordova.md
     # Card
     - title: Unity
       imageSrc: ~/media/logo_unity.svg
@@ -219,10 +161,6 @@ additionalContent:
           links:
             - text: Accounts in App Center
               url: ~/general/account.md
-            - text: Pricing
-              url: ~/general/pricing.md
-            - text: Billing
-              url: ~/general/billing.md
             - text: Azure Subscriptions
               url: ~/general/azure-subscriptions.md
             - text: OS/Platform and Services Matrix

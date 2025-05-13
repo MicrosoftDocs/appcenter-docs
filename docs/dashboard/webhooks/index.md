@@ -20,17 +20,6 @@ Webhooks are a simple way to notify third-party applications when a specified ev
 
 App Center's webhooks allow users to send automatic notifications to connected applications for the following events:
 
-- Build:
-  - Build success:
-    - **Always**: when your app builds successfully
-    - **Only if previously failed**: when your app has successfully built after one or more failed builds
-    - **Never**: you won't receive notifications for build success
-
-  - Build failure:
-    - **Always**: when your app fails to build
-    - **Only if previously successful**: when your app has failed to build after one or more successful builds
-    - **Never**: you won't receive notifications for build failure
-
 - Crashes: when a crash group is created
 - Distribute: when a new version is released to a distribution group
   > [!NOTE]
@@ -56,7 +45,7 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
 
      You can obtain the webhook URL from your integrated application's settings (for example, here are details on how to [obtain the webhook URL from Microsoft Teams](/microsoftteams/office-365-custom-connectors#develop-custom-connectors) and how to [obtain the webhook URL from Slack](https://get.slack.help/hc/articles/115005265063-Incoming-WebHooks-for-Slack)).
 
-     Select the **dropdown** for Build status notifications and the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts.
+     Select the the **checkbox** for Crashes and Distribute notifications to decide what events will trigger the webhook alerts.
 
      ![How to create a new webhook](media/createNewWebhook.gif)
 
@@ -68,34 +57,13 @@ App Center will send an HTTP POST payload to the webhook's specified URL. Webhoo
    - **disable** keeps the webhook inactive but present in your dashboard.
    - **delete** will remove the webhook from your dashboard.
 
-When these events happen, App Center notifications are posted into your integrated applications. For example, here is how a Build success notification looks like with a connected Slack application:
-
-   ![Build success notification on Slack](media/buildSuccessNotificationOnSlack.png)
+When these events happen, App Center notifications are posted into your integrated applications.
 
 ## Example webhook payload
 
 Here are examples of the JSON webhook payload for:
 
-1. Build
-
-```JSON
-{
-  "app_name": "myFirstApp",
-  "branch": "main",
-  "build_status": "Succeeded",
-  "build_id": "33",
-  "build_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/build/branches/main/builds/33",
-  "build_reason": "manual",
-  "finish_time": "2018-06-14T23:59:05.2542221Z",
-  "icon_link": "https://appcenter-filemanagement-distrib4ede6f06e.azureedge.net/f7794e4c-42f1-4e7c-8013-07ed2e1b733d/ic_launcher.png?sv=2020-02-18&sr=c&sig=gs4JfcWjpKeYH%2F%2Fg0jEtSKKbeRkug9q%2FldslmzzeOg0%3D&se=2020-02-26T08%3A57%3A58Z&sp=r",
-  "notification_settings_link": "https://appcenter.ms/users/{user-id}/apps/{app-name}/settings/notifications",
-  "os": "iOS",
-  "start_time": "2018-06-14T23:57:03.4379381Z",
-  "source_version": "55820a357ba26831f2eeb3be9973a4ef20618b73",
-  "sent_at": "2018-06-14T23:59:08.4897604Z"
-}
-```
-2. Crash
+1. Crash
 
 ```JSON
 {
@@ -114,7 +82,7 @@ Here are examples of the JSON webhook payload for:
 }
 ```
 
-3. Distribute
+2. Distribute
 
 ```JSON
 {
