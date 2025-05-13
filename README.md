@@ -11,4 +11,4 @@ To contribute to this documentation, see the [Contributing guide](CONTRIBUTING.m
 
 If you're an internal docs contributor (Microsoft or GitHub), refer to the [Contributing guide – Internal](CONTRIBUTING-INTERNAL.md)
 
-Several feature areas of App Center have their own folders in this repo, such as **build** for topics on Build, **crashes** for topics on the Crash Reporting service, and so forth. The **/images** subfolder in each folder contains art files for the topics. The [Contributing guide](CONTRIBUTING.md) has more information.
+Several feature areas of App Center have their own folders in this repo, such as **crashes** for topics on the Crash Reporting service, and so forth. The **/images** subfolder in each folder contains art files for the topics. The [Contributing guide](CONTRIBUTING.md) has more information.

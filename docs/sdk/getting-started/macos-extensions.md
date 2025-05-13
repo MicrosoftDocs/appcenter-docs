@@ -27,7 +27,6 @@ dev_langs:
 > * [macOS](macos.md)
 > * [macOS Extensions](macos-extensions.md)
 > * [tvOS](tvos.md)
-> * [Cordova](cordova.md)
 
 Extensions only support crash reporting.
 

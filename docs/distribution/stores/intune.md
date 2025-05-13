@@ -18,13 +18,13 @@ ms.assetid: 7360e04f-01af-4c3f-ac0a-75c2dab979ba
 Publish new and upgrade existing line-of-business (LOB) iOS and Android applications from App Center into Company Portal on your Intune Cloud instance.
 
 ## Prerequisites
-* Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](/intune/free-trial-sign-up).
+* Your organization has an Intune Cloud subscription. If not, you could sign up for a [trial account](/intune/intune-service/fundamentals/free-trial-sign-up).
 * An Intune admin and tenant account activated. 
-* Create a [DNS CNAME](/intune/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
-* Manually [add users](/intune/users-add) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator permission.
-* Create [groups](/intune/groups-add) to organize users or devices by geographic location, department, or hardware characteristics.
+* Create a [DNS CNAME](/intune/intune-service/fundamentals/custom-domain-name-configure) to simplify and customize the logon experience. When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain.
+* Manually [add users](/intune/intune-service/fundamentals/quickstart-create-user) to your Intune subscription via the [Office 365 portal](https://www.office.com/signin) or the [Azure Intune portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) and give users additional permissions including global administrator permission.
+* Create [groups](/intune/intune-service/fundamentals/quickstart-create-group) to organize users or devices by geographic location, department, or hardware characteristics.
 * Azure Active Directory for a tenant acts as a security broker to enable access to sites. [Visual Studio App Center](https://appcenter.ms) will require access to the Intune graph API to enable a particular tenant's user to publish apps to the Intune Company Portal. The tenants Azure Active Directory (AD) global admin needs to give consent. To provide this consent, the global admin of your company's Azure Active Directory will need to go to this [consent page](https://login.microsoftonline.com/common/adminconsent?client_id=9aa18e05-1deb-4254-98a8-fab3591a3ad3&redirect_uri=https://appcenter.ms) and agree to grant access for Visual Studio App Center to access the Intune Graph APIs. The admin will then be navigated to [Visual Studio App Center](https://appcenter.ms). Providing consent is a one-time activity for a company's Active Directory global admin. Once completed, any user with the Intune app manager role, for this company, can navigate to [Visual Studio App Center](https://appcenter.ms) and publish apps to the Intune Company Portal.
-* For more information, review the [introduction to Intune](/intune/introduction-intune).
+* For more information, review the [introduction to Intune](/intune/intune-service/fundamentals/what-is-intune).
 
 
 ## Step 1: Create an Intune connection in App Center

@@ -23,7 +23,6 @@ ms.tgt_pltfrm: xamarin
 > * [Unity](unity.md)
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
-> * [Cordova](cordova.md)
 
 ## Adjust the log level
 

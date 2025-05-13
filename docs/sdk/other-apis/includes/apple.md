@@ -23,7 +23,6 @@ dev_langs:
 > * [macOS](../macos.md)
 > * [tvOS](../tvos.md)
 > * [Unity](../unity.md)
-> * [Cordova](../cordova.md)
 
 ## Adjust the log level
 

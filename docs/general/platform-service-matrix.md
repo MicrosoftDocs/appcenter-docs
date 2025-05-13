@@ -16,23 +16,23 @@ ms.service: vs-appcenter
 
 The table below lists all the Operating System and Platforms and their supported services in App Center:
 
-| OS/Platform            | Build | Test | Distribute | Diagnostics | Analytics |
-| :--------------------- | :---: | :--: | :--------: | :-----:     | :-------: |
-| Android                |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
-| iOS                    |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
-| macOS                  |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
-| React Native - iOS     |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
-| React Native - Android |  ✅   |  ✅  |     ✅†      |   ✅       |    ✅     |
-| tvOS                   |  ❌   |  ❌  |     ❌       |   ✅       |    ✅     |
-| Unity - iOS            |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
-| Unity - Android        |  ❌   |  ✅  |     ✅       |   ✅       |    ✅     |
-| Unity - UWP*           |  ❌   |  ❌  |     ✅†      |   ❌       |    ✅     |
-| Windows - UWP          |  ✅   |  ❌  |     ✅†      |   ✅       |    ✅     |
-| Windows - WPF          |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
-| Windows - WinForms     |  ❌   |  ❌  |     ✅†      |   ✅       |    ✅     |
-| Xamarin - iOS          |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
-| Xamarin - Android      |  ✅   |  ✅  |     ✅       |   ✅       |    ✅     |
-| Xamarin - macOS        |  ❌   |  ❌  |     ✅       |   ✅       |    ✅     |
+| OS/Platform            | Distribute | Diagnostics | Analytics |
+| :--------------------- | :--------: | :-----:     | :-------: |
+| Android                |     ✅       |   ✅       |    ✅     |
+| iOS                    |     ✅       |   ✅       |    ✅     |
+| macOS                  |     ✅†      |   ✅       |    ✅     |
+| React Native - iOS     |     ✅†      |   ✅       |    ✅     |
+| React Native - Android |     ✅†      |   ✅       |    ✅     |
+| tvOS                   |     ❌       |   ✅       |    ✅     |
+| Unity - iOS            |     ✅       |   ✅       |    ✅     |
+| Unity - Android        |     ✅       |   ✅       |    ✅     |
+| Unity - UWP*           |     ✅†      |   ❌       |    ✅     |
+| Windows - UWP          |     ✅†      |   ✅       |    ✅     |
+| Windows - WPF          |     ✅†      |   ✅       |    ✅     |
+| Windows - WinForms     |     ✅†      |   ✅       |    ✅     |
+| Xamarin - iOS          |     ✅       |   ✅       |    ✅     |
+| Xamarin - Android      |     ✅       |   ✅       |    ✅     |
+| Xamarin - macOS        |     ✅       |   ✅       |    ✅     |
 
 \* - For UWP, HoloLens support hasn't been verified.
 † - In-app updates not supported for these platforms.

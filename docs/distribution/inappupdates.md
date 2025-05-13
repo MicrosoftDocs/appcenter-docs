@@ -70,5 +70,3 @@ If the application is installed from the App Store or TestFlight, in-app updates
 [xamarin-sdk]: ~/sdk/distribute/xamarin.md
 [uploading]: uploading.md
 [public-dg]: groups.md#creating-a-distribution-group
-[ios-sdk-migration]: ~/transition/ios-sdk-migration.md#21-convert-the-application-identifier
-[android-sdk-migration]: ~/transition/android-sdk-migration.md#21-convert-the-application-identifier

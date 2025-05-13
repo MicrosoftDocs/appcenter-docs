@@ -23,7 +23,6 @@ ms.tgt_pltfrm: windows
 > * [macOS](macos.md)
 > * [tvOS](tvos.md)
 > * [Unity](unity.md)
-> * [Cordova](cordova.md)
 
 App Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to App Center.
 

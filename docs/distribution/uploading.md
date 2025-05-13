@@ -24,7 +24,7 @@ You can also use Azure DevOps or Jenkins:
 - [Jenkins Plugin (version 0.11.0+)](https://github.com/jenkinsci/appcenter-plugin/releases).
 
 ## Generating an application binary package
-First you must package your application into a binary file for release. You can create this file manually, or use [App Center Build](../build/index.md). You can configure Build to distribute automatically in the build configuration of a branch.
+First you must package your application into a binary file for release. You can create this file manually.
 
 The following sections explain how to create the files for all app types App Center supports for distribution.
 

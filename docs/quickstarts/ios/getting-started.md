@@ -96,4 +96,4 @@ Code signing assures users that the app is from a trustworthy developer, and has
 
 5. **Add, commit, and push changes to your forked repository.** It can be done from the terminal, or a tool of your choice.
 
-You're all set up to try out an App Center service. Not sure what to do next? Most people build their app next; check out the **[Build Tutorial](build.md)** for a short walkthrough.
+You're all set up to try out an App Center service.
