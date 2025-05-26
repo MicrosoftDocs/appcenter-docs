@@ -4,7 +4,7 @@ description: How to manage your personal information.
 keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
 ms.author: lucen
-ms.date: 10/26/2025 
+ms.date: 05/26/2025 
 ms.topic: article 
 ms.assetid: A044F6C1-A7BC-4F68-AD0F-6170EA55F08A
 ms.service: vs-appcenter
@@ -87,7 +87,7 @@ https://appcenter.ms/api/v0.1/user/dsr/export/<your receipt token>
 
 Some of App Center's services may take a while to execute an export. For long running operations, calls to check export status may initially return an error code specifying that work is in progress. Once the work has completed, a successful response from the method will indicate the Azure storage location from which the information may be [retrieved securely using a returned SAS token](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#sas-examples). 
 
-Use [Azure Blob Storage REST API](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api) methods to [list](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id) and [download](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob?tabs=microsoft-entra-id) blobs using the provided SAS token.
+Use [Azure Blob Storage REST API](/rest/api/storageservices/blob-service-rest-api) methods to [list](/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id) and [download](/rest/api/storageservices/get-blob?tabs=microsoft-entra-id) blobs using the provided SAS token.
 
 To cancel your export request, use the cancellation endpoint:
 
