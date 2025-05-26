@@ -87,7 +87,7 @@ https://appcenter.ms/api/v0.1/user/dsr/export/<your receipt token>
 
 Some of App Center's services may take a while to execute an export. For long running operations, calls to check export status may initially return an error code specifying that work is in progress. Once the work has completed, a successful response from the method will indicate the Azure storage location from which the information may be [retrieved securely using a returned SAS token](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#sas-examples). 
 
-[Azure Blob Storage REST API](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api) provides methods to [list blobs](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id) and [download a blob](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob?tabs=microsoft-entra-id) using the provided SAS token.
+Use [Azure Blob Storage REST API](https://learn.microsoft.com/en-us/rest/api/storageservices/blob-service-rest-api) methods to [list](https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=microsoft-entra-id) and [download](https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob?tabs=microsoft-entra-id) blobs using the provided SAS token.
 
 To cancel your export request, use the cancellation endpoint:
 
