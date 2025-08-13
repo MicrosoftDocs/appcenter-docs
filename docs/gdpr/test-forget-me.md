@@ -33,7 +33,7 @@ When a client requests deleting their test reports, you may service this request
    DELETE /v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}
    ```
    ```HTTP
-   DELETE https://appcenter.ms/api/v0.1/apps/CompanyOrg1/AndroidApp1/test_runs/0ce0x71b-82ce-4d7a-8ce5-404a6a50d91a
+   DELETE https://appcenter.ms/api/v0.1/apps/CompanyOrg1/AndroidApp1/test_runs/aaaabbbb-0000-cccc-1111-dddd2222eeee
    ```
 
 4. Completion of this task is achieved only if all the deletion calls return success.
