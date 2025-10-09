@@ -157,7 +157,7 @@ More information about Application Insights and App Center:
 
 ## Prerequisites
 
-You must have an Azure Subscription to use Export; If you don't have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/free/) account before you begin.
+You must have an Azure Subscription to use Export; If you don't have an Azure subscription, create a free  [Azure](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) account before you begin.
 
 ## Azure Subscription Linking
 
