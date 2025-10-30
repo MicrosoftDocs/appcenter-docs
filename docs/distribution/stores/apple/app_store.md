@@ -5,7 +5,7 @@ keywords: distribute, stores, fastlane, app store
 author: lucen-ms
 ms.author: lucen
 ms.date: 02/10/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: ede8ed54-baed-4e9d-be2b-6606e41adaa2
 ms.service: vs-appcenter
 ---

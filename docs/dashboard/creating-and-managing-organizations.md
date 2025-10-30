@@ -5,7 +5,7 @@ keywords: dashboard organizations
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/13/2018
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 904CF64B-3A9F-4BA9-AB4B-7D5176D93961
 ms.service: vs-appcenter
 ---

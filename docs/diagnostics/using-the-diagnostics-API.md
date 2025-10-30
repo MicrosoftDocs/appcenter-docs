@@ -5,7 +5,7 @@ keywords: crashes, errors, API
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/03/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 69e6bb42-2693-44fa-85c9-294c1d2a9000
 ms.service: vs-appcenter
 ms.custom: analytics

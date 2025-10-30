@@ -5,7 +5,7 @@ keywords: deploy, vsts, visual studio team services, build
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/28/2020
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: vs-appcenter
 ms.assetid: 476938ee-f086-4145-889f-02f2e90f78ff
 ---

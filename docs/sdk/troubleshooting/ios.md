@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/08/2022
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.assetid: 0388bac8-fe1a-477d-adc4-125cf9bfc334
 dev_langs:  
  - swift

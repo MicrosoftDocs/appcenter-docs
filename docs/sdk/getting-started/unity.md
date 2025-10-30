@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/13/2021
-ms.topic: article
+ms.topic: get-started
 ms.assetid: 9d6f5d86-f53f-43d1-bbaf-a6f01a74bdeb
 ms.tgt_pltfrm: unity
 ---

@@ -5,7 +5,7 @@ keywords: Secret storage, Apple ID, certicates
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/11/2019
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 505ce61e-7647-41cf-8500-459f110944f4
 ms.service: vs-appcenter
 ms.custom: dashboard

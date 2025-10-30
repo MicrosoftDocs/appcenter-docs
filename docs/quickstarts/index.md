@@ -5,7 +5,7 @@ keywords: App Center, Distribute, Crashes, Analytics, Diagnostics
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/09/2020
-ms.topic: article
+ms.topic: quickstart
 ms.service: vs-appcenter
 ms.custom: build
 ms.assetid: 9db2dbcb-1840-4f76-bdd6-1b31aa6718dd

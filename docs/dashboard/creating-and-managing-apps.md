@@ -5,7 +5,7 @@ keywords: dashboard apps
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/09/2019
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 24dc2b8f-6b76-4881-9195-368233b8a820
 ms.service: vs-appcenter
 ---

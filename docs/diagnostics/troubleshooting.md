@@ -5,7 +5,7 @@ keywords: crashes, errors, troubleshooting, diagnostics
 author: lucen-ms
 ms.author: lucen
 ms.date: 03/31/2020
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.assetid: 601a597e-37e5-4714-bdf5-fff29373cae5
 ms.service: vs-appcenter
 ms.custom: analytics

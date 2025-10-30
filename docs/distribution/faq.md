@@ -4,7 +4,7 @@ description: Frequently asked questions about Distribution service
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/18/2019
-ms.topic: article
+ms.topic: faq
 ms.assetid: 28011d49-082d-41e4-b3bb-2d51dbeb1192
 ms.service: vs-appcenter
 ---

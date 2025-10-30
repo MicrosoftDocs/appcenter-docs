@@ -5,7 +5,7 @@ keywords: dashboard Azure organizations "conditional access"
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/23/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 48cd6f51-bd42-4f80-8ca9-390c7abecad4
 ms.service: vs-appcenter
 ms.custom: general

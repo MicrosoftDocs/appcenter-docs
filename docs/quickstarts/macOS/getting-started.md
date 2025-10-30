@@ -5,7 +5,7 @@ keywords: app center
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/26/2017
-ms.topic: article
+ms.topic: get-started
 ms.service: vs-appcenter
 ms.assetid: 48b74a38-efe7-4a35-85a7-883e382fe0ef
 ms.tgt_pltfrm: macos
