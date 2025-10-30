@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, SDK
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/22/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 518975d1-077c-4f7d-bf35-6ceba05347ca
 ms.service: vs-appcenter
 ms.custom: analytics 

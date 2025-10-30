@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 08/31/2023
-ms.topic: article
+ms.topic: get-started
 ms.assetid: ec34cd84-2614-48fc-af57-a457e7cbf6a7
 ms.tgt_pltfrm: wpf-winforms
 ---

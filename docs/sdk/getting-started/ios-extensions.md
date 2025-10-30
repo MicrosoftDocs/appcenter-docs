@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/22/2020
-ms.topic: article
+ms.topic: get-started
 ms.assetid: 598397ca-c113-4b19-be3f-d8397015ff9d
 ms.tgt_pltfrm: ios
 dev_langs:  

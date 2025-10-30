@@ -4,7 +4,7 @@ description: Managing your App Center account and settings
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/09/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: ac3b155b-fce5-49fe-a316-7f4877ed76f0
 ms.service: vs-appcenter
 ---
