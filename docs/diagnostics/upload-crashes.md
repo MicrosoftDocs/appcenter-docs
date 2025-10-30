@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, attachments, upload, api
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/10/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 86ef014e-b47c-4580-82f4-642b2a281e31
 ms.service: vs-appcenter
 ms.custom: diagnostics

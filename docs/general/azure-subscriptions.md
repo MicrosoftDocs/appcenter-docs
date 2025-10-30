@@ -5,7 +5,7 @@ keywords: subscription
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/17/2021
-ms.topic: article
+ms.topic: how-to
 ms.assetid: E1803020-0E6C-42EF-A4D3-FBCB15D7B220
 ms.service: vs-appcenter
 ---

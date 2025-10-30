@@ -5,7 +5,7 @@ keywords: app center, analytics, exceptions
 author: lucen-ms
 ms.author: lucen
 ms.date: 03/22/2017
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 8F9AE70D-9153-4EFE-8173-BA1749F4BB0D
 ms.service: vs-appcenter
 ms.custom: analytics

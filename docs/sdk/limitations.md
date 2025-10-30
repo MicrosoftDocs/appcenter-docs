@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/29/2021
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 ms.assetid: e1e427f3-6949-4266-b1cd-13da703fc132
 ---
 

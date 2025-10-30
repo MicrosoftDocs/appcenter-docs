@@ -5,7 +5,7 @@ keywords: app center, gdpr, faq
 author: lucen-ms
 ms.author: lucen
 ms.date: 01/26/2021
-ms.topic: article
+ms.topic: faq
 ms.assetid: d2e8613c-afb1-423f-9bdf-949524ef426e
 ms.service: vs-appcenter
 ms.custom: gdpr

@@ -5,7 +5,7 @@ keywords: app center
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/28/2017
-ms.topic: article
+ms.topic: tutorial
 ms.service: vs-appcenter
 ms.assetid: c1a3c385-3f62-4a6f-8cd8-661bdb4db795
 ---

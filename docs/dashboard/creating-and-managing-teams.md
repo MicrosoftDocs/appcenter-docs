@@ -5,7 +5,7 @@ keywords: dashboard teams
 author: lucen-ms
 ms.author: lucen
 ms.date: 02/11/2021
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 041D1B07-64DA-4B90-A2A9-430023632AD6
 ms.service: vs-appcenter
 ---

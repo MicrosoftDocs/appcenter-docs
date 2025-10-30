@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, upload
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/25/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 7f5135ee-c133-4f1f-9376-978af1e3405d
 ms.service: vs-appcenter
 ms.custom: diagnostics

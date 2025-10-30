@@ -5,7 +5,7 @@ keywords: distribution
 author: lucen-ms
 ms.author: lucen
 ms.date: 02/06/2020
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 89a78fd8-ee2d-4f2d-9026-756047866351
 ms.service: vs-appcenter
 ms.custom: distribute

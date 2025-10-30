@@ -5,7 +5,7 @@ keywords: distribute, stores, testflight, fastlane
 author: lucen-ms
 ms.author: lucen
 ms.date: 02/10/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: ccc31919-b918-4cf5-8c07-8ab982cf6192
 ms.service: vs-appcenter
 ---

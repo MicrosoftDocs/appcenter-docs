@@ -5,7 +5,7 @@ keywords: distribution external build release
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/11/2019
-ms.topic: article
+ms.topic: how-to
 ms.service: vs-appcenter
 ms.custom: distribute
 ms.assetid: e771432a-73bc-4150-bee7-f88097e7171e

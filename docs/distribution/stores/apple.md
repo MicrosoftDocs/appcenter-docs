@@ -5,7 +5,7 @@ keywords: distribution store
 author: lucen-ms
 ms.author: lucen
 ms.date: 05/04/2020
-ms.topic: article
+ms.topic: how-to
 ms.service: vs-appcenter
 ms.custom: distribute
 ms.assetid: 32d31a11-8c89-458b-9074-0da4a06384a1

@@ -5,7 +5,7 @@ keywords: sdk, apple
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/27/2021
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.assetid: 408cdcba-07bb-11eb-adc1-0242ac120002
 ms.tgt_pltfrm: apple
 dev_langs:

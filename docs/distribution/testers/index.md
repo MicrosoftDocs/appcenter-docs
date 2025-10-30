@@ -5,7 +5,7 @@ keywords: distribution
 author: lucen-ms
 ms.author: lucen 
 ms.date: 11/05/2018
-ms.topic: article
+ms.topic: get-started
 ms.assetid: 691fe32c-2b42-47a9-9722-ee4204f86268
 ms.service: vs-appcenter
 ms.custom: distribute

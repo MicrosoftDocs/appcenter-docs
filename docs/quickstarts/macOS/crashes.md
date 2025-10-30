@@ -7,7 +7,7 @@ keywords: app center
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/15/2017
-ms.topic: article
+ms.topic: tutorial
 ms.service: vs-appcenter
 ms.assetid: 00d04bcd-b0a1-408c-a84c-2afd2992c792
 ms.tgt_pltfrm: macos

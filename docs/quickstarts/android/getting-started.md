@@ -4,7 +4,7 @@ description: Getting started prerequisites to onboard an Android app in App Cent
 keywords: app center
 author: lucen-ms
 ms.author: lucen
-ms.topic: article
+ms.topic: get-started
 ms.service: vs-appcenter
 ms.date: 08/10/2021
 ms.assetid: 077e17b4-f9ca-42d3-828f-91300b775d94
