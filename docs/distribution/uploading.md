@@ -121,7 +121,7 @@ Upload a new release using these sequential API calls:
         {
             "id": "{ID}",
             "package_asset_id": "{PACKAGE_ASSET_ID}",
-            "upload_domain": "https://file.appcenter.ms",
+            "upload_domain": "https://file-aks.appcenter.ms",
             "token": "{TOKEN}",
             "url_encoded_token": "{URL_ENCODED_TOKEN}"
         }
@@ -142,7 +142,7 @@ Upload a new release using these sequential API calls:
     FILE_SIZE_BYTES=$(wc -c $RELEASE_FILE_LOCATION | awk '{print $1}')
     APP_TYPE='application/vnd.android.package-archive' # iOS uses `application/octet-stream` instead.
     
-    METADATA_URL="https://file.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
+    METADATA_URL="https://file-aks.appcenter.ms/upload/set_metadata/$PACKAGE_ASSET_ID?file_name=$FILE_NAME&file_size=$FILE_SIZE_BYTES&token=$URL_ENCODED_TOKEN&content_type=$APP_TYPE"
 
      curl -s -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$METADATA_URL"
      ```
@@ -176,7 +176,7 @@ Upload a new release using these sequential API calls:
         BLOCK_NUMBER=$(($BLOCK_NUMBER + 1))
         CONTENT_LENGTH=$(wc -c "$i" | awk '{print $1}')
         
-        UPLOAD_CHUNK_URL="https://file.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
+        UPLOAD_CHUNK_URL="https://file-aks.appcenter.ms/upload/upload_chunk/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN&block_number=$BLOCK_NUMBER"
     
         curl -X POST $UPLOAD_CHUNK_URL --data-binary "@$i" -H "Content-Length: $CONTENT_LENGTH" -H "Content-Type: $CONTENT_TYPE"
     done
@@ -184,7 +184,7 @@ Upload a new release using these sequential API calls:
     
 5. After the upload is done, update the upload resource's status to `uploadFinished`.
     ```sh
-    FINISHED_URL="https://file.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
+    FINISHED_URL="https://file-aks.appcenter.ms/upload/finished/$PACKAGE_ASSET_ID?token=$URL_ENCODED_TOKEN"
     curl -d POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" "$FINISHED_URL"
         
     COMMIT_URL="https://api.appcenter.ms/v0.1/apps/$OWNER_NAME/$APP_NAME/uploads/releases/$ID"
