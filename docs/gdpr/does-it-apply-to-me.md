@@ -5,7 +5,7 @@ keywords: GDPR, DSR, privacy, EU
 author: lucen-ms
 ms.author: lucen
 ms.date: 05/31/2018 
-ms.topic: article 
+ms.topic: concept-article 
 ms.assetid: 5B070250-4DD6-4975-88E7-7ECD872A1C6D
 ms.service: vs-appcenter
 ---

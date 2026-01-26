@@ -5,7 +5,7 @@ keywords: limits distribution groups teams organizations releases
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/29/2023
-ms.topic: article
+ms.topic: limits-and-quotas
 ms.assetid: e25d003b-f5eb-4fd7-b64b-a68c178adf5c
 ms.service: vs-appcenter
 ms.custom: general

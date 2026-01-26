@@ -5,7 +5,7 @@ keywords: analytics
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/22/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: fde989ce-6c8b-4ec5-9efb-07d14bc22afb
 ms.service: vs-appcenter
 ms.custom: sdk

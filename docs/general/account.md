@@ -5,7 +5,7 @@ keywords: accounts, sign-in, sign-up, authentication, auth
 author: lucen-ms
 ms.author: lucen
 ms.date: 01/16/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 4d71b0bc-1916-11e9-812a-93e3941e13c5
 ms.service: vs-appcenter
 ---

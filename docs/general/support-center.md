@@ -5,7 +5,7 @@ keywords: update,history,status,feature request,bugs
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/09/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 7c512944-95f0-4b04-9ef4-52b785940360
 ms.service: vs-appcenter
 ---

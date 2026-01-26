@@ -5,7 +5,7 @@ keywords: unity
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/22/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: a0e3bd7d-546a-47ce-ab24-ce9eafc28701
 ms.custom: sdk
 ms.tgt_pltfrm: unity

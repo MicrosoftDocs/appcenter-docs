@@ -5,7 +5,7 @@ keywords: analytics
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/22/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: aec43c2c-55d5-11e7-907b-a6006ad3dba0
 ms.custom: sdk
 ms.tgt_pltfrm: tvOS

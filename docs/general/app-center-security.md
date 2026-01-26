@@ -5,7 +5,7 @@ keywords: security Azure "App Center"
 author: lucen-ms
 ms.author: lucen
 ms.date: 08/17/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: bfd4315d-4514-4d33-9ebe-4fb8af940fa2
 ms.service: vs-appcenter
 ms.custom: general

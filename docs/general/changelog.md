@@ -5,7 +5,7 @@ keywords: update,history
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/31/2019
-ms.topic: article
+ms.topic: release-notes
 ms.assetid: 2168c052-73a5-43eb-a144-00c63d44d7a1
 ms.service: vs-appcenter
 ---

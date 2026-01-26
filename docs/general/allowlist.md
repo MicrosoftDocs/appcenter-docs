@@ -5,7 +5,7 @@ keywords: allowlist, appcenter, networking
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/07/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: fb001bf2-3c2b-49a9-b839-2855c997950d
 ms.service: vs-appcenter
 ---
