@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/27/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 70204319-64ef-4d13-bd8d-a48ab9ab5833
 ms.tgt_pltfrm: react-native
 ---
