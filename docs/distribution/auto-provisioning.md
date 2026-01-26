@@ -5,7 +5,7 @@ keywords: UDID, Distribution,
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/03/2019
-ms.topic: article
+ms.topic: how-to
 ms.service: vs-appcenter
 ms.assetid: 6060f562-4ca9-448b-aba1-fcd5f6734ceb
 ---

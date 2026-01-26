@@ -5,7 +5,7 @@ keywords: app center, crashes, errors, diagnostics
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/16/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: f3cc2bc9-29a5-4b39-84fa-a82d6902ea6f
 ms.service: vs-appcenter
 ms.custom: diagnostics

@@ -5,7 +5,7 @@ keywords: app center, appcenter, visual studio app center, visual studio appcent
 author: lucen-ms
 ms.author: lucen
 ms.date: 04/24/2020
-ms.topic: article
+ms.topic: how-to
 ms.service: vs-appcenter
 ms.assetid: 066f4cb0-f6ab-47b3-ad5f-1c4690b79d2e
 ---

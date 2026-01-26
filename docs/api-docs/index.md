@@ -5,7 +5,7 @@ keywords: swagger
 author: lucen-ms
 ms.author: lucen
 ms.date: 06/10/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: ec67a6fc-6923-4a33-b655-f6d3308dca64
 ms.service: vs-appcenter
 ms.custom: api
