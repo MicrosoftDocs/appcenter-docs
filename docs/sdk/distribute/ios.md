@@ -5,7 +5,7 @@ keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/13/2021
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f91fcd0b-d5e6-4c74-89a8-f71c2ee57556
 ms.tgt_pltfrm: ios
 dev_langs:

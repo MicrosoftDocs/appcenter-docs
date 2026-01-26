@@ -5,7 +5,7 @@ keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
 ms.date: 01/16/2025
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 62f0364a-e396-4b22-98f3-8b2d92b5babb
 ms.custom: sdk
 ms.tgt_pltfrm: android

@@ -5,7 +5,7 @@ keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/24/2022
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 582bf961-0e4d-4fe0-9731-0a57fd1c222b
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin

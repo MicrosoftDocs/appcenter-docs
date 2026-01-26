@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/27/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: d13dd720-93b3-4658-b579-230c8821e292
 ms.tgt_pltfrm: android
 dev_langs:
