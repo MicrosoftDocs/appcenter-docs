@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/27/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 64f8592a-73e0-4f08-9c29-4de82e2d1131
 ms.tgt_pltfrm: xamarin
 ---

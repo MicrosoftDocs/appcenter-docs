@@ -5,7 +5,7 @@ keywords: sdk
 author: lucen-ms
 ms.author: lucen
 ms.date: 09/27/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 47b5da40-70fd-468b-a9a9-05a266b7fa7b
 ms.tgt_pltfrm: uwp
 ---
