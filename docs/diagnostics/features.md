@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, analytics, attachments, events, key valu
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/09/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
 ms.custom: analytics

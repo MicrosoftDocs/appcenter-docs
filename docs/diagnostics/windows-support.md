@@ -5,7 +5,7 @@ keywords: crashes, diagnostics, errors, Windows, UWP, WinRT, WPF, Silverlight
 author: lucen-ms
 ms.author: lucen
 ms.date: 03/16/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 8d48c68e-3fca-4dc4-b7d5-5f4474f8734f
 ms.service: vs-appcenter
 ms.custom: analytics

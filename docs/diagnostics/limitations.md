@@ -5,7 +5,7 @@ keywords: diagnostic, crashes
 author: lucen-ms
 ms.author: lucen
 ms.date: 12/19/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: e720dade-8d0c-44c6-8746-8b6a61da0f6f
 ms.service: vs-appcenter
 ms.custom: analytics

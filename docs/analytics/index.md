@@ -5,7 +5,7 @@ keywords: app center, analytics
 author: lucen-ms
 ms.author: lucen
 ms.date: 8/12/2019
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: b39854a6-c523-4a66-bef6-9b5da03ba256
 ms.service: vs-appcenter
 ms.custom: analytics

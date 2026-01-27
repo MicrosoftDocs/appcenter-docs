@@ -5,7 +5,7 @@ keywords: app center, errors, exceptions, handled
 author: lucen-ms
 ms.author: lucen
 ms.date: 04/25/2018
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: C0320343-CCA1-4C2B-91D6-DF88608E8446
 ms.service: vs-appcenter
 ms.custom: errors

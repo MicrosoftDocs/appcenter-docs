@@ -5,7 +5,7 @@ keywords: crashes, Android, NDK, symbolication
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/18/2020
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 6cab50d0-b40a-4b19-9f8f-10aea4243b57
 ms.service: vs-appcenter
 ms.custom: analytics

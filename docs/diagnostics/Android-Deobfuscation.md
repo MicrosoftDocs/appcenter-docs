@@ -5,7 +5,7 @@ keywords: crashes, errors, Android, obfuscate
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/11/2019
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 2f91bc0e-686c-428a-8cda-2a48b0811a6e
 ms.service: vs-appcenter
 ms.custom: analytics
