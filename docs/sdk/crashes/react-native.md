@@ -5,7 +5,7 @@ keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/09/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 363f6dc6-8f04-4b63-83e0-56e9c10bc910
 ms.custom: sdk
 ms.tgt_pltfrm: react-native

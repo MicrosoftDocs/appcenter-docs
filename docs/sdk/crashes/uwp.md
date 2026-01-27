@@ -5,7 +5,7 @@ keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
 ms.date: 07/29/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 6a102584-57ad-4b84-9fa1-8c2fd8b903ef
 ms.custom: sdk
 ms.tgt_pltfrm: UWP

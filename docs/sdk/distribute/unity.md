@@ -5,7 +5,7 @@ keywords: sdk, distribute
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/08/2021
-ms.topic: article
+ms.topic: how-to
 ms.assetid: fc504b67-f691-41be-8914-22d32a95cce7
 ms.custom: sdk
 ms.tgt_pltfrm: unity

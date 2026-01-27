@@ -5,7 +5,7 @@ keywords: sdk, crash
 author: lucen-ms
 ms.author: lucen
 ms.date: 10/22/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 6be76d67-6870-41c4-875a-cf2d37d5e22e
 ms.custom: sdk
 ms.tgt_pltfrm: ios

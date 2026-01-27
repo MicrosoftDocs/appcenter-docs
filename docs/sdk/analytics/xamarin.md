@@ -5,7 +5,7 @@ keywords: analytics
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/26/2021
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: d70cdd52-e53c-45df-89df-6394ed887174
 ms.custom: sdk
 ms.tgt_pltfrm: xamarin
