@@ -5,7 +5,7 @@ keywords: matrix
 author: lucen-ms
 ms.author: lucen
 ms.date: 11/12/2020
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 4966fa6c-ba1b-4656-89b0-5276c11a5a28
 ms.service: vs-appcenter
 ---
