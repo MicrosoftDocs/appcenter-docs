@@ -12,7 +12,7 @@ ms.custom: analytics
 ---
 
 # Export
- 
+
 [!INCLUDE [Retirement announcement for App Center](~/includes/retirement.md)]
 
 App Center allows you to continuously export all your Analytics raw data into Azure. You can export Analytics data to both [Blob Storage](https://azure.microsoft.com/services/storage/blobs/) and [Application Insights (Azure Monitor)](/azure/azure-monitor/app/app-insights-overview).
@@ -247,7 +247,7 @@ The changes will take 5-10 minutes to propagate, and entities from that point on
 
 ### Back-filling opt-out
 
-By default, a new export configuration will back-fill two last days of data for AI resources and 30 days for blob storage. There are scenarios when back-filling isn't necessary; for example, if doing so would result in overwriting or duplicating data. In this case, set `backfill` property to `false` when creating a new configuration.
+By default, a new export configuration will back-fill two last days of data for AI resources and 28 days for blob storage. There are scenarios when back-filling isn't necessary; for example, if doing so would result in overwriting or duplicating data. In this case, set `backfill` property to `false` when creating a new configuration.
 
 ### Choosing what kind of data to export
 
@@ -263,7 +263,7 @@ App Center may automatically disable bad export configuration to prevent any pos
 > [!NOTE]
 > If the export is re-enabled data flow will continue from that moment without back-filling to avoid possible data override or duplication.
 > If you need to back-fill missing data then you need to re-create your export configuration.
-> Data going to Application Insights stays 48 hours and 30 days for Blob Storage.
+> Data going to Application Insights stays 48 hours and 28 days for Blob Storage.
 >
 > You can use one of the following APIs to check the status in order to take restoration action.
 >
