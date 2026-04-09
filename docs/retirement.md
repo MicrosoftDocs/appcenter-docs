@@ -3,13 +3,25 @@ title: Visual Studio App Center Retirement
 description: Visual Studio App Center is scheduled for retirement
 author: fattoh-saidov
 ms.author: lucen
-ms.date: 09/26/2024
+ms.date: 04/09/2026
 ms.topic: concept-article
 # ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a
 ms.service: vs-appcenter
 ---
 
 # Visual Studio App Center Retirement
+
+## Update (04/13/2026): Azure Monitor Mobile Analytics Now in Public Preview — Migration Path for App Center Customers 
+We previously communicated that we had partnered with the Azure Monitor team to build an analytics solution for mobile platforms. This solution provides App Center customers who continue to use the Analytics feature with an alternative path forward.
+
+Today, we are pleased to announce that this solution is now available in **Public Preview** and ready for App Center customers to begin migrating to. The solution is expected to reach **General Availability (GA)** later this year, and we will provide an additional notification when that happens.
+
+Please use the following link to learn more about the new Azure Monitor mobile solution and how to migrate from App Center: https://aka.ms/azmon-migration
+
+To ensure customers have sufficient time to complete their migration, we will extend support for the App Center **Analytics & Diagnostics** features until the end of **March 2027**. Until that date, the service will continue to operate with no changes.
+
+If you have any questions about Azure Monitor or its new mobile capabilities, please contact Azure Support using the following link: https://aka.ms/azmon-support
+
 
 ## Update (03/20/2025): Extension of Product Support for Analytics & Diagnostics
 We understand that migrations of this scale can be challenging, which is why we have carefully listened to customer feedback. Based on the substantial feedback we received, we have partnered with the Azure Monitor team to build mobile platform support for Analytics capabilities directly within the Azure Monitor product. This will allow customers to choose Azure Monitor as an alternative solution to App Center.
