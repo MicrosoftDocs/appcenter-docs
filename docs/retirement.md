@@ -3,7 +3,7 @@ title: Visual Studio App Center Retirement
 description: Visual Studio App Center is scheduled for retirement
 author: fattoh-saidov
 ms.author: lucen
-ms.date: 04/09/2026
+ms.date: 04/15/2026
 ms.topic: concept-article
 # ms.assetid: bf1e5147-2f23-4ba6-a245-9ecae8a6543a
 ms.service: vs-appcenter
@@ -11,7 +11,7 @@ ms.service: vs-appcenter
 
 # Visual Studio App Center Retirement
 
-## Update (04/13/2026): Azure Monitor Mobile Analytics Now in Public Preview — Migration Path for App Center Customers 
+## Update (04/15/2026): Azure Monitor Mobile Analytics Now in Public Preview — Migration Path for App Center Customers 
 We previously communicated that we had partnered with the Azure Monitor team to build an analytics solution for mobile platforms. This solution provides App Center customers who continue to use the Analytics feature with an alternative path forward.
 
 Today, we are pleased to announce that this solution is now available in **Public Preview** and ready for App Center customers to begin migrating to. The solution is expected to reach **General Availability (GA)** later this year, and we will provide an additional notification when that happens.
