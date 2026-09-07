@@ -4,7 +4,7 @@ description: An introduction to the App Center Diagnostics feature set
 keywords: crashes, diagnostics, errors, analytics, attachments, events, key value pairs, export data, threads, bug tracker
 author: lucen-ms
 ms.author: lucen
-ms.date: 07/09/2021
+ms.date: 09/02/2026
 ms.topic: concept-article
 ms.assetid: 9117122d-c874-40a7-8672-3b723a09b23d
 ms.service: vs-appcenter
@@ -25,8 +25,11 @@ By default, App Center displays an app's crashes and errors per day in a side-by
 
 Using the top-left tabs, drill down into Crashes and Errors. When you do this, the left chart indicates the number of crashes/errors per day, and the right chart shows the number of affected users. Filter the charts by app version, time frame, and status for a more focused view.
 
+> [!IMPORTANT]
+> The affected-users chart requires session data from the App Center Analytics module. Start both the Crashes and Analytics modules to calculate accurate affected-user percentages. Without Analytics, crashes and errors might appear to affect 100% of users.
+
 > [!NOTE]
-> App Center  filters potentially sensitive information. Examples of sensitive information that will be filtered are URLs, JSON strings and request IDs.
+> App Center filters potentially sensitive information. Examples of sensitive information that App Center filters include URLs, JSON strings, and request IDs.
 
 ![App Center shows you analytics on crashes and errors](~/diagnostics/images/new-crash-analytics.png)
 
@@ -34,7 +37,7 @@ Using the top-left tabs, drill down into Crashes and Errors. When you do this, t
 
 App Center Diagnostics groups crashes and errors by similarities, such as reason for the issue and where the issue occurred in the app. For each crash and error group, App Center displays the line of code that failed, the class or method name, file name, line number, crash, or error type and message for you to better understand these groups at a glance. Select a group to view more information, and access a list of detailed issues reports and logs. This allows you to dive even deeper and use our feature set to better understand your app's behavior during a crash or an error.
 
-If a crash is caused by a failed call to a URL (such as "Error calling azure.com or google.com") App Center can group crashes by that URL (for example all failed to call azure.com will be grouped together and failed to call google.com will be grouped together). However, because we remove URLs prepended with either HTTP or HTTPS from the crash log, this grouping will only work when avoiding this syntax for example:  "Error calling http://azure.com" will not be grouped with other azure calls but "Error calling azure.com" will be grouped with similar error reports.
+If a crash is caused by a failed call to a URL (such as "Error calling azure.com or google.com"), App Center can group crashes by that URL. For example, all failed calls to azure.com are grouped together, and all failed calls to google.com are grouped together. However, because App Center removes URLs prepended with either HTTP or HTTPS from the crash log, this grouping works only when you avoid this syntax. For example, "Error calling http://azure.com" doesn't group with other azure.com calls, but "Error calling azure.com" groups with similar error reports.
 
 ![App Center groups crashes and errors based on similarities](~/diagnostics/images/crash-groups.png)
 
@@ -43,7 +46,6 @@ If a crash is caused by a failed call to a URL (such as "Error calling azure.com
 App Center Diagnostics allows you to attach a user ID to your crashes and errors. To do so, use the App Center SDK in your targeted platform [Android](~/sdk/other-apis/android.md#identify-users), [iOS](~/sdk/other-apis/ios.md#identify-users), [macOS](~/sdk/other-apis/macos.md#identify-users), [React Native](~/sdk/other-apis/react-native.md#identify-users), [tvOS](~/sdk/other-apis/tvos.md#identify-users), [Unity](~/sdk/other-apis/unity.md#identify-users), [UWP](~/sdk/other-apis/uwp.md#identify-users), [WPF/WinForms](~/sdk/other-apis/wpf-winforms.md#identify-users), and [MAUI/Xamarin](~/sdk/other-apis/xamarin.md#identify-users). You'll find the user ID associated to a crash or error when clicking on an issue inside of a group.
 
 After attaching a user ID, you can use App Center's search feature to search for crashes with the specified ID. Learn how to do this by following App Center's [search documentation](~/diagnostics/search.md).
-
 
 ### Attachments
 
@@ -57,17 +59,15 @@ To view and download the attachments, select a crash or error group, a specific 
 
 ![App Center allows you to add attachments to your crash and error reports](~/diagnostics/images/new-attachments.png)
 
-
 ### Events Before A Crash
 
 Track events leading up to a crash to capture useful information about the state of your app.
 
-To define a custom event, check out our [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [macOS](~/sdk/analytics/macos.md), [React Native](~/sdk/analytics/react-native.md), [Windows](~/sdk/analytics/windows.md) and [MAUI/Xamarin](~/sdk/analytics/xamarin.md).
+This feature requires the App Center Analytics module. To define a custom event, check out the [SDK Documentation](~/sdk/index.md) for [Android](~/sdk/analytics/android.md), [iOS](~/sdk/analytics/ios.md), [macOS](~/sdk/analytics/macos.md), [React Native](~/sdk/analytics/react-native.md), [Windows](~/sdk/analytics/windows.md), and [MAUI/Xamarin](~/sdk/analytics/xamarin.md).
 
 To view events before a crash, select a crash group, a specific device report, and then click on the events tab.
 
 ![App Center allows you to track events leading up to your crash](~/diagnostics/images/events.png)
-
 
 ### Key Value Pairs
 
